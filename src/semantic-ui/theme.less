@@ -1,0 +1,32 @@
+/*******************************
+        Import Directives
+*******************************/
+
+/*------------------
+       Theme
+-------------------*/
+
+@theme: @@element;
+
+@import "~semantic-ui-less/themes/default/globals/site.variables";
+@import "~semantic-ui-less/themes/@{site}/globals/site.variables";
+@import (optional) "~semantic-ui-less/themes/@{theme}/globals/site.variables";
+
+/*-------------------
+ Component Variables
+---------------------*/
+
+@import "~semantic-ui-less/themes/@{theme}/@{type}s/@{element}.variables";
+@import (optional) "./deskpro/@{type}s/@{element}.vars.less";
+
+@imagePath : '~semantic-ui-less/themes/default/assets/images';
+@fontPath  : '~semantic-ui-less/themes/default/assets/fonts';
+
+.loadFonts() when (@importGoogleFonts) {
+  @import url('@{googleProtocol}fonts.googleapis.com/css?family=@{googleFontRequest}');
+}
+
+.loadUIOverrides() {
+  @import (optional) "~semantic-ui-less/@{theme}/@{type}s/@{element}.overrides";
+  @import (optional) "./deskpro/@{theme}/@{type}s/@{element}.less";
+}

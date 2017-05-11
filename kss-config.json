@@ -1,0 +1,10 @@
+{
+  "title": "DeskPRO Styles",
+  "source": "./src/styles",
+  "destination": "./dist/styleguide",
+  "homepage": "styleguide.md",
+  "css": [
+    "../semantic-ui.css",
+    "../deskpro-styles.css"
+  ]
+}

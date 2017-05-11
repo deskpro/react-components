@@ -1,0 +1,45 @@
+@import "../base/vars";
+
+// Testing
+//
+// This is a test
+//
+// Style guide: demo.example
+.test {
+  color: red;
+}
+
+
+#kss-node {
+  .kss-header {
+    margin: 0;
+  }
+
+  .kss-doc-title {
+    font-size: 14pt;
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 25px 0;
+    background-color: #dedede;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .kss-sidebar {
+    width: 250px;
+    background: #eee;
+    border-right: 1px solid #ccc;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .kss-nav {
+    padding: 0 20px 20px 20px;
+    margin-top: 0;
+  }
+
+  .kss-main {
+    width: auto;
+    margin-left: 255px;
+  }
+}

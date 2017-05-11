@@ -1,0 +1,37 @@
+{
+  "name": "deskpro-styles",
+  "version": "1.0.0",
+  "description": "DeskPRO Styles",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm run pre-semantic",
+    "presemantic": "cpx 'src/semantic-ui/theme.{config,less}' 'node_modules/semantic-ui-less'",
+    "dev": "npm run clean && npm run styleguide && npm run presemantic && webpack-dev-server",
+    "clean": "rimraf dist",
+    "styleguide": "kss --config kss-config.json",
+    "prod": "npm run clean && npm run presemantic && webpack --config webpack.prod.config.js --progress --profile --colors && npm run styleguide"
+  },
+  "author": "DeskPRO <team@deskpro.com>",
+  "devDependencies": {
+    "copy-webpack-plugin": "4.0.1",
+    "cpx": "^1.5.0",
+    "cross-env": "4.0.0",
+    "css-loader": "0.28.1",
+    "extract-text-webpack-plugin": "2.1.0",
+    "file-loader": "0.11.1",
+    "html-webpack-plugin": "2.28.0",
+    "kss": "^3.0.0-beta.18",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "node-sass": "4.5.2",
+    "postcss-loader": "2.0.5",
+    "react-addons-test-utils": "15.5.1",
+    "rimraf": "2.6.1",
+    "sass-loader": "6.0.4",
+    "semantic-ui-less": "^2.2.10",
+    "style-loader": "0.17.0",
+    "url-loader": "0.5.8",
+    "webpack": "2.5.1",
+    "webpack-dev-server": "2.4.5"
+  }
+}
