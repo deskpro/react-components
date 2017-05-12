@@ -1,0 +1,45 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.form .fields.error .field textarea,
+.ui.form .fields.error .field select,
+.ui.form .fields.error .field input:not([type]),
+.ui.form .fields.error .field input[type="date"],
+.ui.form .fields.error .field input[type="datetime-local"],
+.ui.form .fields.error .field input[type="email"],
+.ui.form .fields.error .field input[type="number"],
+.ui.form .fields.error .field input[type="password"],
+.ui.form .fields.error .field input[type="search"],
+.ui.form .fields.error .field input[type="tel"],
+.ui.form .fields.error .field input[type="time"],
+.ui.form .fields.error .field input[type="text"],
+.ui.form .fields.error .field input[type="url"],
+.ui.form .field.error textarea,
+.ui.form .field.error select,
+.ui.form .field.error input:not([type]),
+.ui.form .field.error input[type="date"],
+.ui.form .field.error input[type="datetime-local"],
+.ui.form .field.error input[type="email"],
+.ui.form .field.error input[type="number"],
+.ui.form .field.error input[type="password"],
+.ui.form .field.error input[type="search"],
+.ui.form .field.error input[type="tel"],
+.ui.form .field.error input[type="time"],
+.ui.form .field.error input[type="text"],
+.ui.form .field.error input[type="url"] {
+  border-left: 4px solid @dp-knuckles-primary;
+  //box-shadow: inset 4px 0px 0px 0px @dp-knuckles-primary;
+}
+
+.ui.form .field.error div.error-message {
+  font-size: 10px;
+  color: @dp-knuckles-primary;
+  margin-top: 5px;
+}
+
+.ui.form .field:last-child,
+.ui.form .fields:last-child,
+.ui.form .fields:last-child .field {
+  margin-bottom: 0em;
+}
