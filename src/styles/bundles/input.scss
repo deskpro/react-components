@@ -1,0 +1,63 @@
+/******************************
+    Inputs
+*******************************/
+.input {
+  font-family: $primary-font;
+  font-weight: $pf-regular;
+  color: $dp-greyscale-850;
+
+  height: 24px;
+  font-size: $font-size-m;
+
+  border-radius: $rad-size-m;
+  padding-left: 8px;
+  border: 1px solid $dp-greyscale-300;
+  &::placeholder {
+    color: $dp-greyscale-450;
+  }
+  &:hover {
+    border-color: $dp-greyscale-450;
+  }
+  &:focus {
+    border-color: $dp-sonic-secondary;
+    outline: 0;
+  }
+}
+/******************************
+    Input label
+*******************************/
+.input__label {
+  font-family: $primary-font;
+  font-size: $font-size-s;
+  font-weight: $pf-regular;
+  color: $dp-greyscale-700;
+  text-transform: uppercase;
+}
+.input__link {
+  font-family: $primary-font;
+  font-size: $font-size-s;
+  font-weight: $pf-regular;
+  color: $dp-greyscale-700;
+  text-decoration: underline;
+}
+/******************************
+    Input sizes
+*******************************/
+.input--small {
+  height: 20px;
+  font-size: $font-size-m;
+}
+.input--medium {
+  height: 24px;
+  font-size: $font-size-m;
+}
+.input--large {
+  height: 36px;
+  font-size: $font-size-xl;
+}
+/******************************
+    Input validation
+*******************************/
+.input--error {
+  border-color: $dp-knuckles-primary;
+}
