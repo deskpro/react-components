@@ -8,7 +8,6 @@ const config = {
   devtool: 'cheap-module-source-map',
 
   entry: {
-    'semantic-ui': './src/semantic-ui/semantic-ui.less',
     'deskpro-styles': './src/styles/bundles/deskpro-styles.scss'
   },
 

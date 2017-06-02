@@ -1,0 +1,12 @@
+{
+  "presets": ["es2015", "react", "stage-0"],
+  "plugins": [
+    ["transform-decorators-legacy", "transform-flow-strip-types"],
+    ["react-intl", {"messagesDir": "./build/messages/"}],
+    ["namespace", {
+      "namespaces": {
+        "Components": "src/Components/"
+      }
+    }]
+  ]
+}

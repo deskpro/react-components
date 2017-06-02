@@ -1,0 +1,94 @@
+.button {
+  font-family: $primary-font;
+  font-weight: $pf-semi-bold;
+  color: $dp-greyscale-100;
+  border: 1px solid $dp-sonic-primary;
+  border-radius: $rad-size-m;
+
+  height: 22px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: $font-size-l;
+
+  background-color: $dp-sonic-primary;
+  box-shadow: 0 2px 0 $dp-sonic-midnight;
+  mix-blend-mode: multiply;
+
+  &:hover {
+    background-color: $dp-sonic-secondary;
+  }
+  &:active {
+    background-color: $dp-sonic-tertiary;
+    border-color: $dp-sonic-tertiary;
+    box-shadow: 0 -2px 0 $dp-sonic-midnight;
+    mix-blend-mode: normal;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:disabled {
+    background-color: $dp-greyscale-150;
+    border-color: $dp-greyscale-150;
+    color: $dp-greyscale-300;
+    box-shadow: none;
+  }
+}
+
+/******************************
+    Button sizes
+*******************************/
+.button--s {
+  height: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: $font-size-m;
+}
+
+.button--l {
+  height: 34px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: $font-size-xl;
+}
+
+/******************************
+    Button types
+*******************************/
+
+.button--cta {
+  background-color: $dp-emerald-primary;
+  border-color: $dp-emerald-primary;
+  box-shadow: 0 2px 0 $dp-emerald-midnight;
+
+  &:hover {
+    background-color: $dp-emerald-secondary;
+  }
+  &:active {
+    background-color: $dp-emerald-tertiary;
+    border-color: $dp-emerald-tertiary;
+    box-shadow: 0 -2px 0 $dp-emerald-midnight;
+    mix-blend-mode: normal;
+  }
+}
+
+.button--secondary {
+  background-color: $dp-greyscale-100;
+  border-color: $dp-greyscale-300;
+  box-shadow: 0 2px 0 $dp-greyscale-200;
+  color: $dp-greyscale-850;
+
+  &:hover {
+    background-color: $dp-greyscale-100;
+    border-color: $dp-sonic-primary;
+  }
+  &:active {
+    background-color: $dp-morning-sky;
+    border-color: $dp-sonic-primary;
+    box-shadow: 0 -1px 0 $dp-sonic-primary;
+    mix-blend-mode: normal;
+  }
+}
+
+/******************************
+    Button icon
+*******************************/

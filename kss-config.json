@@ -5,7 +5,6 @@
   "homepage": "styleguide.md",
   "builder": "./src/styleguide",
   "css": [
-    "../semantic-ui.css",
     "../deskpro-styles.css"
   ]
 }

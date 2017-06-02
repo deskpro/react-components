@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
+
+@font-face {
+  font-family: 'Courier10 BT';
+  src: url('../fonts/Courier10PitchBT-Bold.eot');
+  src: url('../fonts/Courier10PitchBT-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Courier10PitchBT-Bold.woff') format('woff'),
+  url('../fonts/Courier10PitchBT-Bold.ttf') format('truetype'),
+  url('../fonts/Courier10PitchBT-Bold.svg#Courier10PitchBT-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Courier10 BT';
+  src: url('../fonts/Courier10PitchBT-Roman.eot');
+  src: url('../fonts/Courier10PitchBT-Roman.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Courier10PitchBT-Roman.woff') format('woff'),
+  url('../fonts/Courier10PitchBT-Roman.ttf') format('truetype'),
+  url('../fonts/Courier10PitchBT-Roman.svg#Courier10PitchBT-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/******************************
+    Font families
+*******************************/
+$primary-font: 'Open Sans', sans-serif;
+
+$adfont-1: 'Courier10 BT', Courier, monospace;
+
+/******************************
+    Font weights
+*******************************/
+$pf-light: 300;
+
+$pf-regular: 400;
+
+$pf-semi-bold: 600;
+
+$pf-bold: 700;
+
+$adfont-1-regular: normal;
+
+$adfont-1-bold: bold;
+
+/******************************
+    Font sizes
+*******************************/
+$font-size-s: 10px;
+$font-size-m: 12px;
+$font-size-m-l: 13px;
+$font-size-l: 14px;
+$font-size-xl: 16px;

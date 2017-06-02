@@ -1,12 +1,7 @@
-
-// Testing
-//
-// This is a test
-//
-// Style guide: demo.example
-.test {
-  color: blue;
-}
+@import "./colours";
+@import "./fonts";
+@import "./border-radius";
+@import "./buttons";
 
 .deskpro-styleguide {
   @import "../../styleguide/styleguide.scss";
