@@ -8,15 +8,17 @@
     "clean": "rimraf dist",
     "styleguide": "kss --config kss-config.json",
     "prod": "npm run clean && webpack --config webpack.prod.config.js --progress --profile --colors && npm run styleguide",
-    "test:visual": "start-storybook -p 9001",
+    "test:visual": "start-storybook -p 9001 -c .storybook",
     "test:visual:build": "build-storybook -o build/storybook"
   },
   "author": "DeskPRO <team@deskpro.com>",
   "devDependencies": {
-    "@kadira/storybook": "^2.3.0",
+    "@storybook/addon-actions": "^3.0.1",
     "@storybook/addon-info": "^3.0.0",
     "@storybook/addon-knobs": "^3.0.0",
+    "@storybook/addon-links": "^3.0.0",
     "@storybook/addon-notes": "^3.0.0",
+    "@storybook/react": "3.0.1",
     "babel": "^6.3.26",
     "babel-core": "^6.4.0",
     "babel-eslint": "^6.0.2",
@@ -53,7 +55,8 @@
     "rimraf": "2.6.1",
     "sass-loader": "6.0.4",
     "style-loader": "0.17.0",
-    "url-loader": "0.5.8",
+    "svg-inline-loader": "^0.7.1",
+    "url-loader": "^0.5.8",
     "webpack": "2.5.1",
     "webpack-dev-server": "2.4.5"
   },
@@ -63,6 +66,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-svg-inline": "^2.0.0"
   }
 }

@@ -1,39 +1,28 @@
-const path    = require('path');
-const webpack = require('webpack');
+const path = require('path');
 
-const config = {
+module.exports = {
   module: {
-    loaders: [
-      {
-        test: /\.css?$/,
-        loaders: ['style', 'raw'],
-        include: path.resolve(__dirname, '../../')
-      },
+    rules: [
       {
         test: /\.scss$/,
-        loader: 'style!css!sass',
-        exclude: /node_modules/,
-        include: path.resolve(__dirname, '../../')
+        loaders: ["style-loader", "css-loader", "sass-loader"],
+        include: path.resolve(__dirname, '../')
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file?name=public/fonts/[name].[ext]'
+        test: /\.(ttf|eot|woff|woff2)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[ext]',
+        },
       },
       {
-        test: /\.(svg|png|jpg|mp3|wav|ogg)$/,
-        loader:  'url'
+        test: /\.(png|jpg|mp3|wav|ogg)$/,
+        loader:  'url-loader'
       },
       {
-        test: /\.json$/,
-        loader: 'json-loader'
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
       }
-    ]
-  },
-  resolve: {
-    root: [
-      path.resolve('./src/tests')
     ]
   }
 };
-
-module.exports = config;
