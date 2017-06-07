@@ -21,7 +21,7 @@ class Select extends React.Component {
     const { className, ...elementProps } = this.props;
     return (
       <ReactSelect
-        className={classNames('select', className)}
+        className={classNames('dp-select', className)}
         onChange={this.handleChange}
         {...elementProps}
       />

@@ -33,11 +33,11 @@ class Input extends React.Component {
       <div
         className={
           classNames(
-            'input',
+            'dp-input',
             className,
             {
-              'input--validating': validating,
-              'input--validated':  validated
+              'dp-input--validating': validating,
+              'dp-input--validated':  validated
             }
           )
         }
@@ -46,8 +46,8 @@ class Input extends React.Component {
           id={this.id}
           {...elementProps}
         />
-        { validating ? <SVGInline className="input__icon" svg={LoadingSvg} /> : '' }
-        { validated ? <SVGInline className="input__icon" svg={ValidatedSvg} /> : '' }
+        { validating ? <SVGInline className="dp-input__icon" svg={LoadingSvg} /> : '' }
+        { validated ? <SVGInline className="dp-input__icon" svg={ValidatedSvg} /> : '' }
       </div>
     );
   }

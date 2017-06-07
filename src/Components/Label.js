@@ -12,7 +12,7 @@ class Label extends React.Component {
     const { children, required, htmlFor, ...elementProps } = this.props;
     return (
       <label
-        className="input__label"
+        className="dp-input__label"
         htmlFor={htmlFor}
         {...elementProps}
       >

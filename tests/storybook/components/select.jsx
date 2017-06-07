@@ -14,7 +14,6 @@ storiesOf('Input', module)
         <h3>Selects</h3>
         <Label>Basic</Label>
         <Select
-          className="input--small"
           options={
           [
               { value: 'one', label: 'One' },
@@ -24,7 +23,6 @@ storiesOf('Input', module)
         /><br />
         <Label>Multi</Label>
         <Select
-          className="input--small"
           multi
           options={
           [

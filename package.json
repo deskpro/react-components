@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "npm run clean && npm run styleguide && webpack-dev-server",
     "clean": "rimraf dist",
+    "compile": "babel --loose es6.modules -d lib/ src/",
     "styleguide": "kss --config kss-config.json",
     "prod": "npm run clean && webpack --config webpack.prod.config.js --progress --profile --colors && npm run styleguide",
     "lint:js": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
     "test:visual": "start-storybook -p 9001 -c .storybook",
-    "test:visual:build": "build-storybook -o build/storybook"
+    "test:visual:build": "build-storybook -o build/storybook",
+    "webpack": "webpack"
   },
   "author": "DeskPRO <team@deskpro.com>",
   "devDependencies": {
@@ -21,6 +23,7 @@
     "@storybook/addon-notes": "^3.0.0",
     "@storybook/react": "3.0.1",
     "babel": "^6.3.26",
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.4.0",
     "babel-eslint": "^6.0.2",
     "babel-jest": "12.1.0",
@@ -48,8 +51,6 @@
     "file-loader": "0.11.1",
     "html-webpack-plugin": "2.28.0",
     "kss": "^3.0.0-beta.18",
-    "less": "^2.7.2",
-    "less-loader": "^4.0.3",
     "node-sass": "4.5.2",
     "postcss-loader": "2.0.5",
     "react-addons-test-utils": "15.5.1",

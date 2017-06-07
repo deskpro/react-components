@@ -14,19 +14,19 @@ storiesOf('Input', module)
         <h3>Sizes</h3>
         <Label>Small</Label>
         <Input
-          className="input--small"
+          className="dp-input--small"
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
         /><br />
         <Label>Medium</Label>
         <Input
-          className="input--medium"
+          className="dp-input--medium"
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
         /><br />
         <Label>Large</Label>
         <Input
-          className="input--large"
+          className="dp-input--large"
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
         />
@@ -45,14 +45,14 @@ storiesOf('Input', module)
         /><br />
         <Label>Error display</Label>
         <Input
-          className="input--error"
+          className="dp-input--error"
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
         /><br />
         <Label>Error display</Label>
         <Input
           required
-          className="input--error"
+          className="dp-input--error"
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
         /><br />

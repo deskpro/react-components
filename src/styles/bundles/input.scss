@@ -1,11 +1,11 @@
 /******************************
     Inputs
 *******************************/
-.input {
+.dp-input {
   position: relative;
   display: inline-flex;
 }
-.input input {
+.dp-input input {
   font-family: $primary-font;
   font-weight: $pf-regular;
   color: $dp-greyscale-850;
@@ -30,7 +30,7 @@
 /******************************
     Input label
 *******************************/
-.input__label {
+.dp-input__label {
   font-family: $primary-font;
   font-size: $font-size-s;
   font-weight: $pf-regular;
@@ -39,7 +39,7 @@
   display: block;
   padding-bottom: 3px;
 }
-.input__link {
+.dp-input__link {
   font-family: $primary-font;
   font-size: $font-size-s;
   font-weight: $pf-regular;
@@ -49,22 +49,22 @@
 /******************************
     Input sizes
 *******************************/
-.input--small input {
+.dp-input--small input {
   height: 20px;
   font-size: $font-size-m;
 }
-.input--medium input {
+.dp-input--medium input {
   height: 24px;
   font-size: $font-size-m;
 }
-.input--large input {
+.dp-input--large input {
   height: 36px;
   font-size: $font-size-xl;
 }
 /******************************
     Input validation
 *******************************/
-.input--error input {
+.dp-input--error input {
   border-color: $dp-knuckles-primary;
   &:hover {
     border-color: $dp-knuckles-secondary;
@@ -73,14 +73,14 @@
     border-color: $dp-knuckles-tertiary;
   }
 }
-.input--validating,
-.input--validated {
+.dp-input--validating,
+.dp-input--validated {
   input {
     padding-right: 30px;
   }
 }
-.input--validating {
-  .input__icon svg {
+.dp-input--validating {
+  .dp-input__icon svg {
     animation-name: icon-rotate;
     animation-iteration-count: infinite;
     animation-duration: 2s;
@@ -107,8 +107,8 @@
     }
   }
 }
-.input--validated {
-  .input__icon svg {
+.dp-input--validated {
+  .dp-input__icon svg {
     height: $icon-size-s;
     width:  $icon-size-s;
     cursor: default;
@@ -131,12 +131,12 @@
 /******************************
     Input disabled
 *******************************/
-.input input:disabled,
-.input input:read-only {
+.dp-input input:disabled,
+.dp-input input:read-only {
   background-color: $dp-greyscale-150;
   border-color: $dp-greyscale-200;
   color: $dp-greyscale-350;
 }
-.input input:read-only {
+.dp-input input:read-only {
   color: $dp-greyscale-750
 }

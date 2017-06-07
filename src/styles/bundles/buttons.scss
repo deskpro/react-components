@@ -1,4 +1,4 @@
-.button {
+.dp-button {
   font-family: $primary-font;
   font-weight: $pf-semi-bold;
   color: $dp-greyscale-00;
@@ -41,13 +41,13 @@
 /******************************
     Button sizes
 *******************************/
-.button--s {
+.dp-button--s {
   height: 18px;
   padding: 1px 10px 4px 10px;
   font-size: $font-size-m;
 }
 
-.button--l {
+.dp-button--l {
   height: 34px;
   padding-left: 14px;
   padding-right: 14px;
@@ -58,7 +58,7 @@
     Button types
 *******************************/
 
-.button--cta {
+.dp-button--cta {
   background-color: $dp-emerald-primary;
   border-color: $dp-emerald-primary;
   box-shadow: 0 -2px 0 $dp-emerald-midnight inset;
@@ -74,7 +74,7 @@
   }
 }
 
-.button--secondary {
+.dp-button--secondary {
   background-color: $dp-greyscale-00;
   border: 1px solid $dp-greyscale-300;
   box-shadow: 0 -1px 0 $dp-greyscale-200 inset;
