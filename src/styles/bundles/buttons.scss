@@ -1,7 +1,7 @@
 .button {
   font-family: $primary-font;
   font-weight: $pf-semi-bold;
-  color: $dp-greyscale-100;
+  color: $dp-greyscale-00;
   border: 0 solid $dp-sonic-primary;
   border-radius: $rad-size-m-l;
 
@@ -75,7 +75,7 @@
 }
 
 .button--secondary {
-  background-color: $dp-greyscale-100;
+  background-color: $dp-greyscale-00;
   border: 1px solid $dp-greyscale-300;
   box-shadow: 0 -1px 0 $dp-greyscale-200 inset;
   color: $dp-greyscale-850;
@@ -83,7 +83,7 @@
   padding-top: 0;
 
   &:hover {
-    background-color: $dp-greyscale-100;
+    background-color: $dp-greyscale-00;
     border-color: $dp-sonic-primary;
     color: $dp-sonic-primary;
     box-shadow: 0 -1px 0 $dp-sonic-primary inset;
@@ -96,7 +96,3 @@
     mix-blend-mode: normal;
   }
 }
-
-/******************************
-    Button icon
-*******************************/

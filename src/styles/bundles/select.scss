@@ -1,0 +1,35 @@
+$select-input-placeholder:          $dp-greyscale-850;
+$select-text-color:                 $dp-greyscale-850;
+
+$select-input-height : 24px;
+$select-padding-vertical: 10px;
+$select-padding-horizontal: 8px;
+//$select-input-internal-height: 24px;
+
+$select-option-color: $dp-greyscale-850;
+
+$select-input-border-color: $dp-greyscale-300;
+
+@import "../../../node_modules/react-select/scss/default";
+
+.select {
+  font-family: $primary-font;
+  font-weight: $pf-regular;
+
+  height: 24px;
+  font-size: $font-size-m;
+}
+
+// placeholder
+.Select-placeholder,
+.Select--single > .Select-control .Select-value {
+  font-style: italic;
+}
+
+.Select-menu-outer {
+  border-color: $dp-sonic-primary;
+  border-top: 0;
+}
+.Select.is-open > .Select-control {
+  border-color: $dp-sonic-primary;
+}
