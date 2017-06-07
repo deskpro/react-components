@@ -8,7 +8,7 @@ storiesOf('Input', module)
   .addDecorator(withKnobs)
   .addWithInfo(
     'Input',
-    `This is the basic usage of a input with the label passed as a property.`,
+    'This is the basic usage of a input with the label passed as a property.',
     () => (
       <div>
         <h3>Sizes</h3>
@@ -59,13 +59,17 @@ storiesOf('Input', module)
         <h3>Validation</h3>
         <Label>Validating</Label>
         <Input
+          disabled={boolean('Disabled', false)}
+          readOnly={boolean('Readonly', false)}
           validating
         /><br />
         <Label>Validated</Label>
         <Input
+          disabled={boolean('Disabled', false)}
+          readOnly={boolean('Readonly', false)}
           validated
         /><br />
       </div>
     ),
-  );
+  )
 ;

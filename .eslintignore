@@ -4,3 +4,4 @@ bin/*
 **/webpack.config*.js
 **/*_Reducers.js
 **/vendor/*
+**/src/styleguide
