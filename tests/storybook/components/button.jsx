@@ -11,7 +11,7 @@ storiesOf('Buttons', module)
     'Button',
     Button,
   {
-    className: ['dp-button--primary', 'dp-button--secondary', 'dp-button--cta'],
+    className: ['dp-button--s', 'dp-button--m', 'dp-button--l'],
     children:  ['Button', 'Long text button', <b>Bold content</b>]
   },
   {
@@ -20,17 +20,17 @@ storiesOf('Buttons', module)
       return (
         <div>
           <Component
-            className={classNames('dp-button--s', className)}
+            className={classNames('dp-button--primary', className)}
             disabled={boolean('Disabled', false)}
             {...elementProps}
-          /><br /><br />
+          />
           <Component
-            className={classNames('dp-button--m', className)}
+            className={classNames('dp-button--secondary', className)}
             disabled={boolean('Disabled', false)}
             {...elementProps}
-          /><br /><br />
+          />
           <Component
-            className={classNames('dp-button--l', className)}
+            className={classNames('dp-button--cta', className)}
             disabled={boolean('Disabled', false)}
             {...elementProps}
           /><br /><br />

@@ -10,7 +10,7 @@
     "styleguide": "kss --config kss-config.json",
     "prod": "npm run clean && webpack --config webpack.prod.config.js --progress --profile --colors && npm run styleguide",
     "lint:js": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
-    "test:visual": "start-storybook -p 9001 -c .storybook",
+    "test:visual": "start-storybook -p 9002 -c .storybook",
     "test:visual:build": "build-storybook -o build/storybook",
     "webpack": "webpack"
   },

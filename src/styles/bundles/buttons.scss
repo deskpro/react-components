@@ -81,6 +81,14 @@
   color: $dp-greyscale-850;
   height: 22px;
   padding-top: 0;
+  &.dp-button--s {
+    height: 18px;
+    padding: 0 10px 4px 10px;
+  }
+  &.dp-button--l {
+    height: 34px;
+    padding: 2px 14px 4px 14px;
+  }
 
   &:hover {
     background-color: $dp-greyscale-00;
