@@ -1,24 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 class Label extends React.Component {
   static propTypes = {
-    htmlFor:  PropTypes.string,
-    required: PropTypes.bool,
+    editable: PropTypes.bool,
     children: PropTypes.node,
   };
 
+  handleClose = () => {
+
+  };
+
   render() {
-    const { children, required, htmlFor, ...elementProps } = this.props;
+    const { children, editable, ...elementProps } = this.props;
     return (
-      <label
-        className="dp-input__label"
-        htmlFor={htmlFor}
+      <span
+        className={classNames('dp-label', { editable })}
         {...elementProps}
       >
         {children}
-        {required ? '*' : ''}
-      </label>
+        { editable ? <span onClick={this.handleClose}><i className="dp-label__close fa fa-close" /></span> : null }
+      </span>
     );
   }
 }

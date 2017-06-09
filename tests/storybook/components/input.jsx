@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import Input from 'Components/Input';
-import Label from 'Components/Label';
+import Label from 'Components/InputLabel';
 
 storiesOf('Input', module)
   .addDecorator(withKnobs)

@@ -67,6 +67,7 @@
     "bourbon": "^4.3.4",
     "bourbon-neat": "^2.0.0",
     "classnames": "^2.2.5",
+    "font-awesome": "^4.7.0",
     "prop-types": "^15.5.10",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

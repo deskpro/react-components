@@ -1,10 +1,10 @@
 import React from 'react';
-import SVGInline from 'react-svg-inline';
 import PropTypes from 'prop-types';
+// import SVGInline from 'react-svg-inline';
 import classNames from 'classnames';
 import newId from 'Components/utils/newid';
-import LoadingSvg from '../styles/images/input_loading.svg';
-import ValidatedSvg from '../styles/images/tick.svg';
+// import LoadingSvg from 'styles/images/input_loading.svg';
+// import ValidatedSvg from 'styles/images/tick.svg';
 
 class Input extends React.Component {
   static propTypes = {
@@ -27,6 +27,10 @@ class Input extends React.Component {
     }
   }
 
+  focus = () => {
+    this.input.focus();
+  };
+
   render() {
     const { className, validated, validating, ...elementProps } = this.props;
     return (
@@ -44,10 +48,11 @@ class Input extends React.Component {
       >
         <input
           id={this.id}
+          ref={(c) => { this.input = c; }}
           {...elementProps}
         />
-        { validating ? <SVGInline className="dp-input__icon" svg={LoadingSvg} /> : '' }
-        { validated ? <SVGInline className="dp-input__icon" svg={ValidatedSvg} /> : '' }
+        {/* { validating ? <SVGInline className="dp-input__icon" svg={LoadingSvg} /> : '' }*/}
+        {/* { validated ? <SVGInline className="dp-input__icon" svg={ValidatedSvg} /> : '' }*/}
       </div>
     );
   }

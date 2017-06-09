@@ -29,7 +29,7 @@ $select-input-border-color: $dp-greyscale-300;
     border-color: $dp-sonic-primary;
     border-top: 0;
   }
-  .Select.is-open > .Select-control {
+  &.Select.is-open > .Select-control {
     border-color: $dp-sonic-primary;
   }
 }

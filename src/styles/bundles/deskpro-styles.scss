@@ -1,9 +1,15 @@
+//$fa-font-path: "../../../node_modules/font-awesome/fonts" !default;
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
+@import "../../../node_modules/font-awesome/scss/font-awesome";
+
 @import "./colours";
 @import "./fonts";
 @import "./icons";
 @import "./border-radius";
 @import "./buttons";
 @import "./input";
+@import "./label";
+@import "./list";
 @import "./select";
 
 .deskpro-styleguide {
