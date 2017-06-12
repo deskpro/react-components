@@ -17,6 +17,7 @@ class Input extends React.Component {
     disabled:   PropTypes.bool,
     readonly:   PropTypes.bool,
     required:   PropTypes.bool,
+    onChange:   PropTypes.func
   };
 
   componentWillMount() {
@@ -27,12 +28,18 @@ class Input extends React.Component {
     }
   }
 
+  onChange = (event) => {
+    this.props.onChange(event.currentTarget.value || '');
+  };
+
   focus = () => {
     this.input.focus();
   };
 
   render() {
     const { className, validated, validating, ...elementProps } = this.props;
+    const props = Object.assign({}, elementProps);
+    delete props.onChange;
     return (
       <div
         className={
@@ -49,7 +56,8 @@ class Input extends React.Component {
         <input
           id={this.id}
           ref={(c) => { this.input = c; }}
-          {...elementProps}
+          onChange={this.onChange}
+          {...props}
         />
         {/* { validating ? <SVGInline className="dp-input__icon" svg={LoadingSvg} /> : '' }*/}
         {/* { validated ? <SVGInline className="dp-input__icon" svg={ValidatedSvg} /> : '' }*/}
