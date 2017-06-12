@@ -1,0 +1,28 @@
+/******************************
+    Labels
+*******************************/
+.dp-label {
+  font-family: $primary-font;
+  font-size: $font-size-m;
+  font-weight: $pf-regular;
+  color: $dp-greyscale-850;
+
+  background-color: $dp-greyscale-150;
+  border: solid 1px $dp-greyscale-300;
+
+  height: 18px;
+  border-radius: $rad-size-s;
+  padding-left: 4px;
+  padding-right: 4px;
+
+  margin-right: 4px;
+  &.editable {
+    padding-right: 6px;
+  }
+}
+.dp-label__close {
+  margin-left: 3px;
+  font-size: $icon-size-xs;
+  color: $dp-greyscale-500;
+  cursor: pointer;
+}

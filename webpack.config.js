@@ -10,7 +10,6 @@ const config = {
   entry: {
     'webpack-dev-server': 'webpack-dev-server/client?http://localhost:4898',
     'only-dev-server': 'webpack/hot/only-dev-server',
-    'semantic-ui': './src/semantic-ui/semantic-ui.less',
     'deskpro-styles': './src/styles/bundles/deskpro-styles.scss'
   },
 
@@ -32,15 +31,6 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.less$/,
-        exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            'css-loader',
-            { loader: 'less-loader', options: { sourceMap: true } },
-          ],
-        }),
       },
       {
         test: /\.scss$/,

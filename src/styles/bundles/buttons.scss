@@ -1,0 +1,106 @@
+.dp-button {
+  font-family: $primary-font;
+  font-weight: $pf-semi-bold;
+  color: $dp-greyscale-00;
+  border: 0 solid $dp-sonic-primary;
+  border-radius: $rad-size-m-l;
+
+  height: 22px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 3px;
+  padding-top: 1px;
+  font-size: $font-size-l;
+
+  background-color: $dp-sonic-primary;
+  box-shadow: 0 -2px 0 $dp-sonic-midnight inset;
+  mix-blend-mode: multiply;
+  transition: all 0.1s linear 0s;
+
+  &:hover {
+    background-color: $dp-sonic-secondary;
+  }
+  &:active {
+    background-color: $dp-sonic-tertiary;
+    border-color: $dp-sonic-tertiary;
+    box-shadow: 0 2px 0 $dp-sonic-midnight inset;
+    mix-blend-mode: normal;
+  }
+  &:focus {
+    outline: 0;
+    //outline: solid 1px $dp-sonic-primary;
+  }
+  &:disabled {
+    background-color: $dp-greyscale-150;
+    border-color: $dp-greyscale-150;
+    color: $dp-greyscale-300;
+    box-shadow: none;
+  }
+}
+
+/******************************
+    Button sizes
+*******************************/
+.dp-button--s {
+  height: 18px;
+  padding: 1px 10px 4px 10px;
+  font-size: $font-size-m;
+}
+
+.dp-button--l {
+  height: 34px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: $font-size-xl;
+}
+
+/******************************
+    Button types
+*******************************/
+
+.dp-button--cta {
+  background-color: $dp-emerald-primary;
+  border-color: $dp-emerald-primary;
+  box-shadow: 0 -2px 0 $dp-emerald-midnight inset;
+
+  &:hover {
+    background-color: $dp-emerald-secondary;
+  }
+  &:active {
+    background-color: $dp-emerald-tertiary;
+    border-color: $dp-emerald-tertiary;
+    box-shadow: 0 2px 0 $dp-emerald-midnight inset;
+    mix-blend-mode: normal;
+  }
+}
+
+.dp-button--secondary {
+  background-color: $dp-greyscale-00;
+  border: 1px solid $dp-greyscale-300;
+  box-shadow: 0 -1px 0 $dp-greyscale-200 inset;
+  color: $dp-greyscale-850;
+  height: 22px;
+  padding-top: 0;
+  &.dp-button--s {
+    height: 18px;
+    padding: 0 10px 4px 10px;
+  }
+  &.dp-button--l {
+    height: 34px;
+    padding: 2px 14px 4px 14px;
+  }
+
+  &:hover {
+    background-color: $dp-greyscale-00;
+    border-color: $dp-sonic-primary;
+    color: $dp-sonic-primary;
+    box-shadow: 0 -1px 0 $dp-sonic-primary inset;
+  }
+  &:active {
+    background-color: $dp-morning-sky;
+    border-color: $dp-sonic-primary;
+    color: $dp-sonic-primary;
+    box-shadow: 0 1px 0 $dp-sonic-primary inset;
+    mix-blend-mode: normal;
+  }
+}

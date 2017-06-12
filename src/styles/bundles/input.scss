@@ -1,0 +1,142 @@
+/******************************
+    Inputs
+*******************************/
+.dp-input {
+  position: relative;
+  display: inline-flex;
+}
+.dp-input input {
+  font-family: $primary-font;
+  font-weight: $pf-regular;
+  color: $dp-greyscale-850;
+
+  height: 24px;
+  font-size: $font-size-m;
+
+  border-radius: $rad-size-m;
+  padding-left: 8px;
+  border: 1px solid $dp-greyscale-300;
+  &::placeholder {
+    color: $dp-greyscale-450;
+  }
+  &:hover {
+    border-color: $dp-greyscale-450;
+  }
+  &:focus {
+    border-color: $dp-sonic-secondary;
+    outline: 0;
+  }
+}
+/******************************
+    Input label
+*******************************/
+.dp-input__label {
+  font-family: $primary-font;
+  font-size: $font-size-s;
+  font-weight: $pf-regular;
+  color: $dp-greyscale-700;
+  text-transform: uppercase;
+  display: block;
+  padding-bottom: 3px;
+}
+.dp-input__link {
+  font-family: $primary-font;
+  font-size: $font-size-s;
+  font-weight: $pf-regular;
+  color: $dp-greyscale-700;
+  text-decoration: underline;
+}
+/******************************
+    Input sizes
+*******************************/
+.dp-input--small input {
+  height: 20px;
+  font-size: $font-size-m;
+}
+.dp-input--medium input {
+  height: 24px;
+  font-size: $font-size-m;
+}
+.dp-input--large input {
+  height: 36px;
+  font-size: $font-size-xl;
+}
+/******************************
+    Input validation
+*******************************/
+.dp-input--error input {
+  border-color: $dp-knuckles-primary;
+  &:hover {
+    border-color: $dp-knuckles-secondary;
+  }
+  &:focus {
+    border-color: $dp-knuckles-tertiary;
+  }
+}
+.dp-input--validating,
+.dp-input--validated {
+  input {
+    padding-right: 30px;
+  }
+}
+.dp-input--validating {
+  .dp-input__icon svg {
+    animation-name: icon-rotate;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    transform-origin: 50% 50%;
+    animation-timing-function: linear;
+
+    height: $icon-size-m;
+    width:  $icon-size-m;
+    cursor: default;
+    position: absolute;
+    right: 0;
+    margin: (26px - $icon-size-m) / 2 6px;
+    svg .st0{
+      opacity: 1;
+    }
+    svg .st1{
+      fill:$dp-sonic-primary;
+    }
+    svg .st2{
+      fill:$dp-sonic-secondary;
+    }
+    svg .st3{
+      fill:$dp-morning-sky;
+    }
+  }
+}
+.dp-input--validated {
+  .dp-input__icon svg {
+    height: $icon-size-s;
+    width:  $icon-size-s;
+    cursor: default;
+    position: absolute;
+    right: 0;
+    margin: (26px - $icon-size-s) / 2 6px;
+    path {
+      fill: $dp-emerald-primary;
+    }
+  }
+}
+@keyframes icon-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/******************************
+    Input disabled
+*******************************/
+.dp-input input:disabled,
+.dp-input input:read-only {
+  background-color: $dp-greyscale-150;
+  border-color: $dp-greyscale-200;
+  color: $dp-greyscale-350;
+}
+.dp-input input:read-only {
+  color: $dp-greyscale-750
+}

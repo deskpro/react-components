@@ -1,22 +1,19 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
   devtool: 'cheap-module-source-map',
 
   entry: {
-    'semantic-ui': './src/semantic-ui/semantic-ui.less',
     'deskpro-styles': './src/styles/bundles/deskpro-styles.scss'
   },
 
   context: resolve(__dirname, './'),
 
   output: {
-    path: resolve(__dirname, 'dist'),
-    publicPath: '',
+    path:              resolve(__dirname, 'dist'),
+    publicPath:        '',
     filename:          '[name].js',
     sourceMapFilename: '[name].map'
   },
@@ -25,12 +22,12 @@ const config = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
-      debug: false,
+      debug:    false,
     }),
     new webpack.optimize.UglifyJsPlugin({
       beautify: false,
-      mangle: {
-        screw_ie8: true,
+      mangle:   {
+        screw_ie8:   true,
         keep_fnames: true,
       },
       compress: {
@@ -45,22 +42,22 @@ const config = {
   module: {
     loaders: [
       {
-        test: /\.less$/,
+        test:    /\.less$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
+        use:     ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
+          use:      [
             'css-loader',
             { loader: 'less-loader', options: { sourceMap: true } },
           ],
         }),
       },
       {
-        test: /\.scss$/,
+        test:    /\.scss$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
+        use:     ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
+          use:      [
             'css-loader',
             { loader: 'sass-loader', options: { sourceMap: true } },
           ],
