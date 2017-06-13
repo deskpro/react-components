@@ -3,6 +3,7 @@ import './components/button';
 import './components/input';
 import './components/checkbox';
 import './components/label';
+import './components/icon';
 import './components/list';
 import './components/list_toggleable';
 import './components/modal';
