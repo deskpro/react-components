@@ -69,6 +69,13 @@ storiesOf('Input', module)
           readOnly={boolean('Readonly', false)}
           validated
         /><br />
+        <h3>Icons</h3>
+        <Label>With icon</Label>
+        <Input
+          disabled={boolean('Disabled', false)}
+          readOnly={boolean('Readonly', false)}
+          icon="search"
+        /><br />
       </div>
     ),
   )

@@ -15,7 +15,6 @@ class Modal extends React.Component {
       width:  0,
       height: 0
     };
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
   componentDidMount() {
@@ -32,23 +31,15 @@ class Modal extends React.Component {
   }
 
   componentWillUnmount() {
-    window.addEventListener('resize', () => {
-      if (!this.ticking) {
-        window.requestAnimationFrame(() => {
-          this.updateWindowDimensions();
-          this.ticking = false;
-        });
-      }
-      this.ticking = true;
-    });
+    window.removeEventListener('resize', this.updateWindowDimensions);
   }
 
-  updateWindowDimensions() {
+  updateWindowDimensions = () => {
     this.setState({
       width:  window.innerWidth,
       height: window.innerHeight
     });
-  }
+  };
 
   render() {
     const { title, children, buttons, style } = this.props;

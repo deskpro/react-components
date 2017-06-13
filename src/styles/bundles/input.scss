@@ -140,3 +140,17 @@
 .dp-input input:read-only {
   color: $dp-greyscale-750
 }
+/******************************
+    Input icon
+*******************************/
+.dp-input--with-icon {
+  input {
+    padding-left: 24px;
+  }
+}
+.dp-input .fa {
+  position: absolute;
+  left: 6px;
+  font-size: $icon-size-s;
+  top: calc(50% - #{$icon-size-s / 2});
+}

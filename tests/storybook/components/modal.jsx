@@ -10,7 +10,7 @@ storiesOf('Modal', module)
     () => (
       <Modal
         title="Modal Heading"
-        style={{ width: 720, height: 400 }}
+        style={{ width: 520 }}
         buttons={<div>
           <Button className="dp-button--l">
               Button one

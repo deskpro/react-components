@@ -1,3 +1,9 @@
+## v0.1.2 - 2017-06-13
+
+* [FEATURE] Add icon to inputs
+* [FIX] Fix eventListener on Modal
+* use border-box on modal buttons
+
 ## v0.1.1 - 2017-06-13
 
 * [FEATURE] Add Modal dialog

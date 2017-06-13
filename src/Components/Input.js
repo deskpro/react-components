@@ -12,6 +12,7 @@ class Input extends React.Component {
     className:  PropTypes.string,
     label:      PropTypes.string,
     id:         PropTypes.string,
+    icon:       PropTypes.string,
     validated:  PropTypes.bool,
     validating: PropTypes.bool,
     disabled:   PropTypes.bool,
@@ -32,12 +33,20 @@ class Input extends React.Component {
     this.props.onChange(event.currentTarget.value || '');
   };
 
+  getIcon = () => {
+    const { icon } = this.props;
+    if (!icon) {
+      return null;
+    }
+    return <i className={classNames('fa', `fa-${icon}`)} />;
+  };
+
   focus = () => {
     this.input.focus();
   };
 
   render() {
-    const { className, validated, validating, ...elementProps } = this.props;
+    const { className, validated, validating, icon, ...elementProps } = this.props;
     const props = Object.assign({}, elementProps);
     delete props.onChange;
     return (
@@ -48,11 +57,13 @@ class Input extends React.Component {
             className,
             {
               'dp-input--validating': validating,
-              'dp-input--validated':  validated
+              'dp-input--validated':  validated,
+              'dp-input--with-icon':  icon,
             }
           )
         }
       >
+        {this.getIcon()}
         <input
           id={this.id}
           ref={(c) => { this.input = c; }}

@@ -40,13 +40,14 @@
   }
 }
 .dp-modal__body {
-  padding: 12px;
+  padding: 12px 12px 72px 12px;
 }
 .dp-modal__buttons {
-  height: 36px;
+  box-sizing: border-box;
+  height: 60px;
   padding: 12px;
   position: absolute;
-  width: calc(100% - 24px);
+  width: 100%;
   bottom: 0;
   border-top: 1px solid $dp-greyscale-350;
   .dp-button {
