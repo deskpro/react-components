@@ -3,4 +3,5 @@ import './components/button';
 import './components/input';
 import './components/label';
 import './components/list';
+import './components/modal';
 import './components/select';
