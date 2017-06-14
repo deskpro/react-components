@@ -18,6 +18,9 @@
   min-width: 300px;
   width: 720px;
   position: relative;
+  &, * {
+    box-sizing: border-box;
+  }
 }
 .dp-modal__title {
   background-color: $dp-sonic-primary;
@@ -45,7 +48,6 @@
   padding: 12px 12px 72px 12px;
 }
 .dp-modal__buttons {
-  box-sizing: border-box;
   height: 60px;
   padding: 12px;
   position: absolute;

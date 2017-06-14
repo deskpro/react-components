@@ -32,5 +32,8 @@ $select-input-border-color: $dp-greyscale-300;
   &.Select.is-open > .Select-control {
     border-color: $dp-sonic-primary;
   }
+  &, * {
+    box-sizing: border-box;
+  }
 }
 

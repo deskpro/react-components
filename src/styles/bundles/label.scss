@@ -19,6 +19,9 @@
   &.editable {
     padding-right: 6px;
   }
+  &, * {
+    box-sizing: border-box;
+  }
 }
 .dp-label__close {
   margin-left: 3px;

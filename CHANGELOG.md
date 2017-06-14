@@ -1,3 +1,7 @@
+## v0.1.4 - 2017-06-14
+
+* [FIX] Use border-box box-sizing on all elements 
+
 ## v0.1.3 - 2017-06-14
 
 * [FEATURE] Add prefix / suffix to inputs

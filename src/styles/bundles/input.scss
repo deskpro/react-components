@@ -4,6 +4,9 @@
 .dp-input {
   position: relative;
   flex: 1 0 auto;
+  &, * {
+    box-sizing: border-box;
+  }
 }
 .dp-input input {
   font-family: $primary-font;
@@ -175,7 +178,7 @@
   font-size: $font-size-m;
   display: inline-block;
   line-height: 1;
-  padding: 7px 4px;
+  padding: 5px 4px;
   vertical-align: baseline;
   border: 1px solid $dp-greyscale-300;
   margin: 0;
