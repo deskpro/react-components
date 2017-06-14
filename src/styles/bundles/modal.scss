@@ -37,6 +37,8 @@
     right: 0;
     text-align: center;
     color: $dp-greyscale-00;
+    cursor: pointer;
+    user-select: none;
   }
 }
 .dp-modal__body {

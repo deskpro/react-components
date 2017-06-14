@@ -13,13 +13,29 @@ class Input extends React.Component {
     label:      PropTypes.string,
     id:         PropTypes.string,
     icon:       PropTypes.string,
+    prefix:     PropTypes.string,
+    suffix:     PropTypes.string,
     validated:  PropTypes.bool,
     validating: PropTypes.bool,
     disabled:   PropTypes.bool,
     readonly:   PropTypes.bool,
     required:   PropTypes.bool,
-    onChange:   PropTypes.func
+    onChange:   PropTypes.func,
+    onFocus:    PropTypes.func,
+    onBlur:     PropTypes.func,
   };
+  static defaultProps = {
+    onChange() {},
+    onFocus() {},
+    onBlur() {},
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      focus: false
+    };
+  }
 
   componentWillMount() {
     if (this.props.id) {
@@ -33,6 +49,20 @@ class Input extends React.Component {
     this.props.onChange(event.currentTarget.value || '');
   };
 
+  onFocus = (e) => {
+    this.setState({
+      focus: true
+    });
+    this.props.onFocus(e);
+  };
+
+  onBlur = (e) => {
+    this.setState({
+      focus: false
+    });
+    this.props.onBlur(e);
+  };
+
   getIcon = () => {
     const { icon } = this.props;
     if (!icon) {
@@ -41,14 +71,32 @@ class Input extends React.Component {
     return <i className={classNames('fa', `fa-${icon}`)} />;
   };
 
+  getPrefix = () => {
+    const { prefix } = this.props;
+    if (!prefix) {
+      return null;
+    }
+    return <div className="dp-input__prefix">{prefix}</div>;
+  };
+
+  getSuffix = () => {
+    const { suffix } = this.props;
+    if (!suffix) {
+      return null;
+    }
+    return <div className="dp-input__suffix">{suffix}</div>;
+  };
+
   focus = () => {
     this.input.focus();
   };
 
   render() {
-    const { className, validated, validating, icon, ...elementProps } = this.props;
+    const { className, validated, validating, icon, prefix, suffix, ...elementProps } = this.props;
     const props = Object.assign({}, elementProps);
     delete props.onChange;
+    delete props.onFocus;
+    delete props.onBlur;
     return (
       <div
         className={
@@ -56,22 +104,29 @@ class Input extends React.Component {
             'dp-input',
             className,
             {
-              'dp-input--validating': validating,
-              'dp-input--validated':  validated,
-              'dp-input--with-icon':  icon,
+              'dp-input--validating':  validating,
+              'dp-input--validated':   validated,
+              'dp-input--with-icon':   icon,
+              'dp-input--with-prefix': prefix,
+              'dp-input--with-suffix': suffix,
+              'dp-input--focused':     this.state.focus,
             }
           )
         }
       >
+        {this.getPrefix()}
         {this.getIcon()}
         <input
           id={this.id}
           ref={(c) => { this.input = c; }}
           onChange={this.onChange}
+          onFocus={this.onFocus}
+          onBlur={this.onBlur}
           {...props}
         />
         {/* { validating ? <SVGInline className="dp-input__icon" svg={LoadingSvg} /> : '' }*/}
         {/* { validated ? <SVGInline className="dp-input__icon" svg={ValidatedSvg} /> : '' }*/}
+        {this.getSuffix()}
       </div>
     );
   }

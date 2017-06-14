@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 
 class Modal extends React.Component {
   static propTypes = {
-    title:    PropTypes.string,
-    children: PropTypes.node,
-    buttons:  PropTypes.node,
-    style:    PropTypes.object
+    title:      PropTypes.string,
+    children:   PropTypes.node,
+    buttons:    PropTypes.node,
+    style:      PropTypes.object,
+    closeModal: PropTypes.func,
+  };
+  static defaultProps = {
+    closeModal() {},
   };
 
   constructor(props) {
@@ -42,7 +46,7 @@ class Modal extends React.Component {
   };
 
   render() {
-    const { title, children, buttons, style } = this.props;
+    const { title, children, buttons, style, closeModal } = this.props;
     const { width, height } = this.state;
     const modalStyle = Object.assign({}, style);
     modalStyle.maxHeight = height * 0.7;
@@ -55,7 +59,7 @@ class Modal extends React.Component {
         >
           <div className="dp-modal__title">
             {title}
-            <div className="dp-modal__close">X</div>
+            <div className="dp-modal__close" onClick={closeModal}>X</div>
           </div>
           <div className="dp-modal__body">
             {children}

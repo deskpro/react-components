@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import Input from 'Components/Input';
@@ -75,6 +76,29 @@ storiesOf('Input', module)
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
           icon="search"
+        /><br />
+        <h3>Prefix / Suffix</h3>
+        <Label>Prefix</Label>
+        <Input
+          disabled={boolean('Disabled', false)}
+          readOnly={boolean('Readonly', false)}
+          className={{ 'dp-input--error': boolean('Error', false) }}
+          prefix="prefix"
+        /><br />
+        <Label>Suffix</Label>
+        <Input
+          disabled={boolean('Disabled', false)}
+          readOnly={boolean('Readonly', false)}
+          className={{ 'dp-input--error': boolean('Error', false) }}
+          suffix="%"
+        /><br />
+        <Label>Both</Label>
+        <Input
+          disabled={boolean('Disabled', false)}
+          readOnly={boolean('Readonly', false)}
+          className={{ 'dp-input--error': boolean('Error', false) }}
+          prefix="%"
+          suffix="%"
         /><br />
       </div>
     ),

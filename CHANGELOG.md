@@ -1,3 +1,7 @@
+## v0.1.3 - 2017-06-14
+
+* [FEATURE] Add prefix / suffix to inputs
+
 ## v0.1.2 - 2017-06-13
 
 * [FEATURE] Add icon to inputs

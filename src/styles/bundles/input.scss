@@ -3,7 +3,7 @@
 *******************************/
 .dp-input {
   position: relative;
-  display: inline-flex;
+  flex: 1 0 auto;
 }
 .dp-input input {
   font-family: $primary-font;
@@ -153,4 +153,105 @@
   left: 6px;
   font-size: $icon-size-s;
   top: calc(50% - #{$icon-size-s / 2});
+}
+/******************************
+    Input prefix / suffix
+*******************************/
+.dp-input--with-prefix input{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  flex: 0 0 auto;
+  border-left: 0;
+}
+.dp-input--with-suffix input{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  flex: 0 0 auto;
+  border-right: 0;
+}
+.dp-input__prefix,
+.dp-input__suffix {
+  font-family: $primary-font;
+  font-size: $font-size-m;
+  display: inline-block;
+  line-height: 1;
+  padding: 7px 4px;
+  vertical-align: baseline;
+  border: 1px solid $dp-greyscale-300;
+  margin: 0;
+  background-color: $dp-greyscale-250
+}
+.dp-input__prefix {
+  border-top-left-radius: $rad-size-m;
+  border-bottom-left-radius: $rad-size-m;
+}
+.dp-input__suffix {
+  border-top-right-radius: $rad-size-m;
+  border-bottom-right-radius: $rad-size-m;
+}
+.dp-input:hover {
+  .dp-input__prefix,
+  .dp-input__suffix {
+    border-top-color: $dp-greyscale-450;
+    border-bottom-color: $dp-greyscale-450;
+  }
+  .dp-input__prefix {
+    border-left-color: $dp-greyscale-450;
+  }
+  .dp-input__suffix {
+    border-right-color: $dp-greyscale-450;
+  }
+}
+.dp-input.dp-input--focused {
+  .dp-input__prefix,
+  .dp-input__suffix {
+    border-top-color: $dp-sonic-secondary;
+    border-bottom-color: $dp-sonic-secondary;
+  }
+  .dp-input__prefix {
+    border-left-color: $dp-sonic-secondary;
+  }
+  .dp-input__suffix {
+    border-right-color: $dp-sonic-secondary;
+  }
+}
+.dp-input--error {
+  .dp-input__prefix,
+  .dp-input__suffix {
+    border-top-color: $dp-knuckles-primary;
+    border-bottom-color: $dp-knuckles-primary;
+  }
+  .dp-input__prefix {
+    border-left-color: $dp-knuckles-primary;
+  }
+  .dp-input__suffix {
+    border-right-color: $dp-knuckles-primary;
+  }
+  &:hover {
+    .dp-input__prefix,
+    .dp-input__suffix {
+      border-top-color: $dp-knuckles-secondary;
+      border-bottom-color: $dp-knuckles-secondary;
+    }
+    .dp-input__prefix {
+      border-left-color: $dp-knuckles-secondary;
+    }
+    .dp-input__suffix {
+      border-right-color: $dp-knuckles-secondary;
+    }
+  }
+  &.dp-input--focused {
+
+    .dp-input__prefix,
+    .dp-input__suffix {
+      border-top-color: $dp-knuckles-tertiary;
+      border-bottom-color: $dp-knuckles-tertiary;
+    }
+    .dp-input__prefix {
+      border-left-color: $dp-knuckles-tertiary;
+    }
+    .dp-input__suffix {
+      border-right-color: $dp-knuckles-tertiary;
+    }
+  }
 }
