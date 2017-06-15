@@ -1,3 +1,7 @@
+## v0.1.5 - 2017-06-15
+
+* [FEATURE] Add label input to update a set of labels
+
 ## v0.1.4 - 2017-06-14
 
 * [FIX] Use border-box box-sizing on all elements 

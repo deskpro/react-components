@@ -82,21 +82,21 @@ storiesOf('Input', module)
         <Input
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
-          className={{ 'dp-input--error': boolean('Error', false) }}
+          className={classNames({ 'dp-input--error': boolean('Error', false) })}
           prefix="prefix"
         /><br />
         <Label>Suffix</Label>
         <Input
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
-          className={{ 'dp-input--error': boolean('Error', false) }}
+          className={classNames({ 'dp-input--error': boolean('Error', false) })}
           suffix="%"
         /><br />
         <Label>Both</Label>
         <Input
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
-          className={{ 'dp-input--error': boolean('Error', false) }}
+          className={classNames({ 'dp-input--error': boolean('Error', false) })}
           prefix="%"
           suffix="%"
         /><br />

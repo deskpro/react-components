@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import Label from 'Components/Label';
+import LabelInput from 'Components/LabelInput';
 
 storiesOf('Label', module)
   .addDecorator(withKnobs)
@@ -20,6 +21,8 @@ storiesOf('Label', module)
         <Label editable>Report back on bug fix</Label>
         <Label editable>VIP</Label>
         <br />
+        <h3>Label set</h3>
+        <LabelInput labels={['Label 1', 'Label 2', 'Label 3']} />
       </div>
     ),
   )

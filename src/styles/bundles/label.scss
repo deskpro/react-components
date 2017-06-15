@@ -29,3 +29,25 @@
   color: $dp-greyscale-500;
   cursor: pointer;
 }
+/******************************
+    Label input
+*******************************/
+.dp-label-input {
+  padding: 4px;
+  border: 1px solid transparent;
+  &:hover:not(.editable) {
+    border: 1px dashed $dp-greyscale-300;
+    cursor: text;
+  }
+  input {
+    font-family: $primary-font;
+    font-size: $font-size-m;
+    border: 0;
+    box-shadow: none;
+    padding: 1px;
+    &:focus {
+      border: 0;
+      outline: 0;
+    }
+  }
+}

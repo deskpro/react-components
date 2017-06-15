@@ -6,21 +6,18 @@ class Label extends React.Component {
   static propTypes = {
     editable: PropTypes.bool,
     children: PropTypes.node,
-  };
-
-  handleClose = () => {
-
+    onClose:  PropTypes.func
   };
 
   render() {
-    const { children, editable, ...elementProps } = this.props;
+    const { children, editable, onClose, ...elementProps } = this.props;
     return (
       <span
         className={classNames('dp-label', { editable })}
         {...elementProps}
       >
         {children}
-        { editable ? <span onClick={this.handleClose}><i className="dp-label__close fa fa-close" /></span> : null }
+        { editable ? <span onClick={onClose}><i className="dp-label__close fa fa-close" /></span> : null }
       </span>
     );
   }

@@ -22,13 +22,13 @@
   &::placeholder {
     color: $dp-greyscale-450;
   }
-  &:hover {
-    border-color: $dp-greyscale-450;
-  }
-  &:focus {
-    border-color: $dp-sonic-secondary;
-    outline: 0;
-  }
+}
+.dp-input:hover input {
+  border-color: $dp-greyscale-450;
+}
+.dp-input.dp-input--focused input {
+  border-color: $dp-sonic-secondary;
+  outline: 0;
 }
 /******************************
     Input label
