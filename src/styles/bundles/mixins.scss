@@ -1,0 +1,14 @@
+/// Prevents text from being selected
+///
+/// @example scss - Basic Usage Sass
+///    h1 {
+///        @include no-text-select();
+///    }
+
+@mixin no-text-select {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}

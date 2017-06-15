@@ -2,6 +2,7 @@
 $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
 @import "../../../node_modules/font-awesome/scss/font-awesome";
 
+@import "./mixins";
 @import "./colours";
 @import "./fonts";
 @import "./icons";
@@ -13,6 +14,7 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
 @import "./select";
 @import "./modal";
 @import "./popper";
+@import "./columns";
 
 .deskpro-styleguide {
   @import "../../styleguide/styleguide.scss";

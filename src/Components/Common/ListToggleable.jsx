@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { toUpperFirst } from 'Components/utils/strings';
 import { List } from 'Components/Common';
 
-const TOGGLE_ID_ATTRIB = 'data-dp-toggle-id';
+const DATA_DP_TOGGLE_ID = 'data-dp-toggle-id';
 
 /**
  * A higher order component which changes prop values on its children
@@ -25,18 +25,22 @@ class ListToggleable extends React.Component {
     super(props);
     this.state = {
       targetID: null,
-      targetOn: false
+      targetValue: false
     };
   }
 
+  /**
+   * @param {Event} e
+   */
   handleEvent = (e) => {
-    const element  = findToggleID(e.target);
+    const element = findToggleableParent(e.target);
     if (element) {
-      const targetID = element.getAttribute(TOGGLE_ID_ATTRIB);
+      const targetID = element.getAttribute(DATA_DP_TOGGLE_ID);
+      const targetValue = (targetID == this.state.targetID) ? !this.state.targetValue : true;
       if (targetID !== null) {
         this.setState({
           targetID,
-          targetOn: targetID == this.state.targetID
+          targetValue
         });
       }
     }
@@ -44,18 +48,16 @@ class ListToggleable extends React.Component {
 
   render() {
     const { on, toggle, children, ...props } = this.props;
-    const { targetID, targetOn } = this.state;
-    const targetValue = !targetOn;
+    const { targetID, targetValue } = this.state;
 
     return (
       <List {...props}>
-        {React.Children.map(children, (child, i) => {
-          let props = {
-            'data-dp-toggle-id': i,
-            [`on${toUpperFirst(on)}`]: this.handleEvent
-          };
-          props[toggle] = props[TOGGLE_ID_ATTRIB] == targetID ? targetValue : false;
-          return React.cloneElement(child, props);
+        {React.Children.map(children, (child, index) => {
+          return React.cloneElement(child, {
+            [DATA_DP_TOGGLE_ID]: index,
+            [`on${toUpperFirst(on)}`]: this.handleEvent,
+            [toggle]: (index == targetID) ? targetValue : false
+          });
         })}
       </List>
     )
@@ -63,13 +65,25 @@ class ListToggleable extends React.Component {
 }
 export default ListToggleable;
 
-function findToggleID(el) {
-  if (el.getAttribute(TOGGLE_ID_ATTRIB) !== null) {
+/**
+ * Traverses through the given element's parents until the element containing
+ * the 'data-dp-toggle-id' attribute is found and returned. Returns the given
+ * element when it contains the data attribute. Returns null when an element
+ * cannot be found.
+ *
+ * Needed to get the toggleable ID when a child element fires a click event but
+ * the root/parent element has the 'data-dp-toggle-id' attribute.
+ *
+ * @param {HTMLElement|Node|Object} el Element to traverse
+ * @returns {HTMLElement|Node|null}
+ */
+function findToggleableParent(el) {
+  if (el.getAttribute(DATA_DP_TOGGLE_ID) !== null) {
     return el;
   }
   while (el.parentNode) {
     el = el.parentNode;
-    if (el.getAttribute(TOGGLE_ID_ATTRIB) !== null) {
+    if (el.getAttribute(DATA_DP_TOGGLE_ID) !== null) {
       return el;
     }
   }
