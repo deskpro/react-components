@@ -15,6 +15,7 @@
     "webpack": "webpack"
   },
   "author": "DeskPRO <team@deskpro.com>",
+  "license": "BSD-3-Clause",
   "devDependencies": {
     "@storybook/addon-actions": "^3.0.1",
     "@storybook/addon-info": "^3.0.0",
