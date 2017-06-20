@@ -33,6 +33,7 @@
     Label input
 *******************************/
 .dp-label-input {
+  height: 29px;
   padding: 4px;
   border: 1px solid transparent;
   &:hover:not(.editable) {

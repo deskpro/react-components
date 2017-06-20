@@ -8,10 +8,11 @@ class Select extends React.Component {
     className:   PropTypes.string,
     placeholder: PropTypes.string,
     onChange:    PropTypes.func,
-    options:     PropTypes.object,
+    options:     PropTypes.array,
   };
   static defaultProps = {
-    placeholder: 'Please select'
+    placeholder: 'Please select',
+    onChange() {},
   };
 
   handleChange = (value) => {
@@ -20,11 +21,13 @@ class Select extends React.Component {
 
   render() {
     const { className, ...elementProps } = this.props;
+    const props = Object.assign({}, elementProps);
+    delete props.onChange;
     return (
       <ReactSelect
         className={classNames('dp-select', className)}
         onChange={this.handleChange}
-        {...elementProps}
+        {...props}
       />
     );
   }

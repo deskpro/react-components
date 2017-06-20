@@ -1,3 +1,9 @@
+## v0.1.6 - 2017-06-20
+
+* [FIX] Fix Select onChange
+* [MINOR] Fix design on Label Input when empty
+* [MINOR] Fix select design when style overridden
+
 ## v0.1.5 - 2017-06-15
 
 * [FEATURE] Add label input to update a set of labels
