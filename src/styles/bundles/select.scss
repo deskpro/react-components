@@ -10,7 +10,8 @@ $select-option-color: $dp-greyscale-850;
 
 $select-input-border-color: $dp-greyscale-300;
 
-@import "../../../node_modules/react-select/scss/default";
+@import "~react-select/scss/default";
+@import "~react-bootstrap-multiselect/css/bootstrap-multiselect";
 
 .dp-select {
   font-family: $primary-font;
@@ -49,6 +50,70 @@ $select-input-border-color: $dp-greyscale-300;
   }
   &, * {
     box-sizing: border-box;
+  }
+
+  .multiselect-native-select {
+    display: inline-block;
+  }
+  .btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .checkbox, .radio {
+    position: relative;
+    display: block;
+  }
+  label {
+    display: inline-block;
+    max-width: 100%;
+  }
+  .dropdown-menu {
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    min-width: 160px;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+  }
+  .open > .dropdown-menu {
+    display: block;
+  }
+  .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+    position: absolute;
+    margin-left: -20px;
+  }
+  .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    text-decoration: none;
+    outline: 0;
+  }
+  .dropdown-menu>li>a {
+    display: block;
+    padding: 0;
+    line-height: 1.42857143;
+    white-space: nowrap;
   }
 }
 

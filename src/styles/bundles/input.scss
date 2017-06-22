@@ -258,3 +258,41 @@
     }
   }
 }
+/* .squaredFour */
+.dp-input--checkbox {
+  position: relative;
+  label.dp-input--checkbox__checkbox {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fcfff4;
+    border: 1px solid $dp-greyscale-450;
+    border-radius: $rad-size-m;
+    &:after {
+      content: '';
+      width: 8px;
+      height: 3px;
+      position: absolute;
+      top: 3px;
+      left: 2px;
+      border: 2px solid $dp-sonic-primary;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      opacity: 0;
+      transform: rotate(-45deg);
+    }
+    &:hover::after {
+      opacity: 0.5;
+    }
+  }
+  input[type=checkbox] {
+    visibility: hidden;
+    &:checked + label.dp-input--checkbox__checkbox:after {
+      opacity: 1;
+    }
+  }
+}

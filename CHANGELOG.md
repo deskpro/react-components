@@ -1,3 +1,7 @@
+## v0.1.6 - 2017-06-22
+
+* [FEATURE] Add checkbox and multiple select
+
 ## v0.1.6 - 2017-06-20
 
 * [FIX] Fix Select onChange
