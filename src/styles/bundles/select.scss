@@ -23,6 +23,7 @@ $select-input-border-color: $dp-greyscale-300;
 
   .Select-control {
     height: 24px;
+    border-radius: $rad-size-m;
   }
 
   .Select-placeholder,
@@ -33,6 +34,10 @@ $select-input-border-color: $dp-greyscale-300;
 
   .Select-input {
     height: 22px;
+  }
+
+  .Select-arrow {
+    border-width: 3px 3px 1.5px;
   }
 
   // placeholder
@@ -97,6 +102,7 @@ $select-input-border-color: $dp-greyscale-300;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
     background-clip: padding-box;
+    color: $dp-greyscale-850;
   }
   .open > .dropdown-menu {
     display: block;
@@ -108,12 +114,62 @@ $select-input-border-color: $dp-greyscale-300;
   .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
     text-decoration: none;
     outline: 0;
+    background-color: $dp-greyscale-00;
+    color: $dp-greyscale-850;
   }
   .dropdown-menu>li>a {
     display: block;
     padding: 0;
     line-height: 1.42857143;
     white-space: nowrap;
+    color: $dp-greyscale-850;
+  }
+  .dropdown-toggle {
+    background-color: $dp-greyscale-00;
+    border: 1px solid $dp-greyscale-300;
+    color: $dp-greyscale-850;
+    border-radius: $rad-size-m;
+    height: 24px;
+    font-family: $primary-font;
+    font-size: $font-size-m;
+    padding: 0 8px;
+    i.fa-caret-down {
+      font-size: $icon-size-xs;
+      margin-top: -3px;
+      vertical-align: middle;
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+  .multiselect-filter {
+    position: relative;
+    input.multiselect-search {
+      border: 0;
+      box-shadow: none;
+      font-family: $primary-font;
+      &:focus {
+        outline: 0;
+      }
+    }
+    input.multiselect-search:placeholder-shown + i.fa-times-circle {
+      visibility: hidden;
+    }
+    i.fa-times-circle {
+      color: $dp-greyscale-500;
+      position: absolute;
+      right: 10px;
+      top: 5px;
+    }
+  }
+  .multiselect-container {
+    box-shadow: none;
+    border: 1px solid $dp-sonic-primary;
+    border-radius: $rad-size-m;
+    & > li > a > label {
+      padding: 3px 10px 3px 30px;
+      font-size: $font-size-m;
+    }
   }
 }
 

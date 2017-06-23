@@ -27,7 +27,9 @@ storiesOf('Input', module)
           multiple
           includeSelectAllOption
           selectAllText="Europe"
-          allSelectedText="Global"
+          allSelectedText="All Europe"
+          nSelectedText="countries"
+          maxHeight={300}
           onChange={action('Select change')}
           options={
           [
