@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf, action } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import Label from 'Components/InputLabel';
 import Select from 'Components/Select';
@@ -14,6 +14,7 @@ storiesOf('Input', module)
         <h3>Selects</h3>
         <Label>Basic</Label>
         <Select
+          onChange={action('Select change')}
           options={
           [
               { value: 'one', label: 'One' },
@@ -27,6 +28,7 @@ storiesOf('Input', module)
           includeSelectAllOption
           selectAllText="Europe"
           allSelectedText="Global"
+          onChange={action('Select change')}
           options={
           [
             { label: 'Austria', value: 'AT' },
