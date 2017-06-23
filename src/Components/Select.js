@@ -15,15 +15,8 @@ class DpMultiselect extends React.Component {
     handleChange() {},
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      values: []
-    };
-  }
-
   handleChange = (value, added) => {
-    let { values } = this.state;
+    let values = this.props.value.slice(0);
     if (added) {
       if (!values.includes(value[0].value)) {
         values.push(value[0].value);
@@ -31,11 +24,7 @@ class DpMultiselect extends React.Component {
     } else {
       values = values.filter(item => item !== value[0].value);
     }
-    this.setState({
-      values
-    });
     this.props.handleChange(values);
-    this.element.syncData();
   };
 
   handleSelectAll = () => {
@@ -43,39 +32,23 @@ class DpMultiselect extends React.Component {
     this.props.options.forEach((item) => {
       values.push(item.value);
     });
-    this.setState({
-      values
-    });
     this.props.handleChange(values);
-    this.element.syncData();
   };
 
   handleDeselectAll = () => {
-    this.setState({
-      values: []
-    });
     this.props.handleChange([]);
-    this.element.syncData();
   };
 
   render() {
     const { options, ...elementProps } = this.props;
-    const self = this;
     const props = Object.assign({}, elementProps);
-
-    const data = options.map((option) => {
-      const newOption = Object.assign({}, option);
-      if (self.state.values.includes(newOption.value)) {
-        newOption.selected = true;
-      }
-      return newOption;
-    });
-
+    delete props.value;
     delete props.onChange;
     delete props.handleChange;
+
     return (
       <Multiselect
-        data={data}
+        data={options}
         ref={(c) => { this.element = c; }}
         multiple
         enableCaseInsensitiveFiltering
