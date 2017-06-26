@@ -1,6 +1,6 @@
 {
   "name": "deskpro-styles",
-  "version": "1.0.0",
+  "version": "0.1.7",
   "description": "DeskPRO Styles",
   "private": true,
   "scripts": {
@@ -70,6 +70,7 @@
     "font-awesome": "^4.7.0",
     "prop-types": "^15.5.10",
     "react": "15.3.2",
+    "react-bootstrap-multiselect": "git+https://github.com/jducro/react-bootstrap-multiselect.git#deskpro",
     "react-dom": "15.3.2",
     "react-onclickoutside": "5.8.3",
     "react-select": "^1.0.0-rc.5",
