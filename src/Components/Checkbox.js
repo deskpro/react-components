@@ -9,7 +9,7 @@ class Checkbox extends React.Component {
     className: PropTypes.string,
     disabled:  PropTypes.bool,
     id:        PropTypes.string,
-    value:     PropTypes.oneOf(PropTypes.string, PropTypes.number),
+    value:     PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     children:  PropTypes.node,
     onChange:  PropTypes.func,
   };
@@ -45,9 +45,8 @@ class Checkbox extends React.Component {
           type="checkbox"
           value={value}
           id={this.id}
-          ref={(c) => { this.input = c; }}
           onChange={this.handleChange}
-          {...elementProps}
+          {...props}
         />
         <label htmlFor={this.id} className="dp-input--checkbox__checkbox" />
         <Label htmlFor={this.id}>{children}</Label>

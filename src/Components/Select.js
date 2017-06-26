@@ -18,7 +18,7 @@ class DpMultiselect extends React.Component {
   handleChange = (value, added) => {
     let values = this.props.value.slice(0);
     if (added) {
-      if (!values.includes(value[0].value)) {
+      if (values.indexOf(value[0].value) === -1) {
         values.push(value[0].value);
       }
     } else {
