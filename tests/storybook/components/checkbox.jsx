@@ -1,6 +1,6 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Label from 'Components/InputLabel';
+import { storiesOf, action } from '@storybook/react';
+import Checkbox from 'Components/Checkbox';
 
 storiesOf('Input', module)
   .addWithInfo(
@@ -9,16 +9,8 @@ storiesOf('Input', module)
     () => (
       <div>
         <h3>Checkbox</h3>
-        <div className="dp-input--checkbox">
-          <input type="checkbox" value="None" id="checkbox" name="check" />
-          <label htmlFor="checkbox" className="dp-input--checkbox__checkbox" />
-          <Label htmlFor="checkbox">Checked</Label>
-        </div>
-        <div className="dp-input--checkbox">
-          <input type="checkbox" value="None" id="checkbox_unchecked" name="unchecked" checked={false} />
-          <label htmlFor="checkbox_unchecked" className="dp-input--checkbox__checkbox" />
-          <Label htnlFor="checkbox_unchecked">Unchecked</Label>
-        </div>
+        <Checkbox checked onChange={action('Checkbox change')}>Checked</Checkbox>
+        <Checkbox checked={false} onChange={action('Checkbox change')}>Unchecked</Checkbox>
       </div>
     ),
   )

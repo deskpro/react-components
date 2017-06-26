@@ -260,7 +260,10 @@
 }
 /* .squaredFour */
 .dp-input--checkbox {
+  box-sizing: border-box;
   position: relative;
+  margin-bottom: 3px;
+  margin-right: 14px;
   label.dp-input--checkbox__checkbox {
     width: 14px;
     height: 14px;
@@ -288,6 +291,15 @@
     &:hover::after {
       opacity: 0.5;
     }
+  }
+  label.dp-input__label {
+    text-transform: none;
+    display: inline-block;
+    line-height: 14px;
+    vertical-align: 2px;
+    font-size: $font-size-m;
+    color: $dp-greyscale-850;
+    margin-left: 3px;
   }
   input[type=checkbox] {
     visibility: hidden;
