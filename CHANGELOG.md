@@ -1,3 +1,7 @@
+## v0.1.8 - 2017-06-28
+
+* [FEATURE] Add confirm buttons
+
 ## v0.1.7 - 2017-06-22
 
 * [FEATURE] Add checkbox and multiple select

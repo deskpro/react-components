@@ -59,11 +59,7 @@ class DpMultiselect extends React.Component {
         templates={{
           button:         '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"><span class="multiselect-selected-text"></span> <i class="fa fa-caret-down"></button>',
           filterClearBtn: '<i class="fa fa-times-circle">',
-          li:             '<li><a tabindex="0"><label></label></a></li>',
-          // filter: '<li class="multiselect-item multiselect-filter"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
-          // ul: '<ul class="multiselect-container dropdown-menu"></ul>',
-          // divider: '<li class="multiselect-item divider"></li>',
-          // liGroup: '<li class="multiselect-item multiselect-group"><label></label></li>'
+          li:             '<li><a tabindex="0"><label></label></a></li>'
         }}
         {...props}
       />

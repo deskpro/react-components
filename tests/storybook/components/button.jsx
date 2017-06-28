@@ -1,7 +1,8 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf, action } from '@storybook/react';
 import classNames from 'classnames';
 import Button from 'Components/Button';
+import ConfirmButton from 'Components/ConfirmButton';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 /* eslint-disable react/prop-types*/
 
@@ -38,5 +39,14 @@ storiesOf('Buttons', module)
       );
     }
   }
+  )
+  .addWithInfo(
+    'Button with confirm',
+    'This is the basic usage of a input with the label passed as a property.',
+    () => (
+      <div>
+        <ConfirmButton onClick={action('Delete action')}>Delete</ConfirmButton>
+      </div>
+    )
   )
 ;
