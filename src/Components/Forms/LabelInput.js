@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Label from 'Components/Label';
+import Label from 'Components/Forms/Label';
 import TagsInput from 'react-tagsinput';
 import onClickOutside from 'react-onclickoutside';
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import List from 'Components/List';
-import ListElement from 'Components/ListElement';
+import { List, ListElement } from 'Components/Common';
 
 storiesOf('List', module)
   .addDecorator(withKnobs)

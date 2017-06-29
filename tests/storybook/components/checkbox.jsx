@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@storybook/react';
-import Checkbox from 'Components/Checkbox';
+import { Checkbox } from 'Components/Forms';
 
 storiesOf('Input', module)
   .addWithInfo(

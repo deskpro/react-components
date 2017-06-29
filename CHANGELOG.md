@@ -1,3 +1,7 @@
+## v0.2.0 - 2017-06-29
+
+* [FEATURE] Namespace components
+
 ## v0.1.8 - 2017-06-28
 
 * [FEATURE] Add confirm buttons

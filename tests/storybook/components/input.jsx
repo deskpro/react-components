@@ -2,8 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
-import Input from 'Components/Input';
-import Label from 'Components/InputLabel';
+import { Input, InputLabel } from 'Components/Forms';
 
 storiesOf('Input', module)
   .addDecorator(withKnobs)
@@ -13,44 +12,44 @@ storiesOf('Input', module)
     () => (
       <div>
         <h3>Sizes</h3>
-        <Label>Small</Label>
+        <InputLabel>Small</InputLabel>
         <Input
           className="dp-input--small"
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
         /><br />
-        <Label>Medium</Label>
+        <InputLabel>Medium</InputLabel>
         <Input
           className="dp-input--medium"
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
         /><br />
-        <Label>Large</Label>
+        <InputLabel>Large</InputLabel>
         <Input
           className="dp-input--large"
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
         />
         <h3>Fonts</h3>
-        <Label>Email Address</Label>
+        <InputLabel>Email Address</InputLabel>
         <Input
           value="hello@test.com"
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
         /><br />
-        <Label>Placeholder</Label>
+        <InputLabel>Placeholder</InputLabel>
         <Input
           placeholder="e.g. hello@test.com"
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
         /><br />
-        <Label>Error display</Label>
+        <InputLabel>Error display</InputLabel>
         <Input
           className="dp-input--error"
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
         /><br />
-        <Label>Error display</Label>
+        <InputLabel>Error display</InputLabel>
         <Input
           required
           className="dp-input--error"
@@ -58,41 +57,41 @@ storiesOf('Input', module)
           readOnly={boolean('Readonly', false)}
         /><br />
         <h3>Validation</h3>
-        <Label>Validating</Label>
+        <InputLabel>Validating</InputLabel>
         <Input
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
           validating
         /><br />
-        <Label>Validated</Label>
+        <InputLabel>Validated</InputLabel>
         <Input
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
           validated
         /><br />
         <h3>Icons</h3>
-        <Label>With icon</Label>
+        <InputLabel>With icon</InputLabel>
         <Input
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
           icon="search"
         /><br />
         <h3>Prefix / Suffix</h3>
-        <Label>Prefix</Label>
+        <InputLabel>Prefix</InputLabel>
         <Input
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
           className={classNames({ 'dp-input--error': boolean('Error', false) })}
           prefix="prefix"
         /><br />
-        <Label>Suffix</Label>
+        <InputLabel>Suffix</InputLabel>
         <Input
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
           className={classNames({ 'dp-input--error': boolean('Error', false) })}
           suffix="%"
         /><br />
-        <Label>Both</Label>
+        <InputLabel>Both</InputLabel>
         <Input
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
