@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf, action } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import Label from 'Components/InputLabel';
-import Select from 'Components/Select';
+import { InputLabel, Select } from 'Components/Forms';
 
 storiesOf('Input', module)
   .addDecorator(withKnobs)
@@ -12,7 +11,7 @@ storiesOf('Input', module)
     () => (
       <div>
         <h3>Selects</h3>
-        <Label>Basic</Label>
+        <InputLabel>Basic</InputLabel>
         <Select
           onChange={action('Select change')}
           options={
@@ -22,7 +21,7 @@ storiesOf('Input', module)
           ]
           }
         /><br />
-        <Label>Multi</Label>
+        <InputLabel>Multi</InputLabel>
         <Select
           multiple
           includeSelectAllOption

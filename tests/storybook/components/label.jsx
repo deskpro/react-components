@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import Label from 'Components/Label';
-import LabelInput from 'Components/LabelInput';
+import { Label, LabelInput } from 'Components/Forms';
+import { LabelSet } from 'Components/Forms';
 
 storiesOf('Label', module)
   .addDecorator(withKnobs)
@@ -16,13 +16,13 @@ storiesOf('Label', module)
         <Label>Report back on bug fix</Label>
         <Label>VIP</Label>
         <br />
-        <h3>Labels editable</h3>
-        <Label editable>Custom work</Label>
-        <Label editable>Report back on bug fix</Label>
-        <Label editable>VIP</Label>
+        <br />
+        <h3>Label input</h3>
+        <LabelInput labels={['Label 1', 'Label 2', 'Label 3']} />
         <br />
         <h3>Label set</h3>
-        <LabelInput labels={['Label 1', 'Label 2', 'Label 3']} />
+        <LabelSet labels={['Label 1', 'Label 2', 'Label 3']} />
+        <br />
       </div>
     ),
   )
