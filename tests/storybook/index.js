@@ -4,6 +4,7 @@ import './components/input';
 import './components/checkbox';
 import './components/label';
 import './components/list';
+import './components/list_toggleable';
 import './components/modal';
 import './components/select';
 import './components/popper';
