@@ -1,7 +1,7 @@
 {
-  "name": "deskpro-styles",
+  "name": "deskpro-components",
   "version": "0.2.0",
-  "description": "DeskPRO Styles",
+  "description": "DeskPRO Components",
   "private": true,
   "scripts": {
     "dev": "npm run clean && npm run styleguide && webpack-dev-server",
