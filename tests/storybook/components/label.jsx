@@ -2,7 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Label, LabelInput } from 'Components/Forms';
-import { LabelSet } from 'Components/Forms';
 
 storiesOf('Label', module)
   .addDecorator(withKnobs)

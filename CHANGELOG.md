@@ -1,3 +1,7 @@
+## v0.2.3 - 2017-06-30
+
+* [FIX] Use jsx extension on files containing JSX code
+
 ## v0.2.2 - 2017-06-30
 
 * [FEATURE] Add Popper and Portal
