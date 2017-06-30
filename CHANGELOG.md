@@ -1,3 +1,15 @@
+## v0.2.9 - 2017-06-30
+
+* [FIX] Rename storybook scripts
+
+## v0.2.8 - 2017-06-30
+
+* [FIX] Fix package-lock
+
+## v0.2.7 - 2017-06-30
+
+* [FEATURE] Add publication of storybook to GitHub pages
+
 ## v0.2.6 - 2017-06-30
 
 * [FIX] Remove missing LabelSet, add package-lock.json
