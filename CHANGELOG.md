@@ -1,3 +1,7 @@
+## v0.2.5 - 2017-06-30
+
+* [FIX] Add missing .npmignore
+
 ## v0.2.4 - 2017-06-30
 
 * [FIX] Publish to npm
