@@ -10,9 +10,9 @@
     "styleguide": "kss --config kss-config.json",
     "prod": "npm run clean && webpack --config webpack.prod.config.js --progress --profile --colors && npm run styleguide",
     "lint:js": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
-    "test:visual": "start-storybook -p 9002 -c .storybook",
-    "test:visual:build": "build-storybook -o build/storybook",
-    "deploy:storybook": "storybook-to-ghpages",
+    "storybook:dev": "start-storybook -p 9002 -c .storybook",
+    "storybook:build": "build-storybook -o build/storybook",
+    "storybook:deploy": "storybook-to-ghpages",
     "webpack": "webpack",
     "prepublish": "npm run compile"
   },
