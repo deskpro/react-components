@@ -1,3 +1,7 @@
+## v0.2.6 - 2017-06-30
+
+* [FIX] Remove missing LabelSet, add package-lock.json
+
 ## v0.2.5 - 2017-06-30
 
 * [FIX] Add missing .npmignore

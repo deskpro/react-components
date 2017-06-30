@@ -19,9 +19,6 @@ storiesOf('Label', module)
         <h3>Label input</h3>
         <LabelInput labels={['Label 1', 'Label 2', 'Label 3']} />
         <br />
-        <h3>Label set</h3>
-        <LabelSet labels={['Label 1', 'Label 2', 'Label 3']} />
-        <br />
       </div>
     ),
   )
