@@ -1,3 +1,7 @@
+## v0.2.2 - 2017-06-30
+
+* [FEATURE] Add Popper and Portal
+
 ## v0.2.1 - 2017-06-30
 
 * [FIX] Remove compiled assets from repository
