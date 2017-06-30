@@ -12,6 +12,7 @@
     "lint:js": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
     "test:visual": "start-storybook -p 9002 -c .storybook",
     "test:visual:build": "build-storybook -o build/storybook",
+    "deploy:storybook": "storybook-to-ghpages",
     "webpack": "webpack",
     "prepublish": "npm run compile"
   },
@@ -24,6 +25,7 @@
     "@storybook/addon-links": "^3.0.0",
     "@storybook/addon-notes": "^3.0.0",
     "@storybook/react": "3.0.1",
+    "@storybook/storybook-deployer": "^2.0.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.4.0",
     "babel-eslint": "^6.0.2",
