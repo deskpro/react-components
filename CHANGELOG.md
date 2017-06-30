@@ -1,3 +1,7 @@
+## v0.2.1 - 2017-06-30
+
+* [FIX] Remove compiled assets from repository
+
 ## v0.2.0 - 2017-06-29
 
 * [FEATURE] Namespace components
