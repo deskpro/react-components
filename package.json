@@ -2,7 +2,7 @@
   "name": "deskpro-components",
   "version": "0.2.3",
   "description": "DeskPRO Components",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "npm run clean && npm run styleguide && webpack-dev-server",
     "clean": "rimraf dist",
@@ -12,7 +12,8 @@
     "lint:js": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
     "test:visual": "start-storybook -p 9002 -c .storybook",
     "test:visual:build": "build-storybook -o build/storybook",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "prepublish": "npm run compile"
   },
   "author": "DeskPRO <team@deskpro.com>",
   "license": "BSD-3-Clause",
