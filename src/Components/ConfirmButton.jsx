@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import onClickOutside from 'react-onclickoutside';
-import Button from './Button';
+import Button from 'Components/Button';
 
 const ClickOutsideButton = onClickOutside(Button);
 class ConfirmButton extends React.Component {

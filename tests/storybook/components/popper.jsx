@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
-import Popper from 'Components/Common/Popper';
+import { Popper } from 'Components/Common';
 
 const targetStyles = {
   width           : '140px',
