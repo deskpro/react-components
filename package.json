@@ -68,6 +68,7 @@
     "bourbon-neat": "^2.0.0",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
+    "popper.js": "^1.10.6",
     "prop-types": "^15.5.10",
     "react": "15.3.2",
     "react-bootstrap-multiselect": "git+https://github.com/jducro/react-bootstrap-multiselect.git#deskpro",

@@ -6,3 +6,4 @@ import './components/label';
 import './components/list';
 import './components/modal';
 import './components/select';
+import './components/popper';
