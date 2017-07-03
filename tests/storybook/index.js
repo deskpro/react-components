@@ -2,6 +2,7 @@ import '../../src/styles/bundles/deskpro-styles.scss';
 import './components/button';
 import './components/input';
 import './components/checkbox';
+import './components/heading';
 import './components/label';
 import './components/icon';
 import './components/avatar';
