@@ -16,4 +16,4 @@ A Storybook demo is available online at https://deskproapps.github.io/deskpro-co
 ### Columns
 * [Columns/Column](docs/components/columns/column.md)
 * [Columns/Drawer](docs/components/columns/drawer.md)
-* [Columns/DrawerItem](docs/components/columns/drawer_item.md)
+* [Columns/Item](docs/components/columns/item.md)

@@ -1,21 +1,21 @@
-Columns/DrawerItem
+Columns/Item
 ==================
 Standard drawer item which may contain an icon and number.
 
 ```jsx
 <div>
-  <DrawerItem>
+  <Item>
     Item one
-  </DrawerItem>
-  <DrawerItem count={66}>
+  </Item>
+  <Item count={66}>
     Item two
-  </DrawerItem>
-  <DrawerItem icon="star">
+  </Item>
+  <Item icon="star">
     Item three
-  </DrawerItem>
-  <DrawerItem icon={<Icon name="star" />} count={44}>
+  </Item>
+  <Item icon={<Icon name="star" />} count={44}>
     Item four
-  </DrawerItem>
+  </Item>
 </div>
 ```
 
@@ -40,23 +40,23 @@ Column with drawers and drawer items.
 ```jsx
 import React from 'react';
 import { render } from 'react-dom';
-import { Column, Drawer, DrawerItem } from 'Components/Columns';
+import { Column, Drawer, Item } from 'Components/Columns';
 
 const App = () => (
   <Column heading="Column Heading" icon="envelope-o">
     <Drawer heading="Drawer Heading 1">
-      <DrawerItem>
+      <Item>
         Item one
-      </DrawerItem>
-      <DrawerItem count={66}>
+      </Item>
+      <Item count={66}>
         Item two
-      </DrawerItem>
-      <DrawerItem icon={<Icon name="star" style={{color: "#54c66a"}} />}>
+      </Item>
+      <Item icon={<Icon name="star" style={{color: "#54c66a"}} />}>
         Item three
-      </DrawerItem>
-      <DrawerItem icon="star" count={44}>
+      </Item>
+      <Item icon="star" count={44}>
         Item four
-      </DrawerItem>
+      </Item>
     </Drawer>
   </Column>
 );

@@ -8,7 +8,7 @@ import Icon from 'Components/Icon';
 /**
  * Standard drawer item which may contain an icon and number.
  */
-export default class DrawerItem extends React.Component {
+export default class Item extends React.Component {
   static propTypes = {
     /**
      * CSS classes to apply to the element.

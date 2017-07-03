@@ -41,20 +41,20 @@ The aria role.
 ```jsx
 import React from 'react';
 import { render } from 'react-dom';
-import { Column, Drawer, DrawerItem } from 'Components/Columns';
+import { Column, Drawer, Item } from 'Components/Columns';
 
 const App = () => (
   <Column heading="Column Heading" icon="envelope-o">
     <Drawer heading="Drawer Heading 1">
-      <DrawerItem>
+      <Item>
         Item one
-      </DrawerItem>
-      <DrawerItem count={66}>
+      </Item>
+      <Item count={66}>
         Item two
-      </DrawerItem>
-      <DrawerItem icon="star" count={44}>
+      </Item>
+      <Item icon="star" count={44}>
         Item three
-      </DrawerItem>
+      </Item>
     </Drawer>
   </Column>
 );

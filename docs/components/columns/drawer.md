@@ -45,7 +45,7 @@ Called when the drawer is opened or closed.
 ```jsx
 import React from 'react';
 import { render } from 'react-dom';
-import { Column, Drawer, DrawerItem } from 'Components/Columns';
+import { Column, Drawer } from 'Components/Columns';
 
 const App = () => (
   <Column heading="Column Heading" icon="envelope-o">
