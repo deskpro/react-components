@@ -23,7 +23,7 @@ The component creates an event handler for the watched event, and passes it as a
 Simply expand the props on the element.
 
 ```jsx
-const DrawerItem = (props) => {
+const Item = (props) => {
   return (
     <ListElement {...props}>
       {props.children}
@@ -32,14 +32,14 @@ const DrawerItem = (props) => {
 };
 
 <ListToggleable on="click" toggle="selected">
-    <DrawerItem />
+    <Item />
 </ListToggleable>
 ```
 
 Expand the property arguments, and set the `onClick` handler manually.
 
 ```jsx
-const DrawerItem = ({onClick, children}) => {
+const Item = ({onClick, children}) => {
   return (
     <ListElement onClick={onClick}>
       {children}
@@ -48,14 +48,14 @@ const DrawerItem = ({onClick, children}) => {
 };
 
 <ListToggleable on="click" toggle="selected">
-    <DrawerItem />
+    <Item />
 </ListToggleable>
 ```
 
 Bind the `onClick` handler to a child element.
 
 ```jsx
-const DrawerItem = ({onClick, children}) => {
+const Item = ({onClick, children}) => {
   return (
     <ListElement>
       <h3 onClick={onClick}>Heading</h3>
@@ -65,14 +65,14 @@ const DrawerItem = ({onClick, children}) => {
 };
 
 <ListToggleable on="click" toggle="selected">
-    <DrawerItem />
+    <Item />
 </ListToggleable>
 ```
 
 The list items must manually call the handler when the component is watching the same event.
 
 ```jsx
-class DrawerItem extends React.Component {
+class Item extends React.Component {
     handleClick = (e) => {
         // Ensure the onClick handler passed to the component by
         // ListToggleable gets called.
@@ -89,7 +89,7 @@ class DrawerItem extends React.Component {
 }
 
 <ListToggleable on="click" toggle="selected">
-    <DrawerItem />
+    <Item />
 </ListToggleable>
 ```
 

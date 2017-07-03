@@ -1,5 +1,5 @@
 import Column from './Column';
 import Drawer from './Drawer';
-import DrawerItem from './DrawerItem';
+import Item from './Item';
 
-export { Column, Drawer, DrawerItem };
+export { Column, Drawer, Item };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text, select } from '@storybook/addon-knobs';
-import { Column, Drawer, DrawerItem } from 'Components/Columns';
+import { Column, Drawer, Item } from 'Components/Columns';
 import { List, ListElement, ListToggleable } from 'Components/Common';
 import Icon from 'Components/Icon';
 import { TestSelectable, TestDrawer } from './fixtures/column';
@@ -27,34 +27,34 @@ storiesOf('Columns', module)
         className="dp-column__first"
         >
         <Drawer heading="Drawer Heading 1" subheading="Subheading 1">
-          <DrawerItem>
+          <Item>
             Drawer item one
-          </DrawerItem>
-          <DrawerItem count={66}>
+          </Item>
+          <Item count={66}>
             Drawer item two
-          </DrawerItem>
+          </Item>
         </Drawer>
         <Drawer heading="Drawer Heading 2"  subheading="Subheading 2" count={14}>
-          <DrawerItem>
+          <Item>
             Drawer item one
-          </DrawerItem>
-          <DrawerItem count={66}>
+          </Item>
+          <Item count={66}>
             Drawer item two
-          </DrawerItem>
-          <DrawerItem icon={<Icon name="star" style={{color: "#54c66a"}} />}>
+          </Item>
+          <Item icon={<Icon name="star" style={{color: "#54c66a"}} />}>
             Drawer item three
-          </DrawerItem>
-          <DrawerItem icon={<Icon name="star" style={{color: "#f9d6a4"}} />} count={44}>
+          </Item>
+          <Item icon={<Icon name="star" style={{color: "#f9d6a4"}} />} count={44}>
             Drawer item four
-          </DrawerItem>
+          </Item>
         </Drawer>
         <Drawer heading="Drawer Heading 3">
-          <DrawerItem>
+          <Item>
             Drawer item one
-          </DrawerItem>
-          <DrawerItem count={66}>
+          </Item>
+          <Item count={66}>
             Drawer item two
-          </DrawerItem>
+          </Item>
         </Drawer>
         <Drawer heading="Drawer Heading 4">
           <ListElement>
