@@ -6,6 +6,8 @@ A Storybook demo is available online at https://deskproapps.github.io/deskpro-co
 
 ## Components
 
+* [Heading](docs/components/heading.md)  
+  A generic header element. 
 * [Icon](docs/components/icon.md)  
   Renders an icon using the Font Awesome library.
 * [Avatar](docs/components/avatar.md)  
