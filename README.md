@@ -7,6 +7,7 @@ A Storybook demo is available online at https://deskproapps.github.io/deskpro-co
 ## Components
 
 * [Icon](docs/components/icon.md)
+* [Avatar](docs/components/avatar.md)
 
 ### Common
 * [Common/Popper](docs/components/common/popper.md)
