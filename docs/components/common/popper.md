@@ -3,74 +3,72 @@ Common/Popper
 A wrapper around [popper.js](https://popper.js.org), the `Common/Popper` component uses absolute positioning to place elements relative to other elements.
 
 ```jsx
-import React from 'react';
-import { render } from 'react-dom';
-import Popper from 'Components/Common/Popper';
-
-render(
-    <div>
-        <button id="my-button">
-            Click
-        </button>
-        <Popper target="my-button" placement="bottom">
-            <p className="tooltip">
-                I am displayed below the button!
-            </p>
-        </Popper>
-    </div>
-    , document.getElementById('mount')
-)
+<div>
+    <button id="my-button">
+        Click
+    </button>
+    <Popper target="my-button" placement="bottom">
+        <p className="tooltip">
+            I am displayed below the button!
+        </p>
+    </Popper>
+</div>
 ```
 
-#### Properties
+### Props
 
-`target` - Specifies which element where the popper will be positioned.
+*target={string|function|element}*  
+Specifies which element where the popper will be positioned. Possible values:
 
-Possible values:
+* string: The ID of the target element.
+* element: Reference to the target element.
+* function: Returns the target as an HTMLElement.
 
-* string - The ID of the target element.
-* HTMLElement - Reference to the target element.
-* function - Returns the target as an HTMLElement.
+*placement={string}*  
+Specifies where to place the popper in relation to the target element. Possible values:
 
-`placement` - Specifies where to place the popper in relation to the target element.
+* One of: 'auto', 'auto-start', 'auto-end', 'top', 'top-start', 'top-end', 'right', 'right-start', 'right-end', 'bottom', 'bottom-start', 'bottom-end', 'left', 'left-start', or 'left-end'.
 
-Possible values:
+*offsetX={number|string}*  
+Shifts the popper on its X axis. Possible values:
 
-* string - One of: 'auto', 'auto-start', 'auto-end', 'top', 'top-start', 'top-end', 'right', 'right-start', 'right-end', 'bottom', 'bottom-start', 'bottom-end', 'left', 'left-start', or 'left-end'.
+* number: The offset value in pixels.
+* string: The offset value as a unit. Valid units are 'px', '%', '%r', '%p', 'vw', and 'vh'.
 
-`offsetX` - Shifts the popper on its X axis.
+*offsetY={number|string}*  
+Shifts the popper on its Y axis. Possible values:
 
-Possible values:
+* number: The offset value in pixels.
+* string: The offset value as a unit. Valid units are 'px', '%', '%r', '%p', 'vw', and 'vh'.
 
-* number - The offset value in pixels.
-* string - The offset value as a unit. Valid units are 'px', '%', '%r', '%p', 'vw', and 'vh'.
+*opened={bool}*  
+True to display the popper or false to hide it.
 
-`offsetY` - Shifts the popper on its Y axis.
+*arrow={bool}*  
+True to automatically add an arrow to the popper.
 
-Possible values:
+*eventsEnabled={bool}*  
+Add resize/scroll events and recalculate position of the popper when they are triggered. Set to false by default for performance reasons.
 
-* number - The offset value in pixels.
-* string - The offset value as a unit. Valid units are 'px', '%', '%r', '%p', 'vw', and 'vh'.
+*preventOverflow={bool}*  
+Prevents the popper from being positioned outside the boundary. The `eventsEnabled` prop should be set to true when using this prop.
 
-`opened` - True to display the popper or false to hide it.
+*detached={bool}*  
+True to attach the popper to the document.body. The `eventsEnabled` prop should be set to _true_ when using this prop.
 
-`arrow` - True to automatically add an arrow to the popper.
+*onCreate={func}*  
+Called when the internal popper.js instance is created.
 
-`eventsEnabled` - Add resize/scroll events and recalculate position of the popper when they are triggered. Set to false by default for performance reasons.
+*onUpdate={func}*  
+Called when the internal popper.js instance is updated.
 
-`preventOverflow` - Prevents the popper from being positioned outside the boundary. The `eventsEnabled` prop should be set to true when using this prop.
+*onOpen={func}*  
+Called when the popper is opened.
 
-`detached` - True to attach the popper to the document.body. The `eventsEnabled` prop should be set to _true_ when using this prop.
+*onClose={func}*  
+Called when the popper is closed.
 
-`onCreate` - Called when the internal popper.js instance is created.
-
-`onUpdate` - Called when the internal popper.js instance is updated.
-
-`onOpen` - Called when the popper is opened.
-
-`onClose` - Called when the popper is closed.
-
-#### Custom Arrow
+### Examples
 
 The component attaches an arrow pointing to the target element by default. Use the `Arrow` component from `Common/Popper` to customize the arrow.
 
@@ -79,7 +77,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import Popper, { Arrow } from 'Components/Common/Popper';
 
-render(
+const App = () => (
     <div>
         <div id="my-div"></div>
         <Popper target="my-div" placement="bottom" arrow={false}>
@@ -87,6 +85,7 @@ render(
             <Arrow className="custom-arrow" />
         </Popper>
     </div>
-    , document.getElementById('mount')
-)
+);
+
+render(<App />, document.getElementById('mount'));
 ```

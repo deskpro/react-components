@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Icon from 'Components/Icon';
 
 class Label extends React.Component {
   static propTypes = {
@@ -18,7 +19,7 @@ class Label extends React.Component {
         {...elementProps}
       >
         {children}
-        { editable ? <span onClick={onClose}><i className="dp-label__close fa fa-close" /></span> : null }
+        { editable ? <span onClick={onClose}><Icon name="close" className="dp-label__close" /></span> : null }
       </span>
     );
   }

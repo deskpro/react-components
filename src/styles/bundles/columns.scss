@@ -1,0 +1,319 @@
+@import "mixins";
+$dp-column-first-width:    220px;
+$dp-column-heading-height: 44px;
+$dp-column-drawer-height:  36px;
+
+// Column
+//
+// Navigation container for one or more expandable drawers.
+//
+// Markup:
+// <ul class="dp-column">
+//  <li class="dp-column__head">
+//    <h3 class="dp-column__heading">
+//      Column Heading
+//    </h3>
+//  </li>
+//
+//  <li class="dp-column__item">
+//    Column Item
+//  </li>
+// </ul>
+//
+// Styleguide 1
+.dp-column {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  border: 1px solid $dp-greyscale-300;
+  background-color: $dp-greyscale-150;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.dp-column__item {
+  padding: 0 6px;
+  box-sizing: border-box;
+}
+
+.dp-column__head {
+  @extend .dp-column__item;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  height: $dp-column-heading-height;
+  border-bottom: 1px solid $dp-greyscale-300;
+
+  .dp-icon {
+    margin-right: 10px;
+    font-size: $icon-size-m;
+  }
+}
+
+.dp-column__heading {
+  @include no-text-select();
+  margin: 0;
+  font-family: $primary-font;
+  font-size: $font-size-l;
+  font-weight: $pf-bold;
+  color: $dp-greyscale-850;
+}
+
+// Drawer
+//
+// An expandable drawer within a column.
+//
+// Markup:
+// <ul>
+//  <li class="dp-drawer">
+//    <ul class="dp-drawer__inner">
+//      <li class="dp-drawer__head">
+//
+//        <h4 class="dp-drawer__heading">
+//          Drawer Heading
+//        </h4>
+//        <i class="dp-drawer__arrow fa fa-caret-down"></i>
+//      </li>
+//
+//      <li class="dp-drawer__body">
+//        <h5 class="dp-drawer__subheading">
+//          Drawer Subheading
+//        </h5>
+//
+//        <ul class="dp-drawer__children">
+//          <li>Drawer contents</li>
+//        </ul>
+//      </li>
+//    </ul>
+//  </li>
+// </ul>
+//
+// Styleguide 1.1
+.dp-drawer {
+  @extend .dp-column__item;
+  display: flex;
+  border-bottom: 1px solid $dp-greyscale-300;
+}
+
+.dp-drawer__inner {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.dp-drawer__head {
+  display: flex;
+  align-items: center;
+  height: $dp-column-drawer-height;
+}
+
+.dp-drawer__head--openable {
+  cursor: pointer;
+}
+
+.dp-drawer__heading {
+  @include no-text-select();
+  flex: 1;
+  margin: 0;
+  padding: 0 6px;
+  text-transform: uppercase;
+  font-family: $primary-font;
+  font-size: $font-size-m;
+  font-weight: $pf-bold;
+  color: $dp-greyscale-850;
+}
+
+.dp-drawer__subheading {
+  margin: 0 0 4px 0;
+  padding: 0 6px;
+  text-transform: uppercase;
+  font-family: $primary-font;
+  font-size: $font-size-m;
+  line-height: $font-size-m;
+  font-weight: $pf-semi-bold;
+  color: $dp-greyscale-700;
+}
+
+.dp-drawer__body {
+  display: none;
+
+  &:last-child {
+    margin-bottom: 6px;
+  }
+
+  .dp-list__element {
+    padding: 0 6px;
+    margin-bottom: 12px;
+    font-family: $primary-font;
+    font-size: $font-size-m;
+    line-height: $font-size-m;
+    font-weight: $pf-regular;
+    color: $dp-greyscale-700;
+  }
+
+  & > .dp-list > li:not(.dp-drawer-item):nth-child(1) {
+    padding-top: 8px;
+  }
+}
+
+.dp-drawer__body--opened {
+  display: block;
+}
+
+.dp-drawer__children {
+  padding:0;
+  margin:0;
+
+  & > .dp-list {
+    padding-left: 0;
+    margin:0;
+  }
+}
+
+.dp-drawer__count {
+  display: inline-block;
+  padding-left: 0.25em;
+  font-weight: $pf-regular;
+}
+
+.dp-drawer__arrow {
+  padding: 2px 0 0 0;
+  font-size: $icon-size-xs;
+  color: $dp-greyscale-850;
+}
+
+// Drawer Item
+//
+// List item added to drawers which can contain an icon and
+// count value.
+//
+// Markup:
+// <ul>
+//  <li class="dp-drawer-item">
+//    <div class="dp-drawer-item__icon">
+//      <i class="fa fa-star"></i>
+//    </div>
+//    <div class="dp-drawer-item__count">
+//      66
+//    </div>
+//    <div class="dp-drawer-item__body">
+//      Item one
+//    </div>
+//  </li>
+// </ul>
+//
+// Styleguide 1.2
+.dp-drawer-item {
+  @include no-text-select();
+  display: flex;
+  align-items: center;
+  height: 26px;
+  cursor: pointer;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-bottom: 0;
+  border-radius: $rad-size-m-l;
+
+  &:hover {
+    color: $dp-sonic-primary;
+    background-color: $dp-morning-sky;
+  }
+}
+
+.dp-drawer-item:active,
+.dp-drawer-item--selected {
+  background-color: $dp-sonic-primary;
+
+  &:hover {
+    background-color: $dp-sonic-primary;
+  }
+
+  .dp-drawer-item__body {
+    font-weight: $pf-semi-bold;
+    color: $dp-greyscale-00;
+  }
+
+  .dp-drawer-item__count {
+    color: $dp-greyscale-00;
+  }
+}
+
+.dp-drawer-item__icon {
+  order: 1;
+  display: inline-block;
+  font-size: $icon-size-m;
+  margin-right: 8px;
+}
+
+.dp-drawer-item__body {
+  flex-grow: 2;
+  order: 2;
+  font-family: $primary-font;
+  font-size: $font-size-m;
+  font-weight: $pf-regular;
+  color: $dp-greyscale-700;
+}
+
+.dp-drawer-item__count {
+  flex-grow: 1;
+  order: 3;
+  text-align: right;
+  font-family: $primary-font;
+  font-size: $font-size-m;
+  font-weight: $pf-semi-bold;
+  color: $dp-greyscale-850;
+}
+
+// First Column
+//
+// The first column is used for navigation and filtering
+// for the various areas of the DeskPRO interface.
+//
+// Markup:
+// <ul class="dp-column dp-column__first">
+//
+//  <li class="dp-column__head">
+//    <h3 class="dp-column__heading">
+//      Column Heading
+//    </h3>
+//  </li>
+//
+//  <li class="dp-drawer">
+//    <ul class="dp-drawer__inner">
+//      <li class="dp-drawer__head">
+//        <h4 class="dp-drawer__heading">
+//          Drawer Heading
+//        </h4>
+//        <i class="dp-drawer__arrow fa fa-caret-down"></i>
+//      </li>
+//
+//      <li class="dp-drawer__body">
+//        <h5 class="dp-drawer__subheading">
+//          Drawer Subheading
+//        </h5>
+//
+//        <ul class="dp-drawer__children">
+//          <li class="dp-drawer-item">
+//            <div class="dp-drawer-item__icon">
+//              <i class="fa fa-star"></i>
+//            </div>
+//            <div class="dp-drawer-item__count">
+//              66
+//            </div>
+//            <div class="dp-drawer-item__body">
+//              Item one
+//            </div>
+//          </li>
+//        </ul>
+//      </li>
+//    </ul>
+//  </li>
+// </ul>
+//
+// Styleguide 1.3
+.dp-column__first {
+  width: $dp-column-first-width;
+}

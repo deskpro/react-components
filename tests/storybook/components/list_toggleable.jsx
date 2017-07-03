@@ -1,40 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { ListToggleable, ListElement } from 'Components/Common';
-
-const Selectable = (props) => {
-  const styles = {
-    padding: "8px",
-    cursor: "pointer",
-    borderBottom: "1px solid #707576",
-    color: props.selected ? "white" : "black",
-    backgroundColor: props.selected ? "#3c82b4" : "transparent"
-  };
-
-  return (
-    <ListElement {...props} style={styles}>
-      {props.children}
-    </ListElement>
-  )
-};
-
-const Drawer = ({onClick, heading, opened, children, ...props}) => {
-  const styles = {
-    padding: "8px",
-    cursor: "pointer",
-    borderBottom: "1px solid #707576"
-  };
-
-  return (
-    <ListElement {...props} style={styles}>
-      <h3 onClick={onClick}>{heading}</h3>
-      <div style={{display: opened ? "block":"none"}}>
-        {children}
-      </div>
-    </ListElement>
-  )
-};
+import { ListToggleable } from 'Components/Common';
+import { TestSelectable, TestDrawer } from './fixtures/column';
 
 storiesOf('ListToggleable', module)
   .addDecorator(withKnobs)
@@ -47,9 +15,9 @@ storiesOf('ListToggleable', module)
 
     return (
       <ListToggleable on="click" toggle="selected" style={styles}>
-        <Selectable>One</Selectable>
-        <Selectable>Two</Selectable>
-        <Selectable>Three</Selectable>
+        <TestSelectable>One</TestSelectable>
+        <TestSelectable>Two</TestSelectable>
+        <TestSelectable>Three</TestSelectable>
       </ListToggleable>
     )
   }
@@ -63,9 +31,9 @@ storiesOf('ListToggleable', module)
 
     return (
       <ListToggleable on="click" toggle="opened" style={styles}>
-        <Drawer heading="Drawer 1">One</Drawer>
-        <Drawer heading="Drawer 2">Two</Drawer>
-        <Drawer heading="Drawer 3">Three</Drawer>
+        <TestDrawer heading="Drawer 1">One</TestDrawer>
+        <TestDrawer heading="Drawer 2">Two</TestDrawer>
+        <TestDrawer heading="Drawer 3">Three</TestDrawer>
       </ListToggleable>
     )
   })

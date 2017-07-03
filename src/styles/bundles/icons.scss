@@ -3,3 +3,26 @@ $icon-size-s: 12px;
 $icon-size-m: 16px;
 $icon-size-l: 18px;
 $icon-size-xl: 20px;
+
+/******************************
+    Icon sizes
+*******************************/
+.dp-icon--xs {
+  font-size: $icon-size-xs;
+}
+
+.dp-icon--s {
+  font-size: $icon-size-s;
+}
+
+.dp-icon--m {
+  font-size: $icon-size-m;
+}
+
+.dp-icon--l {
+  font-size: $icon-size-l;
+}
+
+.dp-icon--xl {
+  font-size: $icon-size-xl;
+}
