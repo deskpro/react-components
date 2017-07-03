@@ -4,6 +4,7 @@ import './components/input';
 import './components/checkbox';
 import './components/label';
 import './components/icon';
+import './components/avatar';
 import './components/list';
 import './components/list_toggleable';
 import './components/modal';
