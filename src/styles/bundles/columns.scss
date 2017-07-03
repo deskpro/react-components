@@ -127,7 +127,7 @@ $dp-column-drawer-height:  36px;
 }
 
 .dp-drawer__subheading {
-  margin: 0 0 4px 0;
+  margin: 0 0 1px 0;
   padding: 0 6px;
   text-transform: uppercase;
   font-family: $primary-font;
@@ -212,10 +212,15 @@ $dp-column-drawer-height:  36px;
   align-items: center;
   height: 26px;
   cursor: pointer;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: -6px;
+  margin-right: -6px;
   margin-bottom: 0;
-  border-radius: $rad-size-m-l;
+  font-family: $primary-font;
+  font-size: $font-size-m;
+  font-weight: $pf-regular;
+  color: $dp-greyscale-700;
 
   &:hover {
     color: $dp-sonic-primary;
@@ -225,6 +230,11 @@ $dp-column-drawer-height:  36px;
 
 .dp-drawer-item:active,
 .dp-drawer-item--selected {
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: $rad-size-m-l;
   background-color: $dp-sonic-primary;
 
   &:hover {
@@ -251,10 +261,6 @@ $dp-column-drawer-height:  36px;
 .dp-drawer-item__body {
   flex-grow: 2;
   order: 2;
-  font-family: $primary-font;
-  font-size: $font-size-m;
-  font-weight: $pf-regular;
-  color: $dp-greyscale-700;
 }
 
 .dp-drawer-item__count {
