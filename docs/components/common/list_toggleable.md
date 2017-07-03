@@ -11,10 +11,10 @@ A higher order component which changes prop values on its children by responding
 
 ### Props
 
-*on={string}*  
+**on={string}**  
 The event to listen for. Supports the [standard React events](https://facebook.github.io/react/docs/events.html#supported-events).
 
-*toggle={string}*  
+**toggle={string}**  
 Name of the property on the children which will receive a true or false value.
 
 ### Events

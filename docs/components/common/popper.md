@@ -17,55 +17,55 @@ A wrapper around [popper.js](https://popper.js.org), the `Common/Popper` compone
 
 ### Props
 
-*target={string|function|element}*  
+**target={string|function|element}**  
 Specifies which element where the popper will be positioned. Possible values:
 
 * string: The ID of the target element.
 * element: Reference to the target element.
 * function: Returns the target as an HTMLElement.
 
-*placement={string}*  
+**placement={string}**  
 Specifies where to place the popper in relation to the target element. Possible values:
 
 * One of: 'auto', 'auto-start', 'auto-end', 'top', 'top-start', 'top-end', 'right', 'right-start', 'right-end', 'bottom', 'bottom-start', 'bottom-end', 'left', 'left-start', or 'left-end'.
 
-*offsetX={number|string}*  
+**offsetX={number|string}**  
 Shifts the popper on its X axis. Possible values:
 
 * number: The offset value in pixels.
 * string: The offset value as a unit. Valid units are 'px', '%', '%r', '%p', 'vw', and 'vh'.
 
-*offsetY={number|string}*  
+**offsetY={number|string}**  
 Shifts the popper on its Y axis. Possible values:
 
 * number: The offset value in pixels.
 * string: The offset value as a unit. Valid units are 'px', '%', '%r', '%p', 'vw', and 'vh'.
 
-*opened={bool}*  
+**opened={bool}**  
 True to display the popper or false to hide it.
 
-*arrow={bool}*  
+**arrow={bool}**  
 True to automatically add an arrow to the popper.
 
-*eventsEnabled={bool}*  
+**eventsEnabled={bool}**  
 Add resize/scroll events and recalculate position of the popper when they are triggered. Set to false by default for performance reasons.
 
-*preventOverflow={bool}*  
+**preventOverflow={bool}**  
 Prevents the popper from being positioned outside the boundary. The `eventsEnabled` prop should be set to true when using this prop.
 
-*detached={bool}*  
+**detached={bool}**  
 True to attach the popper to the document.body. The `eventsEnabled` prop should be set to _true_ when using this prop.
 
-*onCreate={func}*  
+**onCreate={func}**  
 Called when the internal popper.js instance is created.
 
-*onUpdate={func}*  
+**onUpdate={func}**  
 Called when the internal popper.js instance is updated.
 
-*onOpen={func}*  
+**onOpen={func}**  
 Called when the popper is opened.
 
-*onClose={func}*  
+**onClose={func}**  
 Called when the popper is closed.
 
 ### Examples

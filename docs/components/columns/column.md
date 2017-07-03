@@ -24,16 +24,16 @@ Columns contain a heading (title) with icon, and may operate in accordion mode w
 
 ### Props
 
-*heading={string}*  
+**heading={string}**  
 The heading text.
 
-*icon={string|element}*  
+**icon={string|element}**  
 Icon element to display in the header. Either the name of an icon, or an `Icon` component.
 
-*accordion={bool}*  
+**accordion={bool}**  
 When true only one drawer may be open at one time. Other drawers will close when one is opened.
 
-*role={bool}*  
+**role={bool}**  
 The aria role.
 
 ### Examples

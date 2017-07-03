@@ -21,22 +21,22 @@ An expandable drawer within a navigation column.
 
 ### Props
 
-*heading={string}*  
+**heading={string}**  
 The heading text.
 
-*subheading={string}*  
+**subheading={string}**  
 The subheading text.
 
-*count={number}*  
+**count={number}**  
 Number value to display inside the item.
 
-*opened={bool}*  
+**opened={bool}**  
 When true the drawer will render opened.
 
-*role={string}*  
+**role={string}**  
 The aria role.
 
-*onChange={func}*  
+**onChange={func}**  
 Called when the drawer is opened or closed.
 
 
