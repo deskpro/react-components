@@ -7,6 +7,9 @@ import Icon from 'Components/Icon';
  * A generic header element.
  */
 const Heading = ({size, icon, count, children, className, ...props}) => {
+  if (!Array.isArray(children)) {
+    children = [children];
+  }
   if (icon !== undefined) {
     children.unshift(
       (typeof icon === 'string') ? <Icon name={icon} /> : icon
