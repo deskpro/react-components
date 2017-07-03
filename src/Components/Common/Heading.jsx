@@ -12,15 +12,21 @@ const Heading = ({size, icon, count, children, className, ...props}) => {
   }
   if (icon !== undefined) {
     children.unshift(
-      (typeof icon === 'string') ? <Icon name={icon} /> : icon
+      (typeof icon === 'string')
+        ? <Icon key="icon" name={icon} />
+        : React.cloneElement(
+          icon,
+          {key: "icon"}
+        )
     );
   }
   if (count !== undefined) {
     children.push(
-      <span className="dp-heading__count">({count})</span>
+      <span key="count" className="dp-heading__count">
+        ({count})
+      </span>
     );
   }
-
 
   props.className = classNames('dp-heading', className);
   return React.createElement(`h${size}`, props, children);
