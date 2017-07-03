@@ -15,7 +15,7 @@ storiesOf('Heading', module)
     CombinationRenderer({ Component, props }) {
       return (
         <div>
-          <Component size={props.size}>
+          <Component size={props.size} icon="bug" count={22}>
             Size "{props.size}"
           </Component>
         </div>

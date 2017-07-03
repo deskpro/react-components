@@ -10,6 +10,8 @@ A generic header element.
     <Heading size={4}>Size 4</Heading>
     <Heading size={5}>Size 5</Heading>
     <Heading size={6}>Size 6</Heading>
+    <Heading icon="bug">Size 1</Heading>
+    <Heading count={22}>Size 1</Heading>
 </div>
 ```
 
@@ -18,5 +20,13 @@ A generic header element.
 **size={number}**  
 A value from 1 to 6 indicating the type of header to use, e.g. h1, h2, h3, etc.
 
+**icon={string|element}**  
+Icon to display to the left of the text. Either the name of an icon, or an `Icon` component.
+
+**count={number}**  
+Number value to display to the right of the text.
+
 ### CSS
 Adds the `dp-heading` class to the created element.
+
+Wraps the count value in the `dp-heading__count` class.
