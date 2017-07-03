@@ -13,16 +13,16 @@ Renders an icon using the Font Awesome library.
 
 ### Props
 
-`name={string}`  
+**name={string}**  
 Name of the icon from the [Font Awesome icon list](http://fontawesome.io/icons/).
 
-`size={string}`  
+**size={string}**  
 Displays the icon at the given size. Possible values are: 'xs', 's', 'm', 'l', and 'xl'.
 
-`rotate={number}`  
+**rotate={number}**  
 Rotates the icon. Possible values are 0, 90, 180, and 270.
 
-`spin={bool}`  
+**spin={bool}**  
 Spins the icon using CSS animation.
 
 ### Examples

@@ -21,16 +21,16 @@ Standard drawer item which may contain an icon and number.
 
 ### Props
 
-*count={number}*  
+**count={number}**  
 Number value to display inside the item.
 
-*icon={string|element}*  
+**icon={string|element}**  
 An icon to display, either the name of an icon, or an `Icon` component.
 
-*selected={bool}*  
+**selected={bool}**  
 Indicates whether the item is selected.
 
-*onClick={func}*  
+**onClick={func}**  
 Called when the item is clicked.
 
 ### Examples
