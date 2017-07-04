@@ -1,3 +1,7 @@
+## v0.3.1 - 2017-07-04
+
+* [FIX] Fix error on Labels
+
 ## v0.3.0 - 2017-07-04
 
 * [FEATURE] Add ListToggleable
