@@ -33,6 +33,9 @@ Indicates whether the item is selected.
 **onClick={func}**  
 Called when the item is clicked.
 
+**onSelect={func}**  
+Called when the item is selected.
+
 ### Examples
 
 Column with drawers and drawer items.

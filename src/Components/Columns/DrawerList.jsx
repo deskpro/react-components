@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { childrenComponentType } from 'Components/utils/props';
-import { Drawers } from 'Components/Columns';
+import { List } from 'Components/Common';
+import { Drawer } from 'Components/Columns';
 
 /**
- * A navigation column containing expandable drawers.
+ * A container for one or more drawers.
  */
-export default class Column extends React.Component {
+export default class DrawerList extends React.Component {
   static propTypes = {
     /**
      * CSS classes to apply to the element.
@@ -20,7 +21,7 @@ export default class Column extends React.Component {
     /**
      * One or more ColumnDrawer components.
      */
-    children: childrenComponentType(Drawers)
+    children: childrenComponentType(Drawer)
   };
 
   static defaultProps = {
@@ -29,17 +30,20 @@ export default class Column extends React.Component {
 
   render() {
     const {
+      role,
       children,
       className,
-      role,
       ...props
-    } = this.props;
+      } = this.props;
 
     return (
-      <div className={classNames('dp-column', className)} role={role} {...props}>
+      <List
+        role={role}
+        className={classNames('dp-column-drawer-list', className)}
+        {...props}
+        >
         {children}
-      </div>
-    );
+      </List>
+    )
   }
 }
-

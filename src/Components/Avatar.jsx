@@ -8,6 +8,7 @@ import classNames from 'classnames';
 const Avatar = ({src, className, ...props}) => (
   <img
     src={src}
+    aria-hidden={true}
     className={classNames('dp-avatar', className)}
     {...props}
     />
