@@ -23,7 +23,7 @@ const Heading = ({size, icon, count, children, className, ...props}) => {
   if (count !== undefined) {
     children.push(
       <span key="count" className="dp-heading__count">
-        ({count})
+        {count}
       </span>
     );
   }
