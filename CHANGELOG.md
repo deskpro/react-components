@@ -1,3 +1,7 @@
+## v0.3.3 - 2017-07-04
+
+* [MINOR] Pass all props to LabelInput
+ 
 ## v0.3.2 - 2017-07-04
 
 * [MINOR] Add style to heading count

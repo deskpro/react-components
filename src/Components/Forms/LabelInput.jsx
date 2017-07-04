@@ -57,14 +57,17 @@ class LabelInput extends React.Component {
   };
 
   renderLabels = () => {
-    const { labels, inputProps } = this.props;
-    if (this.state.editable || this.props.editable) {
+    const { labels, inputProps, editable, ...elementProps } = this.props;
+    if (this.state.editable || editable) {
+      const props = Object.assign({}, elementProps);
+      delete props.onChange;
       return (
         <TagsInput
           value={labels}
           renderTag={this.renderLabel}
           inputProps={inputProps}
           onChange={this.handleChange}
+          {...props}
         />
       );
     }
