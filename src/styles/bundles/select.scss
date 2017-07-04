@@ -110,6 +110,7 @@ $select-input-border-color: $dp-greyscale-300;
   .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
     position: absolute;
     margin-left: -20px;
+    top: 5px;
   }
   .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
     text-decoration: none;

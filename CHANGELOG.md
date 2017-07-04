@@ -1,3 +1,11 @@
+## v0.3.0 - 2017-07-04
+
+* [FEATURE] Add ListToggleable
+* [FEATURE] Add Icons
+* [FEATURE] Add documentation
+* [FEATURE] Add Avatar
+* [FEATURE] Add Heading
+
 ## v0.2.9 - 2017-06-30
 
 * [FIX] Rename storybook scripts
