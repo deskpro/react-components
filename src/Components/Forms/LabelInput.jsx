@@ -10,8 +10,10 @@ class LabelInput extends React.Component {
     labels:     PropTypes.array.isRequired,
     inputProps: PropTypes.object,
     onChange:   PropTypes.func,
+    editable:   PropTypes.bool,
   };
   static defaultProps = {
+    editable:   false,
     inputProps: { placeholder: 'Add a label' },
     onChange()   {}
   };
@@ -24,9 +26,11 @@ class LabelInput extends React.Component {
   }
 
   setEditable = () => {
-    this.setState({
-      editable: true
-    });
+    if (!this.props.editable) {
+      this.setState({
+        editable: true
+      });
+    }
   };
 
   handleChange = (labels) => {
@@ -54,7 +58,7 @@ class LabelInput extends React.Component {
 
   renderLabels = () => {
     const { labels, inputProps } = this.props;
-    if (this.state.editable) {
+    if (this.state.editable || this.props.editable) {
       return (
         <TagsInput
           value={labels}

@@ -1,3 +1,8 @@
+## v0.3.2 - 2017-07-04
+
+* [MINOR] Add style to heading count
+* [FEATURE] Allow to force editable on LabelInput
+
 ## v0.3.1 - 2017-07-04
 
 * [FIX] Fix error on Labels
