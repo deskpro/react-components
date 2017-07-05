@@ -20,7 +20,7 @@ A Storybook demo is available online at https://deskproapps.github.io/deskpro-co
   Uses absolute positioning to place elements relative to other elements.
 * [Common/Portal](docs/components/common/portal.md)  
   Mounts its children in the document body.
-* [Common/ListToggleable](docs/components/common/list_toggleable.md)  
+* [Common/ToggleableList](docs/components/common/toggleable_list.md)  
   Changes prop values on its children by responding to events triggered by the children.
 
 ### Columns

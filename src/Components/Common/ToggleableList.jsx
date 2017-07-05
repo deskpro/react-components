@@ -9,7 +9,7 @@ const DATA_DP_TOGGLE_ID = 'data-dp-toggle-id';
  * A higher order component which changes prop values on its children
  * by responding to events triggered by the children.
  */
-class ListToggleable extends React.Component {
+class ToggleableList extends React.Component {
   static propTypes = {
     /**
      * The event to listen for.
@@ -63,7 +63,7 @@ class ListToggleable extends React.Component {
     )
   }
 }
-export default ListToggleable;
+export default ToggleableList;
 
 /**
  * Traverses through the given element's parents until the element containing
