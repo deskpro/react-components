@@ -7,7 +7,7 @@ import './components/label';
 import './components/icon';
 import './components/avatar';
 import './components/list';
-import './components/list_toggleable';
+import './components/toggleable_list';
 import './components/modal';
 import './components/select';
 import './components/popper';

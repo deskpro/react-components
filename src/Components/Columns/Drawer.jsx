@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import newId from 'Components/utils/newid';
 import noop from 'Components/utils/noop';
-import { ListToggleable } from 'Components/Common';
+import { ToggleableList } from 'Components/Common';
 import Icon from 'Components/Icon';
 
 /**
@@ -177,9 +177,9 @@ export default class Drawer extends React.Component {
                 </h5>
               )}
               {/* Items */}
-              <ListToggleable on="click" toggle="selected" className="dp-drawer__children" role="group">
+              <ToggleableList on="click" toggle="selected" className="dp-drawer__children" role="group">
                 {children}
-              </ListToggleable>
+              </ToggleableList>
             </li>
           )}
         </ul>

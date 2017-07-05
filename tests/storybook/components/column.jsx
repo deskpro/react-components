@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text, select } from '@storybook/addon-knobs';
 import { Column, Drawer, Item } from 'Components/Columns';
-import { List, ListElement, ListToggleable } from 'Components/Common';
+import { List, ListElement } from 'Components/Common';
 import Icon from 'Components/Icon';
 import { TestSelectable, TestDrawer } from './fixtures/column';
 
