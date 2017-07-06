@@ -1,3 +1,9 @@
+## v0.3.5 - 2017-07-06
+
+* [FEATURE] Add QueryableList whereName @none value
+* [FEATURE] Adds ToggleableList whenType prop
+* [MINOR] Fix padding in select input
+
 ## v0.3.4 - 2017-07-06
 
 * [FEATURE] QueryableList and ListElementGroup components
