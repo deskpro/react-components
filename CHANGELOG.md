@@ -1,3 +1,9 @@
+## v0.3.4 - 2017-07-06
+
+* [FEATURE] QueryableList and ListElementGroup components
+* [MINOR] Rename ListToggleable to ToggleableList
+* [MINOR] Fix padding in select dropdown
+
 ## v0.3.3 - 2017-07-04
 
 * [MINOR] Pass all props to LabelInput

@@ -49,6 +49,9 @@ $select-input-border-color: $dp-greyscale-300;
   .Select-menu-outer {
     border-color: $dp-sonic-primary;
     border-top: 0;
+    .Select-option {
+      padding: 5px 8px;
+    }
   }
   &.Select.is-open > .Select-control {
     border-color: $dp-sonic-primary;
