@@ -6,5 +6,6 @@ import Portal from './Portal';
 import ToggleableList from './ToggleableList';
 import QueryableList from './QueryableList';
 import Heading from './Heading';
+import Subheading from './Subheading';
 
-export { List, ListElement, ListElementGroup, Popper, Portal, ToggleableList, QueryableList, Heading };
+export { List, ListElement, ListElementGroup, Popper, Portal, ToggleableList, QueryableList, Heading, Subheading };

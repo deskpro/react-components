@@ -1,69 +1,110 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, text, select } from '@storybook/addon-knobs';
-import { Column, Drawer, Item } from 'Components/Columns';
-import { List, ListElement } from 'Components/Common';
+import { Column, DrawerList, Drawer, ItemList, Item, FilterIcon } from 'Components/Columns';
+import { Heading, Subheading, List, ListElement, ListElementGroup, ListToggleable, QueryableList } from 'Components/Common';
+import Avatar from 'Components/Avatar';
 import Icon from 'Components/Icon';
-import { TestSelectable, TestDrawer } from './fixtures/column';
+
+import { TestColumn } from './fixtures/column';
+import logoImage from '../static/logo.png';
+import avatarImage1 from '../static/avatar-1.jpg';
+import avatarImage2 from '../static/avatar-2.jpg';
+import avatarImage3 from '../static/avatar-3.jpg';
+import avatarImage4 from '../static/avatar-4.jpg';
 
 storiesOf('Columns', module)
-  .addDecorator(withKnobs)
-  .addWithInfo(
-  'Column',
-  `
-    Standard usage of the Column and ColumnDrawer components.
-  `,
-  () => {
-    const iconName  = select('Icon', ['envelope-o', 'bug', 'star-o', 'cog'], 'envelope-o');
-    const iconHead  = <Icon name={iconName} style={{color: "#59a8e2"}} />;
-    const accordion = boolean('Accordion', false);
-    const heading   = text('Heading', 'Column Heading');
+  .add('ItemList', () => {
+    const styles = {
+      column: {
+        backgroundColor: "#F4F5F5",
+        border: "1px solid #d4d7d8"
+      },
+      item: {
+        iconBlue: {
+          color: '#4696DC'
+        },
+        iconGreen: {
+          color: '#54c66a'
+        }
+      }
+    };
 
     return (
-      <Column
-        icon={iconHead}
-        heading={heading}
-        accordion={accordion}
-        className="dp-column__first"
-        >
-        <Drawer heading="Drawer Heading 1" subheading="Subheading 1">
-          <Item>
-            Drawer item one
+      <div className="dp-column__first" style={styles.column}>
+        <ItemList>
+          <Item count={2} label="My weekly mentions" />
+          <Item count={99}>
+            All tickets
+            <FilterIcon />
           </Item>
-          <Item count={66}>
-            Drawer item two
+          <Item count={1}>
+            <Icon name="star" style={styles.item.iconBlue} />
+            Bug
           </Item>
-        </Drawer>
-        <Drawer heading="Drawer Heading 2"  subheading="Subheading 2" count={14}>
-          <Item>
-            Drawer item one
+          <Item count={1}>
+            <Icon name="star" style={styles.item.iconGreen} />
+            Green
           </Item>
-          <Item count={66}>
-            Drawer item two
+          <Item count={2}>
+            Elastic search indexes
           </Item>
-          <Item icon={<Icon name="star" style={{color: "#54c66a"}} />}>
-            Drawer item three
+          <Item count={18}>
+            Inability to use iOS app
           </Item>
-          <Item icon={<Icon name="star" style={{color: "#f9d6a4"}} />} count={44}>
-            Drawer item four
+          <Item count={3}>
+            <Avatar src={avatarImage1} />
+            Wendy Pride
           </Item>
-        </Drawer>
-        <Drawer heading="Drawer Heading 3">
-          <Item>
-            Drawer item one
+          <Item count={4}>
+            <Avatar src={avatarImage2} />
+            Bob Cooper
           </Item>
-          <Item count={66}>
-            Drawer item two
-          </Item>
-        </Drawer>
-        <Drawer heading="Drawer Heading 4">
-          <ListElement>
-            <img src="https://deskpro.com/assets/build/img/deskpro/logo.png"/>
-          </ListElement>
-        </Drawer>
-        <Drawer heading="Drawer Heading 4"/>
-      </Column>
+        </ItemList>
+      </div>
     )
-  }
+  })
+  .add('DrawerList', () => {
+    const styles = {
+      column: {
+        backgroundColor: "#F4F5F5",
+        border: "1px solid #d4d7d8"
+      },
+      image: {
+        margin: "0 12px"
+      },
+      button: {
+        margin: "0 12px",
+        padding: "10px",
+        background: "#368ddb",
+        color: "rgba(255,255,255,.9)",
+        borderRadius: "2px",
+        border: "0"
+      }
+    };
+
+    return (
+      <div className="dp-column__first" style={styles.column}>
+        <DrawerList>
+          <Drawer>
+            <Heading>
+              Awaiting Agent
+            </Heading>
+            <img src={logoImage} style={styles.image} />
+          </Drawer>
+          <Drawer>
+            <Heading>
+              Saved Searches
+            </Heading>
+            <button style={styles.button}>
+              Start your free trail now
+            </button>
+          </Drawer>
+        </DrawerList>
+      </div>
+    )
+  })
+  .add('Column', () => (
+    <TestColumn />
+  )
 )
 ;

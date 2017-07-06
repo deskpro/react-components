@@ -15,9 +15,9 @@ export default class Item extends React.Component {
      */
     className: PropTypes.string,
     /**
-     * Icon element to display in the item.
+     * Text to display inside of the item.
      */
-    icon: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+    label: PropTypes.string,
     /**
      * Number value to display inside the item.
      */
@@ -29,18 +29,30 @@ export default class Item extends React.Component {
     /**
      * Called when the item is clicked.
      */
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    /**
+     * Called when the item is selected.
+     */
+    onSelect: PropTypes.func
   };
 
   static defaultProps = {
     selected: false,
-    onClick:  noop
+    onClick:  noop,
+    onSelect: noop
   };
 
+  componentDidUpdate(prevProps) {
+    const selected = this.props.selected;
+    if (prevProps.selected !== selected) {
+      this.props.onSelect(selected, this);
+    }
+  }
+
   render() {
-    const { icon, count, selected, className, children, ...props } = this.props;
+    const { label, count, selected, className, children, ...props } = this.props;
     const classes = classNames(
-      'dp-drawer-item',
+      'dp-column-item',
       className,
       {
         'dp-drawer-item--selected': selected
@@ -48,21 +60,17 @@ export default class Item extends React.Component {
     );
 
     return (
-      <li className={classes} {...props}>
-        {icon === undefined ? null : (
-          <div className="dp-drawer-item__icon">
-            {typeof icon === 'string' ? <Icon name={icon} /> : icon}
-          </div>
-        )}
+      <ListElement className={classes} {...props}>
         {count === undefined ? null : (
           <div className="dp-drawer-item__count">
             {count}
           </div>
         )}
         <div className="dp-drawer-item__body">
+          {label}
           {children}
         </div>
-      </li>
+      </ListElement>
     );
   }
 }
