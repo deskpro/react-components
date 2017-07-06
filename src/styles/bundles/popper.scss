@@ -1,6 +1,8 @@
-$dp-popper-color: #2d86d9;
-$dp-popper-text-color: #FFFFFF;
+$dp-popper-color: #FFF;
+$dp-popper-text-color: #000;
 $dp-popper-offset: 8px;
+$dp-popper-border-width: 1px;
+$dp-popper-arrow-width: 8px;
 
 // Popper
 //
@@ -8,78 +10,124 @@ $dp-popper-offset: 8px;
 //
 // Styleguide 2
 .dp-popper {
-  width: 150px;
-  padding: 10px;
+  padding: 6px;
   position: absolute;
   text-align: center;
   color: $dp-popper-text-color;
-  background: $dp-popper-color;
-}
+  background: $dp-greyscale-00;
+  border-radius: $rad-size-m;
+  border: $dp-popper-border-width solid $dp-sonic-secondary;
+  box-shadow: 0 3px 10px $dp-greyscale-850;
 
-.dp-popper__arrow {
-  width: 0;
-  height: 0;
-  margin: 5px;
-  position: absolute;
-  border: solid $dp-popper-color;
+  &:after,
+  &:before {
+    width: 0;
+    height: 0;
+    content: " ";
+    position: absolute;
+    pointer-events: none;
+    border: solid transparent;
+  }
+
+  .dp-scrollbar__track-vertical {
+    position: absolute;
+    width: 4px !important;
+    right: 2px;
+    bottom: 2px;
+    top: 2px;
+    border-radius: 2px;
+
+    .dp-scrollbar__thumb-vertical {
+      background-color: $dp-greyscale-200;
+      border-radius: 2px;
+    }
+  }
 }
 
 .dp-popper[x-placement^="top"] {
   margin-bottom: $dp-popper-offset;
 
-  .dp-popper__arrow {
-    bottom: -5px;
-    left: calc(50% - 5px);
-    margin-top: 0;
-    margin-bottom: 0;
-    border-width: 5px 5px 0 5px;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
+  &:after,
+  &:before {
+    top: 100%;
+    left: 50%;
+  }
+
+  &:after {
+    border-top-color: $dp-greyscale-00;
+    border-width: $dp-popper-arrow-width;
+    margin-left: -$dp-popper-arrow-width;
+  }
+
+  &:before {
+    border-top-color: $dp-sonic-secondary;
+    border-width: ($dp-popper-arrow-width + $dp-popper-border-width);
+    margin-left: -($dp-popper-arrow-width + $dp-popper-border-width);
   }
 }
 
 .dp-popper[x-placement^="bottom"] {
   margin-top: $dp-popper-offset;
 
-  .dp-popper__arrow {
-    top: -5px;
-    left: calc(50% - 5px);
-    margin-top: 0;
-    margin-bottom: 0;
-    border-width: 0 5px 5px 5px;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-top-color: transparent;
+  &:after,
+  &:before {
+    bottom: 100%;
+    left: 50%;
+  }
+
+  &:after {
+    border-bottom-color: $dp-greyscale-00;
+    border-width: $dp-popper-arrow-width;
+    margin-left: -$dp-popper-arrow-width;
+  }
+
+  &:before {
+    border-bottom-color: $dp-sonic-secondary;
+    border-width: ($dp-popper-arrow-width + $dp-popper-border-width);
+    margin-left: -($dp-popper-arrow-width + $dp-popper-border-width);
   }
 }
 
 .dp-popper[x-placement^="right"] {
   margin-left: $dp-popper-offset;
 
-  .dp-popper__arrow {
-    left: -5px;
-    top: calc(50% - 5px);
-    margin-left: 0;
-    margin-right: 0;
-    border-width: 5px 5px 5px 0;
-    border-left-color: transparent;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
+  &:after,
+  &:before {
+    right: 100%;
+    top: 50%;
+  }
+
+  &:after {
+    border-right-color: $dp-greyscale-00;
+    border-width: $dp-popper-arrow-width;
+    margin-top: -$dp-popper-arrow-width;
+  }
+
+  &:before {
+    border-right-color: $dp-sonic-secondary;
+    border-width: ($dp-popper-arrow-width + $dp-popper-border-width);
+    margin-top: -($dp-popper-arrow-width + $dp-popper-border-width);
   }
 }
 
 .dp-popper[x-placement^="left"] {
-  margin-right: $dp-popper-offset;
+  margin-left: $dp-popper-offset;
 
-  .dp-popper__arrow {
-    right: -5px;
-    top: calc(50% - 5px);
-    margin-left: 0;
-    margin-right: 0;
-    border-width: 5px 0 5px 5px;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
+  &:after,
+  &:before {
+    left: 100%;
+    top: 50%;
+  }
+
+  &:after {
+    border-left-color: $dp-greyscale-00;
+    border-width: $dp-popper-arrow-width;
+    margin-top: -$dp-popper-arrow-width;
+  }
+
+  &:before {
+    border-left-color: $dp-sonic-secondary;
+    border-width: ($dp-popper-arrow-width + $dp-popper-border-width);
+    margin-top: -($dp-popper-arrow-width + $dp-popper-border-width);
   }
 }

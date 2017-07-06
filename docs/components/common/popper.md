@@ -44,9 +44,6 @@ Shifts the popper on its Y axis. Possible values:
 **opened={bool}**  
 True to display the popper or false to hide it.
 
-**arrow={bool}**  
-True to automatically add an arrow to the popper.
-
 **eventsEnabled={bool}**  
 Add resize/scroll events and recalculate position of the popper when they are triggered. Set to false by default for performance reasons.
 
@@ -123,26 +120,6 @@ class App extends React.Component {
     )
   }
 }
-
-render(<App />, document.getElementById('mount'));
-```
-
-The component attaches an arrow pointing to the target element by default. Use the `Arrow` component from `Common/Popper` to customize the arrow.
-
-```jsx
-import React from 'react';
-import { render } from 'react-dom';
-import Popper, { Arrow } from 'Components/Common/Popper';
-
-const App = () => (
-    <div>
-        <div id="my-div"></div>
-        <Popper target="my-div" placement="bottom" arrow={false}>
-            <p>Hello, World!</p>
-            <Arrow className="custom-arrow" />
-        </Popper>
-    </div>
-);
 
 render(<App />, document.getElementById('mount'));
 ```

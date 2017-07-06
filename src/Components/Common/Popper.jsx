@@ -21,7 +21,7 @@ export default class Popper extends React.Component {
     /**
      * Popper is placed in reference to this element.
      */
-    target: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    target: PropTypes.any,
     /**
      * Placement applied to popper.
      */
@@ -59,10 +59,6 @@ export default class Popper extends React.Component {
      */
     opened: PropTypes.bool,
     /**
-     * Whether to add an arrow to the popper.
-     */
-    arrow: PropTypes.bool,
-    /**
      * True to attach the children to document.body.
      */
     detached: PropTypes.bool,
@@ -99,7 +95,6 @@ export default class Popper extends React.Component {
     offsetX:         '0px',
     offsetY:         '0px',
     zIndex:          0,
-    arrow:           true,
     detached:        false,
     opened:          false,
     eventsEnabled:   false,
@@ -230,7 +225,7 @@ export default class Popper extends React.Component {
   };
 
   render() {
-    const { arrow, detached, children, className } = this.props;
+    const { detached, children, className } = this.props;
     const { opened } = this.state;
     if (!opened || !this.target) {
       return <div ref={ref => this.node = ref} />;
@@ -239,24 +234,8 @@ export default class Popper extends React.Component {
     const popper = (
       <div ref={ref => this.node = ref} className={classNames('dp-popper', className)}>
         {children}
-        {arrow ? <Arrow /> : null}
       </div>
     );
     return detached ? <Portal>{popper}</Portal> : popper;
   }
 }
-
-/**
- * Arrow added to Popper containers.
- *
- * @returns {XML}
- */
-export const Arrow = ({className, ...elementProps}) => {
-  return (
-    <div
-      className={classNames('dp-popper__arrow', className)}
-      {...elementProps}
-    >
-    </div>
-  );
-};
