@@ -8,7 +8,7 @@ storiesOf('QueryableList', module)
   .add('QueryableList', () => {
     const whereName = select(
       'WhereName',
-      ['@all', 'agent', 'department', 'product', 'integrations', 'feedback'],
+      ['@all', '@none', 'agent', 'department', 'product', 'integrations', 'feedback'],
       '@all'
     );
 
