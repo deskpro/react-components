@@ -17,6 +17,9 @@ The event to listen for. Supports the [standard React events](https://facebook.g
 **toggle={string}**  
 Name of the property on the children which will receive a true or false value.
 
+**whenType={Component}**  
+Only handle child elements of this component type.
+
 ### Events
 The component creates an event handler for the watched event, and passes it as a property to each child. So when `on="click"`, the props passed to each child will contain an `onClick` function. The child must bind the handler to itself or one of it's children. Which may be done a few ways.
 
@@ -128,7 +131,7 @@ const Drawer = ({onClick, heading, opened, children}) => (
  * event.
  */
 const Accordion = () => (
-    <ToggleableList on="click" toggle="opened">
+    <ToggleableList on="click" toggle="opened" whenType={Drawer}>
         <Drawer heading="Drawer 1">One</Drawer>
         <Drawer heading="Drawer 2">Two</Drawer>
         <Drawer heading="Drawer 3">Three</Drawer>
