@@ -22,4 +22,4 @@ A unordered list which can be filtered and reduced by query values.
 ### Props
 
 **whereName={string}**  
-Filter list elements by name. When set to "@all" the entire list is displayed.
+Filter list elements by name. When set to "@all" the entire list is displayed, and when the entire list is hidden when set to "@none".
