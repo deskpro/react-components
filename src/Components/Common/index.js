@@ -7,5 +7,17 @@ import ToggleableList from './ToggleableList';
 import QueryableList from './QueryableList';
 import Heading from './Heading';
 import Subheading from './Subheading';
+import Scrollbar from './Scrollbar';
 
-export { List, ListElement, ListElementGroup, Popper, Portal, ToggleableList, QueryableList, Heading, Subheading };
+export {
+  List,
+  ListElement,
+  ListElementGroup,
+  Popper,
+  Portal,
+  ToggleableList,
+  QueryableList,
+  Heading,
+  Subheading,
+  Scrollbar
+};
