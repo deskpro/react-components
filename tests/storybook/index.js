@@ -9,6 +9,7 @@ import './components/avatar';
 import './components/list';
 import './components/toggleable_list';
 import './components/queryable_list.jsx';
+import './components/scrollbar';
 import './components/modal';
 import './components/select';
 import './components/popper';

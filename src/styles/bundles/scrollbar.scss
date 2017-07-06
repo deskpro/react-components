@@ -1,0 +1,14 @@
+/// Scrollbar
+.dp-scrollbar__track-vertical {
+  position: absolute;
+  width: 4px !important;
+  right: 2px;
+  bottom: 2px;
+  top: 2px;
+  border-radius: 2px;
+
+  .dp-scrollbar__thumb-vertical {
+    background-color: $dp-greyscale-200;
+    border-radius: 2px;
+  }
+}

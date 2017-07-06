@@ -22,6 +22,8 @@ A Storybook demo is available online at https://deskproapps.github.io/deskpro-co
   Changes prop values on its children by responding to events triggered by the children.
 * [Common/QueryableList](docs/components/common/queryable_list.md)  
   An unordered list which can be filtered and reduced by query values.
+* [Common/Scrollbar](docs/components/common/scrollbar.md)  
+  Wraps children with styled scrollbars.
 
 ### Columns
 * [Columns/Column](docs/components/columns/column.md)  
