@@ -18,7 +18,11 @@ class ToggleableList extends React.Component {
     /**
      * Name of the property on the children which will receive a true or false value.
      */
-    toggle: PropTypes.string.isRequired
+    toggle: PropTypes.string.isRequired,
+    /**
+     * Only control components of this type.
+     */
+    whenType: PropTypes.any
   };
 
   constructor(props) {
@@ -47,12 +51,15 @@ class ToggleableList extends React.Component {
   };
 
   render() {
-    const { on, toggle, children, ...props } = this.props;
+    const { on, toggle, whenType, children, ...props } = this.props;
     const { targetID, targetValue } = this.state;
 
     return (
       <List {...props}>
         {React.Children.map(children, (child, index) => {
+          if (whenType && child.type !== undefined && child.type !== whenType) {
+            return child;
+          }
           return React.cloneElement(child, {
             [DATA_DP_TOGGLE_ID]: index,
             [`on${toUpperFirst(on)}`]: this.handleEvent,

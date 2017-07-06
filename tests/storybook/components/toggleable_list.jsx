@@ -37,4 +37,28 @@ storiesOf('ToggleableList', module)
       </ToggleableList>
     )
   })
+  .add('WhenType', () => {
+    const styles = {
+      list: {
+        width: "200px",
+        border: "1px solid #707576",
+        borderBottom: "0"
+      },
+      li: {
+        padding: "8px",
+        cursor: "pointer",
+        borderBottom: "1px solid #707576",
+        color: "black"
+      }
+    };
+
+    return (
+      <ToggleableList on="click" toggle="selected" whenType={TestSelectable} style={styles.list}>
+        <TestSelectable>One</TestSelectable>
+        <li style={styles.li}>Two (No Select)</li>
+        <TestSelectable>Three</TestSelectable>
+        <TestSelectable>Four</TestSelectable>
+      </ToggleableList>
+    )
+  })
 ;
