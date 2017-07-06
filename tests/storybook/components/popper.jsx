@@ -18,9 +18,7 @@ const targetStyles = {
   position        : 'absolute',
   backgroundColor : 'white'
 };
-const popperStyles = {
-  color: 'white'
-};
+
 const placements = [
   'auto',
   'auto-start',
@@ -46,7 +44,6 @@ storiesOf('Popper', module)
   'Standard popper usage.',
   () => {
     const opened    = boolean('Opened', true);
-    const arrow     = boolean('Arrow', true);
     const placement = select('Placement', placements, 'bottom');
 
     return (
@@ -58,12 +55,11 @@ storiesOf('Popper', module)
         <Popper
           target="target"
           opened={opened}
-          arrow={arrow}
           placement={placement}
           offsetX={text('OffsetX', '0px')}
           offsetY={text('OffsetY', '0px')}
         >
-          <p style={popperStyles}>
+          <p>
             "{placement}"
           </p>
         </Popper>
@@ -101,7 +97,7 @@ storiesOf('Popper', module)
           detached={true}
           placement="bottom"
           >
-          <p style={popperStyles}>
+          <p>
             "bottom"
           </p>
         </Popper>
@@ -137,7 +133,7 @@ storiesOf('Popper', module)
           detached={true}
           placement="bottom"
           >
-          <p style={popperStyles}>
+          <p>
             Hi, I'm Popper!
           </p>
         </Popper>
