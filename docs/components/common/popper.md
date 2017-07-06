@@ -68,7 +68,64 @@ Called when the popper is opened.
 **onClose={func}**  
 Called when the popper is closed.
 
+### Methods
+**open([target])**  
+Opens the popper. When given the popper will use the `target` parameter as the target element.
+
+**close([target])**  
+Closes the popper. When given the popper will use the `target` parameter as the target element.
+
+**toggle([target])**  
+Toggles the popper opened or closed. When given the popper will use the `target` parameter as the target element.
+
 ### Examples
+
+This example creates a popper and uses a button to toggle it opened and clsoed. The popper will become attached to the button by passing the button instance (e.g. `this`) to the `popper.toggle()` method.
+
+```jsx
+import React from 'react';
+import PropTypes from 'prop-types';
+import { render } from 'react-dom';
+import { Popper } from 'Components/Common';
+
+class Button extends React.Component {
+  render() {
+    const { popper, children, ...props} = this.props;
+    
+    return (
+      <button {...props} onClick={() => popper.toggle(this)}>
+        {children}
+      </button>
+    )
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Button popper={this.popper}>
+          Click Me
+        </Button>
+        <Popper
+          ref={(ref) => {this.popper = ref;}}
+          opened={false}
+          arrow={true}
+          eventsEnabled={true}
+          detached={true}
+          placement="bottom"
+          >
+          <p>
+            Hi, I'm Popper!
+          </p>
+        </Popper>
+      </div>
+    )
+  }
+}
+
+render(<App />, document.getElementById('mount'));
+```
 
 The component attaches an arrow pointing to the target element by default. Use the `Arrow` component from `Common/Popper` to customize the arrow.
 
