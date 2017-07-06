@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import PopperJS from 'popper.js';
 import classNames from 'classnames';
 import Portal from 'Components/Common/Portal';
@@ -21,7 +21,7 @@ export default class Popper extends React.Component {
     /**
      * Popper is placed in reference to this element.
      */
-    target: PropTypes.oneOfType([PropTypes.string, PropTypes.func]).isRequired,
+    target: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     /**
      * Placement applied to popper.
      */
@@ -112,6 +112,10 @@ export default class Popper extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      target: null,
+      opened: props.opened
+    };
     this.node   = null;
     this.target = null;
   }
@@ -126,10 +130,13 @@ export default class Popper extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.opened !== this.props.opened) {
+      this.setState({opened: this.props.opened});
       this.props.opened ? this.props.onOpen(this) : this.props.onClose(this);
     }
     this.updatePopper();
-    this.popper.scheduleUpdate();
+    if (this.popper) {
+      this.popper.scheduleUpdate();
+    }
   }
 
   /**
@@ -147,20 +154,23 @@ export default class Popper extends React.Component {
       onCreate,
       onUpdate
     } = this.props;
+    if (target === undefined && !this.target) {
+      return;
+    }
+
     if (preventOverflow && !eventsEnabled) {
       console.warn('`eventsEnabled` should be true when `preventOverflow` is true.');
     } else if (detached && !eventsEnabled) {
       console.warn('`eventsEnabled` should be true when `detached` is true.');
     }
-
-    if (!this.target) {
-      if (typeof target === "function") {
-        this.target = target();
-      } else if (typeof target === "string") {
-        this.target = document.getElementById(target);
-      } else {
-        this.target = target;
-      }
+    if (this.target instanceof React.Component) {
+      this.target = ReactDOM.findDOMNode(this.target);
+    } else if (typeof target === "function") {
+      this.target = target();
+    } else if (typeof target === "string") {
+      this.target = document.getElementById(target);
+    } else {
+      this.target = target;
     }
 
     this.destroyPopper();
@@ -190,14 +200,44 @@ export default class Popper extends React.Component {
     }
   };
 
+  /**
+   * Toggle the popper opened or closed.
+   *
+   * @param {string|function|React.Component} target
+   */
+  toggle = (target) => {
+    this.state.opened ? this.close(target) : this.open(target);
+  };
+
+  /**
+   * Open the popper
+   *
+   * @param {string|function|React.Component} target
+   */
+  open = (target) => {
+    this.target = target || this.target;
+    this.setState({opened: true});
+  };
+
+  /**
+   * Close the popper
+   *
+   * @param {string|function|React.Component} target
+   */
+  close = (target) => {
+    this.target = target || this.target;
+    this.setState({opened: false});
+  };
+
   render() {
-    const { opened, arrow, detached, children, className, ...elementProps } = this.props;
-    if (!opened) {
-      return <div />;
+    const { arrow, detached, children, className } = this.props;
+    const { opened } = this.state;
+    if (!opened || !this.target) {
+      return <div ref={ref => this.node = ref} />;
     }
 
     const popper = (
-      <div ref={ref => this.node = ref} className={classNames('dp-popper', className)} {...elementProps}>
+      <div ref={ref => this.node = ref} className={classNames('dp-popper', className)}>
         {children}
         {arrow ? <Arrow /> : null}
       </div>

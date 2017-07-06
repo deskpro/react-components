@@ -1,7 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
 import { Popper } from 'Components/Common';
+import { TestButton } from './fixtures/popper';
+
+let popper = null;
 
 const targetStyles = {
   width           : '140px',
@@ -103,6 +107,42 @@ storiesOf('Popper', module)
         </Popper>
       </div>
     );
+  }
+)
+.addWithInfo(
+  'Button',
+  'Using a button to toggle popper visibility.',
+  () => {
+    const styles = {
+      button: {
+        fontSize: "1em",
+        color: "#FFF",
+        padding: "15px 60px",
+        zIndex: "99",
+        lineHeight: "24px",
+        background: "#368ddb",
+        borderRadius: "2px",
+        border: "0"
+      }
+    };
+
+    return (
+      <div>
+        <TestButton popper={popper} style={styles.button} />
+        <Popper
+          ref={(p) => {popper = p;}}
+          opened={false}
+          arrow={true}
+          eventsEnabled={true}
+          detached={true}
+          placement="bottom"
+          >
+          <p style={popperStyles}>
+            Hi, I'm Popper!
+          </p>
+        </Popper>
+      </div>
+    )
   }
 )
 ;
