@@ -56,44 +56,48 @@ class TicketsFilterForm extends React.Component {
 
   render() {
     const styles = {
+      formGroup: {
+        padding: '3px 6px'
+      },
       label: {
+        display: 'block',
+        fontSize: '11px',
+        textTransform: 'uppercase'
+      },
+      checkboxLabel: {
         display: 'block'
       }
     };
 
+    const groups = {
+      '@none': 'None',
+      'urgency': 'Urgency',
+      'agent': 'Agent',
+      'agent-team': 'Agent Team'
+    };
+
     return (
       <div>
-        <div style={{padding: "6px"}}>
+        <div style={styles.formGroup}>
           <label style={styles.label}>
-            Checkbox Label
+            SLA View
           </label>
-          <label style={styles.label}>
-            <input type="checkbox" />
+          <Forms.Checkbox>
             Show SLAs
-          </label>
+          </Forms.Checkbox>
         </div>
         <hr />
         <Scrollbar autoHeightMax={100} style={{ height: 110 }}>
-          <div style={{padding: "6px"}}>
+          <div style={styles.formGroup}>
             <label style={styles.label}>
               Radio Label
             </label>
-            <label style={styles.label}>
-              <input type="radio" name="group" value="@none" onChange={this.handleChange} />
-              None
-            </label>
-            <label style={styles.label}>
-              <input type="radio" name="group" value="urgency" onChange={this.handleChange} />
-              Urgency
-            </label>
-            <label style={styles.label}>
-              <input type="radio" name="group" value="agent" onChange={this.handleChange} />
-              Agent
-            </label>
-            <label style={styles.label}>
-              <input type="radio" name="group" value="agent-team" onChange={this.handleChange} />
-              Agent team
-            </label>
+            {Object.entries(groups).map((pair) => (
+              <label key={pair[0]} style={styles.checkboxLabel}>
+                <input type="radio" name="group" value={pair[0]} onChange={this.handleChange} />
+                {pair[1]}
+              </label>
+            ))}
           </div>
         </Scrollbar>
       </div>
