@@ -1,6 +1,24 @@
 import React from 'react';
-import { Column, DrawerList, Drawer, ItemList, Item, FilterIcon } from 'Components/Columns';
-import { Heading, Subheading, List, ListElement, ListElementGroup, ListToggleable, QueryableList } from 'Components/Common';
+import {
+  Column,
+  DrawerList,
+  Drawer,
+  ItemList,
+  Item,
+  FilterIcon
+} from 'Components/Columns';
+import {
+  Heading,
+  Subheading,
+  List,
+  ListElement,
+  ListElementGroup,
+  ListToggleable,
+  QueryableList,
+  Popper,
+  Scrollbar
+} from 'Components/Common';
+import * as Forms from 'Components/Forms';
 import Avatar from 'Components/Avatar';
 import Icon from 'Components/Icon';
 
@@ -63,9 +81,41 @@ export class TestColumn extends React.Component {
               <Item count={0}>
                 Unassigned tickets
               </Item>
-              <Item count={99} onSelect={(s) => this.setState({ticketsWhereGroup: s ? 'agent':'@none'})}>
+              <Item count={99}>
                 All tickets
-                <FilterIcon />
+                <FilterIcon popper={this.popper} />
+                <Popper
+                  ref={(ref) => {this.popper = ref;}}
+                  opened={false}
+                  arrow={false}
+                  offsetX="-2px"
+                  offsetY="3px"
+                  className="dp-column-popper"
+                  placement="bottom"
+                  >
+                  <span>
+                    <div style={{padding: "6px"}}>
+                      <Forms.Label>
+                        Checkbox Label
+                      </Forms.Label>
+                      <Forms.Checkbox />
+                    </div>
+
+                    <Scrollbar autoHeightMax={100} style={{ height: 110 }}>
+                      <div style={{padding: "6px"}}>
+                        <Forms.Label>
+                          Radio Label
+                        </Forms.Label>
+                        <Forms.Checkbox />
+                        <Forms.Checkbox />
+                        <Forms.Checkbox />
+                        <Forms.Checkbox />
+                        <Forms.Checkbox />
+                        <Forms.Checkbox />
+                      </div>
+                    </Scrollbar>
+                  </span>
+                </Popper>
               </Item>
               <li>
                 <QueryableList whereName={ticketsWhereGroup}>

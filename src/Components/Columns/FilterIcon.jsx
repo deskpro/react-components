@@ -6,12 +6,18 @@ import Icon from 'Components/Icon';
 /**
  * Blue filter icon.
  */
-const FilterIcon = ({className, ...props}) => (
-  <Icon
-    name="filter"
-    className={classNames('dp-icon__filter', className)}
-    {...props}
-    />
-);
+export default class FilterIcon extends React.Component {
+  render() {
+    const { popper, className, ...props } = this.props;
 
-export default FilterIcon;
+    return (
+      <Icon
+        name="filter"
+        onClick={() => popper.toggle(this)}
+        className={classNames('dp-icon__filter', className)}
+        {...props}
+        />
+    )
+  }
+}
+
