@@ -5,7 +5,8 @@ import {
   Drawer,
   ItemList,
   Item,
-  FilterIcon
+  FilterIcon,
+  FilterPopper
 } from 'Components/Columns';
 import {
   Heading,
@@ -46,6 +47,60 @@ const styles = {
   }
 };
 
+class TicketsFilterForm extends React.Component {
+  handleChange = (e) => {
+    if (this.props.onChange) {
+      this.props.onChange(e.target.value);
+    }
+  };
+
+  render() {
+    const styles = {
+      label: {
+        display: 'block'
+      }
+    };
+
+    return (
+      <div>
+        <div style={{padding: "6px"}}>
+          <label style={styles.label}>
+            Checkbox Label
+          </label>
+          <label style={styles.label}>
+            <input type="checkbox" />
+            Show SLAs
+          </label>
+        </div>
+        <hr />
+        <Scrollbar autoHeightMax={100} style={{ height: 110 }}>
+          <div style={{padding: "6px"}}>
+            <label style={styles.label}>
+              Radio Label
+            </label>
+            <label style={styles.label}>
+              <input type="radio" name="group" value="@none" onChange={this.handleChange} />
+              None
+            </label>
+            <label style={styles.label}>
+              <input type="radio" name="group" value="urgency" onChange={this.handleChange} />
+              Urgency
+            </label>
+            <label style={styles.label}>
+              <input type="radio" name="group" value="agent" onChange={this.handleChange} />
+              Agent
+            </label>
+            <label style={styles.label}>
+              <input type="radio" name="group" value="agent-team" onChange={this.handleChange} />
+              Agent team
+            </label>
+          </div>
+        </Scrollbar>
+      </div>
+    )
+  }
+}
+
 export class TestColumn extends React.Component {
 
   constructor(props) {
@@ -55,11 +110,16 @@ export class TestColumn extends React.Component {
     };
   }
 
+  handleTicketsChange = (ticketsWhereGroup) => {
+    this.setState({ticketsWhereGroup});
+    this.filter.close();
+  };
+
   render() {
     const { ticketsWhereGroup } = this.state;
 
     return (
-      <Column className="dp-column__first">
+      <Column className="dp-column__first" style={{marginLeft: "100px"}}>
         <Heading>
           <Icon name="envelope-o" style={styles.column.icon} />
           Tickets
@@ -83,40 +143,9 @@ export class TestColumn extends React.Component {
               </Item>
               <Item count={99}>
                 All tickets
-                <FilterIcon popper={this.popper} />
-                <Popper
-                  ref={(ref) => {this.popper = ref;}}
-                  opened={false}
-                  offsetX="1px"
-                  offsetY="3px"
-                  className="dp-column-popper"
-                  placement="bottom"
-                  style={{width: 180}}
-                  closeOnClickOutside={true}
-                  >
-                  <span>
-                    <div style={{padding: "6px"}}>
-                      <Forms.Label>
-                        Checkbox Label
-                      </Forms.Label>
-                      <Forms.Checkbox />
-                    </div>
-
-                    <Scrollbar autoHeightMax={100} style={{ height: 110 }}>
-                      <div style={{padding: "6px"}}>
-                        <Forms.Label>
-                          Radio Label
-                        </Forms.Label>
-                        <Forms.Checkbox />
-                        <Forms.Checkbox />
-                        <Forms.Checkbox />
-                        <Forms.Checkbox />
-                        <Forms.Checkbox />
-                        <Forms.Checkbox />
-                      </div>
-                    </Scrollbar>
-                  </span>
-                </Popper>
+                <FilterPopper ref={ref => this.filter = ref}>
+                  <TicketsFilterForm onChange={this.handleTicketsChange} />
+                </FilterPopper>
               </Item>
               <li>
                 <QueryableList whereName={ticketsWhereGroup}>
