@@ -120,8 +120,6 @@ export class TestColumn extends React.Component {
   };
 
   render() {
-    const { ticketsWhereGroup } = this.state;
-
     return (
       <Column className="dp-column__first" style={{marginLeft: "100px"}}>
         <Heading>
@@ -129,110 +127,132 @@ export class TestColumn extends React.Component {
           Tickets
         </Heading>
         <DrawerList>
-
-          {/* Drawer: Awaiting Agent */}
-          <Drawer>
-            <Heading>
-              Awaiting Agent
-            </Heading>
-            <ItemList>
-              <Item count={1}>
-                My tickets
-              </Item>
-              <Item count={0}>
-                Tickets I follow
-              </Item>
-              <Item count={0}>
-                Unassigned tickets
-              </Item>
-              <Item count={99}>
-                All tickets
-                <FilterPopper ref={ref => this.filter = ref}>
-                  <TicketsFilterForm onChange={this.handleTicketsChange} />
-                </FilterPopper>
-              </Item>
-              <li>
-                <QueryableList whereName={ticketsWhereGroup}>
-                  <ListElementGroup name="agent">
-                    <Item count={9}>
-                      <Avatar src={avatarImage1} />
-                      Wendy Pride
-                    </Item>
-                    <Item count={2}>
-                      <Avatar src={avatarImage2} />
-                      Bobby Steiner
-                    </Item>
-                  </ListElementGroup>
-                  <ListElementGroup name="urgency">
-                    Urgency
-                  </ListElementGroup>
-                </QueryableList>
-              </li>
-            </ItemList>
-          </Drawer>
-
-          {/* Drawer: Saved Searches */}
-          <Drawer>
-            <Heading>
-              Saved Searches
-            </Heading>
-            <Subheading>Subheading</Subheading>
-            <ItemList>
-              <Item count={2}>
-                My weekly mentions
-              </Item>
-            </ItemList>
-          </Drawer>
-
-          {/* Drawer: Problems & Incidents */}
-          <Drawer opened={false}>
-            <Heading count={2}>
-              Problems &amp; Incidents
-            </Heading>
-            <ItemList>
-              <Item count={2}>
-                Elastic search indexes
-              </Item>
-              <Item count={18}>
-                Inability to use iOS app
-              </Item>
-            </ItemList>
-          </Drawer>
-
-          {/* Drawer: My Stars */}
-          <Drawer opened={false}>
-            <Heading>
-              My Stars
-            </Heading>
-            <ItemList>
-              <Item count={1}>
-                <Icon name="star" style={styles.item.iconBlue} />
-                Bug
-              </Item>
-              <Item count={1}>
-                <Icon name="star" style={styles.item.iconGreen} />
-                Green
-              </Item>
-              <Item count={3}>
-                <Icon name="star" style={styles.item.iconYellow} />
-                Yellow
-              </Item>
-            </ItemList>
-          </Drawer>
-
-          {/* Drawer: Labels */}
-          <Drawer opened={false}>
-            <Heading>
-              Labels
-            </Heading>
-            <ItemList>
-              <Item>
-                <img src="https://deskpro.com/assets/build/img/deskpro/logo.png"/>
-              </Item>
-            </ItemList>
-          </Drawer>
+          {this.renderDrawerAgents()}
+          {this.renderDrawerSearches()}
+          {this.renderDrawerProblems()}
+          {this.renderDrawerStars()}
+          {this.renderDrawerLabels()}
         </DrawerList>
       </Column>
+    )
+  }
+
+  renderDrawerAgents() {
+    return (
+      <Drawer>
+        <Heading>
+          Awaiting Agent
+        </Heading>
+        <ItemList>
+          <Item count={1}>
+            My tickets
+          </Item>
+          <Item count={0}>
+            Tickets I follow
+          </Item>
+          <Item count={0}>
+            Unassigned tickets
+          </Item>
+          <Item count={99}>
+            All tickets
+            <FilterPopper ref={ref => this.filter = ref}>
+              <TicketsFilterForm onChange={this.handleTicketsChange} />
+            </FilterPopper>
+          </Item>
+          <li>
+            <QueryableList whereName={this.state.ticketsWhereGroup}>
+              <ListElementGroup name="agent">
+                <Item count={9}>
+                  <Avatar src={avatarImage1} />
+                  Wendy Pride
+                </Item>
+                <Item count={2}>
+                  <Avatar src={avatarImage2} />
+                  Bobby Steiner
+                </Item>
+              </ListElementGroup>
+              <ListElementGroup name="urgency">
+                Urgency
+              </ListElementGroup>
+            </QueryableList>
+          </li>
+        </ItemList>
+      </Drawer>
+    )
+  }
+
+  renderDrawerSearches() {
+    return (
+      <Drawer>
+        <Heading>
+          Saved Searches
+        </Heading>
+        <Subheading>
+          Subheading
+        </Subheading>
+        <ItemList>
+          <Item count={2}>
+            My weekly mentions
+          </Item>
+        </ItemList>
+      </Drawer>
+    )
+  }
+
+  renderDrawerProblems() {
+    return (
+      <Drawer opened={false}>
+        <Heading count={2}>
+          Problems &amp; Incidents
+        </Heading>
+        <ItemList>
+          <Item count={2}>
+            Elastic search indexes
+          </Item>
+          <Item count={18}>
+            Inability to use iOS app
+          </Item>
+        </ItemList>
+      </Drawer>
+    )
+  }
+
+  renderDrawerStars() {
+    return (
+      <Drawer opened={false}>
+        <Heading>
+          My Stars
+        </Heading>
+        <ItemList>
+          <Item count={1}>
+            <Icon name="star" style={styles.item.iconBlue} />
+            Bug
+          </Item>
+          <Item count={1}>
+            <Icon name="star" style={styles.item.iconGreen} />
+            Green
+          </Item>
+          <Item count={3}>
+            <Icon name="star" style={styles.item.iconYellow} />
+            Yellow
+          </Item>
+        </ItemList>
+      </Drawer>
+    )
+  }
+
+  renderDrawerLabels() {
+    return (
+      <Drawer opened={false}>
+        <Heading>
+          Labels
+        </Heading>
+        <ItemList>
+          <Item>
+            <img src="https://deskpro.com/assets/build/img/deskpro/logo.png"/>
+          </Item>
+        </ItemList>
+      </Drawer>
     )
   }
 }
