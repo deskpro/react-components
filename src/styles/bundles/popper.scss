@@ -10,9 +10,8 @@ $dp-popper-arrow-width: 8px;
 //
 // Styleguide 2
 .dp-popper {
-  padding: 6px;
   position: absolute;
-  text-align: center;
+  text-align: left;
   color: $dp-popper-text-color;
   background: $dp-greyscale-00;
   border-radius: $rad-size-m;
@@ -27,6 +26,10 @@ $dp-popper-arrow-width: 8px;
     position: absolute;
     pointer-events: none;
     border: solid transparent;
+  }
+
+  hr {
+    border-top: 1px solid $dp-greyscale-250;
   }
 }
 
