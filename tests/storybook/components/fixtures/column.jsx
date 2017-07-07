@@ -87,11 +87,12 @@ export class TestColumn extends React.Component {
                 <Popper
                   ref={(ref) => {this.popper = ref;}}
                   opened={false}
-                  arrow={false}
-                  offsetX="-2px"
+                  offsetX="1px"
                   offsetY="3px"
                   className="dp-column-popper"
                   placement="bottom"
+                  style={{width: 180}}
+                  closeOnClickOutside={true}
                   >
                   <span>
                     <div style={{padding: "6px"}}>
@@ -142,6 +143,7 @@ export class TestColumn extends React.Component {
             <Heading>
               Saved Searches
             </Heading>
+            <Subheading>Subheading</Subheading>
             <ItemList>
               <Item count={2}>
                 My weekly mentions
@@ -160,18 +162,6 @@ export class TestColumn extends React.Component {
               </Item>
               <Item count={18}>
                 Inability to use iOS app
-              </Item>
-            </ItemList>
-          </Drawer>
-
-          {/* Drawer: Saved Searches */}
-          <Drawer opened={false}>
-            <Heading>
-              Saved Searches
-            </Heading>
-            <ItemList>
-              <Item count={4}>
-                My weekly mentions
               </Item>
             </ItemList>
           </Drawer>
