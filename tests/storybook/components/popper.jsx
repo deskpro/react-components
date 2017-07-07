@@ -51,7 +51,6 @@ storiesOf('Popper', module)
         <div id="target" style={targetStyles}>
           <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" />
         </div>
-
         <Popper
           target="target"
           opened={opened}
@@ -88,7 +87,6 @@ storiesOf('Popper', module)
         <div id="target" style={ts}>
           <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" />
         </div>
-
         <Popper
           target="target"
           opened={true}
@@ -105,7 +103,7 @@ storiesOf('Popper', module)
     );
   }
 )
-.addWithInfo(
+  .addWithInfo(
   'Button',
   'Using a button to toggle popper visibility.',
   () => {
@@ -139,6 +137,31 @@ storiesOf('Popper', module)
         </Popper>
       </div>
     )
+  }
+)
+  .addWithInfo(
+  'closeOnClickOutside',
+  'Close the popper when clicked outside of it.',
+  () => {
+    const opened = boolean('Opened', true);
+
+    return (
+      <div>
+        <div id="target" style={targetStyles}>
+          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" />
+        </div>
+        <Popper
+          target="target"
+          opened={opened}
+          closeOnClickOutside={true}
+          placement="bottom"
+          >
+          <p>
+            I'm a Popper!
+          </p>
+        </Popper>
+      </div>
+    );
   }
 )
 ;

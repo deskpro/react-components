@@ -72,6 +72,10 @@ export default class Popper extends React.Component {
      */
     preventOverflow: PropTypes.bool,
     /**
+     * Close the popper when the user clicks outside of it.
+     */
+    closeOnClickOutside: PropTypes.bool,
+    /**
      * Called when the popper is created.
      */
     onCreate: PropTypes.func,
@@ -91,18 +95,19 @@ export default class Popper extends React.Component {
   };
 
   static defaultProps = {
-    placement:       'auto',
-    offsetX:         '0px',
-    offsetY:         '0px',
-    zIndex:          0,
-    detached:        false,
-    opened:          false,
-    eventsEnabled:   false,
-    preventOverflow: false,
-    onCreate:        noop,
-    onUpdate:        noop,
-    onOpen:          noop,
-    onClose:         noop
+    placement:           'auto',
+    offsetX:             '0px',
+    offsetY:             '0px',
+    zIndex:              0,
+    detached:            false,
+    opened:              false,
+    eventsEnabled:       false,
+    preventOverflow:     false,
+    closeOnClickOutside: false,
+    onCreate:            noop,
+    onUpdate:            noop,
+    onOpen:              noop,
+    onClose:             noop
   };
 
   constructor(props) {
@@ -111,15 +116,28 @@ export default class Popper extends React.Component {
       target: null,
       opened: props.opened
     };
-    this.node   = null;
-    this.target = null;
+    this.node    = null;
+    this.target  = null;
+    this.focused = false;
   }
 
   componentDidMount() {
+    if (this.props.closeOnClickOutside) {
+      const node = ReactDOM.findDOMNode(this);
+      node.addEventListener('mouseenter', this.handleMouseEnter);
+      node.addEventListener('mouseleave', this.handleMouseLeave);
+      window.addEventListener('click', this.handleDocumentClick);
+    }
     this.updatePopper();
   }
 
   componentWillUnmount() {
+    if (this.props.closeOnClickOutside) {
+      const node = ReactDOM.findDOMNode(this);
+      node.removeEventListener('mouseenter', this.handleMouseEnter);
+      node.removeEventListener('mouseleave', this.handleMouseLeave);
+      window.removeEventListener('click', this.handleDocumentClick);
+    }
     this.destroyPopper();
   }
 
@@ -133,6 +151,20 @@ export default class Popper extends React.Component {
       this.popper.scheduleUpdate();
     }
   }
+
+  handleMouseEnter = () => {
+    this.focused = true;
+  };
+
+  handleMouseLeave = () => {
+    this.focused = false;
+  };
+
+  handleDocumentClick = () => {
+    if (!this.focused) {
+      this.close();
+    }
+  };
 
   /**
    * Initializes or updates the this.popper object.
@@ -198,7 +230,7 @@ export default class Popper extends React.Component {
   /**
    * Toggle the popper opened or closed.
    *
-   * @param {string|function|React.Component} target
+   * @param {string|function|React.Component} [target]
    */
   toggle = (target) => {
     this.state.opened ? this.close(target) : this.open(target);
@@ -207,7 +239,7 @@ export default class Popper extends React.Component {
   /**
    * Open the popper
    *
-   * @param {string|function|React.Component} target
+   * @param {string|function|React.Component} [target]
    */
   open = (target) => {
     this.target = target || this.target;
@@ -217,7 +249,7 @@ export default class Popper extends React.Component {
   /**
    * Close the popper
    *
-   * @param {string|function|React.Component} target
+   * @param {string|function|React.Component} [target]
    */
   close = (target) => {
     this.target = target || this.target;
