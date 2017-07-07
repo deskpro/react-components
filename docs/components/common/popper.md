@@ -53,6 +53,9 @@ Prevents the popper from being positioned outside the boundary. The `eventsEnabl
 **detached={bool}**  
 True to attach the popper to the document.body. The `eventsEnabled` prop should be set to _true_ when using this prop.
 
+**closeOnClickOutside={bool}**  
+Close the popper when the user clicks outside of it.
+
 **onCreate={func}**  
 Called when the internal popper.js instance is created.
 
@@ -77,7 +80,7 @@ Toggles the popper opened or closed. When given the popper will use the `target`
 
 ### Examples
 
-This example creates a popper and uses a button to toggle it opened and clsoed. The popper will become attached to the button by passing the button instance (e.g. `this`) to the `popper.toggle()` method.
+This example creates a popper and uses a button to toggle it opened and closed. The popper will become attached to the button by passing the button instance (e.g. `this`) to the `popper.toggle()` method.
 
 ```jsx
 import React from 'react';
