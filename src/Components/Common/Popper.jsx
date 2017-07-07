@@ -122,23 +122,21 @@ export default class Popper extends React.Component {
   }
 
   componentDidMount() {
+    this.updatePopper();
     if (this.props.closeOnClickOutside) {
-      const node = ReactDOM.findDOMNode(this);
-      node.addEventListener('mouseenter', this.handleMouseEnter);
-      node.addEventListener('mouseleave', this.handleMouseLeave);
+      this.node.addEventListener('mouseenter', this.handleMouseEnter);
+      this.node.addEventListener('mouseleave', this.handleMouseLeave);
       window.addEventListener('click', this.handleDocumentClick);
     }
-    this.updatePopper();
   }
 
   componentWillUnmount() {
+    this.destroyPopper();
     if (this.props.closeOnClickOutside) {
-      const node = ReactDOM.findDOMNode(this);
-      node.removeEventListener('mouseenter', this.handleMouseEnter);
-      node.removeEventListener('mouseleave', this.handleMouseLeave);
+      this.node.removeEventListener('mouseenter', this.handleMouseEnter);
+      this.node.removeEventListener('mouseleave', this.handleMouseLeave);
       window.removeEventListener('click', this.handleDocumentClick);
     }
-    this.destroyPopper();
   }
 
   componentDidUpdate(prevProps) {
@@ -160,10 +158,31 @@ export default class Popper extends React.Component {
     this.focused = false;
   };
 
-  handleDocumentClick = () => {
-    if (!this.focused) {
+  handleDocumentClick = (e) => {
+    if (!this.focused && e.target !== this.target) {
       this.close();
     }
+  };
+
+  /**
+   * Returns a DOM node for the given target
+   *
+   * @param {React.Component|function|string} target
+   * @returns {Node}
+   */
+  findTargetNode = (target) => {
+    let node = null;
+    if (this.target instanceof React.Component) {
+      node = ReactDOM.findDOMNode(this.target);
+    } else if (typeof target === "function") {
+      node = target();
+    } else if (typeof target === "string") {
+      node = document.getElementById(target);
+    } else {
+      node = target;
+    }
+
+    return node;
   };
 
   /**
@@ -171,17 +190,21 @@ export default class Popper extends React.Component {
    */
   updatePopper = () => {
     const {
-      target,
-      placement,
-      offsetX,
-      offsetY,
-      detached,
-      eventsEnabled,
-      preventOverflow,
-      onCreate,
-      onUpdate
-    } = this.props;
+            target,
+            placement,
+            offsetX,
+            offsetY,
+            detached,
+            eventsEnabled,
+            preventOverflow,
+            onCreate,
+            onUpdate
+            } = this.props;
     if (target === undefined && !this.target) {
+      return;
+    }
+    this.target = this.findTargetNode(target);
+    if (!this.target) {
       return;
     }
 
@@ -189,15 +212,6 @@ export default class Popper extends React.Component {
       console.warn('`eventsEnabled` should be true when `preventOverflow` is true.');
     } else if (detached && !eventsEnabled) {
       console.warn('`eventsEnabled` should be true when `detached` is true.');
-    }
-    if (this.target instanceof React.Component) {
-      this.target = ReactDOM.findDOMNode(this.target);
-    } else if (typeof target === "function") {
-      this.target = target();
-    } else if (typeof target === "string") {
-      this.target = document.getElementById(target);
-    } else {
-      this.target = target;
     }
 
     this.destroyPopper();
