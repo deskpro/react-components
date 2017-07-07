@@ -5,6 +5,7 @@ import PopperJS from 'popper.js';
 import classNames from 'classnames';
 import Portal from 'Components/Common/Portal';
 import noop from 'Components/utils/noop';
+import { objectKeyFilter } from 'Components/utils/objects';
 
 /**
  * A wrapper around popper.js, a container which uses absolute positioning
@@ -271,14 +272,17 @@ export default class Popper extends React.Component {
   };
 
   render() {
-    const { detached, children, className } = this.props;
+    const { detached, children, className, ...props } = this.props;
     const { opened } = this.state;
     if (!opened || !this.target) {
       return <div ref={ref => this.node = ref} />;
     }
 
     const popper = (
-      <div ref={ref => this.node = ref} className={classNames('dp-popper', className)}>
+      <div
+        ref={ref => this.node = ref}
+        className={classNames('dp-popper', className)}
+        {...objectKeyFilter(props, Popper.propTypes)}>
         {children}
       </div>
     );
