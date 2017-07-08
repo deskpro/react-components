@@ -18,14 +18,19 @@ export default class Portal extends React.Component {
     onUpdate: noop
   };
 
+  constructor(props) {
+    super(props);
+    this.popup = null;
+  }
+
   componentDidMount() {
     this.popup = document.createElement("div");
     document.body.appendChild(this.popup);
-    this._renderLayer();
+    this.renderChildren();
   }
 
   componentDidUpdate() {
-    this._renderLayer();
+    this.renderChildren();
   }
 
   componentWillUnmount() {
@@ -34,7 +39,10 @@ export default class Portal extends React.Component {
     this.popup = null;
   }
 
-  _renderLayer() {
+  /**
+   * Renders the component children in the portal container
+   */
+  renderChildren() {
     ReactDOM.render(this.props.children, this.popup, () => {
       this.props.onUpdate(this);
     });

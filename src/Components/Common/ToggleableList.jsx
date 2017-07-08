@@ -39,7 +39,7 @@ class ToggleableList extends React.Component {
   handleEvent = (e) => {
     const element = findToggleableParent(e.target);
     if (element) {
-      const targetID = element.getAttribute(DATA_DP_TOGGLE_ID);
+      const targetID    = element.getAttribute(DATA_DP_TOGGLE_ID);
       const targetValue = (targetID == this.state.targetID) ? !this.state.targetValue : true;
       if (targetID !== null) {
         this.setState({

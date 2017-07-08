@@ -1,6 +1,6 @@
 Common/Heading
 ==============
-A generic header element.
+A header element which can be displayed with an icon and count number.
 
 ```jsx
 <div>

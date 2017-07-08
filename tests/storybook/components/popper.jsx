@@ -90,7 +90,6 @@ storiesOf('Popper', module)
         <Popper
           target="target"
           opened={true}
-          arrow={true}
           eventsEnabled={true}
           detached={true}
           placement="bottom"
@@ -126,7 +125,6 @@ storiesOf('Popper', module)
         <Popper
           ref={(p) => {popper = p;}}
           opened={false}
-          arrow={true}
           eventsEnabled={true}
           detached={true}
           placement="bottom"

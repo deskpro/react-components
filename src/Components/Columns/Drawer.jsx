@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import newId from 'Components/utils/newid';
 import noop from 'Components/utils/noop';
+import { objectKeyFilter } from 'Components/utils/objects';
 import { Heading, ListElement, ListToggleable } from 'Components/Common';
 import Icon from 'Components/Icon';
 
@@ -59,10 +60,10 @@ export default class Drawer extends React.Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
       opened: props.opened
     };
-
     this.isChanging = false;
     this.id = (props.id) ? props.id : newId('');
   }
@@ -112,20 +113,15 @@ export default class Drawer extends React.Component {
 
   render() {
     const { opened } = this.state;
-    const { className, role, ...elementProps } = this.props;
-    let props = Object.assign({}, elementProps);
-    delete props.opened;
-    delete props.isSubDrawer;
-    delete props.onChange;
-    delete props.onClick;
+    const { className, role, ...props } = this.props;
 
     return (
       <ListElement
-        {...props}
         role={role}
         aria-expanded={opened}
         id={`dp-column-drawer-${this.id}`}
         className={classNames('dp-column-drawer', className)}
+        {...objectKeyFilter(props, Drawer.propTypes)}
         >
         {this.renderHeading()}
         <DrawerInner id={`dp-column-drawer-body-${this.id}`} opened={opened}>

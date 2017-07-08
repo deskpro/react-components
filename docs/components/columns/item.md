@@ -1,6 +1,6 @@
 Columns/Item
 ==================
-Standard drawer item which may contain an icon and number.
+Standard drawer item which may display and number.
 
 ```jsx
 <ItemList>
@@ -29,6 +29,11 @@ Called when the item is clicked.
 
 **onSelect={func}**  
 Called when the item is selected.
+
+### CSS
+Adds the `dp-column-item` class to the element.
+
+Adds the `dp-drawer-item--selected` class to the element when it's in a "selected" state.
 
 ### Examples
 

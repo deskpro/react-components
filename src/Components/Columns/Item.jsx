@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'Components/utils/noop';
 import { ListElement } from 'Components/Common';
-import Icon from 'Components/Icon';
 
 /**
- * Standard drawer item which may contain an icon and number.
+ * Standard drawer item which may display and number.
  */
 export default class Item extends React.Component {
   static propTypes = {

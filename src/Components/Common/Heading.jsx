@@ -4,12 +4,11 @@ import classNames from 'classnames';
 import Icon from 'Components/Icon';
 
 /**
- * A generic header element.
+ * A header element which can be displayed with an icon and count number.
  */
 const Heading = ({size, icon, count, children, className, ...props}) => {
-  if (!Array.isArray(children)) {
-    children = [children];
-  }
+  children = React.Children.toArray(children);
+
   if (icon !== undefined) {
     children.unshift(
       (typeof icon === 'string')

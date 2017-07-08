@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import Scrollbars from 'react-custom-scrollbars';
 
 /**
- * Wraps children with styled scrollbars
+ * Wraps children with styled scrollbars.
  */
 const Scrollbar = ({className, children, ...props}) => (
   <Scrollbars

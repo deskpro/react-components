@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { objectKeyFilter } from 'Components/utils/objects';
 import List from 'Components/Common/List';
 
 /**
- * A unordered list which can be filtered and reduced by query values.
+ * A unordered list which can be filtered by query values.
  */
 export default class QueryableList extends React.Component {
   static propTypes = {
@@ -27,20 +28,22 @@ export default class QueryableList extends React.Component {
     } else if (whereName == '@none') {
       return [];
     }
+
     return children.filter((child) => {
       return child.props !== undefined && child.props.name === whereName;
     });
   };
 
   render() {
-    let { className, children, ...props} = this.props;
-    delete props.whereName;
-    children = React.Children.toArray(children);
-    children = this.filter(children);
+    const { className, children, ...props} = this.props;
+    const childrenArray = React.Children.toArray(children);
 
     return (
-      <List className={classNames('dp-queryable-list', className)} {...props}>
-        {children}
+      <List
+        className={classNames('dp-queryable-list', className)}
+        {...objectKeyFilter(props, QueryableList.propTypes)}
+        >
+        {this.filter(childrenArray)}
       </List>
     )
   }

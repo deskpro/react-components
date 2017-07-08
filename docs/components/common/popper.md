@@ -1,6 +1,6 @@
 Common/Popper
 =============
-A wrapper around [popper.js](https://popper.js.org), the `Common/Popper` component uses absolute positioning to place elements relative to other elements.
+A wrapper around [popper.js](https://popper.js.org), a tooltip style container which uses absolute positioning to place elements relative to other elements.
 
 ```jsx
 <div>

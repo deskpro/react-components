@@ -8,7 +8,7 @@ import noop from 'Components/utils/noop';
 import { objectKeyFilter } from 'Components/utils/objects';
 
 /**
- * A wrapper around popper.js, a container which uses absolute positioning
+ * A wrapper around popper.js, a tooltip style container which uses absolute positioning
  * to place elements relative to other elements.
  *
  * @see https://popper.js.org
@@ -113,6 +113,7 @@ export default class Popper extends React.Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
       target: null,
       opened: props.opened
@@ -145,6 +146,7 @@ export default class Popper extends React.Component {
       this.setState({opened: this.props.opened});
       this.props.opened ? this.props.onOpen(this) : this.props.onClose(this);
     }
+
     this.updatePopper();
     if (this.popper) {
       this.popper.scheduleUpdate();
@@ -191,16 +193,17 @@ export default class Popper extends React.Component {
    */
   updatePopper = () => {
     const {
-            target,
-            placement,
-            offsetX,
-            offsetY,
-            detached,
-            eventsEnabled,
-            preventOverflow,
-            onCreate,
-            onUpdate
-            } = this.props;
+      target,
+      placement,
+      offsetX,
+      offsetY,
+      detached,
+      eventsEnabled,
+      preventOverflow,
+      onCreate,
+      onUpdate
+    } = this.props;
+
     if (target === undefined && !this.target) {
       return;
     }
@@ -286,6 +289,7 @@ export default class Popper extends React.Component {
         {children}
       </div>
     );
+
     return detached ? <Portal>{popper}</Portal> : popper;
   }
 }

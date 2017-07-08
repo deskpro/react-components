@@ -1,6 +1,6 @@
 Common/ToggleableList
 =====================
-A higher order component which changes prop values on its children by responding to events triggered by the children. The children _must_ be list items `<li>` since the component is constructed from an unordered list `<ul>`.
+A higher order component which changes prop values on its children in response to events triggered by the children. The children _must_ be list items `<li>` since the component is constructed from an unordered list `<ul>`.
 
 ```jsx
 <ToggleableList on="click" toggle="selected">
