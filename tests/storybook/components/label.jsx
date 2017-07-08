@@ -20,6 +20,6 @@ storiesOf('Label', module)
         <LabelInput labels={['Label 1', 'Label 2', 'Label 3']} />
         <br />
       </div>
-    ),
+    )
   )
 ;

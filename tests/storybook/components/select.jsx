@@ -64,6 +64,6 @@ storiesOf('Input', module)
           }
         /><br />
       </div>
-    ),
+    )
   )
 ;

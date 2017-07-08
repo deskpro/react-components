@@ -12,6 +12,6 @@ storiesOf('Input', module)
         <Checkbox checked onChange={action('Checkbox change')}>Checked</Checkbox>
         <Checkbox checked={false} onChange={action('Checkbox change')}>Unchecked</Checkbox>
       </div>
-    ),
+    )
   )
 ;
