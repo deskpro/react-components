@@ -53,14 +53,104 @@ import {
   Item
 } from 'Components/Columns';
 
-const App = () => (
-  <Column>
-    <Heading>
-      <Icon name="envelope"/>
-      Tickets
-    </Heading>
-    <DrawerList>
+const styles = {
+  iconEnvelope: {
+    color: '#59a8e2'
+  },
+  iconBlue: {
+    color: '#4696DC'
+  },
+  iconGreen: {
+    color: '#54c66a'
+  },
+  iconYellow: {
+    color: '#f9d6a4'
+  }
+};
+
+class App extends React.Component {
+
+  render() {
+    return (
+      <Column className="dp-column__first">
+        <Heading>
+          <Icon name="envelope-o" style={styles.iconEnvelope} />
+          Tickets
+        </Heading>
+        <DrawerList>
+          {this.renderDrawerAgents()}
+          {this.renderDrawerSearches()}
+          {this.renderDrawerProblems()}
+          {this.renderDrawerStars()}
+          {this.renderDrawerLabels()}
+        </DrawerList>
+      </Column>
+    )
+  }
+
+  renderDrawerAgents() {
+    return (
       <Drawer>
+        <Heading>
+          Awaiting Agent
+        </Heading>
+        <ItemList>
+          <Item count={1}>
+            My tickets
+          </Item>
+          <Item count={0}>
+            Tickets I follow
+          </Item>
+          <Item count={0}>
+            Unassigned tickets
+          </Item>
+          <Item count={99}>
+            All tickets
+          </Item>
+        </ItemList>
+      </Drawer>
+    )
+  }
+
+  renderDrawerSearches() {
+    return (
+      <Drawer>
+        <Heading>
+          Saved Searches
+        </Heading>
+        <Subheading>
+          Subheading
+        </Subheading>
+        <ItemList>
+          <Item count={2}>
+            My weekly mentions
+          </Item>
+        </ItemList>
+      </Drawer>
+    )
+  }
+
+  renderDrawerProblems() {
+    return (
+      <Drawer opened={false}>
+        <Heading count={2}>
+          Problems &amp; Incidents
+        </Heading>
+        <ItemList>
+          <Item count={2}>
+            Elastic search indexes
+          </Item>
+          <Item count={18}>
+            Inability to use iOS app
+          </Item>
+        </ItemList>
+      </Drawer>
+    )
+  }
+
+  renderDrawerStars() {
+    return (
+      <Drawer opened={false}>
         <Heading>
           My Stars
         </Heading>
@@ -69,7 +159,7 @@ const App = () => (
             <Icon name="star" style={styles.iconBlue} />
             Bug
           </Item>
-          <Item count={0}>
+          <Item count={1}>
             <Icon name="star" style={styles.iconGreen} />
             Green
           </Item>
@@ -79,9 +169,28 @@ const App = () => (
           </Item>
         </ItemList>
       </Drawer>
-    </DrawerList>
-  </Column>
-);
+    )
+  }
+
+  renderDrawerLabels() {
+    return (
+      <Drawer opened={false}>
+        <Heading>
+          Labels
+        </Heading>
+        <ItemList>
+          <Item>
+            <img
+              src="https://deskpro.com/assets/build/img/deskpro/logo.png"
+              />
+          </Item>
+        </ItemList>
+      </Drawer>
+    )
+  }
+}
 
 render(<App />, document.getElementById('mount'));
 ```
+
+![Column example](../../assets/images/column-2.png)

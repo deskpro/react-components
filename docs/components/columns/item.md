@@ -3,29 +3,23 @@ Columns/Item
 Standard drawer item which may contain an icon and number.
 
 ```jsx
-<div>
-  <Item>
-    Item one
+<ItemList>
+  <Item count={1}>
+    Bug
   </Item>
-  <Item count={66}>
-    Item two
+  <Item count={1}>
+    Green
   </Item>
-  <Item icon="star">
-    Item three
+  <Item count={3}>
+    Yellow
   </Item>
-  <Item icon={<Icon name="star" />} count={44}>
-    Item four
-  </Item>
-</div>
+</ItemList>
 ```
 
 ### Props
 
 **count={number}**  
 Number value to display inside the item.
-
-**icon={string|element}**  
-An icon to display, either the name of an icon, or an `Icon` component.
 
 **selected={bool}**  
 Indicates whether the item is selected.
@@ -38,31 +32,61 @@ Called when the item is selected.
 
 ### Examples
 
-Column with drawers and drawer items.
-
 ```jsx
 import React from 'react';
 import { render } from 'react-dom';
-import { Column, Drawer, Item } from 'Components/Columns';
+import {
+  Column,
+  Heading,
+  DrawerList,
+  Drawer,
+  ItemList,
+  Item
+} from 'Components/Columns';
+
+const styles = {
+  iconBlue: {
+    color: '#4696DC'
+  },
+  iconGreen: {
+    color: '#54c66a'
+  },
+  iconYellow: {
+    color: '#f9d6a4'
+  }
+};
 
 const App = () => (
-  <Column heading="Column Heading" icon="envelope-o">
-    <Drawer heading="Drawer Heading 1">
-      <Item>
-        Item one
-      </Item>
-      <Item count={66}>
-        Item two
-      </Item>
-      <Item icon={<Icon name="star" style={{color: "#54c66a"}} />}>
-        Item three
-      </Item>
-      <Item icon="star" count={44}>
-        Item four
-      </Item>
-    </Drawer>
+  <Column>
+    <Heading>
+      <Icon name="envelope"/>
+      Tickets
+    </Heading>
+    <DrawerList>
+      <Drawer>
+        <Heading>
+          My Stars
+        </Heading>
+        <ItemList>
+          <Item count={1}>
+            <Icon name="star" style={styles.iconBlue} />
+            Bug
+          </Item>
+          <Item count={1}>
+            <Icon name="star" style={styles.iconGreen} />
+            Green
+          </Item>
+          <Item count={3}>
+            <Icon name="star" style={styles.iconYellow} />
+            Yellow
+          </Item>
+        </ItemList>
+      </Drawer>
+    </DrawerList>
   </Column>
 );
 
 render(<App />, document.getElementById('mount');
 ```
+
+![Column example](../../assets/images/column-3.png)
