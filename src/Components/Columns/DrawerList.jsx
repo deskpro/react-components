@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { childrenComponentType } from 'Components/utils/props';
 import { List } from 'Components/Common';
-import { Drawer } from 'Components/Columns';
+import Drawer from 'Components/Columns/Drawer';
 
 /**
  * A container for one or more drawers.
