@@ -89,4 +89,4 @@ const App = () => (
 render(<App />, document.getElementById('mount');
 ```
 
-![Column example](../../assets/images/column-3.png)
+![Item example](../../assets/images/column-3.png)

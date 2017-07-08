@@ -97,4 +97,4 @@ const App = () => (
 render(<App />, document.getElementById('mount');
 ```
 
-![Column example](../../assets/images/column-4.png)
+![Drawer example](../../assets/images/column-4.png)
