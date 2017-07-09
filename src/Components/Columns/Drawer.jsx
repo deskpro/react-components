@@ -134,9 +134,8 @@ export default class Drawer extends React.Component {
   renderHeading() {
     let heading = null;
     const { opened } = this.state;
-    const { children, isSubDrawer } = this.props;
 
-    React.Children.forEach(children, (child) => {
+    React.Children.forEach(this.props.children, (child) => {
       if (child.type === Heading) {
         heading = (
           <Heading
@@ -145,14 +144,12 @@ export default class Drawer extends React.Component {
             aria-label={`Click to ${opened ? "close" : "open"}.`}
           >
             {child.props.children}
-            {isSubDrawer ? null : (
-              <Icon
-                aria-hidden={true}
-                className="dp-column-drawer__arrow"
-                name={ opened ? "caret-up" : "caret-down" }
-                title={ opened ? "Close" : "Open" }
-                />
-            )}
+            <Icon
+              aria-hidden={true}
+              className="dp-column-drawer__arrow"
+              name={ opened ? "caret-up" : "caret-down" }
+              title={ opened ? "Close" : "Open" }
+              />
           </Heading>
         );
       }
