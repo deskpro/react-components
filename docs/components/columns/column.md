@@ -44,9 +44,9 @@ Adds `dp-column` class to the column container.
 ```jsx
 import React from 'react';
 import { render } from 'react-dom';
+import { Heading } from 'Components/Common';
 import {
   Column,
-  Heading,
   DrawerList,
   Drawer,
   ItemList,
