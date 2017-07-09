@@ -19,6 +19,17 @@ export default class FilterPopper extends React.Component {
     opened: false
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      popper: null
+    };
+  }
+
+  componentDidMount() {
+    this.setState({popper: this.popper});
+  }
+
   toggle = () => {
     this.popper.toggle();
   };
@@ -36,7 +47,7 @@ export default class FilterPopper extends React.Component {
 
     return (
       <span {...props}>
-        <FilterIcon popper={this.popper} />
+        <FilterIcon popper={this.state.popper} />
         <Popper
           ref={(ref) => {this.popper = ref;}}
           opened={opened}
