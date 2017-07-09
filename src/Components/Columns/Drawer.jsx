@@ -132,28 +132,38 @@ export default class Drawer extends React.Component {
   }
 
   renderHeading() {
-    let heading = null;
     const { opened } = this.state;
+    const props = {
+      'onClick': this.toggle,
+      'aria-label': `Click to ${opened ? "close" : "open"}.`,
+      'aria-controls': `dp-column-drawer-body-${this.id}`
+    };
+    const icon = (
+      <Icon
+        key="icon"
+        aria-hidden={true}
+        className="dp-column-drawer__arrow"
+        name={ opened ? "caret-up" : "caret-down" }
+        title={ opened ? "Close" : "Open" }
+        />
+    );
 
+    let heading = null;
     React.Children.forEach(this.props.children, (child) => {
       if (child.type === Heading) {
-        heading = (
-          <Heading
-            onClick={this.toggle}
-            aria-controls={`dp-column-drawer-body-${this.id}`}
-            aria-label={`Click to ${opened ? "close" : "open"}.`}
-          >
-            {child.props.children}
-            <Icon
-              aria-hidden={true}
-              className="dp-column-drawer__arrow"
-              name={ opened ? "caret-up" : "caret-down" }
-              title={ opened ? "Close" : "Open" }
-              />
-          </Heading>
-        );
+        let hChildren = React.Children.toArray(child.props.children);
+        hChildren.push(icon);
+        heading = React.cloneElement(child, props, hChildren);
       }
     });
+    if (!heading) {
+      heading = (
+        <Heading {...props}>
+          &nbsp;
+          {icon}
+        </Heading>
+      )
+    }
 
     return heading;
   }
