@@ -5,13 +5,13 @@ import {
   Drawer,
   ItemList,
   Item,
-  FilterIcon,
   ItemFilter,
   ItemSettings
 } from 'Components/Columns';
 import {
   Heading,
   Subheading,
+  Count,
   List,
   ListElement,
   ListElementGroup,
@@ -124,8 +124,8 @@ export class TestColumn extends React.Component {
     return (
       <Column className="dp-column__first" style={{ marginLeft: '100px' }}>
         <Heading>
-          <Icon name="envelope-o" style={styles.column.icon} />
           Tickets
+          <Icon name="envelope-o" style={styles.column.icon} />
         </Heading>
         <DrawerList>
           {this.renderDrawerAgents()}
@@ -145,17 +145,21 @@ export class TestColumn extends React.Component {
           Awaiting Agent
         </Heading>
         <ItemList>
-          <Item count={1}>
+          <Item>
             My tickets
+            <Count>1</Count>
           </Item>
-          <Item count={0}>
+          <Item>
             Tickets I follow
+            <Count>0</Count>
           </Item>
-          <Item count={0}>
+          <Item>
             Unassigned tickets
+            <Count>0</Count>
           </Item>
-          <Item count={99}>
+          <Item>
             All tickets
+            <Count>99</Count>
             <ItemFilter ref={ref => this.filter = ref}>
               <TicketsForm onChange={this.handleTicketsChange} />
             </ItemFilter>
@@ -163,13 +167,15 @@ export class TestColumn extends React.Component {
           <li>
             <QueryableList whereName={this.state.ticketsWhereGroup}>
               <ListElementGroup name="agent">
-                <Item count={9}>
-                  <Avatar src={avatarImage1} />
+                <Item>
                   Wendy Pride
+                  <Count>9</Count>
+                  <Avatar src={avatarImage1} />
                 </Item>
-                <Item count={2}>
-                  <Avatar src={avatarImage2} />
+                <Item>
                   Bobby Steiner
+                  <Count>2</Count>
+                  <Avatar src={avatarImage2} />
                 </Item>
               </ListElementGroup>
               <ListElementGroup name="urgency">
@@ -192,8 +198,9 @@ export class TestColumn extends React.Component {
           Subheading
         </Subheading>
         <ItemList>
-          <Item count={2}>
+          <Item>
             My weekly mentions
+            <Count>2</Count>
           </Item>
         </ItemList>
       </Drawer>
@@ -207,11 +214,13 @@ export class TestColumn extends React.Component {
           Problems &amp; Incidents
         </Heading>
         <ItemList>
-          <Item count={2}>
+          <Item>
             Elastic search indexes
+            <Count>2</Count>
           </Item>
-          <Item count={18}>
+          <Item>
             Inability to use iOS app
+            <Count>18</Count>
           </Item>
         </ItemList>
       </Drawer>
@@ -226,18 +235,18 @@ export class TestColumn extends React.Component {
         </Heading>
         <ItemList>
           <Item>
-            <Icon name="star" style={styles.item.iconBlue} />
             Bug
-            <ItemSettings />
+            <Count>2</Count>
+            <Icon name="star" style={styles.item.iconBlue} />
           </Item>
           <Item>
-            <Icon name="star" style={styles.item.iconGreen} />
             Green
+            <Icon name="star" style={styles.item.iconGreen} />
             <ItemSettings />
           </Item>
           <Item>
-            <Icon name="star" style={styles.item.iconYellow} />
             Yellow
+            <Icon name="star" style={styles.item.iconYellow} />
             <ItemSettings />
           </Item>
         </ItemList>
@@ -253,7 +262,7 @@ export class TestColumn extends React.Component {
         </Heading>
         <ItemList>
           <Item>
-            <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" />
+            <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" role="presentation" />
           </Item>
         </ItemList>
       </Drawer>

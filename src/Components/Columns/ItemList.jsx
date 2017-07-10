@@ -9,7 +9,7 @@ const ItemList = ({ className, children, ...props }) => (
     on="click"
     toggle="selected"
     whenType={Item}
-    className={classNames('dp-column-item-list', className)}
+    className={classNames('dp-drawer-item-list', className)}
     {...props}
   >
     {children}

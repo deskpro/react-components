@@ -2,10 +2,11 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Avatar from 'Components/Avatar';
 import Icon from 'Components/Icon';
-import { Column, DrawerList, Drawer, ItemList, Item, FilterIcon } from 'Components/Columns';
+import { Column, DrawerList, Drawer, ItemList, Item } from 'Components/Columns';
 import {
   Heading,
   Subheading,
+  Count,
   List,
   ListElement,
   ListElementGroup,
@@ -40,31 +41,40 @@ storiesOf('Columns', module)
     return (
       <div className="dp-column__first" style={styles.column}>
         <ItemList>
-          <Item count={2} label="My weekly mentions" />
-          <Item count={99}>
-            All tickets
-            <FilterIcon />
+          <Item>
+            My weekly mentions
+            <Count>2</Count>
           </Item>
-          <Item count={1}>
+          <Item>
+            All tickets
+            <Count>99</Count>
+          </Item>
+          <Item>
             <Icon name="star" style={styles.item.iconBlue} />
+            <Count>1</Count>
             Bug
           </Item>
-          <Item count={1}>
+          <Item>
             <Icon name="star" style={styles.item.iconGreen} />
+            <Count>1</Count>
             Green
           </Item>
-          <Item count={2}>
+          <Item>
             Elastic search indexes
+            <Count>2</Count>
           </Item>
-          <Item count={18}>
+          <Item>
             Inability to use iOS app
+            <Count>18</Count>
           </Item>
-          <Item count={3}>
+          <Item >
             <Avatar src={avatarImage1} />
+            <Count>3</Count>
             Wendy Pride
           </Item>
-          <Item count={4}>
+          <Item>
             <Avatar src={avatarImage2} />
+            <Count>4</Count>
             Bob Cooper
           </Item>
         </ItemList>
