@@ -6,6 +6,7 @@ import './components/heading';
 import './components/tag';
 import './components/icon';
 import './components/avatar';
+import './components/count';
 import './components/list';
 import './components/scrollbar';
 import './components/modal';
