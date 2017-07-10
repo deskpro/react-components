@@ -5,13 +5,13 @@ import {
   Drawer,
   ItemList,
   Item,
-  FilterIcon,
   ItemFilter,
   ItemSettings
 } from 'Components/Columns';
 import {
   Heading,
   Subheading,
+  Count,
   List,
   ListElement,
   ListElementGroup,
@@ -192,8 +192,9 @@ export class TestColumn extends React.Component {
           Subheading
         </Subheading>
         <ItemList>
-          <Item count={2}>
+          <Item>
             My weekly mentions
+            <Count count={2} />
           </Item>
         </ItemList>
       </Drawer>
@@ -225,19 +226,18 @@ export class TestColumn extends React.Component {
           My Stars
         </Heading>
         <ItemList>
-          <Item>
-            <Icon name="star" style={styles.item.iconBlue} />
+          <Item count={2}>
             Bug
-            <ItemSettings />
+            <Icon name="star" style={styles.item.iconBlue} />
           </Item>
           <Item>
-            <Icon name="star" style={styles.item.iconGreen} />
             Green
+            <Icon name="star" style={styles.item.iconGreen} />
             <ItemSettings />
           </Item>
           <Item>
-            <Icon name="star" style={styles.item.iconYellow} />
             Yellow
+            <Icon name="star" style={styles.item.iconYellow} />
             <ItemSettings />
           </Item>
         </ItemList>

@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'Components/utils/noop';
-import { ListElement } from 'Components/Common';
+import { ListElement, Count } from 'Components/Common';
+import ItemSettings from 'Components/Columns/ItemSettings';
+import ItemFilter from 'Components/Columns/ItemFilter';
+import Icon from 'Components/Icon';
+
+const classPrefix = 'dp-drawer-item';
 
 /**
  * Standard drawer item which may display and number.
@@ -13,10 +18,6 @@ export default class Item extends React.Component {
      * CSS classes to apply to the element.
      */
     className: PropTypes.string,
-    /**
-     * Text to display inside of the item.
-     */
-    label:     PropTypes.string,
     /**
      * Number value to display inside the item.
      */
@@ -49,26 +50,33 @@ export default class Item extends React.Component {
   }
 
   render() {
-    const { label, count, selected, className, children, ...props } = this.props;
+    const { count, selected, className, children, ...props } = this.props;
     const classes = classNames(
-      'dp-column-item',
+      classPrefix,
       className,
       {
-        'dp-drawer-item--selected': selected
+        [`${classPrefix}--selected`]: selected
       }
     );
 
     return (
       <ListElement className={classes} {...props}>
-        {count === undefined ? null : (
-          <div className="dp-drawer-item__count">
-            {count}
-          </div>
-        )}
-        <div className="dp-drawer-item__body">
-          {label}
-          {children}
-        </div>
+        <span className={`${classPrefix}__pos-left`}>
+          {React.Children.map(children, (child) => {
+            return child.type === Icon ? child : null;
+          })}
+        </span>
+        <span className={`${classPrefix}__pos-middle`}>
+          {React.Children.map(children, (child) => {
+            return (typeof child === 'string' || child.type === ItemFilter) ? child : null;
+          })}
+        </span>
+        <span className={`${classPrefix}__pos-right`}>
+          {React.Children.map(children, (child) => {
+            return (child.type === ItemSettings || child.type === Count) ? child : null;
+          })}
+          {count === undefined ? null : <Count count={count} />}
+        </span>
       </ListElement>
     );
   }

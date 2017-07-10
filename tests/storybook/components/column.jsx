@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Avatar from 'Components/Avatar';
 import Icon from 'Components/Icon';
-import { Column, DrawerList, Drawer, ItemList, Item, FilterIcon } from 'Components/Columns';
+import { Column, DrawerList, Drawer, ItemList, Item } from 'Components/Columns';
 import {
   Heading,
   Subheading,
@@ -40,10 +40,11 @@ storiesOf('Columns', module)
     return (
       <div className="dp-column__first" style={styles.column}>
         <ItemList>
-          <Item count={2} label="My weekly mentions" />
+          <Item count={2}>
+            My weekly mentions
+          </Item>
           <Item count={99}>
             All tickets
-            <FilterIcon />
           </Item>
           <Item count={1}>
             <Icon name="star" style={styles.item.iconBlue} />
