@@ -4,15 +4,15 @@ Renders a number with thousandths formatting.
 
 ```jsx
 <div>
-    <Count count={3} />
-    <Count count={3333} />
-    <Count count={3333} separator="." />
+    <Count value={3} />
+    <Count value={3333} />
+    <Count value={3333} separator="." />
 </div>
 ```
 
 ### Props
 
-**count={number}**  
+**value={number}**  
 The number to format.
 
 **separator={string}**  

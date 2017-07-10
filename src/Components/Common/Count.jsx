@@ -6,9 +6,9 @@ import { numberFormat, THOUSANDTHS_SEPARATOR } from 'Components/utils/numbers';
 /**
  * Renders a number with thousandths formatting.
  */
-const Count = ({count, separator, className, ...props}) => (
+const Count = ({value, separator, className, ...props}) => (
   <div className={classNames('dp-count', className)} {...props}>
-    {numberFormat(count, separator)}
+    {numberFormat(value, separator)}
   </div>
 );
 
@@ -16,7 +16,7 @@ Count.propTypes = {
   /**
    * Number to format and display.
    */
-  count: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
   /**
    * Character to use as the thousandths separator.
    */
