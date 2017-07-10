@@ -16,14 +16,17 @@ A navigation column containing expandable drawers. Semantically the column is an
         My Stars
       </Heading>
       <ItemList>
-        <Item count={1}>
+        <Item>
           Bug
+          <Count>1</Count>
         </Item>
-        <Item count={0}>
+        <Item>
           Green
+          <Count>0</Count>
         </Item>
-        <Item count={3}>
+        <Item>
           Yellow
+          <Count>3</Count>
         </Item>
       </ItemList>
     </Drawer>
@@ -44,7 +47,7 @@ Adds `dp-column` class to the column container.
 ```jsx
 import React from 'react';
 import { render } from 'react-dom';
-import { Heading } from 'Components/Common';
+import { Heading, Count } from 'Components/Common';
 import {
   Column,
   DrawerList,
@@ -74,8 +77,8 @@ class App extends React.Component {
     return (
       <Column className="dp-column__first">
         <Heading>
-          <Icon name="envelope-o" style={styles.iconEnvelope} />
           Tickets
+          <Icon name="envelope-o" style={styles.iconEnvelope} />
         </Heading>
         <DrawerList>
           {this.renderDrawerAgents()}
@@ -95,17 +98,21 @@ class App extends React.Component {
           Awaiting Agent
         </Heading>
         <ItemList>
-          <Item count={1}>
+          <Item>
             My tickets
+            <Count>1</Count>
           </Item>
-          <Item count={0}>
+          <Item>
             Tickets I follow
+            <Count>0</Count>
           </Item>
-          <Item count={0}>
+          <Item>
             Unassigned tickets
+            <Count>0</Count>
           </Item>
-          <Item count={99}>
+          <Item>
             All tickets
+            <Count>99</Count>
           </Item>
         </ItemList>
       </Drawer>
@@ -122,8 +129,9 @@ class App extends React.Component {
           Subheading
         </Subheading>
         <ItemList>
-          <Item count={2}>
+          <Item>
             My weekly mentions
+            <Count>2</Count>
           </Item>
         </ItemList>
       </Drawer>
@@ -137,11 +145,13 @@ class App extends React.Component {
           Problems &amp; Incidents
         </Heading>
         <ItemList>
-          <Item count={2}>
+          <Item>
             Elastic search indexes
+            <Count>2</Count>
           </Item>
-          <Item count={18}>
+          <Item>
             Inability to use iOS app
+            <Count>18</Count>
           </Item>
         </ItemList>
       </Drawer>
@@ -155,17 +165,20 @@ class App extends React.Component {
           My Stars
         </Heading>
         <ItemList>
-          <Item count={1}>
-            <Icon name="star" style={styles.iconBlue} />
+          <Item>
             Bug
+            <Count>1</Count>
+            <Icon name="star" style={styles.iconBlue} />
           </Item>
-          <Item count={1}>
-            <Icon name="star" style={styles.iconGreen} />
+          <Item>
             Green
+            <Count>1</Count>
+            <Icon name="star" style={styles.iconGreen} />
           </Item>
-          <Item count={3}>
-            <Icon name="star" style={styles.iconYellow} />
+          <Item>
             Yellow
+            <Count>3</Count>
+            <Icon name="star" style={styles.iconYellow} />
           </Item>
         </ItemList>
       </Drawer>

@@ -19,10 +19,6 @@ export default class Item extends React.Component {
      */
     className: PropTypes.string,
     /**
-     * Number value to display inside the item.
-     */
-    count:     PropTypes.number,
-    /**
      * Indicates whether the item is selected.
      */
     selected:  PropTypes.bool,
@@ -50,7 +46,7 @@ export default class Item extends React.Component {
   }
 
   render() {
-    const { count, selected, className, children, ...props } = this.props;
+    const { selected, className, children, ...props } = this.props;
     const classes = classNames(
       classPrefix,
       className,
@@ -59,23 +55,26 @@ export default class Item extends React.Component {
       }
     );
 
+    const leftTypes  = [Icon];
+    const rightTypes = [ItemSettings, Count];
+
     return (
       <ListElement className={classes} {...props}>
         <span className={`${classPrefix}__pos-left`}>
           {React.Children.map(children, (child) => {
-            return child.type === Icon ? child : null;
+            return leftTypes.indexOf(child.type) !== -1 ? child : null;
           })}
         </span>
         <span className={`${classPrefix}__pos-middle`}>
           {React.Children.map(children, (child) => {
-            return (typeof child === 'string' || child.type === ItemFilter) ? child : null;
+            return leftTypes.indexOf(child.type) === -1
+              && rightTypes.indexOf(child.type) === -1 ? child : null;
           })}
         </span>
         <span className={`${classPrefix}__pos-right`}>
           {React.Children.map(children, (child) => {
-            return (child.type === ItemSettings || child.type === Count) ? child : null;
+            return rightTypes.indexOf(child.type) !== -1 ? child : null;
           })}
-          {count === undefined ? null : <Count value={count} />}
         </span>
       </ListElement>
     );
