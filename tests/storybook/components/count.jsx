@@ -6,9 +6,9 @@ import Count from '../../../src/Components/Common/Count';
 storiesOf('Common', module)
   .add('Count', () => (
     <div>
-      <Count value={3} />
-      <Count value={3333} />
-      <Count value={3333} separator="." />
+      <Count>3</Count><br />
+      <Count>3333</Count><br />
+      <Count separator=".">3333</Count>
     </div>
   )
 )

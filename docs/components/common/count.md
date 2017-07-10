@@ -1,19 +1,16 @@
 Common/Count
 ============
-Renders a number with thousandths formatting.
+Renders a number as an inline element with thousandths formatting.
 
 ```jsx
 <div>
-    <Count value={3} />
-    <Count value={3333} />
-    <Count value={3333} separator="." />
+    <Count>3</Count>
+    <Count>3333</Count>
+    <Count separator=".">3333</Count>
 </div>
 ```
 
 ### Props
-
-**value={number}**  
-The number to format.
 
 **separator={string}**  
 Character to use as the thousandths separator. Uses a comma by default.
