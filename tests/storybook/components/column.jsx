@@ -79,6 +79,10 @@ storiesOf('Columns', module)
         color: "rgba(255,255,255,.9)",
         borderRadius: "2px",
         border: "0"
+      },
+      input: {
+        margin: "0 12px",
+        padding: "10px"
       }
     };
 
@@ -86,7 +90,7 @@ storiesOf('Columns', module)
       <div className="dp-column__first" style={styles.column}>
         <DrawerList>
           <Drawer>
-            <Heading>
+            <Heading icon="heart">
               Awaiting Agent
             </Heading>
             <img src={logoImage} style={styles.image} />
@@ -98,6 +102,9 @@ storiesOf('Columns', module)
             <button style={styles.button}>
               Start your free trail now
             </button>
+          </Drawer>
+          <Drawer>
+            <input type="text" placeholder="No heading..." style={styles.input} />
           </Drawer>
         </DrawerList>
       </div>

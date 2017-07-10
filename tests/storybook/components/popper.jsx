@@ -19,6 +19,10 @@ const targetStyles = {
   backgroundColor : 'white'
 };
 
+const pStyles = {
+  padding: '3px 16px'
+};
+
 const placements = [
   'auto',
   'auto-start',
@@ -58,7 +62,7 @@ storiesOf('Popper', module)
           offsetX={text('OffsetX', '0px')}
           offsetY={text('OffsetY', '0px')}
         >
-          <p>
+          <p style={pStyles}>
             "{placement}"
           </p>
         </Popper>
@@ -94,7 +98,7 @@ storiesOf('Popper', module)
           detached={true}
           placement="bottom"
           >
-          <p>
+          <p style={pStyles}>
             "bottom"
           </p>
         </Popper>
@@ -129,7 +133,7 @@ storiesOf('Popper', module)
           detached={true}
           placement="bottom"
           >
-          <p>
+          <p style={pStyles}>
             Hi, I'm Popper!
           </p>
         </Popper>
@@ -141,7 +145,7 @@ storiesOf('Popper', module)
   'closeOnClickOutside',
   'Close the popper when clicked outside of it.',
   () => {
-    const opened = boolean('Opened', true);
+    let opened = boolean('Opened', true);
 
     return (
       <div>
@@ -154,7 +158,7 @@ storiesOf('Popper', module)
           closeOnClickOutside={true}
           placement="bottom"
           >
-          <p>
+          <p style={pStyles}>
             I'm a Popper!
           </p>
         </Popper>
