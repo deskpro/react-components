@@ -98,7 +98,7 @@
       "babel-namespace": {  }
     },
     "react": {
-      "version": "15.1.0"
+      "version": "15.3.2"
       // React version, default to the latest React stable release
     }
   },

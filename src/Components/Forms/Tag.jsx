@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Icon from 'Components/Icon';
+import Icon from 'Components/Icon.jsx';
 
 class Tag extends React.Component {
   static propTypes = {

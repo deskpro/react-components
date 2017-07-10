@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Icon from 'Components/Icon';
+import Icon from 'Components/Icon.jsx';
 
 /**
  * Icon which controls the visibility of a popper.
@@ -11,15 +11,15 @@ export default class PopperIcon extends React.Component {
     /**
      * Name of the icon.
      */
-    name:       PropTypes.string.isRequired,
+    name:      PropTypes.string.isRequired,
     /**
      * Reference to the popper to bind the icon to.
      */
-    popper:     PropTypes.object,
+    popper:    PropTypes.object,
     /**
      * CSS classes to apply to the element.
      */
-    className:  PropTypes.string
+    className: PropTypes.string
   };
 
   render() {
