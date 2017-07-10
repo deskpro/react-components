@@ -5,14 +5,14 @@ import PropTypes from 'prop-types';
 import { objectKeyFilter } from 'Components/utils/objects';
 
 test('objectKeyFilter', () => {
-  let propTypes = {
+  const propTypes = {
     className: PropTypes.string
   };
-  let props = {
+  const props = {
     className: 'dp-item',
-    title: 'foo'
+    title:     'foo'
   };
-  let result = objectKeyFilter(props, propTypes);
+  const result = objectKeyFilter(props, propTypes);
   expect(result.className).toBe(undefined);
   expect(result.title).not.toBe(undefined);
 });

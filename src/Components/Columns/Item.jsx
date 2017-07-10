@@ -16,23 +16,23 @@ export default class Item extends React.Component {
     /**
      * Text to display inside of the item.
      */
-    label: PropTypes.string,
+    label:     PropTypes.string,
     /**
      * Number value to display inside the item.
      */
-    count: PropTypes.number,
+    count:     PropTypes.number,
     /**
      * Indicates whether the item is selected.
      */
-    selected: PropTypes.bool,
+    selected:  PropTypes.bool,
     /**
      * Called when the item is clicked.
      */
-    onClick: PropTypes.func,
+    onClick:   PropTypes.func,
     /**
      * Called when the item is selected.
      */
-    onSelect: PropTypes.func
+    onSelect:  PropTypes.func
   };
 
   static defaultProps = {

@@ -29,22 +29,20 @@ export default class QueryableList extends React.Component {
       return [];
     }
 
-    return children.filter((child) => {
-      return child.props !== undefined && child.props.name === whereName;
-    });
+    return children.filter(child => child.props !== undefined && child.props.name === whereName);
   };
 
   render() {
-    const { className, children, ...props} = this.props;
+    const { className, children, ...props } = this.props;
     const childrenArray = React.Children.toArray(children);
 
     return (
       <List
         className={classNames('dp-queryable-list', className)}
         {...objectKeyFilter(props, QueryableList.propTypes)}
-        >
+      >
         {this.filter(childrenArray)}
       </List>
-    )
+    );
   }
 }

@@ -60,8 +60,8 @@ class TicketsFilterForm extends React.Component {
         padding: '3px 6px'
       },
       label: {
-        display: 'block',
-        fontSize: '11px',
+        display:       'block',
+        fontSize:      '11px',
         textTransform: 'uppercase'
       },
       checkboxLabel: {
@@ -70,9 +70,9 @@ class TicketsFilterForm extends React.Component {
     };
 
     const groups = {
-      '@none': 'None',
-      'urgency': 'Urgency',
-      'agent': 'Agent',
+      '@none':      'None',
+      urgency:      'Urgency',
+      agent:        'Agent',
       'agent-team': 'Agent Team'
     };
 
@@ -92,7 +92,7 @@ class TicketsFilterForm extends React.Component {
             <label style={styles.label}>
               Radio Label
             </label>
-            {Object.entries(groups).map((pair) => (
+            {Object.entries(groups).map(pair => (
               <label key={pair[0]} style={styles.checkboxLabel}>
                 <input type="radio" name="group" value={pair[0]} onChange={this.handleChange} />
                 {pair[1]}
@@ -101,7 +101,7 @@ class TicketsFilterForm extends React.Component {
           </div>
         </Scrollbar>
       </div>
-    )
+    );
   }
 }
 
@@ -110,18 +110,18 @@ export class TestColumn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      ticketsWhereGroup: "@none"
+      ticketsWhereGroup: '@none'
     };
   }
 
   handleTicketsChange = (ticketsWhereGroup) => {
-    this.setState({ticketsWhereGroup});
+    this.setState({ ticketsWhereGroup });
     this.filter.close();
   };
 
   render() {
     return (
-      <Column className="dp-column__first" style={{marginLeft: "100px"}}>
+      <Column className="dp-column__first" style={{ marginLeft: '100px' }}>
         <Heading>
           <Icon name="envelope-o" style={styles.column.icon} />
           Tickets
@@ -134,7 +134,7 @@ export class TestColumn extends React.Component {
           {this.renderDrawerLabels()}
         </DrawerList>
       </Column>
-    )
+    );
   }
 
   renderDrawerAgents() {
@@ -178,7 +178,7 @@ export class TestColumn extends React.Component {
           </li>
         </ItemList>
       </Drawer>
-    )
+    );
   }
 
   renderDrawerSearches() {
@@ -196,7 +196,7 @@ export class TestColumn extends React.Component {
           </Item>
         </ItemList>
       </Drawer>
-    )
+    );
   }
 
   renderDrawerProblems() {
@@ -214,7 +214,7 @@ export class TestColumn extends React.Component {
           </Item>
         </ItemList>
       </Drawer>
-    )
+    );
   }
 
   renderDrawerStars() {
@@ -238,7 +238,7 @@ export class TestColumn extends React.Component {
           </Item>
         </ItemList>
       </Drawer>
-    )
+    );
   }
 
   renderDrawerLabels() {
@@ -249,22 +249,22 @@ export class TestColumn extends React.Component {
         </Heading>
         <ItemList>
           <Item>
-            <img src="https://deskpro.com/assets/build/img/deskpro/logo.png"/>
+            <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" />
           </Item>
         </ItemList>
       </Drawer>
-    )
+    );
   }
 }
 
-export const TestSelectable = ({style, ...props}) => {
+export const TestSelectable = ({ style, ...props }) => {
   if (style === undefined) {
     style = {
-      padding: "8px",
-      cursor: "pointer",
-      borderBottom: "1px solid #707576",
-      color: props.selected ? "white" : "black",
-      backgroundColor: props.selected ? "#3c82b4" : "transparent"
+      padding:         '8px',
+      cursor:          'pointer',
+      borderBottom:    '1px solid #707576',
+      color:           props.selected ? 'white' : 'black',
+      backgroundColor: props.selected ? '#3c82b4' : 'transparent'
     };
   }
 
@@ -272,22 +272,22 @@ export const TestSelectable = ({style, ...props}) => {
     <ListElement {...props} style={style}>
       {props.children}
     </ListElement>
-  )
+  );
 };
 
-export const TestDrawer = ({onClick, heading, opened, children, ...props}) => {
+export const TestDrawer = ({ onClick, heading, opened, children, ...props }) => {
   const styles = {
-    padding: "8px",
-    cursor: "pointer",
-    borderBottom: "1px solid #707576"
+    padding:      '8px',
+    cursor:       'pointer',
+    borderBottom: '1px solid #707576'
   };
 
   return (
     <ListElement {...props} style={styles}>
       <h3 onClick={onClick}>{heading}</h3>
-      <div style={{display: opened ? "block":"none"}}>
+      <div style={{ display: opened ? 'block' : 'none' }}>
         {children}
       </div>
     </ListElement>
-  )
+  );
 };

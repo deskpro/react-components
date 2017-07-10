@@ -5,13 +5,13 @@ import classNames from 'classnames';
 /**
  * Renders an avatar.
  */
-const Avatar = ({src, className, ...props}) => (
+const Avatar = ({ src, className, ...props }) => (
   <img
     src={src}
-    aria-hidden={true}
+    aria-hidden
     className={classNames('dp-avatar', className)}
     {...props}
-    />
+  />
 );
 export default Avatar;
 
@@ -23,5 +23,5 @@ Avatar.propTypes = {
   /**
    * The URI of the avatar image.
    */
-  src: PropTypes.string.isRequired
+  src:       PropTypes.string.isRequired
 };

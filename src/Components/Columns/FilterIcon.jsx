@@ -15,12 +15,12 @@ export default class FilterIcon extends React.Component {
         name="filter"
         onClick={(e) => {
           popper.toggle(this);
-          e.stopPropagation()
+          e.stopPropagation();
         }}
         className={classNames('dp-icon__filter', className)}
         {...props}
-        />
-    )
+      />
+    );
   }
 }
 

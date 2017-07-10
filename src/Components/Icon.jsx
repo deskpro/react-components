@@ -23,13 +23,13 @@ import classNames from 'classnames';
  *  );
  * ```
  */
-const Icon = ({className, name, size, rotate, spin, ...elementProps}) => (
+const Icon = ({ className, name, size, rotate, spin, ...elementProps }) => (
   <i
     className={classNames(
       `fa fa-${name}`,
       `dp-icon dp-icon--${size}`,
       {
-        'fa-spin': spin,
+        'fa-spin':               spin,
         [`fa-rotate-${rotate}`]: (rotate !== '0')
       },
       className
@@ -47,19 +47,19 @@ Icon.propTypes = {
   /**
    * Name of the icon to use.
    */
-  name: PropTypes.string.isRequired,
+  name:      PropTypes.string.isRequired,
   /**
    * Displays the icon at the given size
    */
-  size: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl']),
+  size:      PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl']),
   /**
    * Rotates the icon.
    */
-  rotate: PropTypes.oneOf(['0', '90', '180', '270']),
+  rotate:    PropTypes.oneOf(['0', '90', '180', '270']),
   /**
    * Spins the icon using CSS animation.
    */
-  spin: PropTypes.bool
+  spin:      PropTypes.bool
 };
 
 Icon.defaultProps = {

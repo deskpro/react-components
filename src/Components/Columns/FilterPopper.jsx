@@ -27,7 +27,7 @@ export default class FilterPopper extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({popper: this.popper});
+    this.setState({ popper: this.popper });
   }
 
   toggle = () => {
@@ -49,18 +49,18 @@ export default class FilterPopper extends React.Component {
       <span {...props}>
         <FilterIcon popper={this.state.popper} />
         <Popper
-          ref={(ref) => {this.popper = ref;}}
+          ref={(ref) => { this.popper = ref; }}
           opened={opened}
           offsetX="2px"
           offsetY="3px"
           className="dp-column-popper"
           placement="bottom"
-          style={{width: 180}}
-          closeOnClickOutside={true}
-          >
+          style={{ width: 180 }}
+          closeOnClickOutside
+        >
           {children}
         </Popper>
       </span>
-    )
+    );
   }
 }

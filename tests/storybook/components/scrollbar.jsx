@@ -6,9 +6,9 @@ storiesOf('Scrollbar', module)
   .add('Scrollbar', () => {
     const styles = {
       scrollbar: {
-        height: "200px",
-        width: "220px",
-        border: "1px solid grey",
+        height: '200px',
+        width:  '220px',
+        border: '1px solid grey',
       }
     };
 
@@ -22,7 +22,7 @@ storiesOf('Scrollbar', module)
         <p>Line six</p>
         <p>Line seven</p>
       </Scrollbar>
-    )
+    );
   }
 )
 ;

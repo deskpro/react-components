@@ -6,7 +6,7 @@ import Icon from 'Components/Icon';
 /**
  * A header element which can be displayed with an icon and count number.
  */
-const Heading = ({size, icon, count, children, className, ...props}) => {
+const Heading = ({ size, icon, count, children, className, ...props }) => {
   children = React.Children.toArray(children);
 
   if (icon !== undefined) {
@@ -15,7 +15,7 @@ const Heading = ({size, icon, count, children, className, ...props}) => {
         ? <Icon key="icon" name={icon} />
         : React.cloneElement(
           icon,
-          {key: "icon"}
+          { key: 'icon' }
         )
     );
   }
@@ -35,15 +35,15 @@ Heading.propTypes = {
   /**
    * A value from 1 to 6 indicating the type of header to use, e.g. h1, h2, h3, etc.
    */
-  size: PropTypes.number,
+  size:      PropTypes.number,
   /**
    * Icon to display to the left of the text.
    */
-  icon: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  icon:      PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   /**
    * Number value to display to the right of the text.
    */
-  count: PropTypes.number,
+  count:     PropTypes.number,
   /**
    * CSS classes to apply to the element.
    */

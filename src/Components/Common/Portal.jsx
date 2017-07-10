@@ -24,7 +24,7 @@ export default class Portal extends React.Component {
   }
 
   componentDidMount() {
-    this.popup = document.createElement("div");
+    this.popup = document.createElement('div');
     document.body.appendChild(this.popup);
     this.renderChildren();
   }

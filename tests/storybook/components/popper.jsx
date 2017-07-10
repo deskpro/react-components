@@ -8,15 +8,15 @@ import { TestButton } from './fixtures/popper';
 let popper = null;
 
 const targetStyles = {
-  width           : '140px',
-  height          : '40px',
-  top             : '100px',
-  left            : '300px',
-  padding         : '20px',
-  textAlign       : 'center',
-  border          : '2px dotted black',
-  position        : 'absolute',
-  backgroundColor : 'white'
+  width:           '140px',
+  height:          '40px',
+  top:             '100px',
+  left:            '300px',
+  padding:         '20px',
+  textAlign:       'center',
+  border:          '2px dotted black',
+  position:        'absolute',
+  backgroundColor: 'white'
 };
 
 const pStyles = {
@@ -75,15 +75,15 @@ storiesOf('Popper', module)
   'Using the detached property.',
   () => {
     const containerStyles = {
-      width      : '400px',
-      height     : '150px',
-      overflow   : 'auto',
-      background : '#CCC'
+      width:      '400px',
+      height:     '150px',
+      overflow:   'auto',
+      background: '#CCC'
     };
     const ts = Object.assign({}, targetStyles, {
-      position     : 'relative',
-      marginBottom : '50px',
-      marginRight  : '50px'
+      position:     'relative',
+      marginBottom: '50px',
+      marginRight:  '50px'
     });
 
     return (
@@ -93,11 +93,11 @@ storiesOf('Popper', module)
         </div>
         <Popper
           target="target"
-          opened={true}
-          eventsEnabled={true}
-          detached={true}
+          opened
+          eventsEnabled
+          detached
           placement="bottom"
-          >
+        >
           <p style={pStyles}>
             "bottom"
           </p>
@@ -112,14 +112,14 @@ storiesOf('Popper', module)
   () => {
     const styles = {
       button: {
-        fontSize: "1em",
-        color: "#FFF",
-        padding: "15px 60px",
-        zIndex: "99",
-        lineHeight: "24px",
-        background: "#368ddb",
-        borderRadius: "2px",
-        border: "0"
+        fontSize:     '1em',
+        color:        '#FFF',
+        padding:      '15px 60px',
+        zIndex:       '99',
+        lineHeight:   '24px',
+        background:   '#368ddb',
+        borderRadius: '2px',
+        border:       '0'
       }
     };
 
@@ -127,25 +127,25 @@ storiesOf('Popper', module)
       <div>
         <TestButton popper={popper} style={styles.button} />
         <Popper
-          ref={(p) => {popper = p;}}
+          ref={(p) => { popper = p; }}
           opened={false}
-          eventsEnabled={true}
-          detached={true}
+          eventsEnabled
+          detached
           placement="bottom"
-          >
+        >
           <p style={pStyles}>
             Hi, I'm Popper!
           </p>
         </Popper>
       </div>
-    )
+    );
   }
 )
   .addWithInfo(
   'closeOnClickOutside',
   'Close the popper when clicked outside of it.',
   () => {
-    let opened = boolean('Opened', true);
+    const opened = boolean('Opened', true);
 
     return (
       <div>
@@ -155,9 +155,9 @@ storiesOf('Popper', module)
         <Popper
           target="target"
           opened={opened}
-          closeOnClickOutside={true}
+          closeOnClickOutside
           placement="bottom"
-          >
+        >
           <p style={pStyles}>
             I'm a Popper!
           </p>

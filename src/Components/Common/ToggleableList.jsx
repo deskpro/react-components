@@ -14,11 +14,11 @@ class ToggleableList extends React.Component {
     /**
      * The event to listen for.
      */
-    on: PropTypes.string.isRequired,
+    on:       PropTypes.string.isRequired,
     /**
      * Name of the property on the children which will receive a true or false value.
      */
-    toggle: PropTypes.string.isRequired,
+    toggle:   PropTypes.string.isRequired,
     /**
      * Only control components of this type.
      */
@@ -28,7 +28,7 @@ class ToggleableList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      targetID: null,
+      targetID:    null,
       targetValue: false
     };
   }
@@ -61,13 +61,13 @@ class ToggleableList extends React.Component {
             return child;
           }
           return React.cloneElement(child, {
-            [DATA_DP_TOGGLE_ID]: index,
+            [DATA_DP_TOGGLE_ID]:       index,
             [`on${toUpperFirst(on)}`]: this.handleEvent,
-            [toggle]: (index == targetID) ? targetValue : false
+            [toggle]:                  (index == targetID) ? targetValue : false
           });
         })}
       </List>
-    )
+    );
   }
 }
 export default ToggleableList;

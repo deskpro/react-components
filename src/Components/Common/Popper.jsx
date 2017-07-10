@@ -22,7 +22,7 @@ export default class Popper extends React.Component {
     /**
      * Popper is placed in reference to this element.
      */
-    target: PropTypes.any,
+    target:    PropTypes.any,
     /**
      * Placement applied to popper.
      */
@@ -46,32 +46,32 @@ export default class Popper extends React.Component {
     /**
      * Shifts the popper on its X axis.
      */
-    offsetX: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    offsetX:             PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     /**
      * Shifts the popper on its Y axis.
      */
-    offsetY: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    offsetY:             PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     /**
      * Applied to the z-index style.
      */
-    zIndex: PropTypes.number,
+    zIndex:              PropTypes.number,
     /**
      * Whether the children are displayed or not.
      */
-    opened: PropTypes.bool,
+    opened:              PropTypes.bool,
     /**
      * True to attach the children to document.body.
      */
-    detached: PropTypes.bool,
+    detached:            PropTypes.bool,
     /**
      * Add resize/scroll events and start recalculating position of
      * the popper element when they are triggered.
      */
-    eventsEnabled: PropTypes.bool,
+    eventsEnabled:       PropTypes.bool,
     /**
      * Prevents the popper from being positioned outside the boundary.
      */
-    preventOverflow: PropTypes.bool,
+    preventOverflow:     PropTypes.bool,
     /**
      * Close the popper when the user clicks outside of it.
      */
@@ -79,20 +79,20 @@ export default class Popper extends React.Component {
     /**
      * Called when the popper is created.
      */
-    onCreate: PropTypes.func,
+    onCreate:            PropTypes.func,
     /**
      * Called when the popper is updated, this callback is not called
      * on the initialization/creation of the popper, but only on subsequent updates.
      */
-    onUpdate: PropTypes.func,
+    onUpdate:            PropTypes.func,
     /**
      * Called when the popper is opened.
      */
-    onOpen: PropTypes.func,
+    onOpen:              PropTypes.func,
     /**
      * Called when the popper is closed.
      */
-    onClose: PropTypes.func
+    onClose:             PropTypes.func
   };
 
   static defaultProps = {
@@ -143,7 +143,7 @@ export default class Popper extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.opened !== this.props.opened) {
-      this.setState({opened: this.props.opened});
+      this.setState({ opened: this.props.opened });
       this.props.opened ? this.props.onOpen(this) : this.props.onClose(this);
     }
 
@@ -177,9 +177,9 @@ export default class Popper extends React.Component {
     let node = null;
     if (this.target instanceof React.Component) {
       node = ReactDOM.findDOMNode(this.target);
-    } else if (typeof target === "function") {
+    } else if (typeof target === 'function') {
       node = target();
-    } else if (typeof target === "string") {
+    } else if (typeof target === 'string') {
       node = document.getElementById(target);
     } else {
       node = target;
@@ -261,7 +261,7 @@ export default class Popper extends React.Component {
    */
   open = (target) => {
     this.target = target || this.target;
-    this.setState({opened: true});
+    this.setState({ opened: true });
   };
 
   /**
@@ -271,7 +271,7 @@ export default class Popper extends React.Component {
    */
   close = (target) => {
     this.target = target || this.target;
-    this.setState({opened: false});
+    this.setState({ opened: false });
   };
 
   render() {
@@ -285,7 +285,8 @@ export default class Popper extends React.Component {
       <div
         ref={ref => this.node = ref}
         className={classNames('dp-popper', className)}
-        {...objectKeyFilter(props, Popper.propTypes)}>
+        {...objectKeyFilter(props, Popper.propTypes)}
+      >
         {children}
       </div>
     );

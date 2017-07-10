@@ -16,7 +16,7 @@ import React from 'react';
  * @returns {Function}
  */
 export function childrenComponentType(component) {
-  return function(props, propName, componentName) {
+  return function (props, propName, componentName) {
     let error = null;
     React.Children.forEach(props[propName], (child) => {
       if (child.type !== component) {
@@ -25,6 +25,6 @@ export function childrenComponentType(component) {
         );
       }
     });
-    return error
-  }
+    return error;
+  };
 }

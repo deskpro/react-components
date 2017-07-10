@@ -7,7 +7,7 @@ import ListElement from 'Components/Common/ListElement';
 /**
  * Groups a collection of ListElement components.
  */
-const ListElementGroup = ({className, children, ...props}) => (
+const ListElementGroup = ({ className, children, ...props }) => (
   <ListElement className={classNames('dp-list__element__group', className)} {...props}>
     <List>
       {children}

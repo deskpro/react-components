@@ -17,15 +17,15 @@ export default class DrawerList extends React.Component {
     /**
      * The aria role.
      */
-    role: PropTypes.string,
+    role:      PropTypes.string,
     /**
      * One or more ColumnDrawer components.
      */
-    children: childrenComponentType(Drawer)
+    children:  childrenComponentType(Drawer)
   };
 
   static defaultProps = {
-    role: "tree"
+    role: 'tree'
   };
 
   render() {
@@ -41,9 +41,9 @@ export default class DrawerList extends React.Component {
         role={role}
         className={classNames('dp-column-drawer-list', className)}
         {...props}
-        >
+      >
         {children}
       </List>
-    )
+    );
   }
 }

@@ -10,7 +10,7 @@ import Icon from 'Components/Icon';
 /**
  * Component of the Drawer component.
  */
-const DrawerInner = ({id, opened, children}) => (
+const DrawerInner = ({ id, opened, children }) => (
   <div
     id={id}
     aria-hidden={!opened}
@@ -20,7 +20,7 @@ const DrawerInner = ({id, opened, children}) => (
         'dp-column-drawer__body--opened': opened
       }
     )}
-    >
+  >
     {children}
   </div>
 );
@@ -37,23 +37,23 @@ export default class Drawer extends React.Component {
     /**
      * The aria role.
      */
-    role: PropTypes.string,
+    role:      PropTypes.string,
     /**
      * ID to assign to the element.
      */
-    id: PropTypes.string,
+    id:        PropTypes.string,
     /**
      * When true the drawer will render opened.
      */
-    opened: PropTypes.bool,
+    opened:    PropTypes.bool,
     /**
      * Called when the drawer is opened or closed.
      */
-    onChange: PropTypes.func
+    onChange:  PropTypes.func
   };
 
   static defaultProps = {
-    role:     "treeitem",
+    role:     'treeitem',
     opened:   true,
     onChange: noop
   };
@@ -107,9 +107,7 @@ export default class Drawer extends React.Component {
    *
    * @returns {boolean}
    */
-  isOpen = () => {
-    return this.state.opened;
-  };
+  isOpen = () => this.state.opened;
 
   render() {
     const { opened } = this.state;
@@ -122,36 +120,36 @@ export default class Drawer extends React.Component {
         id={`dp-column-drawer-${this.id}`}
         className={classNames('dp-column-drawer', className)}
         {...objectKeyFilter(props, Drawer.propTypes)}
-        >
+      >
         {this.renderHeading()}
         <DrawerInner id={`dp-column-drawer-body-${this.id}`} opened={opened}>
           {this.renderChildren()}
         </DrawerInner>
       </ListElement>
-    )
+    );
   }
 
   renderHeading() {
     const { opened } = this.state;
     const props = {
-      'onClick': this.toggle,
-      'aria-label': `Click to ${opened ? "close" : "open"}.`,
+      onClick:         this.toggle,
+      'aria-label':    `Click to ${opened ? 'close' : 'open'}.`,
       'aria-controls': `dp-column-drawer-body-${this.id}`
     };
     const icon = (
       <Icon
         key="icon"
-        aria-hidden={true}
+        aria-hidden
         className="dp-column-drawer__arrow"
-        name={ opened ? "caret-up" : "caret-down" }
-        title={ opened ? "Close" : "Open" }
-        />
+        name={opened ? 'caret-up' : 'caret-down'}
+        title={opened ? 'Close' : 'Open'}
+      />
     );
 
     let heading = null;
     React.Children.forEach(this.props.children, (child) => {
       if (child.type === Heading) {
-        let hChildren = React.Children.toArray(child.props.children);
+        const hChildren = React.Children.toArray(child.props.children);
         hChildren.push(icon);
         heading = React.cloneElement(child, props, hChildren);
       }
@@ -162,7 +160,7 @@ export default class Drawer extends React.Component {
           &nbsp;
           {icon}
         </Heading>
-      )
+      );
     }
 
     return heading;

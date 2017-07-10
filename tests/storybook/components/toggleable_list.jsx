@@ -8,9 +8,9 @@ storiesOf('ToggleableList', module)
   .addDecorator(withKnobs)
   .add('Select', () => {
     const styles = {
-      width: "200px",
-      border: "1px solid #707576",
-      borderBottom: "0"
+      width:        '200px',
+      border:       '1px solid #707576',
+      borderBottom: '0'
     };
 
     return (
@@ -19,14 +19,14 @@ storiesOf('ToggleableList', module)
         <TestSelectable>Two</TestSelectable>
         <TestSelectable>Three</TestSelectable>
       </ToggleableList>
-    )
+    );
   }
   )
   .add('Accordion', () => {
     const styles = {
-      width: "200px",
-      border: "1px solid #707576",
-      borderBottom: "0"
+      width:        '200px',
+      border:       '1px solid #707576',
+      borderBottom: '0'
     };
 
     return (
@@ -35,20 +35,20 @@ storiesOf('ToggleableList', module)
         <TestDrawer heading="Drawer 2">Two</TestDrawer>
         <TestDrawer heading="Drawer 3">Three</TestDrawer>
       </ToggleableList>
-    )
+    );
   })
   .add('WhenType', () => {
     const styles = {
       list: {
-        width: "200px",
-        border: "1px solid #707576",
-        borderBottom: "0"
+        width:        '200px',
+        border:       '1px solid #707576',
+        borderBottom: '0'
       },
       li: {
-        padding: "8px",
-        cursor: "pointer",
-        borderBottom: "1px solid #707576",
-        color: "black"
+        padding:      '8px',
+        cursor:       'pointer',
+        borderBottom: '1px solid #707576',
+        color:        'black'
       }
     };
 
@@ -59,6 +59,6 @@ storiesOf('ToggleableList', module)
         <TestSelectable>Three</TestSelectable>
         <TestSelectable>Four</TestSelectable>
       </ToggleableList>
-    )
+    );
   })
 ;

@@ -16,8 +16,8 @@ storiesOf('Columns', module)
   .add('ItemList', () => {
     const styles = {
       column: {
-        backgroundColor: "#F4F5F5",
-        border: "1px solid #d4d7d8"
+        backgroundColor: '#F4F5F5',
+        border:          '1px solid #d4d7d8'
       },
       item: {
         iconBlue: {
@@ -61,28 +61,28 @@ storiesOf('Columns', module)
           </Item>
         </ItemList>
       </div>
-    )
+    );
   })
   .add('DrawerList', () => {
     const styles = {
       column: {
-        backgroundColor: "#F4F5F5",
-        border: "1px solid #d4d7d8"
+        backgroundColor: '#F4F5F5',
+        border:          '1px solid #d4d7d8'
       },
       image: {
-        margin: "0 12px"
+        margin: '0 12px'
       },
       button: {
-        margin: "0 12px",
-        padding: "10px",
-        background: "#368ddb",
-        color: "rgba(255,255,255,.9)",
-        borderRadius: "2px",
-        border: "0"
+        margin:       '0 12px',
+        padding:      '10px',
+        background:   '#368ddb',
+        color:        'rgba(255,255,255,.9)',
+        borderRadius: '2px',
+        border:       '0'
       },
       input: {
-        margin: "0 12px",
-        padding: "10px"
+        margin:  '0 12px',
+        padding: '10px'
       }
     };
 
@@ -108,7 +108,7 @@ storiesOf('Columns', module)
           </Drawer>
         </DrawerList>
       </div>
-    )
+    );
   })
   .add('Column', () => (
     <TestColumn />

@@ -14,11 +14,11 @@ export default class Column extends React.Component {
     /**
      * The aria role.
      */
-    role: PropTypes.string
+    role:      PropTypes.string
   };
 
   static defaultProps = {
-    role: "tree"
+    role: 'tree'
   };
 
   render() {
