@@ -1,9 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Column, DrawerList, Drawer, ItemList, Item, FilterIcon } from 'Components/Columns';
-import { Heading, Subheading, List, ListElement, ListElementGroup, ListToggleable, QueryableList } from 'Components/Common';
 import Avatar from 'Components/Avatar';
 import Icon from 'Components/Icon';
+import { Column, DrawerList, Drawer, ItemList, Item, FilterIcon } from 'Components/Columns';
+import {
+  Heading,
+  Subheading,
+  List,
+  ListElement,
+  ListElementGroup,
+  ListToggleable,
+  QueryableList
+} from 'Components/Common';
 
 import { TestColumn } from './fixtures/column_fixture';
 import logoImage from '../static/logo.png';
@@ -70,10 +78,11 @@ storiesOf('Columns', module)
         border:          '1px solid #d4d7d8'
       },
       image: {
-        margin: '0 12px'
+        margin: '0 12px',
+        width:  '195px'
       },
       button: {
-        margin:       '0 12px',
+        margin:       '0 12px 6px 12px',
         padding:      '10px',
         background:   '#368ddb',
         color:        'rgba(255,255,255,.9)',
@@ -81,7 +90,7 @@ storiesOf('Columns', module)
         border:       '0'
       },
       input: {
-        margin:  '0 12px',
+        margin:  '0 12px 6px 12px',
         padding: '10px'
       }
     };
