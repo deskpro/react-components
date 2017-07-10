@@ -7,6 +7,7 @@ import Portal from './Portal';
 import ToggleableList from './ToggleableList';
 import QueryableList from './QueryableList';
 import Heading from './Heading';
+import Count from './Count';
 import Subheading from './Subheading';
 import Scrollbar from './Scrollbar';
 
@@ -20,6 +21,7 @@ export {
   ToggleableList,
   QueryableList,
   Heading,
+  Count,
   Subheading,
   Scrollbar
 };
