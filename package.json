@@ -1,6 +1,6 @@
 {
   "name": "deskpro-components",
-  "version": "0.3.5",
+  "version": "0.4.0",
   "description": "DeskPRO Components",
   "private": false,
   "scripts": {
@@ -88,6 +88,8 @@
     "react-tagsinput": "^3.17.0"
   },
   "lint-staged": {
-    "*.{js,jsx}": ["eslint"]
+    "*.{js,jsx}": [
+      "eslint"
+    ]
   }
 }
