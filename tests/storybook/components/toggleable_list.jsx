@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleableList } from 'Components/Common';
-import { TestSelectable, TestDrawer } from './fixtures/column';
+import { TestSelectable, TestDrawer } from './fixtures/column_fixture';
 
 storiesOf('ToggleableList', module)
   .addDecorator(withKnobs)

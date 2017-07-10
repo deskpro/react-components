@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
 import { Popper } from 'Components/Common';
-import { TestButton } from './fixtures/popper';
+import { TestButton } from './fixtures/popper_fixture';
 
 let popper = null;
 

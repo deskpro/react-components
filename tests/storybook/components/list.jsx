@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 import { List, ListElement, ListElementGroup, QueryableList, ToggleableList } from 'Components/Common';
-import { TestSelectable, TestDrawer } from './fixtures/column';
+import { TestSelectable, TestDrawer } from './fixtures/column_fixture';
 
 storiesOf('List', module)
   .addDecorator(withKnobs)

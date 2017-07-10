@@ -5,7 +5,7 @@ import { Heading, Subheading, List, ListElement, ListElementGroup, ListToggleabl
 import Avatar from 'Components/Avatar';
 import Icon from 'Components/Icon';
 
-import { TestColumn } from './fixtures/column';
+import { TestColumn } from './fixtures/column_fixture';
 import logoImage from '../static/logo.png';
 import avatarImage1 from '../static/avatar-1.jpg';
 import avatarImage2 from '../static/avatar-2.jpg';
