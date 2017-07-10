@@ -1,3 +1,15 @@
+## v0.4.0 - 2017-07-10
+
+* [IMPROVEMENT] Rename Label to Tag to avoid confusion
+* [MINOR] Update Popper styles
+* [MINOR] Add Popper close on click outside
+* [FEATURE] Add Scrollbar component
+* [FEATURE] Add FilterPopper
+* [INTERNAL] Add objectKeyFilter
+* [INTERNAL] Add pre-commit hook on lint:js
+* [MINOR] Doc updates
+* [MINOR] Drawer works without Heading
+
 ## v0.3.5 - 2017-07-06
 
 * [FEATURE] Add QueryableList whereName @none value

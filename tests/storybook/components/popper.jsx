@@ -165,5 +165,4 @@ storiesOf('Popper', module)
       </div>
     );
   }
-)
-;
+);
