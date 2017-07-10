@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Label from 'Components/Forms/InputLabel';
+import Label from 'Components/Forms/Label';
 import newId from 'Components/utils/newid';
 import classNames from 'classnames';
 

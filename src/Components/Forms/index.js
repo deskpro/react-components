@@ -1,8 +1,8 @@
 import Checkbox from './Checkbox';
 import Input from './Input';
-import InputLabel from './InputLabel';
 import Label from './Label';
-import LabelInput from './LabelInput';
+import Tag from './Tag';
+import TagInput from './TagInput';
 import Select from './Select';
 
-export { Checkbox, Input, InputLabel, Label, LabelInput, Select };
+export { Checkbox, Input, Label, Tag, TagInput, Select };

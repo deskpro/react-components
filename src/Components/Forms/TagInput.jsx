@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Label } from 'Components/Forms';
+import { Tag } from 'Components/Forms';
 import TagsInput from 'react-tagsinput';
 import onClickOutside from 'react-onclickoutside';
 
-class LabelInput extends React.Component {
+class TagInput extends React.Component {
   static propTypes = {
-    labels:     PropTypes.array.isRequired,
+    tags:       PropTypes.array.isRequired,
     inputProps: PropTypes.object,
     onChange:   PropTypes.func,
     editable:   PropTypes.bool,
@@ -33,8 +33,8 @@ class LabelInput extends React.Component {
     }
   };
 
-  handleChange = (labels) => {
-    this.props.onChange(labels);
+  handleChange = (tags) => {
+    this.props.onChange(tags);
   };
 
   handleClickOutside = () => {
@@ -43,51 +43,51 @@ class LabelInput extends React.Component {
     });
   };
 
-  renderLabel = (labelProps) => {
-    const { tag, key, onRemove } = labelProps;
+  renderTag = (tagProps) => {
+    const { tag, key, onRemove } = tagProps;
     return (
-      <Label
+      <Tag
         key={key}
         editable
         onClose={() => onRemove(key)}
       >
         {tag}
-      </Label>
+      </Tag>
     );
   };
 
-  renderLabels = () => {
-    const { labels, inputProps, editable, ...elementProps } = this.props;
+  renderTags = () => {
+    const { tags, inputProps, editable, ...elementProps } = this.props;
     if (this.state.editable || editable) {
       const props = Object.assign({}, elementProps);
       delete props.onChange;
       return (
         <TagsInput
-          value={labels}
-          renderTag={this.renderLabel}
+          value={tags}
+          renderTag={this.renderTag}
           inputProps={inputProps}
           onChange={this.handleChange}
           {...props}
         />
       );
     }
-    if (!labels) {
+    if (!tags) {
       return null;
     }
-    return labels.map((label, key) => <Label key={key}>{label}</Label>);
+    return tags.map((tag, key) => <Tag key={key}>{tag}</Tag>);
   };
 
   render() {
     const { editable } = this.state;
     return (
       <div
-        className={classNames('dp-label-input', { editable })}
+        className={classNames('dp-tag-input', { editable })}
         onBlur={this.handleBlur}
         onClick={this.setEditable}
       >
-        {this.renderLabels()}
+        {this.renderTags()}
       </div>
     );
   }
 }
-export default onClickOutside(LabelInput);
+export default onClickOutside(TagInput);

@@ -1,7 +1,7 @@
 /******************************
     Labels
 *******************************/
-.dp-label {
+.dp-tag {
   font-family: $primary-font;
   font-size: $font-size-m;
   font-weight: $pf-regular;
@@ -23,16 +23,16 @@
     box-sizing: border-box;
   }
 }
-.dp-label__close {
+.dp-tag__close {
   margin-left: 3px;
   font-size: $icon-size-xs;
   color: $dp-greyscale-500;
   cursor: pointer;
 }
 /******************************
-    Label input
+    Tag input
 *******************************/
-.dp-label-input {
+.dp-tag-input {
   height: 29px;
   padding: 4px;
   border: 1px solid transparent;
