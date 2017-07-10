@@ -7,7 +7,7 @@ import { Popper } from 'Components/Common';
 /**
  * Filter icon and popper which will contain a form that filters a list
  */
-export default class FilterPopper extends React.Component {
+export default class ItemFilter extends React.Component {
   static propTypes = {
     /**
      * Whether the popper is opened or not.

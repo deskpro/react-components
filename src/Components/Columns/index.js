@@ -4,7 +4,7 @@ import Drawer from './Drawer';
 import ItemList from './ItemList';
 import Item from './Item';
 import FilterIcon from './FilterIcon';
-import FilterPopper from './FilterPopper';
+import ItemFilter from './ItemFilter';
 
 export {
   Column,
@@ -13,5 +13,5 @@ export {
   ItemList,
   Item,
   FilterIcon,
-  FilterPopper
+  ItemFilter
 };

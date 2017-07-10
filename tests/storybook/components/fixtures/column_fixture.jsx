@@ -6,7 +6,7 @@ import {
   ItemList,
   Item,
   FilterIcon,
-  FilterPopper
+  ItemFilter
 } from 'Components/Columns';
 import {
   Heading,
@@ -47,7 +47,7 @@ const styles = {
   }
 };
 
-class TicketsFilterForm extends React.Component {
+class TicketsForm extends React.Component {
   handleChange = (e) => {
     if (this.props.onChange) {
       this.props.onChange(e.target.value);
@@ -155,9 +155,9 @@ export class TestColumn extends React.Component {
           </Item>
           <Item count={99}>
             All tickets
-            <FilterPopper ref={ref => this.filter = ref}>
-              <TicketsFilterForm onChange={this.handleTicketsChange} />
-            </FilterPopper>
+            <ItemFilter ref={ref => this.filter = ref}>
+              <TicketsForm onChange={this.handleTicketsChange} />
+            </ItemFilter>
           </Item>
           <li>
             <QueryableList whereName={this.state.ticketsWhereGroup}>
