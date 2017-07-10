@@ -3,8 +3,8 @@ import DrawerList from './DrawerList';
 import Drawer from './Drawer';
 import ItemList from './ItemList';
 import Item from './Item';
-import FilterIcon from './FilterIcon';
 import ItemFilter from './ItemFilter';
+import ItemSettings from './ItemSettings';
 
 export {
   Column,
@@ -12,6 +12,6 @@ export {
   Drawer,
   ItemList,
   Item,
-  FilterIcon,
-  ItemFilter
+  ItemFilter,
+  ItemSettings
 };

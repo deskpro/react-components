@@ -2,6 +2,7 @@ import List from './List';
 import ListElement from './ListElement';
 import ListElementGroup from './ListElementGroup';
 import Popper from './Popper';
+import PopperIcon from './PopperIcon';
 import Portal from './Portal';
 import ToggleableList from './ToggleableList';
 import QueryableList from './QueryableList';
@@ -14,6 +15,7 @@ export {
   ListElement,
   ListElementGroup,
   Popper,
+  PopperIcon,
   Portal,
   ToggleableList,
   QueryableList,

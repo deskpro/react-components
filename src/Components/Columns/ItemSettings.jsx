@@ -6,16 +6,16 @@ import { PopperIcon } from 'Components/Common';
 import ItemPopper from 'Components/Columns/ItemPopper';
 
 /**
- * Filter icon and popper which will contain a form that filters a list
+ * Settings icon and popper which will contain a form which controls item settings.
  */
 export default class ItemFilter extends ItemPopper {
   render() {
     return (
       <span {...objectKeyFilter(this.props, ItemPopper.propTypes)}>
         <PopperIcon
-          name="filter"
+          name="cog"
           popper={this.state.popper}
-          className="dp-icon__filter"
+          className="dp-icon__settings"
         />
         {this.renderPopper()}
       </span>

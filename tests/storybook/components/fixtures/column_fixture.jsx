@@ -6,7 +6,8 @@ import {
   ItemList,
   Item,
   FilterIcon,
-  ItemFilter
+  ItemFilter,
+  ItemSettings
 } from 'Components/Columns';
 import {
   Heading,
@@ -219,22 +220,25 @@ export class TestColumn extends React.Component {
 
   renderDrawerStars() {
     return (
-      <Drawer opened={false}>
+      <Drawer>
         <Heading>
           My Stars
         </Heading>
         <ItemList>
-          <Item count={1}>
+          <Item>
             <Icon name="star" style={styles.item.iconBlue} />
             Bug
+            <ItemSettings />
           </Item>
-          <Item count={1}>
+          <Item>
             <Icon name="star" style={styles.item.iconGreen} />
             Green
+            <ItemSettings />
           </Item>
-          <Item count={3}>
+          <Item>
             <Icon name="star" style={styles.item.iconYellow} />
             Yellow
+            <ItemSettings />
           </Item>
         </ItemList>
       </Drawer>
