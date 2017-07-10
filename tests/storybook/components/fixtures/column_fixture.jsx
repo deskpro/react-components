@@ -194,7 +194,7 @@ export class TestColumn extends React.Component {
         <ItemList>
           <Item>
             My weekly mentions
-            <Count count={2} />
+            <Count value={2} />
           </Item>
         </ItemList>
       </Drawer>

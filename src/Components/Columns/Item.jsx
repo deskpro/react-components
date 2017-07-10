@@ -75,7 +75,7 @@ export default class Item extends React.Component {
           {React.Children.map(children, (child) => {
             return (child.type === ItemSettings || child.type === Count) ? child : null;
           })}
-          {count === undefined ? null : <Count count={count} />}
+          {count === undefined ? null : <Count value={count} />}
         </span>
       </ListElement>
     );
