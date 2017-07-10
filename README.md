@@ -14,6 +14,8 @@ A Storybook demo is available online at https://deskproapps.github.io/deskpro-co
 ### Common
 * [Common/Heading](docs/components/common/heading.md)  
   A generic header element.
+* [Common/Count](docs/components/common/count.md)  
+  Renders a number with thousandths formatting.
 * [Common/Subheading](docs/components/common/subheading.md)  
   Represents a sub heading element.
 * [Common/Popper](docs/components/common/popper.md)  

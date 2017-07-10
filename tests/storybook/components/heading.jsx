@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 import Heading from '../../../src/Components/Common/Heading';
 
-storiesOf('Heading', module)
+storiesOf('Common', module)
   .addDecorator(withKnobs)
   .addWithPropsCombinations(
   'Heading',
