@@ -1,18 +1,31 @@
+## v0.4.1 - 2017-07-11
+
+* [MINOR] Rename story fixture scripts
+* [MINOR] Cleanup column story code
+* [FEATURE] Adds PopperIcon
+* [FEATURE] Adds Count component
+* [MINOR] Minor tweak to Count component
+* [MINOR] Removes Count value attribute
+* [MINOR] Adds positions to drawer item
+* [MINOR] Handling Count components in Columns/Item component
+* [MINOR] Improves Column story
+* [MINOR] Adds missing doc image
+
 ## v0.4.0 - 2017-07-10
 
 * [IMPROVEMENT] Rename Label to Tag to avoid confusion
 * [MINOR] Update Popper styles
-* [MINOR] Add Popper close on click outside
-* [FEATURE] Add Scrollbar component
-* [FEATURE] Add FilterPopper
-* [INTERNAL] Add objectKeyFilter
-* [INTERNAL] Add pre-commit hook on lint:js
+* [MINOR] Adds Popper close on click outside
+* [FEATURE] Adds Scrollbar component
+* [FEATURE] Adds FilterPopper
+* [INTERNAL] Adds objectKeyFilter
+* [INTERNAL] Adds pre-commit hook on lint:js
 * [MINOR] Doc updates
 * [MINOR] Drawer works without Heading
 
 ## v0.3.5 - 2017-07-06
 
-* [FEATURE] Add QueryableList whereName @none value
+* [FEATURE] Adds QueryableList whereName @none value
 * [FEATURE] Adds ToggleableList whenType prop
 * [MINOR] Fix padding in select input
 
@@ -28,7 +41,7 @@
  
 ## v0.3.2 - 2017-07-04
 
-* [MINOR] Add style to heading count
+* [MINOR] Adds style to heading count
 * [FEATURE] Allow to force editable on LabelInput
 
 ## v0.3.1 - 2017-07-04
@@ -37,11 +50,11 @@
 
 ## v0.3.0 - 2017-07-04
 
-* [FEATURE] Add ListToggleable
-* [FEATURE] Add Icons
-* [FEATURE] Add documentation
-* [FEATURE] Add Avatar
-* [FEATURE] Add Heading
+* [FEATURE] Adds ListToggleable
+* [FEATURE] Adds Icons
+* [FEATURE] Adds documentation
+* [FEATURE] Adds Avatar
+* [FEATURE] Adds Heading
 
 ## v0.2.9 - 2017-06-30
 
@@ -53,15 +66,15 @@
 
 ## v0.2.7 - 2017-06-30
 
-* [FEATURE] Add publication of storybook to GitHub pages
+* [FEATURE] Adds publication of storybook to GitHub pages
 
 ## v0.2.6 - 2017-06-30
 
-* [FIX] Remove missing LabelSet, add package-lock.json
+* [FIX] Remove missing LabelSet, adds package-lock.json
 
 ## v0.2.5 - 2017-06-30
 
-* [FIX] Add missing .npmignore
+* [FIX] Adds missing .npmignore
 
 ## v0.2.4 - 2017-06-30
 
@@ -73,7 +86,7 @@
 
 ## v0.2.2 - 2017-06-30
 
-* [FEATURE] Add Popper and Portal
+* [FEATURE] Adds Popper and Portal
 
 ## v0.2.1 - 2017-06-30
 
@@ -85,11 +98,11 @@
 
 ## v0.1.8 - 2017-06-28
 
-* [FEATURE] Add confirm buttons
+* [FEATURE] Adds confirm buttons
 
 ## v0.1.7 - 2017-06-22
 
-* [FEATURE] Add checkbox and multiple select
+* [FEATURE] Adds checkbox and multiple select
 
 ## v0.1.6 - 2017-06-20
 
@@ -99,7 +112,7 @@
 
 ## v0.1.5 - 2017-06-15
 
-* [FEATURE] Add label input to update a set of labels
+* [FEATURE] Adds label input to update a set of labels
 
 ## v0.1.4 - 2017-06-14
 
@@ -107,17 +120,17 @@
 
 ## v0.1.3 - 2017-06-14
 
-* [FEATURE] Add prefix / suffix to inputs
+* [FEATURE] Adds prefix / suffix to inputs
 
 ## v0.1.2 - 2017-06-13
 
-* [FEATURE] Add icon to inputs
+* [FEATURE] Adds icon to inputs
 * [FIX] Fix eventListener on Modal
 * use border-box on modal buttons
 
 ## v0.1.1 - 2017-06-13
 
-* [FEATURE] Add Modal dialog
+* [FEATURE] Adds Modal dialog
 
 ## v0.1.0 - 2017-06-11
 
