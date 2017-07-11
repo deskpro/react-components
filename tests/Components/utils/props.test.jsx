@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { childrenComponentType } from 'Components/utils/props';
-import Drawer from 'Components/Columns/Drawer.jsx';
-import List from 'Components/Common/List.jsx';
+import Drawer from 'Components/Columns/Drawer';
+import List from 'Components/Common/List';
 
 test('childrenComponentType', () => {
   let props = {

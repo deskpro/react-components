@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf, action } from '@storybook/react';
 import classNames from 'classnames';
-import Button from 'Components/Button.jsx';
-import ConfirmButton from 'Components/ConfirmButton.jsx';
+import Button from 'Components/Button';
+import ConfirmButton from 'Components/ConfirmButton';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 /* eslint-disable react/prop-types*/
 

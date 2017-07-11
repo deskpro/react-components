@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Avatar from 'Components/Avatar.jsx';
-import Icon from 'Components/Icon.jsx';
+import Avatar from 'Components/Avatar';
+import Icon from 'Components/Icon';
 import { DrawerList, Drawer, ItemList, Item } from 'Components/Columns';
 import {
   Heading,

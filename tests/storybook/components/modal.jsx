@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Modal from 'Components/Modal.jsx';
-import Button from 'Components/Button.jsx';
+import Modal from 'Components/Modal';
+import Button from 'Components/Button';
 
 storiesOf('Modal', module)
   .addWithInfo(
