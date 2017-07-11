@@ -62,20 +62,14 @@ export default class Item extends React.Component {
     return (
       <ListElement className={classes} {...props}>
         <span className={`${classPrefix}__pos-left`}>
-          {React.Children.map(children, (child) => {
-            return leftTypes.indexOf(child.type) !== -1 ? child : null;
-          })}
+          {React.Children.map(children, child => leftTypes.indexOf(child.type) !== -1 ? child : null)}
         </span>
         <span className={`${classPrefix}__pos-middle`}>
-          {React.Children.map(children, (child) => {
-            return leftTypes.indexOf(child.type) === -1
-              && rightTypes.indexOf(child.type) === -1 ? child : null;
-          })}
+          {React.Children.map(children, child => leftTypes.indexOf(child.type) === -1
+              && rightTypes.indexOf(child.type) === -1 ? child : null)}
         </span>
         <span className={`${classPrefix}__pos-right`}>
-          {React.Children.map(children, (child) => {
-            return rightTypes.indexOf(child.type) !== -1 ? child : null;
-          })}
+          {React.Children.map(children, child => rightTypes.indexOf(child.type) !== -1 ? child : null)}
         </span>
       </ListElement>
     );

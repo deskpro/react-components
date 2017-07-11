@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
 import { Popper } from 'Components/Common';
@@ -53,7 +52,7 @@ storiesOf('Popper', module)
     return (
       <div>
         <div id="target" style={targetStyles}>
-          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" />
+          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" role="presentation" />
         </div>
         <Popper
           target="target"
@@ -63,7 +62,7 @@ storiesOf('Popper', module)
           offsetY={text('OffsetY', '0px')}
         >
           <p style={pStyles}>
-            "{placement}"
+            {placement}
           </p>
         </Popper>
       </div>
@@ -89,7 +88,7 @@ storiesOf('Popper', module)
     return (
       <div style={containerStyles}>
         <div id="target" style={ts}>
-          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" />
+          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" role="presentation" />
         </div>
         <Popper
           target="target"
@@ -99,7 +98,7 @@ storiesOf('Popper', module)
           placement="bottom"
         >
           <p style={pStyles}>
-            "bottom"
+            bottom
           </p>
         </Popper>
       </div>
@@ -134,7 +133,7 @@ storiesOf('Popper', module)
           placement="bottom"
         >
           <p style={pStyles}>
-            Hi, I'm Popper!
+            Hi, I&apos;m Popper!
           </p>
         </Popper>
       </div>
@@ -150,7 +149,7 @@ storiesOf('Popper', module)
     return (
       <div>
         <div id="target" style={targetStyles}>
-          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" />
+          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" role="presentation" />
         </div>
         <Popper
           target="target"
@@ -159,7 +158,7 @@ storiesOf('Popper', module)
           placement="bottom"
         >
           <p style={pStyles}>
-            I'm a Popper!
+            I&apos;m a Popper!
           </p>
         </Popper>
       </div>
