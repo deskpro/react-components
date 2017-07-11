@@ -6,6 +6,7 @@ import { ListElement, Count } from 'Components/Common';
 import ItemSettings from 'Components/Columns/ItemSettings';
 import ItemFilter from 'Components/Columns/ItemFilter';
 import Icon from 'Components/Icon';
+import Avatar from 'Components/Avatar';
 
 const classPrefix = 'dp-drawer-item';
 
@@ -55,7 +56,7 @@ export default class Item extends React.Component {
       }
     );
 
-    const leftTypes  = [Icon];
+    const leftTypes  = [Icon, Avatar];
     const rightTypes = [ItemSettings, Count];
 
     return (

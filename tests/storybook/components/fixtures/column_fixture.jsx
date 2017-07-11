@@ -49,10 +49,20 @@ const styles = {
 };
 
 class TicketsForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: localStorage.getItem('column_fixture_tickets_form_value') || '@none'
+    };
+  }
+
   handleChange = (e) => {
-    if (this.props.onChange) {
-      this.props.onChange(e.target.value);
-    }
+    this.setState({value: e.target.value}, () => {
+      if (this.props.onChange) {
+        localStorage.setItem('column_fixture_tickets_form_value', this.state.value);
+        this.props.onChange(this.state.value);
+      }
+    });
   };
 
   render() {
@@ -77,6 +87,8 @@ class TicketsForm extends React.Component {
       'agent-team': 'Agent Team'
     };
 
+    const { value } = this.state;
+
     return (
       <div>
         <div style={styles.formGroup}>
@@ -95,7 +107,13 @@ class TicketsForm extends React.Component {
             </label>
             {Object.entries(groups).map(pair => (
               <label key={pair[0]} style={styles.checkboxLabel}>
-                <input type="radio" name="group" value={pair[0]} onChange={this.handleChange} />
+                <input
+                  type="radio"
+                  name="group"
+                  value={pair[0]}
+                  checked={value === pair[0]}
+                  onChange={this.handleChange}
+                />
                 {pair[1]}
               </label>
             ))}
@@ -111,7 +129,7 @@ export class TestColumn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      ticketsWhereGroup: '@none'
+      ticketsWhereGroup: localStorage.getItem('column_fixture_tickets_form_value') || '@none'
     };
   }
 
@@ -179,7 +197,14 @@ export class TestColumn extends React.Component {
                 </Item>
               </ListElementGroup>
               <ListElementGroup name="urgency">
-                Urgency
+                <Item>
+                  Urgency
+                </Item>
+              </ListElementGroup>
+              <ListElementGroup name="agent-team">
+                <Item>
+                  Agent Team
+                </Item>
               </ListElementGroup>
             </QueryableList>
           </li>
