@@ -156,6 +156,15 @@ $dp-column-item-height:    24px;
     height: $icon-size-s;
     width: $icon-size-s;
   }
+
+  .dp-urgency {
+    @include border-radius("m");
+    font-family: $primary-font;
+    font-size: $font-size-s;
+    line-height: $font-size-s;
+    padding: 2px;
+    min-width: 1.75em;
+  }
 }
 
 .dp-drawer-item__pos-left {

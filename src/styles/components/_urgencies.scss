@@ -1,8 +1,10 @@
 .dp-urgency {
   display: inline-block;
   padding: 3px 6px;
-  text-align: center;
   min-width: 1em;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
 }
 
 .dp-urgency__level-1 {

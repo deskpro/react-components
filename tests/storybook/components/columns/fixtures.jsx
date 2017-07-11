@@ -19,6 +19,7 @@ import {
   Scrollbar
 } from 'Components/Common';
 import * as Forms from 'Components/Forms';
+import Urgency from 'Components/Urgency';
 import Avatar from 'Components/Avatar';
 import Icon from 'Components/Icon';
 
@@ -197,8 +198,19 @@ export class TestColumn extends React.Component {
                 </Item>
               </ListElementGroup>
               <ListElementGroup name="urgency">
-                <Item>
-                  Urgency
+                <Item style={{ padding: '4px 12px 4px 6px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <Urgency level={1}>23</Urgency>
+                    <Urgency level={2}>2</Urgency>
+                    <Urgency level={3}>9</Urgency>
+                    <Urgency level={4}>7</Urgency>
+                    <Urgency level={5}>15</Urgency>
+                    <Urgency level={6}>31</Urgency>
+                    <Urgency level={7}>19</Urgency>
+                    <Urgency level={8}>1</Urgency>
+                    <Urgency level={9}>6</Urgency>
+                    <Urgency level={10}>12</Urgency>
+                  </div>
                 </Item>
               </ListElementGroup>
               <ListElementGroup name="agent-team">

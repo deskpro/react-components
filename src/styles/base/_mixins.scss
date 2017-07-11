@@ -12,3 +12,20 @@
         -ms-user-select: none;
             user-select: none;
 }
+
+
+@mixin border-radius($size) {
+  @if $size == "s" {
+    border-radius: $rad-size-s;
+  } @else if $size == "m" {
+    border-radius: $rad-size-m;
+  } @else if $size == "m-l" {
+    border-radius: $rad-size-m-l;
+  } @else if $size == "l" {
+    border-radius: $rad-size-l;
+  } @else if $size == "circular" {
+    border-radius: $rad-size-circular;
+  } @else {
+    @warn "Border radius size `#{$size}` is invalid.";
+  }
+}
