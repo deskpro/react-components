@@ -1,0 +1,31 @@
+/// Hidden fields
+///
+
+.dp-hidden-fields__body {
+  display: none;
+}
+
+.dp-hidden-fields--open {
+  .dp-hidden-fields__body {
+    display: block;
+  }
+}
+
+.dp-hidden-fields__label {
+  cursor: pointer;
+  padding-bottom: 0;
+  display: inline-block;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  text-transform: UPPERCASE;
+  text-decoration: none;
+  line-height: $font-size-s;
+  font-family: $primary-font;
+  font-size: $font-size-s;
+  font-weight: $pf-regular;
+  color: $dp-greyscale-700;
+
+  &:hover {
+    color: $dp-sonic-primary;
+  }
+}

@@ -18,7 +18,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import Avatar from 'Components/Avatar';
 
-const App = ({spin}) => (
+const App = () => (
     <div>
         <Avatar src="/images/avatars/1.jpg" />
     </div>
