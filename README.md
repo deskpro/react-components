@@ -10,6 +10,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Renders an icon using the Font Awesome library.
 * [Avatar](docs/components/avatar.md)  
   Renders an avatar image.
+* [Urgency](docs/components/urgency.md)
+  Renders a message in a box which is colored to match an urgency level between 1 and 10.
 
 ### Common
 * [Common/Heading](docs/components/common/heading.md)  

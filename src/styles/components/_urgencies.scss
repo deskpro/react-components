@@ -1,0 +1,66 @@
+.dp-urgency {
+  display: inline-block;
+  padding: 3px 6px;
+  text-align: center;
+  min-width: 1em;
+}
+
+.dp-urgency__level-1 {
+  background-color: $sla-shade-1;
+  border-color: $sla-shade-2;
+  color: $dp-greyscale-850;
+}
+
+.dp-urgency__level-2 {
+  background-color: $sla-shade-2;
+  border-color: $sla-shade-3;
+  color: $dp-greyscale-850;
+}
+
+.dp-urgency__level-3 {
+  background-color: $sla-shade-3;
+  border-color: $sla-shade-4;
+  color: $dp-greyscale-850;
+}
+
+.dp-urgency__level-4 {
+  background-color: $sla-shade-4;
+  border-color: $sla-shade-5;
+  color: $dp-greyscale-850;
+}
+
+.dp-urgency__level-5 {
+  background-color: $sla-shade-5;
+  border-color: $sla-shade-6;
+  color: $dp-greyscale-00;
+}
+
+.dp-urgency__level-6 {
+  background-color: $sla-shade-6;
+  border-color: $sla-shade-7;
+  color: $dp-greyscale-00;
+}
+
+.dp-urgency__level-7 {
+  background-color: $sla-shade-7;
+  border-color: $sla-shade-8;
+  color: $dp-greyscale-00;
+}
+
+.dp-urgency__level-8 {
+  background-color: $sla-shade-8;
+  border-color: $sla-shade-9;
+  color: $dp-greyscale-00;
+}
+
+.dp-urgency__level-9 {
+  background-color: $sla-shade-9;
+  border-color: $sla-shade-10;
+  color: $dp-greyscale-00;
+}
+
+.dp-urgency__level-10 {
+  background-color: $sla-shade-10;
+  border-color: $sla-shade-11;
+  color: $dp-greyscale-00;
+}
