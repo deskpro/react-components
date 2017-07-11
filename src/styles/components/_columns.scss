@@ -1,4 +1,4 @@
-@import "mixins";
+@import "../base/mixins";
 $dp-column-first-width:    220px;
 $dp-column-padding:        12px;
 $dp-column-heading-height: 44px;
@@ -117,7 +117,11 @@ $dp-column-item-height:    24px;
   }
 
   ul.dp-list {
-    padding-left: 3px;
+    padding-left: 0;
+
+    .dp-drawer-item__pos-left {
+      margin-left: 6px;
+    }
   }
 }
 
