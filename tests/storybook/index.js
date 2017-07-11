@@ -1,4 +1,4 @@
-import '../../src/styles/bundles/deskpro-styles.scss';
+import '../../src/styles/main.scss';
 import './components/button';
 import './components/input';
 import './components/checkbox';
