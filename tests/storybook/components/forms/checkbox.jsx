@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf, action } from '@storybook/react';
 import { Checkbox } from 'Components/Forms';
 
-storiesOf('Input', module)
+storiesOf('Forms', module)
   .addWithInfo(
     'Checkbox',
     'This is the basic usage of a input with the label passed as a property.',

@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, select } from '@storybook/addon-knobs';
-import Heading from '../../../src/Components/Common/Heading';
+import { withKnobs } from '@storybook/addon-knobs';
+import Heading from 'Components/Common/Heading';
+/* eslint-disable react/prop-types*/
 
 storiesOf('Common', module)
   .addDecorator(withKnobs)
@@ -16,7 +17,7 @@ storiesOf('Common', module)
       return (
         <div>
           <Component size={props.size} icon="bug" count={22}>
-            Size "{props.size}"
+            Size {props.size}
           </Component>
         </div>
       );

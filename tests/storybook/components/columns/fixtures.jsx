@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Column,
   DrawerList,
@@ -12,12 +13,9 @@ import {
   Heading,
   Subheading,
   Count,
-  List,
   ListElement,
   ListElementGroup,
-  ListToggleable,
   QueryableList,
-  Popper,
   Scrollbar
 } from 'Components/Common';
 import * as Forms from 'Components/Forms';
@@ -26,8 +24,6 @@ import Icon from 'Components/Icon';
 
 import avatarImage1 from '../../static/avatar-1.jpg';
 import avatarImage2 from '../../static/avatar-2.jpg';
-import avatarImage3 from '../../static/avatar-3.jpg';
-import avatarImage4 from '../../static/avatar-4.jpg';
 
 const styles = {
   column: {
@@ -49,6 +45,10 @@ const styles = {
 };
 
 class TicketsForm extends React.Component {
+  static propTypes = {
+    onChange: PropTypes.func
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -66,7 +66,7 @@ class TicketsForm extends React.Component {
   };
 
   render() {
-    const styles = {
+    const formStyles = {
       formGroup: {
         padding: '3px 6px'
       },
@@ -91,7 +91,7 @@ class TicketsForm extends React.Component {
 
     return (
       <div>
-        <div style={styles.formGroup}>
+        <div style={formStyles.formGroup}>
           <label style={styles.label}>
             SLA View
           </label>
@@ -101,12 +101,12 @@ class TicketsForm extends React.Component {
         </div>
         <hr />
         <Scrollbar autoHeightMax={100} style={{ height: 110 }}>
-          <div style={styles.formGroup}>
-            <label style={styles.label}>
+          <div style={formStyles.formGroup}>
+            <label style={formStyles.label}>
               Radio Label
             </label>
             {Object.entries(groups).map(pair => (
-              <label key={pair[0]} style={styles.checkboxLabel}>
+              <label key={pair[0]} style={formStyles.checkboxLabel}>
                 <input
                   type="radio"
                   name="group"
@@ -178,7 +178,7 @@ export class TestColumn extends React.Component {
           <Item>
             All tickets
             <Count>99</Count>
-            <ItemFilter ref={ref => this.filter = ref}>
+            <ItemFilter ref={(ref) => { this.filter = ref; }}>
               <TicketsForm onChange={this.handleTicketsChange} />
             </ItemFilter>
           </Item>
@@ -295,37 +295,55 @@ export class TestColumn extends React.Component {
   }
 }
 
-export const TestSelectable = ({ style, ...props }) => {
+export const TestSelectable = ({ style, selected, children, ...props }) => {
+  let listStyles = null;
   if (style === undefined) {
-    style = {
+    listStyles = {
       padding:         '8px',
       cursor:          'pointer',
       borderBottom:    '1px solid #707576',
-      color:           props.selected ? 'white' : 'black',
-      backgroundColor: props.selected ? '#3c82b4' : 'transparent'
+      color:           selected ? 'white' : 'black',
+      backgroundColor: selected ? '#3c82b4' : 'transparent'
     };
+  } else {
+    listStyles = Object.assign({}, style);
   }
 
   return (
-    <ListElement {...props} style={style}>
-      {props.children}
+    <ListElement {...props} style={listStyles}>
+      {children}
     </ListElement>
   );
 };
 
+TestSelectable.propTypes = {
+  style:    PropTypes.string,
+  selected: PropTypes.bool,
+  children: PropTypes.node
+};
+
 export const TestDrawer = ({ onClick, heading, opened, children, ...props }) => {
-  const styles = {
+  const listStyles = {
     padding:      '8px',
     cursor:       'pointer',
     borderBottom: '1px solid #707576'
   };
 
   return (
-    <ListElement {...props} style={styles}>
-      <h3 onClick={onClick}>{heading}</h3>
+    <ListElement {...props} style={listStyles}>
+      <h3 onClick={onClick}>
+        {heading}
+      </h3>
       <div style={{ display: opened ? 'block' : 'none' }}>
         {children}
       </div>
     </ListElement>
   );
+};
+
+TestDrawer.propTypes = {
+  heading:  PropTypes.string,
+  opened:   PropTypes.bool,
+  children: PropTypes.node,
+  onClick:  PropTypes.func
 };

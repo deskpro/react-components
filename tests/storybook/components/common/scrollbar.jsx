@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Scrollbar from '../../../src/Components/Common/Scrollbar';
+import Scrollbar from 'Components/Common/Scrollbar';
 
-storiesOf('Scrollbar', module)
+storiesOf('Common', module)
   .add('Scrollbar', () => {
     const styles = {
       scrollbar: {

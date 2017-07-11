@@ -3,15 +3,12 @@ import { storiesOf } from '@storybook/react';
 import Avatar from 'Components/Avatar';
 import Icon from 'Components/Icon';
 import { DrawerList, Drawer, ItemList, Item } from 'Components/Columns';
-import {
-  Heading,
-  Count,
-} from 'Components/Common';
+import { Heading, Count } from 'Components/Common';
 
-import { TestColumn } from './fixtures/column_fixture';
-import logoImage from '../static/logo.png';
-import avatarImage1 from '../static/avatar-1.jpg';
-import avatarImage2 from '../static/avatar-2.jpg';
+import { TestColumn } from './fixtures';
+import logoImage from '../../static/logo.png';
+import avatarImage1 from '../../static/avatar-1.jpg';
+import avatarImage2 from '../../static/avatar-2.jpg';
 
 storiesOf('Columns', module)
   .add('ItemList', () => {

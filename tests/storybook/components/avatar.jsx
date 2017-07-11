@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, select } from '@storybook/addon-knobs';
+import { withKnobs } from '@storybook/addon-knobs';
 import Avatar from '../../../src/Components/Avatar';
 
 import avatarImage1 from '../static/avatar-1.jpg';
