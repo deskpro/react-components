@@ -1,6 +1,11 @@
 Columns/Column
 ==============
-A navigation column containing expandable drawers. Semantically the column is an unordered list `<ul>` containing one or more list items `<li>`. Where each list item represents a "drawer" which may be opened or closed.
+A navigation column containing expandable drawers.
+
+* [Overview](#overview)
+* [Props](#props)
+* [CSS](#css)
+* [Examples](#examples)
 
 ![Column example](../../assets/images/column-1.png)
 
@@ -33,6 +38,103 @@ A navigation column containing expandable drawers. Semantically the column is an
   </DrawerList>
 </Column>
 ```
+
+### Overview
+Semantically the column is an unordered list `<ul>` containing one or more list items `<li>`. Where each list item represents a "drawer" which may be opened or closed. For example:
+
+```html
+<div class="column">
+  <h2>Tickets</h2>
+  <ul class="drawer-list">
+    <li class="drawer">
+      Bug
+    </li>
+    <li class="drawer">
+      Green
+    </li>
+  </ul>
+</div>
+```
+
+Each column begins with the `Columns/Column` component, a `Common/Heading`, a `Columns/DrawerList`, and one or more `Columns/Drawer` components. All of which are optional.
+
+```jsx
+import React from 'react';
+import { Heading } from 'Components/Common';
+import { Column, DrawerList, Drawer } from 'Components/Columns';
+
+class App extends React.Component {
+
+  render() {
+    return (
+      <Column>
+        <Heading>
+          Tickets
+        </Heading>
+        <DrawerList>
+          <Drawer />
+          <Drawer />
+          <Drawer />
+        </DrawerList>
+      </Column>
+    )
+  }
+}
+```
+
+Anything can be added to drawers, including forms, images, and lists of items. We'll use the `Columns/ItemList` and `Columns/Item` components to add lists of items to the first drawer. We'll also give the drawer an optional heading using the `Common/Heading` component.
+
+```jsx
+import React from 'react';
+import { Heading } from 'Components/Common';
+import {
+  Column,
+  DrawerList,
+  Drawer,
+  ItemList,
+  Item
+} from 'Components/Columns';
+
+class App extends React.Component {
+
+  render() {
+    return (
+      <Column>
+        <Heading>
+          Tickets
+        </Heading>
+        <DrawerList>
+          <Drawer>
+            <Heading>
+              Awaiting Agents
+            </Heading>
+            <ItemList>
+              <Item>
+                My tickets
+              </Item>
+              <Item>
+                Tickets I follow
+              </Item>
+              <Item>
+                Unassigned tickets
+              </Item>
+              <Item>
+                All tickets
+              </Item>
+            </ItemList>
+          </Drawer>
+        </DrawerList>
+      </Column>
+    )
+  }
+}
+```
+
+At this point you have a fully functioning column with drawers which should look like this.
+
+![Column example](../../assets/images/column-5.png)
+
+_Note: An icon to toggle the drawer opened and closed is automatically added to each drawer._
 
 ### Props
 
