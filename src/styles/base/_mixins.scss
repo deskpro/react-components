@@ -4,6 +4,7 @@
 ///    h1 {
 ///        @include no-text-select();
 ///    }
+///
 
 @mixin no-text-select {
   -webkit-touch-callout: none;
@@ -13,6 +14,15 @@
             user-select: none;
 }
 
+/// Adds a border radius to an element
+///
+/// Possible size values are "s", "m", "m-l", "l", and "circular".
+///
+/// @example scss - Basic Usage Sass
+///   div {
+///     @include border-radius("m");
+///   }
+///
 
 @mixin border-radius($size) {
   @if $size == "s" {
