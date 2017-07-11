@@ -6,7 +6,7 @@ const config = {
   devtool: 'cheap-module-source-map',
 
   entry: {
-    'deskpro-styles': './src/styles/bundles/deskpro-styles.scss'
+    main: './src/styles/main.scss'
   },
 
   context: resolve(__dirname, './'),

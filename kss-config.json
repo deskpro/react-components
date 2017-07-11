@@ -2,9 +2,9 @@
   "title": "DeskPRO Styles",
   "source": "./src/styles",
   "destination": "./dist/styleguide",
-  "homepage": "styleguide.md",
+  "homepage": "./src/styleguide.md",
   "builder": "./src/styleguide",
   "css": [
-    "../deskpro-styles.css"
+    "../main.css"
   ]
 }

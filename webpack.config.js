@@ -10,7 +10,7 @@ const config = {
   entry: {
     'webpack-dev-server': 'webpack-dev-server/client?http://localhost:4898',
     'only-dev-server': 'webpack/hot/only-dev-server',
-    'deskpro-styles': './src/styles/bundles/deskpro-styles.scss'
+    main: './src/styles/main.scss'
   },
 
   output: {

@@ -1,0 +1,23 @@
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
+
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "base/colours";
+@import "base/fonts";
+@import "base/border-radius";
+@import "base/mixins";
+@import "components/icons";
+@import "components/heading";
+@import "components/buttons";
+@import "components/input";
+@import "components/tag";
+@import "components/list";
+@import "components/select";
+@import "components/modal";
+@import "components/popper";
+@import "components/columns";
+@import "components/avatar";
+@import "components/scrollbar";
+
+.deskpro-styleguide {
+  @import "../styleguide/styleguide.scss";
+}
