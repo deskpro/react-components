@@ -77,6 +77,6 @@ export default class ItemPopper extends React.Component {
       >
         {children}
       </Popper>
-    )
+    );
   }
 }

@@ -15,7 +15,6 @@
     "storybook:build": "build-storybook -o build/storybook",
     "storybook:deploy": "storybook-to-ghpages",
     "webpack": "webpack",
-    "precommit": "lint-staged",
     "prepublish": "npm run compile"
   },
   "author": "DeskPRO <team@deskpro.com>",

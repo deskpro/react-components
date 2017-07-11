@@ -10,6 +10,7 @@ $dp-popper-arrow-width: 8px;
 //
 // Styleguide 2
 .dp-popper {
+  display: none;
   position: absolute;
   text-align: left;
   background: $dp-greyscale-00;
@@ -41,6 +42,10 @@ $dp-popper-arrow-width: 8px;
     border: 0;
     border-top: 1px solid $dp-greyscale-300;
   }
+}
+
+.dp-popper--opened {
+  display: block;
 }
 
 .dp-popper[x-placement^="top"] {

@@ -57,7 +57,7 @@ class TicketsForm extends React.Component {
   }
 
   handleChange = (e) => {
-    this.setState({value: e.target.value}, () => {
+    this.setState({ value: e.target.value }, () => {
       if (this.props.onChange) {
         localStorage.setItem('column_fixture_tickets_form_value', this.state.value);
         this.props.onChange(this.state.value);
