@@ -13,3 +13,4 @@ import './components/button';
 import './components/icon';
 import './components/avatar';
 import './components/modal';
+import './components/urgency';
