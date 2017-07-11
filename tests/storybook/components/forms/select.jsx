@@ -3,7 +3,7 @@ import { storiesOf, action } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Label, Select } from 'Components/Forms';
 
-storiesOf('Input', module)
+storiesOf('Forms', module)
   .addDecorator(withKnobs)
   .addWithInfo(
     'Select',

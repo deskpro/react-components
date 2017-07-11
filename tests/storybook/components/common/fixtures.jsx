@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export class TestButton extends React.Component {
   render() {
@@ -11,3 +12,7 @@ export class TestButton extends React.Component {
     );
   }
 }
+
+TestButton.propTypes = {
+  popper: PropTypes.object
+};

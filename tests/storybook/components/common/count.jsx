@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, select } from '@storybook/addon-knobs';
-import Count from '../../../src/Components/Common/Count';
+import Count from 'Components/Common/Count';
 
 storiesOf('Common', module)
   .add('Count', () => (

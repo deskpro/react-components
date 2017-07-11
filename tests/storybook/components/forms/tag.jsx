@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Tag, TagInput } from 'Components/Forms';
 
-storiesOf('Tag', module)
+storiesOf('Forms', module)
   .addDecorator(withKnobs)
   .addWithInfo(
     'Tag',

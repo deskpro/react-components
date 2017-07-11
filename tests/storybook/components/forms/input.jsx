@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { Input, Label } from 'Components/Forms';
 
-storiesOf('Input', module)
+storiesOf('Forms', module)
   .addDecorator(withKnobs)
   .addWithInfo(
     'Input',
@@ -100,6 +100,6 @@ storiesOf('Input', module)
           suffix="%"
         /><br />
       </div>
-    ),
+    )
   )
 ;

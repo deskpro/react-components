@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
 import { Popper } from 'Components/Common';
-import { TestButton } from './fixtures/popper_fixture';
+import { TestButton } from './fixtures';
 
 let popper = null;
 
@@ -40,10 +40,10 @@ const placements = [
   'left-end'
 ];
 
-storiesOf('Popper', module)
+storiesOf('Common', module)
   .addDecorator(withKnobs)
   .addWithInfo(
-  'Standard',
+  'Popper standard',
   'Standard popper usage.',
   () => {
     const opened    = boolean('Opened', true);
@@ -70,7 +70,7 @@ storiesOf('Popper', module)
   }
 )
   .addWithInfo(
-  'Detached',
+  'Popper detached',
   'Using the detached property.',
   () => {
     const containerStyles = {
@@ -106,7 +106,7 @@ storiesOf('Popper', module)
   }
 )
   .addWithInfo(
-  'Button',
+  'Popper button',
   'Using a button to toggle popper visibility.',
   () => {
     const styles = {
@@ -141,7 +141,7 @@ storiesOf('Popper', module)
   }
 )
   .addWithInfo(
-  'closeOnClickOutside',
+  'Popper closeOnClickOutside',
   'Close the popper when clicked outside of it.',
   () => {
     const opened = boolean('Opened', true);

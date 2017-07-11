@@ -1,6 +1,3 @@
-'use strict';
-
-import React from 'react';
 import PropTypes from 'prop-types';
 import { objectKeyFilter } from 'Components/utils/objects';
 
