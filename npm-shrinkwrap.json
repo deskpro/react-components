@@ -1,0 +1,208 @@
+{
+  "name": "deskpro-components",
+  "version": "0.4.1",
+  "dependencies": {
+    "add-px-to-style": {
+      "version": "1.0.0",
+      "from": "add-px-to-style@1.0.0",
+      "resolved": "https://registry.npmjs.org/add-px-to-style/-/add-px-to-style-1.0.0.tgz"
+    },
+    "asap": {
+      "version": "2.0.5",
+      "from": "asap@>=2.0.3 <2.1.0",
+      "resolved": "https://registry.npmjs.org/asap/-/asap-2.0.5.tgz"
+    },
+    "bourbon": {
+      "version": "4.3.4",
+      "from": "bourbon@>=4.3.4 <5.0.0",
+      "resolved": "https://registry.npmjs.org/bourbon/-/bourbon-4.3.4.tgz"
+    },
+    "bourbon-neat": {
+      "version": "2.0.0",
+      "from": "bourbon-neat@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/bourbon-neat/-/bourbon-neat-2.0.0.tgz"
+    },
+    "classnames": {
+      "version": "2.2.5",
+      "from": "classnames@>=2.2.5 <3.0.0",
+      "resolved": "https://registry.npmjs.org/classnames/-/classnames-2.2.5.tgz"
+    },
+    "core-js": {
+      "version": "1.2.7",
+      "from": "core-js@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/core-js/-/core-js-1.2.7.tgz"
+    },
+    "create-react-class": {
+      "version": "15.6.0",
+      "from": "create-react-class@>=15.5.2 <16.0.0",
+      "resolved": "https://registry.npmjs.org/create-react-class/-/create-react-class-15.6.0.tgz"
+    },
+    "dom-css": {
+      "version": "2.1.0",
+      "from": "dom-css@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/dom-css/-/dom-css-2.1.0.tgz"
+    },
+    "encoding": {
+      "version": "0.1.12",
+      "from": "encoding@>=0.1.11 <0.2.0",
+      "resolved": "https://registry.npmjs.org/encoding/-/encoding-0.1.12.tgz"
+    },
+    "fbjs": {
+      "version": "0.8.12",
+      "from": "fbjs@>=0.8.9 <0.9.0",
+      "resolved": "https://registry.npmjs.org/fbjs/-/fbjs-0.8.12.tgz"
+    },
+    "font-awesome": {
+      "version": "4.7.0",
+      "from": "font-awesome@>=4.7.0 <5.0.0",
+      "resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz"
+    },
+    "iconv-lite": {
+      "version": "0.4.18",
+      "from": "iconv-lite@>=0.4.13 <0.5.0",
+      "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.18.tgz"
+    },
+    "is-stream": {
+      "version": "1.1.0",
+      "from": "is-stream@>=1.0.1 <2.0.0",
+      "resolved": "https://registry.npmjs.org/is-stream/-/is-stream-1.1.0.tgz"
+    },
+    "isomorphic-fetch": {
+      "version": "2.2.1",
+      "from": "isomorphic-fetch@>=2.1.1 <3.0.0",
+      "resolved": "https://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz"
+    },
+    "jquery": {
+      "version": "3.2.1",
+      "from": "jquery@>=2.2.0",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.2.1.tgz"
+    },
+    "js-tokens": {
+      "version": "3.0.1",
+      "from": "js-tokens@>=3.0.0 <4.0.0",
+      "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-3.0.1.tgz"
+    },
+    "loose-envify": {
+      "version": "1.3.1",
+      "from": "loose-envify@>=1.3.1 <2.0.0",
+      "resolved": "https://registry.npmjs.org/loose-envify/-/loose-envify-1.3.1.tgz"
+    },
+    "node-fetch": {
+      "version": "1.7.1",
+      "from": "node-fetch@>=1.0.1 <2.0.0",
+      "resolved": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.1.tgz"
+    },
+    "object-assign": {
+      "version": "4.1.1",
+      "from": "object-assign@>=4.1.0 <5.0.0",
+      "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
+    },
+    "popper.js": {
+      "version": "1.10.6",
+      "from": "popper.js@>=1.10.6 <2.0.0",
+      "resolved": "https://registry.npmjs.org/popper.js/-/popper.js-1.10.6.tgz"
+    },
+    "prefix-style": {
+      "version": "2.0.1",
+      "from": "prefix-style@2.0.1",
+      "resolved": "https://registry.npmjs.org/prefix-style/-/prefix-style-2.0.1.tgz"
+    },
+    "promise": {
+      "version": "7.3.1",
+      "from": "promise@>=7.1.1 <8.0.0",
+      "resolved": "https://registry.npmjs.org/promise/-/promise-7.3.1.tgz"
+    },
+    "prop-types": {
+      "version": "15.5.10",
+      "from": "prop-types@>=15.5.10 <16.0.0",
+      "resolved": "https://registry.npmjs.org/prop-types/-/prop-types-15.5.10.tgz"
+    },
+    "raf": {
+      "version": "3.3.2",
+      "from": "raf@>=3.1.0 <4.0.0",
+      "resolved": "https://registry.npmjs.org/raf/-/raf-3.3.2.tgz",
+      "dependencies": {
+        "performance-now": {
+          "version": "2.1.0",
+          "from": "performance-now@>=2.1.0 <3.0.0",
+          "resolved": "https://registry.npmjs.org/performance-now/-/performance-now-2.1.0.tgz"
+        }
+      }
+    },
+    "react": {
+      "version": "15.3.2",
+      "from": "react@15.3.2",
+      "resolved": "https://registry.npmjs.org/react/-/react-15.3.2.tgz"
+    },
+    "react-bootstrap-multiselect": {
+      "version": "2.4.1",
+      "from": "git+https://github.com/jducro/react-bootstrap-multiselect.git#deskpro",
+      "resolved": "git+https://github.com/jducro/react-bootstrap-multiselect.git#eb9d708dd87ef46fc757a10ca95ee00d896a5146"
+    },
+    "react-custom-scrollbars": {
+      "version": "4.1.2",
+      "from": "react-custom-scrollbars@>=4.1.2 <5.0.0",
+      "resolved": "https://registry.npmjs.org/react-custom-scrollbars/-/react-custom-scrollbars-4.1.2.tgz"
+    },
+    "react-dom": {
+      "version": "15.3.2",
+      "from": "react-dom@15.3.2",
+      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-15.3.2.tgz"
+    },
+    "react-input-autosize": {
+      "version": "1.1.4",
+      "from": "react-input-autosize@>=1.1.3 <2.0.0",
+      "resolved": "https://registry.npmjs.org/react-input-autosize/-/react-input-autosize-1.1.4.tgz"
+    },
+    "react-onclickoutside": {
+      "version": "5.8.3",
+      "from": "react-onclickoutside@5.8.3",
+      "resolved": "https://registry.npmjs.org/react-onclickoutside/-/react-onclickoutside-5.8.3.tgz"
+    },
+    "react-select": {
+      "version": "1.0.0-rc.5",
+      "from": "react-select@>=1.0.0-rc.5 <2.0.0",
+      "resolved": "https://registry.npmjs.org/react-select/-/react-select-1.0.0-rc.5.tgz"
+    },
+    "react-svg-inline": {
+      "version": "2.0.0",
+      "from": "react-svg-inline@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/react-svg-inline/-/react-svg-inline-2.0.0.tgz"
+    },
+    "react-tagsinput": {
+      "version": "3.17.0",
+      "from": "react-tagsinput@>=3.17.0 <4.0.0",
+      "resolved": "https://registry.npmjs.org/react-tagsinput/-/react-tagsinput-3.17.0.tgz"
+    },
+    "setimmediate": {
+      "version": "1.0.5",
+      "from": "setimmediate@>=1.0.5 <2.0.0",
+      "resolved": "https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz"
+    },
+    "to-camel-case": {
+      "version": "1.0.0",
+      "from": "to-camel-case@1.0.0",
+      "resolved": "https://registry.npmjs.org/to-camel-case/-/to-camel-case-1.0.0.tgz"
+    },
+    "to-no-case": {
+      "version": "1.0.2",
+      "from": "to-no-case@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/to-no-case/-/to-no-case-1.0.2.tgz"
+    },
+    "to-space-case": {
+      "version": "1.0.0",
+      "from": "to-space-case@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/to-space-case/-/to-space-case-1.0.0.tgz"
+    },
+    "ua-parser-js": {
+      "version": "0.7.13",
+      "from": "ua-parser-js@>=0.7.9 <0.8.0",
+      "resolved": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.13.tgz"
+    },
+    "whatwg-fetch": {
+      "version": "2.0.3",
+      "from": "whatwg-fetch@>=0.10.0",
+      "resolved": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz"
+    }
+  }
+}

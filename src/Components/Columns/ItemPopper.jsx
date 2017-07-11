@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { Popper } from 'Components/Common';
 
 /**
@@ -11,7 +10,11 @@ export default class ItemPopper extends React.Component {
     /**
      * Whether the popper is opened or not.
      */
-    opened: PropTypes.bool
+    opened:   PropTypes.bool,
+    /**
+     * One or more components.
+     */
+    children: PropTypes.node,
   };
 
   static defaultProps = {
@@ -26,7 +29,7 @@ export default class ItemPopper extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ popper: this.popper });
+    this.setState({ popper: this.popper }); // eslint-disable-line react/no-did-mount-set-state
   }
 
   /**
@@ -50,14 +53,6 @@ export default class ItemPopper extends React.Component {
     this.popper.close();
   };
 
-  render() {
-    return (
-      <span {...this.props}>
-        {this.renderPopper()}
-      </span>
-    );
-  }
-
   /**
    * Renders the standard popper
    */
@@ -77,6 +72,14 @@ export default class ItemPopper extends React.Component {
       >
         {children}
       </Popper>
-    )
+    );
+  }
+
+  render() {
+    return (
+      <span {...this.props}>
+        {this.renderPopper()}
+      </span>
+    );
   }
 }

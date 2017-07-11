@@ -2,24 +2,16 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Avatar from 'Components/Avatar';
 import Icon from 'Components/Icon';
-import { Column, DrawerList, Drawer, ItemList, Item } from 'Components/Columns';
+import { DrawerList, Drawer, ItemList, Item } from 'Components/Columns';
 import {
   Heading,
-  Subheading,
   Count,
-  List,
-  ListElement,
-  ListElementGroup,
-  ListToggleable,
-  QueryableList
 } from 'Components/Common';
 
 import { TestColumn } from './fixtures/column_fixture';
 import logoImage from '../static/logo.png';
 import avatarImage1 from '../static/avatar-1.jpg';
 import avatarImage2 from '../static/avatar-2.jpg';
-import avatarImage3 from '../static/avatar-3.jpg';
-import avatarImage4 from '../static/avatar-4.jpg';
 
 storiesOf('Columns', module)
   .add('ItemList', () => {
@@ -112,7 +104,7 @@ storiesOf('Columns', module)
             <Heading icon="heart">
               Awaiting Agent
             </Heading>
-            <img src={logoImage} style={styles.image} />
+            <img src={logoImage} style={styles.image} role="presentation" />
           </Drawer>
           <Drawer>
             <Heading>
