@@ -22,24 +22,6 @@ const pStyles = {
   padding: '3px 16px'
 };
 
-const placements = [
-  'auto',
-  'auto-start',
-  'auto-end',
-  'top',
-  'top-start',
-  'top-end',
-  'right',
-  'right-start',
-  'right-end',
-  'bottom',
-  'bottom-start',
-  'bottom-end',
-  'left',
-  'left-start',
-  'left-end'
-];
-
 storiesOf('Common', module)
   .addDecorator(withKnobs)
   .addWithInfo(
@@ -47,7 +29,8 @@ storiesOf('Common', module)
   'Standard popper usage.',
   () => {
     const opened    = boolean('Opened', true);
-    const placement = select('Placement', placements, 'bottom');
+    const arrow     = boolean('Arrow', true);
+    const placement = select('Placement', Popper.placements, 'bottom');
 
     return (
       <div>
@@ -57,6 +40,7 @@ storiesOf('Common', module)
         <Popper
           target="target"
           opened={opened}
+          arrow={arrow}
           placement={placement}
           offsetX={text('OffsetX', '0px')}
           offsetY={text('OffsetY', '0px')}

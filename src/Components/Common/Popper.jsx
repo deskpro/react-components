@@ -7,24 +7,6 @@ import Portal from 'Components/Common/Portal';
 import noop from 'Components/utils/noop';
 import { objectKeyFilter } from 'Components/utils/objects';
 
-const PLACEMENTS = [
-  'auto',
-  'auto-start',
-  'auto-end',
-  'top',
-  'top-start',
-  'top-end',
-  'right',
-  'right-start',
-  'right-end',
-  'bottom',
-  'bottom-start',
-  'bottom-end',
-  'left',
-  'left-start',
-  'left-end'
-];
-
 /**
  * A wrapper around popper.js, a tooltip style container which uses absolute positioning
  * to place elements relative to other elements.
@@ -44,7 +26,7 @@ export default class Popper extends React.Component {
     /**
      * Placement applied to popper.
      */
-    placement:           PropTypes.oneOf(PLACEMENTS),
+    placement:           PropTypes.oneOf(PopperJS.placements),
     /**
      * Shifts the popper on its X axis.
      */
@@ -61,6 +43,10 @@ export default class Popper extends React.Component {
      * Whether the children are displayed or not.
      */
     opened:              PropTypes.bool,
+    /**
+     * Whether an arrow is added to the popper.
+     */
+    arrow:               PropTypes.bool,
     /**
      * True to attach the children to document.body.
      */
@@ -102,6 +88,7 @@ export default class Popper extends React.Component {
     offsetX:             '0px',
     offsetY:             '0px',
     zIndex:              0,
+    arrow:               true,
     detached:            false,
     opened:              false,
     eventsEnabled:       false,
@@ -113,6 +100,11 @@ export default class Popper extends React.Component {
     onClose:             noop
   };
 
+  /**
+   * List of accepted placements to use as values of the placement prop
+   */
+  static placements = PopperJS.placements;
+
   constructor(props) {
     super(props);
 
@@ -122,7 +114,6 @@ export default class Popper extends React.Component {
     };
     this.node    = null;
     this.target  = null;
-    this.firstOpen = true;
     this.focused = false;
   }
 
@@ -135,26 +126,20 @@ export default class Popper extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.opened !== this.props.opened) {
+      this.setState({ opened: this.props.opened }); // eslint-disable-line react/no-did-update-set-state
+      this.props.opened ? this.props.onOpen(this) : this.props.onClose(this);
+    }
+    this.updatePopper();
+  }
+
   componentWillUnmount() {
     this.destroyPopper();
     if (this.props.closeOnClickOutside) {
       this.node.removeEventListener('mouseenter', this.handleMouseEnter);
       this.node.removeEventListener('mouseleave', this.handleMouseLeave);
       window.removeEventListener('click', this.handleDocumentClick);
-    }
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.opened !== this.props.opened) {
-      this.setState({ opened: this.props.opened });
-      this.props.opened ? this.props.onOpen(this) : this.props.onClose(this);
-    }
-    if (this.firstOpen) {
-      this.updatePopper();
-      if (this.popper) {
-        this.popper.scheduleUpdate();
-        this.firstOpen = false;
-      }
     }
   }
 
@@ -238,6 +223,8 @@ export default class Popper extends React.Component {
       onCreate: () => onCreate(this),
       onUpdate: () => onUpdate(this)
     });
+
+    this.popper.scheduleUpdate();
   };
 
   /**
@@ -280,7 +267,7 @@ export default class Popper extends React.Component {
   };
 
   render() {
-    const { detached, children, className, ...props } = this.props;
+    const { detached, arrow, children, className, ...props } = this.props;
     const { opened } = this.state;
     if (!this.target) {
       return <div ref={ref => this.node = ref} />;
@@ -293,7 +280,8 @@ export default class Popper extends React.Component {
           'dp-popper',
           className,
           {
-            'dp-popper--opened': opened
+            'dp-popper--opened':  opened,
+            'dp-popper--arrowed': arrow
           }
         )}
         {...objectKeyFilter(props, Popper.propTypes)}

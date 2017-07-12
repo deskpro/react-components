@@ -44,6 +44,9 @@ Shifts the popper on its Y axis. Possible values:
 **opened={bool}**  
 True to display the popper or false to hide it.
 
+**arrow={bool}**  
+Whether an arrow is added to the popper.
+
 **eventsEnabled={bool}**  
 Add resize/scroll events and recalculate position of the popper when they are triggered. Set to false by default for performance reasons.
 
