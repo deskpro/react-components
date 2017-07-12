@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import newId from 'Components/utils/newid';
-import noop from 'Components/utils/noop';
-import { objectKeyFilter } from 'Components/utils/objects';
+import newId from 'utils/newid';
+import noop from 'utils/noop';
+import { objectKeyFilter } from 'utils/objects';
 import { Heading, ListElement, ListToggleable } from 'Components/Common';
 import Icon from 'Components/Icon';
 

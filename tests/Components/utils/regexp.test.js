@@ -1,4 +1,4 @@
-import { regexpEscape } from 'Components/utils/regexp';
+import { regexpEscape } from 'utils/regexp';
 
 test('regexpEscape', () => {
   const data = {

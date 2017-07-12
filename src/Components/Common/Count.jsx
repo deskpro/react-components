@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { numberFormat, THOUSANDTHS_SEPARATOR } from 'Components/utils/numbers';
+import { numberFormat, THOUSANDTHS_SEPARATOR } from 'utils/numbers';
 
 /**
  * Renders a number as an inline element with thousandths formatting.

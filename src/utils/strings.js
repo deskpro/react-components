@@ -1,4 +1,4 @@
-import { regexpEscape } from 'Components/utils/regexp';
+import { regexpEscape } from 'utils/regexp';
 
 /**
  * Upper cases the first letter in a string

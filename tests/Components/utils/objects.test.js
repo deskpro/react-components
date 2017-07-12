@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { objectKeyFilter } from 'Components/utils/objects';
+import { objectKeyFilter } from 'utils/objects';
 
 test('objectKeyFilter', () => {
   const propTypes = {

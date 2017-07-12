@@ -1,4 +1,4 @@
-import * as strings from 'Components/utils/strings';
+import * as strings from 'utils/strings';
 
 test('toUpperFirst', () => {
   const data = {

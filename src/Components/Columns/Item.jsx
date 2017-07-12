@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'Components/utils/noop';
+import noop from 'utils/noop';
 import { ListElement, Count } from 'Components/Common';
 import ItemSettings from 'Components/Columns/ItemSettings';
 import ItemFilter from 'Components/Columns/ItemFilter';
