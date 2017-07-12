@@ -14,9 +14,17 @@ const Count = ({ separator, children, className, ...props }) => (
 
 Count.propTypes = {
   /**
+   * CSS classes to apply to the element.
+   */
+  className: PropTypes.string,
+  /**
    * Character to use as the thousandths separator.
    */
-  separator: PropTypes.string
+  separator: PropTypes.string,
+  /**
+   * One or more components.
+   */
+  children:  PropTypes.node,
 };
 
 Count.defaultProps = {

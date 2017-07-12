@@ -1,46 +1,51 @@
 import React from 'react';
 import { storiesOf, action } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
-import { Checkbox } from 'Components/Forms';
+import { Label, Radio } from 'Components/Forms';
 
-storiesOf('Forms', module)
+storiesOf('Input', module)
   .addDecorator(withKnobs)
   .addWithInfo(
-    'Checkbox',
+    'Radio',
     'This is the basic usage of a input with the label passed as a property.',
     () => (
       <div>
-        <h3>Checkboxes</h3>
-        <Checkbox
+        <Label>Radios</Label>
+        <Radio
+          name="test-radio"
           checked
-          onChange={action('Checkbox change')}
+          onChange={action('Radio change')}
           disabled={boolean('Disabled', false)}
         >
           Checked
-        </Checkbox>
-        <Checkbox
+        </Radio>
+        <Radio
+          name="test-radio"
           checked={false}
-          onChange={action('Checkbox change')}
+          onChange={action('Radio change')}
           disabled={boolean('Disabled', false)}
         >
           Unchecked
-        </Checkbox>
+        </Radio>
 
-        <h3>Inline checkboxes</h3>
-        <Checkbox
-          onChange={action('Checkbox change')}
+
+        <Label>Inline radios</Label>
+        <Radio
+          name="inline-radio"
+          onChange={action('Radio change')}
           style={{ display: 'inline-block' }}
           disabled={boolean('Disabled', false)}
         >
           Checked
-        </Checkbox>
-        <Checkbox
-          onChange={action('Checkbox change')}
+        </Radio>
+        <Radio
+          name="inline-radio"
+          onChange={action('Radio change')}
           style={{ display: 'inline-block' }}
           disabled={boolean('Disabled', false)}
         >
           Unchecked
-        </Checkbox>
+        </Radio>
       </div>
     )
   )

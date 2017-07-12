@@ -5,7 +5,7 @@ import Label from 'Components/Forms/Label';
 import newId from 'Components/utils/newid';
 import { objectKeyFilter } from 'Components/utils/objects';
 
-class Checkbox extends React.Component {
+class Radio extends React.Component {
   static propTypes = {
     /**
      * CSS classes to apply to the element.
@@ -40,25 +40,27 @@ class Checkbox extends React.Component {
     return (
       <div
         className={classNames(
-          'dp-input--checkbox',
+          'dp-input--radio',
           className,
-          { 'dp-input--checkbox--disabled': this.props.disabled }
+          { 'dp-input--radio--disabled': this.props.disabled }
         )}
         style={style}
       >
-        <input
-          type="checkbox"
-          value={value}
-          id={this.id}
-          onChange={this.handleChange}
-          disabled={disabled}
-          {...objectKeyFilter(props, Checkbox.propTypes)}
-        />
-        <label htmlFor={this.id} className="dp-input--checkbox__checkbox" />
-        <Label htmlFor={this.id}>{children}</Label>
+        <label htmlFor={this.id}>
+          <input
+            type="radio"
+            value={value}
+            id={this.id}
+            onChange={this.handleChange}
+            disabled={disabled}
+            {...objectKeyFilter(props, Radio.propTypes)}
+          />
+          <i />
+          <Label htmlFor={this.id}>{children}</Label>
+        </label>
       </div>
     );
   }
 }
 
-export default Checkbox;
+export default Radio;
