@@ -45,3 +45,37 @@
     }
   }
 }
+
+/// Search Submit
+///
+
+.dp-search-submit {
+  display: inline-block;
+
+  .dp-input {
+    display: inline-block;
+    margin-right: 4px;
+  }
+
+  .dp-popper {
+    z-index: 1;
+
+    & > .dp-list {
+      margin: 0;
+    }
+
+    & > .dp-list .dp-list__element {
+      padding: 4px 12px;
+      cursor: pointer;
+      border-bottom: 1px solid $dp-greyscale-250;
+      font-family: $primary-font;
+      font-size: $font-size-m;
+      font-weight: $pf-regular;
+      color: $dp-greyscale-850;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
