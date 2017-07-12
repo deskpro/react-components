@@ -25,6 +25,6 @@ storiesOf('Modal', module)
       >
         Test
       </Modal>
-    ),
+    )
   )
 ;

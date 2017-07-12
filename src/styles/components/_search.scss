@@ -24,7 +24,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   position: absolute;
-  z-index: 1;
+  z-index: $dp-zindex-top;
   background-color: #FFF;
   border-width: 1px;
   border-style: solid;
@@ -58,7 +58,7 @@
   }
 
   .dp-popper {
-    z-index: 1;
+    z-index: $dp-zindex-top;
 
     & > .dp-list {
       margin: 0;
