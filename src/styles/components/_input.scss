@@ -259,13 +259,13 @@
     }
   }
 }
+/******************************
+    Input checkbox
+*******************************/
 .dp-input--checkbox {
   &, * {
     box-sizing: border-box;
   }
-}
-.dp-input--checkbox {
-  box-sizing: border-box;
   position: relative;
   margin-bottom: 3px;
   margin-right: 14px;
@@ -316,4 +316,82 @@
       opacity: 1;
     }
   }
+  &.dp-input--checkbox--disabled {
+    label.dp-input--checkbox__checkbox {
+      background-color: $dp-greyscale-150;
+      border-color: $dp-greyscale-200;
+      cursor: not-allowed;
+      &:after {
+        border-color: $dp-greyscale-350;
+      }
+      &:hover::after {
+        opacity: 0;
+      }
+    }
+  }
+}
+/******************************
+    Input radio
+*******************************/
+.dp-input--radio {
+  &, * {
+    box-sizing: border-box;
+  }
+  margin-right: 14px;
+  > label {
+    > input {
+      display: none;
+    }
+    > i {
+      height: 14px;
+      width: 14px;
+      border-radius: $rad-size-circular;
+      border: 1px solid $dp-greyscale-450;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: $dp-sonic-primary;
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        border-radius: $rad-size-circular;
+        transition: 0s;
+      }
+    }
+    > label.dp-input__label {
+      text-transform: none;
+      display: inline-block;
+      line-height: 14px;
+      vertical-align: 3px;
+      font-size: $font-size-m;
+      color: $dp-greyscale-850;
+      margin-left: 6px;
+    }
+    > input:checked + i::after {
+      width: 6px;
+      height: 6px;
+      top: 25%;
+      left: 25%;
+      transition: .2s;
+    }
+  }
+  &.dp-input--radio--disabled {
+    > label {
+      > i {
+        background-color: $dp-greyscale-150;
+        border-color: $dp-greyscale-200;
+        cursor: not-allowed;
+        &:after {
+          background-color: $dp-greyscale-350;
+        }
+      }
+    }
+  }
+}
+.dp-input__label + .dp-input--radio {
+  padding-top: 7px;
 }

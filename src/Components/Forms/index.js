@@ -1,11 +1,23 @@
 import Checkbox from './Checkbox';
 import Input from './Input';
+import HiddenFields from './HiddenFields';
 import Label from './Label';
-import Tag from './Tag';
-import TagInput from './TagInput';
+import Radio from './Radio';
 import Select from './Select';
 import SearchInline from './SearchInline';
 import SearchSubmit from './SearchSubmit';
-import HiddenFields from './HiddenFields';
+import Tag from './Tag';
+import TagInput from './TagInput';
 
-export { Checkbox, Input, Label, Tag, TagInput, Select, SearchInline, SearchSubmit, HiddenFields };
+export {
+  Checkbox,
+  Input,
+  HiddenFields,
+  Label,
+  Radio,
+  Select,
+  SearchInline,
+  SearchSubmit,
+  Tag,
+  TagInput,
+};
