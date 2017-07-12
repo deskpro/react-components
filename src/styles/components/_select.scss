@@ -96,7 +96,7 @@ $select-input-border-color: $dp-greyscale-300;
   .dropdown-menu {
     top: 100%;
     left: 0;
-    z-index: 1000;
+    z-index: $dp-zindex-top;
     display: none;
     min-width: 160px;
     font-size: 14px;

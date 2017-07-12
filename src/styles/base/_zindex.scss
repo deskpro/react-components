@@ -1,0 +1,15 @@
+/// Document z-index values
+///
+/// Separates the document into three layers: bottom, overlay, middle, and top.
+///
+/// Bottom  - For the document and document level elements.
+/// Overlay - For modal overlays.
+/// Middle  - For modals.
+/// Top     - For elements which float above the document and modals such as drop down menus and popper.
+///
+/// Styleguide 1
+
+$dp-zindex-bottom: 0;
+$dp-zindex-overlay: 1;
+$dp-zindex-middle: 2;
+$dp-zindex-top: 3;
