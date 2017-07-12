@@ -2,10 +2,27 @@ deskpro-components
 ==================
 A react-based set of components for building DeskPRO apps.
 
+* [Overview](#overview)
+* [Components](#components)
+  * [Common](#common)
+  * [Forms](#forms)
+  * [Columns](#columns)
+* [Utilities](#utilities)
+  * [Props](#props)
+  * [Numbers](#numbers)
+  * [Strings](#strings)
+  * [Regexp](#regexp)
+  * [Objects](#objects)
+* [License](#license)
+
+
+## Overview
+
 A Storybook demo is available online at https://deskpro.github.io/deskpro-components.
 
+
 ## Components
- 
+
 * [Icon](docs/components/icon.md)  
   Renders an icon using the Font Awesome library.
 * [Avatar](docs/components/avatar.md)  
@@ -48,3 +65,39 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   An expandable drawer within a navigation column.
 * [Columns/Item](docs/components/columns/item.md)  
   Standard drawer item which may contain an icon and number.
+
+
+## Utilities
+
+* [newid](docs/utils/newid.md)  
+  Generates a unique id value.
+* [noop](docs/utils/noop.md)  
+  Provides an empty function to use as a default callback.
+
+### Props
+* [props/childrenComponentType](docs/utils/props/children_component_type.md)  
+  Returns a function used in propTypes to validate that children are of a specific component type.
+
+### Numbers
+* [numbers/numberFormat](docs/utils/numbers/number_format.md)  
+  Formats a number to include commas (or any separator) in the thousandths place.
+
+### Strings
+* [strings/toUpperFirst](docs/utils/strings/to_upper_first.md)  
+  Upper cases the first letter in a string.
+* [strings/htmlEscape](docs/utils/strings/html_escape.md)  
+  Converts HTML special characters into entities.
+* [strings/highlightWord](docs/utils/strings/highlight_word.md)  
+  Wraps the given word in HTML tags where found in the given string.
+
+### Regexp
+* [regexp/regexpEscape](docs/utils/regexp/regexp_escape.md)  
+  Escapes the given string of any special regexp characters.
+
+### Objects
+* [objects/objectKeyFilter](docs/utils/objects/object_key_filter.md)  
+  Performs a key comparison between two objects, deleting from the first where the keys exist in the second.
+
+
+### License
+The library is released under the BSD License. See [LICENSE](LICENSE) for more information.

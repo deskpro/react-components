@@ -3,11 +3,11 @@ import { regexpEscape } from 'utils/regexp';
 /**
  * Upper cases the first letter in a string
  *
- * @param {string} string The string to transform
+ * @param {string} str The string to transform
  * @returns {string}
  */
-export function toUpperFirst(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+export function toUpperFirst(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 /**
