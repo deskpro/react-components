@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import newId from 'utils/newid';
+import { objectKeyFilter } from 'utils/objects';
 import Label from 'Components/Forms/Label';
-import newId from 'Components/utils/newid';
-import { objectKeyFilter } from 'Components/utils/objects';
 
 class Radio extends React.Component {
   static propTypes = {

@@ -1,4 +1,4 @@
-import { numberFormat } from 'Components/utils/numbers';
+import { numberFormat } from 'utils/numbers';
 
 test('numberFormat', () => {
   expect(numberFormat(3)).toBe('3');

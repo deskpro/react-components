@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'Components/utils/noop';
-import { objectKeyFilter } from 'Components/utils/objects';
-import { highlightWord } from 'Components/utils/strings';
+import noop from 'utils/noop';
+import { objectKeyFilter } from 'utils/objects';
+import { highlightWord } from 'utils/strings';
 import { List, ListElement, Popper, Scrollbar } from 'Components/Common';
 import Input from 'Components/Forms/Input';
 import Button from 'Components/Button';

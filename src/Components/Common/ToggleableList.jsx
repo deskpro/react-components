@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { toUpperFirst } from 'Components/utils/strings';
+import { toUpperFirst } from 'utils/strings';
 import { List } from 'Components/Common';
 
 const DATA_DP_TOGGLE_ID = 'data-dp-toggle-id';

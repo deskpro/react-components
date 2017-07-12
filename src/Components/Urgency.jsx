@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { objectKeyFilter } from 'Components/utils/objects';
+import { objectKeyFilter } from 'utils/objects';
 
 /**
  * Displays a message in a box which is colored to match an urgency level between 1 and 10

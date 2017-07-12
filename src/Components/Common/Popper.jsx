@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import PopperJS from 'popper.js';
 import classNames from 'classnames';
+import noop from 'utils/noop';
+import { objectKeyFilter } from 'utils/objects';
 import Portal from 'Components/Common/Portal';
-import noop from 'Components/utils/noop';
-import { objectKeyFilter } from 'Components/utils/objects';
 
 /**
  * A wrapper around popper.js, a tooltip style container which uses absolute positioning

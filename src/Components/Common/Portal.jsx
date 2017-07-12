@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import noop from 'Components/utils/noop';
+import noop from 'utils/noop';
 
 /**
  * Portal mounts its children in the document body.

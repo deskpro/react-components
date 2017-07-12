@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { childrenComponentType } from 'Components/utils/props';
+import { childrenComponentType } from 'utils/props';
 import { List } from 'Components/Common';
 import Drawer from 'Components/Columns/Drawer';
 
