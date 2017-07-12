@@ -32,6 +32,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Wraps children with styled scrollbars.
 
 ### Forms
+* [Forms/HiddenFields](docs/components/forms/hidden_fields.md)  
+  Wraps optional form fields which may be shown or hidden.
 * [Forms/SearchInline](docs/components/forms/search_inline.md)  
   Creates an inline search input.
 
