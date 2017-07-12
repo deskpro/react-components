@@ -13,7 +13,7 @@
     "styleguide": "kss --config kss-config.json",
     "prod": "npm run clean && webpack --config webpack.prod.config.js --progress --profile --colors && npm run styleguide",
     "lint:js": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
-    "test:utils": "jest tests/Components/utils/*.js",
+    "test:utils": "jest tests/utils/*.js",
     "storybook:dev": "start-storybook -p 9002 -c .storybook",
     "storybook:build": "build-storybook -o build/storybook",
     "storybook:deploy": "storybook-to-ghpages",
@@ -96,6 +96,9 @@
     "react-select": "^1.0.0-rc.5",
     "react-svg-inline": "^2.0.0",
     "react-tagsinput": "^3.17.0"
+  },
+  "jest": {
+    "modulePaths": ["src"]
   },
   "lint-staged": {
     "*.{js,jsx}": [
