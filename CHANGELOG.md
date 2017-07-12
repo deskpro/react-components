@@ -1,3 +1,9 @@
+## v0.4.3 - 2017-07-13
+
+* [MINOR] Adds radio to storybook
+* [MINOR] Adds link to github repository to npm package
+* [MINOR] Adds _zindex.scss
+
 ## v0.4.2 - 2017-07-12
 
 * [MINOR] Tweeks Popper performance

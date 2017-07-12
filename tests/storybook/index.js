@@ -10,6 +10,7 @@ import './components/common/scrollbar';
 import './components/forms/checkbox';
 import './components/forms/input';
 import './components/forms/hidden_fields';
+import './components/forms/radio';
 import './components/forms/search_inline';
 import './components/forms/search_submit';
 import './components/forms/select';
