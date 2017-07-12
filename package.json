@@ -21,8 +21,15 @@
     "precommit": "lint-staged",
     "prepublish": "npm run compile"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deskpro/deskpro-components.git"
+  },
   "author": "DeskPRO <team@deskpro.com>",
   "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/deskpro/deskpro-components/issues"
+  },
   "devDependencies": {
     "@storybook/addon-actions": "^3.0.1",
     "@storybook/addon-info": "^3.1.4",
