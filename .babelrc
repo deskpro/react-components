@@ -5,9 +5,6 @@
     ["react-intl", {"messagesDir": "./build/messages/"}],
     ["module-resolver", {
       "root": ["./src"],
-      "alias": {
-        "Components": "src/Components/"
-      },
       "extensions": [".js", ".jsx"]
     }]
   ]
