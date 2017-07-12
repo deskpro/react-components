@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { objectKeyFilter } from 'Components/utils/objects';
+import { htmlEscape } from 'Components/utils/strings';
 import { regexpEscape } from 'Components/utils/regexp';
 import { List, ListElement } from 'Components/Common';
 import Input from 'Components/Forms/Input';
 
 /**
- * Creates an inline search input.
+ * Renders an inline search input.
  */
 export default class SearchInline extends Input {
   static propTypes = {
@@ -30,8 +31,6 @@ export default class SearchInline extends Input {
     children:  PropTypes.node
   };
 
-  static defaultProps = {};
-
   /**
    * Wraps the input value in <i></i> tags
    *
@@ -40,7 +39,7 @@ export default class SearchInline extends Input {
    * @returns {{__html: *}}
    */
   static highlightResult(result, regexp) {
-    return { __html: result.replace(regexp, '<i>$1</i>') };
+    return { __html: htmlEscape(result).replace(regexp, '<i>$1</i>') };
   }
 
   constructor(props) {
@@ -58,6 +57,13 @@ export default class SearchInline extends Input {
     window.addEventListener('resize', this.updateResultsWidth);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateResultsWidth);
+  }
+
+  /**
+   * Sets the width of the results drop down to match the input width
+   */
   updateResultsWidth = () => {
     this.resultsDOM.style.width = window.getComputedStyle(this.inputDOM, null).width;
   };
