@@ -4,6 +4,7 @@ import Label from './Label';
 import Tag from './Tag';
 import TagInput from './TagInput';
 import Select from './Select';
+import SearchInline from './SearchInline';
 import HiddenFields from './HiddenFields';
 
-export { Checkbox, Input, Label, Tag, TagInput, Select, HiddenFields };
+export { Checkbox, Input, Label, Tag, TagInput, Select, SearchInline, HiddenFields };

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 // import SVGInline from 'react-svg-inline';
 import classNames from 'classnames';
 import newId from 'Components/utils/newid';
+import { objectKeyFilter } from 'Components/utils/objects';
+import Icon from 'Components/Icon';
 // import LoadingSvg from 'styles/images/input_loading.svg';
 // import ValidatedSvg from 'styles/images/tick.svg';
 
@@ -68,7 +70,7 @@ class Input extends React.Component {
     if (!icon) {
       return null;
     }
-    return <i className={classNames('fa', `fa-${icon}`)} />;
+    return <Icon name={icon} />;
   };
 
   getPrefix = () => {
@@ -92,11 +94,7 @@ class Input extends React.Component {
   };
 
   render() {
-    const { className, validated, validating, icon, prefix, suffix, ...elementProps } = this.props;
-    const props = Object.assign({}, elementProps);
-    delete props.onChange;
-    delete props.onFocus;
-    delete props.onBlur;
+    const { className, validated, validating, icon, prefix, suffix, ...props } = this.props;
     return (
       <div
         className={
@@ -122,7 +120,7 @@ class Input extends React.Component {
           onChange={this.onChange}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
-          {...props}
+          {...objectKeyFilter(props, Input.propTypes)}
         />
         {/* { validating ? <SVGInline className="dp-input__icon" svg={LoadingSvg} /> : '' }*/}
         {/* { validated ? <SVGInline className="dp-input__icon" svg={ValidatedSvg} /> : '' }*/}
