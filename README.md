@@ -31,6 +31,10 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
 * [Common/Scrollbar](docs/components/common/scrollbar.md)  
   Wraps children with styled scrollbars.
 
+### Forms
+* [Forms/SearchInline](docs/components/forms/search_inline.md)  
+  Creates an inline search input.
+
 ### Columns
 * [Columns/Column](docs/components/columns/column.md)  
   A navigation column containing expandable drawers.

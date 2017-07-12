@@ -151,9 +151,10 @@
     padding-left: 24px;
   }
 }
-.dp-input .fa {
+.dp-input .dp-icon {
   position: absolute;
   left: 6px;
+  color: $dp-greyscale-400;
   font-size: $icon-size-s;
   top: calc(50% - #{$icon-size-s / 2});
 }

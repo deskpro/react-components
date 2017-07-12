@@ -3,6 +3,7 @@ import './components/forms/input';
 import './components/forms/checkbox';
 import './components/forms/select';
 import './components/forms/tag';
+import './components/forms/search';
 import './components/common/heading';
 import './components/common/count';
 import './components/common/scrollbar';

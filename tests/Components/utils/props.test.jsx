@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import { childrenComponentType } from 'Components/utils/props';
 import Drawer from 'Components/Columns/Drawer';
