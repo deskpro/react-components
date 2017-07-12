@@ -1,3 +1,17 @@
+## v0.4.2 - 2017-07-12
+
+* [MINOR] Tweeks Popper performance
+* [MINOR] Improve storybook hierarchy
+* [MINOR] Updates Column styles
+* [MINOR] Restructures the src/styles directory
+* [FEATURE] Adds Urgency component
+* [FEATURE] Adds Forms/HiddenFields component
+* [FEATURE] Adds Forms/SearchInline component
+* [FEATURE] Adds Popper arrow prop
+* [FEATURE] Adds .dp-button--icon
+* [FEATURE] Adds SearchSubmit component
+* [FEATURE] Adds Forms/Radio component
+
 ## v0.4.1 - 2017-07-11
 
 * [MINOR] Rename story fixture scripts
