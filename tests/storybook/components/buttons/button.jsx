@@ -24,12 +24,12 @@ storiesOf('Buttons', module)
             className={classNames('dp-button--primary', className)}
             disabled={boolean('Disabled', false)}
             {...elementProps}
-          />
+          />&nbsp;&nbsp;
           <Component
             className={classNames('dp-button--secondary', className)}
             disabled={boolean('Disabled', false)}
             {...elementProps}
-          />
+          />&nbsp;&nbsp;
           <Component
             className={classNames('dp-button--cta', className)}
             disabled={boolean('Disabled', false)}
