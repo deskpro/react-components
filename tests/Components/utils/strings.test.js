@@ -25,3 +25,21 @@ test('htmlEscape', () => {
     }
   }
 });
+
+test('highlightWord', () => {
+  const word = 'foo';
+  const data = {
+    foo:       '<i>foo</i>',
+    Foo:       '<i>Foo</i>',
+    'foo bar': '<i>foo</i> bar',
+    'Foo bar': '<i>Foo</i> bar'
+  };
+
+  for (const key in data) {
+    if (data.hasOwnProperty(key)) {
+      expect(strings.highlightWord(key, word)).toBe(data[key]);
+    }
+  }
+
+  expect(strings.highlightWord('foo', 'foo', 'strong')).toBe('<strong>foo</strong>');
+});

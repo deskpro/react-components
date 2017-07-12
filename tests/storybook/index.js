@@ -1,5 +1,14 @@
 import '../../src/styles/main.scss';
+
 import './components/avatar';
+import './components/forms/input';
+import './components/forms/checkbox';
+import './components/forms/select';
+import './components/forms/tag';
+import './components/forms/hidden_fields';
+import './components/forms/search_inline';
+import './components/forms/search_submit';
+import './components/forms/search_button';
 import './components/buttons/button';
 import './components/buttons/icon';
 import './components/columns/column';

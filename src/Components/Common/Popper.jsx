@@ -165,8 +165,8 @@ export default class Popper extends React.Component {
    */
   findTargetNode = (target) => {
     let node = null;
-    if (this.target instanceof React.Component) {
-      node = ReactDOM.findDOMNode(this.target);
+    if (target instanceof React.Component || this.target instanceof React.Component) {
+      node = ReactDOM.findDOMNode(target || this.target);
     } else if (typeof target === 'function') {
       node = target();
     } else if (typeof target === 'string') {
@@ -235,6 +235,15 @@ export default class Popper extends React.Component {
       this.popper.destroy();
       this.popper = null;
     }
+  };
+
+  /**
+   * Sets the target element
+   *
+   * @param {*} target
+   */
+  setTarget = (target) => {
+    this.target = target;
   };
 
   /**

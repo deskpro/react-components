@@ -1,3 +1,5 @@
+import { regexpEscape } from 'Components/utils/regexp';
+
 /**
  * Upper cases the first letter in a string
  *
@@ -11,7 +13,7 @@ export function toUpperFirst(string) {
 /**
  * Converts HTML special characters into entities
  *
- * @param {string} str
+ * @param {string} str String to escape
  * @returns {string}
  */
 export function htmlEscape(str) {
@@ -21,4 +23,17 @@ export function htmlEscape(str) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
+}
+
+/**
+ * Wraps the given word in HTML tags where found in the given string
+ *
+ * @param {string} str  String to search through for the given word
+ * @param {string} word Word to highlight
+ * @param {string} tag  Wrap the word in this HTML tag, e.g. 'i', 'strong', 'span', etc
+ * @returns {string}
+ */
+export function highlightWord(str, word, tag = 'i') {
+  const regexp = new RegExp(`(${regexpEscape(word)})`, 'ig');
+  return htmlEscape(str).replace(regexp, `<${tag}>$1</${tag}>`);
 }

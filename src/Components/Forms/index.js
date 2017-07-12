@@ -6,6 +6,7 @@ import Radio from './Radio';
 import Select from './Select';
 import SearchInline from './SearchInline';
 import SearchSubmit from './SearchSubmit';
+import SearchButton from './SearchButton';
 import Tag from './Tag';
 import TagInput from './TagInput';
 
@@ -18,6 +19,7 @@ export {
   Select,
   SearchInline,
   SearchSubmit,
+  SearchButton,
   Tag,
   TagInput,
 };

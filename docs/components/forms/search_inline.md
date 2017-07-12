@@ -21,6 +21,9 @@ Creates an inline search input.
 **results={array}**  
 List of search results.
 
+**onSelect={function}**  
+Called when a search result is clicked. Receives the result value and index as arguments.
+
 See also `Forms/Input` for more props.
 
 ### CSS
