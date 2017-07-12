@@ -34,11 +34,16 @@ export default class SearchSubmit extends Input {
     /**
      * Called when the search form is submitted.
      */
-    onSubmit:  PropTypes.func
+    onSubmit:  PropTypes.func,
+    /**
+     * Called when a search result is clicked.
+     */
+    onSelect:  PropTypes.func
   };
 
   static defaultProps = {
-    onSubmit: noop
+    onSubmit: noop,
+    onSelect: noop
   };
 
   constructor(props) {
@@ -76,7 +81,7 @@ export default class SearchSubmit extends Input {
    * @returns {XML}
    */
   renderResults() {
-    const results = this.props.results;
+    const { results, onSelect } = this.props;
     if (results.length === 0) {
       return <List ref={ref => this.resultsRef = ref} />;
     }
@@ -84,7 +89,11 @@ export default class SearchSubmit extends Input {
     return (
       <List ref={ref => this.resultsRef = ref} className="dp-search-submit__results">
         {results.map((result, i) => (
-          <ListElement key={i} dangerouslySetInnerHTML={{ __html: result }} />
+          <ListElement
+            key={i}
+            onClick={onSelect.bind(this, result, i)}
+            dangerouslySetInnerHTML={{ __html: result }}
+          />
         ))}
       </List>
     );

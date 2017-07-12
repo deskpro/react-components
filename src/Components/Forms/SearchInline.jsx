@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import noop from 'Components/utils/noop';
 import { objectKeyFilter } from 'Components/utils/objects';
-import { htmlEscape } from 'Components/utils/strings';
-import { regexpEscape } from 'Components/utils/regexp';
+import { highlightWord } from 'Components/utils/strings';
 import { List, ListElement } from 'Components/Common';
 import Input from 'Components/Forms/Input';
 
@@ -28,19 +28,16 @@ export default class SearchInline extends Input {
     /**
      * Children to render.
      */
-    children:  PropTypes.node
+    children:  PropTypes.node,
+    /**
+     * Called when a search result is clicked.
+     */
+    onSelect:  PropTypes.func
   };
 
-  /**
-   * Wraps the input value in <i></i> tags
-   *
-   * @param {string} result
-   * @param {RegExp} regexp
-   * @returns {{__html: *}}
-   */
-  static highlightResult(result, regexp) {
-    return { __html: htmlEscape(result).replace(regexp, '<i>$1</i>') };
-  }
+  static defaultProps = {
+    onSelect: noop
+  };
 
   constructor(props) {
     super(props);
@@ -74,8 +71,8 @@ export default class SearchInline extends Input {
    * @returns {XML}
    */
   renderResults() {
-    const results = this.props.results;
-    const value   = this.inputDOM ? this.inputDOM.value : null;
+    const { results, onSelect } = this.props;
+    const value = this.inputDOM ? this.inputDOM.value : null;
     if (!value || results.length === 0) {
       return (
         <List
@@ -83,14 +80,14 @@ export default class SearchInline extends Input {
         />
       );
     }
-    const regexp = new RegExp(`(${regexpEscape(value)})`, 'ig');
 
     return (
       <List ref={ref => this.resultsRef = ref} className="dp-search-inline__results">
         {results.map((result, i) => (
           <ListElement
             key={i}
-            dangerouslySetInnerHTML={SearchInline.highlightResult(result, regexp)}
+            onClick={onSelect.bind(this, result, i)}
+            dangerouslySetInnerHTML={{ __html: highlightWord(result, value) }}
           />
           ))}
       </List>
@@ -100,7 +97,6 @@ export default class SearchInline extends Input {
   render() {
     const { results, className, style, ...props } = this.props;
     const inputProps = objectKeyFilter(props, SearchInline.propTypes);
-    inputProps.icon = 'search';
 
     return (
       <div
@@ -113,7 +109,7 @@ export default class SearchInline extends Input {
         )}
         style={style}
       >
-        <Input ref={ref => this.inputRef = ref} {...inputProps} />
+        <Input ref={ref => this.inputRef = ref} icon="search" {...inputProps} />
         {this.renderResults()}
       </div>
     );

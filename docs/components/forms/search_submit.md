@@ -27,6 +27,9 @@ List of search results.
 **onSubmit={function}**  
 Called when the search form is submitted.
 
+**onSelect={function}**  
+Called when a search result is clicked. Receives the result value and index as arguments.
+
 See also `Forms/Input` for more props.
 
 ### CSS
