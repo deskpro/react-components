@@ -3,7 +3,7 @@ newid
 Generates a unique id value.
 
 ```js
-newid(prefix:string = 'id'): string
+function newid(prefix:string = 'id'): string
 ```
 
 ### Args

@@ -3,7 +3,7 @@ noop
 Provides an empty function to use as a default callback.
 
 ```js
-noop()
+function noop()
 ```
 
 ### Examples
