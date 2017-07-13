@@ -7,16 +7,22 @@ Renders a button which opens a search form.
 ```jsx
 <SearchButton
     placeholder="Search..."
+    emptyPlaceholder="Type to search."
     value={this.state.value}
     onSelect={this.handleSelect}
     results={this.state.results}
-/>
+>
+    <p>No results found</p>
+</SearchButton>
 ```
 
 ### Props
 
 **results={array}**  
 List of search results.
+
+**emptyPlaceholder={string}**  
+Displayed in the drop down before a value is entered.
 
 **closeOnClickOutside={bool}**  
 Close the search box when the user clicks outside of it.

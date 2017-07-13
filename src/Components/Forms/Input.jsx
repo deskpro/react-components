@@ -15,6 +15,7 @@ class Input extends React.Component {
     label:      PropTypes.string,
     id:         PropTypes.string,
     icon:       PropTypes.string,
+    iconRight:  PropTypes.string,
     prefix:     PropTypes.string,
     suffix:     PropTypes.string,
     validated:  PropTypes.bool,
@@ -66,11 +67,11 @@ class Input extends React.Component {
   };
 
   getIcon = () => {
-    const { icon } = this.props;
-    if (!icon) {
+    const { icon, iconRight } = this.props;
+    if (!icon && !iconRight) {
       return null;
     }
-    return <Icon name={icon} />;
+    return <Icon name={icon || iconRight} />;
   };
 
   getPrefix = () => {
@@ -94,7 +95,7 @@ class Input extends React.Component {
   };
 
   render() {
-    const { className, validated, validating, icon, prefix, suffix, ...props } = this.props;
+    const { className, validated, validating, icon, iconRight, prefix, suffix, ...props } = this.props;
     return (
       <div
         className={
@@ -102,12 +103,13 @@ class Input extends React.Component {
             'dp-input',
             className,
             {
-              'dp-input--validating':  validating,
-              'dp-input--validated':   validated,
-              'dp-input--with-icon':   icon,
-              'dp-input--with-prefix': prefix,
-              'dp-input--with-suffix': suffix,
-              'dp-input--focused':     this.state.focus,
+              'dp-input--validating':       validating,
+              'dp-input--validated':        validated,
+              'dp-input--with-icon':        icon && !iconRight,
+              'dp-input--with-icon--right': !icon && iconRight,
+              'dp-input--with-prefix':      prefix,
+              'dp-input--with-suffix':      suffix,
+              'dp-input--focused':          this.state.focus,
             }
           )
         }

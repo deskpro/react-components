@@ -9,6 +9,7 @@ import './components/forms/hidden_fields';
 import './components/forms/search_inline';
 import './components/forms/search_submit';
 import './components/forms/search_button';
+import './components/forms/search_select';
 import './components/buttons/button';
 import './components/buttons/icon';
 import './components/columns/column';
