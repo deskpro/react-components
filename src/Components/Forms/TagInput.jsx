@@ -11,6 +11,7 @@ class TagInput extends React.Component {
     inputProps: PropTypes.object,
     onChange:   PropTypes.func,
     editable:   PropTypes.bool,
+    style:      PropTypes.object,
   };
   static defaultProps = {
     editable:   false,
@@ -49,7 +50,7 @@ class TagInput extends React.Component {
       <Tag
         key={key}
         editable
-        onClose={() => onRemove(key)}
+        onRemove={() => onRemove(key)}
       >
         {tag}
       </Tag>
@@ -78,10 +79,12 @@ class TagInput extends React.Component {
   };
 
   render() {
+    const { style } = this.props;
     const { editable } = this.state;
     return (
       <div
         className={classNames('dp-tag-input', { editable })}
+        style={style}
         onBlur={this.handleBlur}
         onClick={this.setEditable}
       >

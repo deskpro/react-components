@@ -10,17 +10,19 @@ class Checkbox extends React.Component {
     /**
      * CSS classes to apply to the element.
      */
-    className: PropTypes.string,
-    disabled:  PropTypes.bool,
-    id:        PropTypes.string,
-    value:     PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    children:  PropTypes.node,
-    onChange:  PropTypes.func,
-    style:     PropTypes.object,
+    className:       PropTypes.string,
+    disabled:        PropTypes.bool,
+    id:              PropTypes.string,
+    value:           PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    children:        PropTypes.node,
+    onChange:        PropTypes.func,
+    stopPropagation: PropTypes.bool,
+    style:           PropTypes.object,
   };
   static defaultProps = {
     onChange() {},
-    style: {}
+    stopPropagation: false,
+    style:           {},
   };
 
   componentWillMount() {
@@ -32,6 +34,9 @@ class Checkbox extends React.Component {
   }
 
   handleChange = (event) => {
+    if (this.props.stopPropagation) {
+      event.stopPropagation();
+    }
     this.props.onChange(event.target.checked, this.props.value);
   };
 
