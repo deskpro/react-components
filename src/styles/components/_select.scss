@@ -178,5 +178,26 @@ $select-input-border-color: $dp-greyscale-300;
       font-size: $font-size-m;
     }
   }
+  .dp-icon {
+    position: absolute;
+    left: 6px;
+    z-index: $dp-zindex-middle;
+    color: $dp-greyscale-400;
+    font-size: $icon-size-s;
+    top: calc(50% - #{$icon-size-s / 2});
+  }
+  &.dp-input--with-icon {
+    position: relative;
+    flex: 1 0 auto;
+    .Select-control,
+    .Select-placeholder,
+    .Select-value,
+    .multiselect-native-select button {
+      padding-left: 24px;
+    }
+    .Select-input {
+      padding-left: 0;
+    }
+  }
 }
 

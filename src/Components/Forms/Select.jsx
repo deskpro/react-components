@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
 import Multiselect from 'react-bootstrap-multiselect';
 import classNames from 'classnames';
+import Icon from 'Components/Icon';
 
 class DpMultiselect extends React.Component {
   static propTypes = {
@@ -70,6 +71,7 @@ class Select extends React.Component {
   static propTypes = {
     className:   PropTypes.string,
     placeholder: PropTypes.string,
+    icon:        PropTypes.string,
     onChange:    PropTypes.func,
     options:     PropTypes.array,
     multiple:    PropTypes.bool,
@@ -84,13 +86,32 @@ class Select extends React.Component {
     this.props.onChange(value);
   };
 
+  getIcon = () => {
+    const { icon } = this.props;
+    if (!icon) {
+      return null;
+    }
+    return <Icon name={icon} />;
+  };
+
   render() {
-    const { className, multiple, ...elementProps } = this.props;
+    const { icon, className, multiple, ...elementProps } = this.props;
     const props = Object.assign({}, elementProps);
     delete props.onChange;
     if (multiple) {
       return (
-        <div className={classNames('dp-select', className)}>
+        <div
+          className={
+          classNames(
+            'dp-select',
+            className,
+            {
+              'dp-input--with-icon': icon
+            }
+          )
+        }
+        >
+          {this.getIcon()}
           <DpMultiselect
             handleChange={this.handleChange}
             {...elementProps}
@@ -99,11 +120,24 @@ class Select extends React.Component {
       );
     }
     return (
-      <ReactSelect
-        className={classNames('dp-select', className)}
-        onChange={this.handleChange}
-        {...props}
-      />
+      <div
+        className={
+          classNames(
+            'dp-select',
+            className,
+            {
+              'dp-input--with-icon': icon
+            }
+          )
+      }
+      >
+        {this.getIcon()}
+        <ReactSelect
+          className={classNames('dp-select', className)}
+          onChange={this.handleChange}
+          {...props}
+        />
+      </div>
     );
   }
 }
