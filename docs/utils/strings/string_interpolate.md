@@ -2,7 +2,7 @@ strings/stringInterpolate
 =========================
 Interpolate placeholder values found in the given string.
 
-The given string may contain placeholder values in the form of #{placeholder} which are replaced by the values found in the given object.
+The given string may contain placeholder values in the form of $placeholder$ which are replaced by the values found in the given object.
 
 ```js
 function stringInterpolate(str: string, values: object): string
@@ -24,7 +24,7 @@ The string with placeholders replaced by values.
 ```js
 import { stringInterpolate } from 'utils/strings';
 
-const str = 'Press #{key} now';
+const str = 'Press $key$ now';
 const values = {
     key: 'ENTER'
 };
