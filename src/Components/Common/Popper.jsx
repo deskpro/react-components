@@ -22,7 +22,7 @@ export default class Popper extends React.Component {
     /**
      * Popper is placed in reference to this element.
      */
-    target:              PropTypes.node,
+    target:              PropTypes.any,
     /**
      * Placement applied to popper.
      */

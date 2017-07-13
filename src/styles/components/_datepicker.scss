@@ -1,0 +1,83 @@
+/// Datepicker
+///
+
+.dp-datepicker {
+  display: inline-block;
+  max-width: 175px;
+
+  &, * {
+    box-sizing: border-box;
+  }
+
+  input {
+    width: 100%;
+  }
+}
+
+.dp-datepicker__calendar {
+  padding: 6px;
+}
+
+.dp-datepicker__calendar__month {
+  display: flex;
+  padding: 2px;
+  justify-content: space-between;
+  background-color: $dp-greyscale-200;
+}
+
+.dp-datepicker__calendar__month__text {
+  font-family: $primary-font;
+  font-size: $font-size-m;
+  font-weight: $pf-bold;
+  color: $dp-greyscale-850;
+}
+
+.dp-datepicker__calendar__month__icon .dp-icon {
+  cursor: pointer;
+  padding: 2px 6px;
+  background-color: $dp-greyscale-00;
+
+  &:hover {
+    color: $dp-sonic-primary;
+    background-color: $dp-morning-sky;
+  }
+}
+
+.dp-datepicker__calendar__week,
+.dp-datepicker__calendar__weekdays {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -2px;
+  margin-right: 2px;
+
+  & > div {
+    width: 12%;
+    margin: 2px;
+    text-align: right;
+  }
+}
+
+.dp-datepicker__calendar__week > div {
+
+  line-height: $font-size-m;
+  font-family: $primary-font;
+  font-size: $font-size-m;
+  font-weight: $pf-regular;
+  color: $dp-greyscale-700;
+
+  &:not(:empty) {
+    cursor: pointer;
+
+    &:hover {
+      color: $dp-sonic-primary;
+      background-color: $dp-morning-sky;
+    }
+  }
+}
+
+.dp-datepicker__calendar__weekdays > div {
+  font-family: $primary-font;
+  font-size: $font-size-m;
+  font-weight: $pf-bold;
+  color: $dp-greyscale-850;
+}

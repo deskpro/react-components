@@ -57,6 +57,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Renders a search input with submit button, where search results are displayed in a popper below the input.
 * [Forms/SearchButton](docs/components/forms/search_button.md)  
   Renders a button which opens a search form.
+* [Forms/Datepicker](docs/components/forms/datepicker.md)  
+  Renders an input with drop down date picker.
 
 ### Columns
 * [Columns/Column](docs/components/columns/column.md)  
