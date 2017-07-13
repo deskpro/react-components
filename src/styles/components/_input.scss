@@ -3,6 +3,7 @@
 *******************************/
 .dp-input {
   position: relative;
+  display: inline-block;
   flex: 1 0 auto;
   &, * {
     box-sizing: border-box;
@@ -150,14 +151,27 @@
   input {
     padding-left: 24px;
   }
+  .dp-icon {
+    position: absolute;
+    left: 6px;
+    color: $dp-greyscale-400;
+    font-size: $icon-size-s;
+    top: calc(50% - #{$icon-size-s / 2});
+  }
 }
-.dp-input .dp-icon {
-  position: absolute;
-  left: 6px;
-  color: $dp-greyscale-400;
-  font-size: $icon-size-s;
-  top: calc(50% - #{$icon-size-s / 2});
+.dp-input--with-icon--right {
+  input {
+    padding-right: 24px;
+  }
+  .dp-icon {
+    position: absolute;
+    right: 6px;
+    color: $dp-greyscale-400;
+    font-size: $icon-size-s;
+    top: calc(50% - #{$icon-size-s / 2});
+  }
 }
+
 /******************************
     Input prefix / suffix
 *******************************/

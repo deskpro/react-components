@@ -70,11 +70,17 @@ storiesOf('Forms', module)
           validated
         /><br />
         <h3>Icons</h3>
-        <Label>With icon</Label>
+        <Label>With icon left</Label>
         <Input
           disabled={boolean('Disabled', false)}
           readOnly={boolean('Readonly', false)}
           icon="search"
+        /><br />
+        <Label>With icon right</Label>
+        <Input
+          disabled={boolean('Disabled', false)}
+          readOnly={boolean('Readonly', false)}
+          iconRight="calendar"
         /><br />
         <h3>Prefix / Suffix</h3>
         <Label>Prefix</Label>
