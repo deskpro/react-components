@@ -66,6 +66,14 @@ class Input extends React.Component {
     this.props.onBlur(e);
   };
 
+  getValue = () => {
+    return this.input.value;
+  };
+
+  setValue = (value) => {
+    this.input.value = value;
+  };
+
   getIcon = () => {
     const { icon, iconRight } = this.props;
     if (!icon && !iconRight) {
