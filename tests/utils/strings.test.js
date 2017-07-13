@@ -45,7 +45,7 @@ test('highlightWord', () => {
 });
 
 test('stringInterpolate', () => {
-  const str = 'Press $key$ and $key$ now for $foo$';
+  const str = 'Press #{key} and #{key} now for #{foo}';
   const values = {
     key: 'ENTER',
     foo: 'FOO'
