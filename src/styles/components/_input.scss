@@ -350,6 +350,7 @@
       display: inline-block;
       cursor: pointer;
       position: relative;
+      background-color: $dp-greyscale-00;
       &::after {
         content: '';
         position: absolute;
