@@ -1,3 +1,10 @@
+## v0.4.4 - 2017-07-13
+
+* [FEATURE] Adds SearchButton component
+* [FEATURE] Adds SearchSelect component
+* [MINOR] Move utils to /src
+* [MINOR] Adds docs for utility functions
+
 ## v0.4.3 - 2017-07-13
 
 * [MINOR] Adds radio to storybook
