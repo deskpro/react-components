@@ -7,6 +7,7 @@ import Select from './Select';
 import SearchInline from './SearchInline';
 import SearchSubmit from './SearchSubmit';
 import SearchButton from './SearchButton';
+import SearchSelect from './SearchSelect';
 import Tag from './Tag';
 import TagInput from './TagInput';
 
@@ -20,6 +21,7 @@ export {
   SearchInline,
   SearchSubmit,
   SearchButton,
+  SearchSelect,
   Tag,
   TagInput,
 };
