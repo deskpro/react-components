@@ -1,28 +1,49 @@
 import React from 'react';
-import { childrenComponentType } from 'utils/props';
+import * as props from 'utils/props';
 import Drawer from 'Components/Columns/Drawer';
 import List from 'Components/Common/List';
 
 test('childrenComponentType', () => {
-  let props = {
+  let testProps = {
     children: [
       <Drawer heading="Column Drawer 1" />,
       <Drawer heading="Column Drawer 2" />
     ]
   };
 
-  let func = childrenComponentType(Drawer);
-  let err  = func(props, 'children', 'Column');
+  let func = props.childrenComponentType(Drawer);
+  let err  = func(testProps, 'children', 'Column');
   expect(err).toBeNull();
 
-  props = {
+  testProps = {
     children: [
       <Drawer heading="Column Drawer 1" />,
       <List />
     ]
   };
 
-  func = childrenComponentType(Drawer);
-  err  = func(props, 'children', 'Column');
+  func = props.childrenComponentType(Drawer);
+  err  = func(testProps, 'children', 'Column');
   expect(err).not.toBeNull();
+});
+
+test('childrenRecursiveMap', () => {
+  let children = 'foo bar';
+  let mapped = props.childrenRecursiveMap(children, (child) => {
+    return child.toUpperCase();
+  });
+  expect(mapped).toContain('FOO BAR');
+
+  children = (
+    <i>
+      <p>foo bar</p>
+    </i>
+  );
+  mapped = props.childrenRecursiveMap(children, (child) => {
+    if (typeof child === 'string') {
+      return child.toUpperCase();
+    }
+    return child;
+  });
+  expect(mapped[0].props.children[0].props.children).toContain('FOO BAR');
 });
