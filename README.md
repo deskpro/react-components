@@ -89,6 +89,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Converts HTML special characters into entities.
 * [strings/highlightWord](docs/utils/strings/highlight_word.md)  
   Wraps the given word in HTML tags where found in the given string.
+* [strings/stringInterpolate](docs/utils/strings/string_interpolate.md)  
+  Interpolate placeholder values found in the given string.
 
 ### Regexp
 * [regexp/regexpEscape](docs/utils/regexp/regexp_escape.md)  

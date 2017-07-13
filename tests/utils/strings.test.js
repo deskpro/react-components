@@ -43,3 +43,12 @@ test('highlightWord', () => {
 
   expect(strings.highlightWord('foo', 'foo', 'strong')).toBe('<strong>foo</strong>');
 });
+
+test('stringInterpolate', () => {
+  let str = 'Press $key$ and $key$ now for $foo$';
+  let values = {
+    key: 'ENTER',
+    foo: 'FOO'
+  };
+  expect(strings.stringInterpolate(str, values)).toBe('Press ENTER and ENTER now for FOO')
+});
