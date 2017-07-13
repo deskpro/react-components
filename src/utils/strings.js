@@ -41,7 +41,7 @@ export function highlightWord(str, word, tag = 'i') {
 /**
  * Interpolate placeholder values found in the given string
  *
- * The given string may contain placeholder values in the form of #{placeholder} which
+ * The given string may contain placeholder values in the form of $placeholder$ which
  * are replaced by the values found in the given object.
  *
  * @param {string} str
@@ -50,7 +50,7 @@ export function highlightWord(str, word, tag = 'i') {
  */
 export function stringInterpolate(str, values) {
   Object.entries(values).forEach(([key, value]) => {
-    const regexp = new RegExp(`(#{${regexpEscape(key)}})`, 'ig');
+    const regexp = new RegExp(`(\\\$${regexpEscape(key)}\\\$)`, 'ig');
     str = str.replace(regexp, value);
   });
   return str;
