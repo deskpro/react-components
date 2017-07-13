@@ -78,10 +78,12 @@ class TagInput extends React.Component {
   };
 
   render() {
+    const { style } = this.props;
     const { editable } = this.state;
     return (
       <div
         className={classNames('dp-tag-input', { editable })}
+        style={style}
         onBlur={this.handleBlur}
         onClick={this.setEditable}
       >

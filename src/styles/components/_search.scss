@@ -88,8 +88,13 @@
   display: inline-block;
 
   .dp-popper {
+    width: 150px;
     z-index: $dp-zindex-top;
     padding: 6px;
+
+    .dp-input input {
+      width: 100%;
+    }
   }
 }
 
