@@ -29,9 +29,7 @@ test('childrenComponentType', () => {
 
 test('childrenRecursiveMap', () => {
   let children = 'foo bar';
-  let mapped = props.childrenRecursiveMap(children, (child) => {
-    return child.toUpperCase();
-  });
+  let mapped = props.childrenRecursiveMap(children, child => child.toUpperCase());
   expect(mapped).toContain('FOO BAR');
 
   children = (

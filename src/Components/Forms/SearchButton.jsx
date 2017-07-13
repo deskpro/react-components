@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
+import { childrenRecursiveMap } from 'utils/props';
 import { objectKeyFilter } from 'utils/objects';
-import { highlightWord } from 'utils/strings';
+import { highlightWord, stringInterpolate } from 'utils/strings';
 import { List, ListElement, Popper, Scrollbar } from 'Components/Common';
 import Input from 'Components/Forms/Input';
 import Button from 'Components/Button';
@@ -18,6 +19,10 @@ export default class SearchButton extends Input {
      * List of search results.
      */
     results:             PropTypes.array,
+    /**
+     * Displayed in the drop down before a value is entered.
+     */
+    emptyPlaceholder:    PropTypes.string,
     /**
      * Close the search box when the user clicks outside of it.
      */
@@ -99,16 +104,53 @@ export default class SearchButton extends Input {
     }
   };
 
+  handleOpen = () => {
+    setTimeout(() => {
+      this.inputRef.focus();
+    }, 10);
+  };
+
+  open = () => {
+    this.setState({ opened: true });
+  };
+
+  close = () => {
+    this.setState({ opened: false });
+  };
+
+  toggle = () => {
+    this.state.opened ? this.close() : this.open();
+  };
+
   /**
    * Renders the search results in a drop down
    *
    * @returns {XML}
    */
   renderResults() {
-    const { results, onSelect } = this.props;
+    const { results, onSelect, emptyPlaceholder, children } = this.props;
     const value = this.state.value;
+    if (value && results.length === 0 && children) {
+      return (
+        <List ref={ref => this.resultsRef = ref} className="dp-search-button__results">
+          <ListElement>
+            {childrenRecursiveMap(children, (child) => {
+              if (typeof child === 'string') {
+                return stringInterpolate(child, { value });
+              }
+              return child;
+            })}
+          </ListElement>
+        </List>
+      );
+    }
+
     if (!value || results.length === 0) {
-      return <List ref={ref => this.resultsRef = ref} className="dp-search-button__results" />;
+      return (
+        <List ref={ref => this.resultsRef = ref} className="dp-search-button__results">
+          {emptyPlaceholder ? <ListElement>{emptyPlaceholder}</ListElement> : null}
+        </List>
+      );
     }
 
     return (
@@ -149,11 +191,13 @@ export default class SearchButton extends Input {
           <Icon name="plus" />
         </Button>
         <Popper
-          placement="bottom"
+          placement="bottom-start"
+          offsetX="2px"
           ref={ref => this.popperRef = ref}
           target={this.buttonRef}
           arrow={false}
           opened={opened}
+          onOpen={this.handleOpen}
         >
           <div>
             <Input
