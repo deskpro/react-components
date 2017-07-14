@@ -13,3 +13,21 @@ ul.dp-list {
     box-sizing: border-box;
   }
 }
+
+.dp-selectable-list {
+
+  &:focus {
+    border: 0;
+    outline: 0;
+  }
+
+  & > .dp-list__element:not(.dp-selectable-list--selected):hover {
+    color: $dp-sonic-primary;
+    background-color: $dp-morning-sky;
+  }
+}
+
+.dp-selectable-list--selected {
+  color: $dp-greyscale-150;
+  background-color: $dp-sonic-primary;
+}

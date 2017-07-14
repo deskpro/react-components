@@ -10,6 +10,7 @@ import Heading from './Heading';
 import Count from './Count';
 import Subheading from './Subheading';
 import Scrollbar from './Scrollbar';
+import SelectableList from './SelectableList';
 
 export {
   List,
@@ -23,5 +24,6 @@ export {
   Heading,
   Count,
   Subheading,
-  Scrollbar
+  Scrollbar,
+  SelectableList,
 };

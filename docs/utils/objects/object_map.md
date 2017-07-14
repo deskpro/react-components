@@ -31,7 +31,7 @@ const values = {
     alt:   'bar'
 };
 
-let results = objects.objectMap(values, (val, key) => {
+let results = objectMap(values, (val, key) => {
     if (key !== 'alt') {
         return val.toUpperCase();
     }

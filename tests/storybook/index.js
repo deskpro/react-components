@@ -1,5 +1,4 @@
 import '../../src/styles/main.scss';
-
 import './components/avatar';
 import './components/forms/input';
 import './components/forms/checkbox';
@@ -28,5 +27,6 @@ import './components/forms/select';
 import './components/forms/tag';
 import './components/icon';
 import './components/lists/list';
+import './components/lists/selectable';
 import './components/modal';
 import './components/urgency';
