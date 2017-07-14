@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
 import { objectKeyFilter } from 'utils/objects';
-import { List, ListElement } from 'Components/Common';
+import { List } from 'Components/Common';
 
 /**
  * A list that can be scrolled through using arrow keys.
@@ -50,12 +50,12 @@ export default class SelectableList extends React.Component {
 
   handleKeyDown = (e) => {
     let index = this.state.index;
-    switch (e.keyCode) {
+    switch (e.keyCode) { // eslint-disable-line default-case
       case 40: // down
-        index++;
+        index += 1;
         break;
       case 38: // up
-        index--;
+        index -= 1;
         break;
       case 13: // enter
         this.props.onSelect(index);
@@ -90,7 +90,7 @@ export default class SelectableList extends React.Component {
         tabIndex="-1"
         className={classNames('dp-selectable-list', className)}
         {...objectKeyFilter(props, SelectableList.propTypes)}
-        ref={ref => this.rootRef = ref}
+        ref={ref => (this.rootRef = ref)}
         onKeyDown={this.handleKeyDown}
         onMouseOver={this.handleMouseOver}
       >

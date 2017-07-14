@@ -268,7 +268,7 @@ export default class Datepicker extends React.Component {
 
     return (
       <div
-        ref={ref => this.rootRef = ref}
+        ref={ref => (this.rootRef = ref)}
         className={classNames(
           'dp-datepicker',
           className,
@@ -280,14 +280,14 @@ export default class Datepicker extends React.Component {
       >
         <Input
           iconRight="calendar"
-          ref={ref => this.inputRef = ref}
+          ref={ref => (this.inputRef = ref)}
           placeholder={placeholder}
           onFocus={this.handleInputFocus}
           onChange={this.handleInputChange}
           {...inputProps}
         />
         <Popper
-          ref={ref => this.popperRef = ref}
+          ref={ref => (this.popperRef = ref)}
           target={this.rootRef}
           placement="bottom"
           arrow={false}

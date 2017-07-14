@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import noop from 'utils/noop';
 import { ListElement, Count } from 'Components/Common';
 import ItemSettings from 'Components/Columns/ItemSettings';
-import ItemFilter from 'Components/Columns/ItemFilter';
 import Icon from 'Components/Icon';
 import Avatar from 'Components/Avatar';
 
@@ -19,6 +18,10 @@ export default class Item extends React.Component {
      * CSS classes to apply to the element.
      */
     className: PropTypes.string,
+    /**
+     * Children to render.
+     */
+    children:  PropTypes.node,
     /**
      * Indicates whether the item is selected.
      */
@@ -62,14 +65,14 @@ export default class Item extends React.Component {
     return (
       <ListElement className={classes} {...props}>
         <span className={`${classPrefix}__pos-left`}>
-          {React.Children.map(children, child => leftTypes.indexOf(child.type) !== -1 ? child : null)}
+          {React.Children.map(children, child => (leftTypes.indexOf(child.type) !== -1 ? child : null))}
         </span>
         <span className={`${classPrefix}__pos-middle`}>
-          {React.Children.map(children, child => leftTypes.indexOf(child.type) === -1
-              && rightTypes.indexOf(child.type) === -1 ? child : null)}
+          {React.Children.map(children, child => (leftTypes.indexOf(child.type) === -1
+              && rightTypes.indexOf(child.type) === -1 ? child : null))}
         </span>
         <span className={`${classPrefix}__pos-right`}>
-          {React.Children.map(children, child => rightTypes.indexOf(child.type) !== -1 ? child : null)}
+          {React.Children.map(children, child => (rightTypes.indexOf(child.type) !== -1 ? child : null))}
         </span>
       </ListElement>
     );

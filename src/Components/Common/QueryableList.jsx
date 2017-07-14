@@ -23,9 +23,9 @@ export default class QueryableList extends React.Component {
    */
   filter = (children) => {
     const whereName = this.props.whereName;
-    if (!whereName || whereName == '@all') {
+    if (!whereName || whereName === '@all') {
       return children;
-    } else if (whereName == '@none') {
+    } else if (whereName === '@none') {
       return [];
     }
 

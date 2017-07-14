@@ -5,5 +5,5 @@
  * @returns {string}
  */
 export function regexpEscape(str) {
-  return str.replace(/[-[\]{}()*+!<=:?.\/\\^$|#\s,]/g, '\\$&');
+  return str.replace(/[-[\]{}()*+!<=:?.\/\\^$|#\s,]/g, '\\$&'); // eslint-disable-line no-useless-escape
 }

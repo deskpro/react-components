@@ -58,7 +58,7 @@ class DpMultiselect extends React.Component {
         onSelectAll={this.handleSelectAll}
         onDeselectAll={this.handleDeselectAll}
         templates={{
-          button:         '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"><span class="multiselect-selected-text"></span> <i class="fa fa-caret-down"></button>',
+          button:         '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"><span class="multiselect-selected-text"></span> <i class="fa fa-caret-down"></button>', // eslint-disable-line max-len
           filterClearBtn: '<i class="fa fa-times-circle">',
           li:             '<li><a tabindex="0"><label></label></a></li>'
         }}
@@ -82,16 +82,16 @@ class Select extends React.Component {
     onChange() {},
   };
 
-  handleChange = (value) => {
-    this.props.onChange(value);
-  };
-
   getIcon = () => {
     const { icon } = this.props;
     if (!icon) {
       return null;
     }
     return <Icon name={icon} />;
+  };
+
+  handleChange = (value) => {
+    this.props.onChange(value);
   };
 
   render() {

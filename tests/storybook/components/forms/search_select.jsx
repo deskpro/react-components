@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Input, Label, SearchSelect } from 'Components/Forms';
+import { Label, SearchSelect } from 'Components/Forms';
 
 const results = [
   'Android feedback',

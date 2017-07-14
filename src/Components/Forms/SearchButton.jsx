@@ -119,7 +119,11 @@ export default class SearchButton extends Input {
   };
 
   toggle = () => {
-    this.state.opened ? this.close() : this.open();
+    if (this.state.opened) {
+      this.close();
+    } else {
+      this.open();
+    }
   };
 
   /**
@@ -132,7 +136,7 @@ export default class SearchButton extends Input {
     const value = this.state.value;
     if (value && results.length === 0 && children) {
       return (
-        <List ref={ref => this.resultsRef = ref} className="dp-search-button__results">
+        <List ref={ref => (this.resultsRef = ref)} className="dp-search-button__results">
           <ListElement>
             {childrenRecursiveMap(children, (child) => {
               if (typeof child === 'string') {
@@ -147,14 +151,15 @@ export default class SearchButton extends Input {
 
     if (!value || results.length === 0) {
       return (
-        <List ref={ref => this.resultsRef = ref} className="dp-search-button__results">
+        <List ref={ref => (this.resultsRef = ref)} className="dp-search-button__results">
           {emptyPlaceholder ? <ListElement>{emptyPlaceholder}</ListElement> : null}
         </List>
       );
     }
 
+    /* eslint-disable react/jsx-no-bind */
     return (
-      <List ref={ref => this.resultsRef = ref} className="dp-search-button__results">
+      <List ref={ref => (this.resultsRef = ref)} className="dp-search-button__results">
         {results.map((result, i) => (
           <ListElement
             key={i}
@@ -175,11 +180,11 @@ export default class SearchButton extends Input {
       <div
         className={classNames('dp-search-button', className)}
         style={style}
-        ref={ref => this.rootRef = ref}
+        ref={ref => (this.rootRef = ref)}
         {...objectKeyFilter(props, SearchButton.propTypes)}
       >
         <Button
-          ref={ref => this.buttonRef = ref}
+          ref={ref => (this.buttonRef = ref)}
           className={classNames(
             'dp-button--icon',
             {
@@ -193,7 +198,7 @@ export default class SearchButton extends Input {
         <Popper
           placement="bottom-start"
           offsetX="2px"
-          ref={ref => this.popperRef = ref}
+          ref={ref => (this.popperRef = ref)}
           target={this.buttonRef}
           arrow={false}
           opened={opened}
@@ -203,7 +208,7 @@ export default class SearchButton extends Input {
             <Input
               {...inputProps}
               icon="search"
-              ref={ref => this.inputRef = ref}
+              ref={ref => (this.inputRef = ref)}
               value={value}
               onChange={this.handleChange}
             />

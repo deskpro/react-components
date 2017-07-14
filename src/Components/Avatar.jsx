@@ -10,6 +10,7 @@ const Avatar = ({ src, className, ...props }) => (
     src={src}
     aria-hidden
     className={classNames('dp-avatar', className)}
+    role="presentation"
     {...props}
   />
 );

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Drawer, Item } from 'Components/Columns';
+import { Item } from 'Components/Columns';
 import { ToggleableList } from 'Components/Common';
 
 const ItemList = ({ className, children, ...props }) => (
@@ -15,5 +15,10 @@ const ItemList = ({ className, children, ...props }) => (
     {children}
   </ToggleableList>
 );
+
+ItemList.propTypes = {
+  className: PropTypes.string,
+  children:  PropTypes.node
+};
 
 export default ItemList;

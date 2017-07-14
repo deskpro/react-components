@@ -1,4 +1,7 @@
+/* eslint-disable no-useless-escape */
+
 import { regexpEscape } from 'utils/regexp';
+import { objectForEach } from 'utils/objects';
 
 test('regexpEscape', () => {
   const data = {
@@ -8,10 +11,7 @@ test('regexpEscape', () => {
     'foo.bar':  'foo\\\.bar',
     'foo$bar^': 'foo\\\$bar\\\^'
   };
-
-  for (const key in data) {
-    if (data.hasOwnProperty(key)) {
-      expect(regexpEscape(key)).toBe(data[key]);
-    }
-  }
+  objectForEach(data, (val, key) => {
+    expect(regexpEscape(key)).toBe(val);
+  });
 });

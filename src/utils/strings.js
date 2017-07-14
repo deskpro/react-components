@@ -51,8 +51,8 @@ export function stringHighlight(str, word, tag = 'i') {
  */
 export function stringInterpolate(str, values) {
   objectForEach(values, (val, key) => {
-    const regexp = new RegExp(`(\\\$${regexpEscape(key)}\\\$)`, 'ig');
-    str = str.replace(regexp, val);
+    const regexp = new RegExp(`(\\\$${regexpEscape(key)}\\\$)`, 'ig'); // eslint-disable-line no-useless-escape
+    str = str.replace(regexp, val); // eslint-disable-line no-param-reassign
   });
   return str;
 }

@@ -12,6 +12,10 @@ export default class Column extends React.Component {
      */
     className: PropTypes.string,
     /**
+     * Children to render.
+     */
+    children:  PropTypes.node,
+    /**
      * The aria role.
      */
     role:      PropTypes.string

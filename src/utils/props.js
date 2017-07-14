@@ -16,7 +16,7 @@ import React from 'react';
  * @returns {Function}
  */
 export function childrenComponentType(component) {
-  return function (props, propName, componentName) {
+  return function validate(props, propName, componentName) {
     let error = null;
     React.Children.forEach(props[propName], (child) => {
       if (child.type !== component) {
@@ -39,7 +39,7 @@ export function childrenComponentType(component) {
 export function childrenRecursiveMap(children, cb) {
   return React.Children.map(children, (child) => {
     if (React.isValidElement(child) && child.props.children) {
-      child = React.cloneElement(child, {
+      child = React.cloneElement(child, { // eslint-disable-line no-param-reassign
         children: childrenRecursiveMap(child.props.children, cb)
       });
     }

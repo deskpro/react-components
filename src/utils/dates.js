@@ -51,7 +51,7 @@ export function dateCalendarDays(date) {
   copy.setDate(0);
 
   const daysInMonth = copy.getDate();
-  let totalSquares = ((offset + daysInMonth) / 7 | 0) * 7;
+  let totalSquares = ((offset + daysInMonth) / 7 | 0) * 7; // eslint-disable-line no-bitwise
   totalSquares += (offset + daysInMonth) % 7 ? 7 : 0;
 
   const calendarSquares = [];

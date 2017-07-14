@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, select } from '@storybook/addon-knobs';
@@ -15,7 +17,7 @@ storiesOf('Icon', module)
     CombinationRenderer({ Component, props }) {
       return (
         <div>
-          <h3>Size "{props.size}"</h3>
+          <h3>Size {props.size}</h3>
           <Component
             name={select('Name', ['bug', 'star-o', 'envelope-o', 'caret-down', 'cog'], 'bug')}
             rotate={select('Rotate', ['0', '90', '180', '270'], '0')}

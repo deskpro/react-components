@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import newId from 'utils/newid';
 import noop from 'utils/noop';
 import { objectKeyFilter } from 'utils/objects';
-import { Heading, ListElement, ListToggleable } from 'Components/Common';
+import { Heading, ListElement } from 'Components/Common';
 import Icon from 'Components/Icon';
 
 /**
@@ -24,6 +24,12 @@ const DrawerInner = ({ id, opened, children }) => (
     {children}
   </div>
 );
+
+DrawerInner.propTypes = {
+  id:       PropTypes.string,
+  opened:   PropTypes.bool,
+  children: PropTypes.node
+};
 
 /**
  * An expandable drawer within a navigation column.
@@ -99,7 +105,11 @@ export default class Drawer extends React.Component {
    * Toggles the drawer open or closed
    */
   toggle = () => {
-    this.state.opened ? this.close() : this.open();
+    if (this.state.opened) {
+      this.close();
+    } else {
+      this.open();
+    }
   };
 
   /**
@@ -109,25 +119,6 @@ export default class Drawer extends React.Component {
    */
   isOpen = () => this.state.opened;
 
-  render() {
-    const { opened } = this.state;
-    const { className, role, ...props } = this.props;
-
-    return (
-      <ListElement
-        role={role}
-        aria-expanded={opened}
-        id={`dp-column-drawer-${this.id}`}
-        className={classNames('dp-column-drawer', className)}
-        {...objectKeyFilter(props, Drawer.propTypes)}
-      >
-        {this.renderHeading()}
-        <DrawerInner id={`dp-column-drawer-body-${this.id}`} opened={opened}>
-          {this.renderChildren()}
-        </DrawerInner>
-      </ListElement>
-    );
-  }
 
   renderHeading() {
     const { opened } = this.state;
@@ -167,9 +158,26 @@ export default class Drawer extends React.Component {
   }
 
   renderChildren() {
-    return React.Children.map(
-      this.props.children,
-      child => (child.type !== Heading) ? child : null
+    return React.Children.map(this.props.children, child => ((child.type !== Heading) ? child : null));
+  }
+
+  render() {
+    const { opened } = this.state;
+    const { className, role, ...props } = this.props;
+
+    return (
+      <ListElement
+        role={role}
+        aria-expanded={opened}
+        id={`dp-column-drawer-${this.id}`}
+        className={classNames('dp-column-drawer', className)}
+        {...objectKeyFilter(props, Drawer.propTypes)}
+      >
+        {this.renderHeading()}
+        <DrawerInner id={`dp-column-drawer-body-${this.id}`} opened={opened}>
+          {this.renderChildren()}
+        </DrawerInner>
+      </ListElement>
     );
   }
 }
