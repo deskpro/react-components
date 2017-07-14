@@ -1,3 +1,15 @@
+## v0.4.6 - 2017-07-14
+
+* [MINOR] Adds utility functions
+* [MINOR] Adds Input iconRight
+* [MINOR] Adds Input getValue & setValue
+* [FEATURE] Adds TagSet Component
+* [FEATURE] Adds Datepicker component
+
+## v0.4.5 - 2017-07-13
+
+* [MINOR] Adds stopPropagation to Radio and Checkbox
+
 ## v0.4.4 - 2017-07-13
 
 * [FEATURE] Adds SearchButton component
