@@ -6,7 +6,7 @@ import { regexpEscape } from 'utils/regexp';
  * @param {string} str The string to transform
  * @returns {string}
  */
-export function toUpperFirst(str) {
+export function stringUpperFirst(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
@@ -16,7 +16,7 @@ export function toUpperFirst(str) {
  * @param {string} str String to escape
  * @returns {string}
  */
-export function htmlEscape(str) {
+export function stringEscapeHTML(str) {
   return str
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -33,9 +33,9 @@ export function htmlEscape(str) {
  * @param {string} tag  Wrap the word in this HTML tag, e.g. 'i', 'strong', 'span', etc
  * @returns {string}
  */
-export function highlightWord(str, word, tag = 'i') {
+export function stringHighlight(str, word, tag = 'i') {
   const regexp = new RegExp(`(${regexpEscape(word)})`, 'ig');
-  return htmlEscape(str).replace(regexp, `<${tag}>$1</${tag}>`);
+  return stringEscapeHTML(str).replace(regexp, `<${tag}>$1</${tag}>`);
 }
 
 /**

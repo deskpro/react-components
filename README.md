@@ -86,11 +86,11 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Formats a number to include commas (or any separator) in the thousandths place.
 
 ### Strings
-* [strings/toUpperFirst](docs/utils/strings/to_upper_first.md)  
+* [strings/stringUpperFirst](docs/utils/strings/string_upper_first.md)  
   Upper cases the first letter in a string.
-* [strings/htmlEscape](docs/utils/strings/html_escape.md)  
+* [strings/stringEscapeHTML](docs/utils/strings/string_escape_html.md)  
   Converts HTML special characters into entities.
-* [strings/highlightWord](docs/utils/strings/highlight_word.md)  
+* [strings/stringHighlight](docs/utils/strings/string_highlight.md)  
   Wraps the given word in HTML tags where found in the given string.
 * [strings/stringInterpolate](docs/utils/strings/string_interpolate.md)  
   Interpolate placeholder values found in the given string.

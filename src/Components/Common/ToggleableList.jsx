@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { toUpperFirst } from 'utils/strings';
+import { stringUpperFirst } from 'utils/strings';
 import { List } from 'Components/Common';
 
 const DATA_DP_TOGGLE_ID = 'data-dp-toggle-id';
@@ -61,9 +61,9 @@ class ToggleableList extends React.Component {
             return child;
           }
           return React.cloneElement(child, {
-            [DATA_DP_TOGGLE_ID]:       index,
-            [`on${toUpperFirst(on)}`]: this.handleEvent,
-            [toggle]:                  (index == targetID) ? targetValue : false
+            [DATA_DP_TOGGLE_ID]:           index,
+            [`on${stringUpperFirst(on)}`]: this.handleEvent,
+            [toggle]:                      (index == targetID) ? targetValue : false
           });
         })}
       </List>

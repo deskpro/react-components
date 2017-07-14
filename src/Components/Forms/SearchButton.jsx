@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import noop from 'utils/noop';
 import { childrenRecursiveMap } from 'utils/props';
 import { objectKeyFilter } from 'utils/objects';
-import { highlightWord, stringInterpolate } from 'utils/strings';
+import { stringHighlight, stringInterpolate } from 'utils/strings';
 import { List, ListElement, Popper, Scrollbar } from 'Components/Common';
 import Input from 'Components/Forms/Input';
 import Button from 'Components/Button';
@@ -159,7 +159,7 @@ export default class SearchButton extends Input {
           <ListElement
             key={i}
             onClick={onSelect.bind(this, result, i)}
-            dangerouslySetInnerHTML={{ __html: highlightWord(result, value) }}
+            dangerouslySetInnerHTML={{ __html: stringHighlight(result, value) }}
           />
         ))}
       </List>

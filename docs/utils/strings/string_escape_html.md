@@ -1,9 +1,9 @@
-strings/htmlEscape
+strings/stringEscapeHTML
 ==================
 Converts HTML special characters into entities.
 
 ```js
-function htmlEscape(str: string): string
+function stringEscapeHTML(str: string): string
 ```
 
 ### Args
@@ -17,7 +17,7 @@ The string with special HTML characters replaced by entities.
 ### Examples
 
 ```js
-import { htmlEscape } from 'utils/strings';
+import { stringEscapeHTML } from 'utils/strings';
 
-console.log(htmlEscape('<a>foo</a>')); // Outputs: '&lt;a&gt;foo&lt;/a&gt;'
+console.log(stringEscapeHTML('<a>foo</a>')); // Outputs: '&lt;a&gt;foo&lt;/a&gt;'
 ```

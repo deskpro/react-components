@@ -1,6 +1,6 @@
 import * as strings from 'utils/strings';
 
-test('toUpperFirst', () => {
+test('stringUpperFirst', () => {
   const data = {
     foo:       'Foo',
     'foo bar': 'Foo bar'
@@ -8,12 +8,12 @@ test('toUpperFirst', () => {
 
   for (const key in data) {
     if (data.hasOwnProperty(key)) {
-      expect(strings.toUpperFirst(key)).toBe(data[key]);
+      expect(strings.stringUpperFirst(key)).toBe(data[key]);
     }
   }
 });
 
-test('htmlEscape', () => {
+test('stringEscapeHTML', () => {
   const data = {
     foo:          'foo',
     '<a>foo</a>': '&lt;a&gt;foo&lt;/a&gt;'
@@ -21,12 +21,12 @@ test('htmlEscape', () => {
 
   for (const key in data) {
     if (data.hasOwnProperty(key)) {
-      expect(strings.htmlEscape(key)).toBe(data[key]);
+      expect(strings.stringEscapeHTML(key)).toBe(data[key]);
     }
   }
 });
 
-test('highlightWord', () => {
+test('stringHighlight', () => {
   const word = 'foo';
   const data = {
     foo:       '<i>foo</i>',
@@ -37,11 +37,11 @@ test('highlightWord', () => {
 
   for (const key in data) {
     if (data.hasOwnProperty(key)) {
-      expect(strings.highlightWord(key, word)).toBe(data[key]);
+      expect(strings.stringHighlight(key, word)).toBe(data[key]);
     }
   }
 
-  expect(strings.highlightWord('foo', 'foo', 'strong')).toBe('<strong>foo</strong>');
+  expect(strings.stringHighlight('foo', 'foo', 'strong')).toBe('<strong>foo</strong>');
 });
 
 test('stringInterpolate', () => {

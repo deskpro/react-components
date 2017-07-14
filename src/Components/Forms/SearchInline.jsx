@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
 import { objectKeyFilter } from 'utils/objects';
-import { highlightWord } from 'utils/strings';
+import { stringHighlight } from 'utils/strings';
 import { List, ListElement } from 'Components/Common';
 import Input from 'Components/Forms/Input';
 
@@ -87,7 +87,7 @@ export default class SearchInline extends Input {
           <ListElement
             key={i}
             onClick={onSelect.bind(this, result, i)}
-            dangerouslySetInnerHTML={{ __html: highlightWord(result, value) }}
+            dangerouslySetInnerHTML={{ __html: stringHighlight(result, value) }}
           />
           ))}
       </List>
