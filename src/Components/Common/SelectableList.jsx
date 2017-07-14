@@ -31,7 +31,7 @@ export default class SelectableList extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
+    this.state    = {
       index: 0
     };
     this.rootRef  = null;
@@ -48,26 +48,36 @@ export default class SelectableList extends React.Component {
     this.childLen = React.Children.toArray(this.props.children).length - 1;
   }
 
-  handleKeyDown = (e) => {
-    let index = this.state.index;
-    switch (e.keyCode) {
-      case 40: // down
-        index++;
-        break;
-      case 38: // up
-        index--;
-        break;
-      case 13: // enter
-        this.props.onSelect(index);
-        break;
-    }
+  /**
+   * Sets the index of the selected item
+   *
+   * @param {number} newIndex Index of the element to select
+   * @param {function} cb  Called after the index state is updated with the new index value
+   */
+  setIndex = (newIndex, cb = noop) => {
+    let index = parseInt(newIndex);
     if (index < 0) {
       index = 0;
     } else if (index > this.childLen) {
       index = this.childLen;
     }
     if (index !== this.state.index) {
-      this.setState({ index });
+      this.setState({ index }, () => {
+        cb(index);
+      });
+    } else {
+      cb(index);
+    }
+  };
+
+  handleKeyDown = (e) => {
+    const code = e.keyCode;
+    if (code === 40) {        // down
+      this.setIndex(this.state.index + 1);
+    } else if (code === 38) { // up
+      this.setIndex(this.state.index - 1);
+    } else if (code === 13) { // enter
+      this.props.onSelect(this.state.index);
     }
   };
 
@@ -76,12 +86,25 @@ export default class SelectableList extends React.Component {
   };
 
   handleClick = (e) => {
-    this.props.onSelect(e.target.getAttribute('data-dp-index'));
+    this.setIndex(
+      e.target.getAttribute('data-dp-index'),
+      this.props.onSelect
+    );
   };
 
   render() {
     const { className, children, ...props } = this.props;
     const { index } = this.state;
+    const body = React.Children.map(children, (child, i) => {
+      const childClassNames = classNames(child.props.className, {
+        'dp-selectable-list--selected': i === index
+      });
+      return React.cloneElement(child, {
+        'data-dp-index': i,
+        onClick:         this.handleClick,
+        className:       childClassNames
+      });
+    });
 
     // tabIndex -1 is required for this to work.
     // See https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets
@@ -94,13 +117,7 @@ export default class SelectableList extends React.Component {
         onKeyDown={this.handleKeyDown}
         onMouseOver={this.handleMouseOver}
       >
-        {React.Children.map(children, (child, i) => React.cloneElement(child, {
-          'data-dp-index': i,
-          onClick:         this.handleClick,
-          className:       classNames(child.props.className, {
-            'dp-selectable-list--selected': i === index
-          })
-        }))}
+        {body}
       </List>
     );
   }
