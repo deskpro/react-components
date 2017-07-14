@@ -3,59 +3,11 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
+import { datesNumberOfDaysInMonth, datesCalendarDays, DAYS, MONTHS } from 'utils/dates';
 import { objectKeyFilter } from 'utils/objects';
 import { Popper } from 'Components/Common';
 import Input from 'Components/Forms/Input';
 import Icon from 'Components/Icon';
-
-const DAYS = [
-  'Sun',
-  'Mon',
-  'Tue',
-  'Wed',
-  'Thu',
-  'Fri',
-  'Sat'
-];
-const MONTHS = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-];
-
-function getNumberOfDaysInMonth(date) {
-  const copy = new Date(new Date(date).setDate(1));
-  copy.setMonth(copy.getMonth() + 1);
-  copy.setDate(0);
-  return copy.getDate();
-}
-
-function getCalendarDays(date) {
-  const copy = new Date(new Date(date).setDate(1));
-  const offset = copy.getDay();
-  copy.setMonth(copy.getMonth() + 1);
-  copy.setDate(0);
-
-  const daysInMonth = copy.getDate();
-  let totalSquares = ((offset + daysInMonth) / 7 | 0) * 7;
-  totalSquares += (offset + daysInMonth) % 7 ? 7 : 0;
-
-  const calendarSquares = [];
-  for (let i = 1; i <= totalSquares; i++) {
-    calendarSquares.push(i - offset);
-  }
-
-  return calendarSquares;
-}
 
 /**
  * Renders an input with drop down date picker.
@@ -104,8 +56,11 @@ export default class Datepicker extends React.Component {
     super(props);
 
     this.state = {
-      date: props.date
+      date:   props.date,
+      value:  null,
+      opened: false
     };
+
     this.focused    = false;
     this.rootRef    = null;
     this.inputRef   = null;
@@ -139,44 +94,95 @@ export default class Datepicker extends React.Component {
     this.popperDOM.style.width = window.getComputedStyle(this.inputDOM, null).width;
   };
 
+  /**
+   * Called when the mouse enters the root element
+   */
   handleMouseEnter = () => {
     this.focused = true;
   };
 
+  /**
+   * Called when the mouse leaves the root element loses focus
+   */
   handleMouseLeave = () => {
     this.focused = false;
   };
 
+  /**
+   * Called when the document is clicked
+   */
   handleDocumentClick = () => {
     if (!this.focused) {
       this.popperRef.close();
     }
   };
 
-  handleInputFocus = (e) => {
-    this.popperRef.open();
-    if (this.props.onFocus) {
-      this.props.onFocus(e);
-    }
+  /**
+   * Called by the popper when it's opened
+   */
+  handlePopperOpen = () => {
+    this.setState({ opened: true });
   };
 
+  /**
+   * Called by the popper when it's closed
+   */
+  handlePopperClose = () => {
+    this.setState({ opened: false });
+  };
+
+  /**
+   * Called when the calendar previous icon is clicked
+   */
   handlePrevClick = () => {
     const date = new Date(this.state.date);
     date.setMonth(date.getMonth() - 1);
     this.setState({ date });
   };
 
+  /**
+   * Called when the calendar next icon is clicked
+   */
   handleNextClick = () => {
     const date = new Date(this.state.date);
     date.setMonth(date.getMonth() + 1);
     this.setState({ date });
   };
 
+  /**
+   * Called when a specific day on the calendar is clicked
+   *
+   * @param {Date} date
+   */
   handleDayClick = (date) => {
     this.inputRef.setValue(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`);
     this.popperRef.close();
     this.props.onSelect(date);
-    this.setState({ date });
+    this.setState({ value: date });
+  };
+
+  /**
+   * Called when the input value changes
+   */
+  handleInputChange = (e) => {
+    const value = new Date(this.inputRef.getValue());
+    if (value) {
+      this.props.onSelect(value);
+      this.setState({ value });
+    }
+    if (this.props.onChange) {
+      this.props.onChange(e);
+    }
+  };
+
+  /**
+   * Called when the input receives focus
+   */
+  handleInputFocus = (e) => {
+    this.popperRef.open();
+    if (this.props.onFocus) {
+      this.props.onFocus(e);
+    }
   };
 
   /**
@@ -202,9 +208,7 @@ export default class Datepicker extends React.Component {
           </div>
         </div>
         <div className="dp-datepicker__calendar__weekdays">
-          {days.map((d, i) => {
-            return <div key={i}>{d[0]}</div>;
-          })}
+          {days.map((d, i) => <div key={i}>{d[0]}</div>)}
         </div>
         {this.renderMonth(date)}
       </div>
@@ -218,8 +222,17 @@ export default class Datepicker extends React.Component {
    * @returns {XML}
    */
   renderMonth(date) {
-    const monthDays   = getCalendarDays(date);
-    const daysInMonth = getNumberOfDaysInMonth(date);
+    let sameDate = false;
+    let currDay  = 0;
+    const currDate = this.state.value;
+    if (currDate) {
+      currDay  = currDate.getDate();
+      sameDate = date.getFullYear() === currDate.getFullYear()
+        && date.getMonth() === currDate.getMonth();
+    }
+
+    const monthDays   = datesCalendarDays(date);
+    const daysInMonth = datesNumberOfDaysInMonth(date);
     const weekDays    = [];
     for (let i = 0; i < monthDays.length; i++) {
       if (i % 7 === 0) {
@@ -234,6 +247,7 @@ export default class Datepicker extends React.Component {
             {week.map((day, y) => (
               <div
                 key={y}
+                className={classNames({ 'dp-datepicker__calendar__day--selected': (sameDate && day === currDay) })}
                 onClick={() => {
                   this.handleDayClick(new Date(date.getFullYear(), date.getMonth(), day));
                 }}
@@ -248,13 +262,20 @@ export default class Datepicker extends React.Component {
   }
 
   render() {
+    const { opened } = this.state;
     const { style, placeholder, className, ...props } = this.props;
     const inputProps = objectKeyFilter(props, Datepicker.propTypes);
 
     return (
       <div
         ref={ref => this.rootRef = ref}
-        className={classNames('dp-datepicker', className)}
+        className={classNames(
+          'dp-datepicker',
+          className,
+          {
+            'dp-datepicker--active': opened
+          }
+        )}
         style={style}
       >
         <Input
@@ -262,6 +283,7 @@ export default class Datepicker extends React.Component {
           ref={ref => this.inputRef = ref}
           placeholder={placeholder}
           onFocus={this.handleInputFocus}
+          onChange={this.handleInputChange}
           {...inputProps}
         />
         <Popper
@@ -269,7 +291,8 @@ export default class Datepicker extends React.Component {
           target={this.rootRef}
           placement="bottom"
           arrow={false}
-          opened
+          onOpen={this.handlePopperOpen}
+          onClose={this.handlePopperClose}
         >
           {this.renderCalendar()}
         </Popper>

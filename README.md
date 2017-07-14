@@ -13,6 +13,7 @@ A react-based set of components for building DeskPRO apps.
   * [Strings](#strings)
   * [Regexp](#regexp)
   * [Objects](#objects)
+  * [Dates](#dates)
 * [License](#license)
 
 
@@ -102,6 +103,11 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
 * [objects/objectKeyFilter](docs/utils/objects/object_key_filter.md)  
   Performs a key comparison between two objects, deleting from the first where the keys exist in the second.
 
+### Dates
+* [dates/datesNumberOfDaysInMonth](docs/utils/dates/dates_number_of_days_in_month.md)  
+  Returns the number of days in the given date.
+* [dates/datesCalendarDays](docs/utils/dates/dates_calendar_days.md)  
+  Returns an array of all the days in the given date
 
 ### License
 The library is released under the BSD License. See [LICENSE](LICENSE) for more information.

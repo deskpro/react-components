@@ -9,8 +9,27 @@
     box-sizing: border-box;
   }
 
-  input {
-    width: 100%;
+  .dp-input {
+    input {
+      width: 100%;
+    }
+
+    .dp-icon {
+      font-size: $icon-size-s;
+      color: $dp-greyscale-850;
+    }
+
+    &:hover {
+      .dp-icon {
+        color: $dp-sonic-primary;
+      }
+    }
+  }
+
+  &.dp-datepicker--active {
+    .dp-input .dp-icon {
+      color: $dp-sonic-primary;
+    }
   }
 }
 
@@ -21,6 +40,7 @@
 .dp-datepicker__calendar__month {
   display: flex;
   padding: 2px;
+  margin-bottom: 2px;
   justify-content: space-between;
   background-color: $dp-greyscale-200;
 }
@@ -55,10 +75,16 @@
     margin: 2px;
     text-align: right;
   }
+
+  .dp-datepicker__calendar__day--selected {
+    color: $dp-greyscale-100;
+    background-color: $dp-sonic-primary;
+  }
 }
 
 .dp-datepicker__calendar__week > div {
-
+  @include border-radius("m");
+  padding: 2px;
   line-height: $font-size-m;
   font-family: $primary-font;
   font-size: $font-size-m;
