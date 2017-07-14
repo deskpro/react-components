@@ -1,6 +1,9 @@
 /******************************
-    Labels
+    Tags
 *******************************/
+$tag-border: solid 1px $dp-greyscale-300;
+$tag-height: 18px;
+
 .dp-tag {
   font-family: $primary-font;
   font-size: $font-size-m;
@@ -8,9 +11,9 @@
   color: $dp-greyscale-850;
 
   background-color: $dp-greyscale-150;
-  border: solid 1px $dp-greyscale-300;
+  border: $tag-border;
 
-  height: 18px;
+  height: $tag-height;
   border-radius: $rad-size-s;
   padding-left: 4px;
   padding-right: 4px;
@@ -49,6 +52,42 @@
     &:focus {
       border: 0;
       outline: 0;
+    }
+  }
+}
+.dp-tag-set {
+  &, * {
+    box-sizing: border-box;
+  }
+  .dp-search-button {
+    .dp-button {
+      box-shadow: none;
+      background-color: $dp-greyscale-00;
+      border: $tag-border;
+      height: $tag-height;
+      vertical-align: bottom;
+      padding: 0 4px;
+      cursor: pointer;
+      i {
+        display: none;
+      }
+      &::after {
+        content: '+';
+        top: -1px;
+        display: inline-block;
+        position: relative;
+        color: $dp-greyscale-500;
+      }
+      &.dp-button--active {
+        background-color: $dp-morning-sky;
+        border-color: $dp-sonic-primary;
+        color: $dp-sonic-primary;
+        box-shadow: 0 1px 0 $dp-sonic-primary inset;
+        mix-blend-mode: normal;
+        &::after {
+          color: $dp-sonic-primary;
+        }
+      }
     }
   }
 }
