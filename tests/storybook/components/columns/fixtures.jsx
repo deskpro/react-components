@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { objectMap } from 'utils/objects';
 import {
   Column,
   DrawerList,
@@ -106,16 +107,16 @@ class TicketsForm extends React.Component {
             <label style={formStyles.label}>
               Radio Label
             </label>
-            {Object.entries(groups).map(pair => (
-              <label key={pair[0]} style={formStyles.checkboxLabel}>
+            {objectMap(groups, (val, key) => (
+              <label key={key} style={formStyles.checkboxLabel}>
                 <input
                   type="radio"
                   name="group"
-                  value={pair[0]}
-                  checked={value === pair[0]}
+                  value={key}
+                  checked={value === key}
                   onChange={this.handleChange}
                 />
-                {pair[1]}
+                {val}
               </label>
             ))}
           </div>

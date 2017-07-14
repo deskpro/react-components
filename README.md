@@ -102,6 +102,10 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
 ### Objects
 * [objects/objectKeyFilter](docs/utils/objects/object_key_filter.md)  
   Performs a key comparison between two objects, deleting from the first where the keys exist in the second.
+* [objects/objectForEach](docs/utils/objects/object_foreach.md)  
+  Iterates over an object.
+* [objects/objectMap](docs/utils/objects/object_map.md)  
+  Creates an array from the results of calling a function on each item in an object.
 
 ### Dates
 * [dates/dateNumberOfDaysInMonth](docs/utils/dates/date_number_of_days_in_month.md)  

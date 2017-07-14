@@ -1,4 +1,5 @@
 import { regexpEscape } from 'utils/regexp';
+import { objectForEach } from 'utils/objects';
 
 /**
  * Upper cases the first letter in a string
@@ -49,9 +50,9 @@ export function stringHighlight(str, word, tag = 'i') {
  * @returns {string}
  */
 export function stringInterpolate(str, values) {
-  Object.entries(values).forEach(([key, value]) => {
+  objectForEach(values, (val, key) => {
     const regexp = new RegExp(`(\\\$${regexpEscape(key)}\\\$)`, 'ig');
-    str = str.replace(regexp, value);
+    str = str.replace(regexp, val);
   });
   return str;
 }
