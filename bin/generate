@@ -1,0 +1,103 @@
+#!/usr/bin/env node
+'use strict';
+
+const path              = require('path');
+const fs                = require('fs');
+const shell             = require('shelljs');
+const utils             = require('./lib/utils');
+const promptYN          = require('./lib/prompt').promptYN;
+const parseManifestSync = require('./lib/parser').parseManifestSync;
+const parseTemplateSync = require('./lib/template').parseTemplateSync;
+const pathComponents    = path.resolve(__dirname, '../src/Components');
+const pathStories       = path.resolve(__dirname, '../tests/storybook/components');
+const pathTemplateClass = path.resolve(__dirname, './templates/component.jsx.tpl');
+const pathTemplateStory = path.resolve(__dirname, './templates/story.jsx.tpl');
+
+if (process.argv.length < 3) {
+  showHelp();
+  process.exit(1);
+}
+
+const component             = process.argv[2];
+const namespace             = path.dirname(component);
+const classname             = path.basename(component);
+const storyname             = utils.pascalToUnderscore(classname);
+const fileClass             = path.resolve(pathComponents, namespace, classname + '.jsx');
+const fileStory             = path.resolve(pathStories, namespace.toLowerCase(), storyname + '.jsx');
+const fileNamespaceManifest = path.resolve(pathComponents, namespace, 'index.js');
+const fileStoriesManifest   = path.resolve(pathStories, '../index.js');
+
+promptYN(`Write to "${fileClass}"?`, (answer) => {
+  if (answer === 'no') {
+    return;
+  }
+
+  writeClass();
+  writeStory();
+  writeClassManifest();
+  writeStoryManifest();
+  console.log('Done!');
+});
+
+
+/**
+ * Writes the component class template
+ */
+function writeClass() {
+  const code = parseTemplateSync(pathTemplateClass, {
+    classname,
+    namespace
+  });
+  shell.mkdir('-p', path.dirname(fileClass));
+  fs.writeFileSync(fileClass, code);
+}
+
+/**
+ * Writes the story template
+ */
+function writeStory() {
+  const code = parseTemplateSync(pathTemplateStory, {
+    classname,
+    namespace
+  });
+  shell.mkdir('-p', path.dirname(fileStory));
+  fs.writeFileSync(fileStory, code);
+}
+
+/**
+ * Updates the component namespace manifest
+ */
+function writeClassManifest() {
+   let parsedManifest = parseManifestSync(fileNamespaceManifest);
+   parsedManifest.imports.push(`import ${classname} from './${classname}';`);
+   parsedManifest.exports.push("  " + classname + ',');
+
+   const code = `${parsedManifest.imports.join("\n")}
+
+export {
+${parsedManifest.exports.join("\n")}
+};
+   `;
+
+  shell.mkdir('-p', path.dirname(fileNamespaceManifest));
+  fs.writeFileSync(fileNamespaceManifest, code);
+}
+
+/**
+ * Updates the storybook manifest
+ */
+function writeStoryManifest() {
+  let parsedManifest = parseManifestSync(fileStoriesManifest);
+  parsedManifest.imports.push(`import './components/${namespace.toLowerCase()}/${storyname}';`);
+  const code = parsedManifest.imports.join("\n") + "\n";
+
+  shell.mkdir('-p', path.dirname(fileStoriesManifest));
+  fs.writeFileSync(fileStoriesManifest, code);
+}
+
+/**
+ * Shows the command line help message
+ */
+function showHelp() {
+  console.log(`Usage: ${path.basename(process.argv[1])} Component/Name`);
+}
