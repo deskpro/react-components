@@ -29,7 +29,7 @@ export const MONTHS = [
  * @param {Date} date
  * @returns {number}
  */
-export function datesNumberOfDaysInMonth(date) {
+export function dateNumberOfDaysInMonth(date) {
   const copy = new Date(new Date(date).setDate(0));
   return copy.getDate();
 }
@@ -44,7 +44,7 @@ export function datesNumberOfDaysInMonth(date) {
  * @param {Date} date
  * @returns {Array}
  */
-export function datesCalendarDays(date) {
+export function dateCalendarDays(date) {
   const copy = new Date(new Date(date).setDate(1));
   const offset = copy.getDay();
   copy.setMonth(copy.getMonth() + 1);

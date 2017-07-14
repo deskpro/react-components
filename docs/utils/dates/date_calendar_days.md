@@ -1,9 +1,9 @@
-dates/datesCalendarDays
+dates/dateCalendarDays
 =======================
 Returns an array of all the days in the given date.
 
 ```js
-function datesCalendarDays(date: Date): array
+function dateCalendarDays(date: Date): array
 ```
 
 ### Args
@@ -17,10 +17,10 @@ An array which is padded so the first day (index 0) is always a sunday, and the 
 ### Examples
 
 ```js
-import { datesCalendarDays } from 'utils/dates';
+import { dateCalendarDays } from 'utils/dates';
 
 const date = new Date(2017, 7);
-console.log(datesCalendarDays(date));
+console.log(dateCalendarDays(date));
 
 // Outputs:
 //    [ -1,

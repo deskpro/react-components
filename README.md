@@ -104,9 +104,9 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Performs a key comparison between two objects, deleting from the first where the keys exist in the second.
 
 ### Dates
-* [dates/datesNumberOfDaysInMonth](docs/utils/dates/dates_number_of_days_in_month.md)  
+* [dates/dateNumberOfDaysInMonth](docs/utils/dates/date_number_of_days_in_month.md)  
   Returns the number of days in the given date.
-* [dates/datesCalendarDays](docs/utils/dates/dates_calendar_days.md)  
+* [dates/dateCalendarDays](docs/utils/dates/date_calendar_days.md)  
   Returns an array of all the days in the given date
 
 ### License

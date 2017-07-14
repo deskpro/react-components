@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
-import { datesNumberOfDaysInMonth, datesCalendarDays, DAYS, MONTHS } from 'utils/dates';
+import { dateNumberOfDaysInMonth, dateCalendarDays, DAYS, MONTHS } from 'utils/dates';
 import { objectKeyFilter } from 'utils/objects';
 import { Popper } from 'Components/Common';
 import Input from 'Components/Forms/Input';
@@ -231,8 +231,8 @@ export default class Datepicker extends React.Component {
         && date.getMonth() === currDate.getMonth();
     }
 
-    const monthDays   = datesCalendarDays(date);
-    const daysInMonth = datesNumberOfDaysInMonth(date);
+    const monthDays   = dateCalendarDays(date);
+    const daysInMonth = dateNumberOfDaysInMonth(date);
     const weekDays    = [];
     for (let i = 0; i < monthDays.length; i++) {
       if (i % 7 === 0) {
