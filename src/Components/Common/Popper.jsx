@@ -22,7 +22,7 @@ export default class Popper extends React.Component {
     /**
      * Popper is placed in reference to this element.
      */
-    target:              PropTypes.node,
+    target:              PropTypes.any,
     /**
      * Placement applied to popper.
      */
@@ -129,7 +129,6 @@ export default class Popper extends React.Component {
   componentDidUpdate(prevProps) {
     if (prevProps.opened !== this.props.opened) {
       this.setState({ opened: this.props.opened }); // eslint-disable-line react/no-did-update-set-state
-      this.props.opened ? this.props.onOpen(this) : this.props.onClose(this);
     }
     this.updatePopper();
   }
@@ -262,7 +261,9 @@ export default class Popper extends React.Component {
    */
   open = (target) => {
     this.target = target || this.target;
-    this.setState({ opened: true });
+    this.setState({ opened: true }, () => {
+      this.props.onOpen(this);
+    });
   };
 
   /**
@@ -272,7 +273,9 @@ export default class Popper extends React.Component {
    */
   close = (target) => {
     this.target = target || this.target;
-    this.setState({ opened: false });
+    this.setState({ opened: false }, () => {
+      this.props.onClose(this);
+    });
   };
 
   render() {

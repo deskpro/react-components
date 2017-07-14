@@ -66,9 +66,7 @@ class Input extends React.Component {
     this.props.onBlur(e);
   };
 
-  getValue = () => {
-    return this.input.value;
-  };
+  getValue = () => this.input.value;
 
   setValue = (value) => {
     this.input.value = value;

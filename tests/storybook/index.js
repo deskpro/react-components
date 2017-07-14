@@ -5,6 +5,7 @@ import './components/forms/input';
 import './components/forms/checkbox';
 import './components/forms/select';
 import './components/forms/tag';
+import './components/forms/datepicker';
 import './components/forms/hidden_fields';
 import './components/forms/search_inline';
 import './components/forms/search_submit';
