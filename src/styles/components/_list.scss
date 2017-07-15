@@ -21,6 +21,10 @@ ul.dp-list {
     outline: 0;
   }
 
+  & > .dp-list__element {
+    cursor: pointer;
+  }
+
   & > .dp-list__element:not(.dp-selectable-list--selected):hover {
     color: $dp-sonic-primary;
     background-color: $dp-morning-sky;
