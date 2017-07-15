@@ -19,7 +19,15 @@ ListElementGroup.propTypes = {
   /**
    * Name of the group.
    */
-  name: PropTypes.string.isRequired
+  name:      PropTypes.string.isRequired,
+  /**
+   * CSS classes to apply to the element.
+   */
+  className: PropTypes.string,
+  /**
+   * Children to render.
+   */
+  children:  PropTypes.node,
 };
 
 export default ListElementGroup;

@@ -22,7 +22,7 @@ export default class Popper extends React.Component {
     /**
      * Popper is placed in reference to this element.
      */
-    target:              PropTypes.any,
+    target:              PropTypes.any, // eslint-disable-line react/forbid-prop-types
     /**
      * Placement applied to popper.
      */
@@ -142,18 +142,13 @@ export default class Popper extends React.Component {
     }
   }
 
-  handleMouseEnter = () => {
-    this.focused = true;
-  };
-
-  handleMouseLeave = () => {
-    this.focused = false;
-  };
-
-  handleDocumentClick = (e) => {
-    if (!this.focused && e.target !== this.target) {
-      this.close();
-    }
+  /**
+   * Sets the target element
+   *
+   * @param {*} target
+   */
+  setTarget = (target) => {
+    this.target = target;
   };
 
   /**
@@ -165,7 +160,7 @@ export default class Popper extends React.Component {
   findTargetNode = (target) => {
     let node = null;
     if (target instanceof React.Component || this.target instanceof React.Component) {
-      node = ReactDOM.findDOMNode(target || this.target);
+      node = ReactDOM.findDOMNode(target || this.target); // eslint-disable-line react/no-find-dom-node
     } else if (typeof target === 'function') {
       node = target();
     } else if (typeof target === 'string') {
@@ -182,16 +177,16 @@ export default class Popper extends React.Component {
    */
   updatePopper = () => {
     const {
-      target,
-      placement,
-      offsetX,
-      offsetY,
-      detached,
-      eventsEnabled,
-      preventOverflow,
-      onCreate,
-      onUpdate
-    } = this.props;
+            target,
+            placement,
+            offsetX,
+            offsetY,
+            detached,
+            eventsEnabled,
+            preventOverflow,
+            onCreate,
+            onUpdate
+            } = this.props;
 
     if (target === undefined && !this.target) {
       return;
@@ -237,21 +232,16 @@ export default class Popper extends React.Component {
   };
 
   /**
-   * Sets the target element
-   *
-   * @param {*} target
-   */
-  setTarget = (target) => {
-    this.target = target;
-  };
-
-  /**
    * Toggle the popper opened or closed.
    *
    * @param {string|function|React.Component} [target]
    */
   toggle = (target) => {
-    this.state.opened ? this.close(target) : this.open(target);
+    if (this.state.opened) {
+      this.close(target);
+    } else {
+      this.open(target);
+    }
   };
 
   /**
@@ -278,16 +268,30 @@ export default class Popper extends React.Component {
     });
   };
 
+  handleMouseEnter = () => {
+    this.focused = true;
+  };
+
+  handleMouseLeave = () => {
+    this.focused = false;
+  };
+
+  handleDocumentClick = (e) => {
+    if (!this.focused && e.target !== this.target) {
+      this.close();
+    }
+  };
+
   render() {
     const { detached, arrow, children, className, ...props } = this.props;
     const { opened } = this.state;
     if (!this.target) {
-      return <div ref={ref => this.node = ref} />;
+      return <div ref={ref => (this.node = ref)} />;
     }
 
     const popper = (
       <div
-        ref={ref => this.node = ref}
+        ref={ref => (this.node = ref)}
         className={classNames(
           'dp-popper',
           className,

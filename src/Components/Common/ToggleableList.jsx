@@ -6,6 +6,31 @@ import { List } from 'Components/Common';
 const DATA_DP_TOGGLE_ID = 'data-dp-toggle-id';
 
 /**
+ * Traverses through the given element's parents until the element containing
+ * the 'data-dp-toggle-id' attribute is found and returned. Returns the given
+ * element when it contains the data attribute. Returns null when an element
+ * cannot be found.
+ *
+ * Needed to get the toggleable ID when a child element fires a click event but
+ * the root/parent element has the 'data-dp-toggle-id' attribute.
+ *
+ * @param {HTMLElement|Node|Object} el Element to traverse
+ * @returns {HTMLElement|Node|null|object}
+ */
+function findToggleableParent(el) {
+  if (el.getAttribute(DATA_DP_TOGGLE_ID) !== null) {
+    return el;
+  }
+  while (el.parentNode) {
+    el = el.parentNode; // eslint-disable-line no-param-reassign
+    if (el.getAttribute(DATA_DP_TOGGLE_ID) !== null) {
+      return el;
+    }
+  }
+  return null;
+}
+
+/**
  * A higher order component which changes prop values on its children
  * by responding to events triggered by the children.
  */
@@ -22,7 +47,11 @@ class ToggleableList extends React.Component {
     /**
      * Only control components of this type.
      */
-    whenType: PropTypes.any
+    whenType: PropTypes.any, // eslint-disable-line react/forbid-prop-types
+    /**
+     * Children to render.
+     */
+    children: PropTypes.node
   };
 
   constructor(props) {
@@ -40,7 +69,7 @@ class ToggleableList extends React.Component {
     const element = findToggleableParent(e.target);
     if (element) {
       const targetID    = element.getAttribute(DATA_DP_TOGGLE_ID);
-      const targetValue = (targetID == this.state.targetID) ? !this.state.targetValue : true;
+      const targetValue = (targetID === this.state.targetID) ? !this.state.targetValue : true;
       if (targetID !== null) {
         this.setState({
           targetID,
@@ -63,7 +92,7 @@ class ToggleableList extends React.Component {
           return React.cloneElement(child, {
             [DATA_DP_TOGGLE_ID]:           index,
             [`on${stringUpperFirst(on)}`]: this.handleEvent,
-            [toggle]:                      (index == targetID) ? targetValue : false
+            [toggle]:                      (index === targetID) ? targetValue : false
           });
         })}
       </List>
@@ -71,28 +100,3 @@ class ToggleableList extends React.Component {
   }
 }
 export default ToggleableList;
-
-/**
- * Traverses through the given element's parents until the element containing
- * the 'data-dp-toggle-id' attribute is found and returned. Returns the given
- * element when it contains the data attribute. Returns null when an element
- * cannot be found.
- *
- * Needed to get the toggleable ID when a child element fires a click event but
- * the root/parent element has the 'data-dp-toggle-id' attribute.
- *
- * @param {HTMLElement|Node|Object} el Element to traverse
- * @returns {HTMLElement|Node|null}
- */
-function findToggleableParent(el) {
-  if (el.getAttribute(DATA_DP_TOGGLE_ID) !== null) {
-    return el;
-  }
-  while (el.parentNode) {
-    el = el.parentNode;
-    if (el.getAttribute(DATA_DP_TOGGLE_ID) !== null) {
-      return el;
-    }
-  }
-  return null;
-}

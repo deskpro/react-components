@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Icon from 'Components/Icon';
 
 /**
  * Represents a sub heading element.
@@ -19,7 +18,11 @@ Subheading.propTypes = {
   /**
    * CSS classes to apply to the element.
    */
-  className: PropTypes.string
+  className: PropTypes.string,
+  /**
+   * Children to render.
+   */
+  children:  PropTypes.node,
 };
 
 Subheading.defaultProps = {

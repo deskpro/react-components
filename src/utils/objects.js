@@ -24,10 +24,10 @@
  * @returns {*}
  */
 export function objectKeyFilter(obj1, obj2) {
-  obj2 = Object.keys(obj2);
+  const obj2Keys = Object.keys(obj2);
   const newProps = Object.assign({}, obj1);
   Object.keys(newProps)
-    .filter(key => obj2.indexOf(key) !== -1)
+    .filter(key => obj2Keys.indexOf(key) !== -1)
     .forEach(key => delete newProps[key]);
 
   return newProps;

@@ -76,13 +76,14 @@ export default class SearchInline extends Input {
     if (!value || results.length === 0) {
       return (
         <List
-          ref={ref => this.resultsRef = ref}
+          ref={ref => (this.resultsRef = ref)}
         />
       );
     }
 
+    /* eslint-disable react/jsx-no-bind */
     return (
-      <List ref={ref => this.resultsRef = ref} className="dp-search-inline__results">
+      <List ref={ref => (this.resultsRef = ref)} className="dp-search-inline__results">
         {results.map((result, i) => (
           <ListElement
             key={i}
@@ -109,7 +110,7 @@ export default class SearchInline extends Input {
         )}
         style={style}
       >
-        <Input ref={ref => this.inputRef = ref} icon="search" {...inputProps} />
+        <Input ref={ref => (this.inputRef = ref)} icon="search" {...inputProps} />
         {this.renderResults()}
       </div>
     );

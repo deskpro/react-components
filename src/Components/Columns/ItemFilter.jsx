@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { objectKeyFilter } from 'utils/objects';
 import { PopperIcon } from 'Components/Common';
 import ItemPopper from 'Components/Columns/ItemPopper';

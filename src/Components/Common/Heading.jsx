@@ -7,10 +7,10 @@ import Icon from 'Components/Icon';
  * A header element which can be displayed with an icon and count number.
  */
 const Heading = ({ size, icon, count, children, className, ...props }) => {
-  children = React.Children.toArray(children);
+  const childArray = React.Children.toArray(children);
 
   if (icon !== undefined) {
-    children.unshift(
+    childArray.unshift(
       (typeof icon === 'string')
         ? <Icon key="icon" name={icon} />
         : React.cloneElement(
@@ -20,7 +20,7 @@ const Heading = ({ size, icon, count, children, className, ...props }) => {
     );
   }
   if (count !== undefined) {
-    children.push(
+    childArray.push(
       <span key="count" className="dp-heading__count">
         {count}
       </span>
@@ -28,7 +28,7 @@ const Heading = ({ size, icon, count, children, className, ...props }) => {
   }
 
   props.className = classNames('dp-heading', className);
-  return React.createElement(`h${size}`, props, children);
+  return React.createElement(`h${size}`, props, childArray);
 };
 
 Heading.propTypes = {
@@ -47,7 +47,11 @@ Heading.propTypes = {
   /**
    * CSS classes to apply to the element.
    */
-  className: PropTypes.string
+  className: PropTypes.string,
+  /**
+   * Children to render.
+   */
+  children:  PropTypes.node,
 };
 
 Heading.defaultProps = {

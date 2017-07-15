@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Scrollbars from 'react-custom-scrollbars';
@@ -12,13 +11,24 @@ const Scrollbar = ({ className, children, ...props }) => (
     className={classNames('dp-scrollbar', className)}
     autoHeight
     {...props}
-    renderTrackVertical={props => <div {...props} className="dp-scrollbar__track-vertical" />}
-    renderThumbVertical={props => <div {...props} className="dp-scrollbar__thumb-vertical" />}
-    renderTrackHorizontal={props => <div {...props} className="dp-scrollbar__track-horizontal" />}
-    renderThumbHorizontal={props => <div {...props} className="dp-scrollbar__thumb-horizontal" />}
+    renderTrackVertical={p => <div {...p} className="dp-scrollbar__track-vertical" />}
+    renderThumbVertical={p => <div {...p} className="dp-scrollbar__thumb-vertical" />}
+    renderTrackHorizontal={p => <div {...p} className="dp-scrollbar__track-horizontal" />}
+    renderThumbHorizontal={p => <div {...p} className="dp-scrollbar__thumb-horizontal" />}
   >
     {children}
   </Scrollbars>
 );
+
+Scrollbar.propTypes = {
+  /**
+   * CSS classes to apply to the element.
+   */
+  className: PropTypes.string,
+  /**
+   * Children to render.
+   */
+  children:  PropTypes.node
+};
 
 export default Scrollbar;

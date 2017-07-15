@@ -36,6 +36,7 @@ test('objectMap', () => {
     alt:   'bar'
   };
 
+  /* eslint-disable consistent-return */
   const results = objects.objectMap(values, (val, key) => {
     if (key !== 'alt') {
       return val.toUpperCase();

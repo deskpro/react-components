@@ -83,11 +83,12 @@ export default class SearchSubmit extends Input {
   renderResults() {
     const { results, onSelect } = this.props;
     if (results.length === 0) {
-      return <List ref={ref => this.resultsRef = ref} />;
+      return <List ref={ref => (this.resultsRef = ref)} />;
     }
 
+    /* eslint-disable react/jsx-no-bind */
     return (
-      <List ref={ref => this.resultsRef = ref} className="dp-search-submit__results">
+      <List ref={ref => (this.resultsRef = ref)} className="dp-search-submit__results">
         {results.map((result, i) => (
           <ListElement
             key={i}
@@ -105,7 +106,7 @@ export default class SearchSubmit extends Input {
 
     return (
       <div
-        ref={ref => this.rootRef = ref}
+        ref={ref => (this.rootRef = ref)}
         className={classNames(
           'dp-search-submit',
           {
@@ -115,12 +116,12 @@ export default class SearchSubmit extends Input {
         )}
         style={style}
       >
-        <Input ref={ref => this.inputRef = ref} {...inputProps} />
+        <Input ref={ref => (this.inputRef = ref)} {...inputProps} />
         <Button className="dp-button--icon" onClick={this.handleClick}>
           <Icon name="search" />
         </Button>
         <Popper
-          ref={ref => this.popperRef = ref}
+          ref={ref => (this.popperRef = ref)}
           target={this.rootRef}
           placement="bottom"
           arrow={false}

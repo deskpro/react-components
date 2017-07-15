@@ -9,6 +9,10 @@ import noop from 'utils/noop';
 export default class Portal extends React.Component {
   static propTypes = {
     /**
+     * Children to render.
+     */
+    children: PropTypes.node,
+    /**
      * Called when the child elements are mounted.
      */
     onUpdate: PropTypes.func

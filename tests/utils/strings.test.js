@@ -1,4 +1,5 @@
 import * as strings from 'utils/strings';
+import { objectForEach } from 'utils/objects';
 
 test('stringUpperFirst', () => {
   const data = {
@@ -6,11 +7,9 @@ test('stringUpperFirst', () => {
     'foo bar': 'Foo bar'
   };
 
-  for (const key in data) {
-    if (data.hasOwnProperty(key)) {
-      expect(strings.stringUpperFirst(key)).toBe(data[key]);
-    }
-  }
+  objectForEach(data, (val, key) => {
+    expect(strings.stringUpperFirst(key)).toBe(val);
+  });
 });
 
 test('stringEscapeHTML', () => {
@@ -18,12 +17,9 @@ test('stringEscapeHTML', () => {
     foo:          'foo',
     '<a>foo</a>': '&lt;a&gt;foo&lt;/a&gt;'
   };
-
-  for (const key in data) {
-    if (data.hasOwnProperty(key)) {
-      expect(strings.stringEscapeHTML(key)).toBe(data[key]);
-    }
-  }
+  objectForEach(data, (val, key) => {
+    expect(strings.stringEscapeHTML(key)).toBe(val);
+  });
 });
 
 test('stringHighlight', () => {
@@ -34,13 +30,9 @@ test('stringHighlight', () => {
     'foo bar': '<i>foo</i> bar',
     'Foo bar': '<i>Foo</i> bar'
   };
-
-  for (const key in data) {
-    if (data.hasOwnProperty(key)) {
-      expect(strings.stringHighlight(key, word)).toBe(data[key]);
-    }
-  }
-
+  objectForEach(data, (val, key) => {
+    expect(strings.stringHighlight(key, word)).toBe(val);
+  });
   expect(strings.stringHighlight('foo', 'foo', 'strong')).toBe('<strong>foo</strong>');
 });
 
