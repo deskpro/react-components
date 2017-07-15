@@ -48,21 +48,6 @@ export default class SelectableList extends React.Component {
     this.childLen = React.Children.toArray(this.props.children).length - 1;
   }
 
-  handleKeyDown = (e) => {
-    let index = this.state.index;
-    switch (e.keyCode) { // eslint-disable-line default-case
-      case 40: // down
-        index += 1;
-        break;
-      case 38: // up
-        index -= 1;
-        break;
-      case 13: // enter
-        this.props.onSelect(index);
-        break;
-    }
-  }
-
   /**
    * Sets the index of the selected item
    *
@@ -70,7 +55,7 @@ export default class SelectableList extends React.Component {
    * @param {function} cb  Called after the index state is updated with the new index value
    */
   setIndex = (newIndex, cb = noop) => {
-    let index = parseInt(newIndex);
+    let index = parseInt(newIndex, 10);
     if (index < 0) {
       index = 0;
     } else if (index > this.childLen) {
