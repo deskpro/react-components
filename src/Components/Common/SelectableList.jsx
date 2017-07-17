@@ -12,40 +12,59 @@ import { List } from 'Components/Common';
 export default class SelectableList extends React.Component {
   static propTypes = {
     /**
+     * Selected index.
+     */
+    selected:        PropTypes.number,
+    /**
+     * Allow the selected index to be -1.
+     */
+    negativeAllowed: PropTypes.bool,
+    /**
      * CSS classes to apply to the element.
      */
-    className: PropTypes.string,
+    className:       PropTypes.string,
     /**
      * Children to render.
      */
-    children:  PropTypes.node,
+    children:        PropTypes.node,
     /**
-     * Called when an item in the list is selected.
+     * Called when an item in the list is selected, either by clicking it or pressing ENTER.
+     * Receives the index and selected child.
      */
-    onSelect:  PropTypes.func
+    onSelect:        PropTypes.func,
+    /**
+     * Called when the selected index changes. Receives the new index and selected child.
+     */
+    onChange:        PropTypes.func
   };
 
   static defaultProps = {
-    onSelect: noop
+    selected:        0,
+    negativeAllowed: false,
+    onSelect:        noop,
+    onChange:        noop
   };
 
   constructor(props) {
     super(props);
     this.state    = {
-      index: 0
+      index: props.selected
     };
-    this.rootRef  = null;
-    this.rootDOM  = null;
-    this.childLen = 0;
+    this.rootRef    = null;
+    this.rootDOM    = null;
+    this.childArray = [];
+    this.childLen   = 0;
   }
 
   componentDidMount() {
-    this.rootDOM  = ReactDOM.findDOMNode(this.rootRef);
-    this.childLen = React.Children.toArray(this.props.children).length - 1;
+    this.rootDOM    = ReactDOM.findDOMNode(this.rootRef);
+    this.childArray = React.Children.toArray(this.props.children);
+    this.childLen   = this.childArray.length - 1;
   }
 
   componentDidUpdate() {
-    this.childLen = React.Children.toArray(this.props.children).length - 1;
+    this.childArray = React.Children.toArray(this.props.children);
+    this.childLen   = this.childArray.length - 1;
   }
 
   /**
@@ -57,17 +76,22 @@ export default class SelectableList extends React.Component {
   setIndex = (newIndex, cb = noop) => {
     let index = parseInt(newIndex, 10);
     if (index < 0) {
-      index = 0;
+      index = this.props.negativeAllowed ? -1 : 0;
     } else if (index > this.childLen) {
       index = this.childLen;
     }
     if (index !== this.state.index) {
       this.setState({ index }, () => {
-        cb(index);
+        this.props.onChange(index, this.childArray[index]);
+        cb(index, this.childArray[index]);
       });
     } else {
-      cb(index);
+      cb(index, this.childArray[index]);
     }
+  };
+
+  handleMouseOver = () => {
+    this.rootDOM.focus();
   };
 
   handleKeyDown = (e) => {
@@ -77,12 +101,8 @@ export default class SelectableList extends React.Component {
     } else if (code === 38) { // up
       this.setIndex(this.state.index - 1);
     } else if (code === 13) { // enter
-      this.props.onSelect(this.state.index);
+      this.props.onSelect(this.state.index, this.childArray[this.state.index]);
     }
-  };
-
-  handleMouseOver = () => {
-    this.rootDOM.focus();
   };
 
   handleClick = (e) => {

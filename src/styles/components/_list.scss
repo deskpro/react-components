@@ -32,6 +32,6 @@ ul.dp-list {
 }
 
 .dp-selectable-list--selected {
-  color: $dp-greyscale-150;
+  color: $dp-greyscale-150 !important;
   background-color: $dp-sonic-primary;
 }

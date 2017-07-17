@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf, action } from '@storybook/react';
 import { SearchButton } from 'Components/Forms';
 
 const results = [
@@ -30,10 +30,11 @@ class Story extends React.Component {
   render() {
     return (
       <SearchButton
+        placeholder="Search..."
         value={this.state.value}
         onChange={this.handleChange}
-        placeholder="Search..."
         results={this.state.results}
+        onSelect={action('onSelect')}
       />
     );
   }
