@@ -38,7 +38,20 @@ Adds `dp-search-button` to the root element.
 
 
 ### Examples
-This example uses the Javascript `fetch` API to grab a list of search terms matching the given input.
+This example uses the Javascript `fetch` API to grab a list of terms from a json file. A real app would fetch results from a backend service.
+
+_results.json_
+
+```json
+[
+  "Android feedback",
+  "Customer service feedback",
+  "E-commerce feedback",
+  "Feedback (Sales)"
+]
+```
+
+_index.js_
 
 ```jsx
 import React from 'react';
@@ -89,7 +102,9 @@ class App extends React.Component {
       this.setState({ value, results: [] });
     } else {
       fetch('/results.json')
-        .then(res => res.json())
+        .then((res) => {
+          return res.json();
+        })
         .then((results) => {
           this.setState({ value, results });
         });
