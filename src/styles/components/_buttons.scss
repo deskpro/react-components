@@ -35,6 +35,9 @@
     border-color: $dp-greyscale-150;
     color: $dp-greyscale-300;
     box-shadow: none;
+    .dp-icon {
+      color: $dp-greyscale-300;
+    }
   }
   &, * {
     box-sizing: border-box;
@@ -48,6 +51,17 @@
   height: 18px;
   padding: 1px 10px 4px 10px;
   font-size: $font-size-m;
+  .dp-icon {
+    margin-right: 6px;
+    font-size: $icon-size-s;
+  }
+}
+
+.dp-button--m {
+  .dp-icon {
+    margin-right: 7px;
+    font-size: $icon-size-s;;
+  }
 }
 
 .dp-button--l {
@@ -55,6 +69,10 @@
   padding-left: 14px;
   padding-right: 14px;
   font-size: $font-size-xl;
+  .dp-icon {
+    margin-right: 11px;
+    font-size: $icon-size-m;
+  }
 }
 
 /******************************
@@ -74,6 +92,19 @@
     border-color: $dp-emerald-tertiary;
     box-shadow: 0 2px 0 $dp-emerald-midnight inset;
     mix-blend-mode: normal;
+  }
+}
+
+.dp-button--cta,
+.dp-button--primary {
+  .dp-icon {
+    color: transparentize($dp-greyscale-00, 0.4);
+  }
+  &:hover .dp-icon {
+    color: transparentize($dp-greyscale-00, 0.2);
+  }
+  &:active .dp-icon {
+    color: transparentize($dp-greyscale-00, 0.4);
   }
 }
 
@@ -98,6 +129,9 @@
     border-color: $dp-sonic-primary;
     color: $dp-sonic-primary;
     box-shadow: 0 -1px 0 $dp-sonic-primary inset;
+    .dp-icon {
+      color: $dp-sonic-primary;
+    }
   }
   &:active {
     background-color: $dp-morning-sky;
@@ -105,10 +139,16 @@
     color: $dp-sonic-primary;
     box-shadow: 0 1px 0 $dp-sonic-primary inset;
     mix-blend-mode: normal;
+    .dp-icon {
+      color: $dp-sonic-primary;
+    }
+  }
+  .dp-icon {
+    color: $dp-greyscale-450;
   }
 }
 
-.dp-button--icon {
+.dp-button--square {
   @include border-radius("s");
   padding: 5px;
   height: auto;
