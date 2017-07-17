@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
 import { objectKeyFilter } from 'utils/objects';
-import { stringHighlight } from 'utils/strings';
-import { List, ListElement } from 'Components/Common';
+import { List, ListElement, Highlighter } from 'Components/Common';
 import Input from 'Components/Forms/Input';
 
 /**
@@ -85,11 +84,11 @@ export default class SearchInline extends Input {
     return (
       <List ref={ref => (this.resultsRef = ref)} className="dp-search-inline__results">
         {results.map((result, i) => (
-          <ListElement
-            key={i}
-            onClick={onSelect.bind(this, result, i)}
-            dangerouslySetInnerHTML={{ __html: stringHighlight(result, value) }}
-          />
+          <ListElement key={i} onClick={onSelect.bind(this, result, i)}>
+            <Highlighter highlight={value}>
+              {result}
+            </Highlighter>
+          </ListElement>
           ))}
       </List>
     );

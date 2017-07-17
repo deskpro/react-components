@@ -5,8 +5,8 @@ import classNames from 'classnames';
 import noop from 'utils/noop';
 import { childrenRecursiveMap } from 'utils/props';
 import { objectKeyFilter } from 'utils/objects';
-import { stringHighlight, stringInterpolate } from 'utils/strings';
-import { ListElement, SelectableList, Popper, Scrollbar } from 'Components/Common';
+import { stringInterpolate } from 'utils/strings';
+import { ListElement, SelectableList, Popper, Scrollbar, Highlighter } from 'Components/Common';
 import Input from 'Components/Forms/Input';
 import Button from 'Components/Button';
 import Icon from 'Components/Icon';
@@ -184,11 +184,11 @@ export default class SearchButton extends Input {
       body = emptyPlaceholder ? <ListElement>{emptyPlaceholder}</ListElement> : null;
     } else {
       body = results.map((result, i) => (
-        <ListElement
-          key={i}
-          data-dp-value={result}
-          dangerouslySetInnerHTML={{ __html: stringHighlight(result, value) }}
-        />
+        <ListElement key={i} data-dp-value={result}>
+          <Highlighter highlight={value}>
+            {result}
+          </Highlighter>
+        </ListElement>
       ));
     }
 
