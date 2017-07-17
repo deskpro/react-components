@@ -11,6 +11,7 @@ import Count from './Count';
 import Subheading from './Subheading';
 import Scrollbar from './Scrollbar';
 import SelectableList from './SelectableList';
+import Highlighter from './Highlighter';
 
 export {
   List,
@@ -26,4 +27,5 @@ export {
   Subheading,
   Scrollbar,
   SelectableList,
+  Highlighter,
 };

@@ -36,7 +36,7 @@ export function stringEscapeHTML(str) {
  */
 export function stringHighlight(str, word, tag = 'i') {
   const regexp = new RegExp(`(${regexpEscape(word)})`, 'ig');
-  return stringEscapeHTML(str).replace(regexp, `<${tag}>$1</${tag}>`);
+  return stringEscapeHTML(str).replace(regexp, `<${tag} class="dp-highlighted">$1</${tag}>`);
 }
 
 /**
