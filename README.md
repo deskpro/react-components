@@ -50,6 +50,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   An unordered list that can be scrolled through using arrow keys.
 * [Common/Scrollbar](docs/components/common/scrollbar.md)  
   Wraps children with styled scrollbars.
+* [Common/Highlighter](docs/components/common/highlighter.md)  
+  Highlights a word or phrase.
 
 ### Forms
 * [Forms/HiddenFields](docs/components/forms/hidden_fields.md)  
