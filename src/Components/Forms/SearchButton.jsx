@@ -1,11 +1,12 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
 import { childrenRecursiveMap } from 'utils/props';
 import { objectKeyFilter } from 'utils/objects';
 import { stringHighlight, stringInterpolate } from 'utils/strings';
-import { List, ListElement, Popper, Scrollbar } from 'Components/Common';
+import { ListElement, SelectableList, Popper, Scrollbar } from 'Components/Common';
 import Input from 'Components/Forms/Input';
 import Button from 'Components/Button';
 import Icon from 'Components/Icon';
@@ -40,7 +41,8 @@ export default class SearchButton extends Input {
      */
     children:            PropTypes.node,
     /**
-     * Called when a search result is clicked.
+     * Called when a search result is selected. Receives selected index as the first argument, and selected
+     * value (text) as the second.
      */
     onSelect:            PropTypes.func
   };
@@ -57,11 +59,12 @@ export default class SearchButton extends Input {
       opened: false,
       value:  ''
     };
-    this.focused   = false;
-    this.rootRef   = null;
-    this.inputRef  = null;
-    this.popperRef = null;
-    this.buttonRef = null;
+    this.focused    = false;
+    this.rootRef    = null;
+    this.inputRef   = null;
+    this.resultsRef = null;
+    this.popperRef  = null;
+    this.buttonRef  = null;
   }
 
   componentDidMount() {
@@ -80,11 +83,20 @@ export default class SearchButton extends Input {
     }
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.opened !== this.state.opened && this.state.opened) {
+      setTimeout(() => {
+        this.inputRef.focus();
+      }, 0);
+    }
+  }
+
   handleClick = () => {
     this.setState({ opened: !this.state.opened });
   };
 
   handleChange = (value) => {
+    this.resultsRef.setIndex(-1);
     this.setState({ value }, () => {
       this.props.onChange(value);
     });
@@ -104,10 +116,31 @@ export default class SearchButton extends Input {
     }
   };
 
-  handleOpen = () => {
-    setTimeout(() => {
-      this.inputRef.focus();
-    }, 10);
+  handleKeyDown = (e) => {
+    if (e.keyCode === 40 && this.state.opened) { // down
+      ReactDOM.findDOMNode(this.resultsRef).focus();
+      this.resultsRef.setIndex(0);
+    }
+  };
+
+  handleSelect = (index, child) => {
+    const value = child.props['data-dp-value'];
+    this.inputRef.setValue(value);
+    this.props.onSelect(value, index);
+  };
+
+  handleListChange = (index) => {
+    if (index === -1) {
+      // Put the cursor at the end of the input.
+      // Timeout required for this to work in some browsers.
+      // See https://stackoverflow.com/a/10576409/401019
+      setTimeout(() => {
+        const valLength = this.state.value.length;
+        const input = this.inputRef.input;
+        input.selectionStart = input.selectionEnd = valLength;
+        input.focus();
+      }, 0);
+    }
   };
 
   open = () => {
@@ -132,42 +165,43 @@ export default class SearchButton extends Input {
    * @returns {XML}
    */
   renderResults() {
-    const { results, onSelect, emptyPlaceholder, children } = this.props;
+    const { results, emptyPlaceholder, children } = this.props;
     const value = this.state.value;
+
+    let body = null;
     if (value && results.length === 0 && children) {
-      return (
-        <List ref={ref => (this.resultsRef = ref)} className="dp-search-button__results">
-          <ListElement>
-            {childrenRecursiveMap(children, (child) => {
-              if (typeof child === 'string') {
-                return stringInterpolate(child, { value });
-              }
-              return child;
-            })}
-          </ListElement>
-        </List>
+      body = (
+        <ListElement>
+          {childrenRecursiveMap(children, (child) => {
+            if (typeof child === 'string') {
+              return stringInterpolate(child, { value });
+            }
+            return child;
+          })}
+        </ListElement>
       );
+    } else if (!value || results.length === 0) {
+      body = emptyPlaceholder ? <ListElement>{emptyPlaceholder}</ListElement> : null;
+    } else {
+      body = results.map((result, i) => (
+        <ListElement
+          key={i}
+          data-dp-value={result}
+          dangerouslySetInnerHTML={{ __html: stringHighlight(result, value) }}
+        />
+      ));
     }
 
-    if (!value || results.length === 0) {
-      return (
-        <List ref={ref => (this.resultsRef = ref)} className="dp-search-button__results">
-          {emptyPlaceholder ? <ListElement>{emptyPlaceholder}</ListElement> : null}
-        </List>
-      );
-    }
-
-    /* eslint-disable react/jsx-no-bind */
     return (
-      <List ref={ref => (this.resultsRef = ref)} className="dp-search-button__results">
-        {results.map((result, i) => (
-          <ListElement
-            key={i}
-            onClick={onSelect.bind(this, result, i)}
-            dangerouslySetInnerHTML={{ __html: stringHighlight(result, value) }}
-          />
-        ))}
-      </List>
+      <SelectableList
+        negativeAllowed
+        ref={ref => (this.resultsRef = ref)}
+        onSelect={this.handleSelect}
+        onChange={this.handleListChange}
+        className="dp-search-button__results"
+      >
+        {body}
+      </SelectableList>
     );
   }
 
@@ -202,7 +236,6 @@ export default class SearchButton extends Input {
           target={this.buttonRef}
           arrow={false}
           opened={opened}
-          onOpen={this.handleOpen}
         >
           <div>
             <Input
@@ -211,6 +244,7 @@ export default class SearchButton extends Input {
               ref={ref => (this.inputRef = ref)}
               value={value}
               onChange={this.handleChange}
+              onKeyDown={this.handleKeyDown}
             />
             <Scrollbar>
               {this.renderResults()}

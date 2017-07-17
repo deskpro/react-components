@@ -128,7 +128,11 @@ export default class Popper extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.opened !== this.props.opened) {
-      this.setState({ opened: this.props.opened }); // eslint-disable-line react/no-did-update-set-state
+      if (this.props.opened) {
+        this.open();
+      } else {
+        this.close();
+      }
     }
     this.updatePopper();
   }
