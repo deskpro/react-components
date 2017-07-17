@@ -13,6 +13,7 @@ import './components/forms/search_button';
 import './components/forms/search_select';
 import './components/buttons/button';
 import './components/buttons/icon';
+import './components/buttons/square';
 import './components/columns/column';
 import './components/common/count';
 import './components/common/heading';
