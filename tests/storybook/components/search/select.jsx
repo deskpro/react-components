@@ -1,6 +1,6 @@
 import React from 'react';
-import { storiesOf, action } from '@storybook/react';
-import { SearchButton } from 'Components/Forms';
+import { storiesOf } from '@storybook/react';
+import { Label, SearchSelect } from 'Components/Forms';
 
 const results = [
   'Android feedback',
@@ -14,8 +14,8 @@ class Story extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value:   '',
-      results: []
+      value: '',
+      results
     };
   }
 
@@ -29,21 +29,23 @@ class Story extends React.Component {
 
   render() {
     return (
-      <SearchButton
-        placeholder="Search..."
-        value={this.state.value}
-        onChange={this.handleChange}
-        results={this.state.results}
-        onSelect={action('onSelect')}
-      />
+      <div>
+        <Label>SEARCH EXAMPLE</Label>
+        <SearchSelect
+          value={this.state.value}
+          onChange={this.handleChange}
+          placeholder="Search or select"
+          results={this.state.results}
+        />
+      </div>
     );
   }
 }
 
-storiesOf('Forms', module)
+storiesOf('Search', module)
   .addWithInfo(
-  'SearchButton',
-  'SearchButton component usage.',
+  'Select',
+  'SearchSelect component usage.',
   () => <Story />
 )
 ;
