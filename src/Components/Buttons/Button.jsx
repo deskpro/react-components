@@ -12,7 +12,7 @@ export default class Button extends React.Component {
     /**
      * Displays the button at the given size
      */
-    size:                  PropTypes.oneOf(['s', 'm', 'l']),
+    size:                  PropTypes.oneOf(['s', 'm', 'l', 'small', 'medium', 'large']),
     /**
      * The type of button to display.
      */
@@ -44,7 +44,7 @@ export default class Button extends React.Component {
   };
 
   static defaultProps = {
-    size:           'l',
+    size:           'large',
     type:           'primary',
     disabled:       false,
     onClickOutside: noop
@@ -55,13 +55,14 @@ export default class Button extends React.Component {
   };
 
   render() {
-    const { size, type, className, children, ...props } = this.props;
+    const { size, type, disabled, className, children, ...props } = this.props;
 
     return (
       <button
+        disabled={disabled}
         className={classNames(
           'dp-button',
-          `dp-button--${size}`,
+          `dp-button--${size[0]}`,
           `dp-button--${type}`,
           className
         )}
