@@ -1,16 +1,16 @@
-Buttons/SplitButton
-===================
-Renders a button with a left side and right side, where clicking the right side opens a popper.
+Buttons/DropdownButton
+======================
+Renders a button with a drop down icon and popper.
 
-![SplitButton example](../../assets/images/split-button-1.png)
+![DropdownButton example](../../assets/images/dropdown-button-1.png)
 
 ```jsx
-<SplitButton type="primary" size="large">
+<DropdownButton type="primary" size="large">
     Primary large
     <ButtonPopper>
         Hello!
     </ButtonPopper>
-</SplitButton>
+</DropdownButton>
 ```
 
 ### Props
@@ -25,27 +25,26 @@ One of "primary", "secondary", or "cta".
 Whether or not the button is disabled or not.
 
 **onClick={func}**  
-Called when the _left side_ of the button is clicked.
+Called when the button is clicked.
 
 ### CSS
-Adds `dp-split-button` to the root element.
-
+Adds `dp-dropdown-button` to the root element.
 
 ### Examples
 
 ```jsx
 import React from 'react';
 import { render } from 'react-dom';
-import { SplitButton, ButtonPopper } from 'Components/Buttons';
+import { DropdownButton, ButtonPopper } from 'Components/Buttons';
 
 const App = () => (
     <div>
-        <SplitButton type="primary" size="large">
+        <DropdownButton type="primary" size="large">
             Click Me
             <ButtonPopper>
                 I am popper.
             </ButtonPopper>
-        </SplitButton>
+        </DropdownButton>
     </form>
 );
 

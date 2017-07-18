@@ -14,7 +14,8 @@ import './components/search/select';
 import './components/buttons/button';
 import './components/buttons/icon';
 import './components/buttons/square';
-import './components/buttons/split_button';
+import './components/buttons/split';
+import './components/buttons/dropdown';
 import './components/columns/column';
 import './components/common/count';
 import './components/common/heading';
@@ -26,3 +27,4 @@ import './components/lists/list';
 import './components/lists/selectable';
 import './components/modal';
 import './components/urgency';
+

@@ -42,7 +42,7 @@ storiesOf('Buttons', module)
   }
   )
   .addWithInfo(
-    'Button with confirm',
+    'with confirm',
     'This is the basic usage of a input with the label passed as a property.',
     () => (
       <div>
