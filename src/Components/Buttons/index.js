@@ -3,6 +3,7 @@ import ConfirmButton from './ConfirmButton';
 import SplitButton from './SplitButton';
 import ButtonPopper from './ButtonPopper';
 import DropdownButton from './DropdownButton';
+import ProgressButton from './ProgressButton';
 
 export {
   Button,
@@ -10,4 +11,5 @@ export {
   SplitButton,
   ButtonPopper,
   DropdownButton,
+  ProgressButton,
 };
