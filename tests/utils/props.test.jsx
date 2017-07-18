@@ -45,3 +45,13 @@ test('childrenRecursiveMap', () => {
   });
   expect(mapped[0].props.children[0].props.children).toContain('FOO BAR');
 });
+
+test('propsHasChildType', () => {
+  const children = [
+    <Drawer heading="Column Drawer 1" />,
+    <Drawer heading="Column Drawer 2" />
+  ];
+
+  expect(props.propsHasChildType(children, Drawer)).toBe(true);
+  expect(props.propsHasChildType(children, List)).toBe(false);
+});

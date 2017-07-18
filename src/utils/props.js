@@ -47,3 +47,21 @@ export function childrenRecursiveMap(children, cb) {
     return cb(child);
   });
 }
+
+/**
+ * Returns a boolean indicating whether the given children contains a child of the given component type
+ *
+ * @param {Array} children The children to check
+ * @param {React.Component} childType The type to check
+ * @returns {boolean}
+ */
+export function propsHasChildType(children, childType) {
+  const childArray = React.Children.toArray(children);
+  for (let i = 0; i < childArray.length; i++) {
+    if (childArray[i].type !== undefined && childArray[i].type === childType) {
+      return true;
+    }
+  }
+
+  return false;
+}
