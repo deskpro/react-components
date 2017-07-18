@@ -17,10 +17,6 @@ export default class ConfirmButton extends React.Component {
      */
     message:               PropTypes.string,
     /**
-     * Whether or not the button is disabled or not.
-     */
-    disabled:              PropTypes.bool,
-    /**
      * Children to render.
      */
     children:              PropTypes.node,

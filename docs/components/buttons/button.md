@@ -6,13 +6,19 @@ Standard button.
 
 ```jsx
 <div>
-    <Button type="primary">Button</Button>
-    <Button type="secondary">Button</Button>
-    <Button type="cta">Button</Button>
+    <Button type="primary" size="large">Button</Button>
+    <Button type="secondary" size="large">Button</Button>
+    <Button type="cta" size="large">Button</Button>
 </div>
 ```
 
 ### Props
+
+**size={string}**  
+One of "large", "medium", or "small".
+
+**type={string}**  
+One of "primary", "secondary", or "cta".
 
 **disabled={bool}**  
 Whether or not the button is disabled or not.

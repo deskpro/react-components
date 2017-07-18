@@ -71,6 +71,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Standard button.
 * [Buttons/ConfirmButton](docs/components/buttons/confirm_button.md)  
   Button with click confirmation.
+* [Buttons/SplitButton](docs/components/buttons/split_button.md)  
+  Renders a button with a left side and right side, where clicking the right side opens a popper.
 
 ### Columns
 * [Columns/Column](docs/components/columns/column.md)  
