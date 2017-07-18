@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Label, SearchSelect } from 'Components/Forms';
+import { Input, Label, SearchInline } from 'Components/Forms';
 
 const results = [
   'Android feedback',
@@ -14,8 +14,8 @@ class Story extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
-      results
+      value:   '',
+      results: []
     };
   }
 
@@ -31,10 +31,10 @@ class Story extends React.Component {
     return (
       <div>
         <Label>SEARCH EXAMPLE</Label>
-        <SearchSelect
+        <SearchInline
           value={this.state.value}
           onChange={this.handleChange}
-          placeholder="Search or select"
+          placeholder="Search..."
           results={this.state.results}
         />
       </div>
@@ -42,10 +42,18 @@ class Story extends React.Component {
   }
 }
 
-storiesOf('Forms', module)
+storiesOf('Search', module)
   .addWithInfo(
-  'SearchSelect',
-  'SearchSelect component usage.',
-  () => <Story />
+  'Inline',
+  'SearchInline component usage.',
+  () => (
+    <div>
+      <Story />
+      <div style={{ marginTop: 10 }}>
+        <Label>FOO</Label>
+        <Input />
+      </div>
+    </div>
+  )
 )
 ;

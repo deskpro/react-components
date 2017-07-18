@@ -69,9 +69,9 @@ class Story extends React.Component {
   }
 }
 
-storiesOf('Forms', module)
+storiesOf('Search', module)
   .addWithInfo(
-  'SearchSubmit',
+  'Submit',
   'SearchSubmit component usage.',
   () => (
     <div>

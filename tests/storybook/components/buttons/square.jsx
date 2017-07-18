@@ -6,10 +6,10 @@ import Icon from 'Components/Icon';
 storiesOf('Buttons', module)
   .add('square', () => (
     <div>
-      <Button className="dp-button--square">
+      <Button type="square">
         <Icon name="plus" />
       </Button>&nbsp;
-      <Button className="dp-button--square">
+      <Button type="square">
         <Icon name="search" />
       </Button>
     </div>

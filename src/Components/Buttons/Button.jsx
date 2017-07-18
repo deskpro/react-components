@@ -16,7 +16,7 @@ export default class Button extends React.Component {
     /**
      * The type of button to display.
      */
-    type:                  PropTypes.oneOf(['primary', 'secondary', 'cta']),
+    type:                  PropTypes.oneOf(['primary', 'secondary', 'cta', 'square']),
     /**
      * Children to render.
      */

@@ -18,7 +18,7 @@ Standard button.
 One of "large", "medium", or "small".
 
 **type={string}**  
-One of "primary", "secondary", or "cta".
+One of "primary", "secondary", "cta", or "square".
 
 **disabled={bool}**  
 Whether or not the button is disabled or not.

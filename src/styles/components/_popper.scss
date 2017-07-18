@@ -13,6 +13,7 @@ $dp-popper-arrow-width: 8px;
   display: none;
   position: absolute;
   text-align: left;
+  z-index: $dp-zindex-top;
   background: $dp-greyscale-00;
   border-radius: $rad-size-m;
   border: $dp-popper-border-width solid $dp-sonic-primary;
