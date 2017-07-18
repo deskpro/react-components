@@ -10,7 +10,7 @@ storiesOf('Buttons', module)
     'Button',
     Button,
   {
-    size:     ['s', 'm', 'l'],
+    size:     ['small', 'medium', 'large'],
     children: ['Button', 'Long text button', <b>Bold content</b>]
   },
   {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
-import classNames from 'classnames';
 import { Button } from 'Components/Buttons';
 import Icon from 'Components/Icon';
 
@@ -13,16 +12,17 @@ storiesOf('Buttons', module)
   'with icon',
   Button,
   {
-    className: ['dp-button--s', 'dp-button--m', 'dp-button--l'],
-    children:  ['Button', 'Long text button', <b>Bold content</b>]
+    size:     ['small', 'medium', 'large'],
+    children: ['Button', 'Long text button', <b>Bold content</b>]
   },
   {
     CombinationRenderer({ Component, props }) {
-      const { className, children, ...elementProps } = props;
+      const { size, children, ...elementProps } = props;
       return (
         <div>
           <Component
-            className={classNames('dp-button--primary', className)}
+            type="primary"
+            size={size}
             disabled={boolean('Disabled', false)}
             {...elementProps}
           >
@@ -30,7 +30,8 @@ storiesOf('Buttons', module)
             {children}
           </Component>&nbsp;&nbsp;
           <Component
-            className={classNames('dp-button--secondary', className)}
+            type="secondary"
+            size={size}
             disabled={boolean('Disabled', false)}
             {...elementProps}
           >
@@ -38,7 +39,8 @@ storiesOf('Buttons', module)
             {children}
           </Component>&nbsp;&nbsp;
           <Component
-            className={classNames('dp-button--cta', className)}
+            type="cta"
+            size={size}
             disabled={boolean('Disabled', false)}
             {...elementProps}
           >
