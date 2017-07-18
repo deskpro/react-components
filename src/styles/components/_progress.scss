@@ -1,0 +1,40 @@
+/// Progress bar
+///
+
+.dp-progress {
+  &, * {
+    box-sizing: border-box;
+  }
+}
+
+.dp-progress--s {
+  height: 4px;
+}
+
+.dp-progress--m {
+  height: 12px;
+}
+
+.dp-progress--l {
+  height: 22px;
+}
+
+.dp-progress--primary .dp-progress__bar {
+  color: $dp-greyscale-00;
+  background-color: $dp-sonic-primary;
+}
+
+.dp-progress--cta .dp-progress__bar {
+  color: $dp-greyscale-00;
+  background-color: $dp-emerald-primary;
+}
+
+.dp-progress__bar {
+  height: 100%;
+  font-family: $primary-font;
+  font-weight: $pf-semi-bold;
+  font-size: $font-size-l;
+  text-align: center;
+  transition: width 0.2s ease-in-out;
+}
+

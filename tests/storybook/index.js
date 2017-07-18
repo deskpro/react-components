@@ -27,4 +27,4 @@ import './components/lists/list';
 import './components/lists/selectable';
 import './components/modal';
 import './components/urgency';
-
+import './components/progress';
