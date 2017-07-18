@@ -45,7 +45,7 @@ const App = () => (
                 I am popper.
             </ButtonPopper>
         </DropdownButton>
-    </form>
+    </div>
 );
 
 render(<App />, document.getElementById('mount'));
