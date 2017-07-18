@@ -6,6 +6,7 @@ A react-based set of components for building DeskPRO apps.
 * [Components](#components)
   * [Common](#common)
   * [Forms](#forms)
+  * [Buttons](#buttons)
   * [Columns](#columns)
 * [Utilities](#utilities)
   * [Props](#props)
@@ -64,6 +65,12 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Renders a button which opens a search form.
 * [Forms/Datepicker](docs/components/forms/datepicker.md)  
   Renders an input with drop down date picker.
+
+### Buttons
+* [Buttons/Button](docs/components/buttons/button.md)  
+  Standard button.
+* [Buttons/ConfirmButton](docs/components/buttons/confirm_button.md)  
+  Button with click confirmation.
 
 ### Columns
 * [Columns/Column](docs/components/columns/column.md)  
