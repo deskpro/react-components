@@ -77,6 +77,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Renders a button with a left side and right side, where clicking the right side opens a popper.
 * [Buttons/DropdownButton](docs/components/buttons/dropdown_button.md)  
   Renders a button with a drop down icon and popper.
+* [Buttons/ProgressButton](docs/components/buttons/progress_button.md)  
+  Renders a button which contains a progress bar.
 
 ### Columns
 * [Columns/Column](docs/components/columns/column.md)  

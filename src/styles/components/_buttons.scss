@@ -258,3 +258,61 @@
 .dp-button--l.dp-dropdown-button .dp-icon {
   margin-left: 15px;
 }
+
+
+/// Progress Button
+///
+
+.dp-progress-button {
+  @extend .dp-button;
+  @extend .dp-button--secondary;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+  background-color: $dp-greyscale-150;
+  border-left: 1px solid $dp-greyscale-300;
+  font-family: $primary-font;
+  font-size: $font-size-s;
+  font-weight: $pf-semi-bold;
+  color: $dp-greyscale-850;
+
+  &, * {
+    box-sizing: border-box;
+  }
+
+  .dp-progress {
+    background-color: $dp-greyscale-00;
+    border-bottom-left-radius: $rad-size-m-l;
+    border-bottom-right-radius: $rad-size-m-l;
+  }
+}
+
+
+
+.dp-progress-button--s {
+  height: 26px;
+
+  .dp-progress-button__label {
+    padding: 4px 6px;
+  }
+
+  .dp-progress {
+    height: 2px;
+  }
+}
+
+.dp-progress-button--m {
+  height: 28px;
+
+  .dp-progress-button__label {
+    padding: 4px 8px;
+  }
+}
+
+.dp-progress-button--l {
+  height: 36px;
+
+  .dp-progress-button__label {
+    padding: 8px 12px;
+  }
+}
