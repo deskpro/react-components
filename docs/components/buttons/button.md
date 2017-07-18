@@ -6,9 +6,9 @@ Standard button.
 
 ```jsx
 <div>
-    <Button className="dp-button--primary">Button</Button>
-    <Button className="dp-button--secondary">Button</Button>
-    <Button className="dp-button--cta">Button</Button>
+    <Button type="primary">Button</Button>
+    <Button type="secondary">Button</Button>
+    <Button type="cta">Button</Button>
 </div>
 ```
 
@@ -30,8 +30,8 @@ import Icon from 'Components/Icon';
 
 const App = () => (
     <div>
-        <Button>Button</Button>
-        <Button>
+        <Button size="l">Button</Button>
+        <Button size="m">
             <Icon name="bug" />
             Button with icon
         </Button>

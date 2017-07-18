@@ -10,6 +10,14 @@ import { objectKeyFilter } from 'utils/objects';
 export default class Button extends React.Component {
   static propTypes = {
     /**
+     * Displays the button at the given size
+     */
+    size:                  PropTypes.oneOf(['s', 'm', 'l']),
+    /**
+     * The type of button to display.
+     */
+    type:                  PropTypes.oneOf(['primary', 'secondary', 'cta']),
+    /**
      * Children to render.
      */
     children:              PropTypes.node,
@@ -36,6 +44,8 @@ export default class Button extends React.Component {
   };
 
   static defaultProps = {
+    size:           'l',
+    type:           'primary',
     disabled:       false,
     onClickOutside: noop
   };
@@ -45,11 +55,16 @@ export default class Button extends React.Component {
   };
 
   render() {
-    const { className, children, ...props } = this.props;
+    const { size, type, className, children, ...props } = this.props;
 
     return (
       <button
-        className={classNames('dp-button', className)}
+        className={classNames(
+          'dp-button',
+          `dp-button--${size}`,
+          `dp-button--${type}`,
+          className
+        )}
         {...objectKeyFilter(props, Button.propTypes)}
       >
         {children}
