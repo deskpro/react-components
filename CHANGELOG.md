@@ -1,3 +1,21 @@
+## v0.5.0 - 2017-07-18
+
+* [FEATURE] Adds component code generator
+* [FEATURE] Adds SelectableList component
+* [FEATURE] Adds arrow key functionality to SearchButton
+* [FEATURE] Adds the Highlighter component
+* [FEATURE] Adds SplitButton component
+* [MINOR] Renames string utility functions
+* [MINOR] Adds util functions objectForEach() and objectMap()
+* [MINOR] Fixes linting errors
+* [MINOR] Updates SearchButton docs with complete example
+* [MINOR] Adds story for button with icon
+* [MINOR] Adds util props/propsHasChildType()
+* [MINOR] Adds Button props "size" and "type"
+* [MINOR] Switch Label and Tag to PureComponents
+* [BREAKING CHANGE] Adds Components/Buttons namespace
+* [BREAKING CHANGE] Update dependency to React 15.6
+
 ## v0.4.6 - 2017-07-14
 
 * [MINOR] Adds utility functions

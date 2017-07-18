@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Icon from 'Components/Icon';
 import { objectKeyFilter } from 'utils/objects';
 
-class Tag extends React.Component {
+class Tag extends React.PureComponent {
   static propTypes = {
     className: PropTypes.string,
     editable:  PropTypes.bool,
