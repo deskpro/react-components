@@ -117,7 +117,7 @@ export default class SearchSubmit extends Input {
         style={style}
       >
         <Input ref={ref => (this.inputRef = ref)} {...inputProps} />
-        <Button className="dp-button--icon" onClick={this.handleClick}>
+        <Button className="dp-button--square" onClick={this.handleClick}>
           <Icon name="search" />
         </Button>
         <Popper

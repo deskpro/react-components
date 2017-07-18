@@ -220,7 +220,7 @@ export default class SearchButton extends Input {
         <Button
           ref={ref => (this.buttonRef = ref)}
           className={classNames(
-            'dp-button--icon',
+            'dp-button--square',
             {
               'dp-button--active': opened
             }
