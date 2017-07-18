@@ -5,8 +5,8 @@ import classNames from 'classnames';
 import noop from 'utils/noop';
 import { objectKeyFilter } from 'utils/objects';
 import { List, ListElement, Popper } from 'Components/Common';
+import { Button } from 'Components/Buttons';
 import Input from 'Components/Forms/Input';
-import Button from 'Components/Button';
 import Icon from 'Components/Icon';
 
 /**

@@ -7,8 +7,8 @@ import { childrenRecursiveMap } from 'utils/props';
 import { objectKeyFilter } from 'utils/objects';
 import { stringInterpolate } from 'utils/strings';
 import { ListElement, SelectableList, Popper, Scrollbar, Highlighter } from 'Components/Common';
+import { Button } from 'Components/Buttons';
 import Input from 'Components/Forms/Input';
-import Button from 'Components/Button';
 import Icon from 'Components/Icon';
 
 /**
