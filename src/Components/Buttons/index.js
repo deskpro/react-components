@@ -1,11 +1,13 @@
 import Button from './Button';
 import ConfirmButton from './ConfirmButton';
 import SplitButton from './SplitButton';
-import SplitPopper from './SplitPopper';
+import ButtonPopper from './ButtonPopper';
+import DropdownButton from './DropdownButton';
 
 export {
   Button,
   ConfirmButton,
   SplitButton,
-  SplitPopper,
+  ButtonPopper,
+  DropdownButton,
 };

@@ -73,6 +73,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Button with click confirmation.
 * [Buttons/SplitButton](docs/components/buttons/split_button.md)  
   Renders a button with a left side and right side, where clicking the right side opens a popper.
+* [Buttons/DropdownButton](docs/components/buttons/dropdown_button.md)  
+  Renders a button with a drop down icon and popper.
 
 ### Columns
 * [Columns/Column](docs/components/columns/column.md)  

@@ -183,10 +183,6 @@
 .dp-split-button {
   display: inline-block;
 
-  &, * {
-    box-sizing: border-box;
-  }
-
   .dp-popper {
     padding: 4px;
   }
@@ -235,4 +231,30 @@
     color: transparentize($dp-greyscale-00, 0.1);
     background-color: $dp-emerald-secondary;
   }
+}
+
+/// Dropdown Button
+///
+
+.dp-dropdown-button {
+
+  .dp-icon {
+    margin-right: 0;
+  }
+
+  .dp-popper {
+    padding: 4px;
+  }
+}
+
+.dp-button--s.dp-dropdown-button .dp-icon {
+  margin-left: 7px;
+}
+
+.dp-button--m.dp-dropdown-button .dp-icon {
+  margin-left: 9px;
+}
+
+.dp-button--l.dp-dropdown-button .dp-icon {
+  margin-left: 15px;
 }
