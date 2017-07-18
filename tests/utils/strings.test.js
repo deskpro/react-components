@@ -25,15 +25,15 @@ test('stringEscapeHTML', () => {
 test('stringHighlight', () => {
   const word = 'foo';
   const data = {
-    foo:       '<i>foo</i>',
-    Foo:       '<i>Foo</i>',
-    'foo bar': '<i>foo</i> bar',
-    'Foo bar': '<i>Foo</i> bar'
+    foo:       '<i class="dp-highlighted">foo</i>',
+    Foo:       '<i class="dp-highlighted">Foo</i>',
+    'foo bar': '<i class="dp-highlighted">foo</i> bar',
+    'Foo bar': '<i class="dp-highlighted">Foo</i> bar'
   };
   objectForEach(data, (val, key) => {
     expect(strings.stringHighlight(key, word)).toBe(val);
   });
-  expect(strings.stringHighlight('foo', 'foo', 'strong')).toBe('<strong>foo</strong>');
+  expect(strings.stringHighlight('foo', 'foo', 'strong')).toBe('<strong class="dp-highlighted">foo</strong>');
 });
 
 test('stringInterpolate', () => {
