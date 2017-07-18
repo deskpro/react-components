@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Label extends React.Component {
+class Label extends React.PureComponent {
   static propTypes = {
     htmlFor:  PropTypes.string,
     required: PropTypes.bool,

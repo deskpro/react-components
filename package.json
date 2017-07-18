@@ -1,6 +1,6 @@
 {
   "name": "deskpro-components",
-  "version": "0.4.6",
+  "version": "0.5.0",
   "description": "DeskPRO Components",
   "homepage": {
     "url": "https://github.com/deskpro/deskpro-components"
@@ -71,7 +71,6 @@
     "lint-staged": "^4.0.1",
     "node-sass": "4.5.2",
     "postcss-loader": "2.0.5",
-    "react-addons-test-utils": "15.3.2",
     "react-storybook-addon-props-combinations": "^0.4.1",
     "rimraf": "2.6.1",
     "sass-loader": "6.0.4",
@@ -89,10 +88,10 @@
     "font-awesome": "^4.7.0",
     "popper.js": "^1.10.6",
     "prop-types": "^15.5.10",
-    "react": "15.3.2",
+    "react": "^15.6.1",
     "react-bootstrap-multiselect": "git+https://github.com/jducro/react-bootstrap-multiselect.git#deskpro",
     "react-custom-scrollbars": "^4.1.2",
-    "react-dom": "15.3.2",
+    "react-dom": "^15.6.1",
     "react-onclickoutside": "5.8.3",
     "react-select": "^1.0.0-rc.5",
     "react-svg-inline": "^2.0.0",
