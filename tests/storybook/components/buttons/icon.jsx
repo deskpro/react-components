@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { Button } from 'Components/Buttons';
 import Icon from 'Components/Icon';
-
 /* eslint-disable react/prop-types*/
 
 storiesOf('Buttons', module)
