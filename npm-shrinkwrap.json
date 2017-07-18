@@ -98,9 +98,9 @@
       "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
     },
     "popper.js": {
-      "version": "1.10.6",
-      "from": "popper.js@>=1.10.6 <2.0.0",
-      "resolved": "https://registry.npmjs.org/popper.js/-/popper.js-1.10.6.tgz"
+      "version": "1.10.8",
+      "from": "popper.js@1.10.8",
+      "resolved": "https://registry.npmjs.org/popper.js/-/popper.js-1.10.8.tgz"
     },
     "prefix-style": {
       "version": "2.0.1",
@@ -155,9 +155,9 @@
       "resolved": "https://registry.npmjs.org/react-input-autosize/-/react-input-autosize-1.1.4.tgz"
     },
     "react-onclickoutside": {
-      "version": "5.8.3",
-      "from": "react-onclickoutside@5.8.3",
-      "resolved": "https://registry.npmjs.org/react-onclickoutside/-/react-onclickoutside-5.8.3.tgz"
+      "version": "6.4.0",
+      "from": "react-onclickoutside@6.4.0",
+      "resolved": "https://registry.npmjs.org/react-onclickoutside/-/react-onclickoutside-6.4.0.tgz"
     },
     "react-select": {
       "version": "1.0.0-rc.5",
