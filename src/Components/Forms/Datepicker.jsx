@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
+import { cssMatchComputedWidth } from 'utils/css';
 import { dateNumberOfDaysInMonth, dateCalendarDays, DAYS, MONTHS } from 'utils/dates';
 import { objectKeyFilter } from 'utils/objects';
 import { Popper } from 'Components/Common';
@@ -49,7 +50,9 @@ export default class Datepicker extends React.Component {
     date:        new Date(),
     days:        DAYS,
     months:      MONTHS,
-    onSelect:    noop
+    onSelect:    noop,
+    className:   '',
+    style:       {}
   };
 
   constructor(props) {
@@ -91,7 +94,7 @@ export default class Datepicker extends React.Component {
    * Sets the width of the popper to match the input width
    */
   updatePopperWidth = () => {
-    this.popperDOM.style.width = window.getComputedStyle(this.inputDOM, null).width;
+    cssMatchComputedWidth(this.inputDOM, this.popperDOM);
   };
 
   /**
@@ -194,6 +197,7 @@ export default class Datepicker extends React.Component {
     const { months, days } = this.props;
     const date = this.state.date;
 
+    /* eslint-disable react/no-array-index-key */
     return (
       <div className="dp-datepicker__calendar">
         <div className="dp-datepicker__calendar__month">

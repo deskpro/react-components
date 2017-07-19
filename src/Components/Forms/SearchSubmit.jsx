@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
+import { cssMatchComputedWidth } from 'utils/css';
 import { objectKeyFilter } from 'utils/objects';
 import { List, ListElement, Popper } from 'Components/Common';
 import { Button } from 'Components/Buttons';
@@ -56,19 +56,17 @@ export default class SearchSubmit extends Input {
 
   componentDidMount() {
     this.inputDOM = this.inputRef.input;
-    this.updatePopperWidth();
-    window.addEventListener('resize', this.updatePopperWidth);
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updatePopperWidth);
+  componentDidUpdate() {
+    this.updatePopperWidth();
   }
 
   /**
    * Sets the width of the popper to match the input width
    */
   updatePopperWidth = () => {
-    ReactDOM.findDOMNode(this.popperRef).style.width = window.getComputedStyle(this.rootRef, null).width;
+    cssMatchComputedWidth(this.rootRef, this.popperRef);
   };
 
   handleClick = () => {
@@ -87,6 +85,7 @@ export default class SearchSubmit extends Input {
     }
 
     /* eslint-disable react/jsx-no-bind */
+    /* eslint-disable react/no-array-index-key */
     return (
       <List ref={ref => (this.resultsRef = ref)} className="dp-search-submit__results">
         {results.map((result, i) => (

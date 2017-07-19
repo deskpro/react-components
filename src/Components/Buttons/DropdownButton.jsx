@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
 import { objectKeyFilter } from 'utils/objects';
+import { cssMatchComputedWidth } from 'utils/css';
 import Button from 'Components/Buttons/Button';
 import ButtonPopper from 'Components/Buttons/ButtonPopper';
 import { Popper } from 'Components/Common';
@@ -29,9 +30,12 @@ export default class DropdownButton extends React.Component {
   };
 
   static defaultProps = {
-    size:    'large',
-    type:    'primary',
-    onClick: noop
+    size:      'large',
+    type:      'primary',
+    onClick:   noop,
+    className: '',
+    children:  [],
+    style:     {}
   };
 
   constructor(props) {
@@ -51,7 +55,7 @@ export default class DropdownButton extends React.Component {
    * Sets the width of the popper to match the button width
    */
   updatePopperWidth = () => {
-    this.popperDOM.style.width = window.getComputedStyle(this.rootDOM, null).width;
+    cssMatchComputedWidth(this.rootRef, this.popperRef);
   };
 
   handleClick = (e) => {
