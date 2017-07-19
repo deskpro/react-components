@@ -1,3 +1,8 @@
+## v0.5.2 - 2017-07-19
+
+* [MINOR] Adds css and dom utilities
+* [FIX] Fix design issue and waring on CustomSelect
+
 ## v0.5.1 - 2017-07-19
 
 * [FEATURE] Adds DropdownButton component
