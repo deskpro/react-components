@@ -10,25 +10,45 @@ class CustomSelectContent extends React.Component {
     /**
      * Children to render.
      */
-    children:              PropTypes.node.isRequired,
+    children:                PropTypes.node.isRequired,
     /**
      * Called when the user clicks outside of the button.
      */
-    onClickOutside:        PropTypes.func,
+    onClickOutside:          PropTypes.func,
     /**
      * Disables outside click listening by explicitly removing the event listening bindings.
      */
-    disableOnClickOutside: PropTypes.func,
+    disableOnClickOutside:   PropTypes.func,
     /**
      * Enables outside click listening by setting up the event listening bindings.
      */
-    enableOnClickOutside:  PropTypes.func
+    enableOnClickOutside:    PropTypes.func,
+    /**
+     * Whether the event should be propagated
+     */
+    stopPropagation:         PropTypes.bool,
+    /**
+     * Whether the event should prevent default behaviour
+     */
+    preventDefault:          PropTypes.bool,
+    /**
+     * Property passed by OnClickOutside HOC
+     */
+    eventTypes:              PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+    /**
+     * Property passed by OnClickOutside HOC
+     */
+    outsideClickIgnoreClass: PropTypes.string,
   };
 
   static defaultProps = {
-    onClickOutside:        noop,
-    disableOnClickOutside: noop,
-    enableOnClickOutside:  noop,
+    onClickOutside:          noop,
+    disableOnClickOutside:   noop,
+    enableOnClickOutside:    noop,
+    stopPropagation:         false,
+    preventDefault:          false,
+    eventTypes:              ['mousedown', 'touchstart'],
+    outsideClickIgnoreClass: '',
   };
 
   constructor(props) {

@@ -131,8 +131,10 @@ $select-input-border-color: $dp-greyscale-300;
     }
   }
   > .dp-select__content {
+    z-index: $dp-zindex-top;
     border-radius: $rad-size-m;
     border: 1px solid $dp-sonic-primary;
+    background-color: $dp-greyscale-00;
     position: absolute;
     padding: 6px 6px;
     width: auto;
