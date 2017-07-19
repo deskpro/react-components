@@ -23,6 +23,7 @@ class Input extends React.Component {
     disabled:   PropTypes.bool,
     readonly:   PropTypes.bool,
     required:   PropTypes.bool,
+    invisible:  PropTypes.bool,
     onChange:   PropTypes.func,
     onFocus:    PropTypes.func,
     onBlur:     PropTypes.func,
@@ -101,7 +102,7 @@ class Input extends React.Component {
   };
 
   render() {
-    const { className, validated, validating, icon, iconRight, prefix, suffix, ...props } = this.props;
+    const { className, validated, validating, icon, iconRight, prefix, suffix, invisible, ...props } = this.props;
     return (
       <div
         className={
@@ -111,6 +112,7 @@ class Input extends React.Component {
             {
               'dp-input--validating':       validating,
               'dp-input--validated':        validated,
+              'dp-input--invisible':        invisible,
               'dp-input--with-icon':        icon && !iconRight,
               'dp-input--with-icon--right': !icon && iconRight,
               'dp-input--with-prefix':      prefix,

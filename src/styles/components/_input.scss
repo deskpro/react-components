@@ -133,6 +133,23 @@
   }
 }
 /******************************
+    Invisible border
+*******************************/
+.dp-input--invisible input {
+  @include placeholder {
+    font-style: italic;
+    color: $dp-greyscale-850;
+  }
+}
+
+.dp-input--invisible input:not(:focus) {
+  border: 0;
+  &:hover {
+    @include border-radius("m");
+    background-color: $dp-morning-sky;
+  }
+}
+/******************************
     Input disabled
 *******************************/
 .dp-input input:disabled,

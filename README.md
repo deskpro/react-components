@@ -63,6 +63,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Highlights a word or phrase.
 
 ### Forms
+* [Forms/Input](docs/components/forms/input.md)  
+  Standard form input element.
 * [Forms/HiddenFields](docs/components/forms/hidden_fields.md)  
   Wraps optional form fields which may be shown or hidden.
 * [Forms/SearchInline](docs/components/forms/search_inline.md)  

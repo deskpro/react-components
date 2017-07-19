@@ -82,6 +82,22 @@ storiesOf('Forms', module)
           readOnly={boolean('Readonly', false)}
           iconRight="calendar"
         /><br />
+        <h3>Visibility</h3>
+        <Label>Invisible border</Label>
+        <Input
+          value="Support Team"
+          disabled={boolean('Disabled', false)}
+          readOnly={boolean('Readonly', false)}
+          icon="comment"
+          invisible
+        /><br /><br />
+        <Label>With placeholder</Label>
+        <Input
+          placeholder="Add note"
+          disabled={boolean('Disabled', false)}
+          readOnly={boolean('Readonly', false)}
+          invisible
+        /><br />
         <h3>Prefix / Suffix</h3>
         <Label>Prefix</Label>
         <Input
