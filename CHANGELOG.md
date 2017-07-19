@@ -1,3 +1,19 @@
+## v0.5.1 - 2017-07-19
+
+* [FEATURE] Adds DropdownButton component
+* [FEATURE] Adds Progress component
+* [FEATURE] Adds ProgressButton component
+* [FEATURE] Adds TranslateButton component and numberRandom() util
+* [FEATURE] Adds Tabs component
+* [FEATURE] Adds CustomSelect Component
+* [MINOR] Adds z-index to popper
+* [MINOR] Adds "square" button type prop value
+* [MINOR] Moves tests for search components into "Search" story
+* [MINOR] Update dependencies
+* [FIX] Fixes button with icon test
+* [FIX] Fix warning on ConfirmButton
+* [FIX] Fix eslint errors on generator templates
+
 ## v0.5.0 - 2017-07-18
 
 * [FEATURE] Adds component code generator
