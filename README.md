@@ -152,6 +152,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Returns the number of days in the given date.
 * [dates/dateCalendarDays](docs/utils/dates/date_calendar_days.md)  
   Returns an array of all the days in the given date
+* [dates/dateToMonth](docs/utils/dates/date_to_month.md)  
+  Returns the name of the month for the given date.
 
 ### DOM
 * [dom/domIsReactClassComponent](docs/utils/dom/dom_is_react_class_component.md)  
