@@ -103,6 +103,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
 ### Numbers
 * [numbers/numberFormat](docs/utils/numbers/number_format.md)  
   Formats a number to include commas (or any separator) in the thousandths place.
+* [numbers/numberRandom](docs/utils/numbers/number_random.md)  
+  Returns a random whole number between a minimum and maximum number.
 
 ### Strings
 * [strings/stringUpperFirst](docs/utils/strings/string_upper_first.md)  
