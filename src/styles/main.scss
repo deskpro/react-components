@@ -7,7 +7,8 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
 @import "base/zindex";
 @import "base/mixins";
 @import "base/icons";
-@import "components/_highlighted";
+@import "components/panes";
+@import "components/highlighted";
 @import "components/colours";
 @import "components/heading";
 @import "components/buttons";
@@ -25,6 +26,7 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
 @import "components/scrollbar";
 @import "components/urgencies";
 @import "components/progress";
+@import "components/tabs";
 
 .deskpro-styleguide {
   @import "../styleguide/styleguide.scss";

@@ -30,3 +30,4 @@ import './components/lists/selectable';
 import './components/modal';
 import './components/urgency';
 import './components/progress';
+import './components/tabs/tabs';
