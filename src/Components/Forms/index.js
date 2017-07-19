@@ -1,4 +1,6 @@
 import Checkbox from './Checkbox';
+import CustomSelect from './CustomSelect';
+import Datepicker from './Datepicker';
 import Input from './Input';
 import HiddenFields from './HiddenFields';
 import Label from './Label';
@@ -11,10 +13,11 @@ import SearchSelect from './SearchSelect';
 import Tag from './Tag';
 import TagInput from './TagInput';
 import TagSet from './TagSet';
-import Datepicker from './Datepicker';
 
 export {
   Checkbox,
+  CustomSelect,
+  Datepicker,
   Input,
   HiddenFields,
   Label,
@@ -27,5 +30,4 @@ export {
   Tag,
   TagInput,
   TagSet,
-  Datepicker,
 };

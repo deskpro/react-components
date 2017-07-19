@@ -2,6 +2,7 @@ import '../../src/styles/main.scss';
 import './components/avatar';
 import './components/forms/input';
 import './components/forms/checkbox';
+import './components/forms/custom_select';
 import './components/forms/select';
 import './components/forms/tag';
 import './components/forms/radio';
