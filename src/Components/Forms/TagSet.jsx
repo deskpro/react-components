@@ -50,6 +50,16 @@ class TagSet extends React.Component {
   };
 
   /**
+   * Handles pressing ENTER in the search box
+   */
+  handleInputKeyDown = (e) => {
+    if (e.keyCode === 13) {
+      this.addTag(e.target.value);
+      this.searchRef.close();
+    }
+  };
+
+  /**
    * Adds the given tag to tags and pass result to onChange props
    */
   addTag = (tag) => {
