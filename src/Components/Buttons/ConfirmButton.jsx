@@ -19,7 +19,7 @@ export default class ConfirmButton extends React.Component {
     /**
      * Children to render.
      */
-    children:              PropTypes.node,
+    children:              PropTypes.node.isRequired,
     /**
      * Disables outside click listening by explicitly removing the event listening bindings.
      */
@@ -35,9 +35,11 @@ export default class ConfirmButton extends React.Component {
   };
 
   static defaultProps = {
-    disabled: false,
-    message:  'Are you sure?',
-    onClick:  noop
+    disabled:              false,
+    message:               'Are you sure?',
+    onClick:               noop,
+    disableOnClickOutside: noop,
+    enableOnClickOutside:  noop,
   };
 
   constructor(props) {
@@ -45,18 +47,22 @@ export default class ConfirmButton extends React.Component {
     this.state = {
       confirm: false
     };
+    this.getLabel      = this.getLabel.bind(this);
+    this.handleClick   = this.handleClick.bind(this);
+    this.clickOutside  = this.clickOutside.bind(this);
   }
 
-  getLabel = () => {
+  getLabel() {
     if (this.state.confirm) {
       return this.props.message;
     }
     return this.props.children;
-  };
+  }
 
-  handleClick = (e) => {
+  handleClick(e) {
+    const { disabled } = this.props;
     e.preventDefault();
-    if (!this.props.disabled) {
+    if (!disabled) {
       if (this.state.confirm) {
         this.props.onClick(e);
         this.setState({
@@ -68,13 +74,13 @@ export default class ConfirmButton extends React.Component {
         });
       }
     }
-  };
+  }
 
-  clickOutside = () => {
+  clickOutside() {
     this.setState({
       confirm: false
     });
-  };
+  }
 
   render() {
     return (
