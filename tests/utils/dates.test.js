@@ -11,3 +11,9 @@ test('dateCalendarDays', () => {
   expect(days[0]).toBe(-1);
   expect(days[34]).toBe(33);
 });
+
+test('dateToMonth', () => {
+  const date = new Date(2017, 6, 4);
+  expect(dates.dateToMonth(date)).toBe('July');
+  expect(dates.dateToMonth(date, true)).toBe('Jul');
+});

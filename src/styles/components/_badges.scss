@@ -1,0 +1,53 @@
+/// Date Badge
+///
+
+.dp-date-badge {
+  @include border-radius("m");
+  width: 24px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid $dp-greyscale-550;
+
+  &, & * {
+    box-sizing: border-box;
+  }
+}
+
+.dp-date-badge--pill {
+  @include border-radius("m");
+  width: 42px;
+  display: inline-flex;
+  align-items: center;
+
+  .dp-date-badge__month {
+    width: 24px;
+  }
+
+  .dp-date-badge__day {
+    width: 18px;
+  }
+}
+
+.dp-date-badge__month {
+  display: flex;
+  justify-content: center;
+  padding: 1px;
+  background-color: $dp-greyscale-550;
+  font-family: $primary-font;
+  font-size: $font-size-s;
+  font-weight: $pf-regular;
+  line-height: $font-size-s;
+  color: $dp-greyscale-00;
+  text-transform: uppercase;
+}
+
+.dp-date-badge__day {
+  display: flex;
+  justify-content: center;
+  padding: 1px;
+  font-family: $primary-font;
+  font-size: $font-size-s;
+  font-weight: $pf-regular;
+  line-height: $font-size-s;
+  color: $dp-greyscale-550;
+}
