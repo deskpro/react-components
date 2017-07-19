@@ -39,3 +39,19 @@
     @warn "Border radius size `#{$size}` is invalid.";
   }
 }
+
+/// Cross browser styling of an input placeholder
+///
+/// @example scss - Basic Usage
+///   @include placeholder {
+///     font-style:italic;
+///     color: $dp-greyscale-850;
+///   }
+///
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
