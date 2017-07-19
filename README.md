@@ -70,6 +70,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Renders a button which opens a search form.
 * [Forms/Datepicker](docs/components/forms/datepicker.md)  
   Renders an input with drop down date picker.
+* [Forms/CustomSelect](docs/components/forms/custom_select.md)  
+  Renders a custom select input.
 
 ### Buttons
 * [Buttons/Button](docs/components/buttons/button.md)  

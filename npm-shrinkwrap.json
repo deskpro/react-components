@@ -72,11 +72,6 @@
       "from": "isomorphic-fetch@>=2.1.1 <3.0.0",
       "resolved": "https://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz"
     },
-    "jquery": {
-      "version": "3.2.1",
-      "from": "jquery@>=2.2.0",
-      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.2.1.tgz"
-    },
     "js-tokens": {
       "version": "3.0.1",
       "from": "js-tokens@>=3.0.0 <4.0.0",
@@ -133,11 +128,6 @@
       "version": "15.6.1",
       "from": "react@15.6.1",
       "resolved": "https://registry.npmjs.org/react/-/react-15.6.1.tgz"
-    },
-    "react-bootstrap-multiselect": {
-      "version": "2.4.1",
-      "from": "git+https://github.com/jducro/react-bootstrap-multiselect.git#deskpro",
-      "resolved": "git+https://github.com/jducro/react-bootstrap-multiselect.git#eb9d708dd87ef46fc757a10ca95ee00d896a5146"
     },
     "react-custom-scrollbars": {
       "version": "4.1.2",

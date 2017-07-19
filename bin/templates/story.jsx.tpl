@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import ${classname} from 'Components/${namespace}/${classname}';
 
-storiesOf('${classname}', module)
+storiesOf('${namespace}', module)
   .addDecorator(withKnobs)
   .add('${classname}', () => (
     <div>

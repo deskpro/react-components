@@ -15,7 +15,7 @@ export default class ${classname} extends React.Component {
     /**
      * Children to render.
      */
-    children: PropTypes.node
+    children:  PropTypes.node
   };
 
   static defaultProps = {
@@ -36,6 +36,6 @@ export default class ${classname} extends React.Component {
       >
         {children}
       </div>
-    )
+    );
   }
 }

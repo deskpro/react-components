@@ -12,42 +12,65 @@ export default class Button extends React.Component {
     /**
      * Displays the button at the given size
      */
-    size:                  PropTypes.oneOf(['s', 'm', 'l', 'small', 'medium', 'large']),
+    size:                    PropTypes.oneOf(['s', 'm', 'l', 'small', 'medium', 'large']),
     /**
      * The type of button to display.
      */
-    type:                  PropTypes.oneOf(['primary', 'secondary', 'cta', 'square']),
+    type:                    PropTypes.oneOf(['primary', 'secondary', 'cta', 'square']),
     /**
      * Children to render.
      */
-    children:              PropTypes.node,
+    children:                PropTypes.node.isRequired,
     /**
      * CSS classes to apply to the element.
      */
-    className:             PropTypes.string,
+    className:               PropTypes.string,
     /**
      * Whether or not the button is disabled or not.
      */
-    disabled:              PropTypes.bool,
+    disabled:                PropTypes.bool,
     /**
      * Called when the user clicks outside of the button.
      */
-    onClickOutside:        PropTypes.func,
+    onClickOutside:          PropTypes.func,
     /**
      * Disables outside click listening by explicitly removing the event listening bindings.
      */
-    disableOnClickOutside: PropTypes.func,
+    disableOnClickOutside:   PropTypes.func,
     /**
      * Enables outside click listening by setting up the event listening bindings.
      */
-    enableOnClickOutside:  PropTypes.func
+    enableOnClickOutside:    PropTypes.func,
+    /**
+     * Whether the event should be propagated
+     */
+    stopPropagation:         PropTypes.bool,
+    /**
+     * Whether the event should prevent default behaviour
+     */
+    preventDefault:          PropTypes.bool,
+    /**
+     * Property passed by OnClickOutside HOC
+     */
+    eventTypes:              PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+    /**
+     * Property passed by OnClickOutside HOC
+     */
+    outsideClickIgnoreClass: PropTypes.string,
   };
 
   static defaultProps = {
-    size:           'large',
-    type:           'primary',
-    disabled:       false,
-    onClickOutside: noop
+    size:                    'large',
+    className:               '',
+    type:                    'primary',
+    disabled:                false,
+    onClickOutside:          noop,
+    disableOnClickOutside:   noop,
+    enableOnClickOutside:    noop,
+    stopPropagation:         false,
+    preventDefault:          false,
+    eventTypes:              ['mousedown', 'touchstart'],
+    outsideClickIgnoreClass: '',
   };
 
   handleClickOutside = (event) => {
