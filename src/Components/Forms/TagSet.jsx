@@ -6,12 +6,13 @@ import { Tag, SearchButton } from 'Components/Forms';
 class TagSet extends React.Component {
   static propTypes = {
     tags:     PropTypes.array.isRequired,
-    options:  PropTypes.oneOf([PropTypes.array, PropTypes.object]),
+    options:  PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
     editable: PropTypes.bool,
     onChange: PropTypes.func,
   };
   static defaultProps = {
     editable: true,
+    options:  [],
     onChange()   {}
   };
 
@@ -70,8 +71,8 @@ class TagSet extends React.Component {
   render() {
     const { tags, editable } = this.props;
     const { results } = this.state;
-    const content = tags.map((tag, key) =>
-      <Tag key={key} editable={editable} onRemove={this.removeTag}>{tag}</Tag>
+    const content = tags.map(tag =>
+      <Tag key={tag} editable={editable} onRemove={this.removeTag}>{tag}</Tag>
     );
     return (
       <div className="dp-tag-set">
