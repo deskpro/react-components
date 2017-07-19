@@ -16,6 +16,8 @@ A react-based set of components for building DeskPRO apps.
   * [Regexp](#regexp)
   * [Objects](#objects)
   * [Dates](#dates)
+  * [DOM](#dom)
+  * [CSS](#css)
 * [License](#license)
 
 
@@ -143,6 +145,20 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Returns the number of days in the given date.
 * [dates/dateCalendarDays](docs/utils/dates/date_calendar_days.md)  
   Returns an array of all the days in the given date
+
+### DOM
+* [dom/domIsReactClassComponent](docs/utils/dom/dom_is_react_class_component.md)  
+  Tests whether an object is a class which extends React.Component.
+* [dom/domIsReactFunctionComponent](docs/utils/dom/dom_is_react_function_component.md)  
+  Tests whether an object is a stateless functional component.
+* [dom/domIsReactComponent](docs/utils/dom/dom_is_react_component.md)  
+  Tests whether an object is any type of React component.
+* [dom/domIsElement](docs/utils/dom/dom_is_element.md)  
+  Tests whether an object is a valid DOM or React element.
+
+### CSS
+* [css/cssMatchComputedWidth](docs/utils/css/css_match_computed_width.md)  
+  Sets the width of one element to the computed width of another.
 
 ### License
 The library is released under the BSD License. See [LICENSE](LICENSE) for more information.

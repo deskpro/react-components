@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
+import { cssMatchComputedWidth } from 'utils/css';
 import { objectKeyFilter } from 'utils/objects';
 import { List, ListElement, Highlighter } from 'Components/Common';
 import Input from 'Components/Forms/Input';
@@ -49,19 +50,17 @@ export default class SearchInline extends Input {
   componentDidMount() {
     this.inputDOM   = this.inputRef.input;
     this.resultsDOM = ReactDOM.findDOMNode(this.resultsRef);
-    this.updateResultsWidth();
-    window.addEventListener('resize', this.updateResultsWidth);
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateResultsWidth);
+  componentDidUpdate() {
+    this.updateResultsWidth();
   }
 
   /**
    * Sets the width of the results drop down to match the input width
    */
   updateResultsWidth = () => {
-    this.resultsDOM.style.width = window.getComputedStyle(this.inputDOM, null).width;
+    cssMatchComputedWidth(this.inputDOM, this.resultsDOM);
   };
 
   /**
@@ -81,6 +80,7 @@ export default class SearchInline extends Input {
     }
 
     /* eslint-disable react/jsx-no-bind */
+    /* eslint-disable react/no-array-index-key */
     return (
       <List ref={ref => (this.resultsRef = ref)} className="dp-search-inline__results">
         {results.map((result, i) => (
