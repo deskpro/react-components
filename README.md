@@ -9,6 +9,7 @@ A react-based set of components for building DeskPRO apps.
   * [Buttons](#buttons)
   * [Columns](#columns)
   * [Tabs](#tabs)
+  * [Badges](#badges)
 * [Utilities](#utilities)
   * [Props](#props)
   * [Numbers](#numbers)
@@ -100,6 +101,10 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
 ### Tabs
 * [Tabs/Tabs](docs/components/tabs/tabs.md)  
   Renders a group of links as tabs.
+
+### Badges
+* [Badges/DateBadge](docs/components/badges/date_badge.md)  
+  Displays the month and day in badge or pill format.
 
 ## Utilities
 

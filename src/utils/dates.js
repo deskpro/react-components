@@ -23,6 +23,21 @@ export const MONTHS = [
   'December'
 ];
 
+export const MONTHS_SHORT = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec'
+];
+
 /**
  * Returns the number of days in the given date
  *
@@ -60,4 +75,18 @@ export function dateCalendarDays(date) {
   }
 
   return calendarSquares;
+}
+
+/**
+ * Returns the name of the month for the given date
+ *
+ * @param {Date} date The date
+ * @param {bool} short Return the abbreviated (3 letter) version of the name
+ */
+export function dateToMonth(date, short = false) {
+  const month = date.getMonth();
+  if (short) {
+    return MONTHS_SHORT[month];
+  }
+  return MONTHS[month];
 }

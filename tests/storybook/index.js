@@ -25,6 +25,7 @@ import './components/common/heading';
 import './components/common/popper';
 import './components/common/scrollbar';
 import './components/common/highlighter';
+import './components/badges/date_badge';
 import './components/icon';
 import './components/lists/list';
 import './components/lists/selectable';
