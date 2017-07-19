@@ -1,0 +1,40 @@
+/// Tabs
+///
+
+$dp-tabs-padding-vertical: 8px;
+$db-tabs-padding-horizontal: 12px;
+
+.dp-tabs {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dp-tabs__tab {
+  flex-grow: 1;
+  cursor: pointer;
+  text-align: center;
+  font-family: $primary-font;
+  font-size: $font-size-m;
+  font-weight: $pf-regular;
+  text-transform: uppercase;
+  color: $dp-greyscale-450;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid $dp-greyscale-300;
+  padding: $dp-tabs-padding-vertical $db-tabs-padding-horizontal;
+
+  &:hover {
+    color: $dp-greyscale-850;
+  }
+
+  &:active,
+  &.dp-tabs__tab--active {
+    // Subtract 1px from the padding to make up for the thicker border.
+    // Prevents the tabs from jumping around.
+    padding: $dp-tabs-padding-vertical $db-tabs-padding-horizontal ($dp-tabs-padding-vertical - 1px) $db-tabs-padding-horizontal;
+    color: $dp-greyscale-850;
+    border-bottom: 2px solid $dp-sonic-primary;
+  }
+}

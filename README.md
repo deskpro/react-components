@@ -8,6 +8,7 @@ A react-based set of components for building DeskPRO apps.
   * [Forms](#forms)
   * [Buttons](#buttons)
   * [Columns](#columns)
+  * [Tabs](#tabs)
 * [Utilities](#utilities)
   * [Props](#props)
   * [Numbers](#numbers)
@@ -25,6 +26,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
 
 ## Components
 
+* [Pane](docs/components/pane.md)  
+  Renders a generic page section which may be displayed or hidden.
 * [Icon](docs/components/icon.md)  
   Renders an icon using the Font Awesome library.
 * [Avatar](docs/components/avatar.md)  
@@ -90,6 +93,9 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
 * [Columns/Item](docs/components/columns/item.md)  
   Standard drawer item which may contain an icon and number.
 
+### Tabs
+* [Tabs/Tabs](docs/components/tabs/tabs.md)  
+  Renders a group of links as tabs.
 
 ## Utilities
 
