@@ -79,6 +79,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Renders a button with a drop down icon and popper.
 * [Buttons/ProgressButton](docs/components/buttons/progress_button.md)  
   Renders a button which contains a progress bar.
+* [Buttons/TranslateButton](docs/components/buttons/translate_button.md)  
+  Renders a progress button along with globe icon.
 
 ### Columns
 * [Columns/Column](docs/components/columns/column.md)  
