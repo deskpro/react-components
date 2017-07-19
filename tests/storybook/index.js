@@ -17,6 +17,7 @@ import './components/buttons/square';
 import './components/buttons/split';
 import './components/buttons/dropdown';
 import './components/buttons/progress';
+import './components/buttons/translate';
 import './components/columns/column';
 import './components/common/count';
 import './components/common/heading';
@@ -29,4 +30,3 @@ import './components/lists/selectable';
 import './components/modal';
 import './components/urgency';
 import './components/progress';
-

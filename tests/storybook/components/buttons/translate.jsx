@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { objectForEach } from 'utils/objects';
 import { numberRandom } from 'utils/numbers';
-import { ProgressButton } from 'Components/Buttons';
+import { TranslateButton } from 'Components/Buttons';
 
 class Story extends React.Component {
   constructor(props) {
@@ -42,23 +42,24 @@ class Story extends React.Component {
       <div>
         {sizes.map(size => (
           <div key={size} style={{ marginBottom: 10 }}>
-            <ProgressButton percent={(first / 12) * 100} size={size}>
+            <TranslateButton percent={(first / 12) * 100} size={size}>
               {first}/12
-            </ProgressButton>
+            </TranslateButton>
             &nbsp;&nbsp;
-            <ProgressButton percent={(second / 12) * 100} size={size}>
+            <TranslateButton percent={(second / 12) * 100} size={size}>
               {second}/12
-            </ProgressButton>
+            </TranslateButton>
             &nbsp;&nbsp;
-            <ProgressButton percent={(third / 12) * 100} size={size}>
+            <TranslateButton percent={(third / 12) * 100} size={size}>
               {third}/12
-            </ProgressButton>
+            </TranslateButton>
           </div>
         ))}
       </div>
     );
   }
 }
+
 storiesOf('Buttons', module)
-  .add('with progress bar', () => <Story />
+  .add('translate', () => <Story />
 );

@@ -247,14 +247,17 @@
   }
 }
 
+/// Small
 .dp-button--s.dp-dropdown-button .dp-icon {
   margin-left: 7px;
 }
 
+/// Medium
 .dp-button--m.dp-dropdown-button .dp-icon {
   margin-left: 9px;
 }
 
+/// Large
 .dp-button--l.dp-dropdown-button .dp-icon {
   margin-left: 15px;
 }
@@ -267,7 +270,9 @@
   @extend .dp-button;
   @extend .dp-button--secondary;
   padding: 0;
+  width: 38px;
   cursor: pointer;
+  position: relative;
   display: inline-block;
   background-color: $dp-greyscale-150;
   border-left: 1px solid $dp-greyscale-300;
@@ -281,19 +286,26 @@
   }
 
   .dp-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: $dp-greyscale-00;
     border-bottom-left-radius: $rad-size-m-l;
     border-bottom-right-radius: $rad-size-m-l;
   }
 }
 
+.dp-progress-button__label {
+  text-align: center;
+}
 
-
+/// Small
 .dp-progress-button--s {
-  height: 26px;
+  height: 20px;
 
   .dp-progress-button__label {
-    padding: 4px 6px;
+    padding: 2px 0;
   }
 
   .dp-progress {
@@ -301,18 +313,67 @@
   }
 }
 
+/// Medium
 .dp-progress-button--m {
-  height: 28px;
+  height: 26px;
 
   .dp-progress-button__label {
-    padding: 4px 8px;
+    padding: 4px 0;
   }
 }
 
+/// Large
 .dp-progress-button--l {
-  height: 36px;
+  height: 32px;
 
   .dp-progress-button__label {
-    padding: 8px 12px;
+    padding: 8px 0;
   }
+}
+
+/// Translate Button
+///
+
+.dp-translate-button {
+  display: inline-flex;
+  vertical-align: top;
+  border: 1px solid $dp-greyscale-300;
+  border-radius: $rad-size-m;
+  box-shadow: 0 -1px 0 $dp-greyscale-200 inset;
+
+  &, * {
+    box-sizing: border-box;
+  }
+
+  .dp-progress-button {
+    border: 0;
+    border-left: 1px solid $dp-greyscale-300;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .dp-icon {
+    border: 0;
+    width: 30px;
+    text-align: center;
+    color: $dp-greyscale-450;
+  }
+}
+
+/// Small
+.dp-translate-button--s .dp-icon {
+  padding: 4px;
+  font-size: $icon-size-s;
+}
+
+/// Medium
+.dp-translate-button--m .dp-icon {
+  padding: 5px;
+  font-size: $icon-size-m;
+}
+
+/// Large
+.dp-translate-button--l .dp-icon {
+  padding: 8px;
+  font-size: $icon-size-m;
 }
