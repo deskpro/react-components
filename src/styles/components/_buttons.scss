@@ -154,8 +154,6 @@
 .dp-button--square {
   @include border-radius("s");
   padding: 5px;
-  height: auto;
-  width: auto;
   color: $dp-greyscale-450;
   background-color: $dp-greyscale-00;
   border: 1px solid $dp-greyscale-300;
@@ -170,11 +168,45 @@
   .dp-icon {
     margin-right: 0;
     display: block;
-    width: 12px;
-    height: 12px;
+
     font-size: $icon-size-s;
     color: $dp-greyscale-450;
   }
+}
+
+.dp-button--s.dp-button--square {
+  width: 23px;
+  height: 23px;
+
+  .dp-icon {
+    font-size: $icon-size-s;
+  }
+}
+
+.dp-button--m.dp-button--square {
+  width: 28px;
+  height: 28px;
+
+  .dp-icon {
+    font-size: $icon-size-m;
+  }
+}
+
+.dp-button--l.dp-button--square {
+  width: 29px;
+  height: 29px;
+
+  .dp-icon {
+    font-size: $icon-size-l;
+  }
+}
+
+/// Round Button
+///
+
+.dp-button--round {
+  @extend .dp-button--square;
+  @include border-radius("circular");
 }
 
 /// Split button

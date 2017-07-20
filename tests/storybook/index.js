@@ -20,6 +20,7 @@ import './components/badges/date_badge';
 import './components/buttons/button';
 import './components/buttons/icon';
 import './components/buttons/square';
+import './components/buttons/round';
 import './components/buttons/split';
 import './components/buttons/dropdown';
 import './components/buttons/progress';
