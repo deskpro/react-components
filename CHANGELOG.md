@@ -1,3 +1,12 @@
+## v0.5.3 - 2017-07-20
+
+* [FEATURE] Adds DateBadge component
+* [MINOR] Adds docs for dateToMonth() util
+* [MINOR] Uses Scrollbar component in CustomSelect component
+* [MINOR] Improves Progress story
+* [FIX] Fix TagSet PropTypes
+* [FIX] Fix add tag on enter
+
 ## v0.5.2 - 2017-07-19
 
 * [MINOR] Adds css and dom utilities

@@ -65,7 +65,7 @@ $select-input-border-color: $dp-greyscale-300;
   .dp-icon {
     position: absolute;
     left: 6px;
-    z-index: $dp-zindex-middle;
+    z-index: $dp-zindex-bottom;
     color: $dp-greyscale-400;
     font-size: $icon-size-s;
     top: calc(50% - #{$icon-size-s / 2});
