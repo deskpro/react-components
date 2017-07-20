@@ -21,6 +21,20 @@
   }
 }
 
+/// Circle Badge
+///
+
+.dp-circle-badge {
+  @include border-radius("circular");
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-overflow: clip;
+}
+
 /// Date Badge
 ///
 
