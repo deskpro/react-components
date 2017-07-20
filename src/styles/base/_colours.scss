@@ -60,3 +60,31 @@ $sla-shade-8: #e85c4f;
 $sla-shade-9: #e54741;
 $sla-shade-10: #e23333;
 $sla-shade-11: #c12727;
+
+/// Standard color classes
+///
+
+.dp-bg--default {
+  color: $dp-greyscale-1000;
+  background-color: $dp-greyscale-00;
+}
+
+.dp-bg--success {
+  color: $dp-greyscale-00;
+  background-color: $dp-emerald-primary;
+}
+
+.dp-bg--info {
+  color: $dp-greyscale-00;
+  background-color: $dp-sonic-primary;
+}
+
+.dp-bg--warning {
+  color: $dp-greyscale-00;
+  background-color: $dp-tails-primary;
+}
+
+.dp-bg--danger {
+  color: $dp-greyscale-00;
+  background-color: $dp-knuckles-primary;
+}

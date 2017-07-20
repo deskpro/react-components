@@ -7,6 +7,8 @@ storiesOf('Alert', module)
   .addDecorator(withKnobs)
   .add('Alert', () => (
     <div style={{ width: 200 }}>
+      <Alert>Default!</Alert>
+      <br />
       <Alert type="success">Success!</Alert>
       <br />
       <Alert type="info">Info!</Alert>

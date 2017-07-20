@@ -2,7 +2,7 @@ Badges/DateBadge
 ================
 Displays the month and day in badge or pill format.
 
-![DageBadge example](../../assets/images/date-badge-1.png)
+![DateBadge example](../../assets/images/date-badge-1.png)
 
 ```jsx
 <div>
