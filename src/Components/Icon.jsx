@@ -21,20 +21,29 @@ import classNames from 'classnames';
  *  );
  * ```
  */
-const Icon = ({ className, name, size, rotate, spin, ...elementProps }) => (
-  <i
-    className={classNames(
-      `fa fa-${name}`,
-      `dp-icon dp-icon--${size}`,
-      {
-        'fa-spin':               spin,
-        [`fa-rotate-${rotate}`]: (rotate !== '0')
-      },
-      className
-    )}
-    {...elementProps}
-  />
-);
+const Icon = ({ className, name, size, rotate, spin, ...elementProps }) => {
+  let cssSize = size;
+  if (cssSize[0] === 'x') {
+    cssSize = cssSize.substring(0, 2);
+  } else {
+    cssSize = cssSize[0];
+  }
+
+  return (
+    <i
+      className={classNames(
+        `fa fa-${name}`,
+        `dp-icon dp-icon--${cssSize}`,
+        {
+          'fa-spin':               spin,
+          [`fa-rotate-${rotate}`]: (rotate !== '0')
+        },
+        className
+      )}
+      {...elementProps}
+    />
+  );
+};
 export default Icon;
 
 Icon.propTypes = {
@@ -49,7 +58,7 @@ Icon.propTypes = {
   /**
    * Displays the icon at the given size
    */
-  size:      PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl']),
+  size:      PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl', 'xsmall', 'small', 'medium', 'large', 'xlarge']),
   /**
    * Rotates the icon.
    */
@@ -61,7 +70,8 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
-  size:   's',
-  rotate: '0',
-  spin:   false
+  size:      's',
+  rotate:    '0',
+  spin:      false,
+  className: ''
 };
