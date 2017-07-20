@@ -79,7 +79,7 @@ class CustomSelectStory extends React.Component {
         disabled={boolean('Disabled', false)}
         displayInputWhenOpened={boolean('Display input when opened', false)}
       >
-        <List style={{ maxHeight: 200, overflowY: 'scroll' }}>
+        <List style={{ maxHeight: 200 }}>
           {multiOptions.map(option => (
             <ListElement
               key={option.value}

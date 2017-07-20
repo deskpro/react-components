@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import onClickOutside from 'react-onclickoutside';
 import { objectKeyFilter } from 'utils/objects';
 import noop from 'utils/noop';
+import { Scrollbar } from 'Components/Common';
 
 class CustomSelectContent extends React.Component {
   static propTypes = {
@@ -147,7 +148,9 @@ export default class CustomSelect extends React.Component {
             onClickOutside={this.clickOutside}
             outsideClickIgnoreClass="dp-select__input"
           >
-            {children}
+            <Scrollbar>
+              {children}
+            </Scrollbar>
           </ClickOutsideContent>
         ) : null}
       </div>
