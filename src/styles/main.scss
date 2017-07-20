@@ -3,7 +3,7 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
 @import "../../node_modules/font-awesome/scss/font-awesome";
 @import "base/colours";
 @import "base/fonts";
-@import "base/border-radius";
+@import "base/borders";
 @import "base/zindex";
 @import "base/mixins";
 @import "base/icons";
@@ -29,6 +29,7 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
 @import "components/progress";
 @import "components/tabs";
 @import "components/badges";
+@import "components/cards";
 
 .deskpro-styleguide {
   @import "../styleguide/styleguide.scss";

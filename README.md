@@ -9,6 +9,7 @@ A react-based set of components for building DeskPRO apps.
   * [Buttons](#buttons)
   * [Columns](#columns)
   * [Tabs](#tabs)
+  * [Cards](#cards)
   * [Badges](#badges)
 * [Utilities](#utilities)
   * [Props](#props)
@@ -105,6 +106,10 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
 ### Tabs
 * [Tabs/Tabs](docs/components/tabs/tabs.md)  
   Renders a group of links as tabs.
+
+### Cards
+* [Cards/Card](docs/components/cards/card.md)  
+  Renders a standard card.
 
 ### Badges
 * [Badges/TextBadge](docs/components/badges/text_badge.md)  

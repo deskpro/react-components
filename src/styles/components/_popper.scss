@@ -10,12 +10,12 @@ $dp-popper-arrow-width: 8px;
 //
 // Styleguide 2
 .dp-popper {
+  @include border-radius("m");
   display: none;
   position: absolute;
   text-align: left;
   z-index: $dp-zindex-top;
   background: $dp-greyscale-00;
-  border-radius: $rad-size-m;
   border: $dp-popper-border-width solid $dp-sonic-primary;
   box-shadow: 0 3px 10px $dp-greyscale-350;
   font-family: $primary-font;
