@@ -1,4 +1,5 @@
 import '../../src/styles/main.scss';
+import './components/alert';
 import './components/avatar';
 import './components/forms/input';
 import './components/forms/checkbox';
