@@ -11,7 +11,7 @@ storiesOf('Icon', module)
     'Icon',
     Icon,
   {
-    size: ['xs', 's', 'm', 'l', 'xl']
+    size: ['xsmall', 'small', 'medium', 'large', 'xlarge']
   },
   {
     CombinationRenderer({ Component, props }) {

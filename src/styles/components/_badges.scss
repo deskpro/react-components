@@ -35,6 +35,27 @@
   text-overflow: clip;
 }
 
+/// Icon Badge
+///
+
+.dp-icon-badge {
+  display: inline-block;
+  position: relative;
+
+  .dp-circle-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 16px;
+    height: 16px;
+    z-index: $dp-zindex-overlay;
+  }
+
+  .dp-icon {
+    z-index: $dp-zindex-bottom;
+  }
+}
+
 /// Date Badge
 ///
 
