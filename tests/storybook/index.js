@@ -34,3 +34,4 @@ import './components/modal';
 import './components/urgency';
 import './components/progress';
 import './components/tabs/tabs';
+import './components/buttons/pagination';
