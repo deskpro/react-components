@@ -4,27 +4,27 @@ import { Button } from 'Components/Buttons';
 import Icon from 'Components/Icon';
 
 storiesOf('Buttons', module)
-  .add('square', () => (
+  .add('round', () => (
     <div>
       <div style={{ marginBottom: 10 }}>
-        <Button type="square" size="small">
+        <Button type="round" size="small">
           <Icon name="plus" />
         </Button>&nbsp;
-        <Button type="square" size="medium">
+        <Button type="round" size="medium">
           <Icon name="plus" />
         </Button>&nbsp;
-        <Button type="square" size="large">
+        <Button type="round" size="large">
           <Icon name="plus" />
         </Button>
       </div>
       <div>
-        <Button type="square" size="small">
+        <Button type="round" size="small">
           <Icon name="search" />
         </Button>&nbsp;
-        <Button type="square" size="medium">
+        <Button type="round" size="medium">
           <Icon name="search" />
         </Button>&nbsp;
-        <Button type="square" size="large">
+        <Button type="round" size="large">
           <Icon name="search" />
         </Button>
       </div>

@@ -12,19 +12,73 @@ Standard button.
 </div>
 ```
 
+![Button example](../../assets/images/button-2.png)
+
+
+```jsx
+<div>
+    <Button type="primary" size="large">
+        <Icon name="bug" />
+        Button
+    </Button>
+    <Button type="secondary" size="large">
+        <Icon name="bug" />
+        Button
+    </Button>
+    <Button type="cta" size="large">
+        <Icon name="bug" />
+        Button
+    </Button>
+</div>
+```
+
+![Button example](../../assets/images/button-3.png)
+
+```jsx
+<div>
+    <Button type="square" size="small">
+        <Icon name="plus" />
+    </Button>&nbsp;
+    <Button type="square" size="medium">
+        <Icon name="plus" />
+    </Button>&nbsp;
+    <Button type="square" size="large">
+        <Icon name="plus" />
+    </Button>
+</div>
+```
+
+![Button example](../../assets/images/button-4.png)
+
+```jsx
+<div>
+    <Button type="round" size="small">
+        <Icon name="plus" />
+    </Button>&nbsp;
+    <Button type="round" size="medium">
+        <Icon name="plus" />
+    </Button>&nbsp;
+    <Button type="round" size="large">
+        <Icon name="plus" />
+    </Button>
+</div>
+```
+
 ### Props
 
 **size={string}**  
 One of "large", "medium", or "small".
 
 **type={string}**  
-One of "primary", "secondary", "cta", or "square".
+One of "primary", "secondary", "cta", "square", or "round".
 
 **disabled={bool}**  
 Whether or not the button is disabled or not.
 
 ### CSS
 Adds `dp-button` to the root element.
+
+Adds `dp-button--${type}` where `${type}` is the value of the `type` prop.
 
 ### Examples
 
