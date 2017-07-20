@@ -30,4 +30,9 @@ Urgency.propTypes = {
   children:  PropTypes.node
 };
 
+Urgency.defaultProps = {
+  className: '',
+  children:  ''
+};
+
 export default Urgency;

@@ -35,9 +35,9 @@ class Story extends React.Component {
     const sizes = ['small', 'medium', 'large'];
 
     return (
-      <div style={{ width: '25%', margin: '0 auto' }}>
+      <div style={{ width: '25%' }}>
         {sizes.map(size => (
-          <div>
+          <div key={size}>
             <Progress size={size} type="primary" style={{ margin: 10, border: '1px solid #ccc' }}>
               <ProgressBar percent={percent}>
                 {size === 'large' ? `${percent}%` : null}
