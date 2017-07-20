@@ -37,4 +37,5 @@ import './components/lists/selectable';
 import './components/modal';
 import './components/urgency';
 import './components/progress';
+import './components/stars';
 import './components/tabs/tabs';

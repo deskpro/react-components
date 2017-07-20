@@ -42,6 +42,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Renders a message in a box which is colored to match an urgency level between 1 and 10.
 * [Progress](docs/components/progress.md)  
   Renders a progress bar.
+* [Stars](docs/components/stars.md)  
+  Renders a group of star icons which represent a vote between 1 and 5.
 
 ### Common
 * [Common/Heading](docs/components/common/heading.md)  

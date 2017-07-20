@@ -1,0 +1,12 @@
+/// Stars
+///
+
+.dp-stars {
+  display: inline;
+
+  .dp-icon {
+    cursor: pointer;
+    color: $dp-tails-primary;
+    margin-right: 2px;
+  }
+}
