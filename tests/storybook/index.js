@@ -14,6 +14,7 @@ import './components/search/submit';
 import './components/search/button';
 import './components/search/select';
 import './components/badges/text_badge';
+import './components/badges/circle_badge';
 import './components/badges/date_badge';
 import './components/buttons/button';
 import './components/buttons/icon';
