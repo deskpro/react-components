@@ -107,6 +107,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
   Renders a group of links as tabs.
 
 ### Badges
+* [Badges/TextBadge](docs/components/badges/text_badge.md)  
+  Renders any text as a badge.
 * [Badges/DateBadge](docs/components/badges/date_badge.md)  
   Displays the month and day in badge or pill format.
 
