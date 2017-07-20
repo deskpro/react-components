@@ -1,0 +1,80 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import noop from 'utils/noop';
+import { objectKeyFilter } from 'utils/objects';
+import Icon from 'Components/Icon';
+
+/**
+ * A single star in the group of stars
+ */
+const StarIcon = ({ value, name, onClick, ...props }) => (
+  <Icon name={name} onClick={() => { onClick(value); }} {...props} />
+);
+
+StarIcon.propTypes = {
+  value:   PropTypes.number,
+  name:    PropTypes.string,
+  onClick: PropTypes.func
+};
+
+StarIcon.defaultProps = {
+  value:   0,
+  name:    'star',
+  onClick: noop
+};
+
+/**
+ * Renders a group of star icons which represent a vote between 1 and 5.
+ */
+export default class Stars extends React.Component {
+  static propTypes = {
+    /**
+     * A number between 1 and 5 representing the vote value.
+     */
+    value:     PropTypes.number.isRequired,
+    /**
+     * Called when a star is clicked with the star value.
+     */
+    onClick:   PropTypes.func,
+    /**
+     * CSS classes to apply to the element.
+     */
+    className: PropTypes.string
+  };
+
+  static defaultProps = {
+    className: '',
+    onClick:   noop
+  };
+
+  render() {
+    const { value, onClick, className, ...props } = this.props;
+
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      if (i <= value) {
+        stars.push(
+          <StarIcon key={i} value={i} onClick={onClick} name="star" />
+        );
+      } else if (i === value + 0.5) {
+        stars.push(
+          <StarIcon key={i} value={i} onClick={onClick} name="star-half-empty" />
+        );
+      } else {
+        stars.push(
+          <StarIcon key={i} value={i} onClick={onClick} name="star-o" />
+        );
+      }
+    }
+
+    return (
+      <div
+        className={classNames('dp-stars', className)}
+        {...objectKeyFilter(props, Stars.propTypes)}
+      >
+        {stars}
+      </div>
+    );
+  }
+}
