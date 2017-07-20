@@ -10,7 +10,7 @@ import { dateToMonth, MONTHS_SHORT } from 'utils/dates';
 const DateBadge = ({ date, month, day, pill, className, ...props }) => (
   <div
     className={classNames(
-      'dp-date-badge',
+      'db-badge dp-date-badge',
       className,
       {
         'dp-date-badge--pill': pill

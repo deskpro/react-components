@@ -16,7 +16,7 @@ Renders a notification message.
 ### Props
 
 **type={string}**  
-The type of alert to display. One of "success", "info", "warning", or "danger".
+The type of alert to display. One of "default", "success", "info", "warning", or "danger".
 
 **icon={string}**  
 Name of the icon to display on the left hand side of the alert. Defaults to no icon.
@@ -31,3 +31,5 @@ Displayed when hovering over the close icon.
 Adds `dp-alert` to the root element.
 
 Adds `dp-alert--${type}` to the root element, where `${type}` matches the `type` prop value.
+
+Adds `dp-bg--${type}` to the root element, where `${type}` matches the `type` prop value.

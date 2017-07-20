@@ -1,8 +1,30 @@
+/// Badges
+///
+
+.dp-badge {
+  @include border-radius("m-l");
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: $primary-font;
+  font-size: $font-size-s;
+  font-weight: $pf-bold;
+  line-height: $font-size-s;
+  box-shadow: 0 1px 0 $dp-greyscale-400;
+
+  &, & * {
+    box-sizing: border-box;
+  }
+}
+
 /// Date Badge
 ///
 
 .dp-date-badge {
-  @include border-radius("m");
   width: 24px;
   text-align: center;
   display: inline-block;

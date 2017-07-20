@@ -12,7 +12,7 @@ export default class Alert extends React.Component {
     /**
      * The type of alert to display.
      */
-    type:       PropTypes.oneOf(['success', 'info', 'warning', 'danger']),
+    type:       PropTypes.oneOf(['default', 'success', 'info', 'warning', 'danger']),
     /**
      * Name of the icon to display.
      */
@@ -36,7 +36,7 @@ export default class Alert extends React.Component {
   };
 
   static defaultProps = {
-    type:       'success',
+    type:       'default',
     icon:       'exclamation-triangle',
     closeTitle: 'Close',
     closeable:  true,
@@ -64,7 +64,7 @@ export default class Alert extends React.Component {
 
     return (
       <div
-        className={classNames('dp-alert', `dp-alert--${type}`, className)}
+        className={classNames('dp-alert', `dp-alert--${type}`, `dp-bg--${type}`, className)}
         {...objectKeyFilter(props, Alert.propTypes)}
       >
         {icon

@@ -2,31 +2,14 @@
 ///
 
 .dp-alert {
-  @include border-radius("m");
+  @include border-radius("m-l");
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: $dp-greyscale-00;
   padding: 6px;
+  align-items: center;
+  justify-content: space-between;
   font-family: $primary-font;
   font-size: $font-size-m-l;
   font-weight: $pf-regular;
-}
-
-.dp-alert--success {
-  background-color: $dp-emerald-primary;
-}
-
-.dp-alert--info {
-  background-color: $dp-sonic-primary;
-}
-
-.dp-alert--warning {
-  background-color: $dp-tails-primary;
-}
-
-.dp-alert--danger {
-  background-color: $dp-knuckles-primary;
 }
 
 .dp-alert__icon {
