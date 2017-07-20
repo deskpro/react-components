@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import Avatar from '../../../src/Components/Avatar';
+import Avatar from 'Components/Avatar';
 
 import avatarImage1 from '../static/avatar-1.jpg';
 import avatarImage2 from '../static/avatar-2.jpg';

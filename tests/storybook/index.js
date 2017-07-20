@@ -24,6 +24,7 @@ import './components/buttons/split';
 import './components/buttons/dropdown';
 import './components/buttons/progress';
 import './components/buttons/translate';
+import './components/cards/card';
 import './components/columns/column';
 import './components/common/count';
 import './components/common/heading';
