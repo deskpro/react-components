@@ -3,6 +3,18 @@
 *.ipr
 *.iws
 
-node_modules
+.cache/
+.storybook/
+bin/
+node_modules/
+src/Components/
+src/utils/
+tests/
+.babelrc
+.editorconfig
+.eslintrc
+.eslintignore
+webpack.config.js
+webpack.prod.config.js
 npm-debug.log
 .vscode
