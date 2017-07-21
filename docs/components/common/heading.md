@@ -2,6 +2,8 @@ Common/Heading
 ==============
 A header element which can be displayed with an icon and count number.
 
+![Heading example](../../assets/images/heading-1.png)
+
 ```jsx
 <div>
     <Heading>Heading</Heading>
@@ -10,8 +12,6 @@ A header element which can be displayed with an icon and count number.
     <Heading icon="bug" count={22}>Heading</Heading>
 </div>
 ```
-
-![Heading example](../../assets/images/heading-1.png)
 
 ### Props
 

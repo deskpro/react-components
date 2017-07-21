@@ -2,6 +2,8 @@ Common/Scrollbar
 ================
 Wraps children with styled scrollbars.
 
+![Scrollbar example](../../assets/images/scrollbar-1.png)
+
 ```jsx
 <Scrollbar>
     <p>Line one</p>

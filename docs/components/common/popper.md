@@ -2,15 +2,15 @@ Common/Popper
 =============
 A wrapper around [popper.js](https://popper.js.org), a tooltip style container which uses absolute positioning to place elements relative to other elements.
 
+![Popper example](../../assets/images/popper-1.png)
+
 ```jsx
 <div>
     <button id="my-button">
-        Click
+        Click Me
     </button>
     <Popper target="my-button" placement="bottom">
-        <p className="tooltip">
-            I am displayed below the button!
-        </p>
+        Hi, I'm Popper!
     </Popper>
 </div>
 ```
@@ -111,13 +111,13 @@ class App extends React.Component {
           Click Me
         </Button>
         <Popper
-          ref={(ref) => {this.popper = ref;}}
+          ref={ref => (this.popper = ref)}
           opened={false}
           arrow={true}
           eventsEnabled={true}
           detached={true}
           placement="bottom"
-          >
+        >
           <p>
             Hi, I'm Popper!
           </p>
