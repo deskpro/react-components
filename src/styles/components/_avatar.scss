@@ -1,5 +1,31 @@
+/// Avatars
+///
+
+$dp-avatar-size-s: 12px;
+$dp-avatar-size-m: 22px;
+$dp-avatar-size-l: 26px;
+$dp-avatar-size-xl: 32px;
+
 .dp-avatar {
-  border-radius: $rad-size-circular;
-  max-width: 160px;
-  max-height: 160px;
+  @include border-radius("circular");
+}
+
+.dp-avatar--s {
+  width: $dp-avatar-size-s;
+  height: $dp-avatar-size-s;
+}
+
+.dp-avatar--m {
+  width: $dp-avatar-size-m;
+  height: $dp-avatar-size-m;
+}
+
+.dp-avatar--l {
+  width: $dp-avatar-size-l;
+  height: $dp-avatar-size-l;
+}
+
+.dp-avatar--xl {
+  width: $dp-avatar-size-xl;
+  height: $dp-avatar-size-xl;
 }
