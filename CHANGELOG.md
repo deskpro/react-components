@@ -1,3 +1,20 @@
+## v0.5.4 - 2017-07-21
+
+* [FEATURE] Adds Alert component
+* [FEATURE] Adds Badges/TextBadge component
+* [FEATURE] Adds Badges/CircleBadge component
+* [FEATURE] Adds Badges/IconBadge component
+* [FEATURE] Adds Cards/Card component
+* [FEATURE] Adds Stars component
+* [FEATURE] Adds Forms/Form component
+* [MINOR] Updates the readme
+* [MINOR] Adds lint:fix npm script
+* [MINOR] Adds round button type
+* [MINOR] Adds Button "shape" prop
+* [MINOR] Adds Avatar "size" prop
+* [MINOR] Remove useless parts from npm-package
+* [FIX] Fixes error in Progress story
+
 ## v0.5.3 - 2017-07-20
 
 * [FEATURE] Adds DateBadge component
