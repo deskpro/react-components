@@ -16,7 +16,11 @@ export default class Button extends React.Component {
     /**
      * The type of button to display.
      */
-    type:                    PropTypes.oneOf(['primary', 'secondary', 'cta', 'square', 'round']),
+    type:                    PropTypes.oneOf(['primary', 'secondary', 'cta']),
+    /**
+     * The shape of the button.
+     */
+    shape:                   PropTypes.oneOf(['default', 'square', 'round']),
     /**
      * Children to render.
      */
@@ -63,6 +67,7 @@ export default class Button extends React.Component {
     size:                    'large',
     className:               '',
     type:                    'primary',
+    shape:                   'default',
     disabled:                false,
     onClickOutside:          noop,
     disableOnClickOutside:   noop,
@@ -78,7 +83,7 @@ export default class Button extends React.Component {
   };
 
   render() {
-    const { size, type, disabled, className, children, ...props } = this.props;
+    const { size, type, shape, disabled, className, children, ...props } = this.props;
 
     return (
       <button
@@ -87,6 +92,7 @@ export default class Button extends React.Component {
           'dp-button',
           `dp-button--${size[0]}`,
           `dp-button--${type}`,
+          `dp-button--shape-${shape}`,
           className
         )}
         {...objectKeyFilter(props, Button.propTypes)}
