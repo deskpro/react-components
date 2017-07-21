@@ -13,6 +13,7 @@ import SearchSelect from './SearchSelect';
 import Tag from './Tag';
 import TagInput from './TagInput';
 import TagSet from './TagSet';
+import Form from './Form';
 
 export {
   Checkbox,
@@ -30,4 +31,5 @@ export {
   Tag,
   TagInput,
   TagSet,
+  Form,
 };
