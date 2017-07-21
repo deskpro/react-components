@@ -36,13 +36,13 @@ Standard button.
 
 ```jsx
 <div>
-    <Button type="square" size="small">
+    <Button shape="square" type="secondary" size="small">
         <Icon name="plus" />
     </Button>&nbsp;
-    <Button type="square" size="medium">
+    <Button shape="square" type="secondary" size="medium">
         <Icon name="plus" />
     </Button>&nbsp;
-    <Button type="square" size="large">
+    <Button shape="square" type="secondary" size="large">
         <Icon name="plus" />
     </Button>
 </div>
@@ -52,13 +52,13 @@ Standard button.
 
 ```jsx
 <div>
-    <Button type="round" size="small">
+    <Button shape="round" type="secondary" size="small">
         <Icon name="plus" />
     </Button>&nbsp;
-    <Button type="round" size="medium">
+    <Button shape="round" type="secondary" size="medium">
         <Icon name="plus" />
     </Button>&nbsp;
-    <Button type="round" size="large">
+    <Button shape="round" type="secondary" size="large">
         <Icon name="plus" />
     </Button>
 </div>
@@ -70,7 +70,10 @@ Standard button.
 One of "large", "medium", or "small".
 
 **type={string}**  
-One of "primary", "secondary", "cta", "square", or "round".
+Controls the color of the button. One of "primary", "secondary", or "cta".
+
+**shape={string}**  
+Controls the shape of the button. One of "default", "square", or "round".
 
 **disabled={bool}**  
 Whether or not the button is disabled or not.
@@ -90,8 +93,8 @@ import Icon from 'Components/Icon';
 
 const App = () => (
     <div>
-        <Button size="l">Button</Button>
-        <Button size="m">
+        <Button size="large">Button</Button>
+        <Button size="medium">
             <Icon name="bug" />
             Button with icon
         </Button>
