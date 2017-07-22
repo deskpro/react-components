@@ -54,6 +54,11 @@ class ToggleableList extends React.Component {
     children: PropTypes.node
   };
 
+  static defaultProps = {
+    whenType: '',
+    children: ''
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -68,7 +73,7 @@ class ToggleableList extends React.Component {
   handleEvent = (e) => {
     const element = findToggleableParent(e.target);
     if (element) {
-      const targetID    = element.getAttribute(DATA_DP_TOGGLE_ID);
+      const targetID    = parseInt(element.getAttribute(DATA_DP_TOGGLE_ID), 10);
       const targetValue = (targetID === this.state.targetID) ? !this.state.targetValue : true;
       if (targetID !== null) {
         this.setState({
