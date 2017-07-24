@@ -128,6 +128,18 @@ export default class CustomSelect extends React.Component {
     }
   }
 
+  open() {
+    this.setState({
+      opened: true
+    });
+  }
+
+  close() {
+    this.setState({
+      opened: false
+    });
+  }
+
   render() {
     const { className, children, displayInputWhenOpened, disabled, ...props } = this.props;
     const { opened } = this.state;
