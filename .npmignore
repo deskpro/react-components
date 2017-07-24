@@ -14,6 +14,7 @@ tests/
 .editorconfig
 .eslintrc
 .eslintignore
+kss-config.json
 webpack.config.js
 webpack.prod.config.js
 npm-debug.log
