@@ -1,3 +1,9 @@
+## v0.5.5 - 2017-07-24
+
+* [MINOR] Fixes stories List Toggleable
+* [MINOR] Adds Open/Close to CustomSelect
+* [MINOR] Adds readOnly to Checkbox
+
 ## v0.5.4 - 2017-07-21
 
 * [FEATURE] Adds Alert component
