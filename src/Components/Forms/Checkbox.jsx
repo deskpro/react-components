@@ -12,6 +12,7 @@ class Checkbox extends React.Component {
      */
     className:       PropTypes.string,
     disabled:        PropTypes.bool,
+    readOnly:        PropTypes.bool,
     id:              PropTypes.string,
     value:           PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     children:        PropTypes.node,
@@ -23,6 +24,12 @@ class Checkbox extends React.Component {
     onChange() {},
     stopPropagation: false,
     style:           {},
+    className:       '',
+    disabled:        false,
+    readOnly:        false,
+    id:              null,
+    value:           null,
+    children:        null
   };
 
   componentWillMount() {
@@ -37,17 +44,22 @@ class Checkbox extends React.Component {
     if (this.props.stopPropagation) {
       event.stopPropagation();
     }
-    this.props.onChange(event.target.checked, this.props.value);
+    if (!this.props.disabled && !this.props.readOnly) {
+      this.props.onChange(event.target.checked, this.props.value);
+    }
   };
 
   render() {
-    const { children, className, value, style, disabled, ...props } = this.props;
+    const { children, className, value, style, disabled, readOnly, ...props } = this.props;
     return (
       <div
         className={classNames(
           'dp-input--checkbox',
           className,
-          { 'dp-input--checkbox--disabled': this.props.disabled }
+          {
+            'dp-input--checkbox--disabled':  this.props.disabled,
+            'dp-input--checkbox--read-only': this.props.readOnly
+          }
         )}
         style={style}
       >
@@ -56,7 +68,7 @@ class Checkbox extends React.Component {
           value={value}
           id={this.id}
           onChange={this.handleChange}
-          disabled={disabled}
+          disabled={disabled || readOnly}
           {...objectKeyFilter(props, Checkbox.propTypes)}
         />
         <label htmlFor={this.id} className="dp-input--checkbox__checkbox" />

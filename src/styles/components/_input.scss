@@ -355,6 +355,12 @@
       &:after {
         border-color: $dp-greyscale-350;
       }
+    }
+  }
+  &.dp-input--checkbox--read-only {
+    label.dp-input--checkbox__checkbox {
+      background-color: $dp-greyscale-150;
+      cursor: default;
       &:hover::after {
         opacity: 0;
       }

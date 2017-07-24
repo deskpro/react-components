@@ -15,6 +15,7 @@ storiesOf('Forms', module)
           checked
           onChange={action('Checkbox change')}
           disabled={boolean('Disabled', false)}
+          readOnly={boolean('Read only', false)}
         >
           Checked
         </Checkbox>
@@ -22,6 +23,7 @@ storiesOf('Forms', module)
           checked={false}
           onChange={action('Checkbox change')}
           disabled={boolean('Disabled', false)}
+          readOnly={boolean('Read only', false)}
         >
           Unchecked
         </Checkbox>
@@ -31,6 +33,7 @@ storiesOf('Forms', module)
           onChange={action('Checkbox change')}
           style={{ display: 'inline-block' }}
           disabled={boolean('Disabled', false)}
+          readOnly={boolean('Read only', false)}
         >
           Checked
         </Checkbox>
@@ -38,6 +41,7 @@ storiesOf('Forms', module)
           onChange={action('Checkbox change')}
           style={{ display: 'inline-block' }}
           disabled={boolean('Disabled', false)}
+          readOnly={boolean('Read only', false)}
         >
           Unchecked
         </Checkbox>
