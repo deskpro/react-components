@@ -1,3 +1,7 @@
+## v0.5.6 - 2017-07-31
+
+* [FEATURE] Adds AutoSuggest to TagInput
+
 ## v0.5.5 - 2017-07-24
 
 * [MINOR] Fixes stories List Toggleable
