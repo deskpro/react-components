@@ -1,6 +1,6 @@
 {
   "name": "deskpro-components",
-  "version": "0.5.3",
+  "version": "0.5.6",
   "dependencies": {
     "add-px-to-style": {
       "version": "1.0.0",
@@ -129,6 +129,16 @@
       "from": "react@15.6.1",
       "resolved": "https://registry.npmjs.org/react/-/react-15.6.1.tgz"
     },
+    "react-autosuggest": {
+      "version": "9.3.2",
+      "from": "react-autosuggest@>=9.3.2 <10.0.0",
+      "resolved": "https://registry.npmjs.org/react-autosuggest/-/react-autosuggest-9.3.2.tgz"
+    },
+    "react-autowhatever": {
+      "version": "10.1.0",
+      "from": "react-autowhatever@>=10.1.0 <11.0.0",
+      "resolved": "https://registry.npmjs.org/react-autowhatever/-/react-autowhatever-10.1.0.tgz"
+    },
     "react-custom-scrollbars": {
       "version": "4.1.2",
       "from": "react-custom-scrollbars@>=4.1.2 <5.0.0",
@@ -164,10 +174,32 @@
       "from": "react-tagsinput@>=3.17.0 <4.0.0",
       "resolved": "https://registry.npmjs.org/react-tagsinput/-/react-tagsinput-3.17.0.tgz"
     },
+    "react-themeable": {
+      "version": "1.1.0",
+      "from": "react-themeable@>=1.1.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/react-themeable/-/react-themeable-1.1.0.tgz",
+      "dependencies": {
+        "object-assign": {
+          "version": "3.0.0",
+          "from": "object-assign@>=3.0.0 <4.0.0",
+          "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-3.0.0.tgz"
+        }
+      }
+    },
+    "section-iterator": {
+      "version": "2.0.0",
+      "from": "section-iterator@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/section-iterator/-/section-iterator-2.0.0.tgz"
+    },
     "setimmediate": {
       "version": "1.0.5",
       "from": "setimmediate@>=1.0.5 <2.0.0",
       "resolved": "https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz"
+    },
+    "shallow-equal": {
+      "version": "1.0.0",
+      "from": "shallow-equal@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/shallow-equal/-/shallow-equal-1.0.0.tgz"
     },
     "to-camel-case": {
       "version": "1.0.0",

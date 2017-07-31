@@ -1,3 +1,7 @@
+## v0.5.7 - 2017-07-31
+
+* [FIX] Missing dependency
+
 ## v0.5.6 - 2017-07-31
 
 * [FEATURE] Adds AutoSuggest to TagInput
