@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Tag, TagSet } from 'Components/Forms';
+import { Tag, TagSet, TagInput } from 'Components/Forms';
 
 const availableTags = [
   'Agents',
@@ -36,7 +36,16 @@ class Story extends React.Component {
           <Tag>VIP</Tag>
         </div>
         <div>
+          <h4>TagSet</h4>
           <TagSet tags={tags} onChange={this.handleChange} options={availableTags} />
+        </div>
+        <div>
+          <h4>TagInput</h4>
+          <TagInput
+            tags={tags}
+            onChange={this.handleChange}
+            options={availableTags}
+          />
         </div>
       </div>
     );

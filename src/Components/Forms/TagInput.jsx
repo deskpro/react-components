@@ -3,48 +3,27 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Tag } from 'Components/Forms';
 import TagsInput from 'react-tagsinput';
+import Autosuggest from 'react-autosuggest';
 import onClickOutside from 'react-onclickoutside';
 
 class TagInput extends React.Component {
   static propTypes = {
     tags:       PropTypes.array.isRequired,
     inputProps: PropTypes.object,
-    onChange:   PropTypes.func,
     editable:   PropTypes.bool,
+    options:    PropTypes.array,
     style:      PropTypes.object,
+    onChange:   PropTypes.func,
   };
   static defaultProps = {
-    editable:   false,
+    editable:   true,
     inputProps: { placeholder: 'Add a label' },
-    onChange()   {}
+    options:    [],
+    style:      {},
+    onChange()  {},
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      editable: false,
-    };
-  }
-
-  setEditable = () => {
-    if (!this.props.editable) {
-      this.setState({
-        editable: true
-      });
-    }
-  };
-
-  handleChange = (tags) => {
-    this.props.onChange(tags);
-  };
-
-  handleClickOutside = () => {
-    this.setState({
-      editable: false
-    });
-  };
-
-  renderTag = (tagProps) => {
+  static renderTag(tagProps) {
     const { tag, key, onRemove } = tagProps;
     return (
       <Tag
@@ -55,17 +34,87 @@ class TagInput extends React.Component {
         {tag}
       </Tag>
     );
-  };
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      editable: false,
+    };
+    this.setEditable = this.setEditable.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.renderInput = this.renderInput.bind(this);
+    this.renderInputComponent = this.renderInputComponent.bind(this);
+  }
+
+  setEditable() {
+    if (!this.props.editable) {
+      this.setState({
+        editable: true
+      });
+    }
+    if (this.autoSuggestInput) {
+      this.autoSuggestInput.focus();
+    }
+  }
+
+  handleChange(tags) {
+    this.props.onChange(tags);
+  }
+
+  handleClickOutside() {
+    this.setState({
+      editable: false
+    });
+  }
+
+  renderInputComponent(props) {
+    return <input type="text" {...props} ref={(c) => { this.autoSuggestInput = c; }} />;
+  }
+
+  renderInput({ addTag, ...props }) {
+    const { options } = this.props;
+    const handleOnChange = (e, { method }) => {
+      if (method === 'enter') {
+        e.preventDefault();
+      } else {
+        props.onChange(e);
+      }
+    };
+
+    const inputValue = (props.value && props.value.trim().toLowerCase()) || '';
+    const inputLength = inputValue.length;
+
+    const suggestions = options.filter(option => option.toLowerCase().slice(0, inputLength) === inputValue);
+
+    return (
+      <Autosuggest
+        suggestions={suggestions}
+        shouldRenderSuggestions={value => value && value.trim().length > 0}
+        getSuggestionValue={suggestion => suggestion}
+        renderSuggestion={suggestion => <span>{suggestion}</span>}
+        renderInputComponent={this.renderInputComponent}
+        inputProps={{ ...props, onChange: handleOnChange }}
+        onSuggestionSelected={(e, { suggestion }) => {
+          addTag(suggestion);
+        }}
+        onSuggestionsClearRequested={() => {}}
+        onSuggestionsFetchRequested={() => {}}
+      />
+    );
+  }
 
   renderTags = () => {
-    const { tags, inputProps, editable, ...elementProps } = this.props;
+    const { tags, inputProps, editable, options, ...elementProps } = this.props;
     if (this.state.editable || editable) {
       const props = Object.assign({}, elementProps);
       delete props.onChange;
       return (
         <TagsInput
           value={tags}
-          renderTag={this.renderTag}
+          renderTag={TagInput.renderTag}
+          renderInput={options ? this.renderInput : null}
           inputProps={inputProps}
           onChange={this.handleChange}
           {...props}
@@ -75,7 +124,7 @@ class TagInput extends React.Component {
     if (!tags) {
       return null;
     }
-    return tags.map((tag, key) => <Tag key={key}>{tag}</Tag>);
+    return tags.map(tag => <Tag key={tag}>{tag}</Tag>);
   };
 
   render() {
@@ -85,7 +134,6 @@ class TagInput extends React.Component {
       <div
         className={classNames('dp-tag-input', { editable })}
         style={style}
-        onBlur={this.handleBlur}
         onClick={this.setEditable}
       >
         {this.renderTags()}
