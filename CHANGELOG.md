@@ -1,3 +1,7 @@
+## v0.5.8 - 2017-08-01
+
+* [FIX] Fix extra onChange in Tabs
+
 ## v0.5.7 - 2017-07-31
 
 * [FIX] Missing dependency
