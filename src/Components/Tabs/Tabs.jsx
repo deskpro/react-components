@@ -12,7 +12,7 @@ export default class Tabs extends React.Component {
     /**
      * Name of the active tab.
      */
-    active:    PropTypes.string,
+    active:    PropTypes.string.isRequired,
     /**
      * CSS classes to apply to the element.
      */
@@ -20,7 +20,7 @@ export default class Tabs extends React.Component {
     /**
      * Children to render.
      */
-    children:  PropTypes.node,
+    children:  PropTypes.node.isRequired,
     /**
      * Called when the active tab changes. Receives the name of the tab.
      */
@@ -28,30 +28,24 @@ export default class Tabs extends React.Component {
   };
 
   static defaultProps = {
-    active:   '',
-    onChange: noop
+    active:    '',
+    className: '',
+    onChange:  noop,
   };
 
   constructor(props) {
     super(props);
-    this.state = {
-      active: props.active
-    };
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount() {
-    this.props.onChange(this.state.active);
-  }
-
-  handleClick = (active) => {
-    this.setState({ active }, () => {
+  handleClick(active) {
+    if (active !== this.props.active) {
       this.props.onChange(active);
-    });
-  };
+    }
+  }
 
   render() {
-    const { className, children, ...props } = this.props;
-    const { active } = this.state;
+    const { className, children, active, ...props } = this.props;
 
     const tabs = React.Children.map(children, child => React.cloneElement(child, {
       onClick: this.handleClick,

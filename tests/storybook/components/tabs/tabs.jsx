@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf, action } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Tabs, TabLink } from 'Components/Tabs';
 import Pane from 'Components/Pane';
@@ -10,6 +10,12 @@ class Story extends React.Component {
     this.state = {
       active: 'one'
     };
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(a) {
+    action('onChange');
+    this.setState({ active: a });
   }
 
   render() {
@@ -17,15 +23,15 @@ class Story extends React.Component {
 
     return (
       <div style={{ width: 400 }}>
-        <Tabs active="one" onChange={(a) => { this.setState({ active: a }); }}>
+        <Tabs active={active} onChange={this.onChange}>
           <TabLink name="one">
             Tab One
           </TabLink>
           <TabLink name="two">
-            Tab One
+            Tab Two
           </TabLink>
           <TabLink name="three">
-            Tab One
+            Tab Three
           </TabLink>
         </Tabs>
         <Pane hidden={active !== 'one'}>

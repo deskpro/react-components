@@ -59,8 +59,10 @@
   .dp-button {
     margin-right: 12px;
     &.right {
-      margin-right: 0;
       float: right;
     }
+  }
+  .dp-button:not(.right) + .dp-button.right {
+    margin-right: 0;
   }
 }
