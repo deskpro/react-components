@@ -1,3 +1,7 @@
+## v0.5.9 - 2017-08-02
+
+* [FEATURE] Adds button loading state
+
 ## v0.5.8 - 2017-08-01
 
 * [FIX] Fix extra onChange in Tabs
