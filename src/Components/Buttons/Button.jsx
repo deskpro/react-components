@@ -34,6 +34,10 @@ export default class Button extends React.Component {
      */
     disabled:                PropTypes.bool,
     /**
+     * Whether or not the button is loading or not.
+     */
+    loading:                 PropTypes.bool,
+    /**
      * Called when the user clicks outside of the button.
      */
     onClickOutside:          PropTypes.func,
@@ -69,6 +73,7 @@ export default class Button extends React.Component {
     type:                    'primary',
     shape:                   'default',
     disabled:                false,
+    loading:                 false,
     onClickOutside:          noop,
     disableOnClickOutside:   noop,
     enableOnClickOutside:    noop,
@@ -83,7 +88,7 @@ export default class Button extends React.Component {
   };
 
   render() {
-    const { size, type, shape, disabled, className, children, ...props } = this.props;
+    const { size, type, shape, disabled, className, children, loading, ...props } = this.props;
 
     return (
       <button
@@ -93,7 +98,8 @@ export default class Button extends React.Component {
           `dp-button--${size[0]}`,
           `dp-button--${type}`,
           `dp-button--shape-${shape}`,
-          className
+          className,
+          { 'dp-button--loading': loading }
         )}
         {...objectKeyFilter(props, Button.propTypes)}
       >

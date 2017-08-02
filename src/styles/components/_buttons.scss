@@ -398,3 +398,66 @@
   padding: 8px;
   font-size: $icon-size-m;
 }
+
+/******************************
+    Button loading
+*******************************/
+@keyframes button-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dp-button--loading {
+  position: relative;
+  color: transparent!important;
+  text-shadow: none!important;
+  opacity: 1;
+  pointer-events: auto;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    margin: -9px 0 0 -8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: .2em solid rgba(0,0,0,.15);
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    margin: -9px 0 0 -8px;
+    width: 10px;
+    height: 10px;
+    -webkit-animation: button-spin .6s linear;
+    animation: button-spin .6s linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+    border-color: #fff transparent transparent;
+    border-style: solid;
+    border-width: .2em;
+    box-shadow: 0 0 0 1px transparent;
+  }
+  &.dp-button--s {
+    &:before, &:after {
+      width: 7px;
+      height: 7px;
+      margin: -7px 0 0 -6px;
+    }
+  }
+  &.dp-button--l {
+    &:before, &:after {
+      width: 15px;
+      height: 15px;
+      margin: -11px 0 0 -10px;
+    }
+  }
+}
