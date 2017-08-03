@@ -45,6 +45,15 @@ storiesOf('Forms', module)
         >
           Unchecked
         </Checkbox>
+        <Checkbox
+          existing
+          onChange={action('Checkbox change')}
+          style={{ display: 'inline-block' }}
+          disabled={boolean('Disabled', false)}
+          readOnly={boolean('Read only', false)}
+        >
+          Existing
+        </Checkbox>
       </div>
     )
   )

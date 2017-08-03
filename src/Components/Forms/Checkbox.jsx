@@ -10,27 +10,36 @@ class Checkbox extends React.Component {
     /**
      * CSS classes to apply to the element.
      */
+    onChange:        PropTypes.func,
+    style:           PropTypes.object,
     className:       PropTypes.string,
+    stopPropagation: PropTypes.bool,
     disabled:        PropTypes.bool,
     readOnly:        PropTypes.bool,
+    existing:        PropTypes.bool,
     id:              PropTypes.string,
     value:           PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     children:        PropTypes.node,
-    onChange:        PropTypes.func,
-    stopPropagation: PropTypes.bool,
-    style:           PropTypes.object,
   };
   static defaultProps = {
     onChange() {},
-    stopPropagation: false,
     style:           {},
     className:       '',
+    stopPropagation: false,
     disabled:        false,
     readOnly:        false,
+    existing:        false,
     id:              null,
     value:           null,
     children:        null
   };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      changed: false
+    };
+  }
 
   componentWillMount() {
     if (this.props.id) {
@@ -41,6 +50,9 @@ class Checkbox extends React.Component {
   }
 
   handleChange = (event) => {
+    this.setState({
+      changed: true
+    });
     if (this.props.stopPropagation) {
       event.stopPropagation();
     }
@@ -58,7 +70,8 @@ class Checkbox extends React.Component {
           className,
           {
             'dp-input--checkbox--disabled':  this.props.disabled,
-            'dp-input--checkbox--read-only': this.props.readOnly
+            'dp-input--checkbox--read-only': this.props.readOnly,
+            'dp-input--checkbox--existing':  this.props.existing && !this.state.changed && !this.props.checked,
           }
         )}
         style={style}
