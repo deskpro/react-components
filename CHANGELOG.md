@@ -1,3 +1,7 @@
+## v0.5.10 - 2017-08-03
+
+* [FEATURE] Adds existing status for Checkboxes
+
 ## v0.5.9 - 2017-08-02
 
 * [FEATURE] Adds button loading state
