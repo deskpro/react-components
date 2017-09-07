@@ -2,6 +2,7 @@
   "name": "deskpro-components",
   "version": "0.5.10",
   "description": "DeskPRO Components",
+  "main": "lib/Components/index.js",
   "homepage": {
     "url": "https://github.com/deskpro/deskpro-components"
   },
