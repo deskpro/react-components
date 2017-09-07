@@ -1,3 +1,7 @@
+## v0.5.12 - 2017-09-07
+
+* [MINOR] Adds semantic-ui css required by deskproapp-boilerplate-react
+
 ## v0.5.11 - 2017-09-07
 
 * [MINOR] Adds deskproapp-boilerplate-react styles
