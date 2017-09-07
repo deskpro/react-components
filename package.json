@@ -1,6 +1,6 @@
 {
   "name": "deskpro-components",
-  "version": "0.5.10",
+  "version": "0.5.11",
   "description": "DeskPRO Components",
   "main": "lib/Components/index.js",
   "homepage": {
