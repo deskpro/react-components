@@ -1,3 +1,7 @@
+## v0.5.11 - 2017-09-07
+
+* [MINOR] Adds deskproapp-boilerplate-react styles
+
 ## v0.5.10 - 2017-08-03
 
 * [FEATURE] Adds existing status for Checkboxes
@@ -168,7 +172,7 @@
 ## v0.3.3 - 2017-07-04
 
 * [MINOR] Pass all props to LabelInput
- 
+
 ## v0.3.2 - 2017-07-04
 
 * [MINOR] Adds style to heading count
@@ -246,7 +250,7 @@
 
 ## v0.1.4 - 2017-06-14
 
-* [FIX] Use border-box box-sizing on all elements 
+* [FIX] Use border-box box-sizing on all elements
 
 ## v0.1.3 - 2017-06-14
 
