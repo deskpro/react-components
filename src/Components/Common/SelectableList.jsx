@@ -41,6 +41,8 @@ export default class SelectableList extends React.Component {
   static defaultProps = {
     selected:        0,
     negativeAllowed: false,
+    className:       '',
+    children:        '',
     onSelect:        noop,
     onChange:        noop
   };

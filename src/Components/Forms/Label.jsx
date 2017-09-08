@@ -8,6 +8,12 @@ class Label extends React.PureComponent {
     children: PropTypes.node,
   };
 
+  static defaultProps = {
+    htmlFor:  '',
+    required: false,
+    children: ''
+  };
+
   render() {
     const { children, required, htmlFor, ...elementProps } = this.props;
     return (

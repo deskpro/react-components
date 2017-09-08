@@ -101,7 +101,7 @@ storiesOf('Columns', module)
             <Heading icon="heart">
               Awaiting Agent
             </Heading>
-            <img src={logoImage} style={styles.image} role="presentation" />
+            <img src={logoImage} style={styles.image} alt="Logo" />
           </Drawer>
           <Drawer>
             <Heading>

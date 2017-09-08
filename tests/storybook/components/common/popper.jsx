@@ -35,7 +35,7 @@ storiesOf('Common', module)
     return (
       <div>
         <div id="target" style={targetStyles}>
-          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" role="presentation" />
+          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" alt="presentation" />
         </div>
         <Popper
           target="target"
@@ -72,7 +72,7 @@ storiesOf('Common', module)
     return (
       <div style={containerStyles}>
         <div id="target" style={ts}>
-          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" role="presentation" />
+          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" alt="presentation" />
         </div>
         <Popper
           target="target"
@@ -133,7 +133,7 @@ storiesOf('Common', module)
     return (
       <div>
         <div id="target" style={targetStyles}>
-          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" role="presentation" />
+          <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" alt="presentation" />
         </div>
         <Popper
           target="target"

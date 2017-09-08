@@ -16,8 +16,10 @@ const TabLink = ({ name, active, onClick, children, className, ...props }) => {
   );
 
   return (
-    <li className={classes} {...props} onClick={() => { onClick(name); }}>
-      {children}
+    <li className={classes} {...props}>
+      <div onClick={() => { onClick(name); }}>
+        {children}
+      </div>
     </li>
   );
 };
@@ -46,8 +48,10 @@ TabLink.propTypes = {
 };
 
 TabLink.defaultProps = {
-  active:  false,
-  onClick: noop
+  active:    false,
+  onClick:   noop,
+  className: '',
+  children:  ''
 };
 
 export default TabLink;

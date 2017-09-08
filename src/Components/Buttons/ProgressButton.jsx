@@ -29,8 +29,10 @@ export default class ProgressButton extends React.Component {
   };
 
   static defaultProps = {
-    percent: 0,
-    size:    'large'
+    percent:   0,
+    size:      'large',
+    className: '',
+    children:  ''
   };
 
   render() {

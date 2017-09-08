@@ -28,7 +28,9 @@ Count.propTypes = {
 };
 
 Count.defaultProps = {
-  separator: THOUSANDTHS_SEPARATOR
+  separator: THOUSANDTHS_SEPARATOR,
+  className: '',
+  children:  ''
 };
 
 export default Count;

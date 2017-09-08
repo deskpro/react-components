@@ -21,4 +21,9 @@ ItemList.propTypes = {
   children:  PropTypes.node
 };
 
+ItemList.defaultProps = {
+  className: '',
+  children:  ''
+};
+
 export default ItemList;

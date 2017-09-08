@@ -31,6 +31,12 @@ DrawerInner.propTypes = {
   children: PropTypes.node
 };
 
+DrawerInner.defaultProps = {
+  id:       '',
+  opened:   false,
+  children: ''
+};
+
 /**
  * An expandable drawer within a navigation column.
  */
@@ -40,6 +46,10 @@ export default class Drawer extends React.Component {
      * CSS classes to apply to the element.
      */
     className: PropTypes.string,
+    /**
+     * Children to render.
+     */
+    children:  PropTypes.node,
     /**
      * The aria role.
      */
@@ -59,9 +69,12 @@ export default class Drawer extends React.Component {
   };
 
   static defaultProps = {
-    role:     'treeitem',
-    opened:   true,
-    onChange: noop
+    id:        '',
+    role:      'treeitem',
+    opened:    true,
+    onChange:  noop,
+    className: '',
+    children:  ''
   };
 
   constructor(props) {

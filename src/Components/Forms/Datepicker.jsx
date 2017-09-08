@@ -42,7 +42,15 @@ export default class Datepicker extends React.Component {
     /**
      * Called when a date is chosen.
      */
-    onSelect:    PropTypes.func
+    onSelect:    PropTypes.func,
+    /**
+     * Called when the value is changed.
+     */
+    onChange:    PropTypes.func,
+    /**
+     * Called when the component receives focus.
+     */
+    onFocus:     PropTypes.func
   };
 
   static defaultProps = {
@@ -51,6 +59,8 @@ export default class Datepicker extends React.Component {
     days:        DAYS,
     months:      MONTHS,
     onSelect:    noop,
+    onChange:    noop,
+    onFocus:     noop,
     className:   '',
     style:       {}
   };

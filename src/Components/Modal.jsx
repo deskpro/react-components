@@ -9,7 +9,12 @@ class Modal extends React.Component {
     style:      PropTypes.object,
     closeModal: PropTypes.func,
   };
+
   static defaultProps = {
+    title:    '',
+    children: '',
+    buttons:  [],
+    style:    {},
     closeModal() {},
   };
 

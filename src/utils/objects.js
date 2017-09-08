@@ -45,9 +45,11 @@ export function objectKeyFilter(obj1, obj2) {
  */
 export function objectForEach(obj, cb) {
   const newObj = Object.assign({}, obj);
+  /* eslint-disable no-restricted-syntax */
   for (const key of Object.keys(newObj)) {
     cb(newObj[key], key);
   }
+  /* eslint-enable no-restricted-syntax */
 
   return newObj;
 }

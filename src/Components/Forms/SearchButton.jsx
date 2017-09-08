@@ -137,7 +137,8 @@ export default class SearchButton extends Input {
       setTimeout(() => {
         const valLength = this.state.value.length;
         const input = this.inputRef.input;
-        input.selectionStart = input.selectionEnd = valLength;
+        input.selectionStart = valLength;
+        input.selectionEnd   = valLength;
         input.focus();
       }, 0);
     }
@@ -183,6 +184,7 @@ export default class SearchButton extends Input {
     } else if (!value || results.length === 0) {
       body = emptyPlaceholder ? <ListElement>{emptyPlaceholder}</ListElement> : null;
     } else {
+      /* eslint-disable react/no-array-index-key */
       body = results.map((result, i) => (
         <ListElement key={i} data-dp-value={result}>
           <Highlighter highlight={value}>

@@ -49,10 +49,15 @@ export default class HiddenFields extends React.Component {
   };
 
   static defaultProps = {
-    opened:    false,
-    labelShow: 'Show optional fields',
-    labelHide: 'Hide optional fields',
-    onChange:  noop
+    id:             '',
+    opened:         false,
+    labelStyle:     {},
+    labelClassName: '',
+    labelShow:      'Show optional fields',
+    labelHide:      'Hide optional fields',
+    className:      '',
+    children:       '',
+    onChange:       noop
   };
 
   constructor(props) {

@@ -19,10 +19,16 @@ class Radio extends React.Component {
     stopPropagation: PropTypes.bool,
     style:           PropTypes.object,
   };
+
   static defaultProps = {
     onChange() {},
     stopPropagation: false,
+    disabled:        false,
+    id:              '',
+    value:           '',
     style:           {},
+    className:       '',
+    children:        ''
   };
 
   componentWillMount() {

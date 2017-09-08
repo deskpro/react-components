@@ -27,8 +27,10 @@ export default class Progress extends React.Component {
   };
 
   static defaultProps = {
-    size: 'large',
-    type: 'primary'
+    size:      'large',
+    type:      'primary',
+    className: '',
+    children:  ''
   };
 
   render() {

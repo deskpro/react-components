@@ -13,6 +13,10 @@ const ClickOutsideButton = onClickOutside(Button);
 export default class ConfirmButton extends React.Component {
   static propTypes = {
     /**
+     * Whether the component is disabled.
+     */
+    disabled:              PropTypes.bool,
+    /**
      * The confirmation message.
      */
     message:               PropTypes.string,

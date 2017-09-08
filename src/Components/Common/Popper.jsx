@@ -20,9 +20,13 @@ export default class Popper extends React.Component {
      */
     className:           PropTypes.string,
     /**
+     * Children to render.
+     */
+    children:            PropTypes.node,
+    /**
      * Popper is placed in reference to this element.
      */
-    target:              PropTypes.any, // eslint-disable-line react/forbid-prop-types
+    target:              PropTypes.any, // eslint-disable-line
     /**
      * Placement applied to popper.
      */
@@ -88,6 +92,8 @@ export default class Popper extends React.Component {
     offsetX:             '0px',
     offsetY:             '0px',
     zIndex:              0,
+    className:           '',
+    children:            '',
     arrow:               true,
     detached:            false,
     opened:              false,

@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ListElement } from 'Components/Common';
@@ -38,8 +39,8 @@ export const TestDrawer = ({ onClick, heading, opened, children, ...props }) => 
 
   return (
     <ListElement {...props} style={styles}>
-      <h3 onClick={onClick}>
-        {heading}
+      <h3>
+        <div onClick={onClick}>{heading}</div>
       </h3>
       <div style={{ display: opened ? 'block' : 'none' }}>
         {children}

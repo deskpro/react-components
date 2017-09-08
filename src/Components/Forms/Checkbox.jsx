@@ -17,14 +17,17 @@ class Checkbox extends React.Component {
     disabled:        PropTypes.bool,
     readOnly:        PropTypes.bool,
     existing:        PropTypes.bool,
+    checked:         PropTypes.bool,
     id:              PropTypes.string,
     value:           PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     children:        PropTypes.node,
   };
+
   static defaultProps = {
     onChange() {},
     style:           {},
     className:       '',
+    checked:         false,
     stopPropagation: false,
     disabled:        false,
     readOnly:        false,
