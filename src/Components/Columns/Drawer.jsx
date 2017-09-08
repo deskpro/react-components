@@ -123,7 +123,6 @@ export default class Drawer extends React.Component {
   renderHeading() {
     const { opened } = this.state;
     const props = {
-      onClick:         this.toggle,
       'aria-label':    `Click to ${opened ? 'close' : 'open'}.`,
       'aria-controls': `dp-column-drawer-body-${this.id}`
     };
@@ -131,6 +130,7 @@ export default class Drawer extends React.Component {
       <Icon
         key="icon"
         aria-hidden
+        onClick={this.toggle}
         className="dp-column-drawer__arrow"
         name={opened ? 'caret-up' : 'caret-down'}
         title={opened ? 'Close' : 'Open'}

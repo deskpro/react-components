@@ -2,7 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import Heading from 'Components/Common/Heading';
-/* eslint-disable react/prop-types*/
+import Icon from 'Components/Icon';
+/* eslint-disable react/prop-types */
 
 storiesOf('Common', module)
   .addDecorator(withKnobs)
@@ -10,13 +11,15 @@ storiesOf('Common', module)
   'Heading',
   Heading,
   {
-    size: [1, 2, 3, 4, 5, 6]
+    size:     [1, 2, 3, 4, 5, 6],
+    icon:     ['bug'],
+    controls: [<div><Icon name="gear" /><Icon name="refresh" /></div>]
   },
   {
     CombinationRenderer({ Component, props }) {
       return (
-        <div>
-          <Component size={props.size} icon="bug" count={22}>
+        <div style={{ margin: 12, width: 200 }}>
+          <Component size={props.size} icon={props.icon} controls={props.controls}>
             Size {props.size}
           </Component>
         </div>

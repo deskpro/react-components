@@ -1,10 +1,16 @@
 .dp-heading {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  & > .dp-icon {
+  .dp-icon {
     padding-right: 0.5em;
+    font-size: inherit;
   }
+}
+
+.dp-heading__controls {
+  margin-left: auto;
 }
 
 .dp-heading__count {

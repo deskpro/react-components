@@ -57,7 +57,6 @@ $dp-column-item-height:    24px;
   & > .dp-heading {
     @include no-text-select();
     flex: 1;
-    cursor: pointer;
     margin: 0;
     padding: 0 $dp-column-padding;
     line-height: $dp-column-drawer-height;
@@ -76,6 +75,7 @@ $dp-column-item-height:    24px;
     .dp-column-drawer__arrow {
       order: 2;
       flex-grow: 1;
+      cursor: pointer;
       text-align: right;
       padding-right: 0;
     }
@@ -90,6 +90,13 @@ $dp-column-item-height:    24px;
     line-height: $font-size-m;
     font-weight: $pf-semi-bold;
     color: $dp-greyscale-700;
+  }
+}
+
+.dp-column-drawer--with-controls {
+  .dp-column-drawer__arrow {
+    flex-grow: 0 !important;
+    padding-left: 0.5rem !important;
   }
 }
 

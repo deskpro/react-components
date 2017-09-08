@@ -132,8 +132,8 @@ class Input extends React.Component {
           onBlur={this.onBlur}
           {...objectKeyFilter(props, Input.propTypes)}
         />
-        {/* { validating ? <SVGInline className="dp-input__icon" svg={LoadingSvg} /> : '' }*/}
-        {/* { validated ? <SVGInline className="dp-input__icon" svg={ValidatedSvg} /> : '' }*/}
+        {/* { validating ? <SVGInline className="dp-input__icon" svg={LoadingSvg} /> : '' } */}
+        {/* { validated ? <SVGInline className="dp-input__icon" svg={ValidatedSvg} /> : '' } */}
         {this.getSuffix()}
       </div>
     );

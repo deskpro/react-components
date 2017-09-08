@@ -6,7 +6,7 @@ import Icon from 'Components/Icon';
 /**
  * A header element which can be displayed with an icon and count number.
  */
-const Heading = ({ size, icon, count, children, className, ...props }) => {
+const Heading = ({ size, icon, controls, count, children, className, ...props }) => {
   const childArray = React.Children.toArray(children);
 
   if (icon !== undefined) {
@@ -17,6 +17,13 @@ const Heading = ({ size, icon, count, children, className, ...props }) => {
           icon,
           { key: 'icon' }
         )
+    );
+  }
+  if (controls !== undefined) {
+    childArray.push(
+      <span key="controls" className="dp-heading__controls">
+        {controls}
+      </span>
     );
   }
   if (count !== undefined) {
@@ -45,6 +52,10 @@ Heading.propTypes = {
    */
   count:     PropTypes.number,
   /**
+   * Elements added to the right of the text.
+   */
+  controls:  PropTypes.node,
+  /**
    * CSS classes to apply to the element.
    */
   className: PropTypes.string,
@@ -55,7 +66,12 @@ Heading.propTypes = {
 };
 
 Heading.defaultProps = {
-  size: 1
+  size:      1,
+  icon:      undefined,
+  count:     undefined,
+  controls:  undefined,
+  className: '',
+  children:  []
 };
 
 export default Heading;
