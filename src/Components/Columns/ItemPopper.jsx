@@ -18,7 +18,8 @@ export default class ItemPopper extends React.Component {
   };
 
   static defaultProps = {
-    opened: false
+    opened:   false,
+    children: ''
   };
 
   constructor(props) {

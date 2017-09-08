@@ -37,7 +37,9 @@ Pane.propTypes = {
 };
 
 Pane.defaultProps = {
-  hidden: false
+  hidden:    false,
+  className: '',
+  children:  ''
 };
 
 export default Pane;

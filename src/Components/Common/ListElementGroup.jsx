@@ -30,4 +30,9 @@ ListElementGroup.propTypes = {
   children:  PropTypes.node,
 };
 
+ListElementGroup.defaultProps = {
+  className: '',
+  children:  ''
+};
+
 export default ListElementGroup;

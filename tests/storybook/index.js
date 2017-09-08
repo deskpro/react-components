@@ -37,6 +37,7 @@ import './components/common/highlighter';
 import './components/icon';
 import './components/lists/list';
 import './components/lists/selectable';
+import './components/loader';
 import './components/modal';
 import './components/urgency';
 import './components/progress';

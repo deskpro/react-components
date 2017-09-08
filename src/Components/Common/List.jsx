@@ -8,6 +8,11 @@ class List extends React.Component {
     children:  PropTypes.node,
   };
 
+  static defaultProps = {
+    className: '',
+    children:  ''
+  };
+
   render() {
     const { children, className, ...elementProps } = this.props;
     return (

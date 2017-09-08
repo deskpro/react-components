@@ -31,8 +31,10 @@ ProgressBar.propTypes = {
 };
 
 ProgressBar.defaultProps = {
-  percent: 0,
-  type:    'primary'
+  percent:   0,
+  type:      'primary',
+  className: '',
+  children:  ''
 };
 
 export default ProgressBar;

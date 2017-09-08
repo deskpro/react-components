@@ -25,7 +25,9 @@ export default class DrawerList extends React.Component {
   };
 
   static defaultProps = {
-    role: 'tree'
+    role:      'tree',
+    className: '',
+    children:  ''
   };
 
   render() {

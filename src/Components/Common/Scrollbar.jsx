@@ -31,4 +31,9 @@ Scrollbar.propTypes = {
   children:  PropTypes.node
 };
 
+Scrollbar.defaultProps = {
+  className: '',
+  children:  ''
+};
+
 export default Scrollbar;

@@ -26,7 +26,9 @@ Subheading.propTypes = {
 };
 
 Subheading.defaultProps = {
-  size: 2
+  size:      2,
+  className: '',
+  children:  ''
 };
 
 export default Subheading;

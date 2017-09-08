@@ -37,9 +37,11 @@ export default class Item extends React.Component {
   };
 
   static defaultProps = {
-    selected: false,
-    onClick:  noop,
-    onSelect: noop
+    selected:  false,
+    onClick:   noop,
+    onSelect:  noop,
+    className: '',
+    children:  ''
   };
 
   componentDidUpdate(prevProps) {

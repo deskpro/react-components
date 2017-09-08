@@ -12,7 +12,21 @@ export default class QueryableList extends React.Component {
     /**
      * Filter list elements by name. When set to "@all" the entire list is displayed.
      */
-    whereName: PropTypes.string
+    whereName: PropTypes.string,
+    /**
+     * CSS classes to apply to the element.
+     */
+    className: PropTypes.string,
+    /**
+     * Children to render.
+     */
+    children:  PropTypes.node,
+  };
+
+  static defaultProps = {
+    whereName: '',
+    className: '',
+    children:  ''
   };
 
   /**

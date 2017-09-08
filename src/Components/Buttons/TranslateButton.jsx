@@ -29,8 +29,10 @@ export default class TranslateButton extends React.Component {
   };
 
   static defaultProps = {
-    size:    'large',
-    percent: 0
+    size:      'large',
+    percent:   0,
+    className: '',
+    children:  ''
   };
 
   render() {

@@ -14,5 +14,5 @@ export class TestButton extends React.Component {
 }
 
 TestButton.propTypes = {
-  popper: PropTypes.object
+  popper: PropTypes.object // eslint-disable-line
 };

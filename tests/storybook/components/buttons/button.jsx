@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf, action } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { Button, ConfirmButton } from 'Components/Buttons';
-/* eslint-disable react/prop-types*/
+/* eslint-disable react/prop-types */
 
 storiesOf('Buttons', module)
   .addDecorator(withKnobs)

@@ -19,7 +19,8 @@ export default class Portal extends React.Component {
   };
 
   static defaultProps = {
-    onUpdate: noop
+    onUpdate: noop,
+    children: ''
   };
 
   constructor(props) {

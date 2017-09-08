@@ -28,7 +28,8 @@ Highlighter.propTypes = {
 };
 
 Highlighter.defaultProps = {
-  element: 'i'
+  element:  'i',
+  children: ''
 };
 
 export default Highlighter;

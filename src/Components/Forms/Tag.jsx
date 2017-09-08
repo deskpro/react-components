@@ -13,6 +13,14 @@ class Tag extends React.PureComponent {
     onRemove:  PropTypes.func
   };
 
+  static defaultProps = {
+    className: '',
+    editable:  false,
+    children:  '',
+    value:     '',
+    onRemove() {}
+  };
+
   handleRemove = (event) => {
     event.stopPropagation();
     const value = this.props.value || this.props.children;
