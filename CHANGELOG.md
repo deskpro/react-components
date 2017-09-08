@@ -1,7 +1,7 @@
 ## v0.5.13 - 2017-09-08
 
 * [MINOR] Adds main without apps style for DeskPRO main app
-* [MINOR] Improve modals
+* [MINOR] Improves Modal
 
 ## v0.5.12 - 2017-09-07
 
