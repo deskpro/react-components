@@ -41,9 +41,39 @@
     top: 0;
     right: 0;
     text-align: center;
-    color: $dp-greyscale-00;
+    color: transparent;
     cursor: pointer;
     user-select: none;
+  }
+  .dp-modal__close:before, .dp-modal__close:after {
+    position: absolute;
+    left: 19px;
+    top: 12px;
+    content: ' ';
+    height: 16px;
+    width: 2px;
+    background-color: #FFF;
+  }
+  .dp-modal__close:before {
+    transform: rotate(45deg);
+  }
+  .dp-modal__close:after {
+    transform: rotate(-45deg);
+  }
+  .close-cross {
+    color: transparent;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background-color: $dp-greyscale-800;
+    border-radius: 50%;
+    padding: 5px
+  }
+  .close-cross:hover {
+    opacity: 1;
   }
 }
 .dp-modal__body {

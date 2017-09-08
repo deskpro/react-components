@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Modal extends React.Component {
   static propTypes = {
-    title:      PropTypes.string,
+    title:      PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     children:   PropTypes.node,
     buttons:    PropTypes.node,
     style:      PropTypes.object,
@@ -13,7 +13,7 @@ class Modal extends React.Component {
   static defaultProps = {
     title:    '',
     children: '',
-    buttons:  [],
+    buttons:  null,
     style:    {},
     closeModal() {},
   };
@@ -69,9 +69,11 @@ class Modal extends React.Component {
           <div className="dp-modal__body">
             {children}
           </div>
-          <div className="dp-modal__buttons">
-            {buttons}
-          </div>
+          {buttons ?
+            <div className="dp-modal__buttons">
+              {buttons}
+            </div> : null
+          }
         </div>
       </div>
     );
