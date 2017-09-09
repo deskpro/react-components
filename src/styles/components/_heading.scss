@@ -11,6 +11,10 @@
 
 .dp-heading__controls {
   margin-left: auto;
+
+  .dp-icon {
+    cursor: pointer;
+  }
 }
 
 .dp-heading__count {
