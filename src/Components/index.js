@@ -1,9 +1,11 @@
 export { default as Alert } from './Alert';
 export { default as Avatar } from './Avatar';
+export { default as Container } from './Container';
 export { default as Icon } from './Icon';
 export { default as Modal } from './Modal';
 export { default as Pane } from './Pane';
 export { default as Progress } from './Progress';
+export { default as Section } from './Section';
 export { default as Stars } from './Stars';
 export { default as Urgency } from './Urgency';
 export { default as Loader } from './Loader';

@@ -42,4 +42,5 @@ import './components/modal';
 import './components/urgency';
 import './components/progress';
 import './components/stars';
+import './components/section';
 import './components/tabs/tabs';
