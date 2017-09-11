@@ -1,6 +1,7 @@
 import Checkbox from './Checkbox';
 import CustomSelect from './CustomSelect';
 import Datepicker from './Datepicker';
+import Group from './Group';
 import Input from './Input';
 import HiddenFields from './HiddenFields';
 import Label from './Label';
@@ -19,6 +20,7 @@ export {
   Checkbox,
   CustomSelect,
   Datepicker,
+  Group,
   Input,
   HiddenFields,
   Label,

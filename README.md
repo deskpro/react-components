@@ -72,6 +72,8 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
 ### Forms
 * [Forms/Form](docs/components/forms/form.md)  
   Renders a form and handles its submission.
+* [Forms/Group](docs/components/forms/group.md)  
+  Groups a label and form children together.
 * [Forms/Input](docs/components/forms/input.md)  
   Standard form input element.
 * [Forms/HiddenFields](docs/components/forms/hidden_fields.md)  
