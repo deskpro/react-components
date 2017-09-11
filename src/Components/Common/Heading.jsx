@@ -6,7 +6,7 @@ import Icon from 'Components/Icon';
 /**
  * A header element which can be displayed with an icon and count number.
  */
-const Heading = ({ size, icon, controls, count, children, className, ...props }) => {
+const Heading = ({ size, icon, controls, count, underline, children, className, ...props }) => {
   const childArray = React.Children.toArray(children);
 
   if (icon !== undefined) {
@@ -34,7 +34,10 @@ const Heading = ({ size, icon, controls, count, children, className, ...props })
     );
   }
 
-  props.className = classNames('dp-heading', className);
+  props.className = classNames('dp-heading', {
+    'dp-heading--underlined': underline
+  }, className);
+
   return React.createElement(`h${size}`, props, childArray);
 };
 
@@ -56,6 +59,10 @@ Heading.propTypes = {
    */
   controls:  PropTypes.node,
   /**
+   * Whether to underline the heading text.
+   */
+  underline: PropTypes.bool,
+  /**
    * CSS classes to apply to the element.
    */
   className: PropTypes.string,
@@ -70,6 +77,7 @@ Heading.defaultProps = {
   icon:      undefined,
   count:     undefined,
   controls:  undefined,
+  underline: false,
   className: '',
   children:  []
 };

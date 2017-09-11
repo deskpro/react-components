@@ -11,15 +11,16 @@ storiesOf('Common', module)
   'Heading',
   Heading,
   {
-    size:     [1, 2, 3, 4, 5, 6],
-    icon:     ['bug'],
-    controls: [<div><Icon name="gear" /><Icon name="refresh" /></div>]
+    size:      [1, 2, 3, 4, 5, 6],
+    icon:      ['bug'],
+    underline: [true, false],
+    controls:  [<div><Icon name="gear" /><Icon name="refresh" /></div>]
   },
   {
     CombinationRenderer({ Component, props }) {
       return (
         <div style={{ margin: 12, width: 200 }}>
-          <Component size={props.size} icon={props.icon} controls={props.controls}>
+          <Component size={props.size} icon={props.icon} underline={props.underline} controls={props.controls}>
             Size {props.size}
           </Component>
         </div>
