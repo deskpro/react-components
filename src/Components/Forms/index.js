@@ -15,6 +15,7 @@ import Tag from './Tag';
 import TagInput from './TagInput';
 import TagSet from './TagSet';
 import Form from './Form';
+import Textarea from './Textarea';
 
 export {
   Checkbox,
@@ -34,4 +35,5 @@ export {
   TagInput,
   TagSet,
   Form,
+  Textarea,
 };

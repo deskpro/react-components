@@ -452,3 +452,13 @@
 .dp-input__label + .dp-input--radio {
   padding-top: 7px;
 }
+
+/******************************
+    Textarea
+*******************************/
+.dp-textarea {
+  textarea {
+    width: 100%;
+    height: 100%;
+  }
+}

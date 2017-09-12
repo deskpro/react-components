@@ -8,6 +8,7 @@ import './components/forms/checkbox';
 import './components/forms/custom_select';
 import './components/forms/select';
 import './components/forms/tag';
+import './components/forms/textarea';
 import './components/forms/radio';
 import './components/forms/datepicker';
 import './components/forms/hidden_fields';
