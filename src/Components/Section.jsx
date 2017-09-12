@@ -6,18 +6,32 @@ import Heading from 'Components/Common/Heading';
 /**
  * Renders a component representing a page section.
  */
-const Section = ({ title, className, children, ...props }) => (
-  <section className={classNames('up-section', classNames)} {...props}>
-    {title && <Heading size={3} underline>{title}</Heading>}
-    {children}
-  </section>
-);
+const Section = ({ title, hidden, className, children, ...props }) => {
+  const classes = classNames(
+    'dp-section',
+    {
+      'dp-section--hidden': hidden
+    },
+    classNames
+  );
+
+  return (
+    <section className={classes} {...props}>
+      {title && <Heading size={3} underline>{title}</Heading>}
+      {children}
+    </section>
+  );
+};
 
 Section.propTypes = {
   /**
    * Title to display inside the section.
    */
   title:     PropTypes.string,
+  /**
+   * Whether the section is hidden.
+   */
+  hidden:    PropTypes.bool,
   /**
    * CSS classes to apply to the element.
    */
@@ -30,6 +44,7 @@ Section.propTypes = {
 
 Section.defaultProps = {
   title:     '',
+  hidden:    false,
   className: '',
   children:  []
 };

@@ -32,8 +32,6 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
 
 * [Alert](docs/components/alert.md)  
   Renders a notification message.
-* [Pane](docs/components/pane.md)  
-  Renders a generic page section which may be displayed or hidden.
 * [Icon](docs/components/icon.md)  
   Renders an icon using the Font Awesome library.
 * [Avatar](docs/components/avatar.md)  
