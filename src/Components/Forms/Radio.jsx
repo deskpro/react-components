@@ -43,7 +43,7 @@ class Radio extends React.Component {
     if (this.props.stopPropagation) {
       event.stopPropagation();
     }
-    this.props.onChange(event.target.checked, this.props.value);
+    this.props.onChange(event.target.checked, this.props.value, event.target.name);
   };
 
   render() {

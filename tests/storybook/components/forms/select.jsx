@@ -18,6 +18,7 @@ storiesOf('Forms', module)
         <h3>Selects</h3>
         <Label>Basic</Label>
         <Select
+          name="select-1"
           onChange={action('Select change')}
           options={basicOptions}
           disabled={boolean('Disabled', false)}
@@ -25,6 +26,7 @@ storiesOf('Forms', module)
         <Label>Basic with Icon</Label>
         <Select
           icon="search"
+          name="select-2"
           onChange={action('Select change')}
           options={basicOptions}
           disabled={boolean('Disabled', false)}

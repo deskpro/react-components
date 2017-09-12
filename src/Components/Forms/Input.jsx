@@ -64,7 +64,7 @@ class Input extends React.Component {
   }
 
   onChange = (event) => {
-    this.props.onChange(event.currentTarget.value || '');
+    this.props.onChange(event.currentTarget.value || '', event.currentTarget.name || '');
   };
 
   onFocus = (e) => {
