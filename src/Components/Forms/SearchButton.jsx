@@ -95,10 +95,10 @@ export default class SearchButton extends Input {
     this.setState({ opened: !this.state.opened });
   };
 
-  handleChange = (value) => {
+  handleChange = (value, name) => {
     this.resultsRef.setIndex(-1);
     this.setState({ value }, () => {
-      this.props.onChange(value);
+      this.props.onChange(value, name);
     });
   };
 

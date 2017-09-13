@@ -11,6 +11,10 @@ class Select extends React.Component {
      */
     className:   PropTypes.string,
     /**
+     * Name of the form element.
+     */
+    name:        PropTypes.string,
+    /**
      * Displayed in the drop down before a value is entered.
      */
     placeholder: PropTypes.string,
@@ -35,9 +39,11 @@ class Select extends React.Component {
       })
     ).isRequired,
   };
+
   static defaultProps = {
     placeholder: 'Please select',
     multiple:    false,
+    name:        '',
     icon:        '',
     className:   '',
     onChange() {},
@@ -52,11 +58,11 @@ class Select extends React.Component {
   };
 
   handleChange = (value) => {
-    this.props.onChange(value);
+    this.props.onChange(value, this.props.name);
   };
 
   render() {
-    const { icon, className, ...elementProps } = this.props;
+    const { icon, name, className, ...elementProps } = this.props;
     const props = Object.assign({}, elementProps);
     delete props.onChange;
     return (
@@ -73,6 +79,7 @@ class Select extends React.Component {
       >
         {this.getIcon()}
         <ReactSelect
+          name={name}
           className={classNames('dp-select', className)}
           onChange={this.handleChange}
           {...props}

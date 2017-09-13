@@ -16,7 +16,7 @@ Groups a label and form children together.
 Value for the group label.
 
 **htmlFor={string}**  
-ID of the child the label belongs to.
+ID of the child the label belongs to. When ommitted the component will try to discover the ID of the child input element.
 
 
 ### CSS

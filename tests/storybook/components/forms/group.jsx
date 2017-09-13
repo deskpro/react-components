@@ -5,11 +5,10 @@ import { Group, Input } from 'Components/Forms';
 storiesOf('Forms', module)
   .add('Group', () => (
     <div style={{ margin: 10 }}>
-      <Group label="Username" htmlFor="test-username">
+      <Group label="Username">
         <Input id="test-username" />
       </Group>
     </div>
   )
 )
 ;
-

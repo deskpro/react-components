@@ -60,7 +60,7 @@ class Checkbox extends React.Component {
       event.stopPropagation();
     }
     if (!this.props.disabled && !this.props.readOnly) {
-      this.props.onChange(event.target.checked, this.props.value);
+      this.props.onChange(event.target.checked, this.props.value, event.target.name);
     }
   };
 

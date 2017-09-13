@@ -35,7 +35,7 @@ Adds `dp-tabs` to the root element.
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Pane from 'Components/Pane';
+import Section from 'Components/Section';
 import { Tabs, TabLink } from 'Components/Tabs';
 
 class App extends React.Component {
@@ -62,15 +62,15 @@ class App extends React.Component {
             Tab One
           </TabLink>
         </Tabs>
-        <Pane hidden={activePane !== 'one'}>
+        <Section hidden={activePane !== 'one'}>
           Tab one!
-        </Pane>
-        <Pane hidden={activePane !== 'two'}>
+        </Section>
+        <Section hidden={activePane !== 'two'}>
           Tab two!
-        </Pane>
-        <Pane hidden={activePane !== 'three'}>
+        </Section>
+        <Section hidden={activePane !== 'three'}>
           Tab three!
-        </Pane>
+        </Section>
       </div>
     );
   }
