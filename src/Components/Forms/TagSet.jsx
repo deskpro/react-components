@@ -6,11 +6,13 @@ import { Tag, SearchButton } from 'Components/Forms';
 class TagSet extends React.Component {
   static propTypes = {
     tags:     PropTypes.array.isRequired,
+    name:     PropTypes.string,
     options:  PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
     editable: PropTypes.bool,
     onChange: PropTypes.func,
   };
   static defaultProps = {
+    name:     '',
     editable: true,
     options:  [],
     onChange()   {}
@@ -24,7 +26,7 @@ class TagSet extends React.Component {
   }
 
   handleChange = (tags) => {
-    this.props.onChange(tags);
+    this.props.onChange(tags, this.props.name);
   };
 
   /**
