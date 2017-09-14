@@ -27,6 +27,9 @@ Whether the alert may be closed. Displays a close icon when true.
 **closeTitle={string}**  
 Displayed when hovering over the close icon.
 
+**onClose={function}**  
+Called when the alert is closed.
+
 ### CSS
 Adds `dp-alert` to the root element.
 

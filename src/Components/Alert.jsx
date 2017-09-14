@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import noop from 'utils/noop';
 import { objectKeyFilter } from 'utils/objects';
 import Icon from 'Components/Icon';
 
@@ -32,7 +33,11 @@ export default class Alert extends React.Component {
     /**
      * Children to render.
      */
-    children:   PropTypes.node
+    children:   PropTypes.node,
+    /**
+     * Called when the alert is closed.
+     */
+    onClose:    PropTypes.func
   };
 
   static defaultProps = {
@@ -41,7 +46,8 @@ export default class Alert extends React.Component {
     closeTitle: 'Close',
     closeable:  true,
     className:  '',
-    children:   []
+    children:   [],
+    onClose:    noop
   };
 
   constructor(props) {
@@ -51,8 +57,10 @@ export default class Alert extends React.Component {
     };
   }
 
-  handleCloseClick = () => {
-    this.setState({ closed: true });
+  handleCloseClick = (e) => {
+    this.setState({ closed: true }, () => {
+      this.props.onClose(e);
+    });
   };
 
   render() {
