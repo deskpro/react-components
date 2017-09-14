@@ -1,3 +1,14 @@
+## v0.5.14 - 2017-09-14
+
+* [FEATURE] Adds Loader component
+* [FEATURE] Adds Container component
+* [FEATURE] Adds Section component
+* [FEATURE] Adds Forms/Group component
+* [FEATURE] Adds Forms/Textarea component
+* [MINOR] Adds "controls" and "underline" props to Common/Heading component
+* [MINOR] Adds "name" prop to Forms/TagSet component
+* [MINOR] Adds "onClose" prop to Alert component
+
 ## v0.5.13 - 2017-09-08
 
 * [MINOR] Adds main without apps style for DeskPRO main app
