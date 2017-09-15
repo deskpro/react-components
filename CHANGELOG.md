@@ -1,3 +1,7 @@
+## v0.5.15 - 2017-09-15
+
+* [MINOR] Update style on Modal
+
 ## v0.5.14 - 2017-09-14
 
 * [FEATURE] Adds Loader component
