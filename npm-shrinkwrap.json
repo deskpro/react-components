@@ -1,6 +1,6 @@
 {
   "name": "deskpro-components",
-  "version": "0.5.15",
+  "version": "0.5.16",
   "dependencies": {
     "add-px-to-style": {
       "version": "1.0.0",

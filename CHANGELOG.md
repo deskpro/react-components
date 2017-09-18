@@ -1,3 +1,8 @@
+## v0.5.16 - 2017-09-18
+
+* [MINOR] Fixes missing disabled property on ConfirmButton
+* [MINOR] Fixes value type on Select
+
 ## v0.5.15 - 2017-09-15
 
 * [MINOR] Update style on Modal
