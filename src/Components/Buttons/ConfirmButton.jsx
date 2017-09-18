@@ -92,6 +92,7 @@ export default class ConfirmButton extends React.Component {
         onClick={this.handleClick}
         onClickOutside={this.clickOutside}
         disableOnClickOutside={!this.state.confirm}
+        disabled={this.props.disabled}
         {...objectKeyFilter(this.props, ConfirmButton.propTypes)}
       >
         {this.getLabel()}

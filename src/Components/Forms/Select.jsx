@@ -33,7 +33,7 @@ class Select extends React.Component {
       PropTypes.shape({
         label: PropTypes.string,
         value: PropTypes.oneOfType([
-          PropTypes.string.isRequired,
+          PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
           PropTypes.number.isRequired,
         ]),
       })
