@@ -65,7 +65,7 @@ class Checkbox extends React.Component {
   };
 
   render() {
-    const { children, className, value, style, disabled, readOnly, ...props } = this.props;
+    const { children, className, value, style, disabled, readOnly, checked, ...props } = this.props;
     return (
       <div
         className={classNames(
@@ -85,6 +85,7 @@ class Checkbox extends React.Component {
           id={this.id}
           onChange={this.handleChange}
           disabled={disabled || readOnly}
+          checked={checked}
           {...objectKeyFilter(props, Checkbox.propTypes)}
         />
         <label htmlFor={this.id} className="dp-input--checkbox__checkbox" />

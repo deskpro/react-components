@@ -10,9 +10,9 @@ $select-option-color: $dp-greyscale-850;
 
 $select-input-border-color: $dp-greyscale-300;
 
-@import "~react-select/scss/default";
-
 .dp-select {
+  @import "~react-select/scss/default.scss";
+
   &, * {
     box-sizing: border-box;
   }

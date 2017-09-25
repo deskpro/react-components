@@ -108,7 +108,7 @@
   }
 }
 
-.dp-button--secondary {
+.dp-button--secondary:not(:disabled) {
   background-color: $dp-greyscale-00;
   border: 1px solid $dp-greyscale-300;
   box-shadow: 0 -1px 0 $dp-greyscale-200 inset;

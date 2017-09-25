@@ -1,7 +1,7 @@
 {
   "name": "deskpro-components",
-  "version": "0.5.16",
-  "description": "DeskPRO Components",
+  "version": "0.5.17",
+  "description": "Deskpro Components",
   "main": "lib/Components/index.js",
   "homepage": {
     "url": "https://github.com/deskpro/deskpro-components"
@@ -85,19 +85,19 @@
   },
   "dependencies": {
     "bourbon": "^4.3.4",
-    "bourbon-neat": "^2.0.0",
+    "bourbon-neat": "^2.1.0",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
-    "popper.js": "^1.10.8",
+    "popper.js": "^1.12.5",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-autosuggest": "^9.3.2",
     "react-custom-scrollbars": "^4.1.2",
     "react-dom": "^15.6.1",
-    "react-onclickoutside": "^6.4.0",
-    "react-select": "^1.0.0-rc.5",
+    "react-onclickoutside": "^6.5.0",
+    "react-select": "^1.0.0-rc.10",
     "react-svg-inline": "^2.0.0",
-    "react-tagsinput": "^3.17.0"
+    "react-tagsinput": "^3.18.0"
   },
   "jest": {
     "modulePaths": [

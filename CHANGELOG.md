@@ -1,3 +1,8 @@
+## v0.5.17 - 2017-09-25
+
+* [FIX] Fixes checked checkboxes
+* [MINOR] Fixes minor styling issues
+
 ## v0.5.16 - 2017-09-18
 
 * [MINOR] Fixes missing disabled property on ConfirmButton
