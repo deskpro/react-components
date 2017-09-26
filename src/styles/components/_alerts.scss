@@ -5,7 +5,7 @@
   @include border-radius("m-l");
   display: flex;
   padding: 6px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   font-family: $primary-font;
   font-size: $font-size-m-l;
@@ -13,7 +13,7 @@
 }
 
 .dp-alert__icon {
-  margin: 0 12px 0 3px;
+  margin: 4px 12px 0 3px;
   font-size: $font-size-m-l;
 }
 
@@ -25,4 +25,6 @@
 
 .dp-alert__content {
   flex-grow: 2;
+  word-wrap: break-word;
+  overflow: hidden;
 }
