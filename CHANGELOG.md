@@ -1,3 +1,8 @@
+## v0.5.18 - 2017-09-26
+
+* [MINOR] Improves DatePicker, adds focus() fix lowercase months / days
+* [FIX] Fixes missing properties passed to Input
+
 ## v0.5.17 - 2017-09-25
 
 * [FIX] Fixes checked checkboxes
