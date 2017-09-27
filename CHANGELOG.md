@@ -1,3 +1,8 @@
+## v0.5.19 - 2017-09-27
+
+* [MINOR] Improves DatePicker by using moment, parse previous value
+* [MINOR] Opens calendar on focus on DatePicker
+
 ## v0.5.18 - 2017-09-26
 
 * [MINOR] Improves DatePicker, adds focus() fix lowercase months / days
