@@ -68,7 +68,8 @@
 /******************************
     Input validation
 *******************************/
-.dp-input--error input {
+.dp-input--error input,
+.dp-form-group--has-error input {
   border-color: $dp-knuckles-primary;
   &:hover {
     border-color: $dp-knuckles-secondary;
@@ -468,6 +469,12 @@
     display: block;
     width: 100%;
   }
+}
+
+.dp-form-group__error {
+  color: $dp-knuckles-primary;
+  padding-bottom: 3px;
+  margin-top: -6px;
 }
 
 /******************************

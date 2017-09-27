@@ -16,6 +16,10 @@ class Group extends React.Component {
      */
     htmlFor:   PropTypes.string,
     /**
+     * Error message related to the form group.
+     */
+    error:     PropTypes.string,
+    /**
      * CSS classes to apply to the element.
      */
     className: PropTypes.string,
@@ -28,12 +32,13 @@ class Group extends React.Component {
   static defaultProps = {
     label:     '',
     htmlFor:   '',
+    error:     '',
     className: '',
     children:  ''
   };
 
   render() {
-    const { label, className, children, ...props } = this.props;
+    const { label, error, className, children, ...props } = this.props;
     let { htmlFor } = this.props;
 
     if (htmlFor === '') {
@@ -46,10 +51,19 @@ class Group extends React.Component {
 
     return (
       <div
-        className={classNames('dp-form-group', className)}
+        className={classNames(
+          'dp-form-group',
+          {
+            'dp-form-group--has-error': error
+          },
+          className
+        )}
         {...objectKeyFilter(props, Group.propTypes)}
       >
         {label && <Label htmlFor={htmlFor}>{label}</Label>}
+        {error && (
+          <div className="dp-form-group__error">{error}</div>
+        )}
         {children}
       </div>
     );

@@ -8,6 +8,9 @@ storiesOf('Forms', module)
       <Group label="Username">
         <Input id="test-username" />
       </Group>
+      <Group label="Email" error="Value is required.">
+        <Input id="test-email" />
+      </Group>
     </div>
   )
 )
