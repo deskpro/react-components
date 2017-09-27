@@ -1,6 +1,6 @@
 {
   "name": "deskpro-components",
-  "version": "0.5.18",
+  "version": "0.5.19",
   "description": "Deskpro Components",
   "main": "lib/Components/index.js",
   "homepage": {
@@ -88,6 +88,7 @@
     "bourbon-neat": "^2.1.0",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
+    "moment": "^2.18.1",
     "popper.js": "^1.12.5",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",

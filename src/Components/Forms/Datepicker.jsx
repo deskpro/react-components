@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
@@ -20,6 +21,14 @@ export default class Datepicker extends React.Component {
      * Text to display in the input field until a value is chosen.
      */
     placeholder: PropTypes.string,
+    /**
+     * Moment format to use to render the input when the date is selected.
+     */
+    format:      PropTypes.string,
+    /**
+     * Initial value of the input (this property has priority over the date one)
+     */
+    value:       PropTypes.string,
     /**
      * The initial date to display.
      */
@@ -56,7 +65,9 @@ export default class Datepicker extends React.Component {
 
   static defaultProps = {
     placeholder: 'DD/MM/YYYY',
-    date:        new Date(),
+    format:      'DD/MM/YYYY',
+    value:       '',
+    date:        null,
     days:        DAYS,
     months:      MONTHS,
     onSelect:    noop,
@@ -69,9 +80,19 @@ export default class Datepicker extends React.Component {
   constructor(props) {
     super(props);
 
+    let date = props.date;
+
+    if (props.value) {
+      date = moment(props.value, props.format).toDate();
+    }
+
+    if (!date) {
+      date = new Date();
+    }
+
     this.state = {
-      date:   props.date,
-      value:  null,
+      date,
+      value:  props.value ? date : null,
       opened: false
     };
 
@@ -98,6 +119,9 @@ export default class Datepicker extends React.Component {
 
   componentDidMount() {
     this.inputDOM   = this.inputRef.input;
+    if (this.props.date) {
+      this.inputRef.setValue(moment(this.props.date).format(this.props.format));
+    }
     this.popperDOM = ReactDOM.findDOMNode(this.popperRef);
     this.updatePopperWidth();
 
@@ -123,6 +147,7 @@ export default class Datepicker extends React.Component {
 
   focus() {
     this.inputRef.focus();
+    this.handleInputFocus();
   }
 
   /**
@@ -186,7 +211,7 @@ export default class Datepicker extends React.Component {
    * @param {Date} date
    */
   handleDayClick(date) {
-    this.inputRef.setValue(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`);
+    this.inputRef.setValue(moment(date).format(this.props.format));
     this.popperRef.close();
     this.props.onSelect(date);
     this.setState({ value: date });
@@ -196,10 +221,14 @@ export default class Datepicker extends React.Component {
    * Called when the input value changes
    */
   handleInputChange(e) {
-    const value = new Date(this.inputRef.getValue());
-    if (value) {
-      this.props.onSelect(value);
-      this.setState({ value });
+    const value = moment(this.inputRef.getValue(), this.props.format);
+    if (value.isValid()) {
+      const date = value.toDate();
+      this.props.onSelect(date);
+      this.setState({
+        value: date,
+        date
+      });
     }
     if (this.props.onChange) {
       this.props.onChange(e);
@@ -295,7 +324,7 @@ export default class Datepicker extends React.Component {
 
   render() {
     const { opened } = this.state;
-    const { style, placeholder, className, ...props } = this.props;
+    const { style, placeholder, className, value, ...props } = this.props;
     const inputProps = objectKeyFilter(props, Datepicker.propTypes);
 
     return (
@@ -316,6 +345,7 @@ export default class Datepicker extends React.Component {
           placeholder={placeholder}
           onFocus={this.handleInputFocus}
           onChange={this.handleInputChange}
+          value={value}
           {...inputProps}
         />
         <Popper
