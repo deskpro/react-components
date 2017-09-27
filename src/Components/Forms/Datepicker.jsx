@@ -147,6 +147,7 @@ export default class Datepicker extends React.Component {
 
   focus() {
     this.inputRef.focus();
+    this.handleInputFocus();
   }
 
   /**
