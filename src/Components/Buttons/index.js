@@ -5,6 +5,7 @@ import ButtonPopper from './ButtonPopper';
 import DropdownButton from './DropdownButton';
 import ProgressButton from './ProgressButton';
 import TranslateButton from './TranslateButton';
+import Pagination from './Pagination';
 
 export {
   Button,
@@ -14,4 +15,6 @@ export {
   DropdownButton,
   ProgressButton,
   TranslateButton,
+  Pagination,
 };
+   

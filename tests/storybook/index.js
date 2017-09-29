@@ -46,3 +46,4 @@ import './components/progress';
 import './components/stars';
 import './components/section';
 import './components/tabs/tabs';
+import './components/buttons/pagination';
