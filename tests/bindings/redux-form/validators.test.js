@@ -38,3 +38,10 @@ test('validators.email', () => {
     expect(validators.email(d[0])).toBe(d[1]);
   });
 });
+
+test('validators.regexp', () => {
+  expect(validators.regexp(/test/)('test')).toBe(undefined);
+  expect(validators.regexp(/^[a-z]{4}$/)('test')).toBe(undefined);
+  expect(validators.regexp(/test/)('foo')).not.toBe(undefined);
+  expect(validators.regexp(/^[a-z]{3}$/)('test')).not.toBe(undefined);
+});
