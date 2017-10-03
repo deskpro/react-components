@@ -117,7 +117,7 @@ export default class SearchButton extends Input {
   };
 
   handleKeyDown = (e) => {
-    if (e.keyCode === 40 && this.state.opened) { // down
+    if (e.key === 'ArrowDown' && this.state.opened) {
       ReactDOM.findDOMNode(this.resultsRef).focus();
       this.resultsRef.setIndex(0);
     }

@@ -97,12 +97,12 @@ export default class SelectableList extends React.Component {
   };
 
   handleKeyDown = (e) => {
-    const code = e.keyCode;
-    if (code === 40) {        // down
+    const code = e.key;
+    if (code === 'ArrowDown') {
       this.setIndex(this.state.index + 1);
-    } else if (code === 38) { // up
+    } else if (code === 'ArrowUp') {
       this.setIndex(this.state.index - 1);
-    } else if (code === 13) { // enter
+    } else if (code === 'Enter') {
       this.props.onSelect(this.state.index, this.childArray[this.state.index]);
     }
   };

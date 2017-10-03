@@ -55,7 +55,7 @@ class TagSet extends React.Component {
    * Handles pressing ENTER in the search box
    */
   handleInputKeyDown = (e) => {
-    if (e.keyCode === 13) {
+    if (e.key === 'Enter') {
       this.addTag(e.target.value);
       this.searchRef.close();
     }
