@@ -20,6 +20,7 @@ A react-based set of components for building DeskPRO apps.
   * [Dates](#dates)
   * [DOM](#dom)
   * [CSS](#css)
+* [Bindings](#bindings)
 * [License](#license)
 
 
@@ -187,6 +188,9 @@ A Storybook demo is available online at https://deskpro.github.io/deskpro-compon
 ### CSS
 * [css/cssMatchComputedWidth](docs/utils/css/css_match_computed_width.md)  
   Sets the width of one element to the computed width of another.
+
+### Bindings
+* [Redux Form](docs/bindings/redux-form.md)  
 
 ### License
 The library is released under the BSD License. See [LICENSE](LICENSE) for more information.

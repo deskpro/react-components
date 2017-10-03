@@ -33,7 +33,7 @@ class Checkbox extends React.Component {
     readOnly:        false,
     existing:        false,
     id:              null,
-    value:           null,
+    value:           '',
     children:        null
   };
 

@@ -46,3 +46,11 @@ import './components/progress';
 import './components/stars';
 import './components/section';
 import './components/tabs/tabs';
+
+import './bindings/redux-form/fieldgroup';
+import './bindings/redux-form/checkbox';
+import './bindings/redux-form/datepicker';
+import './bindings/redux-form/input';
+import './bindings/redux-form/radio';
+import './bindings/redux-form/select';
+import './bindings/redux-form/textarea';
