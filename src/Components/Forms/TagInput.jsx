@@ -41,14 +41,9 @@ class TagInput extends React.Component {
     this.state = {
       editable: false,
     };
-    this.setEditable = this.setEditable.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
-    this.renderInput = this.renderInput.bind(this);
-    this.renderInputComponent = this.renderInputComponent.bind(this);
   }
 
-  setEditable() {
+  setEditable = () => {
     if (!this.props.editable) {
       this.setState({
         editable: true
@@ -57,23 +52,21 @@ class TagInput extends React.Component {
     if (this.autoSuggestInput) {
       this.autoSuggestInput.focus();
     }
-  }
+  };
 
-  handleChange(tags) {
+  handleChange = (tags) => {
     this.props.onChange(tags);
-  }
+  };
 
-  handleClickOutside() {
+  handleClickOutside = () => {
     this.setState({
       editable: false
     });
-  }
+  };
 
-  renderInputComponent(props) {
-    return <input type="text" {...props} ref={(c) => { this.autoSuggestInput = c; }} />;
-  }
+  renderInputComponent = props => <input type="text" {...props} ref={(c) => { this.autoSuggestInput = c; }} />;
 
-  renderInput({ addTag, ...props }) {
+  renderInput = ({ addTag, ...props }) => {
     const { options } = this.props;
     const handleOnChange = (e, { method }) => {
       if (method === 'enter') {
@@ -103,7 +96,7 @@ class TagInput extends React.Component {
         onSuggestionsFetchRequested={() => {}}
       />
     );
-  }
+  };
 
   renderTags = () => {
     const { tags, inputProps, editable, options, ...elementProps } = this.props;

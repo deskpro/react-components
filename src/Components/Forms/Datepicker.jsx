@@ -102,19 +102,6 @@ export default class Datepicker extends React.Component {
     this.inputDOM   = null;
     this.resultsRef = null;
     this.resultsDOM = null;
-
-    this.updatePopperWidth = this.updatePopperWidth.bind(this);
-    this.focus = this.focus.bind(this);
-    this.handleMouseEnter = this.handleMouseEnter.bind(this);
-    this.handleMouseLeave = this.handleMouseLeave.bind(this);
-    this.handleDocumentClick = this.handleDocumentClick.bind(this);
-    this.handlePopperOpen = this.handlePopperOpen.bind(this);
-    this.handlePopperClose = this.handlePopperClose.bind(this);
-    this.handlePrevClick = this.handlePrevClick.bind(this);
-    this.handleNextClick = this.handleNextClick.bind(this);
-    this.handleDayClick = this.handleDayClick.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleInputFocus = this.handleInputFocus.bind(this);
   }
 
   componentDidMount() {
@@ -141,86 +128,86 @@ export default class Datepicker extends React.Component {
   /**
    * Sets the width of the popper to match the input width
    */
-  updatePopperWidth() {
+  updatePopperWidth = () => {
     cssMatchComputedWidth(this.inputDOM, this.popperDOM);
-  }
+  };
 
-  focus() {
+  focus = () => {
     this.inputRef.focus();
     this.handleInputFocus();
-  }
+  };
 
   /**
    * Called when the mouse enters the root element
    */
-  handleMouseEnter() {
+  handleMouseEnter = () => {
     this.focused = true;
-  }
+  };
 
   /**
    * Called when the mouse leaves the root element loses focus
    */
-  handleMouseLeave() {
+  handleMouseLeave = () => {
     this.focused = false;
-  }
+  };
 
   /**
    * Called when the document is clicked
    */
-  handleDocumentClick() {
+  handleDocumentClick = () => {
     if (!this.focused) {
       this.popperRef.close();
     }
-  }
+  };
 
   /**
    * Called by the popper when it's opened
    */
-  handlePopperOpen() {
+  handlePopperOpen = () => {
     this.setState({ opened: true });
-  }
+  };
 
   /**
    * Called by the popper when it's closed
    */
-  handlePopperClose() {
+  handlePopperClose = () => {
     this.setState({ opened: false });
-  }
+  };
 
   /**
    * Called when the calendar previous icon is clicked
    */
-  handlePrevClick() {
+  handlePrevClick = () => {
     const date = new Date(this.state.date);
     date.setMonth(date.getMonth() - 1);
     this.setState({ date });
-  }
+  };
 
   /**
    * Called when the calendar next icon is clicked
    */
-  handleNextClick() {
+  handleNextClick = () => {
     const date = new Date(this.state.date);
     date.setMonth(date.getMonth() + 1);
     this.setState({ date });
-  }
+  };
 
   /**
    * Called when a specific day on the calendar is clicked
    *
    * @param {Date} date
    */
-  handleDayClick(date) {
+  handleDayClick = (date) => {
     this.inputRef.setValue(moment(date).format(this.props.format));
     this.popperRef.close();
     this.props.onSelect(date);
     this.setState({ value: date });
-  }
+  };
 
   /**
    * Called when the input value changes
    */
-  handleInputChange(e) {
+  handleInputChange = (e) => {
     const value = moment(this.inputRef.getValue(), this.props.format);
     if (value.isValid()) {
       const date = value.toDate();
@@ -233,17 +220,17 @@ export default class Datepicker extends React.Component {
     if (this.props.onChange) {
       this.props.onChange(e);
     }
-  }
+  };
 
   /**
    * Called when the input receives focus
    */
-  handleInputFocus(e) {
+  handleInputFocus = (e) => {
     this.popperRef.open();
     if (this.props.onFocus) {
       this.props.onFocus(e);
     }
-  }
+  };
 
   /**
    * Renders the calendar that's placed inside the popper

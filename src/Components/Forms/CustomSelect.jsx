@@ -52,14 +52,9 @@ class CustomSelectContent extends React.Component {
     outsideClickIgnoreClass: '',
   };
 
-  constructor(props) {
-    super(props);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
-  }
-
-  handleClickOutside(event) {
+  handleClickOutside = (event) => {
     this.props.onClickOutside(event);
-  }
+  };
 
   render() {
     const { children, ...props } = this.props;
@@ -109,24 +104,22 @@ export default class CustomSelect extends React.Component {
     this.state = {
       opened: false,
     };
-    this.toggleOpened  = this.toggleOpened.bind(this);
-    this.clickOutside  = this.clickOutside.bind(this);
   }
 
-  clickOutside() {
+  clickOutside = () => {
     this.setState({
       opened: false
     });
-  }
+  };
 
-  toggleOpened() {
+  toggleOpened = () => {
     const { opened } = this.state;
     if (!this.props.disabled) {
       this.setState({
         opened: !opened
       });
     }
-  }
+  };
 
   open() {
     this.setState({

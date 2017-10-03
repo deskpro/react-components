@@ -51,19 +51,16 @@ export default class ConfirmButton extends React.Component {
     this.state = {
       confirm: false
     };
-    this.getLabel      = this.getLabel.bind(this);
-    this.handleClick   = this.handleClick.bind(this);
-    this.clickOutside  = this.clickOutside.bind(this);
   }
 
-  getLabel() {
+  getLabel = () => {
     if (this.state.confirm) {
       return this.props.message;
     }
     return this.props.children;
-  }
+  };
 
-  handleClick(e) {
+  handleClick = (e) => {
     const { disabled } = this.props;
     e.preventDefault();
     if (!disabled) {
@@ -78,13 +75,13 @@ export default class ConfirmButton extends React.Component {
         });
       }
     }
-  }
+  };
 
-  clickOutside() {
+  clickOutside = () => {
     this.setState({
       confirm: false
     });
-  }
+  };
 
   render() {
     return (

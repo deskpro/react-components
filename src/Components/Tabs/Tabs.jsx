@@ -33,16 +33,11 @@ export default class Tabs extends React.Component {
     onChange:  noop,
   };
 
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(active) {
+  handleClick = (active) => {
     if (active !== this.props.active) {
       this.props.onChange(active);
     }
-  }
+  };
 
   render() {
     const { className, children, active, ...props } = this.props;
