@@ -62,3 +62,14 @@ export const email = (value) => {
     ? 'Invalid email address'
     : undefined;
 };
+
+/**
+ * Validates that the input value matches against the given regular expression
+ *
+ * @param {RegExp} rx A regular expression
+ */
+export const regexp = rx => (value) => {
+  return (value && !(rx.test(value)))
+    ? 'Invalid value'
+    : undefined;
+};

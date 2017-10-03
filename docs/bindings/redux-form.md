@@ -139,6 +139,7 @@ The following validators are including with the bindings.
 * alpha         - Validates the input value only contains alpha characters
 * numeric       - Validates the input value only contains numeric characters
 * email         - Validates the input value is a valid email address
+* regexp        - Validates that the input value matches against the given regular expression
 
 Validators are simple functions which receive the form value, and return `undefined` when the value passes validation, or a string containing an error message when validation fails.
 
