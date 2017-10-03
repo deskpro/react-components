@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '6'
+script:
+- npm test && npm run compile
+deploy:
+  provider: npm
+  api_key:
+    secure: kO0fjiy34z6HatLGs6OX1l/8q05e/DBU+3SUlkYoR7gMMinlDbzvJzlNS/a7jMsuMVJrOTg5HtJYQOuOGQwaFrvbvh2P1D6vnqEOy/2bvSC+Z2ZEo60I6SKZiouN3GYMeeOaD2XjUMK1DtBNYMZfUIxtGbJsX4/u6Ycw/XHfJuXcHovAxqjLBQusY9OzBt/MSbaf296lhYyLdylcE6E7kcc7ocPvdy1MIMZfwPUpQqaUj4r3f/ULkjiDKjbS0pgSxUe/s1bb4qgKC1eV4MfpwCZzlTmzc4hjdX7ANh6mYfPTV9ImmfbvkOSpWJqeHRiCKUvIorqwjpS5Gim9WrJZL9pWV9l+pfTghkNv2c/oTTN0vMjFOttVr9IRfYrJHMIU1JI6M7d76ndQstlzFs/MJME2x3MgVGI1ony9GaxKHNzzeFekdMzfDldTuFqNJANW9Yv6vIKpyM8AtCelxMinFpvKCB+nmX3uoNL12sY1wuLVChYkdHAaysrZkmuqSXiW137nKj6QZIM2/DE5EKGf/R6XXrjDs996gzvfi16+ig3M6lbD+z5emnDa+VCOEe5n9r9qPdZzMzw60wDlpT2AC0J7SP03ER75BJOiTgo7VIG/ThAyFYlb2aIr9PzfRVsT34x/AJD08UThqrxqbYfJsdYuPzBC+wFfVJu5DZJnAPg=
+  email: julien.ducro@deskpro.com
+  skip_cleanup: true
+  on:
+    branch: master
+    tags: true

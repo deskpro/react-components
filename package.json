@@ -15,8 +15,9 @@
     "prod": "npm run clean && webpack --config webpack.prod.config.js --progress --profile --colors && npm run styleguide",
     "lint": "eslint src/bindings/redux-form/* --cache --cache-location=.cache/eslint --ext .js,.jsx",
     "lint:fix": "npm run lint -- --fix",
-    "test:utils": "jest tests/utils/*.js",
-    "test:redux-form": "jest tests/bindings/redux-form/*.js",
+    "test": "node scripts/test.js --env=jsdom",
+    "test:utils": "jest tests/jest/utils/*.js",
+    "test:redux-form": "jest tests/jest/bindings/redux-form/*.js",
     "storybook:dev": "start-storybook -p 9002 -c .storybook",
     "storybook:build": "build-storybook -o build/storybook",
     "storybook:deploy": "storybook-to-ghpages",
@@ -59,6 +60,7 @@
     "cpx": "^1.5.0",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
+    "dotenv": "^4.0.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-import-resolver-babel-module": "^3.0.0",
@@ -70,7 +72,6 @@
     "html-webpack-plugin": "^2.29.0",
     "husky": "^0.14.3",
     "jest": "^20.0.4",
-    "kss": "^3.0.0-beta.18",
     "lint-staged": "^4.0.2",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
@@ -105,8 +106,35 @@
     "react-tagsinput": "^3.18.0"
   },
   "jest": {
-    "modulePaths": [
-      "src"
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testMatch": [
+      "<rootDir>/tests/jest/**/?(*).js?(x)"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
     ]
   },
   "lint-staged": {
