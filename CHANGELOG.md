@@ -1,3 +1,7 @@
+## v1.0.1 - 2017-10-03
+
+* [FIX] Removes missing styleguide import 
+
 ## v1.0.0 - 2017-10-03
 
 * [TESTS] Adds travis CI
