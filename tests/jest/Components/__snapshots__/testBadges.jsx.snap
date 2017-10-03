@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Badges --- Snapshot +++capturing Snapshot of CircleBadge 1`] = `
+<div
+  className="dp-badge dp-badge--warning dp-bg--warning dp-circle-badge"
+>
+  10+
+</div>
+`;
+
+exports[`>>> Badges --- Snapshot +++capturing Snapshot of DateBadge 1`] = `
+<div
+  className="db-badge dp-date-badge dp-date-badge--pill"
+>
+  <div
+    className="dp-date-badge__month"
+  >
+    Mar
+  </div>
+  <div
+    className="dp-date-badge__day"
+  >
+    12
+  </div>
+</div>
+`;
+
+exports[`>>> Badges --- Snapshot +++capturing Snapshot of IconBadge 1`] = `
+<div
+  className="dp-icon-badge"
+>
+  <i
+    className="fa fa-envelope dp-icon dp-icon--l"
+  />
+  <div
+    className="dp-badge dp-badge--info dp-bg--info dp-circle-badge"
+  >
+    12
+  </div>
+</div>
+`;
+
+exports[`>>> Badges --- Snapshot +++capturing Snapshot of TextBadge 1`] = `
+<div
+  className="dp-badge dp-badge--success dp-bg--success"
+>
+  Super looooong text
+</div>
+`;
