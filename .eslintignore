@@ -1,6 +1,8 @@
 bin/*
+**/build/*
 **/lib/*
 **/dist/*
+**/coverage/*
 **/node_modules/*
 **/webpack.config*.js
 **/*_Reducers.js

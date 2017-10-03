@@ -2,6 +2,8 @@ deskpro-components
 ==================
 A react-based set of components for building DeskPRO apps.
 
+[![Build Status](https://travis-ci.org/deskpro/deskpro-components.svg?branch=master)](https://travis-ci.org/deskpro/deskpro-components)
+
 * [Overview](#overview)
 * [Components](#components)
   * [Common](#common)

@@ -24,7 +24,6 @@ test('objectForEach', () => {
   objects.objectForEach(values, (val, key) => {
     actual[key] = val;
   });
-  console.log(actual);
   expect(actual.name).toBe('item');
   expect(actual.title).toBe('foo');
 });
