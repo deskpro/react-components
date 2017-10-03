@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Alert --- Snapshot +++capturing Snapshot of Alert 1`] = `
+<div
+  className="dp-alert dp-alert--success dp-bg--success test-class"
+>
+  <i
+    className="fa fa-exclamation-triangle dp-icon dp-icon--s dp-alert__icon"
+  />
+  <div
+    className="dp-alert__content"
+  >
+    Success!
+  </div>
+  <i
+    className="fa fa-close dp-icon dp-icon--s dp-alert__close"
+    onClick={[Function]}
+    title="Close"
+  />
+</div>
+`;

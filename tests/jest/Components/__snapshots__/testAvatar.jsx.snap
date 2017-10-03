@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Avatar --- Snapshot +++capturing Snapshot of Avatar 1`] = `
+<img
+  alt="avatar"
+  aria-hidden={true}
+  className="dp-avatar dp-avatar--s test-class"
+  src="image.png"
+/>
+`;
