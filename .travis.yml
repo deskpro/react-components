@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - '6'
 script:
-- npm travis-test && npm run compile
+- npm run travis-test && npm run compile
 deploy:
   provider: npm
   email: julien.ducro@deskpro.com
