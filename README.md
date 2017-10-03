@@ -4,7 +4,7 @@ A react-based set of components for building DeskPRO apps.
 
 
 [![Build Status](https://travis-ci.org/deskpro/deskpro-components.svg?branch=master)](https://travis-ci.org/deskpro/deskpro-components)
-[![Coverage Status](https://img.shields.io/deskpro/deskpro-components/master.svg?style=flat)](https://coveralls.io/github/deskpro/deskpro-components?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/deskpro/deskpro-components/badge.svg)](https://coveralls.io/github/deskpro/deskpro-components)
 ![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)
 [![npm version](https://img.shields.io/npm/v/deskpro-components.svg?style=flat)](https://www.npmjs.com/package/deskpro-components)
 
