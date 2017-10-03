@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Modal --- Snapshot +++capturing Snapshot of Modal 1`] = `
+<div
+  className="dp-modal__overlay"
+>
+  <div
+    className="dp-modal"
+    style={
+      Object {
+        "maxHeight": 537.5999999999999,
+        "maxWidth": 716.8,
+        "width": 520,
+      }
+    }
+  >
+    <div
+      className="dp-modal__title"
+    >
+      Modal Heading
+      <div
+        className="dp-modal__close"
+        onClick={[Function]}
+      >
+        X
+      </div>
+    </div>
+    <div
+      className="dp-modal__body"
+    >
+      Test
+    </div>
+    <div
+      className="dp-modal__buttons"
+    >
+      <div>
+        <button
+          className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-button--l"
+          disabled={false}
+        >
+          Button one
+        </button>
+        <button
+          className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-button--secondary dp-button--l"
+          disabled={false}
+        >
+          Button two
+        </button>
+        <button
+          className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-button--secondary dp-button--l right"
+          disabled={false}
+        >
+          Another button
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

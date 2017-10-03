@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Urgency --- Snapshot +++capturing Snapshot of Urgency 1`] = `
+<div>
+  <div
+    className="dp-urgency dp-urgency__level-1"
+  >
+    23
+  </div>
+  <div
+    className="dp-urgency dp-urgency__level-2"
+  >
+    2
+  </div>
+  <div
+    className="dp-urgency dp-urgency__level-3"
+  >
+    9
+  </div>
+</div>
+`;

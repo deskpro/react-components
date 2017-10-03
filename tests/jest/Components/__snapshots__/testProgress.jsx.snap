@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Progress --- Snapshot +++capturing Snapshot of Progress 1`] = `
+<div
+  className="dp-progress dp-progress--primary dp-progress--m"
+  style={
+    Object {
+      "border": "1px solid #ccc",
+      "margin": 10,
+    }
+  }
+>
+  <div
+    className="dp-progress__bar"
+    style={
+      Object {
+        "width": "70%",
+      }
+    }
+    type="primary"
+  >
+    70%
+  </div>
+</div>
+`;

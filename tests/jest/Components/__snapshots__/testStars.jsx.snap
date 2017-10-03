@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Stars --- Snapshot +++capturing Snapshot of Stars 1`] = `
+<div>
+  <div
+    className="dp-stars"
+  >
+    <i
+      className="fa fa-star-half-empty dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <i
+      className="fa fa-star-o dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <i
+      className="fa fa-star-o dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <i
+      className="fa fa-star-o dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <i
+      className="fa fa-star-o dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+  </div>
+  <br />
+  <div
+    className="dp-stars"
+  >
+    <i
+      className="fa fa-star dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <i
+      className="fa fa-star-o dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <i
+      className="fa fa-star-o dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <i
+      className="fa fa-star-o dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <i
+      className="fa fa-star-o dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+  </div>
+  <br />
+  <div
+    className="dp-stars"
+  >
+    <i
+      className="fa fa-star dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <i
+      className="fa fa-star dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <i
+      className="fa fa-star dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <i
+      className="fa fa-star dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <i
+      className="fa fa-star dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;

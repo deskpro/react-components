@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Section --- Snapshot +++capturing Snapshot of Section 1`] = `
+<div>
+  <section
+    className="dp-section"
+  >
+    
+    Section without a title
+  </section>
+  <section
+    className="dp-section"
+  >
+    <h3
+      className="dp-heading dp-heading--underlined"
+    >
+      Section title
+    </h3>
+    Section with a title
+  </section>
+</div>
+`;
