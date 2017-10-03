@@ -1,3 +1,13 @@
+## v1.0.0 - 2017-10-03
+
+* [TESTS] Adds travis CI
+* [TESTS] Adds npm run test with watcher or -- --coverage option
+* [TESTS] Adds Snapshots on Components
+* [MINOR] Allows nodes in Select option to allow jsx
+* [FEATURE] Adds redux-forms integration
+* [MINOR] Removes kss styleguide
+* [FIX] Removes deprecated e.keyCode in favor of e.key
+
 ## v0.5.19 - 2017-09-27
 
 * [MINOR] Improves DatePicker by using moment, parse previous value
