@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Buttons --- Common +++capturing Snapshot of Count 1`] = `
+<div>
+  <span
+    className="dp-count"
+  >
+    3
+  </span>
+  <br />
+  <span
+    className="dp-count"
+  >
+    3,333
+  </span>
+  <br />
+  <span
+    className="dp-count"
+  >
+    3.333
+  </span>
+</div>
+`;
+
+exports[`>>> Buttons --- Common +++capturing Snapshot of Heading 1`] = `
+<h3
+  className="dp-heading dp-heading--underlined"
+>
+  <i
+    className="fa fa-globe dp-icon dp-icon--s"
+  />
+  Size 3
+  <span
+    className="dp-heading__controls"
+  >
+    <div>
+      <i
+        className="fa fa-gear dp-icon dp-icon--s"
+      />
+      <i
+        className="fa fa-refresh dp-icon dp-icon--s"
+      />
+    </div>
+  </span>
+</h3>
+`;
+
+exports[`>>> Buttons --- Common +++capturing Snapshot of Highlighter 1`] = `
+<span
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "Android <i class=\\"dp-highlighted\\">feedback</i> (Support)",
+    }
+  }
+/>
+`;

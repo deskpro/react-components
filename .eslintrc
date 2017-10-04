@@ -55,7 +55,7 @@
     "vars-on-top": 0,
     "comma-dangle": 0,
     "new-cap": 0,
-    "no-console": 0,
+    "no-console": 2,
     "no-class-assign": 0,
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "indent": [

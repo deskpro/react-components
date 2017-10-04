@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Buttons --- Cards +++capturing Snapshot of Card 1`] = `
+<div
+  className="dp-card"
+>
+  <h1>
+    Test content
+  </h1>
+</div>
+`;

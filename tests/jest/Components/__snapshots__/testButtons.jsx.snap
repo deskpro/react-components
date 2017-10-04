@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Buttons --- Snapshot +++capturing Snapshot of Button 1`] = `
+<button
+  className="dp-button dp-button--s dp-button--primary dp-button--shape-default"
+  disabled={false}
+>
+  Button
+</button>
+`;
+
+exports[`>>> Buttons --- Snapshot +++capturing Snapshot of ButtonPopper 1`] = `
+<span
+  size="small"
+  type="primary"
+>
+  Button
+</span>
+`;
+
+exports[`>>> Buttons --- Snapshot +++capturing Snapshot of ProgressButton 1`] = `
+<div
+  className="dp-progress-button dp-progress-button--l"
+>
+  <div
+    className="dp-progress-button__label"
+  >
+    75
+  </div>
+  <div
+    className="dp-progress dp-progress--primary dp-progress--s"
+  >
+    <div
+      className="dp-progress__bar"
+      style={
+        Object {
+          "width": "75%",
+        }
+      }
+      type="primary"
+    >
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`>>> Buttons --- Snapshot +++capturing Snapshot of TranslateButton 1`] = `
+<div
+  className="dp-translate-button dp-translate-button--l"
+>
+  <i
+    className="fa fa-globe dp-icon dp-icon--s"
+  />
+  <div
+    className="dp-progress-button dp-progress-button--l"
+  >
+    <div
+      className="dp-progress-button__label"
+    >
+      65
+    </div>
+    <div
+      className="dp-progress dp-progress--primary dp-progress--s"
+    >
+      <div
+        className="dp-progress__bar"
+        style={
+          Object {
+            "width": "65%",
+          }
+        }
+        type="primary"
+      >
+        
+      </div>
+    </div>
+  </div>
+</div>
+`;
