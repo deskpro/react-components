@@ -1,3 +1,8 @@
+## v1.0.2 - 2017-10-05
+
+* [TESTS] Increases test coverage
+* [MINOR] Fixes margins on lists
+
 ## v1.0.1 - 2017-10-03
 
 * [FIX] Removes missing styleguide import 
