@@ -207,9 +207,9 @@ export default class Popper extends React.Component {
     }
 
     if (preventOverflow && !eventsEnabled) {
-      console.warn('`eventsEnabled` should be true when `preventOverflow` is true.');
+      console.warn('`eventsEnabled` should be true when `preventOverflow` is true.'); // eslint-disable-line no-console
     } else if (detached && !eventsEnabled) {
-      console.warn('`eventsEnabled` should be true when `detached` is true.');
+      console.warn('`eventsEnabled` should be true when `detached` is true.'); // eslint-disable-line no-console
     }
 
     this.destroyPopper();

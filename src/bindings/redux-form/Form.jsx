@@ -70,12 +70,16 @@ ConnectedForm = reduxForm({
  */
 export default class Form extends React.Component {
   static propTypes = {
-    name: PropTypes.string.isRequired
+    name: PropTypes.string
+  };
+
+  static defaultProps = {
+    name: ''
   };
 
   render() {
     const { name, ...props } = this.props;
 
-    return <ConnectedForm form={name} {...props} />;
+    return <ConnectedForm form={name || 'form'} {...props} />;
   }
 }
