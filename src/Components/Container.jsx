@@ -6,7 +6,7 @@ import classNames from 'classnames';
  * Renders a container.
  */
 const Container = ({ className, children, ...props }) => (
-  <div className={classNames('up-container', className)} {...props}>
+  <div className={classNames('dp-container', className)} {...props}>
     {children}
   </div>
 );
