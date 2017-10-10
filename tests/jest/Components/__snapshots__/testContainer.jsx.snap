@@ -2,7 +2,7 @@
 
 exports[`>>> Container --- Snapshot +++capturing Snapshot of Container 1`] = `
 <div
-  className="up-container test-class"
+  className="dp-container test-class"
 >
   Test content
 </div>
