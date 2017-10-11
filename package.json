@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "npm run clean && npm run styleguide && webpack-dev-server",
     "clean": "rimraf dist",
-    "compile": "rm -rf lib/* && babel --loose es6.modules -d lib/ src/",
+    "compile": "rm -rf lib/* && babel --loose es6.modules -d lib/ src/ && node scripts/sass.js",
     "styleguide": "kss --config kss-config.json",
     "prod": "npm run clean && webpack --config webpack.prod.config.js --progress --profile --colors && npm run styleguide",
     "lint": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",

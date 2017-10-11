@@ -8,6 +8,8 @@ deploy:
   email: julien.ducro@deskpro.com
   api_key:
     secure: YjIkFmOERnCegamSC6RK8N/xdPYKtiRJylQakmentVrG6QJPfTOorQ7Pxx1tRPZZoo19BwtHZbH4ztLJGgZVKxJ2uVHQOXMW+CFLKJCQaFQWaPMvSsPtTx+D2QcLrhCEnFswk4Yq0MeQaXVhEbGeEl0HDFoHt3qmgE34rdbjlqFDdAQlQtkJc/WSsyzs2GRcGK7/P0/+6ocNjnI5cc0kDQnXEoDmonGI6TBeAnCWP2H9lWa028kIo0dTuMiAVwVlVFBwgrVFKaANPy0Wa/eLXsOj5yTI7YO6NqjgyValO88A1hcSCJiEkom503bkDIR7iVIgS0z5CPQg4xmckOrA0JNs/f1qrHNUDeI6BmC4s/fWfkkWm7Sl09hE3AedtyzLTRkE4Pni9q0zYNyrYSAAzD2bKdO4YdXCwWeXHbxrtadblaa2+zVSBLYogI9N0SWYZCEGPo9RAkK0G0xKtMpl+rr1Wu68yo7LrXQ/qj26HNRtqu4yWsPKQ+C6oKhIi0EJTPXJLE1ssQt3xMVoYJdFlRCVeg8frZ+spCHi3zk0goGzUFCh0em/EmCAhGP0T7cxAYPOf2ncvkdFhjnT0S9WMaEDNhOuvE4JOCDQnsJuPWAr1Wmg8ynzmo+djnI0dFTyYqo4owpuiJVSLkTRW2hJDAG37UNjjbIenCRlxqrC8Mg=
+  skip_cleanup: true
   on:
+    branch: master
     tags: true
     repo: deskpro/deskpro-components
