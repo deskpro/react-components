@@ -1,3 +1,9 @@
+## v1.0.3 - 2017-10-11
+
+* [FIX] Fixes typo, from .up-container to .dp-container
+* [MINOR] Makes optional the 'name' prop on the redux Form component
+* [FEATURE] Adds style compilation
+
 ## v1.0.2 - 2017-10-05
 
 * [TESTS] Increases test coverage
