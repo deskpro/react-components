@@ -92,6 +92,7 @@ class TagInput extends React.Component {
         onSuggestionSelected={(e, { suggestion }) => {
           addTag(suggestion);
         }}
+        focusInputOnSuggestionClick={false}
         onSuggestionsClearRequested={() => {}}
         onSuggestionsFetchRequested={() => {}}
       />
