@@ -1,3 +1,7 @@
+## v1.0.4 - 2017-10-18
+
+* [FIX] Fix error in TagInput
+
 ## v1.0.3 - 2017-10-11
 
 * [FIX] Fixes typo, from .up-container to .dp-container
