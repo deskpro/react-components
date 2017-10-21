@@ -26,7 +26,31 @@ InputField.propTypes = {
  * Connects the field to the Redux store.
  */
 const Input = props => (
-  <Field {...props} component={InputField} />
+  <Field
+    {...props}
+    component={InputField}
+    onChange={(value) => {
+      props.onChange(
+        Object.values(value).filter(v => typeof v !== 'function').join(''),
+        props.name
+      );
+    }}
+  />
 );
+
+Input.propTypes = {
+  /**
+   * The name of the form field.
+   */
+  name:     PropTypes.string.isRequired,
+  /**
+   * Called when the select value changes.
+   */
+  onChange: PropTypes.func
+};
+
+Input.defaultProps = {
+  onChange: () => {}
+};
 
 export default Input;

@@ -41,6 +41,9 @@ const Select = ({ parse, ...props }) => {
       {...props}
       parse={valueParse}
       component={SelectField}
+      onChange={(value) => {
+        props.onChange(value.value, props.name);
+      }}
     />
   );
 };
@@ -50,11 +53,20 @@ Select.propTypes = {
    * Parses the value given from the field input component to the type that
    * you want stored in the Redux store.
    */
-  parse: PropTypes.func
+  parse:    PropTypes.func,
+  /**
+   * The name of the form field.
+   */
+  name:     PropTypes.string.isRequired,
+  /**
+   * Called when the select value changes.
+   */
+  onChange: PropTypes.func
 };
 
 Select.defaultProps = {
-  parse: undefined
+  parse:    undefined,
+  onChange: () => {}
 };
 
 export default Select;
