@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Tag, SearchButton } from 'Components/Forms';
 
-
 class TagSet extends React.Component {
   static propTypes = {
     tags:     PropTypes.array.isRequired,
@@ -15,7 +14,7 @@ class TagSet extends React.Component {
     name:     '',
     editable: true,
     options:  [],
-    onChange()   {}
+    onChange() {}
   };
 
   constructor(props) {
