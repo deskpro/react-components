@@ -9,6 +9,7 @@ $dp-loader-size-xl: 5rem;
 
 .dp-loader {
   display: inline-block;
+  margin: 12px;
 
   svg {
     animation-duration: 1s;
