@@ -8,21 +8,21 @@ $icon-size-xl: 20px;
     Icon sizes
 *******************************/
 .dp-icon--xs {
-  font-size: $icon-size-xs;
+  font-size: $icon-size-xs !important;
 }
 
 .dp-icon--s {
-  font-size: $icon-size-s;
+  font-size: $icon-size-s !important;
 }
 
 .dp-icon--m {
-  font-size: $icon-size-m;
+  font-size: $icon-size-m !important;
 }
 
 .dp-icon--l {
-  font-size: $icon-size-l;
+  font-size: $icon-size-l !important;
 }
 
 .dp-icon--xl {
-  font-size: $icon-size-xl;
+  font-size: $icon-size-xl !important;
 }
