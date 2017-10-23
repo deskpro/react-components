@@ -93,6 +93,7 @@ class TagInput extends React.Component {
           addTag(suggestion);
         }}
         focusInputOnSuggestionClick={false}
+        highlightFirstSuggestion
         onSuggestionsClearRequested={() => {}}
         onSuggestionsFetchRequested={() => {}}
       />
