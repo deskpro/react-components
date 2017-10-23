@@ -34,23 +34,23 @@ function compileSass(options = {}) {
 // Expanded
 compileSass({
   src:  'src/styles/main.scss',
-  dest: 'lib/css/deskpro-components.css'
+  dest: 'lib/css/deskpro_react-components.css'
 });
 
 compileSass({
   src:  'src/styles/main_no_apps.scss',
-  dest: 'lib/css/deskpro-components_no_apps.css'
+  dest: 'lib/css/deskpro_react-components_no_apps.css'
 });
 
 // Minified
 compileSass({
   src:   'src/styles/main.scss',
-  dest:  'lib/css/deskpro-components.min.css',
+  dest:  'lib/css/deskpro_react-components.min.css',
   style: 'compressed'
 });
 
 compileSass({
   src:   'src/styles/main_no_apps.scss',
-  dest:  'lib/css/deskpro-components_no_apps.min.css',
+  dest:  'lib/css/deskpro_react-components_no_apps.min.css',
   style: 'compressed'
 });

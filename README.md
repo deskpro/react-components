@@ -1,4 +1,4 @@
-deskpro-components
+@deskpro/react-components
 ==================
 A react-based set of components for building DeskPRO apps.
 
@@ -6,11 +6,7 @@ A react-based set of components for building DeskPRO apps.
 [![Build Status](https://travis-ci.org/deskpro/deskpro-components.svg?branch=master)](https://travis-ci.org/deskpro/deskpro-components)
 [![Coverage Status](https://coveralls.io/repos/github/deskpro/deskpro-components/badge.svg)](https://coveralls.io/github/deskpro/deskpro-components)
 ![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)
-[![npm version](https://img.shields.io/npm/v/deskpro-components.svg?style=flat)](https://www.npmjs.com/package/deskpro-components)
-
-!!! Package moved to [@deskpro/react-components](https://www.npmjs.com/package/@deskpro/react-components) !!!
-
-Please update your dependencies
+[![npm version](https://img.shields.io/npm/v/@deskpro/react-components.svg?style=flat)](https://www.npmjs.com/package/@deskpro/react-components)
 
 * [Overview](#overview)
 * [Components](#components)

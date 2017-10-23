@@ -5,7 +5,7 @@ import * as Forms from 'Components/Forms';
 import FieldGroup from './FieldGroup';
 
 /**
- * Renders a select element using deskpro-components and redux-form.
+ * Renders a select element using @deskpro/react-components and redux-form.
  *
  * @see https://redux-form.com/7.0.4/docs/api/field.md/#2-a-stateless-function
  */

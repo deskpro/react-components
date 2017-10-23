@@ -1,12 +1,12 @@
 Redux Form
 ==========
-Components are included with deskpro-components which bind the form components to [React Redux](https://github.com/reactjs/react-redux) and [Redux Form](https://github.com/erikras/redux-form/). This document covers installing the required dependencies and creating a simple form.
+Components are included with `@deskpro/react-components` which bind the form components to [React Redux](https://github.com/reactjs/react-redux) and [Redux Form](https://github.com/erikras/redux-form/). This document covers installing the required dependencies and creating a simple form.
 
 ## Setup
 
 ### Installing dependencies
 
-`npm install --save deskpro-components react-redux redux-form`
+`npm install --save @deskpro/react-components react-redux redux-form`
 
 ### Setup the reducer
 
@@ -27,7 +27,7 @@ export default rootReducer;
 
 ### Create the form
 
-The form elements exported by 'deskpro-components/bindings/redux-form' are [Redux Form `Field` components](https://redux-form.com/7.0.4/docs/api/field.md/) which are bound to deskpro-component form components. Each form must be wrapped with the `Form` component, which requires a `name` prop. The name of each form must be unique to the application. The form values will be saved in the Redux store using the given name, e.g. form.account.
+The form elements exported by `@deskpro/react-components/bindings/redux-form` are [Redux Form `Field` components](https://redux-form.com/7.0.4/docs/api/field.md/) which are bound to deskpro-component form components. Each form must be wrapped with the `Form` component, which requires a `name` prop. The name of each form must be unique to the application. The form values will be saved in the Redux store using the given name, e.g. form.account.
 
 The `onSubmit` prop receives the submitted form values as an object of key/value pairs. For example `{ username: 'foo', password: 'bar', bio: 'This is my bio' }`.
 
@@ -35,7 +35,7 @@ The `onSubmit` prop receives the submitted form values as an object of key/value
 // AccountForm.jsx
 
 import React from 'react';
-import { Form, Button, Input, Textarea } from 'deskpro-components/bindings/redux-form';
+import { Form, Button, Input, Textarea } from '@deskpro/react-components/bindings/redux-form';
 
 class AccountForm extends React.Component {
   handleSubmit = (values) => {
@@ -103,7 +103,7 @@ Form values are validated by passing one or more functions to the form fields. D
 
 ```jsx
 import React from 'react';
-import { Form, Button, Input, Textarea, validators } from 'deskpro-components/bindings/redux-form';
+import { Form, Button, Input, Textarea, validators } from '@deskpro/react-components/bindings/redux-form';
 
 const AccountForm = () => (
   <Form name="account">
@@ -145,7 +145,7 @@ Validators are simple functions which receive the form value, and return `undefi
 
 ```jsx
 import React from 'react';
-import { Form, Input } from 'deskpro-components/bindings/redux-form';
+import { Form, Input } from '@deskpro/react-components/bindings/redux-form';
 
 const tooOld = (value) => {
   return (value && value > 65)

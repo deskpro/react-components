@@ -4,7 +4,7 @@ import Group from 'Components/Forms/Group';
 import { fieldPropTypes } from 'redux-form';
 
 /**
- * Renders a form group using deskpro-components and redux-form.
+ * Renders a form group using @deskpro/react-components and redux-form.
  */
 const FieldGroup = ({ label, meta, children, ...props }) => (
   <Group label={label} error={meta.touched ? meta.error : ''} {...props}>
