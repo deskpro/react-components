@@ -4,7 +4,7 @@
   "description": "Deskpro React Components",
   "main": "lib/Components/index.js",
   "homepage": {
-    "url": "https://github.com/deskpro/deskpro-components"
+    "url": "https://github.com/deskpro/react-components"
   },
   "private": false,
   "scripts": {
@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deskpro/deskpro-components.git"
+    "url": "git+https://github.com/deskpro/react-components.git"
   },
   "author": "DeskPRO <team@deskpro.com>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/deskpro/deskpro-components/issues"
+    "url": "https://github.com/deskpro/react-components/issues"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.12",
