@@ -1,3 +1,7 @@
+## v1.1.0 - 2017-10-23
+
+* Rename npm package to @deskpro/react-components
+
 ## v1.0.5 - 2017-10-23
 
 * [MINOR] Highlight first occurrence when typing into TagInput
