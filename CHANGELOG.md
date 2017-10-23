@@ -1,3 +1,11 @@
+## v1.0.5 - 2017-10-23
+
+* [MINOR] Highlight first occurrence when typing into TagInput
+* [FIX] Fixes onChange callback in redux form bindings
+* [FIX] Adds margin to Loader component
+* [FEATURE] Adds form bindings for TagSet
+* [MINOR] Makes icon sizes !important
+
 ## v1.0.4 - 2017-10-18
 
 * [FIX] Fix error in TagInput

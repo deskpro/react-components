@@ -8,6 +8,10 @@ A react-based set of components for building DeskPRO apps.
 ![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)
 [![npm version](https://img.shields.io/npm/v/deskpro-components.svg?style=flat)](https://www.npmjs.com/package/deskpro-components)
 
+!!! Package moved to [@deskpro/react-components](https://www.npmjs.com/package/@deskpro/react-components) !!!
+
+Please update your dependencies
+
 * [Overview](#overview)
 * [Components](#components)
   * [Common](#common)
