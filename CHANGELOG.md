@@ -1,3 +1,7 @@
+## v1.1.1 - 2017-10-23
+
+* Rename repository to react-components
+
 ## v1.1.0 - 2017-10-23
 
 * Rename npm package to @deskpro/react-components
