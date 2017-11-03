@@ -38,7 +38,7 @@ compileSass({
 });
 
 compileSass({
-  src:  'src/styles/main_no_apps.scss',
+  src:  'src/styles/main.scss',
   dest: 'lib/css/deskpro_react-components_no_apps.css'
 });
 
@@ -50,7 +50,7 @@ compileSass({
 });
 
 compileSass({
-  src:   'src/styles/main_no_apps.scss',
+  src:   'src/styles/main.scss',
   dest:  'lib/css/deskpro_react-components_no_apps.min.css',
   style: 'compressed'
 });
