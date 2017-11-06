@@ -1,3 +1,7 @@
+## v1.1.2 - 2017-11-03
+
+* Remove semantic dependency and _apps.scss
+
 ## v1.1.1 - 2017-10-23
 
 * Rename repository to react-components
