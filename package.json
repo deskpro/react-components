@@ -1,6 +1,6 @@
 {
   "name": "@deskpro/react-components",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Deskpro React Components",
   "main": "lib/Components/index.js",
   "homepage": {

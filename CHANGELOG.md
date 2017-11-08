@@ -1,3 +1,7 @@
+## v1.2.1 - 2017-11-08
+
+* Write npm-shrinkwrap with npm 3 for wider compatibility
+
 ## v1.2.0 - 2017-11-08
 
 * Move react and react-dom to dev dependencies
