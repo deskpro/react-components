@@ -1,3 +1,7 @@
+## v1.2.0 - 2017-11-08
+
+* Move react and react-dom to dev dependencies
+
 ## v1.1.2 - 2017-11-03
 
 * Remove semantic dependency and _apps.scss
