@@ -7708,7 +7708,8 @@
     "react": {
       "version": "15.6.2",
       "from": "react@15.6.2",
-      "resolved": "https://registry.npmjs.org/react/-/react-15.6.2.tgz"
+      "resolved": "https://registry.npmjs.org/react/-/react-15.6.2.tgz",
+      "dev": true
     },
     "react-addons-create-fragment": {
       "version": "15.6.2",
@@ -7768,7 +7769,8 @@
     "react-dom": {
       "version": "15.6.2",
       "from": "react-dom@15.6.2",
-      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-15.6.2.tgz"
+      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-15.6.2.tgz",
+      "dev": true
     },
     "react-dom-factories": {
       "version": "1.0.2",
