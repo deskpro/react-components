@@ -107,3 +107,24 @@
   font-weight: $pf-bold;
   color: $dp-greyscale-850;
 }
+
+.dp-datepicker__time {
+  text-align: center;
+  margin: 0 20%;
+
+  .dp-datepicker__time__minutes,
+  .dp-datepicker__time__hours {
+    width: 50%;
+    display: inline-block;
+    .Select {
+      width: 100%;
+
+      .Select-control {
+        .Select-arrow-zone {
+          width: 10px;
+        }
+      }
+    }
+  }
+}
+

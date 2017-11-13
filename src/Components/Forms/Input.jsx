@@ -10,20 +10,21 @@ import Icon from 'Components/Icon';
 
 class Input extends React.Component {
   static propTypes = {
-    children:   PropTypes.node,
-    className:  PropTypes.string,
-    label:      PropTypes.string,
-    id:         PropTypes.string,
-    icon:       PropTypes.string,
-    iconRight:  PropTypes.string,
-    prefix:     PropTypes.string,
-    suffix:     PropTypes.string,
-    validated:  PropTypes.bool,
-    validating: PropTypes.bool,
-    invisible:  PropTypes.bool,
-    onChange:   PropTypes.func,
-    onFocus:    PropTypes.func,
-    onBlur:     PropTypes.func,
+    children:    PropTypes.node,
+    className:   PropTypes.string,
+    label:       PropTypes.string,
+    id:          PropTypes.string,
+    icon:        PropTypes.string,
+    iconRight:   PropTypes.string,
+    prefix:      PropTypes.string,
+    suffix:      PropTypes.string,
+    validated:   PropTypes.bool,
+    validating:  PropTypes.bool,
+    invisible:   PropTypes.bool,
+    onChange:    PropTypes.func,
+    onFocus:     PropTypes.func,
+    onBlur:      PropTypes.func,
+    onIconClick: PropTypes.func,
   };
   static defaultProps = {
     id:         '',
@@ -40,6 +41,7 @@ class Input extends React.Component {
     onChange() {},
     onFocus() {},
     onBlur() {},
+    onIconClick() {},
   };
 
   constructor(props) {
@@ -86,7 +88,7 @@ class Input extends React.Component {
     if (!icon && !iconRight) {
       return null;
     }
-    return <Icon name={icon || iconRight} />;
+    return <Icon name={icon || iconRight} onClick={this.props.onIconClick} />;
   };
 
   getPrefix = () => {

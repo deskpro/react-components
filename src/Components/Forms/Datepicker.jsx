@@ -10,6 +10,7 @@ import { stringUpperFirst } from 'utils/strings';
 import { objectKeyFilter } from 'utils/objects';
 import { Popper } from 'Components/Common';
 import Input from 'Components/Forms/Input';
+import Select from 'Components/Forms/Select';
 import Icon from 'Components/Icon';
 
 /**
@@ -29,6 +30,10 @@ export default class Datepicker extends React.Component {
      * Initial value of the input (this property has priority over the date one)
      */
     value:       PropTypes.string,
+    /**
+     * Name of the input
+     */
+    name:        PropTypes.string,
     /**
      * The initial date to display.
      */
@@ -60,13 +65,18 @@ export default class Datepicker extends React.Component {
     /**
      * Called when the component receives focus.
      */
-    onFocus:     PropTypes.func
+    onFocus:     PropTypes.func,
+    /**
+     * Add time selector
+     */
+    withTime:    PropTypes.bool,
   };
 
   static defaultProps = {
     placeholder: 'DD/MM/YYYY',
     format:      'DD/MM/YYYY',
     value:       '',
+    name:        null,
     date:        null,
     days:        DAYS,
     months:      MONTHS,
@@ -74,16 +84,22 @@ export default class Datepicker extends React.Component {
     onChange:    noop,
     onFocus:     noop,
     className:   '',
-    style:       {}
+    style:       {},
+    withTime:    false,
   };
 
   constructor(props) {
     super(props);
 
     let date = props.date;
+    let hours = null;
+    let minutes = null;
 
     if (props.value) {
-      date = moment(props.value, props.format).toDate();
+      const momentDate = moment(props.value, props.format);
+      date = momentDate.toDate();
+      hours = momentDate.hours();
+      minutes = momentDate.minutes();
     }
 
     if (!date) {
@@ -92,6 +108,8 @@ export default class Datepicker extends React.Component {
 
     this.state = {
       date,
+      hours,
+      minutes,
       value:  props.value ? date : null,
       opened: false
     };
@@ -102,6 +120,9 @@ export default class Datepicker extends React.Component {
     this.inputDOM   = null;
     this.resultsRef = null;
     this.resultsDOM = null;
+
+    this.hours = Array(...new Array(24)).map((_, i) => ({ value: i, label: i }));
+    this.minutes = Array(...new Array(60)).map((_, i) => ({ value: i, label: i }));
   }
 
   componentDidMount() {
@@ -195,20 +216,59 @@ export default class Datepicker extends React.Component {
   /**
    * Called when a specific day on the calendar is clicked
    *
-   * @param {Date} date
+   * @param {Date} value
    */
-  handleDayClick = (date) => {
-    this.inputRef.setValue(moment(date).format(this.props.format));
+  handleDayClick = (value) => {
+    const date = moment(value);
+    if (this.props.withTime) {
+      date.hours(this.state.hours);
+      date.minutes(this.state.minutes);
+    }
+    this.inputRef.setValue(date.format(this.props.format));
     this.popperRef.close();
-    this.props.onSelect(date);
-    this.setState({ value: date });
+    this.props.onSelect(date.toDate());
+    this.setState({ value: date.toDate() });
+  };
+
+  handleHoursChange = (option) => {
+    const hours = option.value;
+    const date = moment(this.state.value).hours(hours);
+    this.setState({
+      hours,
+    });
+    if (date.isValid()) {
+      this.setState({
+        value: date.toDate(),
+        date:  date.toDate(),
+      });
+      this.inputRef.setValue(date.format(this.props.format));
+      this.props.onChange(date.format(this.props.format), this.props.name);
+      this.props.onSelect(date.toDate());
+    }
+  };
+
+  handleMinutesChange = (option) => {
+    const minutes = option.value;
+    const date = moment(this.state.value).minutes(minutes);
+    this.setState({
+      minutes,
+    });
+    if (date.isValid()) {
+      this.setState({
+        value: date.toDate(),
+        date:  date.toDate(),
+      });
+      this.inputRef.setValue(date.format(this.props.format));
+      this.props.onChange(date.format(this.props.format), this.props.name);
+      this.props.onSelect(date.toDate());
+    }
   };
 
   /**
    * Called when the input value changes
    */
-  handleInputChange = (e) => {
-    const value = moment(this.inputRef.getValue(), this.props.format);
+  handleInputChange = (e, name) => {
+    const value = moment(this.inputRef.getValue(), this.props.format, true);
     if (value.isValid()) {
       const date = value.toDate();
       this.props.onSelect(date);
@@ -216,9 +276,15 @@ export default class Datepicker extends React.Component {
         value: date,
         date
       });
+      if (this.props.withTime) {
+        this.setState({
+          hours:   value.hours(),
+          minutes: value.minutes(),
+        });
+      }
     }
     if (this.props.onChange) {
-      this.props.onChange(e);
+      this.props.onChange(e, name);
     }
   };
 
@@ -230,6 +296,13 @@ export default class Datepicker extends React.Component {
     if (this.props.onFocus) {
       this.props.onFocus(e);
     }
+  };
+
+  /**
+   * Called when the calendar icon is clicked
+   */
+  handleIconClick = () => {
+    this.inputRef.focus();
   };
 
   /**
@@ -309,9 +382,32 @@ export default class Datepicker extends React.Component {
     );
   }
 
+  renderTimePicker = () => (
+    <div className="dp-datepicker__time">
+      <Select
+        className="dp-datepicker__time__hours"
+        name="hours"
+        clearable={false}
+        value={this.state.hours}
+        options={this.hours}
+        placeholder="HH"
+        onChange={this.handleHoursChange}
+      />
+      <Select
+        className="dp-datepicker__time__minutes"
+        name="hours"
+        clearable={false}
+        value={this.state.minutes}
+        options={this.minutes}
+        placeholder="MM"
+        onChange={this.handleMinutesChange}
+      />
+    </div>
+    );
+
   render() {
     const { opened } = this.state;
-    const { style, placeholder, className, value, ...props } = this.props;
+    const { style, placeholder, className, value, withTime, name, ...props } = this.props;
     const inputProps = objectKeyFilter(props, Datepicker.propTypes);
 
     return (
@@ -331,8 +427,10 @@ export default class Datepicker extends React.Component {
           ref={ref => (this.inputRef = ref)}
           placeholder={placeholder}
           onFocus={this.handleInputFocus}
+          onIconClick={this.handleIconClick}
           onChange={this.handleInputChange}
           value={value}
+          name={name}
           {...inputProps}
         />
         <Popper
@@ -344,6 +442,7 @@ export default class Datepicker extends React.Component {
           onClose={this.handlePopperClose}
         >
           {this.renderCalendar()}
+          { withTime ? this.renderTimePicker() : null}
         </Popper>
       </div>
     );
