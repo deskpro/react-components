@@ -1,3 +1,7 @@
+## v1.2.2 - 2017-11-13
+
+* [FEATURE] Adds a Datetimepicker
+
 ## v1.2.1 - 2017-11-08
 
 * Write npm-shrinkwrap with npm 3 for wider compatibility
