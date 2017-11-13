@@ -1,3 +1,7 @@
+## v1.2.3 - 2017-11-13
+
+* [FIX] Fixes missing onChange on dayclick in Datepicker
+
 ## v1.2.2 - 2017-11-13
 
 * [FEATURE] Adds a Datetimepicker
