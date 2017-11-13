@@ -227,6 +227,7 @@ export default class Datepicker extends React.Component {
     this.inputRef.setValue(date.format(this.props.format));
     this.popperRef.close();
     this.props.onSelect(date.toDate());
+    this.props.onChange(date.format(this.props.format), this.props.name);
     this.setState({ value: date.toDate() });
   };
 
