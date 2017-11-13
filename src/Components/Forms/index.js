@@ -1,6 +1,7 @@
 import Checkbox from './Checkbox';
 import CustomSelect from './CustomSelect';
 import Datepicker from './Datepicker';
+import Datetimepicker from './Datetimepicker';
 import Group from './Group';
 import Input from './Input';
 import HiddenFields from './HiddenFields';
@@ -21,6 +22,7 @@ export {
   Checkbox,
   CustomSelect,
   Datepicker,
+  Datetimepicker,
   Group,
   Input,
   HiddenFields,

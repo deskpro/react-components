@@ -24,6 +24,7 @@ export { default as ItemSettings } from './Columns/ItemSettings';
 export { default as Checkbox } from './Forms/Checkbox';
 export { default as CustomSelect } from './Forms/CustomSelect';
 export { default as Datepicker } from './Forms/Datepicker';
+export { default as Datetimepicker } from './Forms/Datetimepicker';
 export { default as Group } from './Forms/Group';
 export { default as Input } from './Forms/Input';
 export { default as HiddenFields } from './Forms/HiddenFields';
