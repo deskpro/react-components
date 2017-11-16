@@ -6,7 +6,7 @@ import ItemPopper from 'Components/Columns/ItemPopper';
 /**
  * Settings icon and popper which will contain a form which controls item settings.
  */
-export default class ItemFilter extends ItemPopper {
+export default class ItemSettings extends ItemPopper {
   render() {
     return (
       <span {...objectKeyFilter(this.props, ItemPopper.propTypes)}>

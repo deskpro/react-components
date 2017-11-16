@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Columns --- Snapshot +++capturing Snapshot of Column 1`] = `
+<div
+  className="dp-column test-class"
+  role="tree"
+>
+  <h1
+    className="dp-heading"
+  >
+    Test
+  </h1>
+</div>
+`;
+
+exports[`>>> Columns --- Snapshot +++capturing Snapshot of Drawer 1`] = `
+<li
+  aria-expanded={true}
+  className="dp-list__element dp-column-drawer test-class"
+  id="dp-column-drawer-1"
+  role="treeitem"
+>
+  <h1
+    aria-controls="dp-column-drawer-body-1"
+    aria-label="Click to close."
+    className="dp-heading"
+  >
+    Test
+    <i
+      aria-hidden={true}
+      className="fa fa-caret-up dp-icon dp-icon--s dp-column-drawer__arrow"
+      onClick={[Function]}
+      title="Close"
+    />
+  </h1>
+  <div
+    aria-hidden={false}
+    className="dp-column-drawer__body dp-column-drawer__body--opened"
+    id="dp-column-drawer-body-1"
+  >
+    <ul
+      className="dp-list dp-drawer-item-list"
+    >
+      <li
+        className="dp-list__element dp-drawer-item"
+        data-dp-toggle-id={0}
+        onClick={[Function]}
+        onSelect={[Function]}
+      >
+        <span
+          className="dp-drawer-item__pos-left"
+        />
+        <span
+          className="dp-drawer-item__pos-middle"
+        >
+          Item 1
+        </span>
+        <span
+          className="dp-drawer-item__pos-right"
+        >
+          <span
+            className="dp-count"
+          >
+            1
+          </span>
+        </span>
+      </li>
+      <li
+        className="dp-list__element dp-drawer-item"
+        data-dp-toggle-id={1}
+        onClick={[Function]}
+        onSelect={[Function]}
+      >
+        <span
+          className="dp-drawer-item__pos-left"
+        />
+        <span
+          className="dp-drawer-item__pos-middle"
+        >
+          Item 2
+        </span>
+        <span
+          className="dp-drawer-item__pos-right"
+        >
+          <span
+            className="dp-count"
+          >
+            0
+          </span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</li>
+`;
+
+exports[`>>> Columns --- Snapshot +++capturing Snapshot of DrawerList 1`] = `
+<ul
+  className="dp-list dp-column-drawer-list test-class"
+  role="tree"
+>
+  <li
+    aria-expanded={true}
+    className="dp-list__element dp-column-drawer test-class"
+    id="dp-column-drawer-2"
+    role="treeitem"
+  >
+    <h1
+      aria-controls="dp-column-drawer-body-2"
+      aria-label="Click to close."
+      className="dp-heading"
+    >
+       
+      <i
+        aria-hidden={true}
+        className="fa fa-caret-up dp-icon dp-icon--s dp-column-drawer__arrow"
+        onClick={[Function]}
+        title="Close"
+      />
+    </h1>
+    <div
+      aria-hidden={false}
+      className="dp-column-drawer__body dp-column-drawer__body--opened"
+      id="dp-column-drawer-body-2"
+    >
+      
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`>>> Columns --- Snapshot +++capturing Snapshot of ItemFilter 1`] = `
+<span
+  className="test-class"
+>
+  <i
+    className="fa fa-filter dp-icon dp-icon--s dp-popper-icon dp-icon__filter"
+    onClick={[Function]}
+  />
+  <div />
+</span>
+`;
+
+exports[`>>> Columns --- Snapshot +++capturing Snapshot of ItemPopper 1`] = `
+<span
+  className="test-class"
+  opened={true}
+>
+  <div />
+</span>
+`;
+
+exports[`>>> Columns --- Snapshot +++capturing Snapshot of ItemSettings 1`] = `
+<span
+  className="test-class"
+>
+  <i
+    className="fa fa-cog dp-icon dp-icon--s dp-popper-icon dp-icon__settings"
+    onClick={[Function]}
+  />
+  <div />
+</span>
+`;

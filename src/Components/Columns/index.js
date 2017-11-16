@@ -4,6 +4,7 @@ import Drawer from './Drawer';
 import ItemList from './ItemList';
 import Item from './Item';
 import ItemFilter from './ItemFilter';
+import ItemPopper from './ItemPopper';
 import ItemSettings from './ItemSettings';
 
 export {
@@ -13,5 +14,6 @@ export {
   ItemList,
   Item,
   ItemFilter,
+  ItemPopper,
   ItemSettings
 };
