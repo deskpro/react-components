@@ -1,0 +1,613 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of Checkbox 1`] = `
+<div
+  className="dp-input--checkbox test-class"
+  style={Object {}}
+>
+  <input
+    checked={false}
+    disabled={false}
+    id="id1"
+    onChange={[Function]}
+    type="checkbox"
+    value="test"
+  />
+  <label
+    className="dp-input--checkbox__checkbox"
+    htmlFor="id1"
+  />
+  <label
+    className="dp-input__label"
+    htmlFor="id1"
+  >
+    
+  </label>
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of CustomSelect 1`] = `
+<div
+  className="dp-select test-class"
+>
+  <div
+    className="dp-select__input"
+    onClick={[Function]}
+  >
+    12 countries
+    <span
+      className="dp-select__arrow"
+    />
+  </div>
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of Datepicker 1`] = `
+<div
+  className="dp-datepicker test-class"
+  style={Object {}}
+>
+  <div
+    className="dp-input dp-input--with-icon--right"
+  >
+    <i
+      className="fa fa-calendar dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <input
+      id="id2"
+      name="date1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="DD/MM/YYYY"
+      value="01/01/2018"
+    />
+  </div>
+  <div />
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of Datetimepicker 1`] = `
+<div
+  className="dp-datepicker test-class"
+  style={Object {}}
+>
+  <div
+    className="dp-input dp-input--with-icon--right"
+  >
+    <i
+      className="fa fa-calendar dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <input
+      id="id3"
+      name="date2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="DD/MM/YYYY HH:MM"
+      value="01/01/2018 12:34"
+    />
+  </div>
+  <div />
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of Form 1`] = `
+<form
+  className="dp-form test-class"
+  onSubmit={[Function]}
+>
+  <input
+    name="input1"
+  />
+</form>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of Group 1`] = `
+<div
+  className="dp-form-group test-class"
+>
+  <label
+    className="dp-input__label"
+    htmlFor=""
+  >
+    Test
+    
+  </label>
+  
+  <input
+    name="input1"
+  />
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of HiddenFields 1`] = `
+<div
+  className="dp-hidden-fields dp-hidden-fields--open test-class"
+>
+  <div
+    aria-expanded={true}
+    className="dp-hidden-fields__body"
+    id="dp-hidden-fields-body-4"
+  >
+    <input
+      name="input1"
+    />
+  </div>
+  <a
+    aria-controls="dp-hidden-fields-body-4"
+    aria-label="Click to close."
+    className="dp-hidden-fields__label"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    Test Hide
+  </a>
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of Input 1`] = `
+<div
+  className="dp-input test-class"
+>
+  <input
+    id="id5"
+    name="input1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    value="test"
+  />
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of Label 1`] = `
+<label
+  className="test-class"
+  htmlFor=""
+>
+  Test
+  
+</label>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of Radio 1`] = `
+<div
+  className="dp-input--radio test-class"
+  style={Object {}}
+>
+  <label
+    htmlFor="id6"
+  >
+    <input
+      disabled={false}
+      id="id6"
+      name="radio1"
+      onChange={[Function]}
+      type="radio"
+      value="test"
+    />
+    <i />
+    <label
+      className="dp-input__label"
+      htmlFor="id6"
+    >
+      
+      
+    </label>
+  </label>
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchButton 1`] = `
+<div
+  className="dp-search-button test-class"
+  style={undefined}
+>
+  <button
+    className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-button--square"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <i
+      className="fa fa-plus dp-icon dp-icon--s"
+    />
+  </button>
+  <div />
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchInline 1`] = `
+<div
+  className="dp-search-inline test-class"
+  style={undefined}
+>
+  <div
+    className="dp-input dp-input--with-icon"
+  >
+    <i
+      className="fa fa-search dp-icon dp-icon--s"
+      onClick={[Function]}
+    />
+    <input
+      id="id9"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+    />
+  </div>
+  <ul
+    className="dp-list"
+  >
+    
+  </ul>
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSelect 1`] = `
+<div
+  className="dp-search-select test-class"
+  style={undefined}
+>
+  <div
+    className="dp-select"
+  >
+    <div
+      className="Select dp-select Select--single is-clearable is-searchable"
+      style={undefined}
+    >
+      <div
+        className="Select-control"
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={undefined}
+      >
+        <span
+          className="Select-multi-value-wrapper"
+          id="react-select-2--value"
+        >
+          <div
+            className="Select-placeholder"
+          >
+            Please select
+          </div>
+          <div
+            className="Select-input"
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "input#undefined::-ms-clear {display: none;}",
+                }
+              }
+            />
+            <input
+              aria-activedescendant="react-select-2--value"
+              aria-describedby={undefined}
+              aria-expanded="false"
+              aria-haspopup="false"
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns=""
+              className={undefined}
+              id={undefined}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              role="combobox"
+              style={
+                Object {
+                  "boxSizing": "content-box",
+                  "width": "5px",
+                }
+              }
+              tabIndex={undefined}
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </span>
+        <span
+          className="Select-arrow-zone"
+          onMouseDown={[Function]}
+        >
+          <span
+            className="Select-arrow"
+            onMouseDown={[Function]}
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSubmit 1`] = `
+<div
+  className="dp-search-submit test-class"
+  style={undefined}
+>
+  <div
+    className="dp-input"
+  >
+    <input
+      id="id11"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+    />
+  </div>
+  <button
+    className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-button--square"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <i
+      className="fa fa-search dp-icon dp-icon--s"
+    />
+  </button>
+  <div />
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of Select 1`] = `
+<div
+  className="dp-select test-class"
+>
+  <div
+    className="Select dp-select test-class Select--single is-clearable is-searchable"
+    style={undefined}
+  >
+    <div
+      className="Select-control"
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={undefined}
+    >
+      <span
+        className="Select-multi-value-wrapper"
+        id="react-select-3--value"
+      >
+        <div
+          className="Select-placeholder"
+        >
+          Please select
+        </div>
+        <div
+          className="Select-input"
+          style={
+            Object {
+              "display": "inline-block",
+            }
+          }
+        >
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "input#undefined::-ms-clear {display: none;}",
+              }
+            }
+          />
+          <input
+            aria-activedescendant="react-select-3--value"
+            aria-describedby={undefined}
+            aria-expanded="false"
+            aria-haspopup="false"
+            aria-label={undefined}
+            aria-labelledby={undefined}
+            aria-owns=""
+            className={undefined}
+            id={undefined}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            role="combobox"
+            style={
+              Object {
+                "boxSizing": "content-box",
+                "width": "5px",
+              }
+            }
+            tabIndex={undefined}
+            value=""
+          />
+          <div
+            style={
+              Object {
+                "height": 0,
+                "left": 0,
+                "overflow": "scroll",
+                "position": "absolute",
+                "top": 0,
+                "visibility": "hidden",
+                "whiteSpace": "pre",
+              }
+            }
+          >
+            
+          </div>
+        </div>
+      </span>
+      <span
+        className="Select-arrow-zone"
+        onMouseDown={[Function]}
+      >
+        <span
+          className="Select-arrow"
+          onMouseDown={[Function]}
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of Tag 1`] = `
+<span
+  className="dp-tag test-class editable"
+>
+  Test
+  <span
+    onClick={[Function]}
+  >
+    <i
+      className="fa fa-close dp-icon dp-icon--s dp-tag__close"
+    />
+  </span>
+</span>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of TagInput 1`] = `
+<div
+  className="dp-tag-input"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="test-class"
+    onClick={[Function]}
+  >
+    <span>
+      <span
+        className="dp-tag editable"
+      >
+        test1
+        <span
+          onClick={[Function]}
+        >
+          <i
+            className="fa fa-close dp-icon dp-icon--s dp-tag__close"
+          />
+        </span>
+      </span>
+      <span
+        className="dp-tag editable"
+      >
+        test2
+        <span
+          onClick={[Function]}
+        >
+          <i
+            className="fa fa-close dp-icon dp-icon--s dp-tag__close"
+          />
+        </span>
+      </span>
+      <div
+        className="react-autosuggest__container"
+      >
+        <input
+          aria-activedescendant={null}
+          aria-autocomplete="list"
+          aria-expanded={false}
+          aria-haspopup={false}
+          aria-owns="react-autowhatever-1"
+          autoComplete="off"
+          className="react-tagsinput-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onPaste={[Function]}
+          placeholder="Add a label"
+          role="combobox"
+          type="text"
+          value=""
+        />
+        <div
+          className="react-autosuggest__suggestions-container"
+          id="react-autowhatever-1"
+        />
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of TagSet 1`] = `
+<div
+  className="dp-tag-set"
+>
+  <span
+    className="dp-tag editable"
+  >
+    test1
+    <span
+      onClick={[Function]}
+    >
+      <i
+        className="fa fa-close dp-icon dp-icon--s dp-tag__close"
+      />
+    </span>
+  </span>
+  <span
+    className="dp-tag editable"
+  >
+    test2
+    <span
+      onClick={[Function]}
+    >
+      <i
+        className="fa fa-close dp-icon dp-icon--s dp-tag__close"
+      />
+    </span>
+  </span>
+  <div
+    className="dp-search-button"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    style={undefined}
+  >
+    <button
+      className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-button--square"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <i
+        className="fa fa-plus dp-icon dp-icon--s"
+      />
+    </button>
+    <div />
+  </div>
+</div>
+`;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of Textarea 1`] = `
+<div
+  className="dp-textarea test-class"
+>
+  <textarea
+    name="textarea1"
+    onChange={[Function]}
+    value="test"
+  />
+</div>
+`;

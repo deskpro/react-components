@@ -20,7 +20,10 @@ export function cssMatchComputedWidth(toGet, toSet) {
     setEl = ReactDOM.findDOMNode(setEl);
   }
 
-  const width = window.getComputedStyle(getEl, null).width;
-  setEl.style.width = width;
+  let width = 0;
+  if (getEl && setEl) {
+    width = window.getComputedStyle(getEl, null).width;
+    setEl.style.width = width;
+  }
   return width;
 }
