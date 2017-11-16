@@ -11,6 +11,7 @@ import {
   SelectableList,
   ToggleableList,
   Popper,
+  Portal,
   Scrollbar
 } from 'Components/Common/index';
 
@@ -111,6 +112,15 @@ describe('>>> Buttons --- Common', () => {
       <Scrollbar>
         <p>Test</p>
       </Scrollbar>,
+      { createNodeMock }
+    ).toJSON();
+    expect(renderedValue).toMatchSnapshot();
+  });
+  it('+++capturing Snapshot of Portal', () => {
+    const renderedValue = renderer.create(
+      <Portal>
+        <p>Test</p>
+      </Portal>,
       { createNodeMock }
     ).toJSON();
     expect(renderedValue).toMatchSnapshot();

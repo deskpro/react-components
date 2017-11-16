@@ -60,6 +60,31 @@ exports[`>>> Buttons --- Snapshot +++capturing Snapshot of ProgressButton 1`] = 
 </div>
 `;
 
+exports[`>>> Buttons --- Snapshot +++capturing Snapshot of SplitButton 1`] = `
+<div
+  className="dp-split-button"
+  style={Object {}}
+>
+  <button
+    className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-split-button__left"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Test
+  </button>
+  <button
+    className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-split-button__right"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <i
+      className="fa fa-caret-down dp-icon dp-icon--s"
+    />
+  </button>
+  <div />
+</div>
+`;
+
 exports[`>>> Buttons --- Snapshot +++capturing Snapshot of TranslateButton 1`] = `
 <div
   className="dp-translate-button dp-translate-button--l"

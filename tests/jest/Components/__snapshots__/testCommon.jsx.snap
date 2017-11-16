@@ -76,6 +76,8 @@ exports[`>>> Buttons --- Common +++capturing Snapshot of List 1`] = `
 
 exports[`>>> Buttons --- Common +++capturing Snapshot of Popper 1`] = `<div />`;
 
+exports[`>>> Buttons --- Common +++capturing Snapshot of Portal 1`] = `<div />`;
+
 exports[`>>> Buttons --- Common +++capturing Snapshot of QueryableList 1`] = `
 <ul
   className="dp-list dp-queryable-list test-class"
