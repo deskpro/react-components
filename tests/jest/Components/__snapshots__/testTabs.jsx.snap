@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Tabs --- Snapshot +++capturing Snapshot of TabLink 1`] = `
+<li
+  className="dp-tabs__tab"
+>
+  <div
+    onClick={[Function]}
+  >
+    Tab One
+  </div>
+</li>
+`;
+
+exports[`>>> Tabs --- Snapshot +++capturing Snapshot of Tabs 1`] = `
+<ul
+  className="dp-tabs"
+>
+  <li
+    className="dp-tabs__tab dp-tabs__tab--active"
+  >
+    <div
+      onClick={[Function]}
+    >
+      Tab One
+    </div>
+  </li>
+  <li
+    className="dp-tabs__tab"
+  >
+    <div
+      onClick={[Function]}
+    >
+      Tab Two
+    </div>
+  </li>
+</ul>
+`;
