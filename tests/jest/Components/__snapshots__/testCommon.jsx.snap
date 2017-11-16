@@ -54,3 +54,174 @@ exports[`>>> Buttons --- Common +++capturing Snapshot of Highlighter 1`] = `
   }
 />
 `;
+
+exports[`>>> Buttons --- Common +++capturing Snapshot of List 1`] = `
+<ul
+  className="dp-list test-class"
+>
+  <li
+    className="dp-list__element"
+    name="item1"
+  >
+    Item1
+  </li>
+  <li
+    className="dp-list__element"
+    name="item2"
+  >
+    Item2
+  </li>
+</ul>
+`;
+
+exports[`>>> Buttons --- Common +++capturing Snapshot of Popper 1`] = `<div />`;
+
+exports[`>>> Buttons --- Common +++capturing Snapshot of QueryableList 1`] = `
+<ul
+  className="dp-list dp-queryable-list test-class"
+>
+  <li
+    className="dp-list__element"
+    name="item1"
+  >
+    Item1
+  </li>
+  <li
+    className="dp-list__element"
+    name="item2"
+  >
+    Item2
+  </li>
+</ul>
+`;
+
+exports[`>>> Buttons --- Common +++capturing Snapshot of Scrollbar 1`] = `
+<div
+  className="dp-scrollbar"
+  style={
+    Object {
+      "height": "auto",
+      "maxHeight": 200,
+      "minHeight": 0,
+      "overflow": "hidden",
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "WebkitOverflowScrolling": "touch",
+        "bottom": undefined,
+        "left": undefined,
+        "marginBottom": 0,
+        "marginRight": 0,
+        "maxHeight": 200,
+        "minHeight": 0,
+        "overflow": "scroll",
+        "position": "relative",
+        "right": undefined,
+        "top": undefined,
+      }
+    }
+  >
+    <p>
+      Test
+    </p>
+  </div>
+  <div
+    className="dp-scrollbar__track-horizontal"
+    style={
+      Object {
+        "display": "none",
+        "height": 6,
+        "position": "absolute",
+      }
+    }
+  >
+    <div
+      className="dp-scrollbar__thumb-horizontal"
+      style={
+        Object {
+          "display": "block",
+          "height": "100%",
+          "position": "relative",
+        }
+      }
+    />
+  </div>
+  <div
+    className="dp-scrollbar__track-vertical"
+    style={
+      Object {
+        "display": "none",
+        "position": "absolute",
+        "width": 6,
+      }
+    }
+  >
+    <div
+      className="dp-scrollbar__thumb-vertical"
+      style={
+        Object {
+          "display": "block",
+          "position": "relative",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`>>> Buttons --- Common +++capturing Snapshot of SelectableList 1`] = `
+<ul
+  className="dp-list dp-selectable-list test-class"
+  onKeyDown={[Function]}
+  onMouseOver={[Function]}
+  tabIndex="-1"
+>
+  <li
+    className="dp-list__element dp-selectable-list--selected"
+    data-dp-index={0}
+    name="item1"
+    onClick={[Function]}
+  >
+    Item1
+  </li>
+  <li
+    className="dp-list__element"
+    data-dp-index={1}
+    name="item2"
+    onClick={[Function]}
+  >
+    Item2
+  </li>
+</ul>
+`;
+
+exports[`>>> Buttons --- Common +++capturing Snapshot of ToggleableList 1`] = `
+<ul
+  className="dp-list test-class"
+>
+  <li
+    className="dp-list__element"
+    data-dp-toggle-id={0}
+    name="item1"
+    onClick={[Function]}
+    selected={false}
+  >
+    Item1
+  </li>
+  <li
+    className="dp-list__element"
+    data-dp-toggle-id={1}
+    name="item2"
+    onClick={[Function]}
+    selected={false}
+  >
+    Item2
+  </li>
+</ul>
+`;

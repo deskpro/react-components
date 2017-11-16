@@ -18,6 +18,21 @@ exports[`>>> Buttons --- Snapshot +++capturing Snapshot of ButtonPopper 1`] = `
 </span>
 `;
 
+exports[`>>> Buttons --- Snapshot +++capturing Snapshot of DropdownButton 1`] = `
+<button
+  className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-dropdown-button"
+  disabled={false}
+  onClick={[Function]}
+  style={Object {}}
+>
+  Test
+  <i
+    className="fa fa-caret-down dp-icon dp-icon--s"
+  />
+  <div />
+</button>
+`;
+
 exports[`>>> Buttons --- Snapshot +++capturing Snapshot of ProgressButton 1`] = `
 <div
   className="dp-progress-button dp-progress-button--l"

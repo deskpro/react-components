@@ -115,7 +115,8 @@
       "src/**/*.{js,jsx}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/config/jest/mocks.js"
     ],
     "testMatch": [
       "<rootDir>/tests/jest/**/?(*).js?(x)"

@@ -22,11 +22,6 @@ import {
   Textarea
 } from 'Components/Forms/index';
 
-// Date/time pickers use findDOMNode.
-// https://github.com/YouCanBookMe/react-datetime/issues/384#issuecomment-318888730
-jest.mock('react-dom', () => ({
-  findDOMNode: () => {}
-}));
 // https://github.com/facebook/react/issues/7740#issuecomment-247335106
 const createNodeMock = () => ({
   addEventListener: () => {}

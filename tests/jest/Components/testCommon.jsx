@@ -1,7 +1,23 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Count, Heading, Highlighter } from 'Components/Common/index';
 import { Icon } from 'Components/index';
+import {
+  Count,
+  Heading,
+  Highlighter,
+  QueryableList,
+  List,
+  ListElement,
+  SelectableList,
+  ToggleableList,
+  Popper,
+  Scrollbar
+} from 'Components/Common/index';
+
+// https://github.com/facebook/react/issues/7740#issuecomment-247335106
+const createNodeMock = () => ({
+  addEventListener: () => {}
+});
 
 describe('>>> Buttons --- Common', () => {
   it('+++capturing Snapshot of Count', () => {
@@ -27,6 +43,75 @@ describe('>>> Buttons --- Common', () => {
       <Highlighter highlight="feedback">
         Android feedback (Support)
       </Highlighter>
+    ).toJSON();
+    expect(renderedValue).toMatchSnapshot();
+  });
+  it('+++capturing Snapshot of List', () => {
+    const renderedValue = renderer.create(
+      <List className="test-class">
+        <ListElement name="item1">
+          Item1
+        </ListElement>
+        <ListElement name="item2">
+          Item2
+        </ListElement>
+      </List>
+    ).toJSON();
+    expect(renderedValue).toMatchSnapshot();
+  });
+  it('+++capturing Snapshot of QueryableList', () => {
+    const renderedValue = renderer.create(
+      <QueryableList className="test-class" whereName="@all">
+        <ListElement name="item1">
+          Item1
+        </ListElement>
+        <ListElement name="item2">
+          Item2
+        </ListElement>
+      </QueryableList>
+    ).toJSON();
+    expect(renderedValue).toMatchSnapshot();
+  });
+  it('+++capturing Snapshot of SelectableList', () => {
+    const renderedValue = renderer.create(
+      <SelectableList className="test-class">
+        <ListElement name="item1">
+          Item1
+        </ListElement>
+        <ListElement name="item2">
+          Item2
+        </ListElement>
+      </SelectableList>
+    ).toJSON();
+    expect(renderedValue).toMatchSnapshot();
+  });
+  it('+++capturing Snapshot of ToggleableList', () => {
+    const renderedValue = renderer.create(
+      <ToggleableList className="test-class" on="click" toggle="selected">
+        <ListElement name="item1">
+          Item1
+        </ListElement>
+        <ListElement name="item2">
+          Item2
+        </ListElement>
+      </ToggleableList>
+    ).toJSON();
+    expect(renderedValue).toMatchSnapshot();
+  });
+  it('+++capturing Snapshot of Popper', () => {
+    const renderedValue = renderer.create(
+      <Popper target="target" placement="bottom" opened>
+        <p>Test</p>
+      </Popper>
+    ).toJSON();
+    expect(renderedValue).toMatchSnapshot();
+  });
+  it('+++capturing Snapshot of Scrollbar', () => {
+    const renderedValue = renderer.create(
+      <Scrollbar>
+        <p>Test</p>
+      </Scrollbar>,
+      { createNodeMock }
     ).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
