@@ -3,6 +3,7 @@
 exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Checkbox 1`] = `
 <form
   className="dp-form"
+  clearFields={[Function]}
   onSubmit={[Function]}
 >
   <div
@@ -45,6 +46,7 @@ exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Checkbox 1`] = `
 exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Datepicker 1`] = `
 <form
   className="dp-form"
+  clearFields={[Function]}
   onSubmit={[Function]}
 >
   <div
@@ -84,6 +86,7 @@ exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Datepicker 1`] = `
 exports[`>>> redux-form --- Snapshot +++capturing Snapshot of FieldGroup 1`] = `
 <form
   className="dp-form"
+  clearFields={[Function]}
   onSubmit={[Function]}
 >
   <div
@@ -124,6 +127,7 @@ exports[`>>> redux-form --- Snapshot +++capturing Snapshot of FieldGroup 1`] = `
 exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Input 1`] = `
 <form
   className="dp-form"
+  clearFields={[Function]}
   onSubmit={[Function]}
 >
   <div
@@ -152,6 +156,7 @@ exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Input 1`] = `
 exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Radio 1`] = `
 <form
   className="dp-form"
+  clearFields={[Function]}
   onSubmit={[Function]}
 >
   <div
@@ -196,6 +201,7 @@ exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Radio 1`] = `
 exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Select 1`] = `
 <form
   className="dp-form"
+  clearFields={[Function]}
   onSubmit={[Function]}
 >
   <div
@@ -321,6 +327,7 @@ exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Select 1`] = `
 exports[`>>> redux-form --- Snapshot +++capturing Snapshot of TagSet 1`] = `
 <form
   className="dp-form"
+  clearFields={[Function]}
   onSubmit={[Function]}
 >
   <div
@@ -386,6 +393,7 @@ exports[`>>> redux-form --- Snapshot +++capturing Snapshot of TagSet 1`] = `
 exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Textarea 1`] = `
 <form
   className="dp-form"
+  clearFields={[Function]}
   onSubmit={[Function]}
 >
   <div
