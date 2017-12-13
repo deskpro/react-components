@@ -177,7 +177,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Column className="dp-column__first">
+      <Column>
         <Heading>
           Tickets
           <Icon name="envelope-o" style={styles.iconEnvelope} />

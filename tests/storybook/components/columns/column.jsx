@@ -95,7 +95,7 @@ storiesOf('Columns', module)
     };
 
     return (
-      <div className="dp-column__first" style={styles.column}>
+      <div style={styles.column}>
         <DrawerList>
           <Drawer>
             <Heading icon="heart">

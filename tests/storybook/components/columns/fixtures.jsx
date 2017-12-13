@@ -144,7 +144,7 @@ export class TestColumn extends React.Component {
 
   render() {
     return (
-      <Column className="dp-column__first" style={{ marginLeft: '100px' }}>
+      <Column style={{ marginLeft: '100px' }}>
         <Heading>
           Tickets
           <Icon name="envelope-o" style={styles.column.icon} />

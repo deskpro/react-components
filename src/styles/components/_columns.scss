@@ -1,5 +1,4 @@
 @import "../base/mixins";
-$dp-column-first-width:    220px;
 $dp-column-padding:        12px;
 $dp-column-heading-height: 44px;
 $dp-column-drawer-height:  36px;
@@ -65,6 +64,9 @@ $dp-column-item-height:    24px;
     font-size: $font-size-m;
     font-weight: $pf-bold;
     color: $dp-greyscale-850;
+
+    // force the heading to occupy the entire available width if no parent width is specified
+    width:100%;
 
     .dp-heading__count {
       order: 1;
@@ -234,7 +236,3 @@ $dp-column-item-height:    24px;
   }
 }
 
-/// First column
-.dp-column__first {
-  width: $dp-column-first-width;
-}
