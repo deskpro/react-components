@@ -1,6 +1,7 @@
 ## v1.2.4 - 2017-12-13
 
 * [FIX] Remove hardcoded column widths
+* [FIX] Force 100% width on headings inside column drawers
 
 ## v1.2.3 - 2017-11-13
 

@@ -65,6 +65,9 @@ $dp-column-item-height:    24px;
     font-weight: $pf-bold;
     color: $dp-greyscale-850;
 
+    // force the heading to occupy the entire available width if no parent width is specified
+    width:100%;
+
     .dp-heading__count {
       order: 1;
       font-weight: normal;
