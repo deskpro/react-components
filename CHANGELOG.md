@@ -1,3 +1,8 @@
+## v1.2.5 - 2017-12-18
+
+* [FIX] Fix Calendar days
+* Update npm dev packages
+
 ## v1.2.4 - 2017-12-13
 
 * [FIX] Remove hardcoded column widths
