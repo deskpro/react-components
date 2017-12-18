@@ -242,13 +242,6 @@ exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Select 1`] = `
                 }
               }
             >
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "input#undefined::-ms-clear {display: none;}",
-                  }
-                }
-              />
               <input
                 aria-activedescendant="react-select-2--value"
                 aria-describedby={undefined}
@@ -289,24 +282,6 @@ exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Select 1`] = `
                 
               </div>
             </div>
-          </span>
-          <span
-            aria-label="Clear value"
-            className="Select-clear-zone"
-            onMouseDown={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            title="Clear value"
-          >
-            <span
-              className="Select-clear"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "&times;",
-                }
-              }
-            />
           </span>
           <span
             className="Select-arrow-zone"

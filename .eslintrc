@@ -9,6 +9,7 @@
   },
   "parser": "babel-eslint",
   "rules": {
+    "no-return-assign": 0,
     "max-len": [
       1,
       {
@@ -18,7 +19,6 @@
         "ignorePattern": "^import\\s.+"
       }
     ],
-    "no-return-assign": 0,
     "react/no-find-dom-node": 0,
     "react/no-multi-comp": 0,
     "jsx-quotes": [
@@ -104,8 +104,7 @@
     },
     "import/extensions": [".js", ".jsx"],
     "react": {
-      "version": "15.3.2"
-      // React version, default to the latest React stable release
+      "version": "15.6.2"
     }
   },
   "parserOptions": {
