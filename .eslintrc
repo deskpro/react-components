@@ -87,6 +87,7 @@
       ] }
     ],
     "jsx-a11y/tabindex-no-positive": 0,
+    "jsx-a11y/click-events-have-key-events": 1,
     "strict": 0,
     "no-param-reassign": [
       "error",

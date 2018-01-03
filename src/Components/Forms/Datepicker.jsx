@@ -91,7 +91,7 @@ export default class Datepicker extends React.Component {
   constructor(props) {
     super(props);
 
-    let date = props.date;
+    let { date } = props;
     let hours = null;
     let minutes = null;
 
@@ -176,7 +176,7 @@ export default class Datepicker extends React.Component {
    * Called when the document is clicked
    */
   handleDocumentClick = () => {
-    if (!this.focused) {
+    if (!this.focused && this.popperRef) {
       this.popperRef.close();
     }
   };
@@ -225,7 +225,9 @@ export default class Datepicker extends React.Component {
       date.minutes(this.state.minutes);
     }
     this.inputRef.setValue(date.format(this.props.format));
-    this.popperRef.close();
+    if (!this.props.withTime) {
+      this.popperRef.close();
+    }
     this.props.onSelect(date.toDate());
     this.props.onChange(date.format(this.props.format), this.props.name);
     this.setState({ value: date.toDate() });
@@ -260,6 +262,7 @@ export default class Datepicker extends React.Component {
         date:  date.toDate(),
       });
       this.inputRef.setValue(date.format(this.props.format));
+      this.popperRef.close();
       this.props.onChange(date.format(this.props.format), this.props.name);
       this.props.onSelect(date.toDate());
     }
@@ -313,7 +316,7 @@ export default class Datepicker extends React.Component {
    */
   renderCalendar() {
     const { months, days } = this.props;
-    const date = this.state.date;
+    const { date } = this.state;
 
     /* eslint-disable react/no-array-index-key */
     return (
@@ -378,7 +381,7 @@ export default class Datepicker extends React.Component {
               </div>
             ))}
           </div>
-          ))}
+        ))}
       </div>
     );
   }
@@ -404,11 +407,13 @@ export default class Datepicker extends React.Component {
         onChange={this.handleMinutesChange}
       />
     </div>
-    );
+  );
 
   render() {
     const { opened } = this.state;
-    const { style, placeholder, className, value, withTime, name, ...props } = this.props;
+    const {
+      style, placeholder, className, value, withTime, name, ...props
+    } = this.props;
     const inputProps = objectKeyFilter(props, Datepicker.propTypes);
 
     return (

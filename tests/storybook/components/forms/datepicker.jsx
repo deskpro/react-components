@@ -11,9 +11,9 @@ class Story extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      date1: null,
+      date1: '',
       date2: '01/01/2018',
-      date3: null,
+      date3: '',
       date4: '01/01/2018 12:34'
     };
   }
@@ -51,9 +51,8 @@ class Story extends React.Component {
 
 storiesOf('Forms', module)
   .add(
-  'Datepicker',
-  () => (
-    <Story onChange={action('onChange')} />
-  )
-)
-;
+    'Datepicker',
+    () => (
+      <Story onChange={action('onChange')} />
+    )
+  );

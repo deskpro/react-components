@@ -115,7 +115,6 @@ export default class Popper extends React.Component {
     super(props);
 
     this.state = {
-      target: null,
       opened: props.opened
     };
     this.node    = null;
@@ -187,16 +186,16 @@ export default class Popper extends React.Component {
    */
   updatePopper = () => {
     const {
-            target,
-            placement,
-            offsetX,
-            offsetY,
-            detached,
-            eventsEnabled,
-            preventOverflow,
-            onCreate,
-            onUpdate
-            } = this.props;
+      target,
+      placement,
+      offsetX,
+      offsetY,
+      detached,
+      eventsEnabled,
+      preventOverflow,
+      onCreate,
+      onUpdate
+    } = this.props;
 
     if (target === undefined && !this.target) {
       return;
@@ -293,7 +292,9 @@ export default class Popper extends React.Component {
   };
 
   render() {
-    const { detached, arrow, children, className, ...props } = this.props;
+    const {
+      detached, arrow, children, className, ...props
+    } = this.props;
     const { opened } = this.state;
     if (!this.target) {
       return <div ref={ref => (this.node = ref)} />;
