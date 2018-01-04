@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
 import { cssMatchComputedWidth } from 'utils/css';
-import { dateNumberOfDaysInMonth, dateCalendarDays, DAYS, MONTHS } from 'utils/dates';
+import { dateNumberOfDaysInMonth, dateCalendarDays, getShortDateFormat, DAYS, MONTHS } from 'utils/dates';
 import { stringUpperFirst } from 'utils/strings';
 import { objectKeyFilter } from 'utils/objects';
 import { Popper } from 'Components/Common';
@@ -26,6 +26,10 @@ export default class Datepicker extends React.Component {
      * Moment format to use to render the input when the date is selected.
      */
     format:      PropTypes.string,
+    /**
+     * Locale used to display the date and parse it.
+     */
+    locale:      PropTypes.string,
     /**
      * Initial value of the input (this property has priority over the date one)
      */
@@ -73,8 +77,9 @@ export default class Datepicker extends React.Component {
   };
 
   static defaultProps = {
-    placeholder: 'DD/MM/YYYY',
-    format:      'DD/MM/YYYY',
+    placeholder: '',
+    format:      '',
+    locale:      'en-gb',
     value:       '',
     name:        null,
     date:        null,
@@ -95,8 +100,15 @@ export default class Datepicker extends React.Component {
     let hours = null;
     let minutes = null;
 
+    this.format = props.format || getShortDateFormat(props.locale);
+    if (props.withTime) {
+      this.format += ' HH:mm';
+    }
+
+    this.firstWeekDay = moment.localeData(props.locale).firstDayOfWeek();
+
     if (props.value) {
-      const momentDate = moment(props.value, props.format);
+      const momentDate = moment(props.value, this.format);
       date = momentDate.toDate();
       hours = momentDate.hours();
       minutes = momentDate.minutes();
@@ -137,6 +149,15 @@ export default class Datepicker extends React.Component {
     this.rootRef.addEventListener('mouseleave', this.handleMouseLeave);
     window.addEventListener('click', this.handleDocumentClick);
     window.addEventListener('resize', this.updatePopperWidth);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.format !== this.props.format) {
+      this.format = nextProps.format || getShortDateFormat(nextProps.locale);
+      if (nextProps.withTime) {
+        this.format += ' HH:mm';
+      }
+    }
   }
 
   componentWillUnmount() {
@@ -224,12 +245,12 @@ export default class Datepicker extends React.Component {
       date.hours(this.state.hours);
       date.minutes(this.state.minutes);
     }
-    this.inputRef.setValue(date.format(this.props.format));
+    this.inputRef.setValue(date.format(this.format));
     if (!this.props.withTime) {
       this.popperRef.close();
     }
     this.props.onSelect(date.toDate());
-    this.props.onChange(date.format(this.props.format), this.props.name);
+    this.props.onChange(date.format(this.format), this.props.name);
     this.setState({ value: date.toDate() });
   };
 
@@ -244,8 +265,8 @@ export default class Datepicker extends React.Component {
         value: date.toDate(),
         date:  date.toDate(),
       });
-      this.inputRef.setValue(date.format(this.props.format));
-      this.props.onChange(date.format(this.props.format), this.props.name);
+      this.inputRef.setValue(date.format(this.format));
+      this.props.onChange(date.format(this.format), this.props.name);
       this.props.onSelect(date.toDate());
     }
   };
@@ -261,9 +282,9 @@ export default class Datepicker extends React.Component {
         value: date.toDate(),
         date:  date.toDate(),
       });
-      this.inputRef.setValue(date.format(this.props.format));
+      this.inputRef.setValue(date.format(this.format));
       this.popperRef.close();
-      this.props.onChange(date.format(this.props.format), this.props.name);
+      this.props.onChange(date.format(this.format), this.props.name);
       this.props.onSelect(date.toDate());
     }
   };
@@ -272,7 +293,7 @@ export default class Datepicker extends React.Component {
    * Called when the input value changes
    */
   handleInputChange = (e, name) => {
-    const value = moment(this.inputRef.getValue(), this.props.format, true);
+    const value = moment(this.inputRef.getValue(), this.format, true);
     if (value.isValid()) {
       const date = value.toDate();
       this.props.onSelect(date);
@@ -318,6 +339,12 @@ export default class Datepicker extends React.Component {
     const { months, days } = this.props;
     const { date } = this.state;
 
+    let week = days.slice(0);
+    if (this.firstWeekDay > 0) {
+      const end = week.splice(0, this.firstWeekDay);
+      week = week.concat(end);
+    }
+
     /* eslint-disable react/no-array-index-key */
     return (
       <div className="dp-datepicker__calendar">
@@ -333,7 +360,7 @@ export default class Datepicker extends React.Component {
           </div>
         </div>
         <div className="dp-datepicker__calendar__weekdays">
-          {days.map((d, i) => <div key={i}>{d[0].toUpperCase()}</div>)}
+          {week.map((d, i) => <div key={i}>{d[0].toUpperCase()}</div>)}
         </div>
         {this.renderMonth(date)}
       </div>
@@ -356,7 +383,7 @@ export default class Datepicker extends React.Component {
         && date.getMonth() === currDate.getMonth();
     }
 
-    const monthDays   = dateCalendarDays(date);
+    const monthDays   = dateCalendarDays(date, this.firstWeekDay);
     const daysInMonth = dateNumberOfDaysInMonth(date);
     const weekDays    = [];
     for (let i = 0; i < monthDays.length; i++) {
@@ -412,10 +439,17 @@ export default class Datepicker extends React.Component {
   render() {
     const { opened } = this.state;
     const {
-      style, placeholder, className, value, withTime, name, ...props
+      style, locale, className, value, withTime, name, ...props
     } = this.props;
     const inputProps = objectKeyFilter(props, Datepicker.propTypes);
 
+    let { placeholder } = this.props;
+    if (!placeholder) {
+      placeholder = getShortDateFormat(locale);
+      if (withTime) {
+        placeholder += ' HH:MM';
+      }
+    }
     return (
       <div
         ref={ref => (this.rootRef = ref)}

@@ -60,8 +60,8 @@ export default class Datetimepicker extends React.Component {
   };
 
   static defaultProps = {
-    placeholder: 'DD/MM/YYYY HH:MM',
-    format:      'DD/MM/YYYY HH:mm',
+    placeholder: '',
+    format:      '',
     value:       '',
     name:        null,
     date:        null,

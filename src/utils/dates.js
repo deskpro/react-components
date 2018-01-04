@@ -52,16 +52,16 @@ export function dateNumberOfDaysInMonth(date) {
 /**
  * Returns an array of all the days in the given date
  *
- * The returned array is padded so the first day (index 0) is always a sunday, and the
- * last day is always saturday. The padding numbers will be negative or greater than the
+ * The returned array is padded according to the firstWeekDay. The padding numbers will be negative or greater than the
  * number of days in the given month.
  *
  * @param {Date} date
+ * @param firstWeekDay
  * @returns {Array}
  */
-export function dateCalendarDays(date) {
+export function dateCalendarDays(date, firstWeekDay = 0) {
   const copy = new Date(new Date(date).setDate(1));
-  const offset = copy.getDay();
+  const offset = copy.getDay() - firstWeekDay + 7;
   copy.setMonth(copy.getMonth() + 1);
   copy.setDate(0);
 
@@ -72,6 +72,10 @@ export function dateCalendarDays(date) {
   const calendarSquares = [];
   for (let i = 1; i <= totalSquares; i++) {
     calendarSquares.push(i - offset);
+  }
+
+  if (calendarSquares[0] <= -6) {
+    calendarSquares.splice(0, 7);
   }
 
   return calendarSquares;
@@ -89,4 +93,31 @@ export function dateToMonth(date, short = false) {
     return MONTHS_SHORT[month];
   }
   return MONTHS[month];
+}
+
+/**
+ * Return the format based on the locale
+ *
+ * @param locale
+ * @returns {string}
+ */
+export function getShortDateFormat(locale) {
+  const d = new Date(1992, 0, 7);
+  const s = d.toLocaleDateString(locale);
+
+  function formatReplacer(str) {
+    const num = parseInt(str, 10);
+    switch (num % 100) {
+      case 92:
+        return str.replace(/.{1}/g, 'Y');
+      case 1:
+        return str.length === 1 ? 'M' : 'MM';
+      case 7:
+        return str.length === 1 ? 'D' : 'DD';
+      default:
+        return '';
+    }
+  }
+
+  return s.replace(/\d+/g, formatReplacer);
 }

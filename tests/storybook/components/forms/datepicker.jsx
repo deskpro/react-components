@@ -12,9 +12,9 @@ class Story extends React.Component {
     super(props);
     this.state = {
       date1: '',
-      date2: '01/01/2018',
+      date2: '31/01/2018',
       date3: '',
-      date4: '01/01/2018 12:34'
+      date4: '01/31/2018 12:34'
     };
   }
 
@@ -40,6 +40,7 @@ class Story extends React.Component {
         />
         <Datetimepicker
           name="date4"
+          locale="ar-ar"
           onChange={this.handleChange}
           onSelect={action('onSelect')}
           value={this.state.date4}

@@ -24,3 +24,9 @@ test('dateToMonth', () => {
   expect(dates.dateToMonth(date)).toBe('July');
   expect(dates.dateToMonth(date, true)).toBe('Jul');
 });
+
+test('getShortDateFormat', () => {
+  expect(dates.getShortDateFormat('en-us')).toBe('M/D/YYYY');
+  expect(dates.getShortDateFormat('en-gb')).toBe('DD/MM/YYYY');
+  expect(dates.getShortDateFormat('fr-fr')).toBe('DD/MM/YYYY');
+});
