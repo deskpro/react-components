@@ -1,3 +1,8 @@
+## v1.2.6 - 2018-01-04
+
+* [FIX] Fix bug on DatePicker not closing
+* [IMPROVEMENT] DatePicker is matching locale
+
 ## v1.2.5 - 2017-12-18
 
 * [FIX] Fix Calendar days

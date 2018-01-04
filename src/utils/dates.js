@@ -103,7 +103,12 @@ export function dateToMonth(date, short = false) {
  */
 export function getShortDateFormat(locale) {
   const d = new Date(1992, 0, 7);
-  const s = d.toLocaleDateString(locale);
+  let s;
+  try {
+    s = d.toLocaleDateString(locale.replace('_', '-').toLowerCase());
+  } catch (e) {
+    s = d.toLocaleDateString(locale.slice(0, 2).toLowerCase());
+  }
 
   function formatReplacer(str) {
     const num = parseInt(str, 10);

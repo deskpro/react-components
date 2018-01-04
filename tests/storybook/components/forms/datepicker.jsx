@@ -40,7 +40,7 @@ class Story extends React.Component {
         />
         <Datetimepicker
           name="date4"
-          locale="ar-ar"
+          locale="en_T1"
           onChange={this.handleChange}
           onSelect={action('onSelect')}
           value={this.state.date4}

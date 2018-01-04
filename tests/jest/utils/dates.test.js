@@ -29,4 +29,6 @@ test('getShortDateFormat', () => {
   expect(dates.getShortDateFormat('en-us')).toBe('M/D/YYYY');
   expect(dates.getShortDateFormat('en-gb')).toBe('DD/MM/YYYY');
   expect(dates.getShortDateFormat('fr-fr')).toBe('DD/MM/YYYY');
+  expect(dates.getShortDateFormat('fr_FR')).toBe('DD/MM/YYYY');
+  expect(dates.getShortDateFormat('en_T1')).toBe('M/D/YYYY');
 });
