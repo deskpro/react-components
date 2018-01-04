@@ -118,9 +118,8 @@ export function getShortDateFormat(locale) {
       case 1:
         return str.length === 1 ? 'M' : 'MM';
       case 7:
-        return str.length === 1 ? 'D' : 'DD';
       default:
-        return '';
+        return str.length === 1 ? 'D' : 'DD';
     }
   }
 

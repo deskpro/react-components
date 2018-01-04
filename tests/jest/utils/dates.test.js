@@ -19,6 +19,13 @@ test('dateCalendarDays', () => {
   expect(days[34]).toBe(30);
 });
 
+test('dateCalendarDays', () => {
+  const days = dates.dateCalendarDays(new Date(2018, 1, 20));
+  expect(days.length).toBe(35);
+  expect(days[0]).toBe(-3);
+  expect(days[34]).toBe(31);
+});
+
 test('dateToMonth', () => {
   const date = new Date(2017, 6, 4);
   expect(dates.dateToMonth(date)).toBe('July');
