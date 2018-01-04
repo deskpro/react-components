@@ -1,3 +1,7 @@
+## v1.2.7 - 2018-01-04
+
+* [FIX] Prevent react from being added in npm package
+
 ## v1.2.6 - 2018-01-04
 
 * [FIX] Fix bug on DatePicker not closing

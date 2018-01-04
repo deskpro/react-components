@@ -22,7 +22,7 @@
     "storybook:deploy": "storybook-to-ghpages",
     "webpack": "webpack",
     "precommit": "lint-staged",
-    "prepublish": "npm run compile && npm prune --production"
+    "prepublish": "npm run compile"
   },
   "peerDependencies": {
     "react": "^15.3.0 || ^16.0.0-rc || ^16.0",
