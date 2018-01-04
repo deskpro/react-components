@@ -3,6 +3,8 @@ node_js:
 - '6'
 script:
 - npm run travis-test && npm run compile
+before_deploy:
+- npm prune --production
 deploy:
   provider: npm
   email: julien.ducro@deskpro.com

@@ -21,8 +21,7 @@
     "storybook:build": "build-storybook -o build/storybook",
     "storybook:deploy": "storybook-to-ghpages",
     "webpack": "webpack",
-    "precommit": "lint-staged",
-    "prepublish": "npm run compile && npm prune --production"
+    "precommit": "lint-staged"
   },
   "peerDependencies": {
     "react": "^15.3.0 || ^16.0.0-rc || ^16.0",
