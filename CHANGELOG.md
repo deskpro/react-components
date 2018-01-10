@@ -1,3 +1,7 @@
+## v1.2.10 - 2018-01-10
+
+* Fix relative import in _select.scss
+
 ## v1.2.8 - 2018-01-04
 
 * Try to get rid of react in dependencies

@@ -14,8 +14,9 @@ function compileSass(options = {}) {
 
   // render the result
   const result = sass.renderSync({
-    file:        sassOptions.src,
-    outputStyle: sassOptions.style
+    file:         sassOptions.src,
+    outputStyle:  sassOptions.style,
+    includePaths: ['node_modules', '.']
   });
 
   // write the result to file
