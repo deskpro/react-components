@@ -1,3 +1,7 @@
+## v1.2.11 - 2018-01-25
+
+* Specify react at a peer dependency
+
 ## v1.2.10 - 2018-01-10
 
 * Fix relative import in _select.scss
