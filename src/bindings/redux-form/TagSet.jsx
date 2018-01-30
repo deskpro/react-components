@@ -21,21 +21,25 @@ TagSetField.propTypes = {
   /**
    * List of dropdown values.
    */
-  options: Forms.TagSet.propTypes.options, // eslint-disable-line
+  options: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   /**
    * Current value
    */
-  tags:    Forms.TagSet.propTypes.tags,    // eslint-disable-line
+  tags:    PropTypes.array.isRequired,
   /**
    * Passed to the field by redux-form.
    */
   input:   PropTypes.shape(fieldPropTypes.input).isRequired
 };
 
+TagSetField.defaultProps = {
+  options: []
+};
+
 /**
  * Connects the field to the Redux store.
  */
-const TagSet = ({ parse, ...props }) => (
+const TagSet = props => (
   <Field
     {...props}
     component={TagSetField}
@@ -50,11 +54,6 @@ const TagSet = ({ parse, ...props }) => (
 
 TagSet.propTypes = {
   /**
-   * Parses the value given from the field input component to the type that
-   * you want stored in the Redux store.
-   */
-  parse:    PropTypes.func,
-  /**
    * The name of the form field.
    */
   name:     PropTypes.string.isRequired,
@@ -65,7 +64,6 @@ TagSet.propTypes = {
 };
 
 TagSet.defaultProps = {
-  parse:    undefined,
   onChange: () => {}
 };
 

@@ -53,4 +53,5 @@ import './bindings/redux-form/datepicker';
 import './bindings/redux-form/input';
 import './bindings/redux-form/radio';
 import './bindings/redux-form/select';
+import './bindings/redux-form/tagset';
 import './bindings/redux-form/textarea';

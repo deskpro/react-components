@@ -1,3 +1,7 @@
+## v1.2.13 - 2018-01-30
+
+* [FIX] Fixed another TagSet options prop bug
+
 ## v1.2.12 - 2018-01-30
 
 * [FIX] Fix TagSet options prop bug
