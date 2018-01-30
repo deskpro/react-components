@@ -1,11 +1,9 @@
 {
   "name": "@deskpro/react-components",
-  "version": "1.2.7",
+  "version": "1.2.11",
   "description": "Deskpro React Components",
   "main": "lib/Components/index.js",
-  "homepage": {
-    "url": "https://github.com/deskpro/react-components"
-  },
+  "homepage": "https://github.com/deskpro/react-components",
   "private": false,
   "scripts": {
     "dev": "npm run clean && npm run styleguide && webpack-dev-server",
@@ -21,12 +19,7 @@
     "storybook:build": "build-storybook -o build/storybook",
     "storybook:deploy": "storybook-to-ghpages",
     "webpack": "webpack",
-    "precommit": "lint-staged",
-    "prepublish": "npm run compile"
-  },
-  "peerDependencies": {
-    "react": "^15.3.0 || ^16.0.0-rc || ^16.0",
-    "react-dom": "^15.3.0 || ^16.0.0-rc || ^16.0"
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -111,6 +104,9 @@
     "react-select": "^1.1.0",
     "react-svg-inline": "^2.0.1",
     "react-tagsinput": "^3.19.0"
+  },
+  "peerDependencies": {
+    "react": "^15.6.2"
   },
   "jest": {
     "collectCoverageFrom": [
