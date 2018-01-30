@@ -120,6 +120,5 @@ storiesOf('Columns', module)
   })
   .add('Column', () => (
     <TestColumn />
-  )
-)
-;
+  ));
+

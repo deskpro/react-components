@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-for */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -65,7 +66,9 @@ class Checkbox extends React.Component {
   };
 
   render() {
-    const { children, className, value, style, disabled, readOnly, checked, ...props } = this.props;
+    const {
+      children, className, value, style, disabled, readOnly, checked, ...props
+    } = this.props;
     return (
       <div
         className={classNames(

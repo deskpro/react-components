@@ -12,6 +12,5 @@ storiesOf('Section', module)
         Section with a title
       </Section>
     </div>
-  )
-)
-;
+  ));
+

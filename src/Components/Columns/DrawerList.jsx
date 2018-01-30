@@ -36,7 +36,7 @@ export default class DrawerList extends React.Component {
       children,
       className,
       ...props
-      } = this.props;
+    } = this.props;
 
     return (
       <List

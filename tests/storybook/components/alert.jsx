@@ -17,6 +17,5 @@ storiesOf('Alert', module)
       <br />
       <Alert type="danger">Danger!</Alert>
     </div>
-  )
-)
-;
+  ));
+

@@ -28,7 +28,9 @@ class Tag extends React.PureComponent {
   };
 
   render() {
-    const { children, editable, className, ...props } = this.props;
+    const {
+      children, editable, className, ...props
+    } = this.props;
     return (
       <span
         className={classNames('dp-tag', className, { editable })}

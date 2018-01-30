@@ -34,7 +34,9 @@ export default class Progress extends React.Component {
   };
 
   render() {
-    const { size, type, className, children, ...props } = this.props;
+    const {
+      size, type, className, children, ...props
+    } = this.props;
 
     return (
       <div

@@ -139,5 +139,5 @@ storiesOf('Forms', module)
         /><br />
       </div>
     )
-  )
-;
+  );
+

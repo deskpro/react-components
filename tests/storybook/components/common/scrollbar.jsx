@@ -23,6 +23,5 @@ storiesOf('Common', module)
         <p>Line seven</p>
       </Scrollbar>
     );
-  }
-)
-;
+  });
+

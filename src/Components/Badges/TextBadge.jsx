@@ -6,7 +6,9 @@ import { objectKeyFilter } from 'utils/objects';
 /**
  * Renders any text as a badge.
  */
-const TextBadge = ({ type, children, className, ...props }) => (
+const TextBadge = ({
+  type, children, className, ...props
+}) => (
   <div
     className={classNames('dp-badge', `dp-badge--${type}`, `dp-bg--${type}`, className)}
     {...objectKeyFilter(props, TextBadge.propTypes)}

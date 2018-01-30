@@ -101,7 +101,9 @@ class TagInput extends React.Component {
   };
 
   renderTags = () => {
-    const { tags, inputProps, editable, options, ...elementProps } = this.props;
+    const {
+      tags, inputProps, editable, options, ...elementProps
+    } = this.props;
     if (this.state.editable || editable) {
       const props = Object.assign({}, elementProps);
       delete props.onChange;

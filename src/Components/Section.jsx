@@ -6,7 +6,9 @@ import Heading from 'Components/Common/Heading';
 /**
  * Renders a component representing a page section.
  */
-const Section = ({ title, hidden, className, children, ...props }) => {
+const Section = ({
+  title, hidden, className, children, ...props
+}) => {
   const classes = classNames(
     'dp-section',
     {

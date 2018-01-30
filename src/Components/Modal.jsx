@@ -51,7 +51,9 @@ class Modal extends React.Component {
   };
 
   render() {
-    const { title, children, buttons, style, closeModal } = this.props;
+    const {
+      title, children, buttons, style, closeModal
+    } = this.props;
     const { width, height } = this.state;
     const modalStyle = Object.assign({}, style);
     modalStyle.maxHeight = height * 0.7;

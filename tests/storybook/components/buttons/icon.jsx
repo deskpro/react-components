@@ -8,47 +8,47 @@ import Icon from 'Components/Icon';
 storiesOf('Buttons', module)
   .addDecorator(withKnobs)
   .addWithPropsCombinations(
-  'with icon',
-  Button,
-  {
-    size:     ['small', 'medium', 'large'],
-    children: ['Button', 'Long text button', <b>Bold content</b>]
-  },
-  {
-    CombinationRenderer({ Component, props }) {
-      const { size, children, ...elementProps } = props;
-      return (
-        <div>
-          <Component
-            type="primary"
-            size={size}
-            disabled={boolean('Disabled', false)}
-            {...elementProps}
-          >
-            <Icon name="bug" />
-            {children}
-          </Component>&nbsp;&nbsp;
-          <Component
-            type="secondary"
-            size={size}
-            disabled={boolean('Disabled', false)}
-            {...elementProps}
-          >
-            <Icon name="bug" />
-            {children}
-          </Component>&nbsp;&nbsp;
-          <Component
-            type="cta"
-            size={size}
-            disabled={boolean('Disabled', false)}
-            {...elementProps}
-          >
-            <Icon name="bug" />
-            {children}
-          </Component><br /><br />
-        </div>
-      );
+    'with icon',
+    Button,
+    {
+      size:     ['small', 'medium', 'large'],
+      children: ['Button', 'Long text button', <b>Bold content</b>]
+    },
+    {
+      CombinationRenderer({ Component, props }) {
+        const { size, children, ...elementProps } = props;
+        return (
+          <div>
+            <Component
+              type="primary"
+              size={size}
+              disabled={boolean('Disabled', false)}
+              {...elementProps}
+            >
+              <Icon name="bug" />
+              {children}
+            </Component>&nbsp;&nbsp;
+            <Component
+              type="secondary"
+              size={size}
+              disabled={boolean('Disabled', false)}
+              {...elementProps}
+            >
+              <Icon name="bug" />
+              {children}
+            </Component>&nbsp;&nbsp;
+            <Component
+              type="cta"
+              size={size}
+              disabled={boolean('Disabled', false)}
+              {...elementProps}
+            >
+              <Icon name="bug" />
+              {children}
+            </Component><br /><br />
+          </div>
+        );
+      }
     }
-  }
-)
-;
+  );
+

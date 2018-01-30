@@ -33,5 +33,5 @@ storiesOf('Forms', module)
         />
       </div>
     )
-  )
-;
+  );
+

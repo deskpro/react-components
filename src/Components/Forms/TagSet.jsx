@@ -64,7 +64,7 @@ class TagSet extends React.Component {
    * Adds the given tag to tags and pass result to onChange props
    */
   addTag = (tag) => {
-    const tags = this.props.tags;
+    const { tags } = this.props;
     if (tags.indexOf(tag) === -1) {
       tags.push(tag);
       this.handleChange(tags);
@@ -75,7 +75,7 @@ class TagSet extends React.Component {
    * Removes the given tag from the tags and pass result to onChange props
    */
   removeTag = (tag) => {
-    const tags = this.props.tags;
+    const { tags } = this.props;
     this.handleChange(tags.filter(t => t !== tag));
   };
 
@@ -83,8 +83,8 @@ class TagSet extends React.Component {
     const { tags, editable } = this.props;
     const { results } = this.state;
     const content = tags.map(tag =>
-      <Tag key={tag} editable={editable} onRemove={this.removeTag}>{tag}</Tag>
-    );
+      <Tag key={tag} editable={editable} onRemove={this.removeTag}>{tag}</Tag>);
+
     return (
       <div className="dp-tag-set">
         {content}

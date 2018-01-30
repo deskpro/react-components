@@ -1,3 +1,7 @@
+## v1.2.12 - 2018-01-30
+
+* [FIX] Fix TagSet options prop bug
+
 ## v1.2.11 - 2018-01-25
 
 * Specify react at a peer dependency

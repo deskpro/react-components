@@ -51,6 +51,5 @@ storiesOf('Buttons', module)
         ))}
       </div>
     );
-  }
-)
-;
+  });
+

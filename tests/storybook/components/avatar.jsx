@@ -39,6 +39,5 @@ storiesOf('Avatar', module)
         <Avatar src={avatarImage4} size="xlarge" />
       </div>
     </div>
-  )
-)
-;
+  ));
+

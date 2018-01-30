@@ -39,7 +39,9 @@ export default class Textarea extends React.Component {
   };
 
   render() {
-    const { value, name, className, ...props } = this.props;
+    const {
+      value, name, className, ...props
+    } = this.props;
 
     return (
       <div

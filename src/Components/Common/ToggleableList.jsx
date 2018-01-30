@@ -85,7 +85,9 @@ class ToggleableList extends React.Component {
   };
 
   render() {
-    const { on, toggle, whenType, children, ...props } = this.props;
+    const {
+      on, toggle, whenType, children, ...props
+    } = this.props;
     const { targetID, targetValue } = this.state;
 
     return (

@@ -40,6 +40,5 @@ storiesOf('Buttons', module)
         </Button>
       </div>
     </div>
-  )
-)
-;
+  ));
+

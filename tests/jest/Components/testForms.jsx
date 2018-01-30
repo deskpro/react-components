@@ -29,20 +29,16 @@ const createNodeMock = () => ({
 
 describe('>>> Forms --- Snapshot', () => {
   it('+++capturing Snapshot of Checkbox', () => {
-    const renderedValue = renderer.create(
-      <Checkbox className="test-class" value="test" />
-    ).toJSON();
+    const renderedValue = renderer.create(<Checkbox className="test-class" value="test" />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of CustomSelect', () => {
     const inputRenderer = () => (
       '12 countries'
     );
-    const renderedValue = renderer.create(
-      <CustomSelect className="test-class" inputRenderer={inputRenderer}>
-        <div />
-      </CustomSelect>
-    ).toJSON();
+    const renderedValue = renderer.create(<CustomSelect className="test-class" inputRenderer={inputRenderer}>
+      <div />
+    </CustomSelect>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Datepicker', () => {
@@ -60,45 +56,33 @@ describe('>>> Forms --- Snapshot', () => {
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Form', () => {
-    const renderedValue = renderer.create(
-      <Form className="test-class">
-        <input name="input1" />
-      </Form>
-    ).toJSON();
+    const renderedValue = renderer.create(<Form className="test-class">
+      <input name="input1" />
+    </Form>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Group', () => {
-    const renderedValue = renderer.create(
-      <Group className="test-class" label="Test">
-        <input name="input1" />
-      </Group>
-    ).toJSON();
+    const renderedValue = renderer.create(<Group className="test-class" label="Test">
+      <input name="input1" />
+    </Group>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of HiddenFields', () => {
-    const renderedValue = renderer.create(
-      <HiddenFields className="test-class" labelShow="Test Show" labelHide="Test Hide" opened>
-        <input name="input1" />
-      </HiddenFields>
-    ).toJSON();
+    const renderedValue = renderer.create(<HiddenFields className="test-class" labelShow="Test Show" labelHide="Test Hide" opened>
+      <input name="input1" />
+    </HiddenFields>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Input', () => {
-    const renderedValue = renderer.create(
-      <Input className="test-class" name="input1" value="test" />
-    ).toJSON();
+    const renderedValue = renderer.create(<Input className="test-class" name="input1" value="test" />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Label', () => {
-    const renderedValue = renderer.create(
-      <Label className="test-class">Test</Label>
-    ).toJSON();
+    const renderedValue = renderer.create(<Label className="test-class">Test</Label>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Radio', () => {
-    const renderedValue = renderer.create(
-      <Radio className="test-class" name="radio1" value="test" />
-    ).toJSON();
+    const renderedValue = renderer.create(<Radio className="test-class" name="radio1" value="test" />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of SearchButton', () => {
@@ -109,21 +93,15 @@ describe('>>> Forms --- Snapshot', () => {
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of SearchInline', () => {
-    const renderedValue = renderer.create(
-      <SearchInline className="test-class" results={[]} />
-    ).toJSON();
+    const renderedValue = renderer.create(<SearchInline className="test-class" results={[]} />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of SearchSelect', () => {
-    const renderedValue = renderer.create(
-      <SearchSelect className="test-class" results={[]} />
-    ).toJSON();
+    const renderedValue = renderer.create(<SearchSelect className="test-class" results={[]} />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of SearchSubmit', () => {
-    const renderedValue = renderer.create(
-      <SearchSubmit className="test-class" results={[]} />
-    ).toJSON();
+    const renderedValue = renderer.create(<SearchSubmit className="test-class" results={[]} />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Select', () => {
@@ -131,21 +109,15 @@ describe('>>> Forms --- Snapshot', () => {
       { label: 'label1', value: 'value1' },
       { label: 'label2', value: 'value2' }
     ];
-    const renderedValue = renderer.create(
-      <Select className="test-class" options={options} />
-    ).toJSON();
+    const renderedValue = renderer.create(<Select className="test-class" options={options} />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Tag', () => {
-    const renderedValue = renderer.create(
-      <Tag className="test-class" editable>Test</Tag>
-    ).toJSON();
+    const renderedValue = renderer.create(<Tag className="test-class" editable>Test</Tag>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of TagInput', () => {
-    const renderedValue = renderer.create(
-      <TagInput className="test-class" tags={['test1', 'test2']} />
-    ).toJSON();
+    const renderedValue = renderer.create(<TagInput className="test-class" tags={['test1', 'test2']} />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of TagSet', () => {
@@ -156,9 +128,7 @@ describe('>>> Forms --- Snapshot', () => {
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Textarea', () => {
-    const renderedValue = renderer.create(
-      <Textarea className="test-class" name="textarea1" value="test" />
-    ).toJSON();
+    const renderedValue = renderer.create(<Textarea className="test-class" name="textarea1" value="test" />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
 });

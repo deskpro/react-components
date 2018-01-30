@@ -12,6 +12,5 @@ storiesOf('Redux Form', module)
         label="Agree"
       />
     </StoryForm>
-  )
-)
-;
+  ));
+

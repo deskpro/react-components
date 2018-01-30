@@ -19,39 +19,33 @@ const createNodeMock = () => ({
 
 describe('>>> Columns --- Snapshot', () => {
   it('+++capturing Snapshot of Column', () => {
-    const renderedValue = renderer.create(
-      <Column className="test-class">
-        <Heading>Test</Heading>
-      </Column>
-    ).toJSON();
+    const renderedValue = renderer.create(<Column className="test-class">
+      <Heading>Test</Heading>
+    </Column>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Drawer', () => {
-    const renderedValue = renderer.create(
-      <Drawer className="test-class">
-        <Heading>
+    const renderedValue = renderer.create(<Drawer className="test-class">
+      <Heading>
           Test
-        </Heading>
-        <ItemList>
-          <Item>
+      </Heading>
+      <ItemList>
+        <Item>
             Item 1
-            <Count>1</Count>
-          </Item>
-          <Item>
+          <Count>1</Count>
+        </Item>
+        <Item>
             Item 2
-            <Count>0</Count>
-          </Item>
-        </ItemList>
-      </Drawer>
-    ).toJSON();
+          <Count>0</Count>
+        </Item>
+      </ItemList>
+    </Drawer>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of DrawerList', () => {
-    const renderedValue = renderer.create(
-      <DrawerList className="test-class">
-        <Drawer className="test-class" />
-      </DrawerList>
-    ).toJSON();
+    const renderedValue = renderer.create(<DrawerList className="test-class">
+      <Drawer className="test-class" />
+    </DrawerList>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of ItemFilter', () => {

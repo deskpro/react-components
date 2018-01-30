@@ -60,5 +60,4 @@ class Story extends React.Component {
   }
 }
 storiesOf('Buttons', module)
-  .add('with progress bar', () => <Story />
-);
+  .add('with progress bar', () => <Story />);

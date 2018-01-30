@@ -4,24 +4,20 @@ import { Tabs, TabLink } from 'Components/Tabs/index';
 
 describe('>>> Tabs --- Snapshot', () => {
   it('+++capturing Snapshot of TabLink', () => {
-    const renderedValue = renderer.create(
-      <TabLink name="one">
+    const renderedValue = renderer.create(<TabLink name="one">
         Tab One
-      </TabLink>
-    ).toJSON();
+    </TabLink>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Tabs', () => {
-    const renderedValue = renderer.create(
-      <Tabs active="one">
-        <TabLink name="one">
+    const renderedValue = renderer.create(<Tabs active="one">
+      <TabLink name="one">
           Tab One
-        </TabLink>
-        <TabLink name="two">
+      </TabLink>
+      <TabLink name="two">
           Tab Two
-        </TabLink>
-      </Tabs>
-    ).toJSON();
+      </TabLink>
+    </Tabs>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
 });

@@ -25,6 +25,5 @@ storiesOf('Stars', module)
       <br />
       <Stars value={5} onClick={action('onClick')} />
     </div>
-  )
-)
-;
+  ));
+

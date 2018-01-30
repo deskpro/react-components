@@ -23,6 +23,5 @@ storiesOf('Badges', module)
         <DateBadge month="Dec" day="25" pill />
       </div>
     </div>
-  )
-)
-;
+  ));
+

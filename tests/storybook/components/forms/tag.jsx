@@ -58,5 +58,5 @@ storiesOf('Forms', module)
     'Tag',
     'A tag to qualify an element.',
     () => <Story />
-  )
-;
+  );
+

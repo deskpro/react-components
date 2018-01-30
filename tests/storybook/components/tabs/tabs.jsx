@@ -49,6 +49,5 @@ class Story extends React.Component {
 
 storiesOf('Tabs', module)
   .addDecorator(withKnobs)
-  .add('Tabs', () => <Story />
-)
-;
+  .add('Tabs', () => <Story />);
+

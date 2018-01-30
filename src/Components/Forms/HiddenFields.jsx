@@ -68,14 +68,17 @@ export default class HiddenFields extends React.Component {
     this.id = (props.id) ? props.id : newId('');
   }
 
-  handleClick = () => {
+  handleClick = (e) => {
+    e.preventDefault();
     this.setState({ opened: !this.state.opened }, () => {
       this.props.onChange(this.state.opened);
     });
   };
 
   render() {
-    const { labelShow, labelHide, labelStyle, labelClassName, className, children, ...props } = this.props;
+    const {
+      labelShow, labelHide, labelStyle, labelClassName, className, children, ...props
+    } = this.props;
     const { opened } = this.state;
 
     return (
@@ -96,7 +99,7 @@ export default class HiddenFields extends React.Component {
         >
           {children}
         </div>
-        <a
+        <button
           style={labelStyle}
           className={classNames('dp-hidden-fields__label', labelClassName)}
           onClick={this.handleClick}
@@ -104,7 +107,7 @@ export default class HiddenFields extends React.Component {
           aria-controls={`dp-hidden-fields-body-${this.id}`}
         >
           { opened ? labelHide : labelShow }
-        </a>
+        </button>
       </div>
     );
   }

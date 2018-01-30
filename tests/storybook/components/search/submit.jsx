@@ -71,16 +71,16 @@ class Story extends React.Component {
 
 storiesOf('Search', module)
   .addWithInfo(
-  'Submit',
-  'SearchSubmit component usage.',
-  () => (
-    <div>
-      <Story />
-      <div style={{ marginTop: 10 }}>
-        <Label>FOO</Label>
-        <Input />
+    'Submit',
+    'SearchSubmit component usage.',
+    () => (
+      <div>
+        <Story />
+        <div style={{ marginTop: 10 }}>
+          <Label>FOO</Label>
+          <Input />
+        </div>
       </div>
-    </div>
-  )
-)
-;
+    )
+  );
+

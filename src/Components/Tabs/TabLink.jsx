@@ -6,7 +6,9 @@ import noop from 'utils/noop';
 /**
  * Renders a link in a tab group.
  */
-const TabLink = ({ name, active, onClick, children, className, ...props }) => {
+const TabLink = ({
+  name, active, onClick, children, className, ...props
+}) => {
   const classes = classNames(
     'dp-tabs__tab',
     className,

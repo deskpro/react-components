@@ -112,7 +112,9 @@ class Input extends React.Component {
   };
 
   render() {
-    const { className, validated, validating, icon, iconRight, prefix, suffix, invisible, ...props } = this.props;
+    const {
+      className, validated, validating, icon, iconRight, prefix, suffix, invisible, ...props
+    } = this.props;
     return (
       <div
         className={

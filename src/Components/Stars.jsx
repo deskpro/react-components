@@ -8,7 +8,9 @@ import Icon from 'Components/Icon';
 /**
  * A single star in the group of stars
  */
-const StarIcon = ({ value, name, onClick, ...props }) => (
+const StarIcon = ({
+  value, name, onClick, ...props
+}) => (
   <Icon name={name} onClick={() => { onClick(value); }} {...props} />
 );
 
@@ -49,22 +51,18 @@ export default class Stars extends React.Component {
   };
 
   render() {
-    const { value, onClick, className, ...props } = this.props;
+    const {
+      value, onClick, className, ...props
+    } = this.props;
 
     const stars = [];
     for (let i = 1; i <= 5; i++) {
       if (i <= value) {
-        stars.push(
-          <StarIcon key={i} value={i} onClick={onClick} name="star" />
-        );
+        stars.push(<StarIcon key={i} value={i} onClick={onClick} name="star" />);
       } else if (i === value + 0.5) {
-        stars.push(
-          <StarIcon key={i} value={i} onClick={onClick} name="star-half-empty" />
-        );
+        stars.push(<StarIcon key={i} value={i} onClick={onClick} name="star-half-empty" />);
       } else {
-        stars.push(
-          <StarIcon key={i} value={i} onClick={onClick} name="star-o" />
-        );
+        stars.push(<StarIcon key={i} value={i} onClick={onClick} name="star-o" />);
       }
     }
 

@@ -16,6 +16,5 @@ storiesOf('Redux Form', module)
         ]}
       />
     </StoryForm>
-  )
-)
-;
+  ));
+

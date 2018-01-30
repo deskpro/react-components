@@ -18,6 +18,5 @@ storiesOf('Urgency', module)
       <Urgency level={9}>6</Urgency>
       <Urgency level={10}>12</Urgency>
     </div>
-  )
-)
-;
+  ));
+

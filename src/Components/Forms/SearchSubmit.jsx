@@ -100,7 +100,9 @@ export default class SearchSubmit extends Input {
   }
 
   render() {
-    const { results, className, style, ...props } = this.props;
+    const {
+      results, className, style, ...props
+    } = this.props;
     const inputProps = objectKeyFilter(props, SearchSubmit.propTypes);
 
     return (

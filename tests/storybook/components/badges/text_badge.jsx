@@ -19,6 +19,5 @@ storiesOf('Badges', module)
       &nbsp;
       <TextBadge type="success">Super looooong text</TextBadge>
     </div>
-  )
-)
-;
+  ));
+

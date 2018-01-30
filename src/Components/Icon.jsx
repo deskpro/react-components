@@ -21,12 +21,14 @@ import classNames from 'classnames';
  *  );
  * ```
  */
-const Icon = ({ className, name, size, rotate, spin, ...elementProps }) => {
+const Icon = ({
+  className, name, size, rotate, spin, ...elementProps
+}) => {
   let cssSize = size;
   if (cssSize[0] === 'x') {
     cssSize = cssSize.substring(0, 2);
   } else {
-    cssSize = cssSize[0];
+    cssSize = cssSize[0]; // eslint-disable-line
   }
 
   return (

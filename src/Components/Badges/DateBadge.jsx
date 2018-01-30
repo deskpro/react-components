@@ -7,7 +7,9 @@ import { dateToMonth, MONTHS_SHORT } from 'utils/dates';
 /**
  * Displays the month and day in badge or pill format.
  */
-const DateBadge = ({ date, month, day, pill, className, ...props }) => (
+const DateBadge = ({
+  date, month, day, pill, className, ...props
+}) => (
   <div
     className={classNames(
       'db-badge dp-date-badge',

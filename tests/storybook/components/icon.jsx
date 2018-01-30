@@ -10,23 +10,23 @@ storiesOf('Icon', module)
   .addWithPropsCombinations(
     'Icon',
     Icon,
-  {
-    size: ['xsmall', 'small', 'medium', 'large', 'xlarge']
-  },
-  {
-    CombinationRenderer({ Component, props }) {
-      return (
-        <div>
-          <h3>Size {props.size}</h3>
-          <Component
-            name={select('Name', ['bug', 'star-o', 'envelope-o', 'caret-down', 'cog'], 'bug')}
-            rotate={select('Rotate', ['0', '90', '180', '270'], '0')}
-            spin={boolean('Spin', false)}
-            {...props}
-          />
-        </div>
-      );
+    {
+      size: ['xsmall', 'small', 'medium', 'large', 'xlarge']
+    },
+    {
+      CombinationRenderer({ Component, props }) {
+        return (
+          <div>
+            <h3>Size {props.size}</h3>
+            <Component
+              name={select('Name', ['bug', 'star-o', 'envelope-o', 'caret-down', 'cog'], 'bug')}
+              rotate={select('Rotate', ['0', '90', '180', '270'], '0')}
+              spin={boolean('Spin', false)}
+              {...props}
+            />
+          </div>
+        );
+      }
     }
-  }
-  )
-;
+  );
+

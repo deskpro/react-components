@@ -9,6 +9,5 @@ storiesOf('Common', module)
       <Count>3333</Count><br />
       <Count separator=".">3333</Count>
     </div>
-  )
-)
-;
+  ));
+

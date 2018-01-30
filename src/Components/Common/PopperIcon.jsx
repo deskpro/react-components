@@ -27,7 +27,9 @@ export default class PopperIcon extends React.Component {
   };
 
   render() {
-    const { name, popper, className, ...props } = this.props;
+    const {
+      name, popper, className, ...props
+    } = this.props;
 
     return (
       <Icon

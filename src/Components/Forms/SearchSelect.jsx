@@ -24,7 +24,9 @@ export default class SearchSelect extends Select {
   };
 
   render() {
-    const { results, className, style, ...props } = this.props;
+    const {
+      results, className, style, ...props
+    } = this.props;
     const inputProps = objectKeyFilter(props, SearchSelect.propTypes);
 
     const options = [];

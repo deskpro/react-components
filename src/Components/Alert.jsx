@@ -64,7 +64,9 @@ export default class Alert extends React.Component {
   };
 
   render() {
-    const { type, icon, closeable, closeTitle, className, children, ...props } = this.props;
+    const {
+      type, icon, closeable, closeTitle, className, children, ...props
+    } = this.props;
     const { closed } = this.state;
     if (closed) {
       return null;

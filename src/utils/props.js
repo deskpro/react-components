@@ -20,9 +20,7 @@ export function childrenComponentType(component) {
     let error = null;
     React.Children.forEach(props[propName], (child) => {
       if (child.type !== component) {
-        error = new Error(
-          `Children of "${componentName}" component must be of type "${component.name}"`
-        );
+        error = new Error(`Children of "${componentName}" component must be of type "${component.name}"`);
       }
     });
     return error;

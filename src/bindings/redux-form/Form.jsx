@@ -46,7 +46,10 @@ class ConnectedForm extends React.Component {
   };
 
   render() {
-    const { handleSubmit, onSubmit, className, children, ...props } = this.props;
+    const {
+      handleSubmit, onSubmit, className, children, ...props
+    } = this.props;
+    delete props.clearFields; // Causes error: Unknown prop `clearFields` on <form> tag.
 
     return (
       <form

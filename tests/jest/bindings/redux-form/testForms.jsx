@@ -22,23 +22,19 @@ const mockStore = configureStore();
 
 describe('>>> redux-form --- Snapshot', () => {
   it('+++capturing Snapshot of Input', () => {
-    const renderedValue = renderer.create(
-      <Provider store={mockStore()}>
-        <Form name="test">
-          <Input name="input1" />
-        </Form>
-      </Provider>
-    ).toJSON();
+    const renderedValue = renderer.create(<Provider store={mockStore()}>
+      <Form name="test">
+        <Input name="input1" />
+      </Form>
+                                          </Provider>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Checkbox', () => {
-    const renderedValue = renderer.create(
-      <Provider store={mockStore()}>
-        <Form name="test">
-          <Checkbox name="checkbox1" />
-        </Form>
-      </Provider>
-    ).toJSON();
+    const renderedValue = renderer.create(<Provider store={mockStore()}>
+      <Form name="test">
+        <Checkbox name="checkbox1" />
+      </Form>
+    </Provider>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Datepicker', () => {
@@ -53,33 +49,27 @@ describe('>>> redux-form --- Snapshot', () => {
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Radio', () => {
-    const renderedValue = renderer.create(
-      <Provider store={mockStore()}>
-        <Form name="test">
-          <Radio name="radio1" />
-        </Form>
-      </Provider>
-    ).toJSON();
+    const renderedValue = renderer.create(<Provider store={mockStore()}>
+      <Form name="test">
+        <Radio name="radio1" />
+      </Form>
+    </Provider>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Select', () => {
-    const renderedValue = renderer.create(
-      <Provider store={mockStore()}>
-        <Form name="test">
-          <Select name="select1" />
-        </Form>
-      </Provider>
-    ).toJSON();
+    const renderedValue = renderer.create(<Provider store={mockStore()}>
+      <Form name="test">
+        <Select name="select1" />
+      </Form>
+    </Provider>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Textarea', () => {
-    const renderedValue = renderer.create(
-      <Provider store={mockStore()}>
-        <Form name="test">
-          <Textarea name="textarea1" />
-        </Form>
-      </Provider>
-    ).toJSON();
+    const renderedValue = renderer.create(<Provider store={mockStore()}>
+      <Form name="test">
+        <Textarea name="textarea1" />
+      </Form>
+    </Provider>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of TagSet', () => {

@@ -23,18 +23,20 @@ class Select extends React.Component {
      */
     icon:        PropTypes.string,
     /**
+     * Allow multiple options to be selection.
+     */
+    multiple:    PropTypes.bool,
+    /**
      * Called when the selected value changes.
      */
     onChange:    PropTypes.func,
     /**
      * Array of values to
      */
-    options:     PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.node,
-        value: PropTypes.node.isRequired,
-      })
-    ).isRequired,
+    options:     PropTypes.arrayOf(PropTypes.shape({
+      label: PropTypes.node,
+      value: PropTypes.node.isRequired,
+    })).isRequired,
   };
 
   static defaultProps = {
@@ -59,7 +61,9 @@ class Select extends React.Component {
   };
 
   render() {
-    const { icon, name, className, ...elementProps } = this.props;
+    const {
+      icon, name, className, ...elementProps
+    } = this.props;
     const props = Object.assign({}, elementProps);
     delete props.onChange;
     return (
@@ -72,7 +76,7 @@ class Select extends React.Component {
               'dp-input--with-icon': icon
             }
           )
-      }
+        }
       >
         {this.getIcon()}
         <ReactSelect

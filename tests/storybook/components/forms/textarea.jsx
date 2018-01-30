@@ -9,6 +9,5 @@ storiesOf('Forms', module)
     <div style={{ margin: 10 }}>
       <Textarea name="input" value="This is a textarea" />
     </div>
-  )
-)
-;
+  ));
+

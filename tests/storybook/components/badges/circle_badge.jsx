@@ -17,6 +17,5 @@ storiesOf('Badges', module)
       &nbsp;
       <CircleBadge type="danger" max={99}>1000</CircleBadge>
     </div>
-  )
-)
-;
+  ));
+

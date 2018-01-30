@@ -13,17 +13,13 @@ describe('>>> Badges --- Snapshot', () => {
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of IconBadge', () => {
-    const renderedValue = renderer.create(
-      <IconBadge icon={<Icon name="envelope" size="large" />} type="info">
+    const renderedValue = renderer.create(<IconBadge icon={<Icon name="envelope" size="large" />} type="info">
         12
-      </IconBadge>
-    ).toJSON();
+    </IconBadge>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of TextBadge', () => {
-    const renderedValue = renderer.create(
-      <TextBadge type="success">Super looooong text</TextBadge>
-    ).toJSON();
+    const renderedValue = renderer.create(<TextBadge type="success">Super looooong text</TextBadge>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
 });

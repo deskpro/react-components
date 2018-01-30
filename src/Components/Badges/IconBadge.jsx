@@ -8,7 +8,9 @@ import Icon from 'Components/Icon';
 /**
  * Icon which displays a CircleBadge on top of it.
  */
-const IconBadge = ({ icon, iconSize, type, max, children, className, ...props }) => (
+const IconBadge = ({
+  icon, iconSize, type, max, children, className, ...props
+}) => (
   <div
     className={classNames('dp-icon-badge', className)}
     {...objectKeyFilter(props, IconBadge.propTypes)}
@@ -31,7 +33,7 @@ IconBadge.propTypes = {
   /**
    * Displays the icon at the given size
    */
-  iconSize:  Icon.propTypes.size,
+  iconSize:  Icon.propTypes.size, // eslint-disable-line
   /**
    * Truncate numbers higher than this value.
    */

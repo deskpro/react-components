@@ -45,14 +45,16 @@ export default class Item extends React.Component {
   };
 
   componentDidUpdate(prevProps) {
-    const selected = this.props.selected;
+    const { selected } = this.props;
     if (prevProps.selected !== selected) {
       this.props.onSelect(selected, this);
     }
   }
 
   render() {
-    const { selected, className, children, ...props } = this.props;
+    const {
+      selected, className, children, ...props
+    } = this.props;
     const classes = classNames(
       classPrefix,
       className,

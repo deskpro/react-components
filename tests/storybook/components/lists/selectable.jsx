@@ -14,6 +14,5 @@ storiesOf('Lists', module)
         <ListElement>Feedback (Support)</ListElement>
       </SelectableList>
     </div>
-  )
-)
-;
+  ));
+

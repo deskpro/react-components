@@ -44,16 +44,16 @@ class Story extends React.Component {
 
 storiesOf('Search', module)
   .addWithInfo(
-  'Inline',
-  'SearchInline component usage.',
-  () => (
-    <div>
-      <Story />
-      <div style={{ marginTop: 10 }}>
-        <Label>FOO</Label>
-        <Input />
+    'Inline',
+    'SearchInline component usage.',
+    () => (
+      <div>
+        <Story />
+        <div style={{ marginTop: 10 }}>
+          <Label>FOO</Label>
+          <Input />
+        </div>
       </div>
-    </div>
-  )
-)
-;
+    )
+  );
+

@@ -56,5 +56,5 @@ storiesOf('Forms', module)
         </Checkbox>
       </div>
     )
-  )
-;
+  );
+

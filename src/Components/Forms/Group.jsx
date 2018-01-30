@@ -38,7 +38,9 @@ class Group extends React.Component {
   };
 
   render() {
-    const { label, error, className, children, ...props } = this.props;
+    const {
+      label, error, className, children, ...props
+    } = this.props;
     let { htmlFor } = this.props;
 
     if (htmlFor === '') {

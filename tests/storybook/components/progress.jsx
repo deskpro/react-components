@@ -56,5 +56,4 @@ class Story extends React.Component {
 }
 
 storiesOf('Progress', module)
-  .add('Progress', () => <Story />
-);
+  .add('Progress', () => <Story />);

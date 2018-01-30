@@ -3,7 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ListElement } from 'Components/Common';
 
-export const TestSelectable = ({ style, selected, children, ...props }) => {
+export const TestSelectable = ({
+  style, selected, children, ...props
+}) => {
   let styles = null;
   if (style === undefined) {
     styles = {
@@ -30,7 +32,9 @@ TestSelectable.propTypes = {
   children: PropTypes.node
 };
 
-export const TestDrawer = ({ onClick, heading, opened, children, ...props }) => {
+export const TestDrawer = ({
+  onClick, heading, opened, children, ...props
+}) => {
   const styles = {
     padding:      '8px',
     cursor:       'pointer',

@@ -47,6 +47,5 @@ storiesOf('Cards', module)
         </List>
       </Card>
     </div>
-  )
-)
-;
+  ));
+

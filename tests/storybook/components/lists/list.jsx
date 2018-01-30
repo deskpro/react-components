@@ -97,8 +97,7 @@ storiesOf('Lists', module)
         </ListElementGroup>
       </QueryableList>
     );
-  }
-  )
+  })
   .add('Toggleable Select', () => {
     const styles = {
       width:        '200px',
@@ -113,8 +112,7 @@ storiesOf('Lists', module)
         <TestSelectable>Three</TestSelectable>
       </ToggleableList>
     );
-  }
-  )
+  })
   .add('Toggleable Accordion', () => {
     const styles = {
       width:        '200px',
@@ -153,5 +151,5 @@ storiesOf('Lists', module)
         <TestSelectable>Four</TestSelectable>
       </ToggleableList>
     );
-  })
-;
+  });
+

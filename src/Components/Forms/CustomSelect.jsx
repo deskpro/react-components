@@ -134,7 +134,9 @@ export default class CustomSelect extends React.Component {
   }
 
   render() {
-    const { className, children, displayInputWhenOpened, disabled, ...props } = this.props;
+    const {
+      className, children, displayInputWhenOpened, disabled, ...props
+    } = this.props;
     const { opened } = this.state;
 
     return (
@@ -143,10 +145,11 @@ export default class CustomSelect extends React.Component {
         {...objectKeyFilter(props, CustomSelect.propTypes)}
       >
         {!opened || displayInputWhenOpened ?
-          (<div className="dp-select__input" onClick={this.toggleOpened}>
-            {this.props.inputRenderer()}
-            <span className={classNames('dp-select__arrow', { 'dp-select__arrow--opened': opened })} />
-          </div>)
+          (
+            <div className="dp-select__input" onClick={this.toggleOpened}>
+              {this.props.inputRenderer()}
+              <span className={classNames('dp-select__arrow', { 'dp-select__arrow--opened': opened })} />
+            </div>)
           : null}
         {opened ? (
           <ClickOutsideContent

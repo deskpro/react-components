@@ -5,7 +5,9 @@ import classNames from 'classnames';
 /**
  * Renders an avatar.
  */
-const Avatar = ({ src, size, alt, className, ...props }) => (
+const Avatar = ({
+  src, size, alt, className, ...props
+}) => (
   <img
     src={src}
     alt={alt}

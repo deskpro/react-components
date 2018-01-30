@@ -88,7 +88,8 @@ class CustomSelectStory extends React.Component {
                 checked={options.indexOf(option.value) !== -1}
                 value={option.value}
                 onChange={this.onChange}
-              >{option.label}</Checkbox>
+              >{option.label}
+              </Checkbox>
             </ListElement>
           ))}
         </List>
@@ -103,6 +104,5 @@ storiesOf('Forms', module)
     <div>
       <CustomSelectStory />
     </div>
-  )
-)
-;
+  ));
+

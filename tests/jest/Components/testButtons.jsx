@@ -16,41 +16,33 @@ const createNodeMock = () => ({
 
 describe('>>> Buttons --- Snapshot', () => {
   it('+++capturing Snapshot of Button', () => {
-    const renderedValue = renderer.create(
-      <Button
-        size="small"
-        type="primary"
-      >
+    const renderedValue = renderer.create(<Button
+      size="small"
+      type="primary"
+    >
         Button
-      </Button>
-    ).toJSON();
+                                          </Button>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of ButtonPopper', () => {
-    const renderedValue = renderer.create(
-      <ButtonPopper
-        size="small"
-        type="primary"
-      >
+    const renderedValue = renderer.create(<ButtonPopper
+      size="small"
+      type="primary"
+    >
         Button
-      </ButtonPopper>
-    ).toJSON();
+    </ButtonPopper>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of ProgressButton', () => {
-    const renderedValue = renderer.create(
-      <ProgressButton percent={75} size="large">
+    const renderedValue = renderer.create(<ProgressButton percent={75} size="large">
         75
-      </ProgressButton>
-    ).toJSON();
+    </ProgressButton>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of TranslateButton', () => {
-    const renderedValue = renderer.create(
-      <TranslateButton percent={65} size="l">
+    const renderedValue = renderer.create(<TranslateButton percent={65} size="l">
         65
-      </TranslateButton>
-    ).toJSON();
+    </TranslateButton>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of DropdownButton', () => {
@@ -63,11 +55,9 @@ describe('>>> Buttons --- Snapshot', () => {
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of SplitButton', () => {
-    const renderedValue = renderer.create(
-      <SplitButton size="l" type="primary">
+    const renderedValue = renderer.create(<SplitButton size="l" type="primary">
         Test
-      </SplitButton>
-    ).toJSON();
+    </SplitButton>).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
 });

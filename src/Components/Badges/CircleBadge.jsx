@@ -7,7 +7,9 @@ import TextBadge from 'Components/Badges/TextBadge';
 /**
  * Circle shaped badge designed to display small numbers.
  */
-const CircleBadge = ({ max, children, className, ...props }) => {
+const CircleBadge = ({
+  max, children, className, ...props
+}) => {
   const childArray = React.Children.toArray(children);
   if (childArray.length !== 1) {
     throw new Error('CircleBadge may only contain a single child.');

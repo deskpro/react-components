@@ -19,6 +19,5 @@ storiesOf('Redux Form', module)
         </FieldGroup>
       </div>
     );
-  }
-)
-;
+  });
+

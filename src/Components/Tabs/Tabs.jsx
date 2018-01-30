@@ -28,7 +28,6 @@ export default class Tabs extends React.Component {
   };
 
   static defaultProps = {
-    active:    '',
     className: '',
     onChange:  noop,
   };
@@ -40,7 +39,9 @@ export default class Tabs extends React.Component {
   };
 
   render() {
-    const { className, children, active, ...props } = this.props;
+    const {
+      className, children, active, ...props
+    } = this.props;
 
     const tabs = React.Children.map(children, child => React.cloneElement(child, {
       onClick: this.handleClick,

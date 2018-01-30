@@ -48,5 +48,5 @@ storiesOf('Forms', module)
         </Radio>
       </div>
     )
-  )
-;
+  );
+

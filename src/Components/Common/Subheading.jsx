@@ -5,7 +5,9 @@ import classNames from 'classnames';
 /**
  * Represents a sub heading element.
  */
-const Subheading = ({ size, children, className, ...props }) => {
+const Subheading = ({
+  size, children, className, ...props
+}) => {
   props.className = classNames('dp-subheading', className);
   return React.createElement(`h${size}`, props, children);
 };

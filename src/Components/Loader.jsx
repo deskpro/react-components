@@ -41,12 +41,14 @@ export default class Loader extends React.Component {
   };
 
   render() {
-    const { className, size, hidden, ...props } = this.props;
+    const {
+      className, size, hidden, ...props
+    } = this.props;
     let cssSize = size;
     if (cssSize[0] === 'x') {
       cssSize = cssSize.substring(0, 2);
     } else {
-      cssSize = cssSize[0];
+      cssSize = cssSize[0]; // eslint-disable-line prefer-destructuring
     }
 
     return (

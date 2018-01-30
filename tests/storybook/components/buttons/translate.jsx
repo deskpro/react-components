@@ -61,5 +61,4 @@ class Story extends React.Component {
 }
 
 storiesOf('Buttons', module)
-  .add('translate', () => <Story />
-);
+  .add('translate', () => <Story />);

@@ -13,8 +13,10 @@
 
 .dp-hidden-fields__label {
   cursor: pointer;
-  padding-bottom: 0;
+  border: 0;
+  padding: 0;
   display: inline-block;
+  background-color: transparent;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   text-transform: UPPERCASE;

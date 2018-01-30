@@ -33,6 +33,10 @@ export default class SplitButton extends React.Component {
      */
     className: PropTypes.string,
     /**
+     * Styles added to the element.
+     */
+    style:     PropTypes.object,
+    /**
      * Children to render.
      */
     children:  PropTypes.node,
@@ -81,7 +85,9 @@ export default class SplitButton extends React.Component {
   };
 
   render() {
-    const { size, type, disabled, onClick, className, children, ...props } = this.props;
+    const {
+      size, type, disabled, onClick, className, children, ...props
+    } = this.props;
 
     const leftChildren = [];
     let popperChild    = <ButtonPopper />;

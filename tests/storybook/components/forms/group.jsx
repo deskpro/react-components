@@ -12,6 +12,5 @@ storiesOf('Forms', module)
         <Input id="test-email" />
       </Group>
     </div>
-  )
-)
-;
+  ));
+

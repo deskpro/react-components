@@ -6,7 +6,9 @@ import { numberFormat, THOUSANDTHS_SEPARATOR } from 'utils/numbers';
 /**
  * Renders a number as an inline element with thousandths formatting.
  */
-const Count = ({ separator, children, className, ...props }) => (
+const Count = ({
+  separator, children, className, ...props
+}) => (
   <span className={classNames('dp-count', className)} {...props}>
     {numberFormat(children, separator)}
   </span>

@@ -9,37 +9,37 @@ storiesOf('Buttons', module)
   .addWithPropsCombinations(
     'Button',
     Button,
-  {
-    size:     ['small', 'medium', 'large'],
-    children: ['Button', 'Long text button', <b>Bold content</b>]
-  },
-  {
-    CombinationRenderer({ Component, props }) {
-      const { size, ...elementProps } = props;
-      return (
-        <div>
-          <Component
-            size={size}
-            type="primary"
-            disabled={boolean('Disabled', false)}
-            {...elementProps}
-          />&nbsp;&nbsp;
-          <Component
-            size={size}
-            type="secondary"
-            disabled={boolean('Disabled', false)}
-            {...elementProps}
-          />&nbsp;&nbsp;
-          <Component
-            size={size}
-            type="cta"
-            disabled={boolean('Disabled', false)}
-            {...elementProps}
-          /><br /><br />
-        </div>
-      );
+    {
+      size:     ['small', 'medium', 'large'],
+      children: ['Button', 'Long text button', <b>Bold content</b>]
+    },
+    {
+      CombinationRenderer({ Component, props }) {
+        const { size, ...elementProps } = props;
+        return (
+          <div>
+            <Component
+              size={size}
+              type="primary"
+              disabled={boolean('Disabled', false)}
+              {...elementProps}
+            />&nbsp;&nbsp;
+            <Component
+              size={size}
+              type="secondary"
+              disabled={boolean('Disabled', false)}
+              {...elementProps}
+            />&nbsp;&nbsp;
+            <Component
+              size={size}
+              type="cta"
+              disabled={boolean('Disabled', false)}
+              {...elementProps}
+            /><br /><br />
+          </div>
+        );
+      }
     }
-  }
   )
   .addWithInfo(
     'with confirm',
@@ -49,5 +49,5 @@ storiesOf('Buttons', module)
         <ConfirmButton onClick={action('Delete action')}>Delete</ConfirmButton>
       </div>
     )
-  )
-;
+  );
+

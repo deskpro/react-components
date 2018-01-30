@@ -6,32 +6,24 @@ import Icon from 'Components/Icon';
 /**
  * A header element which can be displayed with an icon and count number.
  */
-const Heading = ({ size, icon, controls, count, underline, children, className, ...props }) => {
+const Heading = ({
+  size, icon, controls, count, underline, children, className, ...props
+}) => {
   const childArray = React.Children.toArray(children);
 
   if (icon !== undefined) {
-    childArray.unshift(
-      (typeof icon === 'string')
-        ? <Icon key="icon" name={icon} />
-        : React.cloneElement(
-          icon,
-          { key: 'icon' }
-        )
-    );
+    childArray.unshift((typeof icon === 'string')
+      ? <Icon key="icon" name={icon} />
+      : React.cloneElement(
+        icon,
+        { key: 'icon' }
+      ));
   }
   if (controls !== undefined) {
-    childArray.push(
-      <span key="controls" className="dp-heading__controls">
-        {controls}
-      </span>
-    );
+    childArray.push(<span key="controls" className="dp-heading__controls">{controls}</span>);
   }
   if (count !== undefined) {
-    childArray.push(
-      <span key="count" className="dp-heading__count">
-        {count}
-      </span>
-    );
+    childArray.push(<span key="count" className="dp-heading__count">{count}</span>);
   }
 
   props.className = classNames('dp-heading', {

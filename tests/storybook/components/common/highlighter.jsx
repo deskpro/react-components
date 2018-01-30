@@ -11,6 +11,5 @@ storiesOf('Common', module)
         Android feedback (Support)
       </Highlighter>
     </div>
-  )
-)
-;
+  ));
+

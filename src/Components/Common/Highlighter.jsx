@@ -5,7 +5,9 @@ import { stringHighlight } from 'utils/strings';
 /**
  * Wraps a phrase in <i> tags for the sake of highlighting the phrase.
  */
-const Highlighter = ({ highlight, element, children, ...props }) => (
+const Highlighter = ({
+  highlight, element, children, ...props
+}) => (
   React.createElement('span', {
     ...props,
     dangerouslySetInnerHTML: { __html: stringHighlight(children, highlight, element) }

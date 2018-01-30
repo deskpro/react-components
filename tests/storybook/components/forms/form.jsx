@@ -21,6 +21,5 @@ storiesOf('Forms', module)
         </Button>
       </div>
     </Form>
-  )
-)
-;
+  ));
+

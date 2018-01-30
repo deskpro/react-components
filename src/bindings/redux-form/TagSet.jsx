@@ -9,9 +9,11 @@ import FieldGroup from './FieldGroup';
  *
  * @see https://redux-form.com/7.0.4/docs/api/field.md/#2-a-stateless-function
  */
-export const TagSetField = ({ options, input, ...props }) => (
+export const TagSetField = ({
+  options, tags, input, ...props
+}) => (
   <FieldGroup {...props}>
-    <Forms.TagSet {...input} options={options} tags={props.tags} />
+    <Forms.TagSet {...input} options={options} tags={tags} />
   </FieldGroup>
 );
 
@@ -19,7 +21,7 @@ TagSetField.propTypes = {
   /**
    * List of dropdown values.
    */
-  options: Forms.Select.propTypes.options, // eslint-disable-line
+  options: Forms.TagSet.propTypes.options, // eslint-disable-line
   /**
    * Current value
    */

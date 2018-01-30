@@ -5,7 +5,9 @@ import classNames from 'classnames';
 /**
  * Renders the bar inside of a progress bar
  */
-const ProgressBar = ({ percent, className, children, ...props }) => (
+const ProgressBar = ({
+  percent, className, children, ...props
+}) => (
   <div
     style={{ width: `${percent}%` }}
     className={classNames('dp-progress__bar', className)}
@@ -16,6 +18,10 @@ const ProgressBar = ({ percent, className, children, ...props }) => (
 );
 
 ProgressBar.propTypes = {
+  /**
+   * The type of progress bar to render.
+   */
+  type:      PropTypes.string,
   /**
    * The percentage complete.
    */

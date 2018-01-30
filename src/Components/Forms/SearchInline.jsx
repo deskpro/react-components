@@ -89,13 +89,15 @@ export default class SearchInline extends Input {
               {result}
             </Highlighter>
           </ListElement>
-          ))}
+        ))}
       </List>
     );
   }
 
   render() {
-    const { results, className, style, ...props } = this.props;
+    const {
+      results, className, style, ...props
+    } = this.props;
     const inputProps = objectKeyFilter(props, SearchInline.propTypes);
 
     return (

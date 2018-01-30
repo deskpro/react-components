@@ -28,6 +28,5 @@ storiesOf('Badges', module)
         100
       </IconBadge>
     </div>
-  )
-)
-;
+  ));
+

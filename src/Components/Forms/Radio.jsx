@@ -47,7 +47,9 @@ class Radio extends React.Component {
   };
 
   render() {
-    const { children, className, value, style, disabled, ...props } = this.props;
+    const {
+      children, className, value, style, disabled, ...props
+    } = this.props;
     return (
       <div
         className={classNames(

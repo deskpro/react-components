@@ -36,7 +36,9 @@ export default class TranslateButton extends React.Component {
   };
 
   render() {
-    const { percent, size, className, children, ...props } = this.props;
+    const {
+      percent, size, className, children, ...props
+    } = this.props;
 
     return (
       <div
