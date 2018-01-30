@@ -136,7 +136,7 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of HiddenFields 1`] = `
       name="input1"
     />
   </div>
-  <a
+  <button
     aria-controls="dp-hidden-fields-body-4"
     aria-label="Click to close."
     className="dp-hidden-fields__label"
@@ -144,7 +144,7 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of HiddenFields 1`] = `
     style={Object {}}
   >
     Test Hide
-  </a>
+  </button>
 </div>
 `;
 

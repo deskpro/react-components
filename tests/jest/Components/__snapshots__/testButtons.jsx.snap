@@ -63,7 +63,6 @@ exports[`>>> Buttons --- Snapshot +++capturing Snapshot of ProgressButton 1`] = 
 exports[`>>> Buttons --- Snapshot +++capturing Snapshot of SplitButton 1`] = `
 <div
   className="dp-split-button"
-  style={Object {}}
 >
   <button
     className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-split-button__left"
