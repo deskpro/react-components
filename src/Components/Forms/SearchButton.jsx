@@ -91,7 +91,9 @@ export default class SearchButton extends Input {
     }
   }
 
-  handleClick = () => {
+  handleClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     this.setState({ opened: !this.state.opened });
   };
 
@@ -136,7 +138,7 @@ export default class SearchButton extends Input {
       // See https://stackoverflow.com/a/10576409/401019
       setTimeout(() => {
         const valLength = this.state.value.length;
-        const input = this.inputRef.input;
+        const { input } = this.inputRef;
         input.selectionStart = valLength;
         input.selectionEnd   = valLength;
         input.focus();
@@ -167,7 +169,7 @@ export default class SearchButton extends Input {
    */
   renderResults() {
     const { results, emptyPlaceholder, children } = this.props;
-    const value = this.state.value;
+    const { value } = this.state;
 
     let body = null;
     if (value && results.length === 0 && children) {
