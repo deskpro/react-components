@@ -1,3 +1,7 @@
+## v1.2.14 - 2018-01-30
+
+* [FIX] Prevent form submission when adding tag in TagSet
+
 ## v1.2.13 - 2018-01-30
 
 * [FIX] Fixed another TagSet options prop bug
