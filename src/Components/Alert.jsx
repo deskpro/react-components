@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/fontawesome-free-solid/index';
 import noop from 'utils/noop';
 import { objectKeyFilter } from 'utils/objects';
 import Icon from 'Components/Icon';
@@ -85,7 +87,13 @@ export default class Alert extends React.Component {
           {children}
         </div>
         {closeable
-          ? <Icon name="close" className="dp-alert__close" title={closeTitle} onClick={this.handleCloseClick} />
+          ? <FontAwesomeIcon
+            icon={faTimes}
+            className="dp-alert__close"
+            title={closeTitle}
+            size="s"
+            onClick={this.handleCloseClick}
+          />
           : null
         }
       </div>

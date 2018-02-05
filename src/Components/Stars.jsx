@@ -1,28 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faStar, faStarHalf } from '@fortawesome/fontawesome-free-solid/index';
+import { faStar as faStarO } from '@fortawesome/fontawesome-free-regular';
 import noop from 'utils/noop';
 import { objectKeyFilter } from 'utils/objects';
-import Icon from 'Components/Icon';
 
 /**
  * A single star in the group of stars
  */
 const StarIcon = ({
-  value, name, onClick, ...props
+  value, icon, onClick, ...props
 }) => (
-  <Icon name={name} onClick={() => { onClick(value); }} {...props} />
+  <FontAwesomeIcon icon={icon} size="s" onClick={() => { onClick(value); }} {...props} />
 );
 
 StarIcon.propTypes = {
   value:   PropTypes.number,
-  name:    PropTypes.string,
+  icon:    PropTypes.object,
   onClick: PropTypes.func
 };
 
 StarIcon.defaultProps = {
   value:   0,
-  name:    'star',
+  icon:    faStar,
   onClick: noop
 };
 
@@ -58,11 +60,11 @@ export default class Stars extends React.Component {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
       if (i <= value) {
-        stars.push(<StarIcon key={i} value={i} onClick={onClick} name="star" />);
+        stars.push(<StarIcon key={i} value={i} onClick={onClick} icon={faStar} />);
       } else if (i === value + 0.5) {
-        stars.push(<StarIcon key={i} value={i} onClick={onClick} name="star-half-empty" />);
+        stars.push(<StarIcon key={i} value={i} onClick={onClick} icon={faStarHalf} />);
       } else {
-        stars.push(<StarIcon key={i} value={i} onClick={onClick} name="star-o" />);
+        stars.push(<StarIcon key={i} value={i} onClick={onClick} icon={faStarO} />);
       }
     }
 

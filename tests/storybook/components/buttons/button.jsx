@@ -1,45 +1,48 @@
 import React from 'react';
 import { storiesOf, action } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
+import withPropsCombinations from 'react-storybook-addon-props-combinations';
 import { Button, ConfirmButton } from 'Components/Buttons';
 /* eslint-disable react/prop-types */
 
 storiesOf('Buttons', module)
   .addDecorator(withKnobs)
-  .addWithPropsCombinations(
+  .add(
     'Button',
-    Button,
-    {
-      size:     ['small', 'medium', 'large'],
-      children: ['Button', 'Long text button', <b>Bold content</b>]
-    },
-    {
-      CombinationRenderer({ Component, props }) {
-        const { size, ...elementProps } = props;
-        return (
-          <div>
-            <Component
-              size={size}
-              type="primary"
-              disabled={boolean('Disabled', false)}
-              {...elementProps}
-            />&nbsp;&nbsp;
-            <Component
-              size={size}
-              type="secondary"
-              disabled={boolean('Disabled', false)}
-              {...elementProps}
-            />&nbsp;&nbsp;
-            <Component
-              size={size}
-              type="cta"
-              disabled={boolean('Disabled', false)}
-              {...elementProps}
-            /><br /><br />
-          </div>
-        );
+    withPropsCombinations(
+      Button,
+      {
+        size:     ['small', 'medium', 'large'],
+        children: ['Button', 'Long text button', <b>Bold content</b>]
+      },
+      {
+        CombinationRenderer({ Component, props }) {
+          const { size, ...elementProps } = props;
+          return (
+            <div>
+              <Component
+                size={size}
+                type="primary"
+                disabled={boolean('Disabled', false)}
+                {...elementProps}
+              />&nbsp;&nbsp;
+              <Component
+                size={size}
+                type="secondary"
+                disabled={boolean('Disabled', false)}
+                {...elementProps}
+              />&nbsp;&nbsp;
+              <Component
+                size={size}
+                type="cta"
+                disabled={boolean('Disabled', false)}
+                {...elementProps}
+              /><br /><br />
+            </div>
+          );
+        }
       }
-    }
+    )
   )
   .addWithInfo(
     'with confirm',
