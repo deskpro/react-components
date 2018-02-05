@@ -1,3 +1,7 @@
+## v1.2.16 - 2018-02-05
+
+* [FIX] Update peerDependencies
+
 ## v1.2.14 - 2018-01-30
 
 * [FIX] Prevent form submission when adding tag in TagSet
