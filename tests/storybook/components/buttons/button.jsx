@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from "@storybook/addon-info";
 import { withKnobs, boolean } from '@storybook/addon-knobs';
+import withPropsCombinations from 'react-storybook-addon-props-combinations';
 import { Button, ConfirmButton } from 'Components/Buttons';
 import withPropsCombinations from 'react-storybook-addon-props-combinations';
 /* eslint-disable react/prop-types */
