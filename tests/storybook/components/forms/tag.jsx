@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withInfo } from "@storybook/addon-info";
 import { Tag, TagSet, TagInput } from 'Components/Forms';
 
 const availableTags = [
@@ -57,8 +57,7 @@ storiesOf('Forms', module)
   .addDecorator(withKnobs)
   .add(
     'Tag',
-    withInfo(
-      'A tag to qualify an element.',
+    withInfo('A tag to qualify an element.')(
       () => <Story />
     )
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { withInfo } from "@storybook/addon-info";
 import { List, ListElement, ListElementGroup, QueryableList, ToggleableList } from 'Components/Common';
 import { TestSelectable, TestDrawer } from './fixtures';
 
@@ -9,8 +9,7 @@ storiesOf('Lists', module)
   .addDecorator(withKnobs)
   .add(
     'Standard',
-    withInfo(
-      'A standard list of elements.',
+    withInfo('A standard list of elements.')(
       () => (
         <div>
           <h3>List</h3>

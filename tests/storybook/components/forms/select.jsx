@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
-import { withInfo } from "@storybook/addon-info";
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { Label, Select } from 'Components/Forms';
 
@@ -14,8 +14,7 @@ storiesOf('Forms', module)
   .addDecorator(withKnobs)
   .add(
     'Select',
-    withInfo(
-      'This is the select and its variation.',
+    withInfo('This is the select and its variation.')(
       () => (
         <div>
           <h3>Selects</h3>

@@ -9,8 +9,7 @@ storiesOf('Forms', module)
   .addDecorator(withKnobs)
   .add(
     'Checkbox',
-    withInfo(
-      'This is the basic usage of a input with the label passed as a property.',
+    withInfo('This is the basic usage of a input with the label passed as a property.') (
       () => (
         <div>
           <h3>Checkboxes</h3>

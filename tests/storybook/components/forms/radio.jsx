@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
-import { withInfo } from "@storybook/addon-info";
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { Label, Radio } from 'Components/Forms';
 
@@ -9,8 +9,7 @@ storiesOf('Forms', module)
   .addDecorator(withKnobs)
   .add(
     'Radio',
-    withInfo(
-      'This is the basic usage of a input with the label passed as a property.',
+    withInfo('This is the basic usage of a input with the label passed as a property.')(
       () => (
         <div>
           <Label>Radios</Label>

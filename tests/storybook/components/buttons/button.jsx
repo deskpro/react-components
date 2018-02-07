@@ -5,7 +5,6 @@ import { withInfo } from "@storybook/addon-info";
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import withPropsCombinations from 'react-storybook-addon-props-combinations';
 import { Button, ConfirmButton } from 'Components/Buttons';
-import withPropsCombinations from 'react-storybook-addon-props-combinations';
 /* eslint-disable react/prop-types */
 
 storiesOf('Buttons', module)
@@ -49,8 +48,7 @@ storiesOf('Buttons', module)
   )
   .add(
     'with confirm',
-    withInfo(
-      'This is the basic usage of a input with the label passed as a property.',
+    withInfo('This is the basic usage of a input with the label passed as a property.')(
       () => (
         <div>
           <ConfirmButton onClick={action('Delete action')}>Delete</ConfirmButton>

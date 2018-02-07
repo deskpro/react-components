@@ -1,14 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withInfo } from "@storybook/addon-info";
+import { withInfo } from '@storybook/addon-info';
 import { Input, Label, HiddenFields } from 'Components/Forms';
 
 storiesOf('Forms', module)
   .add(
     'with hidden fields',
-    withInfo(
-      'Basic usage of the HiddenFields component.',
+    withInfo('Basic usage of the HiddenFields component.')(
       () => (
         <form>
           <div>

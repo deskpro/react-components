@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from "@storybook/addon-info";
+import { withInfo } from '@storybook/addon-info';
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
 import { Popper } from 'Components/Common';
 import { TestButton } from './fixtures';
@@ -27,8 +27,7 @@ storiesOf('Common', module)
   .addDecorator(withKnobs)
   .add(
     'Popper standard',
-    withInfo(
-      'Standard popper usage.',
+    withInfo('Standard popper usage.')(
       () => {
         const opened    = boolean('Opened', true);
         const arrow     = boolean('Arrow', true);
@@ -58,8 +57,7 @@ storiesOf('Common', module)
   )
   .add(
     'Popper detached',
-    withInfo(
-      'Using the detached property.',
+    withInfo('Using the detached property.')(
       () => {
         const containerStyles = {
           width:      '400px',
@@ -96,8 +94,7 @@ storiesOf('Common', module)
   )
   .add(
     'Popper button',
-    withInfo(
-      'Using a button to toggle popper visibility.',
+    withInfo('Using a button to toggle popper visibility.')(
       () => {
         const styles = {
           button: {
@@ -133,8 +130,7 @@ storiesOf('Common', module)
   )
   .add(
     'Popper closeOnClickOutside',
-    withInfo(
-      'Close the popper when clicked outside of it.',
+    withInfo('Close the popper when clicked outside of it.')(
       () => {
         const opened = boolean('Opened', true);
 

@@ -1,14 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from "@storybook/addon-info";
+import { withInfo } from '@storybook/addon-info';
 import { Button } from 'Components/Buttons';
 import Modal from 'Components/Modal';
 
 storiesOf('Modal', module)
   .add(
     'Modal',
-    withInfo(
-      'This is the basic usage of a modal dialogue.',
+    withInfo('This is the basic usage of a modal dialogue.')(
       () => (
         <Modal
           title="Modal Heading"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from "@storybook/addon-info";
+import { withInfo } from '@storybook/addon-info';
 import { Label, SearchSelect } from 'Components/Forms';
 
 const results = [
@@ -46,8 +46,7 @@ class Story extends React.Component {
 storiesOf('Search', module)
   .add(
     'Select',
-    withInfo(
-      'SearchSelect component usage.',
+    withInfo('SearchSelect component usage.')(
       () => <Story />
     )
   );

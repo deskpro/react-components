@@ -4,7 +4,6 @@ import { withKnobs } from '@storybook/addon-knobs';
 import withPropsCombinations from 'react-storybook-addon-props-combinations';
 import Heading from 'Components/Common/Heading';
 import Icon from 'Components/Icon';
-import withPropsCombinations from "react-storybook-addon-props-combinations";
 /* eslint-disable react/prop-types */
 
 storiesOf('Common', module)

@@ -58,7 +58,7 @@ export default class Item extends React.Component {
 
   render() {
     const {
-      selected, className, children, ...props
+      selected, className, children, rightTypes, ...props
     } = this.props;
     const classes = classNames(
       classPrefix,
@@ -69,7 +69,8 @@ export default class Item extends React.Component {
     );
 
     const leftTypes  = [Icon, Avatar];
-    const rightTypes = [ItemSettings, Count, ...this.props.rightTypes];
+    rightTypes.push(ItemSettings);
+    rightTypes.push(Count);
 
     return (
       <ListElement className={classes} {...props}>

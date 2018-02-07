@@ -31,6 +31,7 @@ import { objectKeyFilter } from 'utils/objects';
 import avatarImage1 from '../../static/avatar-1.jpg';
 import avatarImage2 from '../../static/avatar-2.jpg';
 import Tag from "../../../../src/Components/Forms/Tag";
+import { Button } from "../../../../src/Components";
 
 const styles = {
   column: {
@@ -177,24 +178,6 @@ export class TestColumn extends React.Component {
     this.setState({ slaChecked });
   };
 
-  render() {
-    return (
-      <Column style={{ width: '220px' }}>
-        <Heading>
-          <Icon name="envelope-o" style={styles.column.icon} />
-          Tickets
-        </Heading>
-        <DrawerList>
-          {this.renderDrawerAgents()}
-          {this.renderDrawerSearches()}
-          {this.renderDrawerProblems()}
-          {this.renderDrawerStars()}
-          {this.renderDrawerLabels()}
-        </DrawerList>
-      </Column>
-    );
-  }
-
   renderDrawerAgents() {
     const { onSelectMode } = this.props;
     return (
@@ -292,9 +275,28 @@ export class TestColumn extends React.Component {
     );
   }
 
+  renderDrawerFilters() {
+    return (
+      <Drawer opened={true}>
+        <Heading>
+          Filters
+        </Heading>
+        <ItemList>
+          <Item>
+            My weekly mentions
+            <Count>2</Count>
+          </Item>
+          <ListElement className="dp-drawer-item">
+            <Button size="s" type="secondary">+ Add</Button>
+          </ListElement>
+        </ItemList>
+      </Drawer>
+    );
+  }
+
   renderDrawerSearches() {
     return (
-      <Drawer>
+      <Drawer opened={false}>
         <Heading>
           Saved Searches
         </Heading>
@@ -367,6 +369,25 @@ export class TestColumn extends React.Component {
           </Item>
         </ItemList>
       </Drawer>
+    );
+  }
+
+  render() {
+    return (
+      <Column style={{ width: '220px' }}>
+        <Heading>
+          <Icon name="envelope-o" style={styles.column.icon} />
+          Tickets
+        </Heading>
+        <DrawerList>
+          {this.renderDrawerAgents()}
+          {this.renderDrawerFilters()}
+          {this.renderDrawerSearches()}
+          {this.renderDrawerProblems()}
+          {this.renderDrawerStars()}
+          {this.renderDrawerLabels()}
+        </DrawerList>
+      </Column>
     );
   }
 }

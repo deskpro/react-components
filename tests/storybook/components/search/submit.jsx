@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from "@storybook/addon-info";
+import { withInfo } from '@storybook/addon-info';
 import { Input, Label, SearchSubmit } from 'Components/Forms';
 
 import avatarImage1 from '../../static/avatar-1.jpg';
@@ -73,8 +73,7 @@ class Story extends React.Component {
 storiesOf('Search', module)
   .add(
     'Submit',
-    withInfo(
-      'SearchSubmit component usage.',
+    withInfo('SearchSubmit component usage.')(
       () => (
         <div>
           <Story />

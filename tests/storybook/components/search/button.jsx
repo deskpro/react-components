@@ -45,9 +45,10 @@ class Story extends React.Component {
 storiesOf('Search', module)
   .add(
     'Button',
-    withInfo(
-      'SearchButton component usage.',
-      () => <Story />
+    withInfo('SearchButton component usage.')(
+      () => (
+        <Story />
+      )
     )
   );
 
