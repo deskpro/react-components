@@ -1,13 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import { Button } from 'Components/Buttons';
 import Modal from 'Components/Modal';
 
 storiesOf('Modal', module)
-  .addWithInfo(
+  .add(
     'Modal',
-    'This is the basic usage of a modal dialogue.',
-    () => (
+    withInfo('This is the basic usage of a modal dialogue.'
+    )(() => (
       <Modal
         title="Modal Heading"
         style={{ width: 520 }}
@@ -25,6 +26,6 @@ storiesOf('Modal', module)
       >
         Test
       </Modal>
-    )
+    ))
   );
 

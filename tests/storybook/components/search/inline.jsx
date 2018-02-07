@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import { Input, Label, SearchInline } from 'Components/Forms';
 
 const results = [
@@ -43,17 +44,18 @@ class Story extends React.Component {
 }
 
 storiesOf('Search', module)
-  .addWithInfo(
+  .add(
     'Inline',
-    'SearchInline component usage.',
-    () => (
-      <div>
-        <Story />
-        <div style={{ marginTop: 10 }}>
-          <Label>FOO</Label>
-          <Input />
+    withInfo('SearchInline component usage.')(
+      () => (
+        <div>
+          <Story />
+          <div style={{ marginTop: 10 }}>
+            <Label>FOO</Label>
+            <Input />
+          </div>
         </div>
-      </div>
+      )
     )
   );
 

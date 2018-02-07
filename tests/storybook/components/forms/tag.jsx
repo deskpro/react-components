@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Tag, TagSet, TagInput } from 'Components/Forms';
 
@@ -54,9 +55,10 @@ class Story extends React.Component {
 
 storiesOf('Forms', module)
   .addDecorator(withKnobs)
-  .addWithInfo(
+  .add(
     'Tag',
-    'A tag to qualify an element.',
-    () => <Story />
+    withInfo('A tag to qualify an element.')(
+      () => <Story />
+    )
   );
 

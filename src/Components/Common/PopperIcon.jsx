@@ -15,7 +15,7 @@ export default class PopperIcon extends React.Component {
     /**
      * Reference to the popper to bind the icon to.
      */
-    popper:    PropTypes.object.isRequired,
+    popper:    PropTypes.object,
     /**
      * CSS classes to apply to the element.
      */
@@ -23,7 +23,8 @@ export default class PopperIcon extends React.Component {
   };
 
   static defaultProps = {
-    className: ''
+    className: '',
+    popper:    null
   };
 
   render() {
