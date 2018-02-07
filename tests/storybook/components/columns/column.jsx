@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf, action } from '@storybook/react';
 import Avatar from 'Components/Avatar';
 import Icon from 'Components/Icon';
 import { DrawerList, Drawer, ItemList, Item } from 'Components/Columns';
@@ -119,6 +119,6 @@ storiesOf('Columns', module)
     );
   })
   .add('Column', () => (
-    <TestColumn />
+    <TestColumn onSelectMode={action('Select Mode')} />
   ));
 

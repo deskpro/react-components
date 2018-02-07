@@ -17,31 +17,36 @@ export default class Item extends React.Component {
     /**
      * CSS classes to apply to the element.
      */
-    className: PropTypes.string,
+    className:  PropTypes.string,
     /**
      * Children to render.
      */
-    children:  PropTypes.node,
+    children:   PropTypes.node,
     /**
      * Indicates whether the item is selected.
      */
-    selected:  PropTypes.bool,
+    selected:   PropTypes.bool,
     /**
      * Called when the item is clicked.
      */
-    onClick:   PropTypes.func,
+    onClick:    PropTypes.func,
     /**
      * Called when the item is selected.
      */
-    onSelect:  PropTypes.func
+    onSelect:   PropTypes.func,
+    /**
+     * Extra types of Elements to display on the right
+     */
+    rightTypes: PropTypes.array,
   };
 
   static defaultProps = {
-    selected:  false,
-    onClick:   noop,
-    onSelect:  noop,
-    className: '',
-    children:  ''
+    selected:   false,
+    onClick:    noop,
+    onSelect:   noop,
+    className:  '',
+    children:   '',
+    rightTypes: [],
   };
 
   componentDidUpdate(prevProps) {
@@ -64,7 +69,7 @@ export default class Item extends React.Component {
     );
 
     const leftTypes  = [Icon, Avatar];
-    const rightTypes = [ItemSettings, Count];
+    const rightTypes = [ItemSettings, Count, ...this.props.rightTypes];
 
     return (
       <ListElement className={classes} {...props}>

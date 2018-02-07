@@ -24,7 +24,7 @@ $dp-column-item-height:    24px;
 
   & > .dp-heading {
     @include no-text-select();
-    display: flex;
+    display: block;
     align-items: center;
     margin: 0;
     padding: 0 $dp-column-padding;
@@ -233,6 +233,29 @@ $dp-column-item-height:    24px;
 
   .dp-icon__filter {
     color: $dp-greyscale-00;
+  }
+}
+
+.dp-sla {
+  line-height: normal;
+  background-color: $dp-greyscale-00;
+  margin-right: 2px;
+  margin-left: 1px;
+  margin-top: 3px;
+  border: none;
+  border-radius: 3px;
+  vertical-align: baseline;
+  &.passing {
+    color: $dp-emerald-primary;
+  }
+  &.warning {
+    color: $dp-tails-primary;
+  }
+  &.failed {
+    color: $dp-knuckles-primary;
+  }
+  &:nth-child(3) {
+    margin-right: 10px;
   }
 }
 

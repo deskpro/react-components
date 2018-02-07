@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { objectMap } from 'utils/objects';
 import {
   Column,
@@ -25,9 +26,11 @@ import * as Forms from 'Components/Forms';
 import Urgency from 'Components/Urgency';
 import Avatar from 'Components/Avatar';
 import Icon from 'Components/Icon';
+import { objectKeyFilter } from 'utils/objects';
 
 import avatarImage1 from '../../static/avatar-1.jpg';
 import avatarImage2 from '../../static/avatar-2.jpg';
+import Tag from "../../../../src/Components/Forms/Tag";
 
 const styles = {
   column: {
@@ -48,9 +51,33 @@ const styles = {
   }
 };
 
+class Sla extends React.Component {
+  static propTypes = {
+    level:     PropTypes.oneOf(['passing', 'warning', 'failed']),
+    className: '',
+    children:  PropTypes.node,
+  };
+  render() {
+    const {
+      children, level, className, ...props
+    } = this.props;
+    return (
+      <Forms.Tag
+        className={classNames('dp-sla', level, className)}
+        editable={false}
+        {...objectKeyFilter(props, Sla.propTypes)}
+      >
+        {children}
+      </Forms.Tag>
+    );
+  }
+}
+
 class TicketsForm extends React.Component {
   static propTypes = {
-    onChange: PropTypes.func
+    onChange:    PropTypes.func,
+    onSlaChange: PropTypes.func,
+    slaValue:    PropTypes.bool,
   };
 
   constructor(props) {
@@ -99,7 +126,7 @@ class TicketsForm extends React.Component {
           <label style={styles.label}>
             SLA View
           </label>
-          <Forms.Checkbox>
+          <Forms.Checkbox onChange={this.props.onSlaChange} checked={this.props.slaValue}>
             Show SLAs
           </Forms.Checkbox>
         </div>
@@ -107,7 +134,7 @@ class TicketsForm extends React.Component {
         <Scrollbar autoHeightMax={100} style={{ height: 110 }}>
           <div style={formStyles.formGroup}>
             <label style={formStyles.label}>
-              Radio Label
+              Group by field
             </label>
             {objectMap(groups, (val, key) => (
               <label key={key} style={formStyles.checkboxLabel}>
@@ -129,11 +156,15 @@ class TicketsForm extends React.Component {
 }
 
 export class TestColumn extends React.Component {
+  static propTypes = {
+    onSelectMode: PropTypes.func,
+  };
 
   constructor(props) {
     super(props);
     this.state = {
-      ticketsWhereGroup: localStorage.getItem('column_fixture_tickets_form_value') || '@none'
+      ticketsWhereGroup: localStorage.getItem('column_fixture_tickets_form_value') || '@none',
+      slaChecked: false
     };
   }
 
@@ -142,12 +173,16 @@ export class TestColumn extends React.Component {
     this.filter.close();
   };
 
+  handleSlaChange = (slaChecked) => {
+    this.setState({ slaChecked });
+  };
+
   render() {
     return (
-      <Column style={{ marginLeft: '100px' }}>
+      <Column style={{ width: '220px' }}>
         <Heading>
-          Tickets
           <Icon name="envelope-o" style={styles.column.icon} />
+          Tickets
         </Heading>
         <DrawerList>
           {this.renderDrawerAgents()}
@@ -161,6 +196,7 @@ export class TestColumn extends React.Component {
   }
 
   renderDrawerAgents() {
+    const { onSelectMode } = this.props;
     return (
       <Drawer>
         <Heading>
@@ -179,23 +215,51 @@ export class TestColumn extends React.Component {
             Unassigned tickets
             <Count>0</Count>
           </Item>
-          <Item>
+          <Item rightTypes={[Sla]}>
             All tickets
+            { this.state.slaChecked ?
+                [
+                  <Sla level="passing" onClick={() => onSelectMode({type: 'all', sla: 'passing'})}>80</Sla>,
+                  <Sla level="warning" onClick={() => onSelectMode({type: 'all', sla: 'warning'})}>8</Sla>,
+                  <Sla level="failed" onClick={() => onSelectMode({type: 'all', sla: 'failed'})}>11</Sla>,
+                ]
+              : ''
+            }
             <Count>99</Count>
             <ItemFilter ref={(ref) => { this.filter = ref; }}>
-              <TicketsForm onChange={this.handleTicketsChange} />
+              <TicketsForm
+                onChange={this.handleTicketsChange}
+                onSlaChange={this.handleSlaChange}
+                slaValue={this.state.slaChecked}
+              />
             </ItemFilter>
           </Item>
           <li>
             <QueryableList whereName={this.state.ticketsWhereGroup}>
               <ListElementGroup name="agent">
-                <Item>
+                <Item rightTypes={[Sla]}>
                   Wendy Pride
+                  { this.state.slaChecked ?
+                    [
+                      <Sla level="passing" onClick={() => onSelectMode({type: 'agent-1', sla: 'passing'})}>5</Sla>,
+                      <Sla level="warning" onClick={() => onSelectMode({type: 'agent-1', sla: 'warning'})}>2</Sla>,
+                      <Sla level="failed" onClick={() => onSelectMode({type: 'agent-1', sla: 'failed'})}>2</Sla>,
+                    ]
+                    : ''
+                  }
                   <Count>9</Count>
                   <Avatar src={avatarImage1} />
                 </Item>
-                <Item>
+                <Item rightTypes={[Sla]}>
                   Bobby Steiner
+                  { this.state.slaChecked ?
+                    [
+                      <Sla level="passing" onClick={() => onSelectMode({type: 'agent-2', sla: 'passing'})}>1</Sla>,
+                      <Sla level="warning" onClick={() => onSelectMode({type: 'agent-2', sla: 'warning'})}>1</Sla>,
+                      <Sla level="failed" onClick={() => onSelectMode({type: 'agent-2', sla: 'failed'})}>0</Sla>,
+                    ]
+                    : ''
+                  }
                   <Count>2</Count>
                   <Avatar src={avatarImage2} />
                 </Item>
@@ -203,16 +267,16 @@ export class TestColumn extends React.Component {
               <ListElementGroup name="urgency">
                 <Item style={{ padding: '4px 12px 4px 6px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Urgency level={1}>23</Urgency>
-                    <Urgency level={2}>2</Urgency>
-                    <Urgency level={3}>9</Urgency>
-                    <Urgency level={4}>7</Urgency>
-                    <Urgency level={5}>15</Urgency>
-                    <Urgency level={6}>31</Urgency>
-                    <Urgency level={7}>19</Urgency>
-                    <Urgency level={8}>1</Urgency>
-                    <Urgency level={9}>6</Urgency>
-                    <Urgency level={10}>12</Urgency>
+                    <Urgency level={1} onClick={() => onSelectMode({type: 'urgency-1'})}>23</Urgency>
+                    <Urgency level={2} onClick={() => onSelectMode({type: 'urgency-2'})}>2</Urgency>
+                    <Urgency level={3} onClick={() => onSelectMode({type: 'urgency-3'})}>9</Urgency>
+                    <Urgency level={4} onClick={() => onSelectMode({type: 'urgency-4'})}>7</Urgency>
+                    <Urgency level={5} onClick={() => onSelectMode({type: 'urgency-5'})}>15</Urgency>
+                    <Urgency level={6} onClick={() => onSelectMode({type: 'urgency-6'})}>31</Urgency>
+                    <Urgency level={7} onClick={() => onSelectMode({type: 'urgency-7'})}>19</Urgency>
+                    <Urgency level={8} onClick={() => onSelectMode({type: 'urgency-8'})}>1</Urgency>
+                    <Urgency level={9} onClick={() => onSelectMode({type: 'urgency-9'})}>6</Urgency>
+                    <Urgency level={10} onClick={() => onSelectMode({type: 'urgency-10'})}>12</Urgency>
                   </div>
                 </Item>
               </ListElementGroup>
@@ -234,9 +298,6 @@ export class TestColumn extends React.Component {
         <Heading>
           Saved Searches
         </Heading>
-        <Subheading>
-          Subheading
-        </Subheading>
         <ItemList>
           <Item>
             My weekly mentions
