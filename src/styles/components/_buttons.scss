@@ -14,7 +14,7 @@
 
   background-color: $dp-sonic-primary;
   box-shadow: 0 -2px 0 $dp-sonic-midnight inset;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
   transition: all 0.1s linear 0s;
 
   &:hover {

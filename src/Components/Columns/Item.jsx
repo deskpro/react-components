@@ -37,6 +37,10 @@ export default class Item extends React.Component {
     /**
      * Extra types of Elements to display on the right
      */
+    leftTypes:  PropTypes.array,
+    /**
+     * Extra types of Elements to display on the right
+     */
     rightTypes: PropTypes.array,
   };
 
@@ -46,6 +50,7 @@ export default class Item extends React.Component {
     onSelect:   noop,
     className:  '',
     children:   '',
+    leftTypes:  [],
     rightTypes: [],
   };
 
@@ -58,7 +63,7 @@ export default class Item extends React.Component {
 
   render() {
     const {
-      selected, className, children, rightTypes, ...props
+      selected, className, children, leftTypes, rightTypes, ...props
     } = this.props;
     const classes = classNames(
       classPrefix,
@@ -68,7 +73,8 @@ export default class Item extends React.Component {
       }
     );
 
-    const leftTypes  = [Icon, Avatar];
+    leftTypes.push(Icon);
+    leftTypes.push(Avatar);
     rightTypes.push(ItemSettings);
     rightTypes.push(Count);
 

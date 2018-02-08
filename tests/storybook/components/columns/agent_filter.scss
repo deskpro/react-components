@@ -1,0 +1,33 @@
+@import "../../../../src/styles/base/colours";
+.dp-settings {
+  display: none;
+  color: $dp-sonic-primary;
+  margin-top: 5px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+.dp-drawer-item:hover .dp-settings {
+  display: inline-block;
+}
+.dp-labels {
+  .dp-drawer-item {
+    display: flex;
+    align-items: flex-start;
+    &:hover {
+      background-color: inherit;
+    }
+    .dp-label-list {
+      margin-left: 5px;
+      vertical-align: top;
+      display: inline-block;
+      .dp-label {
+        margin-right: 0;
+        background-color: $dp-greyscale-00;
+        &.enabled {
+          border-color: $dp-sonic-primary;
+          color: $dp-sonic-primary;
+        }
+      }
+    }
+  }
+}
