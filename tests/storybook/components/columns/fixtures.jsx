@@ -269,19 +269,19 @@ export class TestColumn extends React.Component {
           Awaiting Agent
         </Heading>
         <ItemList>
-          <Item>
+          <Item onSelect={() => this.onSelectMode({type: 'my-tickets'})}>
             My tickets
             <Count>1</Count>
           </Item>
-          <Item>
+          <Item onSelect={() => this.onSelectMode({type: 'followed-tickets'})}>
             Tickets I follow
             <Count>0</Count>
           </Item>
-          <Item>
+          <Item onSelect={() => this.onSelectMode({type: 'unassigned-tickets'})}>
             Unassigned tickets
             <Count>0</Count>
           </Item>
-          <Item rightTypes={[Sla]}>
+          <Item rightTypes={[Sla]} onClick={() => this.onSelectMode({type: 'all-tickets'})}>
             All tickets
             { this.state.slaChecked ?
                 [
@@ -303,7 +303,7 @@ export class TestColumn extends React.Component {
           <li>
             <QueryableList whereName={this.state.ticketsWhereGroup}>
               <ListElementGroup name="agent">
-                <Item rightTypes={[Sla]}>
+                <Item rightTypes={[Sla]} onClick={() => this.onSelectMode({type: 'agent-1'})}>
                   Wendy Pride
                   { this.state.slaChecked ?
                     [
@@ -316,7 +316,7 @@ export class TestColumn extends React.Component {
                   <Count>9</Count>
                   <Avatar src={avatarImage1} />
                 </Item>
-                <Item rightTypes={[Sla]}>
+                <Item rightTypes={[Sla]} onClick={() => this.onSelectMode({type: 'agent-2'})}>
                   Bobby Steiner
                   { this.state.slaChecked ?
                     [
@@ -347,8 +347,11 @@ export class TestColumn extends React.Component {
                 </Item>
               </ListElementGroup>
               <ListElementGroup name="agent-team">
-                <Item>
-                  Agent Team
+                <Item onClick={() => this.onSelectMode({type: 'team', team: 1})}>
+                  Support
+                </Item>
+                <Item onClick={() => this.onSelectMode({type: 'team', team: 2})}>
+                  Sales
                 </Item>
               </ListElementGroup>
             </QueryableList>
@@ -365,12 +368,12 @@ export class TestColumn extends React.Component {
           Filters
         </Heading>
         <ItemList>
-          <Item rightTypes={[Settings]}>
+          <Item rightTypes={[Settings]} onSelect={() => this.onSelectMode({type: 'filter', filter: 1})}>
             Demo
             <Settings />
             <Count>1</Count>
           </Item>
-          <Item rightTypes={[Settings]}>
+          <Item rightTypes={[Settings]} onSelect={() => this.onSelectMode({type: 'filter', filter: 2})}>
             Pricing
             <Settings />
             <Count>3</Count>
@@ -390,7 +393,7 @@ export class TestColumn extends React.Component {
           Saved Searches
         </Heading>
         <ItemList>
-          <Item>
+          <Item onSelect={() => this.onSelectMode({type: 'search', search: 1})}>
             My weekly mentions
             <Count>2</Count>
           </Item>
@@ -406,11 +409,11 @@ export class TestColumn extends React.Component {
           Problems &amp; Incidents
         </Heading>
         <ItemList>
-          <Item>
+          <Item onSelect={() => this.onSelectMode({type: 'problem', problem: 1})}>
             Elastic search indexes
             <Count>2</Count>
           </Item>
-          <Item>
+          <Item onSelect={() => this.onSelectMode({type: 'problem', problem: 2})}>
             Inability to use iOS app
             <Count>18</Count>
           </Item>
@@ -426,21 +429,24 @@ export class TestColumn extends React.Component {
           My Stars
         </Heading>
         <ItemList>
-          <Item>
+          <Item onSelect={() => this.onSelectMode({type: 'star', star: 1})}>
             Bug
             <Count>2</Count>
             <Icon name="star" style={styles.item.iconBlue} />
           </Item>
-          <Item>
+          <Item onSelect={() => this.onSelectMode({type: 'star', star: 2})}>
             Green
             <Icon name="star" style={styles.item.iconGreen} />
             <ItemSettings />
           </Item>
-          <Item>
+          <Item onSelect={() => this.onSelectMode({type: 'star', star: 3})}>
             Yellow
             <Icon name="star" style={styles.item.iconYellow} />
             <ItemSettings />
           </Item>
+          <ListElement className="dp-drawer-item">
+            <Button size="s" type="secondary">+ Add new star</Button>
+          </ListElement>
         </ItemList>
       </Drawer>
     );
