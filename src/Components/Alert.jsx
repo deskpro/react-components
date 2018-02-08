@@ -91,7 +91,7 @@ export default class Alert extends React.Component {
             icon={faTimes}
             className="dp-alert__close"
             title={closeTitle}
-            size="s"
+            size="xs"
             onClick={this.handleCloseClick}
           />
           : null

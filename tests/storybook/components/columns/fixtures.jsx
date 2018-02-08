@@ -1,8 +1,10 @@
 /* eslint-disable */
-
+import './agent_filter.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faCog } from '@fortawesome/fontawesome-free-solid/index';
 import { objectMap } from 'utils/objects';
 import {
   Column,
@@ -17,6 +19,7 @@ import {
   Heading,
   Subheading,
   Count,
+  List,
   ListElement,
   ListElementGroup,
   QueryableList,
@@ -30,7 +33,6 @@ import { objectKeyFilter } from 'utils/objects';
 
 import avatarImage1 from '../../static/avatar-1.jpg';
 import avatarImage2 from '../../static/avatar-2.jpg';
-import Tag from "../../../../src/Components/Forms/Tag";
 import { Button } from "../../../../src/Components";
 
 const styles = {
@@ -49,8 +51,58 @@ const styles = {
     iconYellow: {
       color: '#f9d6a4'
     }
+  },
+  scollbar: {
+    height: '300px'
   }
 };
+
+const labels = [
+  'Android Mobile App',
+  'Bogus',
+  'Bug fixed',
+  'Cannot Reproduce',
+  'Case Study',
+  'Churn',
+  'Beta tester',
+  'Click Jacking',
+  'cloud-ips',
+  'Consultation Session',
+  'Custom fields',
+  'Capterra',
+  'Did it Work',
+  'dog house',
+  'Converted',
+  'Custom work',
+  'label',
+  'Demo',
+  'Integrations',
+  'HTML',
+  'Cloud',
+  'Email',
+  'Editor',
+  'Enumeration',
+  'Games',
+  'iPad',
+  'Fixed',
+  'Mobile'
+];
+
+class LabelTitle extends React.Component {
+  static propTypes = {
+    children:  PropTypes.node,
+  };
+  render() {
+    const { children, ...props } = this.props;
+    return (
+      <div style={{minWidth: '8px'}}
+        {...objectKeyFilter(props, LabelTitle.propTypes)}
+      >
+        {children}
+      </div>
+    );
+  }
+}
 
 class Sla extends React.Component {
   static propTypes = {
@@ -65,11 +117,21 @@ class Sla extends React.Component {
     return (
       <Forms.Tag
         className={classNames('dp-sla', level, className)}
-        editable={false}
         {...objectKeyFilter(props, Sla.propTypes)}
       >
         {children}
       </Forms.Tag>
+    );
+  }
+}
+
+class Settings extends React.Component {
+  render() {
+    return (
+      <FontAwesomeIcon
+        className="dp-settings"
+        icon={faCog}
+      />
     );
   }
 }
@@ -165,7 +227,8 @@ export class TestColumn extends React.Component {
     super(props);
     this.state = {
       ticketsWhereGroup: localStorage.getItem('column_fixture_tickets_form_value') || '@none',
-      slaChecked: false
+      slaChecked:        false,
+      mode:              null,
     };
   }
 
@@ -176,6 +239,26 @@ export class TestColumn extends React.Component {
 
   handleSlaChange = (slaChecked) => {
     this.setState({ slaChecked });
+  };
+
+  onSelectMode = (mode) => {
+    this.setState({ mode });
+    this.props.onSelectMode(mode);
+  };
+
+  sortLabels = () => {
+    const groups = {};
+    for(const label of labels) {
+      const initial = label.charAt(0).toUpperCase();
+      if (!groups[initial]) {
+        groups[initial] = [];
+      }
+      groups[initial].push(label.replace(/ /, ' '));
+    }
+    for (let i in groups) {
+      groups[i].sort();
+    }
+    return groups;
   };
 
   renderDrawerAgents() {
@@ -202,9 +285,9 @@ export class TestColumn extends React.Component {
             All tickets
             { this.state.slaChecked ?
                 [
-                  <Sla level="passing" onClick={() => onSelectMode({type: 'all', sla: 'passing'})}>80</Sla>,
-                  <Sla level="warning" onClick={() => onSelectMode({type: 'all', sla: 'warning'})}>8</Sla>,
-                  <Sla level="failed" onClick={() => onSelectMode({type: 'all', sla: 'failed'})}>11</Sla>,
+                  <Sla level="passing" onClick={() => this.onSelectMode({type: 'all', sla: 'passing'})}>80</Sla>,
+                  <Sla level="warning" onClick={() => this.onSelectMode({type: 'all', sla: 'warning'})}>8</Sla>,
+                  <Sla level="failed" onClick={() => this.onSelectMode({type: 'all', sla: 'failed'})}>11</Sla>,
                 ]
               : ''
             }
@@ -224,9 +307,9 @@ export class TestColumn extends React.Component {
                   Wendy Pride
                   { this.state.slaChecked ?
                     [
-                      <Sla level="passing" onClick={() => onSelectMode({type: 'agent-1', sla: 'passing'})}>5</Sla>,
-                      <Sla level="warning" onClick={() => onSelectMode({type: 'agent-1', sla: 'warning'})}>2</Sla>,
-                      <Sla level="failed" onClick={() => onSelectMode({type: 'agent-1', sla: 'failed'})}>2</Sla>,
+                      <Sla level="passing" onClick={() => this.onSelectMode({type: 'agent-1', sla: 'passing'})}>5</Sla>,
+                      <Sla level="warning" onClick={() => this.onSelectMode({type: 'agent-1', sla: 'warning'})}>2</Sla>,
+                      <Sla level="failed" onClick={() => this.onSelectMode({type: 'agent-1', sla: 'failed'})}>2</Sla>,
                     ]
                     : ''
                   }
@@ -237,9 +320,9 @@ export class TestColumn extends React.Component {
                   Bobby Steiner
                   { this.state.slaChecked ?
                     [
-                      <Sla level="passing" onClick={() => onSelectMode({type: 'agent-2', sla: 'passing'})}>1</Sla>,
-                      <Sla level="warning" onClick={() => onSelectMode({type: 'agent-2', sla: 'warning'})}>1</Sla>,
-                      <Sla level="failed" onClick={() => onSelectMode({type: 'agent-2', sla: 'failed'})}>0</Sla>,
+                      <Sla level="passing" onClick={() => this.onSelectMode({type: 'agent-2', sla: 'passing'})}>1</Sla>,
+                      <Sla level="warning" onClick={() => this.onSelectMode({type: 'agent-2', sla: 'warning'})}>1</Sla>,
+                      <Sla level="failed" onClick={() => this.onSelectMode({type: 'agent-2', sla: 'failed'})}>0</Sla>,
                     ]
                     : ''
                   }
@@ -250,16 +333,16 @@ export class TestColumn extends React.Component {
               <ListElementGroup name="urgency">
                 <Item style={{ padding: '4px 12px 4px 6px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Urgency level={1} onClick={() => onSelectMode({type: 'urgency-1'})}>23</Urgency>
-                    <Urgency level={2} onClick={() => onSelectMode({type: 'urgency-2'})}>2</Urgency>
-                    <Urgency level={3} onClick={() => onSelectMode({type: 'urgency-3'})}>9</Urgency>
-                    <Urgency level={4} onClick={() => onSelectMode({type: 'urgency-4'})}>7</Urgency>
-                    <Urgency level={5} onClick={() => onSelectMode({type: 'urgency-5'})}>15</Urgency>
-                    <Urgency level={6} onClick={() => onSelectMode({type: 'urgency-6'})}>31</Urgency>
-                    <Urgency level={7} onClick={() => onSelectMode({type: 'urgency-7'})}>19</Urgency>
-                    <Urgency level={8} onClick={() => onSelectMode({type: 'urgency-8'})}>1</Urgency>
-                    <Urgency level={9} onClick={() => onSelectMode({type: 'urgency-9'})}>6</Urgency>
-                    <Urgency level={10} onClick={() => onSelectMode({type: 'urgency-10'})}>12</Urgency>
+                    <Urgency level={1} onClick={() => this.onSelectMode({type: 'urgency-1'})}>23</Urgency>
+                    <Urgency level={2} onClick={() => this.onSelectMode({type: 'urgency-2'})}>2</Urgency>
+                    <Urgency level={3} onClick={() => this.onSelectMode({type: 'urgency-3'})}>9</Urgency>
+                    <Urgency level={4} onClick={() => this.onSelectMode({type: 'urgency-4'})}>7</Urgency>
+                    <Urgency level={5} onClick={() => this.onSelectMode({type: 'urgency-5'})}>15</Urgency>
+                    <Urgency level={6} onClick={() => this.onSelectMode({type: 'urgency-6'})}>31</Urgency>
+                    <Urgency level={7} onClick={() => this.onSelectMode({type: 'urgency-7'})}>19</Urgency>
+                    <Urgency level={8} onClick={() => this.onSelectMode({type: 'urgency-8'})}>1</Urgency>
+                    <Urgency level={9} onClick={() => this.onSelectMode({type: 'urgency-9'})}>6</Urgency>
+                    <Urgency level={10} onClick={() => this.onSelectMode({type: 'urgency-10'})}>12</Urgency>
                   </div>
                 </Item>
               </ListElementGroup>
@@ -282,9 +365,15 @@ export class TestColumn extends React.Component {
           Filters
         </Heading>
         <ItemList>
-          <Item>
-            My weekly mentions
-            <Count>2</Count>
+          <Item rightTypes={[Settings]}>
+            Demo
+            <Settings />
+            <Count>1</Count>
+          </Item>
+          <Item rightTypes={[Settings]}>
+            Pricing
+            <Settings />
+            <Count>3</Count>
           </Item>
           <ListElement className="dp-drawer-item">
             <Button size="s" type="secondary">+ Add</Button>
@@ -358,16 +447,34 @@ export class TestColumn extends React.Component {
   }
 
   renderDrawerLabels() {
+    const groups = this.sortLabels();
     return (
       <Drawer opened={false}>
         <Heading>
           Labels
         </Heading>
-        <ItemList>
-          <Item>
-            <img src="https://deskpro.com/assets/build/img/deskpro/logo.png" role="presentation" />
-          </Item>
-        </ItemList>
+        <Scrollbar style={styles.scrollbar}>
+          <List className="dp-drawer-item-list dp-labels">
+            {Object.keys(groups).map((key) =>
+              <Item key={key} leftTypes={[LabelTitle]}>
+                <LabelTitle>{key}</LabelTitle>
+                <div className="dp-label-list">
+                  {groups[key].map((label) =>
+                    [
+                      <Forms.Tag
+                        key={label}
+                        className={classNames('dp-label', {enabled: this.state.mode && label === this.state.mode.label})}
+                        onClick={() => this.onSelectMode({type: 'label', label})}
+                      >
+                        {label}
+                      </Forms.Tag>
+                    , ' ']
+                  )}
+                </div>
+              </Item>
+            )}
+          </List>
+        </Scrollbar>
       </Drawer>
     );
   }
