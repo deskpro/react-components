@@ -37,7 +37,7 @@ export default class Form extends React.Component {
   handleSubmit = (e) => {
     const { preventDefault, onSubmit } = this.props;
     const values   = {};
-    const elements = e.target.elements;
+    const { elements } = e.target;
 
     if (preventDefault) {
       e.preventDefault();

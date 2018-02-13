@@ -22,7 +22,7 @@ export function cssMatchComputedWidth(toGet, toSet) {
 
   let width = 0;
   if (getEl && setEl) {
-    width = window.getComputedStyle(getEl, null).width;
+    width = window.getComputedStyle(getEl, null).width; // eslint-disable-line
     setEl.style.width = width;
   }
   return width;

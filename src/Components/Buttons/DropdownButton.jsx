@@ -16,9 +16,21 @@ import Icon from 'Components/Icon';
 export default class DropdownButton extends React.Component {
   static propTypes = {
     /**
+     * The size of the button
+     */
+    size:      PropTypes.string,
+    /**
+     * The type of the button
+     */
+    type:      PropTypes.string,
+    /**
      * CSS classes to apply to the element.
      */
     className: PropTypes.string,
+    /**
+     * The component styles.
+     */
+    style:     PropTypes.object,
     /**
      * Children to render.
      */

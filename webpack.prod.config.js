@@ -6,7 +6,8 @@ const config = {
   devtool: 'cheap-module-source-map',
 
   entry: {
-    main: './src/styles/main.scss'
+    main:  './src/styles/main.scss',
+    index: './src/Components/index.js'
   },
 
   context: resolve(__dirname, './'),
@@ -42,6 +43,11 @@ const config = {
   module: {
     loaders: [
       {
+        test:    /\.jsx?$/,
+        loaders: ['babel-loader'],
+        exclude: /node_modules/
+      },
+      {
         test:    /\.less$/,
         exclude: /node_modules/,
         use:     ExtractTextPlugin.extract({
@@ -70,6 +76,10 @@ const config = {
       { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=image/svg+xml' },
     ]
   },
+
+  resolve: {
+    extensions: ['.js', '.jsx']
+  }
 };
 
 module.exports = config;
