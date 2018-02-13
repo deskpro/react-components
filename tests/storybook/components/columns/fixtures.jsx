@@ -228,6 +228,8 @@ export class TestColumn extends React.Component {
     this.state = {
       ticketsWhereGroup: localStorage.getItem('column_fixture_tickets_form_value') || '@none',
       slaChecked:        false,
+      teamTicketsWhereGroup: localStorage.getItem('column_fixture_team_tickets_form_value') || '@none',
+      teamSlaChecked:        false,
       mode:              null,
     };
   }
@@ -239,6 +241,15 @@ export class TestColumn extends React.Component {
 
   handleSlaChange = (slaChecked) => {
     this.setState({ slaChecked });
+  };
+
+  handleTeamTicketsChange = (teamTicketsWhereGroup) => {
+    this.setState({ teamTicketsWhereGroup });
+    this.filter.close();
+  };
+
+  handleTeamSlaChange = (teamSlaChecked) => {
+    this.setState({ teamSlaChecked });
   };
 
   onSelectMode = (mode) => {
@@ -266,23 +277,27 @@ export class TestColumn extends React.Component {
     return (
       <Drawer>
         <Heading>
-          Awaiting Agent
+          Matters
         </Heading>
         <ItemList>
-          <Item onSelect={() => this.onSelectMode({type: 'my-tickets'})}>
-            My tickets
+          <Item onSelect={() => this.onSelectMode({type: 'new-matters'})}>
+            New Matters
             <Count>1</Count>
           </Item>
-          <Item onSelect={() => this.onSelectMode({type: 'followed-tickets'})}>
-            Tickets I follow
+          <Item onSelect={() => this.onSelectMode({type: 'matters-due'})}>
+            Matters Due
             <Count>0</Count>
           </Item>
-          <Item onSelect={() => this.onSelectMode({type: 'unassigned-tickets'})}>
-            Unassigned tickets
+          <Item onSelect={() => this.onSelectMode({type: 'overdue-matters'})}>
+            Overdue Matters
+            <Count>0</Count>
+          </Item>
+          <Item onSelect={() => this.onSelectMode({type: 'contracts-expiring'})}>
+            Contracts Expiring
             <Count>0</Count>
           </Item>
           <Item rightTypes={[Sla]} onClick={() => this.onSelectMode({type: 'all-tickets'})}>
-            All tickets
+            Open Matters
             { this.state.slaChecked ?
                 [
                   <Sla level="passing" onClick={() => this.onSelectMode({type: 'all', sla: 'passing'})}>80</Sla>,
@@ -319,6 +334,110 @@ export class TestColumn extends React.Component {
                 <Item rightTypes={[Sla]} onClick={() => this.onSelectMode({type: 'agent-2'})}>
                   Bobby Steiner
                   { this.state.slaChecked ?
+                    [
+                      <Sla level="passing" onClick={() => this.onSelectMode({type: 'agent-2', sla: 'passing'})}>1</Sla>,
+                      <Sla level="warning" onClick={() => this.onSelectMode({type: 'agent-2', sla: 'warning'})}>1</Sla>,
+                      <Sla level="failed" onClick={() => this.onSelectMode({type: 'agent-2', sla: 'failed'})}>0</Sla>,
+                    ]
+                    : ''
+                  }
+                  <Count>2</Count>
+                  <Avatar src={avatarImage2} />
+                </Item>
+              </ListElementGroup>
+              <ListElementGroup name="urgency">
+                <Item style={{ padding: '4px 12px 4px 6px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <Urgency level={1} onClick={() => this.onSelectMode({type: 'urgency-1'})}>23</Urgency>
+                    <Urgency level={2} onClick={() => this.onSelectMode({type: 'urgency-2'})}>2</Urgency>
+                    <Urgency level={3} onClick={() => this.onSelectMode({type: 'urgency-3'})}>9</Urgency>
+                    <Urgency level={4} onClick={() => this.onSelectMode({type: 'urgency-4'})}>7</Urgency>
+                    <Urgency level={5} onClick={() => this.onSelectMode({type: 'urgency-5'})}>15</Urgency>
+                    <Urgency level={6} onClick={() => this.onSelectMode({type: 'urgency-6'})}>31</Urgency>
+                    <Urgency level={7} onClick={() => this.onSelectMode({type: 'urgency-7'})}>19</Urgency>
+                    <Urgency level={8} onClick={() => this.onSelectMode({type: 'urgency-8'})}>1</Urgency>
+                    <Urgency level={9} onClick={() => this.onSelectMode({type: 'urgency-9'})}>6</Urgency>
+                    <Urgency level={10} onClick={() => this.onSelectMode({type: 'urgency-10'})}>12</Urgency>
+                  </div>
+                </Item>
+              </ListElementGroup>
+              <ListElementGroup name="agent-team">
+                <Item onClick={() => this.onSelectMode({type: 'team', team: 1})}>
+                  Support
+                </Item>
+                <Item onClick={() => this.onSelectMode({type: 'team', team: 2})}>
+                  Sales
+                </Item>
+              </ListElementGroup>
+            </QueryableList>
+          </li>
+        </ItemList>
+      </Drawer>
+    );
+  }
+
+  renderDrawerTeams() {
+    const { onSelectMode } = this.props;
+    return (
+      <Drawer>
+        <Heading>
+          Team Matters
+        </Heading>
+        <ItemList>
+          <Item onSelect={() => this.onSelectMode({type: 'new-matters'})}>
+            New Matters
+            <Count>5</Count>
+          </Item>
+          <Item onSelect={() => this.onSelectMode({type: 'matters-due'})}>
+            Matters Due
+            <Count>2</Count>
+          </Item>
+          <Item onSelect={() => this.onSelectMode({type: 'overdue-matters'})}>
+            Overdue Matters
+            <Count>0</Count>
+          </Item>
+          <Item onSelect={() => this.onSelectMode({type: 'contracts-expiring'})}>
+            Contracts Expiring
+            <Count>0</Count>
+          </Item>
+          <Item rightTypes={[Sla]} onClick={() => this.onSelectMode({type: 'all-tickets'})}>
+            Open Matters
+            { this.state.teamSlaChecked ?
+              [
+                <Sla level="passing" onClick={() => this.onSelectMode({type: 'all', sla: 'passing'})}>80</Sla>,
+                <Sla level="warning" onClick={() => this.onSelectMode({type: 'all', sla: 'warning'})}>8</Sla>,
+                <Sla level="failed" onClick={() => this.onSelectMode({type: 'all', sla: 'failed'})}>11</Sla>,
+              ]
+              : ''
+            }
+            <Count>99</Count>
+            <ItemFilter ref={(ref) => { this.filter = ref; }}>
+              <TicketsForm
+                onChange={this.handleTeamTicketsChange}
+                onSlaChange={this.handleTeamSlaChange}
+                slaValue={this.state.teamSlaChecked}
+              />
+            </ItemFilter>
+          </Item>
+          <li>
+            <QueryableList whereName={this.state.teamTicketsWhereGroup}>
+              <ListElementGroup name="agent">
+                <Item rightTypes={[Sla]} onClick={() => this.onSelectMode({type: 'agent-1'})}>
+                  Wendy Pride
+                  { this.state.teamSlaChecked ?
+                    [
+                      <Sla level="passing" onClick={() => this.onSelectMode({type: 'agent-1', sla: 'passing'})}>5</Sla>,
+                      <Sla level="warning" onClick={() => this.onSelectMode({type: 'agent-1', sla: 'warning'})}>2</Sla>,
+                      <Sla level="failed" onClick={() => this.onSelectMode({type: 'agent-1', sla: 'failed'})}>2</Sla>,
+                    ]
+                    : ''
+                  }
+                  <Count>9</Count>
+                  <Avatar src={avatarImage1} />
+                </Item>
+                <Item rightTypes={[Sla]} onClick={() => this.onSelectMode({type: 'agent-2'})}>
+                  Bobby Steiner
+                  { this.state.teamSlaChecked ?
                     [
                       <Sla level="passing" onClick={() => this.onSelectMode({type: 'agent-2', sla: 'passing'})}>1</Sla>,
                       <Sla level="warning" onClick={() => this.onSelectMode({type: 'agent-2', sla: 'warning'})}>1</Sla>,
@@ -490,11 +609,12 @@ export class TestColumn extends React.Component {
       <Column style={{ width: '220px' }}>
         <Heading>
           <Icon name="envelope-o" style={styles.column.icon} />
-          Tickets
+          Matters
         </Heading>
         <DrawerList>
           {this.renderDrawerAgents()}
-          {this.renderDrawerFilters()}
+          {this.renderDrawerTeams()}
+          {/*{this.renderDrawerFilters()}*/}
           {this.renderDrawerSearches()}
           {this.renderDrawerProblems()}
           {this.renderDrawerStars()}
