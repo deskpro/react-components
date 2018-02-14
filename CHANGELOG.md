@@ -1,3 +1,7 @@
+## v1.2.18 - 2018-02-14
+
+* [FIX] Fix TagInput not loading
+
 ## v1.2.17 - 2018-02-14
 
 * [FIX] Remove on click outside on `TagInput`

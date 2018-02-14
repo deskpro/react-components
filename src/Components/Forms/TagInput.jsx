@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Tag } from 'Components/Forms';
 import TagsInput from 'react-tagsinput';
 import Autosuggest from 'react-autosuggest';
+import Tag from './Tag';
 
 class TagInput extends React.Component {
   static propTypes = {
