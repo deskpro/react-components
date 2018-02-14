@@ -1,3 +1,7 @@
+## v1.3.1 - 2018-02-14
+
+* [FIX] export react-forms bindings and utils
+
 ## v1.3.0 - 2018-02-14
 
 * [BREAKING CHANGE] Change distribution mode.

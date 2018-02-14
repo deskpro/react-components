@@ -6,8 +6,10 @@ const config = {
   devtool: 'cheap-module-source-map',
 
   entry: {
-    main:  './src/styles/main.scss',
-    index: './src/Components/index.js'
+    main:     './src/styles/main.scss',
+    index:    './src/Components/index.js',
+    utils:    './src/utils/index.js',
+    bindings: './src/bindings',
   },
 
   context: resolve(__dirname, './'),

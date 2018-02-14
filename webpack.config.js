@@ -10,8 +10,10 @@ const config = {
   entry: {
     'webpack-dev-server': 'webpack-dev-server/client?http://localhost:4898',
     'only-dev-server': 'webpack/hot/only-dev-server',
-    main:  './src/styles/main.scss',
-    index: './src/Components/index.js'
+    main:     './src/styles/main.scss',
+    index:    './src/Components/index.js',
+    utils:    './src/utils/index.js',
+    bindings: './src/bindings',
   },
 
   output: {
@@ -67,6 +69,10 @@ const config = {
     //new CopyWebpackPlugin([{ from: 'vendors', to: 'vendors' }]),
     new webpack.HotModuleReplacementPlugin(),
   ],
+
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
 };
 
 module.exports = config;
