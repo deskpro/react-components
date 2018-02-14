@@ -1,3 +1,7 @@
+## v1.3.3 - 2018-02-14
+
+* [FIX] Fix Webpack output 
+
 ## v1.3.2 - 2018-02-14
 
 * [FIX] Fix exports
