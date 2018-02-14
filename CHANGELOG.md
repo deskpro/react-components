@@ -1,6 +1,10 @@
+## v1.3.2 - 2018-02-14
+
+* [FIX] Fix exports
+
 ## v1.3.1 - 2018-02-14
 
-* [FIX] export react-forms bindings and utils
+* [FIX] Export react-forms bindings and utils
 
 ## v1.3.0 - 2018-02-14
 
