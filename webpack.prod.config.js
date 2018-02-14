@@ -18,7 +18,9 @@ const config = {
     path:              resolve(__dirname, 'dist'),
     publicPath:        '',
     filename:          '[name].js',
-    sourceMapFilename: '[name].map'
+    sourceMapFilename: '[name].map',
+    library:           '@deskpro/react-components',
+    libraryTarget:     'umd'
   },
 
   plugins: [
