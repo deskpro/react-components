@@ -1,7 +1,7 @@
 import * as css from './css';
 import * as dates from './dates';
 import * as dom from './dom';
-import * as newid from './newid';
+import newid from './newid';
 import * as noop from './noop';
 import * as objects from './objects';
 import * as props from './props';
