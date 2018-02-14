@@ -25,12 +25,12 @@ export default class ItemPopper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      popper: null
+      popper: null // eslint-disable-line
     };
   }
 
   componentDidMount() {
-    this.setState({ popper: this.popper }); // eslint-disable-line react/no-did-mount-set-state
+    this.setState({ popper: this.popper }); // eslint-disable-line
   }
 
   /**

@@ -10,7 +10,8 @@ const config = {
   entry: {
     'webpack-dev-server': 'webpack-dev-server/client?http://localhost:4898',
     'only-dev-server': 'webpack/hot/only-dev-server',
-    main: './src/styles/main.scss'
+    main:  './src/styles/main.scss',
+    index: './src/Components/index.js'
   },
 
   output: {
@@ -31,6 +32,11 @@ const config = {
   module: {
     rules: [
       {
+        test:    /\.jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        },
       },
       {
         test: /\.scss$/,

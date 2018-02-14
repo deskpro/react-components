@@ -138,6 +138,7 @@ export default class SelectableList extends React.Component {
         ref={ref => (this.rootRef = ref)}
         onKeyDown={this.handleKeyDown}
         onMouseOver={this.handleMouseOver}
+        onFocus={this.handleMouseOver}
       >
         {body}
       </List>

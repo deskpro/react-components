@@ -1,3 +1,11 @@
+## v1.3.0 - 2018-02-14
+
+* [BREAKING CHANGE] Change distribution mode.
+  
+  Please now import classes from the root of the package :
+  
+  use `import { Button } from '@despro/react-components` instead of `import Button from '@deskpro/react-components/lib/Components/Forms'`
+
 ## v1.2.16 - 2018-02-05
 
 * [FIX] Update peerDependencies

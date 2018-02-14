@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - '6'
 script:
-- npm run travis-test && npm run compile
+- npm run travis-test && npm run prod
 before_deploy:
 - npm prune --production && rm -rf node_modules/react node_modules/react-dom
 deploy:

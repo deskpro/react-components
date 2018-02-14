@@ -180,6 +180,7 @@ exports[`>>> Buttons --- Common +++capturing Snapshot of Scrollbar 1`] = `
 exports[`>>> Buttons --- Common +++capturing Snapshot of SelectableList 1`] = `
 <ul
   className="dp-list dp-selectable-list test-class"
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onMouseOver={[Function]}
   tabIndex="-1"

@@ -23,7 +23,6 @@ exports[`>>> Buttons --- Snapshot +++capturing Snapshot of DropdownButton 1`] = 
   className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-dropdown-button"
   disabled={false}
   onClick={[Function]}
-  style={Object {}}
 >
   Test
   <i
