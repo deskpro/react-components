@@ -474,7 +474,7 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Tag 1`] = `
 
 exports[`>>> Forms --- Snapshot +++capturing Snapshot of TagInput 1`] = `
 <div
-  className="dp-tag-input"
+  className="dp-tag-input editable"
   onClick={[Function]}
   style={Object {}}
 >

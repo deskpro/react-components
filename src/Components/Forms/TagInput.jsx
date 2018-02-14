@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import { Tag } from 'Components/Forms';
 import TagsInput from 'react-tagsinput';
 import Autosuggest from 'react-autosuggest';
-import onClickOutside from 'react-onclickoutside';
 
 class TagInput extends React.Component {
   static propTypes = {
@@ -36,19 +35,7 @@ class TagInput extends React.Component {
     );
   }
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      editable: false,
-    };
-  }
-
   setEditable = () => {
-    if (!this.props.editable) {
-      this.setState({
-        editable: true
-      });
-    }
     if (this.autoSuggestInput) {
       this.autoSuggestInput.focus();
     }
@@ -56,12 +43,6 @@ class TagInput extends React.Component {
 
   handleChange = (tags) => {
     this.props.onChange(tags);
-  };
-
-  handleClickOutside = () => {
-    this.setState({
-      editable: false
-    });
   };
 
   renderInputComponent = props => <input type="text" {...props} ref={(c) => { this.autoSuggestInput = c; }} />;
@@ -104,7 +85,7 @@ class TagInput extends React.Component {
     const {
       tags, inputProps, editable, options, ...elementProps
     } = this.props;
-    if (this.state.editable || editable) {
+    if (editable) {
       const props = Object.assign({}, elementProps);
       delete props.onChange;
       return (
@@ -125,8 +106,7 @@ class TagInput extends React.Component {
   };
 
   render() {
-    const { style } = this.props;
-    const { editable } = this.state;
+    const { style, editable } = this.props;
     return (
       <div
         className={classNames('dp-tag-input', { editable })}
@@ -138,4 +118,4 @@ class TagInput extends React.Component {
     );
   }
 }
-export default onClickOutside(TagInput);
+export default TagInput;

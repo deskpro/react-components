@@ -1,3 +1,7 @@
+## v1.2.17 - 2018-02-14
+
+* [FIX] Remove on click outside on `TagInput`
+
 ## v1.2.14 - 2018-01-30
 
 * [FIX] Prevent form submission when adding tag in TagSet
