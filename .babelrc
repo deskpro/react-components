@@ -1,9 +1,14 @@
 {
-  "presets": ["es2015", "react", "stage-0"],
+  "presets": [
+    "babel-preset-env",
+    "babel-preset-react",
+    "babel-preset-stage-0"
+  ],
   "plugins": [
-    ["transform-decorators-legacy", "transform-flow-strip-types"],
-    ["react-intl", {"messagesDir": "./build/messages/"}],
-    ["module-resolver", {
+    "babel-plugin-transform-decorators-legacy",
+    "babel-plugin-transform-flow-strip-types",
+    ["babel-plugin-react-intl", {"messagesDir": "./build/messages/"}],
+    ["babel-plugin-module-resolver", {
       "root": ["./src"],
       "extensions": [".js", ".jsx"]
     }]
