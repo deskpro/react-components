@@ -1,3 +1,7 @@
+## v1.2.19 - 2018-02-19
+
+* [FIX] Fix DatePicker months
+
 ## v1.2.18 - 2018-02-14
 
 * [FIX] Fix TagInput not loading
