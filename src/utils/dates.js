@@ -38,6 +38,10 @@ export const MONTHS_SHORT = [
   'Dec'
 ];
 
+function isLeapYear(year) {
+  return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
+}
+
 /**
  * Returns the number of days in the given date
  *
@@ -45,8 +49,7 @@ export const MONTHS_SHORT = [
  * @returns {number}
  */
 export function dateNumberOfDaysInMonth(date) {
-  const copy = new Date(new Date(date).setDate(0));
-  return copy.getDate();
+  return [31, (isLeapYear(date.getFullYear()) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][date.getMonth()];
 }
 
 /**

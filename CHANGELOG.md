@@ -1,3 +1,7 @@
+## v1.3.20 - 2018-04-10
+
+* [FIX] Fix DatePicker months
+
 ## v1.3.19 - 2018-04-03
 
 * Prevent error on missing locale

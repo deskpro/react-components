@@ -1,8 +1,11 @@
 import * as dates from 'utils/dates';
 
 test('dateNumberOfDaysInMonth', () => {
-  expect(dates.dateNumberOfDaysInMonth(new Date(2017, 7))).toBe(31);
-  expect(dates.dateNumberOfDaysInMonth(new Date(2017, 4))).toBe(30);
+  // Months are 0 based
+  expect(dates.dateNumberOfDaysInMonth(new Date(2017, 6, 31))).toBe(31);
+  expect(dates.dateNumberOfDaysInMonth(new Date(2017, 7, 1))).toBe(31);
+  expect(dates.dateNumberOfDaysInMonth(new Date(2017, 3, 5))).toBe(30);
+  expect(dates.dateNumberOfDaysInMonth(new Date(2018, 1, 14))).toBe(28);
 });
 
 test('dateCalendarDays', () => {
