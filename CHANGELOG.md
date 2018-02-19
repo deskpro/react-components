@@ -1,3 +1,7 @@
+## v1.3.4 - 2018-02-19
+
+* [FIX] Fix newid export
+
 ## v1.3.3 - 2018-02-14
 
 * [FIX] Fix Webpack output 
@@ -17,6 +21,10 @@
   Please now import classes from the root of the package :
   
   use `import { Button } from '@despro/react-components` instead of `import Button from '@deskpro/react-components/lib/Components/Forms'`
+
+## v1.2.18 - 2018-02-14
+
+* [FIX] Fix TagInput not loading
 
 ## v1.2.17 - 2018-02-14
 
