@@ -1,3 +1,7 @@
+## v1.2.21 - 2018-02-21
+
+* [FIX] Fix TagSet not loading
+
 ## v1.2.20 - 2018-02-19
 
 * [FIX] Fix DatePicker months
