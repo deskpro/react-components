@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tag, SearchButton } from 'Components/Forms';
+import Tag from './Tag';
+import SearchButton from './SearchButton';
 
 class TagSet extends React.Component {
   static propTypes = {
@@ -8,7 +9,7 @@ class TagSet extends React.Component {
     name:     PropTypes.string,
     options:  PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
     editable: PropTypes.bool,
-    onChange: PropTypes.func,
+    onChange: PropTypes.func
   };
   static defaultProps = {
     name:     '',

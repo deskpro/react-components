@@ -1,3 +1,7 @@
+## v1.3.5 - 2018-02-21
+
+* [FIX] Fix TagSet not loading
+
 ## v1.3.4 - 2018-02-19
 
 * [FIX] Fix newid export
