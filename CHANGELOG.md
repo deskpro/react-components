@@ -1,3 +1,7 @@
+## v1.3.6 - 2018-02-23
+
+* [FIX] Fix noop export
+
 ## v1.3.5 - 2018-02-21
 
 * [FIX] Fix TagSet not loading
