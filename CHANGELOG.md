@@ -1,3 +1,7 @@
+## v1.3.7 - 2018-02-23
+
+* [FIX] Relative import of node_modules style files
+
 ## v1.3.6 - 2018-02-23
 
 * [FIX] Fix noop export
