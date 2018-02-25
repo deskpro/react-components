@@ -1,3 +1,7 @@
+## v1.2.22 - 2018-02-25
+
+* [FIX] Fix ReactSelect and Redux Form bug
+
 ## v1.2.21 - 2018-02-21
 
 * [FIX] Fix TagSet not loading

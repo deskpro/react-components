@@ -11,7 +11,11 @@ import FieldGroup from './FieldGroup';
  */
 export const SelectField = ({ options, input, ...props }) => (
   <FieldGroup {...props}>
-    <Forms.Select {...input} options={options} />
+    <Forms.Select
+      {...input}
+      options={options}
+      onBlur={() => { input.onBlur(props.input.value); }}
+    />
   </FieldGroup>
 );
 
