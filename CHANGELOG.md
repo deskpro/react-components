@@ -1,3 +1,7 @@
+## v1.3.9 - 2018-02-26
+
+* Update dev dependencies
+
 ## v1.3.8 - 2018-02-26
 
 * Update dependencies
