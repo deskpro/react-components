@@ -207,7 +207,7 @@ exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Select 1`] = `
       className="dp-select"
     >
       <div
-        className="Select dp-select Select--single is-clearable is-searchable"
+        className="Select dp-select is-clearable is-searchable Select--single"
         style={undefined}
       >
         <div

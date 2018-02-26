@@ -1,3 +1,7 @@
+## v1.3.8 - 2018-02-26
+
+* Update dependencies
+
 ## v1.3.7 - 2018-02-23
 
 * [FIX] Relative import of node_modules style files

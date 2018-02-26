@@ -255,7 +255,7 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSelect 1`] = `
     className="dp-select"
   >
     <div
-      className="Select dp-select Select--single is-clearable is-searchable"
+      className="Select dp-select is-clearable is-searchable Select--single"
       style={undefined}
     >
       <div
@@ -373,7 +373,7 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Select 1`] = `
   className="dp-select test-class"
 >
   <div
-    className="Select dp-select test-class Select--single is-clearable is-searchable"
+    className="Select dp-select test-class is-clearable is-searchable Select--single"
     style={undefined}
   >
     <div
