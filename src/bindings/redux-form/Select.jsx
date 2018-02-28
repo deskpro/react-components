@@ -14,7 +14,7 @@ export const SelectField = ({ options, input, ...props }) => (
     <Forms.Select
       {...input}
       options={options}
-      onBlur={() => { input.onBlur(props.input.value); }}
+      onBlur={() => {}}
     />
   </FieldGroup>
 );
