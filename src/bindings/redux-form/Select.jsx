@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field, fieldPropTypes } from 'redux-form';
+import {Field, fieldPropTypes} from 'redux-form';
 import * as Forms from 'Components/Forms';
 import FieldGroup from './FieldGroup';
 
@@ -9,9 +9,14 @@ import FieldGroup from './FieldGroup';
  *
  * @see https://redux-form.com/7.0.4/docs/api/field.md/#2-a-stateless-function
  */
-export const SelectField = ({ options, input, ...props }) => (
+export const SelectField = ({options, input, ...props}) => (
   <FieldGroup {...props}>
-    <Forms.Select {...input} options={options} />
+    <Forms.Select
+      {...input}
+      options={options}
+      onBlur={() => {
+      }}
+    />
   </FieldGroup>
 );
 
@@ -29,7 +34,7 @@ SelectField.propTypes = {
 /**
  * Connects the field to the Redux store.
  */
-const Select = ({ parse, ...props }) => {
+const Select = ({parse, ...props}) => {
   // Redux Form expects values to be strings, but the value of Forms.Select
   // is an object with { label: string, value: string }. Parse the value to
   // return the value part of the object unless the parse prop has already
@@ -66,7 +71,8 @@ Select.propTypes = {
 
 Select.defaultProps = {
   parse:    undefined,
-  onChange: () => {}
+  onChange: () => {
+  }
 };
 
 export default Select;
