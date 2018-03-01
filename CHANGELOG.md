@@ -1,3 +1,8 @@
+## v1.3.91 - 2018-02-28
+
+* Adds empty onBlur to Select binding
+* Adds externals to webpack
+
 ## v1.3.9 - 2018-02-26
 
 * Update dev dependencies
