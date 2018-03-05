@@ -1,3 +1,11 @@
+## v1.3.12 - 2018-03-05
+
+* Fix to cssMatchComputedWidth
+
+## v1.3.11 - 2018-03-05
+
+* Deprecate redux-form bindings
+
 ## v1.3.10 - 2018-02-28
 
 * Adds empty onBlur to Select binding
