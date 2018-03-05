@@ -1,5 +1,7 @@
 import React from 'react';
-import { storiesOf, action } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { withInfo } from "@storybook/addon-info";
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { Label, Select } from 'Components/Forms';
 
@@ -10,28 +12,30 @@ const basicOptions = [
 
 storiesOf('Forms', module)
   .addDecorator(withKnobs)
-  .addWithInfo(
+  .add(
     'Select',
-    'This is the select and its variation.',
-    () => (
-      <div>
-        <h3>Selects</h3>
-        <Label>Basic</Label>
-        <Select
-          name="select-1"
-          onChange={action('Select change')}
-          options={basicOptions}
-          disabled={boolean('Disabled', false)}
-        /><br />
-        <Label>Basic with Icon</Label>
-        <Select
-          icon="search"
-          name="select-2"
-          onChange={action('Select change')}
-          options={basicOptions}
-          disabled={boolean('Disabled', false)}
-        />
-      </div>
+    withInfo(
+      'This is the select and its variation.',
+      () => (
+        <div>
+          <h3>Selects</h3>
+          <Label>Basic</Label>
+          <Select
+            name="select-1"
+            onChange={action('Select change')}
+            options={basicOptions}
+            disabled={boolean('Disabled', false)}
+          /><br />
+          <Label>Basic with Icon</Label>
+          <Select
+            icon="search"
+            name="select-2"
+            onChange={action('Select change')}
+            options={basicOptions}
+            disabled={boolean('Disabled', false)}
+          />
+        </div>
+      )
     )
   );
 

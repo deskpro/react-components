@@ -1,5 +1,7 @@
 import React from 'react';
-import { storiesOf, action } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { withInfo } from "@storybook/addon-info";
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { Button, ConfirmButton } from 'Components/Buttons';
 import withPropsCombinations from 'react-storybook-addon-props-combinations';
@@ -44,13 +46,15 @@ storiesOf('Buttons', module)
       }
     )
   )
-  .addWithInfo(
+  .add(
     'with confirm',
-    'This is the basic usage of a input with the label passed as a property.',
-    () => (
-      <div>
-        <ConfirmButton onClick={action('Delete action')}>Delete</ConfirmButton>
-      </div>
+    withInfo(
+      'This is the basic usage of a input with the label passed as a property.',
+      () => (
+        <div>
+          <ConfirmButton onClick={action('Delete action')}>Delete</ConfirmButton>
+        </div>
+      )
     )
   );
 

@@ -1,59 +1,62 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
+import { withInfo } from "@storybook/addon-info";
 import { List, ListElement, ListElementGroup, QueryableList, ToggleableList } from 'Components/Common';
 import { TestSelectable, TestDrawer } from './fixtures';
 
 storiesOf('Lists', module)
   .addDecorator(withKnobs)
-  .addWithInfo(
+  .add(
     'Standard',
-    'A standard list of elements.',
-    () => (
-      <div>
-        <h3>List</h3>
-        <List>
-          <ListElement>
-            Agents
-          </ListElement>
-          <ListElement>
-            DeskPRO Cloud
-          </ListElement>
-          <ListElement>
-            Docs
-          </ListElement>
-          <ListElement>
-            Features
-          </ListElement>
-          <ListElement>
-            Feedback
-          </ListElement>
-          <ListElement>
-            General
-            <List>
-              <ListElement>
-                Integrations
-              </ListElement>
-              <ListElement>
-                Post Sales
-              </ListElement>
-              <ListElement>
-                Reporting
-              </ListElement>
-            </List>
-          </ListElement>
-          <ListElement>
-            Resellers
-          </ListElement>
-          <ListElement>
-            Sales
-          </ListElement>
-          <ListElement>
-            Security reports
-          </ListElement>
-        </List>
-        <br />
-      </div>
+    withInfo(
+      'A standard list of elements.',
+      () => (
+        <div>
+          <h3>List</h3>
+          <List>
+            <ListElement>
+              Agents
+            </ListElement>
+            <ListElement>
+              DeskPRO Cloud
+            </ListElement>
+            <ListElement>
+              Docs
+            </ListElement>
+            <ListElement>
+              Features
+            </ListElement>
+            <ListElement>
+              Feedback
+            </ListElement>
+            <ListElement>
+              General
+              <List>
+                <ListElement>
+                  Integrations
+                </ListElement>
+                <ListElement>
+                  Post Sales
+                </ListElement>
+                <ListElement>
+                  Reporting
+                </ListElement>
+              </List>
+            </ListElement>
+            <ListElement>
+              Resellers
+            </ListElement>
+            <ListElement>
+              Sales
+            </ListElement>
+            <ListElement>
+              Security reports
+            </ListElement>
+          </List>
+          <br />
+        </div>
+      )
     )
   )
   .add('Queryable', () => {

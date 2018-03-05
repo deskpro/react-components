@@ -1,5 +1,7 @@
 import React from 'react';
-import { storiesOf, action } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { withInfo } from "@storybook/addon-info";
 import { SearchButton } from 'Components/Forms';
 
 const results = [
@@ -41,9 +43,11 @@ class Story extends React.Component {
 }
 
 storiesOf('Search', module)
-  .addWithInfo(
+  .add(
     'Button',
-    'SearchButton component usage.',
-    () => <Story />
+    withInfo(
+      'SearchButton component usage.',
+      () => <Story />
+    )
   );
 
