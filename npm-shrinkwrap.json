@@ -1,6 +1,6 @@
 {
   "name": "@deskpro/react-components",
-  "version": "1.3.11",
+  "version": "1.3.12",
   "dependencies": {
     "@storybook/addon-actions": {
       "version": "3.3.14",

@@ -11,7 +11,7 @@ import { domIsReactComponent } from 'utils/dom';
  * @return {string}
  */
 export function cssMatchComputedWidth(toGet, toSet) {
-  let getEl  = toGet;
+  let getEl = toGet;
   let setEl = toSet;
   if (domIsReactComponent(getEl)) {
     getEl = ReactDOM.findDOMNode(getEl);
@@ -23,7 +23,10 @@ export function cssMatchComputedWidth(toGet, toSet) {
   let width = 0;
   if (getEl && setEl) {
     width = window.getComputedStyle(getEl, null).width; // eslint-disable-line
-    setEl.style.width = width;
+    if (width && setEl.style !== undefined) {
+      setEl.style.width = width;
+    }
   }
+
   return width;
 }
