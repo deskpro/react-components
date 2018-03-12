@@ -1,3 +1,7 @@
+## v1.3.14 - 2018-03-12
+
+* Republish after missing compilation
+
 ## v1.3.13 - 2018-03-12
 
 * Fix unrecognized attributes to Item
