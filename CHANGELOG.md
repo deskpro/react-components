@@ -1,3 +1,8 @@
+## v1.3.13 - 2018-03-12
+
+* Fix unrecognized attributes to Item
+* Allow intermediate Element is DrawerList 
+
 ## v1.3.12 - 2018-03-05
 
 * Fix to cssMatchComputedWidth

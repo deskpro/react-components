@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'utils/noop';
+import { objectKeyFilter } from 'utils/objects';
 import { ListElement, Count } from 'Components/Common';
 import ItemSettings from 'Components/Columns/ItemSettings';
 import Icon from 'Components/Icon';
@@ -79,7 +80,7 @@ export default class Item extends React.Component {
     rightTypes.push(Count);
 
     return (
-      <ListElement className={classes} {...props}>
+      <ListElement className={classes} {...objectKeyFilter(props, Item.propTypes)}>
         <span className={`${classPrefix}__pos-left`}>
           {React.Children.map(children, child => (leftTypes.indexOf(child.type) !== -1 ? child : null))}
         </span>

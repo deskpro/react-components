@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { childrenComponentType } from 'utils/props';
 import { List } from 'Components/Common';
-import Drawer from 'Components/Columns/Drawer';
 
 /**
  * A container for one or more drawers.
@@ -21,7 +19,7 @@ export default class DrawerList extends React.Component {
     /**
      * One or more ColumnDrawer components.
      */
-    children:  childrenComponentType(Drawer)
+    children:  PropTypes.node
   };
 
   static defaultProps = {
