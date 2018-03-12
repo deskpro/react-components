@@ -44,8 +44,6 @@ exports[`>>> Columns --- Snapshot +++capturing Snapshot of Drawer 1`] = `
       <li
         className="dp-list__element dp-drawer-item"
         data-dp-toggle-id={0}
-        onClick={[Function]}
-        onSelect={[Function]}
       >
         <span
           className="dp-drawer-item__pos-left"
@@ -68,8 +66,6 @@ exports[`>>> Columns --- Snapshot +++capturing Snapshot of Drawer 1`] = `
       <li
         className="dp-list__element dp-drawer-item"
         data-dp-toggle-id={1}
-        onClick={[Function]}
-        onSelect={[Function]}
       >
         <span
           className="dp-drawer-item__pos-left"
