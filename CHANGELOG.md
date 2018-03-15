@@ -1,3 +1,7 @@
+## v1.3.16 - 2018-03-15
+
+* Fix click on Items
+
 ## v1.3.15 - 2018-03-15
 
 * Fix click on Drawer heading
