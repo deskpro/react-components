@@ -1,3 +1,7 @@
+## v1.3.15 - 2018-03-15
+
+* Fix click on Drawer heading
+
 ## v1.3.14 - 2018-03-12
 
 * Republish after missing compilation

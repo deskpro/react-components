@@ -137,7 +137,8 @@ export default class Drawer extends React.Component {
     const { opened } = this.state;
     const props = {
       'aria-label':    `Click to ${opened ? 'close' : 'open'}.`,
-      'aria-controls': `dp-column-drawer-body-${this.id}`
+      'aria-controls': `dp-column-drawer-body-${this.id}`,
+      onClick:         this.toggle
     };
     const icon = (
       <Icon

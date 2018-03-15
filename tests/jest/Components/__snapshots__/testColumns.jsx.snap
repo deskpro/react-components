@@ -24,6 +24,7 @@ exports[`>>> Columns --- Snapshot +++capturing Snapshot of Drawer 1`] = `
     aria-controls="dp-column-drawer-body-1"
     aria-label="Click to close."
     className="dp-heading"
+    onClick={[Function]}
   >
     Test
     <i
@@ -105,6 +106,7 @@ exports[`>>> Columns --- Snapshot +++capturing Snapshot of DrawerList 1`] = `
       aria-controls="dp-column-drawer-body-2"
       aria-label="Click to close."
       className="dp-heading"
+      onClick={[Function]}
     >
        
       <i
