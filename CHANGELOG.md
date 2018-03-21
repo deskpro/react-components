@@ -1,3 +1,7 @@
+## v1.3.18 - 2017-03-21
+
+* Adds prepublish script
+
 ## v1.3.17 - 2017-03-21
 
 * Fix click on SelectableList
