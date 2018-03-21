@@ -109,7 +109,7 @@ export default class SelectableList extends React.Component {
 
   handleClick = (e) => {
     this.setIndex(
-      e.target.getAttribute('data-dp-index'),
+      e.currentTarget.getAttribute('data-dp-index'),
       this.props.onSelect
     );
   };

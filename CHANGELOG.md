@@ -1,3 +1,7 @@
+## v1.3.17 - 2017-03-21
+
+* Fix click on SelectableList
+
 ## v1.3.16 - 2018-03-15
 
 * Fix click on Items
