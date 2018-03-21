@@ -1,6 +1,6 @@
 {
   "name": "@deskpro/react-components",
-  "version": "1.3.17",
+  "version": "1.3.18",
   "description": "Deskpro React Components",
   "main": "dist/index.js",
   "homepage": "https://github.com/deskpro/react-components",
