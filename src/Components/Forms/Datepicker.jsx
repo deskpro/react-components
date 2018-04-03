@@ -105,7 +105,12 @@ export default class Datepicker extends React.Component {
       this.format += ' HH:mm';
     }
 
-    this.firstWeekDay = moment.localeData(props.locale).firstDayOfWeek();
+    const localeData = moment.localeData(props.locale);
+    if (localeData) {
+      this.firstWeekDay = moment.localeData(props.locale).firstDayOfWeek();
+    } else {
+      this.firstWeekDay = 0;
+    }
 
     if (props.value) {
       const momentDate = moment(props.value, this.format);

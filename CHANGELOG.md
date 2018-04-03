@@ -1,8 +1,12 @@
-## v1.3.18 - 2017-03-21
+## v1.3.19 - 2018-04-03
+
+* Prevent error on missing locale
+
+## v1.3.18 - 2018-03-21
 
 * Adds prepublish script
 
-## v1.3.17 - 2017-03-21
+## v1.3.17 - 2018-03-21
 
 * Fix click on SelectableList
 
