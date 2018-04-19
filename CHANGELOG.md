@@ -1,4 +1,4 @@
-## v1.3.21 - 2018-04-19
+## v1.3.22 - 2018-04-19
 
 * [FEATURE] - Allow controlled ToggleableList
 

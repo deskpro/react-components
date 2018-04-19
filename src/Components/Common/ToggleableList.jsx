@@ -102,11 +102,11 @@ class ToggleableList extends React.Component {
             return child;
           }
           const newProps = {
-            [DATA_DP_TOGGLE_ID]:           index,
-            [`on${stringUpperFirst(on)}`]: this.handleEvent,
+            [DATA_DP_TOGGLE_ID]: index,
           };
           if (!controlled) {
             newProps[toggle] = (index === targetID) ? targetValue : false;
+            newProps[`on${stringUpperFirst(on)}`] = this.handleEvent;
           }
           return React.cloneElement(child, newProps);
         })}
