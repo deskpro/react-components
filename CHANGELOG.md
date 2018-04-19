@@ -1,3 +1,7 @@
+## v1.3.21 - 2018-04-19
+
+* [FEATURE] - Allow controlled ToggleableList
+
 ## v1.3.20 - 2018-04-10
 
 * [FIX] Fix DatePicker months

@@ -12,9 +12,7 @@ import deprecatedSelect from './Select';
 import deprecatedTagSet from './TagSet';
 import deprecatedTextarea from './Textarea';
 
-export {
-  validators
-};
+export { validators };
 
 
 export const Button = deprecate(

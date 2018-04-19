@@ -39,24 +39,29 @@ class ToggleableList extends React.Component {
     /**
      * The event to listen for.
      */
-    on:       PropTypes.string.isRequired,
+    on:         PropTypes.string.isRequired,
     /**
      * Name of the property on the children which will receive a true or false value.
      */
-    toggle:   PropTypes.string.isRequired,
+    toggle:     PropTypes.string.isRequired,
     /**
      * Only control components of this type.
      */
-    whenType: PropTypes.any, // eslint-disable-line react/forbid-prop-types
+    whenType:   PropTypes.any, // eslint-disable-line react/forbid-prop-types
     /**
      * Children to render.
      */
-    children: PropTypes.node
+    children:   PropTypes.node,
+    /**
+     * Allow to set toggle attribute from a parent level
+     */
+    controlled: PropTypes.bool,
   };
 
   static defaultProps = {
-    whenType: '',
-    children: ''
+    whenType:   '',
+    children:   '',
+    controlled: false,
   };
 
   constructor(props) {
@@ -86,7 +91,7 @@ class ToggleableList extends React.Component {
 
   render() {
     const {
-      on, toggle, whenType, children, ...props
+      on, toggle, whenType, children, controlled, ...props
     } = this.props;
     const { targetID, targetValue } = this.state;
 
@@ -96,11 +101,14 @@ class ToggleableList extends React.Component {
           if (whenType && child.type !== undefined && child.type !== whenType) {
             return child;
           }
-          return React.cloneElement(child, {
+          const newProps = {
             [DATA_DP_TOGGLE_ID]:           index,
             [`on${stringUpperFirst(on)}`]: this.handleEvent,
-            [toggle]:                      (index === targetID) ? targetValue : false
-          });
+          };
+          if (!controlled) {
+            newProps[toggle] = (index === targetID) ? targetValue : false;
+          }
+          return React.cloneElement(child, newProps);
         })}
       </List>
     );
