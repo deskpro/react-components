@@ -66,7 +66,7 @@ class TagSet extends React.Component {
    */
   addTag = (tag) => {
     const { tags } = this.props;
-    if (tags.indexOf(tag) === -1) {
+    if (typeof tag === 'string' && tag.trim() && tags.indexOf(tag) === -1) {
       tags.push(tag);
       this.handleChange(tags);
     }
