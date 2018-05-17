@@ -1,3 +1,7 @@
+## v1.3.24 - 2018-05-17
+
+* [FIX] - Disallow empty tags in TagSet
+
 ## v1.3.23 - 2018-04-27
 
 * [FEATURE] - Update Column heading design
