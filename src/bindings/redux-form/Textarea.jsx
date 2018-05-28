@@ -9,14 +9,11 @@ import FieldGroup from './FieldGroup';
  *
  * @see https://redux-form.com/7.0.4/docs/api/field.md/#2-a-stateless-function
  */
-export const TextareaField = ({ input, ...props }) => {
-  const textareaProps = { autosize: props.autosize };
-  return (
-    <FieldGroup {...props}>
-      <Forms.Textarea {...input} {...textareaProps} />
-    </FieldGroup>
-  );
-};
+export const TextareaField = ({ input, autosize, ...props }) => (
+  <FieldGroup {...props}>
+    <Forms.Textarea {...input} autosize={autosize} />
+  </FieldGroup>
+);
 
 TextareaField.propTypes = {
   /**
