@@ -9,17 +9,28 @@ import FieldGroup from './FieldGroup';
  *
  * @see https://redux-form.com/7.0.4/docs/api/field.md/#2-a-stateless-function
  */
-export const TextareaField = ({ input, ...props }) => (
-  <FieldGroup {...props}>
-    <Forms.Textarea {...input}  />
-  </FieldGroup>
-);
+export const TextareaField = ({ input, ...props }) => {
+  const textareaProps = { autosize: props.autosize };
+  return (
+    <FieldGroup {...props}>
+      <Forms.Textarea {...input} {...textareaProps} />
+    </FieldGroup>
+  );
+};
 
 TextareaField.propTypes = {
   /**
    * Passed to the field by redux-form.
    */
-  input: PropTypes.shape(fieldPropTypes.input).isRequired
+  input:    PropTypes.shape(fieldPropTypes.input).isRequired,
+  /**
+   * Set if you want to have autosizing textarea
+   */
+  autosize: PropTypes.bool
+};
+
+TextareaField.defaultProps = {
+  autosize: false
 };
 
 /**
