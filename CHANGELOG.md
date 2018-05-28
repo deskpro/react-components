@@ -1,3 +1,7 @@
+## v1.3.25 - 2018-05-28
+
+* [FEATURE] - Textareas now could use "autosize" if they are set to.
+
 ## v1.3.24 - 2018-05-17
 
 * [FIX] - Disallow empty tags in TagSet

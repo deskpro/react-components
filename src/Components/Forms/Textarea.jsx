@@ -3,12 +3,18 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { objectKeyFilter } from 'utils/objects';
 import noop from 'utils/noop';
+import AutosizeTextarea from 'react-textarea-autosize';
 
 /**
  * Textarea component.
  */
 export default class Textarea extends React.Component {
   static propTypes = {
+
+    /**
+     * Should we use autosizing textarea
+     */
+    autosize:  PropTypes.bool,
     /**
      * The textarea value.
      */
@@ -28,6 +34,7 @@ export default class Textarea extends React.Component {
   };
 
   static defaultProps = {
+    autosize:  false,
     value:     '',
     name:      '',
     className: '',
@@ -40,15 +47,23 @@ export default class Textarea extends React.Component {
 
   render() {
     const {
-      value, name, className, ...props
+      autosize, value, name, className, ...props
     } = this.props;
+
+    let textarea;
+
+    if (autosize) {
+      textarea = <AutosizeTextarea name={name} value={value} onChange={this.handleChange} />;
+    } else {
+      textarea = <textarea name={name} value={value} onChange={this.handleChange} />;
+    }
 
     return (
       <div
         className={classNames('dp-textarea', className)}
         {...objectKeyFilter(props, Textarea.propTypes)}
       >
-        <textarea name={name} value={value} onChange={this.handleChange} />
+        {textarea}
       </div>
     );
   }
