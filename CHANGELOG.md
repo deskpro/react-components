@@ -1,3 +1,7 @@
+## v1.3.26 - 2018-06-13
+
+* Update dependencies
+
 ## v1.3.25 - 2018-05-28
 
 * [FEATURE] - Textareas now could use "autosize" if they are set to.
