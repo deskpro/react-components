@@ -3547,14 +3547,6 @@
         "hoek": "2.16.3"
       }
     },
-    "bourbon": {
-      "version": "https://registry.npmjs.org/bourbon/-/bourbon-4.3.4.tgz",
-      "integrity": "sha1-TaOAAp6SwMj5dkx3lFGhNLEefMM="
-    },
-    "bourbon-neat": {
-      "version": "https://registry.npmjs.org/bourbon-neat/-/bourbon-neat-2.1.0.tgz",
-      "integrity": "sha1-syzhAfRHw1xXtugz3nRWf4tfkII="
-    },
     "bowser": {
       "version": "1.9.3",
       "resolved": "https://registry.npmjs.org/bowser/-/bowser-1.9.3.tgz",
