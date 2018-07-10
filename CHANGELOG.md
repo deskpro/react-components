@@ -1,3 +1,7 @@
+## v1.3.27 - 2018-07-10
+
+* [FEATURE] - Added missing "editable" attribute in TagSet binding.
+
 ## v1.3.26 - 2018-06-13
 
 * Update dependencies
