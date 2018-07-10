@@ -89,6 +89,7 @@ class TagSet extends React.Component {
     return (
       <div className="dp-tag-set">
         {content}
+        {editable &&
         <SearchButton
           results={results}
           ref={(c) => { this.searchRef = c; }}
@@ -97,7 +98,7 @@ class TagSet extends React.Component {
           onSelect={this.handleSearchSelect}
         >
           No results for <i className="dp-colour-sonic-secondary">{'\'$value$\''}</i> press ENTER to add new label
-        </SearchButton>
+        </SearchButton>}
       </div>
     );
   }

@@ -10,10 +10,10 @@ import FieldGroup from './FieldGroup';
  * @see https://redux-form.com/7.0.4/docs/api/field.md/#2-a-stateless-function
  */
 export const TagSetField = ({
-  options, tags, input, ...props
+  options, tags, input, editable, ...props
 }) => (
   <FieldGroup {...props}>
-    <Forms.TagSet {...input} options={options} tags={tags} />
+    <Forms.TagSet {...input} options={options} tags={tags} editable={editable} />
   </FieldGroup>
 );
 
@@ -21,15 +21,19 @@ TagSetField.propTypes = {
   /**
    * List of dropdown values.
    */
-  options: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+  options:  PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   /**
    * Current value
    */
-  tags:    PropTypes.array.isRequired,
+  tags:     PropTypes.array.isRequired,
+  /**
+   * Is field editable?
+   */
+  editable: PropTypes.bool.isRequired,
   /**
    * Passed to the field by redux-form.
    */
-  input:   PropTypes.shape(fieldPropTypes.input).isRequired
+  input:    PropTypes.shape(fieldPropTypes.input).isRequired
 };
 
 TagSetField.defaultProps = {
