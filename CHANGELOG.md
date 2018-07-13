@@ -1,3 +1,7 @@
+## v1.3.28 - 2018-07-13
+
+* [FEATURE] - Allow unselect on tabs
+
 ## v1.3.27 - 2018-07-10
 
 * [FEATURE] - Added missing "editable" attribute in TagSet binding.

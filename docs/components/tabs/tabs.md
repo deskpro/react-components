@@ -26,6 +26,8 @@ The name of the active tab.
 **onChange={func}**  
 Called when the active tab changes.
 
+**allowUnselect={bool}**  
+Don't filter clicks on the same tab to allow unselecting tabs
 
 ### CSS
 Adds `dp-tabs` to the root element.

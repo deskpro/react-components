@@ -12,28 +12,33 @@ export default class Tabs extends React.Component {
     /**
      * Name of the active tab.
      */
-    active:    PropTypes.string.isRequired,
+    active:        PropTypes.string.isRequired,
     /**
      * CSS classes to apply to the element.
      */
-    className: PropTypes.string,
+    className:     PropTypes.string,
     /**
      * Children to render.
      */
-    children:  PropTypes.node.isRequired,
+    children:      PropTypes.node.isRequired,
     /**
      * Called when the active tab changes. Receives the name of the tab.
      */
-    onChange:  PropTypes.func
+    onChange:      PropTypes.func,
+    /**
+     * Don't filter click when the same tab is clicked again to allow unselecting tabs
+     */
+    allowUnselect: PropTypes.bool,
   };
 
   static defaultProps = {
-    className: '',
-    onChange:  noop,
+    className:     '',
+    onChange:      noop,
+    allowUnselect: false,
   };
 
   handleClick = (active) => {
-    if (active !== this.props.active) {
+    if (this.props.allowUnselect || active !== this.props.active) {
       this.props.onChange(active);
     }
   };
