@@ -1,3 +1,7 @@
+## v1.3.29 - 2018-07-20
+
+* [FEATURE] - Add FixedWidth to icons
+
 ## v1.3.28 - 2018-07-13
 
 * [FEATURE] - Allow unselect on tabs

@@ -6,7 +6,7 @@ setAddon(infoAddon);
 setAddon(withPropsCombinations)
 setDefaults({
   // overwrite global defaults here
-})
+});
 
 function loadStories() {
   require('../tests/storybook/index.js');

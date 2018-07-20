@@ -25,6 +25,9 @@ Rotates the icon. Possible values are 0, 90, 180, and 270.
 **spin={bool}**  
 Spins the icon using CSS animation.
 
+**fixedWidth={bool}**  
+Set icons at a fixed width. Great to use when different icon widths throw off alignment. Especially useful in things like nav lists & list groups.
+
 ### Examples
 
 ```jsx
