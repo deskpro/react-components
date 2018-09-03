@@ -7,6 +7,7 @@ A react-based set of components for building DeskPRO apps.
 [![Coverage Status](https://coveralls.io/repos/github/deskpro/react-components/badge.svg)](https://coveralls.io/github/deskpro/react-components)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/deskpro/react-components/blob/master/LICENSE)
 [![npm version](https://img.shields.io/npm/v/@deskpro/react-components.svg?style=flat)](https://www.npmjs.com/package/@deskpro/react-components)
+[![Storybook](https://github.com/storybooks/press/raw/master/badges/storybook.svg?sanitize=true)](https://deskpro.github.io/react-components)
 
 * [Overview](#overview)
 * [Components](#components)
