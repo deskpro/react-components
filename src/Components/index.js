@@ -38,6 +38,7 @@ import SearchSelect from './Forms/SearchSelect';
 import Tag from './Forms/Tag';
 import TagInput from './Forms/TagInput';
 import TagSet from './Forms/TagSet';
+import Toggle from './Forms/Toggle';
 import Form from './Forms/Form';
 import Textarea from './Forms/Textarea';
 
@@ -112,6 +113,7 @@ export {
   Tag,
   TagInput,
   TagSet,
+  Toggle,
   Form,
   Textarea,
 

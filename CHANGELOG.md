@@ -1,3 +1,7 @@
+## v1.3.31 - 2018-09-10
+
+* [FIX] - Fix missing export
+
 ## v1.3.30 - 2018-09-10
 
 * [FEATURE] - Add Toggle
