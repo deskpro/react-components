@@ -1,3 +1,7 @@
+## v1.3.32 - 2018-09-10
+
+* [FIX] - Fix textarea props
+
 ## v1.3.31 - 2018-09-10
 
 * [FIX] - Fix missing export

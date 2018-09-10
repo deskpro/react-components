@@ -364,14 +364,14 @@ exports[`>>> redux-form --- Snapshot +++capturing Snapshot of Textarea 1`] = `
     
     <div
       className="dp-textarea"
-      onBlur={[Function]}
-      onDragStart={[Function]}
-      onDrop={[Function]}
-      onFocus={[Function]}
     >
       <textarea
         name="textarea1"
+        onBlur={[Function]}
         onChange={[Function]}
+        onDragStart={[Function]}
+        onDrop={[Function]}
+        onFocus={[Function]}
         value=""
       />
     </div>
