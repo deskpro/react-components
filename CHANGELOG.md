@@ -1,3 +1,7 @@
+## v1.3.30 - 2018-09-10
+
+* [FEATURE] - Add Toggle
+
 ## v1.3.29 - 2018-07-20
 
 * [FEATURE] - Add FixedWidth to icons

@@ -599,3 +599,22 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Textarea 1`] = `
   />
 </div>
 `;
+
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of Toggle 1`] = `
+<div
+  className="dp-input--toggle test-class"
+>
+  <input
+    checked={false}
+    className="hidden right"
+    id={null}
+    onChange={[Function]}
+    type="checkbox"
+    value="test"
+  />
+  <label
+    htmlFor={null}
+    onClick={[Function]}
+  />
+</div>
+`;

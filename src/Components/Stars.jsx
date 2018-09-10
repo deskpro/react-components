@@ -13,7 +13,7 @@ import { objectKeyFilter } from 'utils/objects';
 const StarIcon = ({
   value, icon, onClick, ...props
 }) => (
-  <FontAwesomeIcon icon={icon} size="s" onClick={() => { onClick(value); }} {...props} />
+  <FontAwesomeIcon icon={icon} size="sm" onClick={() => { onClick(value); }} {...props} />
 );
 
 StarIcon.propTypes = {

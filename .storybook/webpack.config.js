@@ -16,13 +16,13 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|mp3|wav|ogg)$/,
+        test: /\.(png|jpg|mp3|wav|ogg|svg)$/,
         loader:  'url-loader'
       },
-      {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader'
-      }
+      // {
+      //   test: /\.svg$/,
+      //   loader: 'svg-inline-loader'
+      // }
     ]
   }
 };

@@ -15,6 +15,7 @@ import SearchSelect from './SearchSelect';
 import Tag from './Tag';
 import TagInput from './TagInput';
 import TagSet from './TagSet';
+import Toggle from './Toggle';
 import Form from './Form';
 import Textarea from './Textarea';
 
@@ -36,6 +37,7 @@ export {
   Tag,
   TagInput,
   TagSet,
+  Toggle,
   Form,
   Textarea,
 };

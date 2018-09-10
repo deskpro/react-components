@@ -19,7 +19,8 @@ import {
   Tag,
   TagInput,
   TagSet,
-  Textarea
+  Textarea,
+  Toggle
 } from 'Components/Forms/index';
 
 // https://github.com/facebook/react/issues/7740#issuecomment-247335106
@@ -129,6 +130,10 @@ describe('>>> Forms --- Snapshot', () => {
   });
   it('+++capturing Snapshot of Textarea', () => {
     const renderedValue = renderer.create(<Textarea className="test-class" name="textarea1" value="test" />).toJSON();
+    expect(renderedValue).toMatchSnapshot();
+  });
+  it('+++capturing Snapshot of Toggle', () => {
+    const renderedValue = renderer.create(<Toggle className="test-class" name="radio1" value="test" />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
 });

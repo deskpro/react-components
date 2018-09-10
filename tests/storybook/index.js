@@ -12,6 +12,7 @@ import './components/forms/textarea';
 import './components/forms/radio';
 import './components/forms/datepicker';
 import './components/forms/hidden_fields';
+import './components/forms/toggle';
 import './components/search/inline';
 import './components/search/submit';
 import './components/search/button';

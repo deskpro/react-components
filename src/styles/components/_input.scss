@@ -455,6 +455,152 @@
 }
 
 /******************************
+    Input toggle
+*******************************/
+.dp-input--toggle {
+  min-height: 2rem;
+  position: relative;
+}
+/* Input */
+.dp-input--toggle input {
+  width: 3.75rem;
+  height: 2rem;
+}
+/* Label */
+.dp-input--toggle label {
+  min-height: 1.75rem;
+  padding-left: 4.75rem;
+  color: #2b2f2f;
+}
+.dp-input--toggle label {
+  padding-top: 0.375rem;
+}
+/* Switch */
+.dp-input--toggle label:before {
+  display: block;
+  position: absolute;
+  content: '';
+  z-index: 1;
+  transform: none;
+  border: none;
+  top: 11px;
+  background: #aab0b1;
+  box-shadow: none;
+  width: 3.75rem;
+  height: 2rem;
+  border-radius: 500rem;
+}
+/* Handle */
+.dp-input--toggle label:after {
+  background: #ffffff;
+  position: absolute;
+  content: '' !important;
+  opacity: 1;
+  z-index: 2;
+  border: none;
+  box-shadow: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  top: 13px;
+  left: 0em;
+  border-radius: 500rem;
+  transition: background 0.3s ease, left 0.3s ease;
+}
+.dp-input--toggle input {
+  visibility: hidden;
+}
+.dp-input--toggle input + label {
+  padding-left: 5px;
+  padding-top: 0;
+}
+.dp-input--toggle input ~ label:after {
+  left: 0.125rem;
+  box-shadow: none;
+}
+/* Focus */
+.dp-input--toggle input:focus ~ label:before {
+  background-color: #aab0b1;
+  border: none;
+}
+/* Hover */
+.dp-input--toggle label:hover::before {
+  background-color: #aab0b1;
+  border: none;
+}
+/* Active */
+.dp-input--toggle input:checked ~ label {
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+.dp-input--toggle input:checked ~ label:before {
+  background-color: #47bf61 !important;
+}
+.dp-input--toggle input:checked ~ label:after {
+  left: 1.875rem;
+  box-shadow: none;
+}
+/* Active Focus */
+.dp-input--toggle input:focus:checked ~ label {
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+.dp-input--toggle input:focus:checked ~ label:before {
+  background-color: #459b51 !important;
+}
+
+.dp-input--toggle label:hover::before,
+.dp-input--toggle input:focus ~ label:hover::before {
+  border: 1px solid #8c9295;
+}
+.dp-input--toggle input:checked ~ label:hover::before,
+.dp-input--toggle input:checked:focus ~ label:hover::before {
+  border: 1px solid #459b51;
+}
+.dp-input--toggle input ~ label:after {
+  background: #fff url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMiAxMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTIgMTIiPjxnIGZpbGw9IiM0YzRmNTAiIHRyYW5zZm9ybT0ibWF0cml4KC43MDcxLS43MDcxLjcwNzEuNzA3MS0yLjQ4NSA2KSI+PHBhdGggZD0ibS0xLjEgNWgxNC4xdjJoLTE0LjF6Ii8+PHBhdGggZD0ibTUtMS4xaDJ2MTQuMWgtMnoiLz48L2c+PC9zdmc+') center no-repeat;
+  background-size: 14px 14px;
+}
+.dp-input--toggle input:checked ~ label:after {
+  background: #fff url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTYgMTQiPjxwYXRoIGZpbGw9IiM0YzRmNTAiIGQ9Im01LjIgMTNsLTUtNC45IDEuNC0xLjUgMy42IDMuNiA5LjItOS4yIDEuNCAxLjR6Ii8+PC9zdmc+') center no-repeat;
+  background-size: 14px 14px;
+}
+/*--------------
+   Small Toggle
+---------------*/
+.dp-input--toggle.small {
+  min-height: 1.14285714rem;
+}
+/* Input */
+.dp-input--toggle.small input {
+  width: 2.14285714rem;
+  height: 1.14285714rem;
+}
+/* Label */
+.dp-input--toggle.small label {
+  min-height: 1rem;
+  padding-left: 2.71428571rem;
+}
+/* Switch */
+.dp-input--toggle.small label:before {
+  top: auto;
+  width: 2.14285714rem;
+  height: 1.14285714rem;
+  border-radius: 285.71428571rem;
+}
+/* Handle */
+.dp-input--toggle.small label:after {
+  width: 1rem;
+  height: 1rem;
+  top: 7px;
+  bottom: 0.07142857rem;
+}
+.dp-input--toggle.small input ~ label:after {
+  left: 0.07142857rem;
+  background-size: 8px;
+}
+.dp-input--toggle.small input:checked ~ label:after {
+  left: 1.07142857rem;
+  background-size: 8px;
+}
+/******************************
     Form Group
 *******************************/
 .dp-form-group {

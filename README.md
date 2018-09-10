@@ -96,6 +96,8 @@ A Storybook demo is available online at https://deskpro.github.io/react-componen
   Renders an input with drop down date picker.
 * [Forms/CustomSelect](docs/components/forms/custom_select.md)  
   Renders a custom select input.
+* [Forms/Toggle](docs/components/forms/toggle.md)  
+  Renders a toggle input.
 
 ### Buttons
 * [Buttons/Button](docs/components/buttons/button.md)  
