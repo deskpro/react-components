@@ -22,7 +22,7 @@ import ItemFilter from './Columns/ItemFilter';
 import ItemSettings from './Columns/ItemSettings';
 
 import Checkbox from './Forms/Checkbox';
-import ColorPicker from './Forms/ColorPicker';
+import Colorpicker from './Forms/Colorpicker';
 import CustomSelect from './Forms/CustomSelect';
 import Datepicker from './Forms/Datepicker';
 import Datetimepicker from './Forms/Datetimepicker';
@@ -98,7 +98,7 @@ export {
   ItemSettings,
 
   Checkbox,
-  ColorPicker,
+  Colorpicker,
   CustomSelect,
   Datepicker,
   Datetimepicker,

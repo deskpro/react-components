@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import {
   Form,
   Checkbox,
-  ColorPicker,
+  Colorpicker,
   CustomSelect,
   Datepicker,
   Datetimepicker,
@@ -35,7 +35,7 @@ describe('>>> Forms --- Snapshot', () => {
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of ColorPicker', () => {
-    const renderedValue = renderer.create(<ColorPicker className="test-class" value="test" />).toJSON();
+    const renderedValue = renderer.create(<Colorpicker className="test-class" value="test" />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of CustomSelect', () => {

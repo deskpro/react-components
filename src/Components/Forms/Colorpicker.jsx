@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SketchPicker } from 'react-color';
 
-class ColorPicker extends React.Component {
+class Colorpicker extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     value:     PropTypes.oneOfType([
@@ -98,4 +98,4 @@ class ColorPicker extends React.Component {
   }
 }
 
-export default ColorPicker;
+export default Colorpicker;

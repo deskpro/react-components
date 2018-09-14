@@ -1,5 +1,5 @@
 import Checkbox from './Checkbox';
-import ColorPicker from './ColorPicker';
+import Colorpicker from './Colorpicker';
 import CustomSelect from './CustomSelect';
 import Datepicker from './Datepicker';
 import Datetimepicker from './Datetimepicker';
@@ -22,7 +22,7 @@ import Textarea from './Textarea';
 
 export {
   Checkbox,
-  ColorPicker,
+  Colorpicker,
   CustomSelect,
   Datepicker,
   Datetimepicker,
