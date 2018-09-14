@@ -1,3 +1,7 @@
+## v1.3.35 - 2018-09-15
+
+* [FIX] - Fix styling on Colorpicker
+
 ## v1.3.34 - 2018-09-14
 
 * [FIX] - Fix case on Colorpicker
