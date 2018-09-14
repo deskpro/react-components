@@ -26,6 +26,26 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Checkbox 1`] = `
 </div>
 `;
 
+exports[`>>> Forms --- Snapshot +++capturing Snapshot of ColorPicker 1`] = `
+<div
+  className="dp-colorpicker test-class"
+>
+  <div
+    className="dp-colorpicker--swatch"
+    onClick={[Function]}
+  >
+    <div
+      className="dp-colorpicker--swatch--color"
+      style={
+        Object {
+          "background": "test",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
 exports[`>>> Forms --- Snapshot +++capturing Snapshot of CustomSelect 1`] = `
 <div
   className="dp-select test-class"

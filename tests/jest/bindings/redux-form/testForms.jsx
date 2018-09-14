@@ -59,7 +59,7 @@ describe('>>> redux-form --- Snapshot', () => {
   it('+++capturing Snapshot of Select', () => {
     const renderedValue = renderer.create(<Provider store={mockStore()}>
       <Form name="test">
-        <Select name="select1" />
+        <Select name="select1" options={[]} />
       </Form>
     </Provider>).toJSON();
     expect(renderedValue).toMatchSnapshot();
@@ -76,7 +76,7 @@ describe('>>> redux-form --- Snapshot', () => {
     const renderedValue = renderer.create(
       <Provider store={mockStore()}>
         <Form name="test">
-          <TagSet name="tagset1" tags={['tag1', 'tag2']} />
+          <TagSet editable name="tagset1" tags={['tag1', 'tag2']} />
         </Form>
       </Provider>,
       { createNodeMock }

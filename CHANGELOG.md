@@ -1,3 +1,7 @@
+## v1.3.33 - 2018-09-14
+
+* [FEATURE] - Add Colorpicker
+
 ## v1.3.32 - 2018-09-10
 
 * [FIX] - Fix textarea props

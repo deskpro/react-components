@@ -646,3 +646,34 @@
     border: 1px solid $dp-greyscale-300;
   }
 }
+
+/******************************
+    ColorPicker
+*******************************/
+.dp-colorpicker {
+  .dp-colorpicker--swatch {
+    padding: 4px;
+    background-color: #fff;
+    border-radius: 1px;
+    border: 1px solid $dp-greyscale-450;
+    display: inline-block;
+    cursor: pointer;
+    .dp-colorpicker--swatch--color {
+      width: 20px;
+      height: 20px;
+      border-radius: 2px;
+      color: #4696dc;
+    }
+  }
+  .dp-colorpicker--popover {
+    position: absolute;
+    z-index: 2;
+    .dp-colorpicker--popover--cover {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

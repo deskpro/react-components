@@ -1,6 +1,6 @@
 {
   "name": "@deskpro/react-components",
-  "version": "1.3.32",
+  "version": "1.3.33",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
@@ -11363,8 +11363,7 @@
     "lodash": {
       "version": "4.17.10",
       "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.10.tgz",
-      "integrity": "sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg==",
-      "dev": true
+      "integrity": "sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg=="
     },
     "lodash-es": {
       "version": "4.17.10",
@@ -11671,10 +11670,9 @@
       }
     },
     "material-colors": {
-      "version": "1.2.5",
-      "resolved": "https://registry.npmjs.org/material-colors/-/material-colors-1.2.5.tgz",
-      "integrity": "sha1-UpJZPmdUyxvMK5gDDk4Najr8nqE=",
-      "dev": true
+      "version": "1.2.6",
+      "resolved": "https://registry.npmjs.org/material-colors/-/material-colors-1.2.6.tgz",
+      "integrity": "sha512-6qE4B9deFBIa9YSpOc9O0Sgc43zTeVYbgDT5veRKSlB2+ZuHNoVVxA1L/ckMUayV9Ay9y7Z/SZCLcGteW9i7bg=="
     },
     "math-expression-evaluator": {
       "version": "1.2.17",
@@ -15489,7 +15487,6 @@
       "version": "2.14.1",
       "resolved": "https://registry.npmjs.org/react-color/-/react-color-2.14.1.tgz",
       "integrity": "sha512-ssv2ArSZdhTbIs29hyfw8JW+s3G4BCx/ILkwCajWZzrcx/2ZQfRpsaLVt38LAPbxe50LLszlmGtRerA14JzzRw==",
-      "dev": true,
       "requires": {
         "lodash": "^4.0.1",
         "material-colors": "^1.2.1",
@@ -15951,7 +15948,6 @@
       "version": "1.2.3",
       "resolved": "https://registry.npmjs.org/reactcss/-/reactcss-1.2.3.tgz",
       "integrity": "sha512-KiwVUcFu1RErkI97ywr8nvx8dNOpT03rbnma0SSalTYjkrPYaEajR4a/MRt6DZ46K6arDRbWMNHF+xH7G7n/8A==",
-      "dev": true,
       "requires": {
         "lodash": "^4.0.1"
       }
@@ -17997,8 +17993,7 @@
     "tinycolor2": {
       "version": "1.4.1",
       "resolved": "https://registry.npmjs.org/tinycolor2/-/tinycolor2-1.4.1.tgz",
-      "integrity": "sha1-9PrTM0R7wLB9TcjpIJ2POaisd+g=",
-      "dev": true
+      "integrity": "sha1-9PrTM0R7wLB9TcjpIJ2POaisd+g="
     },
     "tmp": {
       "version": "0.0.33",

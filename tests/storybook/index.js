@@ -5,6 +5,7 @@ import './components/forms/form';
 import './components/forms/group';
 import './components/forms/input';
 import './components/forms/checkbox';
+import './components/forms/color_picker';
 import './components/forms/custom_select';
 import './components/forms/select';
 import './components/forms/tag';
