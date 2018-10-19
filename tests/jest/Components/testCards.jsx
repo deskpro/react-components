@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Card } from 'Components/Cards/index';
+import { Card } from '../../../src/Components/Cards/index';
 
 describe('>>> Buttons --- Cards', () => {
   it('+++capturing Snapshot of Card', () => {

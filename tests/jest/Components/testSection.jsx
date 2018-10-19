@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Section } from 'Components/index';
+import { Section } from '../../../src/Components/index';
 
 describe('>>> Section --- Snapshot', () => {
   it('+++capturing Snapshot of Section', () => {

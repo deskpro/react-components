@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { faBug } from '@fortawesome/free-solid-svg-icons';
-import { Icon } from 'Components/index';
+import { Icon } from '../../../src/Components/index';
 
 describe('>>> Icon --- Snapshot', () => {
   it('+++capturing Snapshot of Icon', () => {

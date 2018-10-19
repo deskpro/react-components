@@ -1,5 +1,5 @@
 import React from 'react';
-import * as dom from 'utils/dom';
+import * as dom from '../../../src/utils/dom';
 
 class Foo extends React.Component {
   render() {

@@ -1,6 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Alert } from 'Components/index';
+import { Alert } from '../../../src/Components/index';
+
+const mockMath = Object.create(global.Math);
+mockMath.random = () => 0.5;
+global.Math = mockMath;
 
 describe('>>> Alert --- Snapshot', () => {
   it('+++capturing Snapshot of Alert', () => {

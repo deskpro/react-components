@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Tabs, TabLink } from 'Components/Tabs/index';
+import { Tabs, TabLink } from '../../../src/Components/Tabs/index';
 
 describe('>>> Tabs --- Snapshot', () => {
   it('+++capturing Snapshot of TabLink', () => {

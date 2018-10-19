@@ -22,7 +22,7 @@ import {
   TagSet,
   Textarea,
   Toggle
-} from 'Components/Forms/index';
+} from '../../../src/Components/Forms/index';
 
 // https://github.com/facebook/react/issues/7740#issuecomment-247335106
 const createNodeMock = () => ({

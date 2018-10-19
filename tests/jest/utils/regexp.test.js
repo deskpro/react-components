@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-escape */
 
-import { regexpEscape } from 'utils/regexp';
-import { objectForEach } from 'utils/objects';
+import { regexpEscape } from '../../../src/utils/regexp';
+import { objectForEach } from '../../../src/utils/objects';
 
 test('regexpEscape', () => {
   const data = {

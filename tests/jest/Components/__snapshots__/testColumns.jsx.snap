@@ -29,7 +29,7 @@ exports[`>>> Columns --- Snapshot +++capturing Snapshot of Drawer 1`] = `
     Test
     <svg
       aria-hidden={true}
-      aria-labelledby="svg-inline--fa-title-0W1c6u9gmDCH"
+      aria-labelledby="svg-inline--fa-title-vvvvvvvvvvvv"
       className="svg-inline--fa fa-caret-up fa-w-10 fa-sm dp-icon dp-column-drawer__arrow"
       data-icon="caret-up"
       data-prefix="fas"
@@ -40,7 +40,7 @@ exports[`>>> Columns --- Snapshot +++capturing Snapshot of Drawer 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title
-        id="svg-inline--fa-title-0W1c6u9gmDCH"
+        id="svg-inline--fa-title-vvvvvvvvvvvv"
         style={Object {}}
       >
         Close
@@ -133,7 +133,7 @@ exports[`>>> Columns --- Snapshot +++capturing Snapshot of DrawerList 1`] = `
        
       <svg
         aria-hidden={true}
-        aria-labelledby="svg-inline--fa-title-eOak7sWDolVW"
+        aria-labelledby="svg-inline--fa-title-vvvvvvvvvvvv"
         className="svg-inline--fa fa-caret-up fa-w-10 fa-sm dp-icon dp-column-drawer__arrow"
         data-icon="caret-up"
         data-prefix="fas"
@@ -144,7 +144,7 @@ exports[`>>> Columns --- Snapshot +++capturing Snapshot of DrawerList 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title
-          id="svg-inline--fa-title-eOak7sWDolVW"
+          id="svg-inline--fa-title-vvvvvvvvvvvv"
           style={Object {}}
         >
           Close

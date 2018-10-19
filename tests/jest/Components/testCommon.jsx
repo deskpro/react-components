@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { faCog, faGlobe, faSync } from "@fortawesome/free-solid-svg-icons";
-import { Icon } from 'Components/index';
+import { Icon } from '../../../src/Components/index';
 import {
   Count,
   Heading,
@@ -14,7 +14,7 @@ import {
   Popper,
   Portal,
   Scrollbar
-} from 'Components/Common/index';
+} from '../../../src/Components/Common/index';
 
 // https://github.com/facebook/react/issues/7740#issuecomment-247335106
 const createNodeMock = () => ({

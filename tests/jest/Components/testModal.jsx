@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Modal, Button } from 'Components/index';
+import { Modal, Button } from '../../../src/Components/index';
 
 describe('>>> Modal --- Snapshot', () => {
   it('+++capturing Snapshot of Modal', () => {

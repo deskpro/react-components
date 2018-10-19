@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Stars } from 'Components/index';
+import { Stars } from '../../../src/Components/index';
 
 describe('>>> Stars --- Snapshot', () => {
   it('+++capturing Snapshot of Stars', () => {

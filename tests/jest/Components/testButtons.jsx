@@ -7,7 +7,7 @@ import {
   TranslateButton,
   DropdownButton,
   SplitButton
-} from 'Components/Buttons/index';
+} from '../../../src/Components/Buttons/index';
 
 // https://github.com/facebook/react/issues/7740#issuecomment-247335106
 const createNodeMock = () => ({

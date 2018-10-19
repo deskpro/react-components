@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Container } from 'Components/index';
+import { Container } from '../../../src/Components/index';
 
 describe('>>> Container --- Snapshot', () => {
   it('+++capturing Snapshot of Container', () => {

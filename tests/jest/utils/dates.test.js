@@ -1,4 +1,4 @@
-import * as dates from 'utils/dates';
+import * as dates from '../../../src/utils/dates';
 
 test('dateNumberOfDaysInMonth', () => {
   // Months are 0 based

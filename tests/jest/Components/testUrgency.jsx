@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Urgency } from 'Components/index';
+import { Urgency } from '../../../src/Components/index';
 
 describe('>>> Urgency --- Snapshot', () => {
   it('+++capturing Snapshot of Urgency', () => {

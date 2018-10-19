@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Heading, Count } from 'Components/Common/index';
+import { Heading, Count } from '../../../src/Components/Common/index';
 import {
   Column,
   Drawer,
@@ -10,7 +10,11 @@ import {
   ItemList,
   ItemPopper,
   ItemSettings
-} from 'Components/Columns/index';
+} from '../../../src/Components/Columns/index';
+
+const mockMath = Object.create(global.Math);
+mockMath.random = () => 0.5;
+global.Math = mockMath;
 
 // https://github.com/facebook/react/issues/7740#issuecomment-247335106
 const createNodeMock = () => ({

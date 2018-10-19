@@ -1,4 +1,4 @@
-import newid from 'utils/newid';
+import newid from '../../../src/utils/newid';
 
 test('newid', () => {
   expect(newid()).toBe('id1');

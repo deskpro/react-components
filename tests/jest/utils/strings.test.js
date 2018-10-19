@@ -1,5 +1,5 @@
-import * as strings from 'utils/strings';
-import { objectForEach } from 'utils/objects';
+import * as strings from '../../../src/utils/strings';
+import { objectForEach } from '../../../src/utils/objects';
 
 test('stringUpperFirst', () => {
   const data = {

@@ -1,4 +1,4 @@
-import * as numbers from 'utils/numbers';
+import * as numbers from '../../../src/utils/numbers';
 
 test('numberFormat', () => {
   expect(numbers.numberFormat(3)).toBe('3');

@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { Icon } from 'Components/index';
-import { CircleBadge, DateBadge, IconBadge, TextBadge } from 'Components/Badges/index';
+import { Icon } from '../../../src/Components/index';
+import { CircleBadge, DateBadge, IconBadge, TextBadge } from '../../../src/Components/Badges/index';
 
 describe('>>> Badges --- Snapshot', () => {
   it('+++capturing Snapshot of CircleBadge', () => {

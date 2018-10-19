@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Progress, ProgressBar } from 'Components/index';
+import { Progress, ProgressBar } from '../../../src/Components/index';
 
 describe('>>> Progress --- Snapshot', () => {
   it('+++capturing Snapshot of Progress', () => {

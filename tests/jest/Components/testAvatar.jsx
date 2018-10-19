@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Avatar } from 'Components/index';
+import { Avatar } from '../../../src/Components/index';
 
 describe('>>> Avatar --- Snapshot', () => {
   it('+++capturing Snapshot of Avatar', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
-import * as props from 'utils/props';
-import Drawer from 'Components/Columns/Drawer';
-import List from 'Components/Common/List';
+import * as props from '../../../src/utils/props';
+import Drawer from '../../../src/Components/Columns/Drawer';
+import List from '../../../src/Components/Common/List';
 
 test('childrenComponentType', () => {
   let testProps = {
