@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/fontawesome-free-solid/index';
-import noop from 'utils/noop';
-import { objectKeyFilter } from 'utils/objects';
-import Icon from 'Components/Icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import noop from '../utils/noop';
+import { objectKeyFilter } from '../utils/objects';
+import Icon from './Icon';
 
 /**
  * Renders an notification message.
@@ -19,7 +19,7 @@ export default class Alert extends React.Component {
     /**
      * Name of the icon to display.
      */
-    icon:       PropTypes.string,
+    icon:       PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     /**
      * Whether the alert may be closed.
      */
@@ -44,7 +44,7 @@ export default class Alert extends React.Component {
 
   static defaultProps = {
     type:       'default',
-    icon:       'exclamation-triangle',
+    icon:       faExclamationTriangle,
     closeTitle: 'Close',
     closeable:  true,
     className:  '',

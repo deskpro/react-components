@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'utils/noop';
-import { ListElement, Count } from 'Components/Common';
-import ItemSettings from 'Components/Columns/ItemSettings';
-import Icon from 'Components/Icon';
-import Avatar from 'Components/Avatar';
+import noop from '../../utils/noop';
+import { ListElement, Count } from '../Common';
+import ItemSettings from './ItemSettings';
+import Icon from '../Icon';
+import Avatar from '../Avatar';
 
 const classPrefix = 'dp-drawer-item';
 

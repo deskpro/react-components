@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'utils/noop';
+import noop from '../../utils/noop';
 
 /**
  * Renders a link in a tab group.

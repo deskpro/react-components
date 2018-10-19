@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import newId from 'utils/newid';
-import noop from 'utils/noop';
-import { objectKeyFilter } from 'utils/objects';
+import newId from '../../utils/newid';
+import noop from '../../utils/noop';
+import { objectKeyFilter } from '../../utils/objects';
 
 /**
  * Wraps optional form fields which may be shown or hidden.

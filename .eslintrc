@@ -100,9 +100,6 @@
     "jsx-a11y"
   ],
   "settings": {
-    "import/resolver": {
-      "babel-module": {  }
-    },
     "import/extensions": [".js", ".jsx"],
     "react": {
       "version": "15.6.2"

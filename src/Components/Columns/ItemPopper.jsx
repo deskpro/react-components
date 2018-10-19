@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Popper } from 'Components/Common';
+import { Popper } from '../Common';
 
 /**
  * Used to construct column items which contain poppers.

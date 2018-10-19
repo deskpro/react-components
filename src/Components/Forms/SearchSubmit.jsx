@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'utils/noop';
-import { cssMatchComputedWidth } from 'utils/css';
-import { objectKeyFilter } from 'utils/objects';
-import { List, ListElement, Popper } from 'Components/Common';
-import { Button } from 'Components/Buttons';
-import Input from 'Components/Forms/Input';
-import Icon from 'Components/Icon';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import noop from '../../utils/noop';
+import { cssMatchComputedWidth } from '../../utils/css';
+import { objectKeyFilter } from '../../utils/objects';
+import { List, ListElement, Popper } from '../Common';
+import { Button } from '../Buttons';
+import Input from './Input';
+import Icon from '../Icon';
 
 /**
  * Renders a search input with submit button, where search results are displayed
@@ -119,7 +120,7 @@ export default class SearchSubmit extends Input {
       >
         <Input ref={ref => (this.inputRef = ref)} {...inputProps} />
         <Button className="dp-button--square" onClick={this.handleClick}>
-          <Icon name="search" />
+          <Icon name={faSearch} />
         </Button>
         <Popper
           ref={ref => (this.popperRef = ref)}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { faBug } from '@fortawesome/free-solid-svg-icons';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import withPropsCombinations from 'react-storybook-addon-props-combinations';
@@ -27,7 +28,7 @@ storiesOf('Buttons', module)
                 disabled={boolean('Disabled', false)}
                 {...elementProps}
               >
-                <Icon name="bug" />
+                <Icon name={faBug} />
                 {children}
               </Component>&nbsp;&nbsp;
               <Component
@@ -36,7 +37,7 @@ storiesOf('Buttons', module)
                 disabled={boolean('Disabled', false)}
                 {...elementProps}
               >
-                <Icon name="bug" />
+                <Icon name={faBug} />
                 {children}
               </Component>&nbsp;&nbsp;
               <Component
@@ -45,7 +46,7 @@ storiesOf('Buttons', module)
                 disabled={boolean('Disabled', false)}
                 {...elementProps}
               >
-                <Icon name="bug" />
+                <Icon name={faBug} />
                 {children}
               </Component><br /><br />
             </div>

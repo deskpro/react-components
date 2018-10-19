@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'utils/noop';
-import { cssMatchComputedWidth } from 'utils/css';
-import { objectKeyFilter } from 'utils/objects';
-import { List, ListElement, Highlighter } from 'Components/Common';
-import Input from 'Components/Forms/Input';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import noop from '../../utils/noop';
+import { cssMatchComputedWidth } from '../../utils/css';
+import { objectKeyFilter } from '../../utils/objects';
+import { List, ListElement, Highlighter } from '../Common';
+import Input from './Input';
 
 /**
  * Renders an inline search input.
@@ -111,7 +112,7 @@ export default class SearchInline extends Input {
         )}
         style={style}
       >
-        <Input ref={ref => (this.inputRef = ref)} icon="search" {...inputProps} />
+        <Input ref={ref => (this.inputRef = ref)} icon={faSearch} {...inputProps} />
         {this.renderResults()}
       </div>
     );

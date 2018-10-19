@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { childrenRecursiveMap } from 'utils/props';
-import { objectKeyFilter } from 'utils/objects';
-import Label from 'Components/Forms/Label';
+import { childrenRecursiveMap } from '../../utils/props';
+import { objectKeyFilter } from '../../utils/objects';
+import Label from './Label';
 
 class Group extends React.Component {
   static propTypes = {

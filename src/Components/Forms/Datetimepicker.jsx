@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import noop from 'utils/noop';
-import { DAYS, MONTHS } from 'utils/dates';
+import noop from '../../utils/noop';
+import { DAYS, MONTHS } from '../../utils/dates';
 import Datepicker from './Datepicker';
 
 /**

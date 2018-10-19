@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { objectKeyFilter } from 'utils/objects';
 import SVGInline from 'react-svg-inline';
+import { objectKeyFilter } from '../utils/objects';
 
 /* eslint-disable max-len */
 const LOADING_IMG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">

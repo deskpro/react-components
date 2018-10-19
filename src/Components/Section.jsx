@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Heading from 'Components/Common/Heading';
+import Heading from './Common/Heading';
 
 /**
  * Renders a component representing a page section.

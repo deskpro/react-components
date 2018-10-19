@@ -2,9 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import newId from 'utils/newid';
-import { objectKeyFilter } from 'utils/objects';
-import Label from 'Components/Forms/Label';
+import newId from '../../utils/newid';
+import { objectKeyFilter } from '../../utils/objects';
+import Label from './Label';
 
 class Checkbox extends React.Component {
   static propTypes = {

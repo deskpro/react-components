@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { objectKeyFilter } from 'utils/objects';
-import Progress from 'Components/Progress';
-import ProgressBar from 'Components/ProgressBar';
+import { objectKeyFilter } from '../../utils/objects';
+import Progress from '../Progress';
+import ProgressBar from '../ProgressBar';
 
 /**
  * Renders a button which contains a progress bar.

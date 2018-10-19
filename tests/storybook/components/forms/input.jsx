@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { Input, Label } from 'Components/Forms';
+import { faCalendar, faComment, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 storiesOf('Forms', module)
   .addDecorator(withKnobs)
@@ -85,14 +86,14 @@ storiesOf('Forms', module)
             name="input-10"
             disabled={boolean('Disabled', false)}
             readOnly={boolean('Readonly', false)}
-            icon="search"
+            icon={faSearch}
           /><br />
           <Label>With icon right</Label>
           <Input
             name="input-11"
             disabled={boolean('Disabled', false)}
             readOnly={boolean('Readonly', false)}
-            iconRight="calendar"
+            iconRight={faCalendar}
           /><br />
           <h3>Visibility</h3>
           <Label>Invisible border</Label>
@@ -101,7 +102,7 @@ storiesOf('Forms', module)
             value="Support Team"
             disabled={boolean('Disabled', false)}
             readOnly={boolean('Readonly', false)}
-            icon="comment"
+            icon={faComment}
             invisible
           /><br /><br />
           <Label>With placeholder</Label>

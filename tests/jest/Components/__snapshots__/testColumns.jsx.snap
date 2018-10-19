@@ -27,12 +27,30 @@ exports[`>>> Columns --- Snapshot +++capturing Snapshot of Drawer 1`] = `
     onClick={[Function]}
   >
     Test
-    <i
+    <svg
       aria-hidden={true}
-      className="fa fa-caret-up dp-icon dp-icon--s dp-column-drawer__arrow"
+      aria-labelledby="svg-inline--fa-title-0W1c6u9gmDCH"
+      className="svg-inline--fa fa-caret-up fa-w-10 fa-sm dp-icon dp-column-drawer__arrow"
+      data-icon="caret-up"
+      data-prefix="fas"
       onClick={[Function]}
-      title="Close"
-    />
+      role="img"
+      style={Object {}}
+      viewBox="0 0 320 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title
+        id="svg-inline--fa-title-0W1c6u9gmDCH"
+        style={Object {}}
+      >
+        Close
+      </title>
+      <path
+        d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
   </h1>
   <div
     aria-hidden={false}
@@ -113,12 +131,30 @@ exports[`>>> Columns --- Snapshot +++capturing Snapshot of DrawerList 1`] = `
       onClick={[Function]}
     >
        
-      <i
+      <svg
         aria-hidden={true}
-        className="fa fa-caret-up dp-icon dp-icon--s dp-column-drawer__arrow"
+        aria-labelledby="svg-inline--fa-title-eOak7sWDolVW"
+        className="svg-inline--fa fa-caret-up fa-w-10 fa-sm dp-icon dp-column-drawer__arrow"
+        data-icon="caret-up"
+        data-prefix="fas"
         onClick={[Function]}
-        title="Close"
-      />
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="svg-inline--fa-title-eOak7sWDolVW"
+          style={Object {}}
+        >
+          Close
+        </title>
+        <path
+          d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
     </h1>
     <div
       aria-hidden={false}
@@ -135,10 +171,23 @@ exports[`>>> Columns --- Snapshot +++capturing Snapshot of ItemFilter 1`] = `
 <span
   className="test-class"
 >
-  <i
-    className="fa fa-filter dp-icon dp-icon--s dp-popper-icon dp-icon__filter"
+  <svg
+    aria-hidden="true"
+    className="svg-inline--fa fa-filter fa-w-16 fa-sm dp-icon dp-popper-icon dp-icon__filter"
+    data-icon="filter"
+    data-prefix="fas"
     onClick={[Function]}
-  />
+    role="img"
+    style={Object {}}
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"
+      fill="currentColor"
+      style={Object {}}
+    />
+  </svg>
   <div />
 </span>
 `;
@@ -156,10 +205,23 @@ exports[`>>> Columns --- Snapshot +++capturing Snapshot of ItemSettings 1`] = `
 <span
   className="test-class"
 >
-  <i
-    className="fa fa-cog dp-icon dp-icon--s dp-popper-icon dp-icon__settings"
+  <svg
+    aria-hidden="true"
+    className="svg-inline--fa fa-cog fa-w-16 fa-sm dp-icon dp-popper-icon dp-icon__settings"
+    data-icon="cog"
+    data-prefix="fas"
     onClick={[Function]}
-  />
+    role="img"
+    style={Object {}}
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"
+      fill="currentColor"
+      style={Object {}}
+    />
+  </svg>
   <div />
 </span>
 `;

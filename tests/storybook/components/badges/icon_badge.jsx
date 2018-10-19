@@ -1,4 +1,5 @@
 import React from 'react';
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import IconBadge from 'Components/Badges/IconBadge';
@@ -8,23 +9,23 @@ storiesOf('Badges', module)
   .addDecorator(withKnobs)
   .add('with icon', () => (
     <div>
-      <IconBadge icon="envelope">
+      <IconBadge icon={faEnvelope}>
         1
       </IconBadge>
       &nbsp;&nbsp;&nbsp;
-      <IconBadge icon="envelope" type="success">
+      <IconBadge icon={faEnvelope} type="success">
         12
       </IconBadge>
       &nbsp;&nbsp;&nbsp;
-      <IconBadge icon={<Icon name="envelope" size="large" />} type="info">
+      <IconBadge icon={<Icon name={faEnvelope} size="large" />} type="info">
         12
       </IconBadge>
       &nbsp;&nbsp;&nbsp;
-      <IconBadge icon="envelope" type="warning" iconSize="large">
+      <IconBadge icon={faEnvelope} type="warning" iconSize="large">
         50
       </IconBadge>
       &nbsp;&nbsp;&nbsp;
-      <IconBadge icon={<Icon name="envelope" size="large" />} type="danger">
+      <IconBadge icon={<Icon name={faEnvelope} size="large" />} type="danger">
         100
       </IconBadge>
     </div>

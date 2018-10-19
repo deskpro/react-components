@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Group from 'Components/Forms/Group';
 import { fieldPropTypes } from 'redux-form';
+import Group from '../../Components/Forms/Group';
 
 /**
  * Renders a form group using @deskpro/react-components and redux-form.

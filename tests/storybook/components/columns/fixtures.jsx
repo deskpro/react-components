@@ -3,8 +3,8 @@ import './agent_filter.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faCog } from '@fortawesome/fontawesome-free-solid/index';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
 import { objectMap } from 'utils/objects';
 import {
   Column,

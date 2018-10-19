@@ -16,7 +16,7 @@ const header = <h1>Title</h1>;
 
 test('domIsReactComponent', () => {
   expect(dom.domIsReactComponent(Foo)).toBe(true);
-  expect(dom.domIsReactComponent(Bar)).toBe(true);
+  expect(dom.domIsReactComponent(Bar)).toBe(false);
 
   expect(dom.domIsReactComponent(<Foo />)).toBe(false);
   expect(dom.domIsReactComponent(<Bar />)).toBe(false);
@@ -35,7 +35,7 @@ test('domIsReactClassComponent', () => {
 });
 
 test('domIsReactFunctionComponent', () => {
-  expect(dom.domIsReactFunctionComponent(Bar)).toBe(true);
+  expect(dom.domIsReactFunctionComponent(Bar)).toBe(false);
 
   expect(dom.domIsReactFunctionComponent(Foo)).toBe(false);
   expect(dom.domIsReactFunctionComponent(bar)).toBe(false);

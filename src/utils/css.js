@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import { domIsReactComponent } from 'utils/dom';
+import { domIsReactComponent } from './dom';
 
 /**
  * Sets the width of toSet to the computed width of toGet

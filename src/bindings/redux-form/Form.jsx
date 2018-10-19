@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { reduxForm, propTypes } from 'redux-form';
-import { objectKeyFilter } from 'utils/objects';
+import { objectKeyFilter } from '../../utils/objects';
 
 /**
  * @see https://redux-form.com/7.0.4/docs/api/reduxform.md/

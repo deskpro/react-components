@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { objectKeyFilter } from 'utils/objects';
-import noop from 'utils/noop';
 import AutosizeTextarea from 'react-textarea-autosize';
+import { objectKeyFilter } from '../../utils/objects';
+import noop from '../../utils/noop';
 
 /**
  * Textarea component.

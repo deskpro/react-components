@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { objectKeyFilter } from 'utils/objects';
-import TextBadge from 'Components/Badges/TextBadge';
+import { objectKeyFilter } from '../../utils/objects';
+import TextBadge from './TextBadge';
 
 /**
  * Circle shaped badge designed to display small numbers.

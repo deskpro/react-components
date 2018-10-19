@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import SVGInline from 'react-svg-inline';
 import classNames from 'classnames';
-import newId from 'utils/newid';
-import { objectKeyFilter } from 'utils/objects';
-import Icon from 'Components/Icon';
+import newId from '../../utils/newid';
+import { objectKeyFilter } from '../../utils/objects';
+import Icon from '../Icon';
 // import LoadingSvg from 'styles/images/input_loading.svg';
 // import ValidatedSvg from 'styles/images/tick.svg';
 
@@ -14,8 +14,8 @@ class Input extends React.Component {
     className:   PropTypes.string,
     label:       PropTypes.string,
     id:          PropTypes.string,
-    icon:        PropTypes.string,
-    iconRight:   PropTypes.string,
+    icon:        PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    iconRight:   PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     prefix:      PropTypes.string,
     suffix:      PropTypes.string,
     validated:   PropTypes.bool,

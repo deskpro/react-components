@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { objectKeyFilter } from 'utils/objects';
+import { objectKeyFilter } from '../../utils/objects';
 
 /**
  * Renders a standard card.

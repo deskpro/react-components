@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Item } from 'Components/Columns';
-import { ToggleableList } from 'Components/Common';
+import Item from './Item';
+import { ToggleableList } from '../Common';
 
 const ItemList = ({ className, children, ...props }) => (
   <ToggleableList

@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'utils/noop';
-import { childrenRecursiveMap } from 'utils/props';
-import { objectKeyFilter } from 'utils/objects';
-import { stringInterpolate } from 'utils/strings';
-import { ListElement, SelectableList, Popper, Scrollbar, Highlighter } from 'Components/Common';
-import { Button } from 'Components/Buttons';
-import Input from 'Components/Forms/Input';
-import Icon from 'Components/Icon';
+import { faPlus, faSearch } from '@fortawesome/free-solid-svg-icons';
+import noop from '../../utils/noop';
+import { childrenRecursiveMap } from '../../utils/props';
+import { objectKeyFilter } from '../../utils/objects';
+import { stringInterpolate } from '../../utils/strings';
+import { ListElement, SelectableList, Popper, Scrollbar, Highlighter } from '../Common';
+import { Button } from '../Buttons';
+import Input from './Input';
+import Icon from '../Icon';
 
 /**
  * Provides a button which opens a search form.
@@ -231,7 +232,7 @@ export default class SearchButton extends Input {
           )}
           onClick={this.handleClick}
         >
-          <Icon name="plus" />
+          <Icon name={faPlus} />
         </Button>
         <Popper
           placement="bottom-start"
@@ -244,7 +245,7 @@ export default class SearchButton extends Input {
           <div>
             <Input
               {...inputProps}
-              icon="search"
+              icon={faSearch}
               ref={ref => (this.inputRef = ref)}
               value={value}
               onChange={this.handleChange}

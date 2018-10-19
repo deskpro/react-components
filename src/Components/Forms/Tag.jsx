@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Icon from 'Components/Icon';
-import { objectKeyFilter } from 'utils/objects';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import Icon from '../Icon';
+import { objectKeyFilter } from '../../utils/objects';
 
 class Tag extends React.PureComponent {
   static propTypes = {
@@ -37,7 +38,7 @@ class Tag extends React.PureComponent {
         {...objectKeyFilter(props, Tag.propTypes)}
       >
         {children}
-        { editable ? <span onClick={this.handleRemove}><Icon name="close" className="dp-tag__close" /></span> : null }
+        { editable ? <span onClick={this.handleRemove}><Icon name={faTimes} className="dp-tag__close" /></span> : null }
       </span>
     );
   }

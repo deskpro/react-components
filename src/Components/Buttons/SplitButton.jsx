@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'utils/noop';
-import { objectKeyFilter } from 'utils/objects';
-import { cssMatchComputedWidth } from 'utils/css';
-import Button from 'Components/Buttons/Button';
-import ButtonPopper from 'Components/Buttons/ButtonPopper';
-import Icon from 'Components/Icon';
-import { Popper } from 'Components/Common';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import noop from '../../utils/noop';
+import { objectKeyFilter } from '../../utils/objects';
+import { cssMatchComputedWidth } from '../../utils/css';
+import Button from './Button';
+import ButtonPopper from './ButtonPopper';
+import Icon from '../Icon';
+import { Popper } from '../Common';
 
 /**
  * Renders a button with a left side and right side, where clicking the right side opens
@@ -121,7 +122,7 @@ export default class SplitButton extends React.Component {
           disabled={disabled}
           onClick={this.handleRightClick}
         >
-          <Icon name="caret-down" />
+          <Icon name={faCaretDown} />
         </Button>
         <Popper
           placement="bottom-end"

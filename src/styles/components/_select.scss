@@ -64,10 +64,10 @@ $select-input-border-color: $dp-greyscale-300;
   .dp-icon {
     position: absolute;
     left: 6px;
-    z-index: $dp-zindex-bottom;
-    color: $dp-greyscale-400;
+    z-index: 1;
     font-size: $icon-size-s;
     top: calc(50% - #{$icon-size-s / 2});
+    color: $dp-greyscale-400;
   }
   &.dp-input--with-icon {
     position: relative;
@@ -83,7 +83,7 @@ $select-input-border-color: $dp-greyscale-300;
     }
   }
 
-  .is-disabled {
+  &.is-disabled {
     > .Select-control {
       border-color: $dp-greyscale-200;
       background-color: $dp-greyscale-150;

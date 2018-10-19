@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import onClickOutside from 'react-onclickoutside';
-import { objectKeyFilter } from 'utils/objects';
-import noop from 'utils/noop';
-import { Scrollbar } from 'Components/Common';
+import { objectKeyFilter } from '../../utils/objects';
+import noop from '../../utils/noop';
+import { Scrollbar } from '../Common';
 
 class CustomSelectContent extends React.Component {
   static propTypes = {

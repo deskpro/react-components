@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
 import classNames from 'classnames';
-import Icon from 'Components/Icon';
+import Icon from '../Icon';
 
 class Select extends React.Component {
   static propTypes = {
@@ -21,7 +21,7 @@ class Select extends React.Component {
     /**
      * Icon to display to the left of the text.
      */
-    icon:        PropTypes.string,
+    icon:        PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     /**
      * Allow multiple options to be selection.
      */
@@ -73,7 +73,8 @@ class Select extends React.Component {
             'dp-select',
             className,
             {
-              'dp-input--with-icon': icon
+              'dp-input--with-icon': icon,
+              'is-disabled':         props.disabled
             }
           )
         }

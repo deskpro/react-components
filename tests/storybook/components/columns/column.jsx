@@ -1,4 +1,5 @@
 import React from 'react';
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Avatar from 'Components/Avatar';
@@ -99,7 +100,7 @@ storiesOf('Columns', module)
       <div style={styles.column}>
         <DrawerList>
           <Drawer>
-            <Heading icon="heart">
+            <Heading icon={faHeart}>
               Awaiting Agent
             </Heading>
             <img src={logoImage} style={styles.image} alt="Logo" />

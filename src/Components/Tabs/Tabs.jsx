@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'utils/noop';
-import { objectKeyFilter } from 'utils/objects';
+import noop from '../../utils/noop';
+import { objectKeyFilter } from '../../utils/objects';
 
 /**
  * Renders a group of links as tabs.

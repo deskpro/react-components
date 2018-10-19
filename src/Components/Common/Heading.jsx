@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Icon from 'Components/Icon';
+import Icon from '../Icon';
 
 /**
  * A header element which can be displayed with an icon and count number.
@@ -12,12 +12,12 @@ const Heading = ({
   const childArray = React.Children.toArray(children);
 
   if (icon !== undefined) {
-    childArray.unshift((typeof icon === 'string')
-      ? <Icon key="icon" name={icon} />
-      : React.cloneElement(
+    childArray.unshift((React.isValidElement(icon))
+      ? React.cloneElement(
         icon,
         { key: 'icon' }
-      ));
+      )
+      : <Icon key="icon" name={icon} />);
   }
   if (controls !== undefined) {
     childArray.push(<span key="controls" className="dp-heading__controls">{controls}</span>);
@@ -41,7 +41,7 @@ Heading.propTypes = {
   /**
    * Icon to display to the left of the text.
    */
-  icon:      PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  icon:      PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.object]),
   /**
    * Number value to display to the right of the text.
    */

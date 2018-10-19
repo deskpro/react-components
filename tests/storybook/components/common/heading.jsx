@@ -1,4 +1,5 @@
 import React from 'react';
+import { faBug } from '@fortawesome/free-solid-svg-icons';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import withPropsCombinations from 'react-storybook-addon-props-combinations';
@@ -14,7 +15,7 @@ storiesOf('Common', module)
       Heading,
       {
         size:      [1, 2, 3, 4, 5, 6],
-        icon:      ['bug'],
+        icon:      [faBug],
         underline: [true, false],
         controls:  [<div><Icon name="gear" /><Icon name="refresh" /></div>]
       },

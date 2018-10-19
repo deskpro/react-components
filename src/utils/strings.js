@@ -1,5 +1,5 @@
-import { regexpEscape } from 'utils/regexp';
-import { objectForEach } from 'utils/objects';
+import { regexpEscape } from './regexp';
+import { objectForEach } from './objects';
 
 /**
  * Upper cases the first letter in a string

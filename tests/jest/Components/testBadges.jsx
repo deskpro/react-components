@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Icon } from 'Components/index';
 import { CircleBadge, DateBadge, IconBadge, TextBadge } from 'Components/Badges/index';
 
@@ -13,7 +14,7 @@ describe('>>> Badges --- Snapshot', () => {
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of IconBadge', () => {
-    const renderedValue = renderer.create(<IconBadge icon={<Icon name="envelope" size="large" />} type="info">
+    const renderedValue = renderer.create(<IconBadge icon={<Icon name={faEnvelope} size="large" />} type="info">
         12
     </IconBadge>).toJSON();
     expect(renderedValue).toMatchSnapshot();

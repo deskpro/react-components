@@ -3,9 +3,11 @@ Icon
 Renders an icon using the Font Awesome library.
 
 ```jsx
+import { faCog, faBug } from '@fortawesome/free-solid-svg-icons';
+
 <div>
-    <Icon name="cog" />
-    <Icon name="bug" size="xsmall" />
+    <Icon name={faCog} />
+    <Icon name={faBug} size="xsmall" />
     <Icon name="caret-down" rotate={180} />
     <Icon name="refresh" spin={true} />
 </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field, fieldPropTypes } from 'redux-form';
-import * as Forms from 'Components/Forms';
+import * as Forms from '../../Components/Forms';
 import FieldGroup from './FieldGroup';
 
 /**

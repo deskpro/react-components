@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { List } from 'Components/Common';
+import { List } from '../Common';
 
 /**
  * A container for one or more drawers.

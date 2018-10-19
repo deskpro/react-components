@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { faCog, faGlobe, faSync } from "@fortawesome/free-solid-svg-icons";
 import { Icon } from 'Components/index';
 import {
   Count,
@@ -30,7 +31,7 @@ describe('>>> Buttons --- Common', () => {
     expect(renderedValue).toMatchSnapshot();
   });
   it('+++capturing Snapshot of Heading', () => {
-    const renderedValue = renderer.create(<Heading size={3} icon="globe" underline controls={<div><Icon name="gear" /><Icon name="refresh" /></div>}>
+    const renderedValue = renderer.create(<Heading size={3} icon={faGlobe} underline controls={<div><Icon name={faCog} /><Icon name={faSync} /></div>}>
         Size 3
     </Heading>).toJSON();
     expect(renderedValue).toMatchSnapshot();

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import onClickOutside from 'react-onclickoutside';
-import noop from 'utils/noop';
-import { objectKeyFilter } from 'utils/objects';
-import Button from 'Components/Buttons/Button';
+import noop from '../../utils/noop';
+import { objectKeyFilter } from '../../utils/objects';
+import Button from './Button';
 
 const ClickOutsideButton = onClickOutside(Button);
 

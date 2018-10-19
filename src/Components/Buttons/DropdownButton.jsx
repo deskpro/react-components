@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'utils/noop';
-import { objectKeyFilter } from 'utils/objects';
-import { cssMatchComputedWidth } from 'utils/css';
-import Button from 'Components/Buttons/Button';
-import ButtonPopper from 'Components/Buttons/ButtonPopper';
-import { Popper } from 'Components/Common';
-import Icon from 'Components/Icon';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import noop from '../../utils/noop';
+import { objectKeyFilter } from '../../utils/objects';
+import { cssMatchComputedWidth } from '../../utils/css';
+import Button from './Button';
+import ButtonPopper from './ButtonPopper';
+import { Popper } from '../Common';
+import Icon from '../Icon';
 
 /**
  * Renders a button with a drop down icon and popper.
@@ -100,7 +101,7 @@ export default class DropdownButton extends React.Component {
         {...objectKeyFilter(props, DropdownButton.propTypes)}
       >
         {buttonChildren}
-        <Icon name="caret-down" />
+        <Icon name={faCaretDown} />
         <Popper
           placement="bottom-end"
           ref={ref => (this.popperRef = ref)}

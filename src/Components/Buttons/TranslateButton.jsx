@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { objectKeyFilter } from 'utils/objects';
-import ProgressButton from 'Components/Buttons/ProgressButton';
-import Icon from 'Components/Icon';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { objectKeyFilter } from '../../utils/objects';
+import ProgressButton from './ProgressButton';
+import Icon from '../Icon';
 
 /**
  * Renders a progress button along with globe icon.
@@ -45,7 +46,7 @@ export default class TranslateButton extends React.Component {
         className={classNames('dp-translate-button', `dp-translate-button--${size[0]}`, className)}
         {...objectKeyFilter(props, TranslateButton.propTypes)}
       >
-        <Icon name="globe" />
+        <Icon name={faGlobe} />
         <ProgressButton percent={percent} size={size}>
           {children}
         </ProgressButton>

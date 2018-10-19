@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import List from 'Components/Common/List';
-import ListElement from 'Components/Common/ListElement';
+import List from './List';
+import ListElement from './ListElement';
 
 /**
  * Groups a collection of ListElement components.

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { objectKeyFilter } from 'utils/objects';
-import { dateToMonth, MONTHS_SHORT } from 'utils/dates';
+import { objectKeyFilter } from '../../utils/objects';
+import { dateToMonth, MONTHS_SHORT } from '../../utils/dates';
 
 /**
  * Displays the month and day in badge or pill format.

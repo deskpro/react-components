@@ -1,4 +1,5 @@
 import React from 'react';
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
@@ -27,7 +28,7 @@ storiesOf('Forms', module)
           /><br />
           <Label>Basic with Icon</Label>
           <Select
-            icon="search"
+            icon={faSearch}
             name="select-2"
             onChange={action('Select change')}
             options={basicOptions}

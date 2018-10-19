@@ -70,10 +70,23 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Datepicker 1`] = `
   <div
     className="dp-input dp-input--with-icon--right"
   >
-    <i
-      className="fa fa-calendar dp-icon dp-icon--s"
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-calendar fa-w-14 fa-sm dp-icon"
+      data-icon="calendar"
+      data-prefix="fas"
       onClick={[Function]}
-    />
+      role="img"
+      style={Object {}}
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm436-44v-36c0-26.5-21.5-48-48-48h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v36c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
     <input
       id="id2"
       name="date1"
@@ -96,10 +109,23 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Datetimepicker 1`] = `
   <div
     className="dp-input dp-input--with-icon--right"
   >
-    <i
-      className="fa fa-calendar dp-icon dp-icon--s"
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-calendar fa-w-14 fa-sm dp-icon"
+      data-icon="calendar"
+      data-prefix="fas"
       onClick={[Function]}
-    />
+      role="img"
+      style={Object {}}
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm436-44v-36c0-26.5-21.5-48-48-48h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v36c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
     <input
       id="id3"
       name="date2"
@@ -224,16 +250,28 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Radio 1`] = `
 exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchButton 1`] = `
 <div
   className="dp-search-button test-class"
-  style={undefined}
 >
   <button
     className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-button--square"
     disabled={false}
     onClick={[Function]}
   >
-    <i
-      className="fa fa-plus dp-icon dp-icon--s"
-    />
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-plus fa-w-14 fa-sm dp-icon"
+      data-icon="plus"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
   </button>
   <div />
 </div>
@@ -242,15 +280,27 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchButton 1`] = `
 exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchInline 1`] = `
 <div
   className="dp-search-inline test-class"
-  style={undefined}
 >
   <div
     className="dp-input dp-input--with-icon"
   >
-    <i
-      className="fa fa-search dp-icon dp-icon--s"
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-search fa-w-16 fa-sm dp-icon"
+      data-icon="search"
+      data-prefix="fas"
       onClick={[Function]}
-    />
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
     <input
       id="id9"
       onBlur={[Function]}
@@ -269,14 +319,12 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchInline 1`] = `
 exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSelect 1`] = `
 <div
   className="dp-search-select test-class"
-  style={undefined}
 >
   <div
     className="dp-select"
   >
     <div
       className="Select dp-select is-clearable is-searchable Select--single"
-      style={undefined}
     >
       <div
         className="Select-control"
@@ -285,9 +333,8 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSelect 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
-        style={undefined}
       >
-        <span
+        <div
           className="Select-multi-value-wrapper"
           id="react-select-2--value"
         >
@@ -306,14 +353,9 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSelect 1`] = `
           >
             <input
               aria-activedescendant="react-select-2--value"
-              aria-describedby={undefined}
               aria-expanded="false"
               aria-haspopup="false"
-              aria-label={undefined}
-              aria-labelledby={undefined}
               aria-owns=""
-              className={undefined}
-              id={undefined}
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -325,7 +367,6 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSelect 1`] = `
                   "width": "5px",
                 }
               }
-              tabIndex={undefined}
               value=""
             />
             <div
@@ -344,7 +385,7 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSelect 1`] = `
               
             </div>
           </div>
-        </span>
+        </div>
         <span
           className="Select-arrow-zone"
           onMouseDown={[Function]}
@@ -363,7 +404,6 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSelect 1`] = `
 exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSubmit 1`] = `
 <div
   className="dp-search-submit test-class"
-  style={undefined}
 >
   <div
     className="dp-input"
@@ -380,9 +420,22 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSubmit 1`] = `
     disabled={false}
     onClick={[Function]}
   >
-    <i
-      className="fa fa-search dp-icon dp-icon--s"
-    />
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-search fa-w-16 fa-sm dp-icon"
+      data-icon="search"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
   </button>
   <div />
 </div>
@@ -394,7 +447,6 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Select 1`] = `
 >
   <div
     className="Select dp-select test-class is-clearable is-searchable Select--single"
-    style={undefined}
   >
     <div
       className="Select-control"
@@ -403,9 +455,8 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Select 1`] = `
       onTouchEnd={[Function]}
       onTouchMove={[Function]}
       onTouchStart={[Function]}
-      style={undefined}
     >
-      <span
+      <div
         className="Select-multi-value-wrapper"
         id="react-select-3--value"
       >
@@ -424,14 +475,9 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Select 1`] = `
         >
           <input
             aria-activedescendant="react-select-3--value"
-            aria-describedby={undefined}
             aria-expanded="false"
             aria-haspopup="false"
-            aria-label={undefined}
-            aria-labelledby={undefined}
             aria-owns=""
-            className={undefined}
-            id={undefined}
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -443,7 +489,6 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Select 1`] = `
                 "width": "5px",
               }
             }
-            tabIndex={undefined}
             value=""
           />
           <div
@@ -462,7 +507,7 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Select 1`] = `
             
           </div>
         </div>
-      </span>
+      </div>
       <span
         className="Select-arrow-zone"
         onMouseDown={[Function]}
@@ -485,9 +530,22 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Tag 1`] = `
   <span
     onClick={[Function]}
   >
-    <i
-      className="fa fa-close dp-icon dp-icon--s dp-tag__close"
-    />
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-times fa-w-11 fa-sm dp-icon dp-tag__close"
+      data-icon="times"
+      data-prefix="fas"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 352 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
   </span>
 </span>
 `;
@@ -510,9 +568,22 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of TagInput 1`] = `
         <span
           onClick={[Function]}
         >
-          <i
-            className="fa fa-close dp-icon dp-icon--s dp-tag__close"
-          />
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-times fa-w-11 fa-sm dp-icon dp-tag__close"
+            data-icon="times"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 352 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
         </span>
       </span>
       <span
@@ -522,9 +593,22 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of TagInput 1`] = `
         <span
           onClick={[Function]}
         >
-          <i
-            className="fa fa-close dp-icon dp-icon--s dp-tag__close"
-          />
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-times fa-w-11 fa-sm dp-icon dp-tag__close"
+            data-icon="times"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 352 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
         </span>
       </span>
       <div
@@ -571,9 +655,22 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of TagSet 1`] = `
     <span
       onClick={[Function]}
     >
-      <i
-        className="fa fa-close dp-icon dp-icon--s dp-tag__close"
-      />
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-times fa-w-11 fa-sm dp-icon dp-tag__close"
+        data-icon="times"
+        data-prefix="fas"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 352 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
     </span>
   </span>
   <span
@@ -583,25 +680,50 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of TagSet 1`] = `
     <span
       onClick={[Function]}
     >
-      <i
-        className="fa fa-close dp-icon dp-icon--s dp-tag__close"
-      />
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-times fa-w-11 fa-sm dp-icon dp-tag__close"
+        data-icon="times"
+        data-prefix="fas"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 352 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
     </span>
   </span>
   <div
     className="dp-search-button"
     onChange={[Function]}
     onKeyDown={[Function]}
-    style={undefined}
   >
     <button
       className="dp-button dp-button--l dp-button--primary dp-button--shape-default dp-button--square"
       disabled={false}
       onClick={[Function]}
     >
-      <i
-        className="fa fa-plus dp-icon dp-icon--s"
-      />
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-plus fa-w-14 fa-sm dp-icon"
+        data-icon="plus"
+        data-prefix="fas"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
     </button>
     <div />
   </div>

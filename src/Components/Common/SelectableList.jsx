@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'utils/noop';
-import { objectKeyFilter } from 'utils/objects';
-import { List } from 'Components/Common';
+import noop from '../../utils/noop';
+import { objectKeyFilter } from '../../utils/objects';
+import List from './List';
 
 /**
  * A list that can be scrolled through using arrow keys.

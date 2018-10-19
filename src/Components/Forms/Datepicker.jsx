@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'utils/noop';
-import { cssMatchComputedWidth } from 'utils/css';
-import { dateNumberOfDaysInMonth, dateCalendarDays, getShortDateFormat, DAYS, MONTHS } from 'utils/dates';
-import { stringUpperFirst } from 'utils/strings';
-import { objectKeyFilter } from 'utils/objects';
-import { Popper } from 'Components/Common';
-import Input from 'Components/Forms/Input';
-import Select from 'Components/Forms/Select';
-import Icon from 'Components/Icon';
+import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+import noop from '../../utils/noop';
+import { cssMatchComputedWidth } from '../../utils/css';
+import { dateNumberOfDaysInMonth, dateCalendarDays, getShortDateFormat, DAYS, MONTHS } from '../../utils/dates';
+import { stringUpperFirst } from '../../utils/strings';
+import { objectKeyFilter } from '../../utils/objects';
+import { Popper } from '../Common';
+import Input from './Input';
+import Select from './Select';
+import Icon from '../Icon';
 
 /**
  * Renders an input with drop down date picker.
@@ -468,7 +469,7 @@ export default class Datepicker extends React.Component {
         style={style}
       >
         <Input
-          iconRight="calendar"
+          iconRight={faCalendar}
           ref={ref => (this.inputRef = ref)}
           placeholder={placeholder}
           onFocus={this.handleInputFocus}

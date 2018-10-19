@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faStar, faStarHalf } from '@fortawesome/fontawesome-free-solid/index';
-import { faStar as faStarO } from '@fortawesome/fontawesome-free-regular';
-import noop from 'utils/noop';
-import { objectKeyFilter } from 'utils/objects';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
+import { faStar as faStarO } from '@fortawesome/free-regular-svg-icons';
+import noop from '../utils/noop';
+import { objectKeyFilter } from '../utils/objects';
 
 /**
  * A single star in the group of stars

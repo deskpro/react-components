@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { objectKeyFilter } from 'utils/objects';
-import CircleBadge from 'Components/Badges/CircleBadge';
-import Icon from 'Components/Icon';
+import { objectKeyFilter } from '../../utils/objects';
+import CircleBadge from './CircleBadge';
+import Icon from '../Icon';
 
 /**
  * Icon which displays a CircleBadge on top of it.
@@ -15,9 +15,9 @@ const IconBadge = ({
     className={classNames('dp-icon-badge', className)}
     {...objectKeyFilter(props, IconBadge.propTypes)}
   >
-    {typeof icon === 'string'
-      ? <Icon name={icon} size={iconSize} />
-      : icon
+    {React.isValidElement(icon)
+      ? icon
+      : <Icon name={icon} size={iconSize} />
     }
     <CircleBadge type={type} max={max}>
       {children}
@@ -29,7 +29,7 @@ IconBadge.propTypes = {
   /**
    * Name of the icon to display or an icon component.
    */
-  icon:      PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  icon:      PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.element]).isRequired,
   /**
    * Displays the icon at the given size
    */

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { objectKeyFilter } from 'utils/objects';
-import List from 'Components/Common/List';
+import { objectKeyFilter } from '../../utils/objects';
+import List from './List';
 
 /**
  * A unordered list which can be filtered by query values.

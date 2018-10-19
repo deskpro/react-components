@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import newId from 'utils/newid';
-import noop from 'utils/noop';
-import { objectKeyFilter } from 'utils/objects';
-import { Heading, ListElement } from 'Components/Common';
-import Icon from 'Components/Icon';
+import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import newId from '../../utils/newid';
+import noop from '../../utils/noop';
+import { objectKeyFilter } from '../../utils/objects';
+import { Heading, ListElement } from '../Common';
+import Icon from '../Icon';
 
 /**
  * Component of the Drawer component.
@@ -146,7 +147,7 @@ export default class Drawer extends React.Component {
         aria-hidden
         onClick={this.toggle}
         className="dp-column-drawer__arrow"
-        name={opened ? 'caret-up' : 'caret-down'}
+        name={opened ? faCaretUp : faCaretDown}
         title={opened ? 'Close' : 'Open'}
       />
     );

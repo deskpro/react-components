@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { objectKeyFilter } from 'utils/objects';
-import Select from 'Components/Forms/Select';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { objectKeyFilter } from '../../utils/objects';
+import Select from './Select';
 
 /**
  * Renders a search box as a select drop down menu.
@@ -39,7 +40,7 @@ export default class SearchSelect extends Select {
 
     return (
       <div className={classNames('dp-search-select', className)} style={style}>
-        <Select icon="search" {...inputProps} options={options} />
+        <Select icon={faSearch} {...inputProps} options={options} />
       </div>
     );
   }
