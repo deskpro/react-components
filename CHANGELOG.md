@@ -1,3 +1,8 @@
+## v1.4.0-beta.0 - 2018-10-19
+
+* [FEATURE] - Use rollup for publishing
+* [FEATURE] - Remove font-awesome 4.7
+
 ## v1.3.35 - 2018-09-15
 
 * [FIX] - Fix styling on Colorpicker
