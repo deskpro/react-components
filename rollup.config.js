@@ -1,7 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
-import scss from 'rollup-plugin-scss';
+import sass from 'rollup-plugin-sass';
 import copy from 'rollup-plugin-copy';
 import tildeImporter from 'node-sass-tilde-importer';
 
@@ -87,9 +87,12 @@ module.exports = [
       name:   'reactComponentsStyle'
     },
     plugins: [
-      scss({
+      sass({
         importer: tildeImporter,
-        output:   'dist/main.css'
+        output:   'dist/main.css',
+        options:  {
+          data: '$dp-styles-font-path: \'./fonts/\';'
+        }
       })
     ]
   }
