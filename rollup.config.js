@@ -50,7 +50,8 @@ module.exports = [
       globals: {
         react:       'React',
         'react-dom': 'ReactDOM'
-      }
+      },
+      exports: 'named'
     },
     external: ['react', 'react-dom']
   },
