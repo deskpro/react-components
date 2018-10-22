@@ -16,7 +16,8 @@ module.exports = [
       globals:   {
         react:       'React',
         'react-dom': 'ReactDOM'
-      }
+      },
+      exports: 'named'
     },
     plugins: [
       babel({
