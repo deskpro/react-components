@@ -2,6 +2,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import scss from 'rollup-plugin-scss';
+import copy from 'rollup-plugin-copy';
 import tildeImporter from 'node-sass-tilde-importer';
 
 module.exports = [
@@ -27,6 +28,15 @@ module.exports = [
       commonjs({
         include:   'node_modules/**',
         sourceMap: false
+      }),
+      copy({
+        'src/styles/fonts/Courier10PitchBT-Bold.eot':   'dist/fonts/Courier10PitchBT-Bold.eot',
+        'src/styles/fonts/Courier10PitchBT-Bold.svg':   'dist/fonts/Courier10PitchBT-Bold.svg',
+        'src/styles/fonts/Courier10PitchBT-Bold.ttf':   'dist/fonts/Courier10PitchBT-Bold.ttf',
+        'src/styles/fonts/Courier10PitchBT-Bold.woff':  'dist/fonts/Courier10PitchBT-Bold.woff',
+        'src/styles/fonts/Courier10PitchBT-Roman.eot':  'dist/fonts/Courier10PitchBT-Roman.eot',
+        'src/styles/fonts/Courier10PitchBT-Roman.ttf':  'dist/fonts/Courier10PitchBT-Roman.ttf',
+        'src/styles/fonts/Courier10PitchBT-Roman.woff': 'dist/fonts/Courier10PitchBT-Roman.woff'
       })
     ],
     external: ['react', 'react-dom']
