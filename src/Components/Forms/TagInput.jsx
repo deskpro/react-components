@@ -10,12 +10,14 @@ class TagInput extends React.Component {
     tags:       PropTypes.array.isRequired,
     inputProps: PropTypes.object,
     editable:   PropTypes.bool,
+    name:       PropTypes.string,
     options:    PropTypes.array,
     style:      PropTypes.object,
     onChange:   PropTypes.func,
   };
   static defaultProps = {
     editable:   true,
+    name:       '',
     inputProps: { placeholder: 'Add a label' },
     options:    [],
     style:      {},
@@ -42,7 +44,8 @@ class TagInput extends React.Component {
   };
 
   handleChange = (tags) => {
-    this.props.onChange(tags);
+    const { name } = this.props;
+    this.props.onChange(tags, name);
   };
 
   renderInputComponent = props => <input type="text" {...props} ref={(c) => { this.autoSuggestInput = c; }} />;

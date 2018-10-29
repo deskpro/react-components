@@ -9,6 +9,7 @@ class Toggle extends React.Component {
     onChange:  PropTypes.func,
     id:        PropTypes.string,
     className: PropTypes.string,
+    name:      PropTypes.string,
     value:     PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     children:  PropTypes.node,
   };
@@ -18,23 +19,29 @@ class Toggle extends React.Component {
     checked:   false,
     disabled:  false,
     className: '',
+    name:      '',
     id:        null,
     value:     '',
     children:  null,
   };
 
   onClick = () => {
-    const { checked, disabled, onChange } = this.props;
+    const {
+      checked,
+      disabled,
+      onChange,
+      name
+    } = this.props;
     if (disabled) {
       return;
     }
 
-    onChange(!checked);
+    onChange(!checked, name);
   };
 
   render() {
     const {
-      children, value, id, checked, disabled, className
+      children, value, id, checked, disabled, className, name
     } = this.props;
 
     return  (
@@ -52,6 +59,7 @@ class Toggle extends React.Component {
           type="checkbox"
           value={value}
           id={id}
+          name={name}
           checked={checked}
           onChange={() => {}}
           className="hidden right"

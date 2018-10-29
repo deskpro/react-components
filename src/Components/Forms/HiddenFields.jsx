@@ -43,6 +43,10 @@ export default class HiddenFields extends React.Component {
      */
     className:      PropTypes.string,
     /**
+     * Name of the element.
+     */
+    name:           PropTypes.string,
+    /**
      * Children to render.
      */
     children:       PropTypes.node
@@ -56,6 +60,7 @@ export default class HiddenFields extends React.Component {
     labelShow:      'Show optional fields',
     labelHide:      'Hide optional fields',
     className:      '',
+    name:           '',
     children:       '',
     onChange:       noop
   };
@@ -69,9 +74,10 @@ export default class HiddenFields extends React.Component {
   }
 
   handleClick = (e) => {
+    const { name } = this.props;
     e.preventDefault();
     this.setState({ opened: !this.state.opened }, () => {
-      this.props.onChange(this.state.opened);
+      this.props.onChange(this.state.opened, name);
     });
   };
 

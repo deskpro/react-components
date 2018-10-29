@@ -6,6 +6,7 @@ import { SketchPicker } from 'react-color';
 class Colorpicker extends React.Component {
   static propTypes = {
     className: PropTypes.string,
+    name:      PropTypes.string,
     value:     PropTypes.oneOfType([
       PropTypes.shape({
         r: PropTypes.number.isRequired,
@@ -27,6 +28,7 @@ class Colorpicker extends React.Component {
 
   static defaultProps = {
     className: '',
+    name:      '',
     value:     {
       r: 70,
       g: 150,
@@ -51,9 +53,10 @@ class Colorpicker extends React.Component {
   };
 
   handleClose = () => {
+    const { name } = this.props;
     this.setState({ displayColorPicker: false });
 
-    this.props.onChange(this.state.color);
+    this.props.onChange(this.state.color, name);
   };
 
   handleChange = (color) => {

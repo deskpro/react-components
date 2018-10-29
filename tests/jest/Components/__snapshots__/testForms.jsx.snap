@@ -750,6 +750,7 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Toggle 1`] = `
     checked={false}
     className="hidden right"
     id={null}
+    name="radio1"
     onChange={[Function]}
     type="checkbox"
     value="test"
