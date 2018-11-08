@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import Highlighter from 'Components/Common/Highlighter';
+import Highlighter from '../../../../src/Components/Common/Highlighter';
 
 storiesOf('Common', module)
   .addDecorator(withKnobs)

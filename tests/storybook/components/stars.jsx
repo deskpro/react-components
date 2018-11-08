@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Stars from 'Components/Stars';
+import Stars from '../../../src/Components/Stars';
 
 storiesOf('Stars', module)
   .add('standard', () => (

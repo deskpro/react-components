@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Form from 'Components/Forms/Form';
-import { Input, Label } from 'Components/Forms';
-import { Button } from 'Components/Buttons';
+import Form from '../../../../src/Components/Forms/Form';
+import { Input, Label } from '../../../../src/Components/Forms';
+import { Button } from '../../../../src/Components/Buttons';
 
 storiesOf('Forms', module)
   .add('Form', () => (

@@ -3,8 +3,8 @@ import { faBug } from '@fortawesome/free-solid-svg-icons';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import withPropsCombinations from 'react-storybook-addon-props-combinations';
-import { Button } from 'Components/Buttons';
-import Icon from 'Components/Icon';
+import { Button } from '../../../../src/Components/Buttons';
+import Icon from '../../../../src/Components/Icon';
 /* eslint-disable react/prop-types */
 
 storiesOf('Buttons', module)

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
-import { Label, Radio } from 'Components/Forms';
+import { Label, Radio } from '../../../../src/Components/Forms';
 
 storiesOf('Forms', module)
   .addDecorator(withKnobs)

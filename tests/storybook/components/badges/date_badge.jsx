@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import DateBadge from 'Components/Badges/DateBadge';
+import DateBadge from '../../../../src/Components/Badges/DateBadge';
 
 storiesOf('Badges', module)
   .addDecorator(withKnobs)

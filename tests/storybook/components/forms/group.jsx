@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Group, Input } from 'Components/Forms';
+import { Group, Input } from '../../../../src/Components/Forms';
 
 storiesOf('Forms', module)
   .add('Group', () => (

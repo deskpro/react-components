@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
-import { Input, Label, HiddenFields } from 'Components/Forms';
+import { Input, Label, HiddenFields } from '../../../../src/Components/Forms';
 
 storiesOf('Forms', module)
   .add(

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
-import { Input, Label } from 'Components/Forms';
+import { Input, Label } from '../../../../src/Components/Forms';
 import { faCalendar, faComment, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 storiesOf('Forms', module)

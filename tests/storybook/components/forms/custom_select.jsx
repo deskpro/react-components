@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
-import CustomSelect from 'Components/Forms/CustomSelect';
-import { List, ListElement } from 'Components/Common';
-import { Checkbox } from 'Components/Forms';
+import CustomSelect from '../../../../src/Components/Forms/CustomSelect';
+import { List, ListElement } from '../../../../src/Components/Common';
+import { Checkbox } from '../../../../src/Components/Forms';
 
 
 const multiOptions = [

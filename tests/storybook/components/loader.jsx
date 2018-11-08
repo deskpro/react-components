@@ -3,7 +3,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import withPropsCombinations from 'react-storybook-addon-props-combinations';
-import Loader from 'Components/Loader';
+import Loader from '../../../src/Components/Loader';
 
 storiesOf('Loader', module)
   .add(

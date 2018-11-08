@@ -3,8 +3,8 @@ import { faBug } from '@fortawesome/free-solid-svg-icons';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import withPropsCombinations from 'react-storybook-addon-props-combinations';
-import Heading from 'Components/Common/Heading';
-import Icon from 'Components/Icon';
+import Heading from '../../../../src/Components/Common/Heading';
+import Icon from '../../../../src/Components/Icon';
 /* eslint-disable react/prop-types */
 
 storiesOf('Common', module)

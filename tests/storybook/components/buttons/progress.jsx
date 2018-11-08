@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { objectForEach } from 'utils/objects';
-import { numberRandom } from 'utils/numbers';
-import { ProgressButton } from 'Components/Buttons';
+import { objectForEach } from '../../../../src/utils/objects';
+import { numberRandom } from '../../../../src/utils/numbers';
+import { ProgressButton } from '../../../../src/Components/Buttons';
 
 class Story extends React.Component {
   constructor(props) {

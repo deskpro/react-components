@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
-import { objectMap } from 'utils/objects';
+import { objectMap } from '../../../../src/utils/objects';
 import {
   Column,
   DrawerList,
@@ -14,7 +14,7 @@ import {
   Item,
   ItemFilter,
   ItemSettings
-} from 'Components/Columns';
+} from '../../../../src/Components/Columns';
 import {
   Heading,
   Subheading,
@@ -24,12 +24,12 @@ import {
   ListElementGroup,
   QueryableList,
   Scrollbar
-} from 'Components/Common';
-import * as Forms from 'Components/Forms';
-import Urgency from 'Components/Urgency';
-import Avatar from 'Components/Avatar';
-import Icon from 'Components/Icon';
-import { objectKeyFilter } from 'utils/objects';
+} from '../../../../src/Components/Common';
+import * as Forms from '../../../../src/Components/Forms';
+import Urgency from '../../../../src/Components/Urgency';
+import Avatar from '../../../../src/Components/Avatar';
+import Icon from '../../../../src/Components/Icon';
+import { objectKeyFilter } from '../../../../src/utils/objects';
 
 import avatarImage1 from '../../static/avatar-1.jpg';
 import avatarImage2 from '../../static/avatar-2.jpg';

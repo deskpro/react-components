@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from "@storybook/addon-info";
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import withPropsCombinations from 'react-storybook-addon-props-combinations';
-import { Button, ConfirmButton } from 'Components/Buttons';
+import { Button, ConfirmButton } from '../../../../src/Components/Buttons';
 /* eslint-disable react/prop-types */
 
 storiesOf('Buttons', module)

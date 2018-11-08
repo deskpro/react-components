@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Progress from 'Components/Progress';
-import ProgressBar from 'Components/ProgressBar';
+import Progress from '../../../src/Components/Progress';
+import ProgressBar from '../../../src/Components/ProgressBar';
 
 class Story extends React.Component {
   constructor(props) {

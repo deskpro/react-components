@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from "@storybook/addon-info";
 import { withKnobs, boolean } from '@storybook/addon-knobs';
-import { Toggle } from 'Components/Forms';
+import { Toggle } from '../../../../src/Components/Forms';
 
 storiesOf('Forms', module)
   .addDecorator(withKnobs)

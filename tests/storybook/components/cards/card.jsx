@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import Card from 'Components/Cards/Card';
-import { List, ListElement } from 'Components/Common';
-import Avatar from 'Components/Avatar';
+import Card from '../../../../src/Components/Cards/Card';
+import { List, ListElement } from '../../../../src/Components/Common';
+import Avatar from '../../../../src/Components/Avatar';
 
 import avatarImage1 from '../../static/avatar-1.jpg';
 import avatarImage2 from '../../static/avatar-2.jpg';

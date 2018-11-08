@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Scrollbar from 'Components/Common/Scrollbar';
+import Scrollbar from '../../../../src/Components/Common/Scrollbar';
 
 storiesOf('Common', module)
   .add('Scrollbar', () => {

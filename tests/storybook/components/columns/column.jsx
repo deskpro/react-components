@@ -2,10 +2,10 @@ import React from 'react';
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Avatar from 'Components/Avatar';
-import Icon from 'Components/Icon';
-import { DrawerList, Drawer, ItemList, Item } from 'Components/Columns';
-import { Heading, Count } from 'Components/Common';
+import Avatar from '../../../../src/Components/Avatar';
+import Icon from '../../../../src/Components/Icon';
+import { DrawerList, Drawer, ItemList, Item } from '../../../../src/Components/Columns';
+import { Heading, Count } from '../../../../src/Components/Common';
 
 import { TestColumn } from './fixtures';
 import logoImage from '../../static/logo.png';

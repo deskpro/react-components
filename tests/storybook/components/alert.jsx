@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import Alert from 'Components/Alert';
+import Alert from '../../../src/Components/Alert';
 
 storiesOf('Alert', module)
   .addDecorator(withKnobs)

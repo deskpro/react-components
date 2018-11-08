@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Count from 'Components/Common/Count';
+import Count from '../../../../src/Components/Common/Count';
 
 storiesOf('Common', module)
   .add('Count', () => (

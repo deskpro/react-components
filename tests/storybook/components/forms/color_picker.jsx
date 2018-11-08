@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select } from "@storybook/addon-knobs";
-import { Colorpicker, Label } from 'Components/Forms';
+import { Colorpicker, Label } from '../../../../src/Components/Forms';
 
 storiesOf('Forms', module)
   .addDecorator(withKnobs)

@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
-import { DropdownButton, ButtonPopper } from 'Components/Buttons';
+import { DropdownButton, ButtonPopper } from '../../../../src/Components/Buttons';
 
 storiesOf('Buttons', module)
   .addDecorator(withKnobs)

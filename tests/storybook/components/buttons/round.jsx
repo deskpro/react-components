@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button } from 'Components/Buttons';
-import Icon from 'Components/Icon';
+import { Button } from '../../../../src/Components/Buttons';
+import Icon from '../../../../src/Components/Icon';
 
 storiesOf('Buttons', module)
   .add('with shape round', () => (

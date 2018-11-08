@@ -1,7 +1,7 @@
 /* eslint-disable react/require-default-props */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ListElement } from 'Components/Common';
+import { ListElement } from '../../../../src/Components/Common';
 
 export const TestSelectable = ({
   style, selected, children, ...props

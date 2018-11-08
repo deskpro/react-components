@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { Input, Label, SearchInline } from 'Components/Forms';
+import { Input, Label, SearchInline } from '../../../../src/Components/Forms';
 
 const results = [
   'Android feedback',

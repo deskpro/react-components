@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Tabs, TabLink } from 'Components/Tabs';
-import Section from 'Components/Section';
+import { Tabs, TabLink } from '../../../../src/Components/Tabs';
+import Section from '../../../../src/Components/Section';
 
 class Story extends React.Component {
   constructor(props) {

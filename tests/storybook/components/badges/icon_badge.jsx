@@ -2,8 +2,8 @@ import React from 'react';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import IconBadge from 'Components/Badges/IconBadge';
-import Icon from 'Components/Icon';
+import IconBadge from '../../../../src/Components/Badges/IconBadge';
+import Icon from '../../../../src/Components/Icon';
 
 storiesOf('Badges', module)
   .addDecorator(withKnobs)

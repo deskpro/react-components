@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
-import { Label, Select } from 'Components/Forms';
+import { Label, Select } from '../../../../src/Components/Forms';
 
 const basicOptions = [
   { value: 'one', label: 'One' },

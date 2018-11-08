@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Datepicker, Datetimepicker } from 'Components/Forms';
+import { Datepicker, Datetimepicker } from '../../../../src/Components/Forms';
 
 class Story extends React.Component {
   static propTypes = {

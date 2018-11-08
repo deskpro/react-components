@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from "@storybook/addon-info";
 import { withKnobs, boolean } from '@storybook/addon-knobs';
-import { Checkbox } from 'Components/Forms';
+import { Checkbox } from '../../../../src/Components/Forms';
 
 storiesOf('Forms', module)
   .addDecorator(withKnobs)

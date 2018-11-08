@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { List, ListElement, ListElementGroup, QueryableList, ToggleableList } from 'Components/Common';
+import { List, ListElement, ListElementGroup, QueryableList, ToggleableList } from '../../../../src/Components/Common';
 import { TestSelectable, TestDrawer } from './fixtures';
 
 storiesOf('Lists', module)

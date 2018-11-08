@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { Input, Label, SearchSubmit } from 'Components/Forms';
+import { Input, Label, SearchSubmit } from '../../../../src/Components/Forms';
 
 import avatarImage1 from '../../static/avatar-1.jpg';
 import avatarImage2 from '../../static/avatar-2.jpg';

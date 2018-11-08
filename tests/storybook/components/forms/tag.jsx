@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Tag, TagSet, TagInput } from 'Components/Forms';
+import { Tag, TagSet, TagInput } from '../../../../src/Components/Forms';
 
 const availableTags = [
   'Agents',
