@@ -1,4 +1,8 @@
-## v1.4.0-beta.0 - 2018-10-19
+## v1.4.1 - 2018-11-09
+
+* [FIX] - Fix utils compilation
+
+## v1.4.0 - 2018-11-08
 
 * [FEATURE] - Use rollup for publishing
 * [FEATURE] - Remove font-awesome 4.7

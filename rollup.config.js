@@ -54,6 +54,18 @@ module.exports = [
       },
       exports: 'named'
     },
+    plugins: [
+      babel({
+        exclude: 'node_modules/**'
+      }),
+      resolve({
+        extensions: ['.js', '.jsx']
+      }),
+      commonjs({
+        include:   'node_modules/**',
+        sourceMap: false
+      }),
+    ],
     external: ['react', 'react-dom']
   },
   {
