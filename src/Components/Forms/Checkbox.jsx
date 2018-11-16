@@ -67,7 +67,7 @@ class Checkbox extends React.Component {
 
   render() {
     const {
-      children, className, value, style, disabled, readOnly, checked, ...props
+      children, className, value, style, disabled, readOnly, checked, innerRef, ...props
     } = this.props;
     return (
       <div
@@ -89,6 +89,7 @@ class Checkbox extends React.Component {
           onChange={this.handleChange}
           disabled={disabled || readOnly}
           checked={checked}
+          ref={innerRef}
           {...objectKeyFilter(props, Checkbox.propTypes)}
         />
         <label htmlFor={this.id} className="dp-input--checkbox__checkbox" />
@@ -98,4 +99,4 @@ class Checkbox extends React.Component {
   }
 }
 
-export default Checkbox;
+export default React.forwardRef((props, ref) => <Checkbox innerRef={ref} {...props} />);

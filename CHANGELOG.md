@@ -1,3 +1,7 @@
+## v1.4.2 - 2018-11-16
+
+* [FEATURE] - Add forwarded ref to List and ListElement
+
 ## v1.4.1 - 2018-11-09
 
 * [FIX] - Fix utils compilation

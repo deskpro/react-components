@@ -14,10 +14,13 @@ class List extends React.Component {
   };
 
   render() {
-    const { children, className, ...elementProps } = this.props;
+    const {
+      children, className, innerRef, ...elementProps
+    } = this.props;
     return (
       <ul
         className={classNames('dp-list', className)}
+        ref={innerRef}
         {...elementProps}
       >
         {children}
@@ -25,4 +28,4 @@ class List extends React.Component {
     );
   }
 }
-export default List;
+export default React.forwardRef((props, ref) => <List innerRef={ref} {...props} />);
