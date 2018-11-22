@@ -77,10 +77,10 @@ $dp-column-item-height:    24px;
 
     .dp-column-drawer__arrow {
       order: 2;
-      flex-grow: 1;
       cursor: pointer;
       text-align: right;
       padding-right: 0;
+      margin-left: auto;
     }
   }
 

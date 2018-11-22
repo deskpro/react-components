@@ -1,3 +1,7 @@
+## v1.4.3 - 2018-11-22
+
+* [FEATURE] - Improve caret position in columns
+
 ## v1.4.2 - 2018-11-16
 
 * [FEATURE] - Add forwarded ref to List and ListElement
