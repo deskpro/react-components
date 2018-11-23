@@ -82,9 +82,10 @@ class Select extends React.Component {
 
   render() {
     const {
-      icon, name, className, ...elementProps
+      icon, name, className, value, ...elementProps
     } = this.props;
     const props = Object.assign({}, elementProps);
+    const selectValue = typeof value === 'string' ? this.props.options.find(option => option.value === value) : value;
     delete props.onChange;
     return (
       <div
@@ -106,6 +107,7 @@ class Select extends React.Component {
           classNamePrefix="react-select"
           components={{ SelectContainer, DropdownIndicator }}
           onChange={this.handleChange}
+          value={selectValue}
           {...props}
         />
       </div>
