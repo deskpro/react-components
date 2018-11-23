@@ -1,8 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactSelect from 'react-select';
+import ReactSelect, { components } from 'react-select';
 import classNames from 'classnames';
 import Icon from '../Icon';
+
+const SelectContainer = ({ children, ...props }) => (
+  <components.SelectContainer
+    {...props}
+    className={classNames(
+      'react-select',
+      {
+        'react-select__is-focused': props.isFocused,
+        'react-select__is-open':    props.selectProps.menuIsOpen
+      }
+    )}
+  >
+    {children}
+  </components.SelectContainer>
+);
+
+
+const DropdownIndicator = () => (
+  <div className="react-select__dropdown-indicator" />
+);
 
 class Select extends React.Component {
   static propTypes = {
@@ -83,6 +103,8 @@ class Select extends React.Component {
         <ReactSelect
           name={name}
           className={classNames('dp-select', className)}
+          classNamePrefix="react-select"
+          components={{ SelectContainer, DropdownIndicator }}
           onChange={this.handleChange}
           {...props}
         />

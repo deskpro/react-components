@@ -11,8 +11,6 @@ $select-option-color: $dp-greyscale-850;
 $select-input-border-color: $dp-greyscale-300;
 
 .dp-select {
-  @import "~react-select/scss/default.scss";
-
   &, * {
     box-sizing: border-box;
   }
@@ -22,13 +20,34 @@ $select-input-border-color: $dp-greyscale-300;
   height: 24px;
   font-size: $font-size-m;
 
-  .Select-control {
-    height: 24px;
-    border-radius: $rad-size-m;
+  &:focus {
+    outline: none;
   }
 
-  .Select-placeholder,
-  &.Select--single > .Select-control .Select-value {
+  .react-select__control {
+    height: 24px;
+    min-height: 24px;
+    border-radius: $rad-size-m;
+    padding-left: 8px;
+    &:hover {
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+      border-color: $dp-sonic-primary;
+    }
+    &:focus {
+      border-color: $dp-sonic-primary;
+    }
+  }
+
+  .react-select__value-container {
+    padding: 0;
+  }
+
+  .react-select__indicator-separator {
+    width: 0;
+  }
+
+  .react-select__placeholder,
+  .react-select__control .react-select__single-value {
     line-height: 22px;
     height: 22px;
   }
@@ -40,25 +59,50 @@ $select-input-border-color: $dp-greyscale-300;
     }
   }
 
-  .Select-arrow {
+  .react-select__dropdown-indicator {
     border-width: 3px 3px 1.5px;
+    border-color: #999 transparent transparent;
+    border-style: solid;
+    border-collapse: separate;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .react-select__is-open .react-select__dropdown-indicator {
+    border-width: 1.5px 3px 3px;
+    border-color: transparent transparent #999;
   }
 
   // placeholder
-  .Select-placeholder,
-  .Select--single > .Select-control .Select-value {
+  .react-select__placeholder,
+  .react-select__control .react-select__single-value {
     font-style: italic;
   }
 
-  .Select-menu-outer {
+  .react-select__menu {
+    margin: -1px 0 0;
+    z-index: 2;
+  }
+
+  .react-select__menu-list {
+    padding: 0;
+  }
+
+  .react-select__menu {
     border-color: $dp-sonic-primary;
-    border-top: 0;
-    .Select-option {
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-radius: 0 0 4px 4px;
+    box-shadow: none;
+    .react-select__option {
       padding: 5px 8px;
     }
   }
-  &.Select.is-open > .Select-control {
+  .react-select__is-open > .react-select__control {
     border-color: $dp-sonic-primary;
+    border-radius: 4px 4px 0 0;
   }
 
   .dp-icon {
@@ -72,8 +116,7 @@ $select-input-border-color: $dp-greyscale-300;
   &.dp-input--with-icon {
     position: relative;
     flex: 1 0 auto;
-    .Select-control,
-    .Select-placeholder,
+    .react-select__control,
     .Select-value,
     .multiselect-native-select button {
       padding-left: 24px;
@@ -84,10 +127,10 @@ $select-input-border-color: $dp-greyscale-300;
   }
 
   &.is-disabled {
-    > .Select-control {
+    > .react-select .react-select__control {
       border-color: $dp-greyscale-200;
       background-color: $dp-greyscale-150;
-      .Select-placeholder {
+      .react-select__placeholder {
         color: $dp-greyscale-350;
       }
     }

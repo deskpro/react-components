@@ -24,6 +24,7 @@ storiesOf('Forms', module)
             name="select-1"
             onChange={action('Select change')}
             options={basicOptions}
+            menuIsOpen={boolean('Open', null)}
             disabled={boolean('Disabled', false)}
           /><br />
           <Label>Basic with Icon</Label>

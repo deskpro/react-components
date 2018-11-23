@@ -324,77 +324,89 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSelect 1`] = `
     className="dp-select"
   >
     <div
-      className="Select dp-select is-clearable is-searchable Select--single"
+      className="css-10nd86i react-select"
+      onKeyDown={[Function]}
     >
       <div
-        className="Select-control"
-        onKeyDown={[Function]}
+        className="css-vj8t7z react-select__control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
       >
         <div
-          className="Select-multi-value-wrapper"
-          id="react-select-2--value"
+          className="css-1hwfws3 react-select__value-container"
         >
           <div
-            className="Select-placeholder"
+            className="css-1492t68 react-select__placeholder"
           >
             Please select
           </div>
           <div
-            className="Select-input"
-            style={
-              Object {
-                "display": "inline-block",
-              }
-            }
+            className="css-1g6gooi"
           >
-            <input
-              aria-activedescendant="react-select-2--value"
-              aria-expanded="false"
-              aria-haspopup="false"
-              aria-owns=""
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              required={false}
-              role="combobox"
-              style={
-                Object {
-                  "boxSizing": "content-box",
-                  "width": "5px",
-                }
-              }
-              value=""
-            />
             <div
+              className="react-select__input"
               style={
                 Object {
-                  "height": 0,
-                  "left": 0,
-                  "overflow": "scroll",
-                  "position": "absolute",
-                  "top": 0,
-                  "visibility": "hidden",
-                  "whiteSpace": "pre",
+                  "display": "inline-block",
                 }
               }
             >
-              
+              <input
+                aria-autocomplete="list"
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                disabled={false}
+                id="react-select-2-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
             </div>
           </div>
         </div>
-        <span
-          className="Select-arrow-zone"
-          onMouseDown={[Function]}
+        <div
+          className="css-1wy0on6 react-select__indicators"
         >
           <span
-            className="Select-arrow"
-            onMouseDown={[Function]}
+            className="css-d8oujb react-select__indicator-separator"
           />
-        </span>
+          <div
+            className="react-select__dropdown-indicator"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -446,77 +458,89 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Select 1`] = `
   className="dp-select test-class"
 >
   <div
-    className="Select dp-select test-class is-clearable is-searchable Select--single"
+    className="css-10nd86i react-select"
+    onKeyDown={[Function]}
   >
     <div
-      className="Select-control"
-      onKeyDown={[Function]}
+      className="css-vj8t7z react-select__control"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
     >
       <div
-        className="Select-multi-value-wrapper"
-        id="react-select-3--value"
+        className="css-1hwfws3 react-select__value-container"
       >
         <div
-          className="Select-placeholder"
+          className="css-1492t68 react-select__placeholder"
         >
           Please select
         </div>
         <div
-          className="Select-input"
-          style={
-            Object {
-              "display": "inline-block",
-            }
-          }
+          className="css-1g6gooi"
         >
-          <input
-            aria-activedescendant="react-select-3--value"
-            aria-expanded="false"
-            aria-haspopup="false"
-            aria-owns=""
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            required={false}
-            role="combobox"
-            style={
-              Object {
-                "boxSizing": "content-box",
-                "width": "5px",
-              }
-            }
-            value=""
-          />
           <div
+            className="react-select__input"
             style={
               Object {
-                "height": 0,
-                "left": 0,
-                "overflow": "scroll",
-                "position": "absolute",
-                "top": 0,
-                "visibility": "hidden",
-                "whiteSpace": "pre",
+                "display": "inline-block",
               }
             }
           >
-            
+            <input
+              aria-autocomplete="list"
+              autoCapitalize="none"
+              autoComplete="off"
+              autoCorrect="off"
+              disabled={false}
+              id="react-select-3-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              spellCheck="false"
+              style={
+                Object {
+                  "background": 0,
+                  "border": 0,
+                  "boxSizing": "content-box",
+                  "color": "inherit",
+                  "fontSize": "inherit",
+                  "opacity": 1,
+                  "outline": 0,
+                  "padding": 0,
+                  "width": "1px",
+                }
+              }
+              tabIndex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
           </div>
         </div>
       </div>
-      <span
-        className="Select-arrow-zone"
-        onMouseDown={[Function]}
+      <div
+        className="css-1wy0on6 react-select__indicators"
       >
         <span
-          className="Select-arrow"
-          onMouseDown={[Function]}
+          className="css-d8oujb react-select__indicator-separator"
         />
-      </span>
+        <div
+          className="react-select__dropdown-indicator"
+        />
+      </div>
     </div>
   </div>
 </div>
