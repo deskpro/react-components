@@ -85,7 +85,7 @@ class Select extends React.Component {
       icon, name, className, value, ...elementProps
     } = this.props;
     const props = Object.assign({}, elementProps);
-    const selectValue = typeof value === 'string' ? this.props.options.find(option => option.value === value) : value;
+    const selectValue = typeof value === 'object' ? value : this.props.options.find(option => option.value === value);
     delete props.onChange;
     return (
       <div
