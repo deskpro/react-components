@@ -1,3 +1,7 @@
+## v1.4.4 - 2018-11-29
+
+* [FIX] - Fix style broken on Toggle
+
 ## v1.4.3 - 2018-11-29
 
 * [FEATURE] - Improve caret position in columns

@@ -62,7 +62,7 @@ class Toggle extends React.Component {
           name={name}
           checked={checked}
           onChange={() => {}}
-          className="hidden right"
+          className="right"
         />
         <label onClick={this.onClick} htmlFor={id}>
           {children}
