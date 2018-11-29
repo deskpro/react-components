@@ -1,4 +1,4 @@
-## v1.4.3 - 2018-11-22
+## v1.4.3 - 2018-11-29
 
 * [FEATURE] - Improve caret position in columns
 * [FEATURE] - Update react-select to v2
