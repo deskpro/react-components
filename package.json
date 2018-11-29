@@ -1,6 +1,6 @@
 {
   "name": "@deskpro/react-components",
-  "version": "1.4.4-beta.2",
+  "version": "1.4.4-beta.3",
   "description": "Deskpro React Components",
   "main": "dist/index.js",
   "homepage": "https://github.com/deskpro/react-components",
@@ -133,7 +133,7 @@
   },
   "peerDependencies": {
     "react": "^15.6.2 || ^16.0.0-alpha",
-    "moment": "^2.20.0"
+    "moment": ">=2.20.0"
   },
   "jest": {
     "collectCoverageFrom": [
