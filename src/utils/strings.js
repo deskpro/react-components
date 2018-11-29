@@ -5,9 +5,12 @@ import { objectForEach } from './objects';
  * Upper cases the first letter in a string
  *
  * @param {string} str The string to transform
- * @returns {string}
+ * @returns {string|null}
  */
 export function stringUpperFirst(str) {
+  if (!str) {
+    return null;
+  }
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
