@@ -5,23 +5,25 @@ A header element which can be displayed with an icon and count number.
 ![Heading example](../../assets/images/heading-1.png)
 
 ```jsx
+import { faBug } from '@fortawesome/free-solid-svg-icons';
+
 <div>
-    <Heading size={1} icon="bug" controls={[<Icon name="gear" />, <Icon name="refresh" />]}>
+    <Heading size={1} icon={faBug} controls={[<Icon name="gear" />, <Icon name="refresh" />]}>
         Heading
     </Heading>
-    <Heading size={2} icon="bug" controls={[<Icon name="gear" />, <Icon name="refresh" />]}>
+    <Heading size={2} icon={faBug} controls={[<Icon name="gear" />, <Icon name="refresh" />]}>
         Heading
     </Heading>
-    <Heading size={3} icon="bug" controls={[<Icon name="gear" />, <Icon name="refresh" />]}>
+    <Heading size={3} icon={faBug} controls={[<Icon name="gear" />, <Icon name="refresh" />]}>
         Heading
     </Heading>
-    <Heading size={4} icon="bug" controls={[<Icon name="gear" />, <Icon name="refresh" />]}>
+    <Heading size={4} icon={faBug} controls={[<Icon name="gear" />, <Icon name="refresh" />]}>
         Heading
     </Heading>
-    <Heading size={5} icon="bug" controls={[<Icon name="gear" />, <Icon name="refresh" />]}>
+    <Heading size={5} icon={faBug} controls={[<Icon name="gear" />, <Icon name="refresh" />]}>
         Heading
     </Heading>
-    <Heading size={6} icon="bug" controls={[<Icon name="gear" />, <Icon name="refresh" />]}>
+    <Heading size={6} icon={faBug} controls={[<Icon name="gear" />, <Icon name="refresh" />]}>
         Heading
     </Heading>
 </div>

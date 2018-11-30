@@ -1,5 +1,5 @@
 import React from 'react';
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Avatar from '../../../../src/Components/Avatar';
@@ -41,12 +41,12 @@ storiesOf('Columns', module)
             <Count>99</Count>
           </Item>
           <Item>
-            <Icon name="star" style={styles.item.iconBlue} />
+            <Icon name={faStar} style={styles.item.iconBlue} />
             <Count>1</Count>
             Bug
           </Item>
           <Item>
-            <Icon name="star" style={styles.item.iconGreen} />
+            <Icon name={faStar} style={styles.item.iconGreen} />
             <Count>1</Count>
             Green
           </Item>

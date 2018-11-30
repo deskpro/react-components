@@ -3,20 +3,20 @@ Icon
 Renders an icon using the Font Awesome library.
 
 ```jsx
-import { faCog, faBug } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faBug, faCaretDown, faSync } from '@fortawesome/free-solid-svg-icons';
 
 <div>
     <Icon name={faCog} />
     <Icon name={faBug} size="xsmall" />
-    <Icon name="caret-down" rotate={180} />
-    <Icon name="refresh" spin={true} />
+    <Icon name={faCaretDown} rotate={180} />
+    <Icon name={faSync} spin={true} />
 </div>
 ```
 
 ### Props
 
 **name={string}**  
-Name of the icon from the [Font Awesome icon list](http://fontawesome.io/icons/).
+Class of the icon from the [Font Awesome icon list](http://fontawesome.io/icons/).
 
 **size={string}**  
 Displays the icon at the given size. Possible values are: 'xsmall', 'small', 'medium', 'large', and 'xlarge'.
@@ -39,7 +39,7 @@ import Icon from 'Components/Icon';
 
 const App = ({spin}) => (
     <div>
-        <Icon name="refresh" spin={spin} />
+        <Icon name={faSync} spin={spin} />
     </div>
 );
 

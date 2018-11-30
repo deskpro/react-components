@@ -40,6 +40,7 @@ Adds the `dp-drawer-item--selected` class to the element when it's in a "selecte
 ```jsx
 import React from 'react';
 import { render } from 'react-dom';
+import { faEnvelope, faStar } from '@fortawesome/free-solid-svg-icons';
 import {
   Column,
   Heading,
@@ -64,7 +65,7 @@ const styles = {
 const App = () => (
   <Column>
     <Heading>
-      <Icon name="envelope"/>
+      <Icon name={faEnvelope} />
       Tickets
     </Heading>
     <DrawerList>
@@ -74,15 +75,15 @@ const App = () => (
         </Heading>
         <ItemList>
           <Item count={1}>
-            <Icon name="star" style={styles.iconBlue} />
+            <Icon name={faStar} style={styles.iconBlue} />
             Bug
           </Item>
           <Item count={1}>
-            <Icon name="star" style={styles.iconGreen} />
+            <Icon name={faStar} style={styles.iconGreen} />
             Green
           </Item>
           <Item count={3}>
-            <Icon name="star" style={styles.iconYellow} />
+            <Icon name={faStar} style={styles.iconYellow} />
             Yellow
           </Item>
         </ItemList>

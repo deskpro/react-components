@@ -5,20 +5,22 @@ Icon which displays a CircleBadge on top of it.
 ![IconBadge example](../../assets/images/icon-badge-1.png)
 
 ```jsx
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 <div>
-    <IconBadge icon="envelope">
+    <IconBadge icon={faEnvelope}>
         1
     </IconBadge>
-    <IconBadge icon="envelope" type="success">
+    <IconBadge icon={faEnvelope} type="success">
         12
     </IconBadge>
-    <IconBadge icon={<Icon name="envelope" size="large" />} type="info">
+    <IconBadge icon={<Icon name={faEnvelope} size="large" />} type="info">
         12
     </IconBadge>
-    <IconBadge icon="envelope" type="warning" iconSize="large">
+    <IconBadge icon={faEnvelope} type="warning" iconSize="large">
         50
     </IconBadge>
-    <IconBadge icon={<Icon name="envelope" size="large" />} type="danger" max={99}>
+    <IconBadge icon={<Icon name={faEnvelope} size="large" />} type="danger" max={99}>
         100
     </IconBadge>
 </div>
@@ -27,7 +29,7 @@ Icon which displays a CircleBadge on top of it.
 ### Props
 
 **icon={string}**  
-Name of the icon from the [Font Awesome icon list](http://fontawesome.io/icons/).
+Class of the icon from the [Font Awesome icon list](http://fontawesome.io/icons/).
 
 **iconSize={string}**  
 Displays the icon at the given size. Possible values are: 'xsmall', 'small', 'medium', 'large', and 'xlarge'.

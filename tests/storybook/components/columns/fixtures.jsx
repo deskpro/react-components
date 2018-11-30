@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faStar } from '@fortawesome/free-solid-svg-icons';
 import { objectMap } from '../../../../src/utils/objects';
 import {
   Column,
@@ -34,6 +34,7 @@ import { objectKeyFilter } from '../../../../src/utils/objects';
 import avatarImage1 from '../../static/avatar-1.jpg';
 import avatarImage2 from '../../static/avatar-2.jpg';
 import { Button } from "../../../../src/Components";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 const styles = {
   column: {
@@ -432,16 +433,16 @@ export class TestColumn extends React.Component {
           <Item onSelect={() => this.onSelectMode({type: 'star', star: 1})}>
             Bug
             <Count>2</Count>
-            <Icon name="star" style={styles.item.iconBlue} />
+            <Icon name={faStar} style={styles.item.iconBlue} />
           </Item>
           <Item onSelect={() => this.onSelectMode({type: 'star', star: 2})}>
             Green
-            <Icon name="star" style={styles.item.iconGreen} />
+            <Icon name={faStar} style={styles.item.iconGreen} />
             <ItemSettings />
           </Item>
           <Item onSelect={() => this.onSelectMode({type: 'star', star: 3})}>
             Yellow
-            <Icon name="star" style={styles.item.iconYellow} />
+            <Icon name={faStar} style={styles.item.iconYellow} />
             <ItemSettings />
           </Item>
           <ListElement className="dp-drawer-item">
@@ -489,7 +490,7 @@ export class TestColumn extends React.Component {
     return (
       <Column style={{ width: '220px' }}>
         <Heading>
-          <Icon name="envelope-o" style={styles.column.icon} />
+          <Icon name={faEnvelope} style={styles.column.icon} />
           Tickets
         </Heading>
         <DrawerList>

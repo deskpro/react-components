@@ -10,9 +10,11 @@ A navigation column containing expandable drawers.
 ![Column example](../../assets/images/column-1.png)
 
 ```jsx
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 <Column>
   <Heading>
-    <Icon name="envelope"/>
+    <Icon name={faEnvelope} />
     Tickets
   </Heading>
   <DrawerList>
@@ -150,6 +152,7 @@ Adds `dp-column` class to the column container.
 import React from 'react';
 import { render } from 'react-dom';
 import { Heading, Count } from 'Components/Common';
+import { faEnvelope, faStar } from '@fortawesome/free-solid-svg-icons';
 import {
   Column,
   DrawerList,
@@ -180,7 +183,7 @@ class App extends React.Component {
       <Column>
         <Heading>
           Tickets
-          <Icon name="envelope-o" style={styles.iconEnvelope} />
+          <Icon name={faEnvelope} style={styles.iconEnvelope} />
         </Heading>
         <DrawerList>
           {this.renderDrawerAgents()}
@@ -270,17 +273,17 @@ class App extends React.Component {
           <Item>
             Bug
             <Count>1</Count>
-            <Icon name="star" style={styles.iconBlue} />
+            <Icon name={faStar} style={styles.iconBlue} />
           </Item>
           <Item>
             Green
             <Count>1</Count>
-            <Icon name="star" style={styles.iconGreen} />
+            <Icon name={faStar} style={styles.iconGreen} />
           </Item>
           <Item>
             Yellow
             <Count>3</Count>
-            <Icon name="star" style={styles.iconYellow} />
+            <Icon name={faStar} style={styles.iconYellow} />
           </Item>
         </ItemList>
       </Drawer>

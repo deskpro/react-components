@@ -1,5 +1,6 @@
 ## v1.4.4 - 2018-11-29
 
+* [FIX] - Fix FontAwesome 5 icons
 * [FIX] - Fix style broken on Toggle
 * [FIX] - Move moment to peerDependencies
 

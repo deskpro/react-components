@@ -16,17 +16,19 @@ Standard button.
 
 
 ```jsx
+import { faBug } from '@fortawesome/free-solid-svg-icons';
+
 <div>
     <Button type="primary" size="large">
-        <Icon name="bug" />
+        <Icon name={faBug} />
         Button
     </Button>
     <Button type="secondary" size="large">
-        <Icon name="bug" />
+        <Icon name={faBug} />
         Button
     </Button>
     <Button type="cta" size="large">
-        <Icon name="bug" />
+        <Icon name={faBug} />
         Button
     </Button>
 </div>
@@ -35,15 +37,17 @@ Standard button.
 ![Button example](../../assets/images/button-3.png)
 
 ```jsx
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
 <div>
     <Button shape="square" type="secondary" size="small">
-        <Icon name="plus" />
+        <Icon name={faPlus} />
     </Button>&nbsp;
     <Button shape="square" type="secondary" size="medium">
-        <Icon name="plus" />
+        <Icon name={faPlus} />
     </Button>&nbsp;
     <Button shape="square" type="secondary" size="large">
-        <Icon name="plus" />
+        <Icon name={faPlus} />
     </Button>
 </div>
 ```
@@ -51,15 +55,17 @@ Standard button.
 ![Button example](../../assets/images/button-4.png)
 
 ```jsx
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
 <div>
     <Button shape="round" type="secondary" size="small">
-        <Icon name="plus" />
+        <Icon name={faPlus} />
     </Button>&nbsp;
     <Button shape="round" type="secondary" size="medium">
-        <Icon name="plus" />
+        <Icon name={faPlus} />
     </Button>&nbsp;
     <Button shape="round" type="secondary" size="large">
-        <Icon name="plus" />
+        <Icon name={faPlus} />
     </Button>
 </div>
 ```

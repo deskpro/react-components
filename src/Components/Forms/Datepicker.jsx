@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight, faCalendar } from '@fortawesome/free-solid-svg-icons';
 import noop from '../../utils/noop';
 import { cssMatchComputedWidth } from '../../utils/css';
 import { dateNumberOfDaysInMonth, dateCalendarDays, getShortDateFormat, DAYS, MONTHS } from '../../utils/dates';
@@ -356,13 +356,13 @@ export default class Datepicker extends React.Component {
       <div className="dp-datepicker__calendar">
         <div className="dp-datepicker__calendar__month">
           <div className="dp-datepicker__calendar__month__icon">
-            <Icon name="angle-left" onClick={this.handlePrevClick} />
+            <Icon name={faAngleLeft} onClick={this.handlePrevClick} />
           </div>
           <div className="dp-datepicker__calendar__month__text">
             {stringUpperFirst(months[date.getMonth()])} {date.getFullYear()}
           </div>
           <div className="dp-datepicker__calendar__month__icon">
-            <Icon name="angle-right" onClick={this.handleNextClick} />
+            <Icon name={faAngleRight} onClick={this.handleNextClick} />
           </div>
         </div>
         <div className="dp-datepicker__calendar__weekdays">
