@@ -97,6 +97,9 @@ export default class Datepicker extends React.Component {
   constructor(props) {
     super(props);
 
+    console.log(props);
+    console.log(props.months);
+
     let { date } = props;
     let hours = null;
     let minutes = null;
@@ -345,6 +348,9 @@ export default class Datepicker extends React.Component {
     const { months, days } = this.props;
     const { date } = this.state;
 
+    console.log(months);
+    console.log(months);
+
     let week = days.slice(0);
     if (this.firstWeekDay > 0) {
       const end = week.splice(0, this.firstWeekDay);
@@ -397,6 +403,8 @@ export default class Datepicker extends React.Component {
         weekDays.push(monthDays.slice(i, i + 7));
       }
     }
+
+    console.log(weekDays);
 
     return (
       <div>
