@@ -4,6 +4,7 @@
 * [FIX] - Fix FontAwesome 5 icons
 * [FIX] - Fix style broken on Toggle
 * [FIX] - Move moment to peerDependencies
+* [FIX] - Hide Scrollbars tracks when not needed
 
 ## v1.4.3 - 2018-11-29
 

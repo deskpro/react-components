@@ -10,6 +10,7 @@ const Scrollbar = ({ className, children, ...props }) => (
   <Scrollbars
     className={classNames('dp-scrollbar', className)}
     autoHeight
+    hideTracksWhenNotNeeded
     {...props}
     renderTrackVertical={p => <div {...p} className="dp-scrollbar__track-vertical" />}
     renderThumbVertical={p => <div {...p} className="dp-scrollbar__thumb-vertical" />}
