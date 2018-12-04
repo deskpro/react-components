@@ -644,6 +644,18 @@
     padding-left: 8px;
     border: 1px solid $dp-greyscale-300;
   }
+  /******************************
+    Textarea disabled
+*******************************/
+  & textarea:disabled,
+  & textarea:read-only {
+    background-color: $dp-greyscale-150;
+    border-color: $dp-greyscale-200;
+    color: $dp-greyscale-350;
+  }
+  & input:read-only {
+    color: $dp-greyscale-750
+  }
 }
 
 /******************************

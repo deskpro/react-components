@@ -5,6 +5,7 @@
 * [FIX] - Fix style broken on Toggle
 * [FIX] - Move moment to peerDependencies
 * [FIX] - Hide Scrollbars tracks when not needed
+* [FIX] - Fix disabled or readonly textareas styling
 
 ## v1.4.3 - 2018-11-29
 
