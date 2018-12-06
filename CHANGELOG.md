@@ -1,4 +1,4 @@
-## v1.4.4 - 2018-11-29
+## v1.4.4 - 2018-12-06
 
 * [FIX] - Fix DatePicker style
 * [FIX] - Fix FontAwesome 5 icons

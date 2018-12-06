@@ -53,9 +53,23 @@ export default class Textarea extends React.Component {
     let textarea;
 
     if (autosize) {
-      textarea = <AutosizeTextarea name={name} value={value} onChange={this.handleChange} {...objectKeyFilter(props, Textarea.propTypes)} />;
+      textarea = (
+        <AutosizeTextarea
+          name={name}
+          value={value}
+          onChange={this.handleChange}
+          {...objectKeyFilter(props, Textarea.propTypes)}
+        />
+      );
     } else {
-      textarea = <textarea name={name} value={value} onChange={this.handleChange} {...objectKeyFilter(props, Textarea.propTypes)} />;
+      textarea = (
+        <textarea
+          name={name}
+          value={value}
+          onChange={this.handleChange}
+          {...objectKeyFilter(props, Textarea.propTypes)}
+        />
+      );
     }
 
     return (
