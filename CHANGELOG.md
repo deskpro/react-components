@@ -1,3 +1,7 @@
+## v1.4.5 - 2018-12-07
+
+* [FIX] - Add focus on Select
+
 ## v1.4.4 - 2018-12-06
 
 * [FIX] - Fix DatePicker style

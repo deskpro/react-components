@@ -80,6 +80,12 @@ class Select extends React.Component {
     this.props.onChange(value, this.props.name);
   };
 
+  focus = () => {
+    if (this.reactSelect) {
+      this.reactSelect.focus();
+    }
+  };
+
   render() {
     const {
       icon, name, className, value, ...elementProps
@@ -108,6 +114,7 @@ class Select extends React.Component {
           components={{ SelectContainer, DropdownIndicator }}
           onChange={this.handleChange}
           value={selectValue}
+          ref={(c) => { this.reactSelect = c; }}
           {...props}
         />
       </div>
