@@ -1,5 +1,6 @@
 ## v1.4.5 - 2018-12-07
 
+* [FIX] - Update of value on ColorPicker
 * [FIX] - Add focus on Select
 
 ## v1.4.4 - 2018-12-06

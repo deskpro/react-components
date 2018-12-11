@@ -44,10 +44,12 @@ class Story extends React.Component {
 }
 
 storiesOf('Search', module)
+  .addDecorator(withInfo)
   .add(
     'Select',
-    withInfo('SearchSelect component usage.')(
-      () => <Story />
-    )
+    () => <Story />,
+    {
+      info: 'SearchSelect component usage.'
+    }
   );
 

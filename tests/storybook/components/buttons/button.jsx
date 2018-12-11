@@ -8,6 +8,7 @@ import { Button, ConfirmButton } from '../../../../src/Components/Buttons';
 /* eslint-disable react/prop-types */
 
 storiesOf('Buttons', module)
+  .addDecorator(withInfo)
   .addDecorator(withKnobs)
   .add(
     'Button',
@@ -44,16 +45,22 @@ storiesOf('Buttons', module)
           );
         }
       }
-    )
+    ),
+    {
+      info: {
+        disable: true
+      }
+    }
   )
   .add(
     'with confirm',
-    withInfo('This is the basic usage of a input with the label passed as a property.')(
-      () => (
-        <div>
-          <ConfirmButton onClick={action('Delete action')}>Delete</ConfirmButton>
-        </div>
-      )
-    )
+    () => (
+      <div>
+        <ConfirmButton onClick={action('Delete action')}>Delete</ConfirmButton>
+      </div>
+    ),
+    {
+      info: 'This is the basic usage of a input with the label passed as a property.'
+    }
   );
 

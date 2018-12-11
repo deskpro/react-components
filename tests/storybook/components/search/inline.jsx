@@ -44,18 +44,20 @@ class Story extends React.Component {
 }
 
 storiesOf('Search', module)
+  .addDecorator(withInfo)
   .add(
     'Inline',
-    withInfo('SearchInline component usage.')(
-      () => (
-        <div>
-          <Story />
-          <div style={{ marginTop: 10 }}>
-            <Label>FOO</Label>
-            <Input />
-          </div>
+    () => (
+      <div>
+        <Story />
+        <div style={{ marginTop: 10 }}>
+          <Label>FOO</Label>
+          <Input />
         </div>
-      )
-    )
+      </div>
+    ),
+    {
+      info: 'SearchInline component usage.'
+    }
   );
 

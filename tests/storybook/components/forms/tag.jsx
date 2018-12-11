@@ -54,11 +54,13 @@ class Story extends React.Component {
 }
 
 storiesOf('Forms', module)
+  .addDecorator(withInfo)
   .addDecorator(withKnobs)
   .add(
     'Tag',
-    withInfo('A tag to qualify an element.')(
-      () => <Story />
-    )
+    () => <Story />,
+    {
+      info: 'A tag to qualify an element.'
+    }
   );
 

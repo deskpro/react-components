@@ -65,19 +65,27 @@ class Colorpicker extends React.Component {
 
   render() {
     const { className, format } = this.props;
-    const { color } = this.state;
+    const color = this.props.value;
 
     let background;
     switch (format) {
       case 'hex':
         background = color;
         break;
-      case 'hsl':
-        background = `hsl(${color.h}, ${color.s}, ${color.l}, ${color.a}`;
+      case 'hsl': {
+        const {
+          h = 0, s = 0, l = 0, a = 1
+        } = color;
+        background = `hsl(${h}, ${s}, ${l}, ${a}`;
         break;
+      }
       case 'rgb':
-      default:
-        background = `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
+      default: {
+        const {
+          r = 0, g = 0, b = 0, a = 1
+        } = color;
+        background = `rgba(${r}, ${g}, ${b}, ${a})`;
+      }
     }
 
     return (

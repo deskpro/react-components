@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select } from "@storybook/addon-knobs";
+import { withKnobs, select, text } from "@storybook/addon-knobs";
 import { Colorpicker, Label } from '../../../../src/Components/Forms';
 
 storiesOf('Forms', module)
@@ -13,7 +13,7 @@ storiesOf('Forms', module)
         <Label>Color</Label>
         <Colorpicker
           onChange={action('onChange')}
-          format={select('Format', { Hexadecimal: 'hex', RGB: 'rgb', HSL: 'hsl'}, 'hex')}
+          format={select('Format', { Hexadecimal: 'hex', RGB: 'rgb', HSL: 'hsl'}, 'rgb')}
         />
       </div>
     )

@@ -12,31 +12,33 @@ const basicOptions = [
 ];
 
 storiesOf('Forms', module)
+  .addDecorator(withInfo)
   .addDecorator(withKnobs)
   .add(
     'Select',
-    withInfo('This is the select and its variation.')(
-      () => (
-        <div>
-          <h3>Selects</h3>
-          <Label>Basic</Label>
-          <Select
-            name="select-1"
-            onChange={action('Select change')}
-            options={basicOptions}
-            menuIsOpen={boolean('Open', null)}
-            disabled={boolean('Disabled', false)}
-          /><br />
-          <Label>Basic with Icon</Label>
-          <Select
-            icon={faSearch}
-            name="select-2"
-            onChange={action('Select change')}
-            options={basicOptions}
-            disabled={boolean('Disabled', false)}
-          />
-        </div>
-      )
-    )
+    () => (
+      <div>
+        <h3>Selects</h3>
+        <Label>Basic</Label>
+        <Select
+          name="select-1"
+          onChange={action('Select change')}
+          options={basicOptions}
+          menuIsOpen={boolean('Open', null)}
+          disabled={boolean('Disabled', false)}
+        /><br />
+        <Label>Basic with Icon</Label>
+        <Select
+          icon={faSearch}
+          name="select-2"
+          onChange={action('Select change')}
+          options={basicOptions}
+          disabled={boolean('Disabled', false)}
+        />
+      </div>
+    ),
+    {
+      info: 'This is the select and its variation.'
+    }
   );
 
