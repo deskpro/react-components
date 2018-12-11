@@ -44,7 +44,6 @@ class Colorpicker extends React.Component {
 
     this.state = {
       displayColorPicker: false,
-      color:              props.value,
     };
   }
 
@@ -55,12 +54,10 @@ class Colorpicker extends React.Component {
   handleClose = () => {
     const { name } = this.props;
     this.setState({ displayColorPicker: false });
-
-    this.props.onChange(this.state.color, name);
   };
 
   handleChange = (color) => {
-    this.setState({ color: color[this.props.format] });
+    this.props.onChange(this.state.color, color[this.props.format]);
   };
 
   render() {
@@ -101,7 +98,7 @@ class Colorpicker extends React.Component {
         { this.state.displayColorPicker ? (
           <div className="dp-colorpicker--popover">
             <div className="dp-colorpicker--popover--cover" onClick={this.handleClose} />
-            <SketchPicker color={this.state.color} onChange={this.handleChange} />
+            <SketchPicker color={color} onChange={this.handleChange} />
           </div>
         ) : null }
       </div>
