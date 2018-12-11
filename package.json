@@ -1,6 +1,6 @@
 {
   "name": "@deskpro/react-components",
-  "version": "1.4.5-beta.2",
+  "version": "1.4.5-beta.3",
   "description": "Deskpro React Components",
   "main": "dist/index.js",
   "homepage": "https://github.com/deskpro/react-components",
@@ -83,7 +83,7 @@
     "html-webpack-plugin": "^2.29.0",
     "husky": "^0.14.3",
     "jest": "^23.6.0",
-    "lint-staged": "^6.0.0",
+    "lint-staged": "8.1.0",
     "moment": "^2.20.0",
     "node-sass": "^4.9.2",
     "node-sass-tilde-importer": "^1.0.2",
