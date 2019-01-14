@@ -1,7 +1,8 @@
-## v1.4.5 - 2018-12-07
+## v1.4.5 - 2019-01-14
 
 * [FIX] - Update of value on ColorPicker
 * [FIX] - Add focus on Select
+* [FIX] - Add view className to Scrollbar view
 
 ## v1.4.4 - 2018-12-06
 

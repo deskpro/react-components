@@ -16,6 +16,7 @@ const Scrollbar = ({ className, children, ...props }) => (
     renderThumbVertical={p => <div {...p} className="dp-scrollbar__thumb-vertical" />}
     renderTrackHorizontal={p => <div {...p} className="dp-scrollbar__track-horizontal" />}
     renderThumbHorizontal={p => <div {...p} className="dp-scrollbar__thumb-horizontal" />}
+    renderView={p => <div {...p} className="dp-scrollbar__view" />}
   >
     {children}
   </Scrollbars>
