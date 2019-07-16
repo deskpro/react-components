@@ -11,6 +11,14 @@ const basicOptions = [
   { value: 'two', label: 'Two' }
 ];
 
+const advancesOptions = [
+  { value: 'agent', label: 'Agent', isDisabled: true },
+  { value: 'agent.display_name', label: 'Name' },
+  { value: 'agent.first_name', label: 'First Name' },
+  { value: 'agent.last_name', label: 'Last Name' },
+  { value: 'agent.primary_email.email', label: 'Email address' },
+];
+
 storiesOf('Forms', module)
   .addDecorator(withInfo)
   .addDecorator(withKnobs)
@@ -33,6 +41,14 @@ storiesOf('Forms', module)
           name="select-2"
           onChange={action('Select change')}
           options={basicOptions}
+          disabled={boolean('Disabled', false)}
+        /><br />
+        <Label>With disabled options</Label>
+        <Select
+          icon={faSearch}
+          name="select-2"
+          onChange={action('Select change')}
+          options={advancesOptions}
           disabled={boolean('Disabled', false)}
         />
       </div>

@@ -3,6 +3,7 @@
 * [FIX] - Update of value on ColorPicker
 * [FIX] - Add focus on Select
 * [FIX] - Add view className to Scrollbar view
+* [FIX] - Upgrade node-sass
 
 ## v1.4.4 - 2018-12-06
 
