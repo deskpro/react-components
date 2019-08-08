@@ -1,3 +1,7 @@
+## v1.4.6 - 2019-08-08
+
+* [FEATURE] - Embed Google fonts
+
 ## v1.4.5 - 2019-01-14
 
 * [FIX] - Update of value on ColorPicker
