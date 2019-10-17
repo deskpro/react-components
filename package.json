@@ -1,6 +1,6 @@
 {
   "name": "@deskpro/react-components",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "Deskpro React Components",
   "main": "dist/index.js",
   "homepage": "https://github.com/deskpro/react-components",
@@ -121,7 +121,7 @@
     "react-color": "^2.14.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-onclickoutside": "^6.7.1",
-    "react-select": "2.1.1",
+    "react-select": "3.0.8",
     "react-svg-inline": "^2.1.1",
     "react-tagsinput": "^3.19.0",
     "react-textarea-autosize": "^6.1.0",

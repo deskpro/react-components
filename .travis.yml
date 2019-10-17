@@ -8,8 +8,7 @@ before_deploy:
 deploy:
   provider: npm
   email: julien.ducro@deskpro.com
-  api_key:
-    secure: b82t9zGlSAiR4W6F9U5HNVDN2MRrD0MzU/86nkOzDR+xtlIFA23piNlbd62uaisZaFIMZTSYfSAUey2Ykfe58MHQt6/btuCQDMr4F4KGM5xUKomkQ0VfB3HhYT1rqo44aSvpHVV5WGLOYk0IJVSorog0P/94e6OaMitiZ/H6PUDUaC7FXz7YHa4yOGy8tnPrH2bfg4JNGdrAXlHiNqf20pHCH1F1z2m65+lpe2xAWM+bFZuq1N1kGvFOzWW/4OeLkTWJcMyKoVnz6HlLcdunCevZB/jmlHiZKADmbgX+VTA6r9FyNeZzTfP6As7EbH9EtKElETKsScFevK4e/05lo1pCvrV2uYPXNYp1lPsyStSyxpeTqyjXehl5ed6QYGH6I59u0repJBYZnO/4ZWiS+RDg9iU2RzS1W6OJ0peUhATjwixa2mXtVKnZNRjCOhosxcBBG6kMbx+WuoGqIiIfpqiLXPAp/fa44Q6s5/6D5Nq7qppcxCyGJQdMxrrt7ThdegPEs0Kzk1NIvvsw5FBKEO5kc/tv5xunS3B22zJb5Zt0tbvcH8NY/bdZJ4hNg9NFKnpqSArFDoeAb5HfpTINuBdbnAoo7kFHo1n6XxIDShUDf9xwaa7MV1K4J/9Qboa3slsHO2wFnKjQWC/FXIUqqQ1mGvo1KZlYVStizBhfdgw=
+  api_key: $NPM_TOKEN
   skip_cleanup: true
   on:
     branch: master

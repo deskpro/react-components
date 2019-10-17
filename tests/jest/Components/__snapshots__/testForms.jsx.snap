@@ -324,24 +324,24 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSelect 1`] = `
     className="dp-select"
   >
     <div
-      className="css-10nd86i react-select"
+      className="react-select css-2b097c-container"
       onKeyDown={[Function]}
     >
       <div
-        className="css-vj8t7z react-select__control"
+        className="react-select__control css-yk16xz-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
         <div
-          className="css-1hwfws3 react-select__value-container"
+          className="react-select__value-container css-1hwfws3"
         >
           <div
-            className="css-1492t68 react-select__placeholder"
+            className="react-select__placeholder css-1wa3eu0-placeholder"
           >
             Please select
           </div>
           <div
-            className="css-1g6gooi"
+            className="css-w8afj7-Input"
           >
             <div
               className="react-select__input"
@@ -369,6 +369,7 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSelect 1`] = `
                     "boxSizing": "content-box",
                     "color": "inherit",
                     "fontSize": "inherit",
+                    "label": "input",
                     "opacity": 1,
                     "outline": 0,
                     "padding": 0,
@@ -398,10 +399,10 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of SearchSelect 1`] = `
           </div>
         </div>
         <div
-          className="css-1wy0on6 react-select__indicators"
+          className="react-select__indicators css-1g48xl4-IndicatorsContainer"
         >
           <span
-            className="css-d8oujb react-select__indicator-separator"
+            className="react-select__indicator-separator css-1okebmr-indicatorSeparator"
           />
           <div
             className="react-select__dropdown-indicator"
@@ -458,24 +459,24 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Select 1`] = `
   className="dp-select test-class"
 >
   <div
-    className="css-10nd86i react-select"
+    className="react-select css-2b097c-container"
     onKeyDown={[Function]}
   >
     <div
-      className="css-vj8t7z react-select__control"
+      className="react-select__control css-yk16xz-control"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
     >
       <div
-        className="css-1hwfws3 react-select__value-container"
+        className="react-select__value-container css-1hwfws3"
       >
         <div
-          className="css-1492t68 react-select__placeholder"
+          className="react-select__placeholder css-1wa3eu0-placeholder"
         >
           Please select
         </div>
         <div
-          className="css-1g6gooi"
+          className="css-w8afj7-Input"
         >
           <div
             className="react-select__input"
@@ -503,6 +504,7 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Select 1`] = `
                   "boxSizing": "content-box",
                   "color": "inherit",
                   "fontSize": "inherit",
+                  "label": "input",
                   "opacity": 1,
                   "outline": 0,
                   "padding": 0,
@@ -532,10 +534,10 @@ exports[`>>> Forms --- Snapshot +++capturing Snapshot of Select 1`] = `
         </div>
       </div>
       <div
-        className="css-1wy0on6 react-select__indicators"
+        className="react-select__indicators css-1g48xl4-IndicatorsContainer"
       >
         <span
-          className="css-d8oujb react-select__indicator-separator"
+          className="react-select__indicator-separator css-1okebmr-indicatorSeparator"
         />
         <div
           className="react-select__dropdown-indicator"

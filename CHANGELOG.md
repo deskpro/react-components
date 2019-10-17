@@ -1,3 +1,7 @@
+## v1.4.7 - 2019-10-07
+
+* [FIX] - Prevent scrolling document in react-select if select menu options don't have an internal scrollbar
+
 ## v1.4.6 - 2019-08-08
 
 * [FEATURE] - Embed Google fonts
