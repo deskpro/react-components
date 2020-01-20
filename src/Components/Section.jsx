@@ -14,7 +14,7 @@ const Section = ({
     {
       'dp-section--hidden': hidden
     },
-    classNames
+    className
   );
 
   return (
