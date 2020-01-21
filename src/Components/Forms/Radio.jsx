@@ -5,7 +5,7 @@ import newId from '../../utils/newid';
 import { objectKeyFilter } from '../../utils/objects';
 import Label from './Label';
 
-class Radio extends React.Component {
+export class Radio extends React.Component {
   static propTypes = {
     /**
      * CSS classes to apply to the element.

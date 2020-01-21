@@ -30,7 +30,7 @@ import Group from './Forms/Group';
 import Input from './Forms/Input';
 import HiddenFields from './Forms/HiddenFields';
 import Label from './Forms/Label';
-import Radio from './Forms/Radio';
+import { Radio } from './Forms/Radio';
 import Select from './Forms/Select';
 import SearchInline from './Forms/SearchInline';
 import SearchSubmit from './Forms/SearchSubmit';
