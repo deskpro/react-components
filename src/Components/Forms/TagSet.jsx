@@ -7,12 +7,14 @@ class TagSet extends React.Component {
   static propTypes = {
     tags:     PropTypes.array.isRequired,
     name:     PropTypes.string,
+    tagName:  PropTypes.string,
     options:  PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
     editable: PropTypes.bool,
     onChange: PropTypes.func
   };
   static defaultProps = {
     name:     '',
+    tagName:  'label',
     editable: true,
     options:  [],
     onChange() {}
@@ -97,7 +99,7 @@ class TagSet extends React.Component {
           onKeyDown={this.handleInputKeyDown}
           onSelect={this.handleSearchSelect}
         >
-          No results for <i className="dp-colour-sonic-secondary">{'\'$value$\''}</i> press ENTER to add new label
+          No results for <i className="dp-colour-sonic-secondary">{'\'$value$\''}</i> press ENTER to add new {this.props.tagName}
         </SearchButton>}
       </div>
     );
