@@ -85,7 +85,7 @@
     "jest": "^23.6.0",
     "lint-staged": "8.1.0",
     "moment": "^2.20.0",
-    "node-sass": "^4.9.2",
+    "node-sass": "^7.0.0",
     "node-sass-tilde-importer": "^1.0.2",
     "postcss-loader": "^2.0.6",
     "prop-types": "^15.6.0",
